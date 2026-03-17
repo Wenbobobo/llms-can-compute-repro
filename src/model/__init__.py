@@ -9,8 +9,10 @@ from .exact_hardmax import (
     encode_latest_write_key,
     encode_latest_write_query,
     extract_memory_operations,
+    extract_stack_slot_operations,
     run_latest_write_decode,
     run_latest_write_decode_for_events,
+    run_latest_write_decode_for_stack_events,
 )
 
 __all__ = [
@@ -22,6 +24,8 @@ __all__ = [
     "encode_latest_write_key",
     "encode_latest_write_query",
     "extract_memory_operations",
+    "extract_stack_slot_operations",
     "run_latest_write_decode",
     "run_latest_write_decode_for_events",
+    "run_latest_write_decode_for_stack_events",
 ]

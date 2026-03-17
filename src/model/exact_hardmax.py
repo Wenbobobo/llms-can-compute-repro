@@ -1,4 +1,4 @@
-"""Exact hard-max causal decode helpers for latest-write memory semantics."""
+"""Exact hard-max causal decode helpers for latest-write state semantics."""
 
 from __future__ import annotations
 
@@ -30,6 +30,7 @@ class MemoryOperation:
     kind: Literal["store", "load"]
     address: int
     value: int
+    space: Literal["memory", "stack"] = "memory"
 
 
 @dataclass(frozen=True, slots=True)
@@ -63,7 +64,9 @@ def extract_memory_operations(events: Sequence[TraceEvent]) -> tuple[MemoryOpera
     for event in events:
         if event.memory_write is not None:
             address, value = event.memory_write
-            operations.append(MemoryOperation(step=event.step, kind="store", address=address, value=value))
+            operations.append(
+                MemoryOperation(step=event.step, kind="store", address=address, value=value, space="memory")
+            )
         if event.memory_read_address is not None:
             if event.memory_read_value is None:
                 raise ValueError(f"Read event at step {event.step} is missing a memory_read_value.")
@@ -73,6 +76,37 @@ def extract_memory_operations(events: Sequence[TraceEvent]) -> tuple[MemoryOpera
                     kind="load",
                     address=event.memory_read_address,
                     value=event.memory_read_value,
+                    space="memory",
+                )
+            )
+    return tuple(operations)
+
+
+def extract_stack_slot_operations(events: Sequence[TraceEvent]) -> tuple[MemoryOperation, ...]:
+    operations: list[MemoryOperation] = []
+    for event in events:
+        pop_count = len(event.popped)
+        read_base = event.stack_depth_before - pop_count
+        for offset, value in enumerate(event.popped):
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="load",
+                    address=read_base + offset,
+                    value=value,
+                    space="stack",
+                )
+            )
+
+        write_base = event.stack_depth_before - pop_count
+        for offset, value in enumerate(event.pushed):
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="store",
+                    address=write_base + offset,
+                    value=value,
+                    space="stack",
                 )
             )
     return tuple(operations)
@@ -86,6 +120,10 @@ def run_latest_write_decode(
     operations: Sequence[MemoryOperation],
     config: LatestWriteDecodeConfig,
 ) -> DecodeRun:
+    spaces = {operation.space for operation in operations}
+    if len(spaces) > 1:
+        raise ValueError("run_latest_write_decode currently expects operations from a single space.")
+
     linear_keys: list[tuple[int, Fraction]] = []
     linear_values: list[int] = []
     accelerated = HullKVCache()
@@ -151,5 +189,15 @@ def run_latest_write_decode_for_events(
     default_value: int = 0,
 ) -> DecodeRun:
     operations = extract_memory_operations(events)
+    config = config_for_operations(operations, default_value=default_value)
+    return run_latest_write_decode(operations, config)
+
+
+def run_latest_write_decode_for_stack_events(
+    events: Sequence[TraceEvent],
+    *,
+    default_value: int = 0,
+) -> DecodeRun:
+    operations = extract_stack_slot_operations(events)
     config = config_for_operations(operations, default_value=default_value)
     return run_latest_write_decode(operations, config)

@@ -11,6 +11,8 @@ Current capability:
   queries,
 - runtime dynamic-address memory reads are also encoded and checked through the
   same exact hard-max bridge,
+- stack-slot reads/writes are also decoded through the same latest-write bridge
+  over logical stack-slot addresses,
 - both decode modes are present:
   - brute-force linear scan,
   - `HullKVCache` accelerated retrieval,
@@ -19,12 +21,14 @@ Current capability:
 ## Current Artifact
 
 - `decode_examples.json` records the latest-write and memory-accumulator trace
-  examples, plus a dynamic-address memory example, together with exact
-  linear/accelerated decode observations.
+  examples, plus a dynamic-address memory example and stack-slot examples,
+  together with exact linear/accelerated decode observations.
 
 The current dynamic-address example still targets a single effective address at
 runtime. It is evidence that the bridge survives runtime address selection, not
-yet evidence for broad dynamic-address workloads.
+yet evidence for broad dynamic-address workloads. The new stack examples should
+be read the same way: they validate the bridge on real stack evolution, not yet
+on full mixed-state learned execution.
 
 ## Not Yet Included
 

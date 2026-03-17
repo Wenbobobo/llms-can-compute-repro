@@ -128,5 +128,230 @@
         }
       ]
     }
+  },
+  "countdown_stack": {
+    "program": "countdown_4",
+    "final_state": {
+      "pc": 6,
+      "stack": [
+        0
+      ],
+      "memory": [],
+      "halted": true,
+      "steps": 24
+    },
+    "decode": {
+      "addresses": [
+        0,
+        1
+      ],
+      "max_steps": 22,
+      "epsilon": "1/24",
+      "observations": [
+        {
+          "step": 2,
+          "address": 1,
+          "expected_value": 4,
+          "linear_value": 4,
+          "accelerated_value": 4
+        },
+        {
+          "step": 4,
+          "address": 0,
+          "expected_value": 4,
+          "linear_value": 4,
+          "accelerated_value": 4
+        },
+        {
+          "step": 4,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 7,
+          "address": 1,
+          "expected_value": 3,
+          "linear_value": 3,
+          "accelerated_value": 3
+        },
+        {
+          "step": 9,
+          "address": 0,
+          "expected_value": 3,
+          "linear_value": 3,
+          "accelerated_value": 3
+        },
+        {
+          "step": 9,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 12,
+          "address": 1,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 14,
+          "address": 0,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 14,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 17,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 19,
+          "address": 0,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 19,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 22,
+          "address": 1,
+          "expected_value": 0,
+          "linear_value": 0,
+          "accelerated_value": 0
+        }
+      ]
+    }
+  },
+  "dynamic_memory_stack": {
+    "program": "dynamic_memory",
+    "final_state": {
+      "pc": 15,
+      "stack": [
+        22
+      ],
+      "memory": [
+        [
+          2,
+          11
+        ]
+      ],
+      "halted": true,
+      "steps": 16
+    },
+    "decode": {
+      "addresses": [
+        0,
+        1,
+        2
+      ],
+      "max_steps": 14,
+      "epsilon": "1/16",
+      "observations": [
+        {
+          "step": 2,
+          "address": 0,
+          "expected_value": 7,
+          "linear_value": 7,
+          "accelerated_value": 7
+        },
+        {
+          "step": 2,
+          "address": 1,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 6,
+          "address": 1,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 6,
+          "address": 2,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 7,
+          "address": 0,
+          "expected_value": 11,
+          "linear_value": 11,
+          "accelerated_value": 11
+        },
+        {
+          "step": 7,
+          "address": 1,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 9,
+          "address": 0,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 12,
+          "address": 1,
+          "expected_value": 3,
+          "linear_value": 3,
+          "accelerated_value": 3
+        },
+        {
+          "step": 12,
+          "address": 2,
+          "expected_value": 1,
+          "linear_value": 1,
+          "accelerated_value": 1
+        },
+        {
+          "step": 13,
+          "address": 1,
+          "expected_value": 2,
+          "linear_value": 2,
+          "accelerated_value": 2
+        },
+        {
+          "step": 14,
+          "address": 0,
+          "expected_value": 11,
+          "linear_value": 11,
+          "accelerated_value": 11
+        },
+        {
+          "step": 14,
+          "address": 1,
+          "expected_value": 11,
+          "linear_value": 11,
+          "accelerated_value": 11
+        }
+      ]
+    }
   }
 }

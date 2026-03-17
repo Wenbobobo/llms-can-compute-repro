@@ -5,6 +5,7 @@ from fractions import Fraction
 
 from exec_trace import (
     TraceInterpreter,
+    countdown_program,
     dynamic_memory_program,
     latest_write_program,
     memory_accumulator_program,
@@ -15,7 +16,9 @@ from model import (
     encode_latest_write_key,
     encode_latest_write_query,
     extract_memory_operations,
+    extract_stack_slot_operations,
     run_latest_write_decode,
+    run_latest_write_decode_for_stack_events,
 )
 
 
@@ -84,6 +87,37 @@ def test_latest_write_decode_matches_dynamic_address_trace_example() -> None:
     assert observed == [11, 11]
     assert linear == observed
     assert accelerated == observed
+
+
+def test_stack_slot_decode_matches_countdown_trace_example() -> None:
+    interpreter = TraceInterpreter()
+    result = interpreter.run(countdown_program(4))
+
+    operations = extract_stack_slot_operations(result.events)
+    assert any(operation.kind == "load" for operation in operations)
+    assert any(operation.kind == "store" for operation in operations)
+
+    decode_run = run_latest_write_decode_for_stack_events(result.events)
+
+    observed = [(obs.address, obs.expected_value) for obs in decode_run.observations[:6]]
+    linear = [(obs.address, obs.linear_value) for obs in decode_run.observations[:6]]
+    accelerated = [(obs.address, obs.accelerated_value) for obs in decode_run.observations[:6]]
+
+    assert observed == [(1, 4), (0, 4), (1, 1), (1, 3), (0, 3), (1, 1)]
+    assert linear == observed
+    assert accelerated == observed
+
+
+def test_stack_slot_decode_matches_dynamic_memory_trace_example() -> None:
+    interpreter = TraceInterpreter()
+    result = interpreter.run(dynamic_memory_program())
+
+    decode_run = run_latest_write_decode_for_stack_events(result.events)
+
+    assert len(decode_run.observations) > 0
+    for observation in decode_run.observations:
+        assert observation.linear_value == observation.expected_value
+        assert observation.accelerated_value == observation.expected_value
 
 
 def test_latest_write_decode_modes_match_random_operation_stream() -> None:
