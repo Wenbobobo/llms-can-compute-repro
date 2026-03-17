@@ -1,0 +1,326 @@
+{
+  "program": "dynamic_memory",
+  "final_state": {
+    "pc": 15,
+    "stack": [
+      22
+    ],
+    "memory": [
+      [
+        2,
+        11
+      ]
+    ],
+    "halted": true,
+    "steps": 16
+  },
+  "events": [
+    {
+      "step": 0,
+      "pc": 0,
+      "opcode": "push_const",
+      "arg": 7,
+      "popped": [],
+      "pushed": [
+        7
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 1,
+      "stack_depth_before": 0,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 1,
+      "pc": 1,
+      "opcode": "push_const",
+      "arg": 2,
+      "popped": [],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 2,
+      "pc": 2,
+      "opcode": "store_at",
+      "arg": null,
+      "popped": [
+        7,
+        2
+      ],
+      "pushed": [],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": [
+        2,
+        7
+      ],
+      "next_pc": 3,
+      "stack_depth_before": 2,
+      "stack_depth_after": 0,
+      "halted": false
+    },
+    {
+      "step": 3,
+      "pc": 3,
+      "opcode": "push_const",
+      "arg": 11,
+      "popped": [],
+      "pushed": [
+        11
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 4,
+      "stack_depth_before": 0,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 4,
+      "pc": 4,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 5,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 5,
+      "pc": 5,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 6,
+      "stack_depth_before": 2,
+      "stack_depth_after": 3,
+      "halted": false
+    },
+    {
+      "step": 6,
+      "pc": 6,
+      "opcode": "add",
+      "arg": null,
+      "popped": [
+        1,
+        1
+      ],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 7,
+      "stack_depth_before": 3,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 7,
+      "pc": 7,
+      "opcode": "store_at",
+      "arg": null,
+      "popped": [
+        11,
+        2
+      ],
+      "pushed": [],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": [
+        2,
+        11
+      ],
+      "next_pc": 8,
+      "stack_depth_before": 2,
+      "stack_depth_after": 0,
+      "halted": false
+    },
+    {
+      "step": 8,
+      "pc": 8,
+      "opcode": "push_const",
+      "arg": 2,
+      "popped": [],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 9,
+      "stack_depth_before": 0,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 9,
+      "pc": 9,
+      "opcode": "load_at",
+      "arg": null,
+      "popped": [
+        2
+      ],
+      "pushed": [
+        11
+      ],
+      "branch_taken": null,
+      "memory_read_address": 2,
+      "memory_read_value": 11,
+      "memory_write": null,
+      "next_pc": 10,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 10,
+      "pc": 10,
+      "opcode": "push_const",
+      "arg": 3,
+      "popped": [],
+      "pushed": [
+        3
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 11,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 11,
+      "pc": 11,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 12,
+      "stack_depth_before": 2,
+      "stack_depth_after": 3,
+      "halted": false
+    },
+    {
+      "step": 12,
+      "pc": 12,
+      "opcode": "sub",
+      "arg": null,
+      "popped": [
+        3,
+        1
+      ],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 13,
+      "stack_depth_before": 3,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 13,
+      "pc": 13,
+      "opcode": "load_at",
+      "arg": null,
+      "popped": [
+        2
+      ],
+      "pushed": [
+        11
+      ],
+      "branch_taken": null,
+      "memory_read_address": 2,
+      "memory_read_value": 11,
+      "memory_write": null,
+      "next_pc": 14,
+      "stack_depth_before": 2,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 14,
+      "pc": 14,
+      "opcode": "add",
+      "arg": null,
+      "popped": [
+        11,
+        11
+      ],
+      "pushed": [
+        22
+      ],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 15,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 15,
+      "pc": 15,
+      "opcode": "halt",
+      "arg": null,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": null,
+      "memory_read_address": null,
+      "memory_read_value": null,
+      "memory_write": null,
+      "next_pc": 15,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": true
+    }
+  ]
+}

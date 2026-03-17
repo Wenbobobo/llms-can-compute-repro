@@ -6,14 +6,14 @@
 - M1 claims/scope docs: complete
 - M2 geometry exactness: initial implementation added
 - M3 trace executor: stack plus bounded-RAM reference semantics implemented
-- M4 exact hard-max decode: deterministic latest-write bridge implemented
+- M4 exact hard-max decode: deterministic latest-write bridge implemented for immediate and dynamic memory addressing
 - Packaging fix: renamed the trace package to avoid the Python stdlib conflict
 - Public GitHub repo created and initial push completed
 
 ## Immediate Next Actions
 
-1. Export and inspect the first `M4` decode artifact.
-2. Decide whether dynamic addressing or stack-slot retrieval should be the next exact hard-max target.
+1. Export and inspect the updated `M4` decode artifact with dynamic addressing.
+2. Decide whether stack-slot retrieval or mixed memory/stack traces should be the next exact hard-max target.
 3. Start the first trainable `M4` slice only after the richer retrieval target is fixed.
 
 ## Known Blockers

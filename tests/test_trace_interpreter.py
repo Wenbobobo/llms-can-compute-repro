@@ -5,6 +5,7 @@ import pytest
 from exec_trace import (
     TraceInterpreter,
     countdown_program,
+    dynamic_memory_program,
     equality_branch_program,
     latest_memory_value,
     latest_write_program,
@@ -79,6 +80,21 @@ def test_memory_accumulator_program() -> None:
     assert replayed.memory == ((0, 7), (1, 5), (2, 12))
     load_events = [event for event in result.events if event.memory_read_address is not None]
     assert [event.memory_read_value for event in load_events] == [7, 5, 12]
+
+
+def test_dynamic_memory_program() -> None:
+    interpreter = TraceInterpreter()
+    program = dynamic_memory_program()
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (22,)
+    assert replayed.memory == ((2, 11),)
+    load_events = [event for event in result.events if event.memory_read_address is not None]
+    assert [event.memory_read_address for event in load_events] == [2, 2]
+    assert [event.memory_read_value for event in load_events] == [11, 11]
 
 
 def test_replay_detects_tampering() -> None:

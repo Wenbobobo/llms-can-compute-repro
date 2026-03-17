@@ -9,6 +9,8 @@ Current capability:
 
 - immediate-address latest-write memory reads are encoded as exact 2D hard-max
   queries,
+- runtime dynamic-address memory reads are also encoded and checked through the
+  same exact hard-max bridge,
 - both decode modes are present:
   - brute-force linear scan,
   - `HullKVCache` accelerated retrieval,
@@ -17,7 +19,12 @@ Current capability:
 ## Current Artifact
 
 - `decode_examples.json` records the latest-write and memory-accumulator trace
-  examples, together with exact linear/accelerated decode observations.
+  examples, plus a dynamic-address memory example, together with exact
+  linear/accelerated decode observations.
+
+The current dynamic-address example still targets a single effective address at
+runtime. It is evidence that the bridge survives runtime address selection, not
+yet evidence for broad dynamic-address workloads.
 
 ## Not Yet Included
 

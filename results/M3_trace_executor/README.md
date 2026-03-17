@@ -5,6 +5,7 @@
 - `countdown_4_trace.json`: stack-only countdown example
 - `latest_write_trace.json`: overwrite-and-read example for last-write-wins memory
 - `memory_accumulator_trace.json`: bounded RAM example with multiple slots
+- `dynamic_memory_trace.json`: runtime dynamic-address read/write example
 
 ## Current Meaning
 

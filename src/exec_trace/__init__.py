@@ -2,6 +2,7 @@
 
 from .datasets import (
     countdown_program,
+    dynamic_memory_program,
     equality_branch_program,
     latest_write_program,
     memory_accumulator_program,
@@ -21,6 +22,7 @@ __all__ = [
     "TraceEvent",
     "TraceInterpreter",
     "countdown_program",
+    "dynamic_memory_program",
     "equality_branch_program",
     "latest_memory_value",
     "latest_write_program",

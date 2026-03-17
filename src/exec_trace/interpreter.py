@@ -89,6 +89,27 @@ class TraceInterpreter:
                 popped = (value,)
                 memory[instruction.arg] = value
                 memory_write = (instruction.arg, value)
+            case Opcode.LOAD_AT:
+                if not stack:
+                    raise RuntimeError("load_at requires an address on the stack.")
+                address = stack.pop()
+                if address < 0:
+                    raise RuntimeError("load_at address must be non-negative.")
+                popped = (address,)
+                memory_read_address = address
+                memory_read_value = memory.get(address, 0)
+                pushed = (memory_read_value,)
+                stack.append(memory_read_value)
+            case Opcode.STORE_AT:
+                if len(stack) < 2:
+                    raise RuntimeError("store_at requires a value and an address on the stack.")
+                address = stack.pop()
+                value = stack.pop()
+                if address < 0:
+                    raise RuntimeError("store_at address must be non-negative.")
+                popped = (value, address)
+                memory[address] = value
+                memory_write = (address, value)
             case Opcode.JMP:
                 if instruction.arg is None:
                     raise RuntimeError("jmp requires a target PC.")

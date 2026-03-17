@@ -65,3 +65,27 @@ def memory_accumulator_program() -> Program:
         Instruction(Opcode.HALT),
     )
     return Program(instructions=instructions, name="memory_accumulator")
+
+
+def dynamic_memory_program() -> Program:
+    """Use runtime-computed addresses for reads and writes."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 7),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 11),
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.PUSH_CONST, 3),
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.SUB),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.HALT),
+    )
+    return Program(instructions=instructions, name="dynamic_memory")

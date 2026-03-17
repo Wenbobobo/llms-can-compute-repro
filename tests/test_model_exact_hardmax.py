@@ -3,7 +3,12 @@ from __future__ import annotations
 import random
 from fractions import Fraction
 
-from exec_trace import TraceInterpreter, latest_write_program, memory_accumulator_program
+from exec_trace import (
+    TraceInterpreter,
+    dynamic_memory_program,
+    latest_write_program,
+    memory_accumulator_program,
+)
 from model import (
     LatestWriteDecodeConfig,
     MemoryOperation,
@@ -59,6 +64,24 @@ def test_latest_write_decode_matches_multi_slot_trace_example() -> None:
     accelerated = [obs.accelerated_value for obs in decode_run.observations]
 
     assert observed == [7, 5, 12]
+    assert linear == observed
+    assert accelerated == observed
+
+
+def test_latest_write_decode_matches_dynamic_address_trace_example() -> None:
+    interpreter = TraceInterpreter()
+    result = interpreter.run(dynamic_memory_program())
+
+    decode_run = run_latest_write_decode(
+        extract_memory_operations(result.events),
+        LatestWriteDecodeConfig(max_steps=result.final_state.steps, addresses=(2,)),
+    )
+
+    observed = [obs.expected_value for obs in decode_run.observations]
+    linear = [obs.linear_value for obs in decode_run.observations]
+    accelerated = [obs.accelerated_value for obs in decode_run.observations]
+
+    assert observed == [11, 11]
     assert linear == observed
     assert accelerated == observed
 

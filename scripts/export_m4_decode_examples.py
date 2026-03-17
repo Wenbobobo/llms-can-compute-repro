@@ -6,7 +6,12 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from exec_trace import TraceInterpreter, latest_write_program, memory_accumulator_program
+from exec_trace import (
+    TraceInterpreter,
+    dynamic_memory_program,
+    latest_write_program,
+    memory_accumulator_program,
+)
 from model import run_latest_write_decode_for_events
 
 
@@ -35,6 +40,7 @@ def main() -> None:
     output = {
         "latest_write": encode_program(latest_write_program),
         "memory_accumulator": encode_program(memory_accumulator_program),
+        "dynamic_memory": encode_program(dynamic_memory_program),
     }
     out_path = Path("results/M4_exact_hardmax_model/decode_examples.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)

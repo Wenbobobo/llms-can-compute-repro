@@ -15,6 +15,8 @@ class Opcode(StrEnum):
     POP = "pop"
     LOAD = "load"
     STORE = "store"
+    LOAD_AT = "load_at"
+    STORE_AT = "store_at"
     JMP = "jmp"
     JZ = "jz"
     HALT = "halt"

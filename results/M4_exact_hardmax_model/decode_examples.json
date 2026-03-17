@@ -88,5 +88,45 @@
         }
       ]
     }
+  },
+  "dynamic_memory": {
+    "program": "dynamic_memory",
+    "final_state": {
+      "pc": 15,
+      "stack": [
+        22
+      ],
+      "memory": [
+        [
+          2,
+          11
+        ]
+      ],
+      "halted": true,
+      "steps": 16
+    },
+    "decode": {
+      "addresses": [
+        2
+      ],
+      "max_steps": 13,
+      "epsilon": "1/15",
+      "observations": [
+        {
+          "step": 9,
+          "address": 2,
+          "expected_value": 11,
+          "linear_value": 11,
+          "accelerated_value": 11
+        },
+        {
+          "step": 13,
+          "address": 2,
+          "expected_value": 11,
+          "linear_value": 11,
+          "accelerated_value": 11
+        }
+      ]
+    }
   }
 }

@@ -4,3 +4,5 @@
 - Start with latest-write memory retrieval before any trainable model work.
 - Require linear-scan and accelerated decode modes to agree exactly on each
   read event.
+- Extend from immediate-address reads to dynamic-address reads before moving
+  toward learned decode.

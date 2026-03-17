@@ -5,3 +5,5 @@
   trace events.
 - Use immediate-address `LOAD/STORE` as the first bounded RAM step; keep reads
   zero-initialized until a stricter memory model is needed.
+- Add `LOAD_AT/STORE_AT` next so runtime-selected addresses are represented
+  explicitly in the append-only trace before moving toward richer bytecode.
