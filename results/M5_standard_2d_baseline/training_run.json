@@ -1,0 +1,421 @@
+{
+  "experiment": "m5_softmax_training_run",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "The first runnable M5 checkpoint keeps the blog-like tiny 2D-head config and the current verbose structured trace serialization.",
+    "The vocabulary is built over the combined train/eval pool so the baseline can emit held-out structured tokens without OOV failures.",
+    "This is a conservative first baseline, not yet a clean claim about length generalization under factorized numeric tokenization."
+  ],
+  "status": "completed",
+  "device": "cuda",
+  "model_config": {
+    "vocab_size": 249,
+    "d_model": 36,
+    "n_heads": 18,
+    "n_layers": 7,
+    "d_ffn": 36,
+    "max_seq_len": 789
+  },
+  "training_config": {
+    "epochs": 30,
+    "batch_size": 4,
+    "learning_rate": 0.005,
+    "weight_decay": 0.0,
+    "seed": 0,
+    "max_grad_norm": 1.0,
+    "requested_device": null,
+    "resolved_device": "cuda"
+  },
+  "train_metrics": {
+    "loss": 0.10044311622625088,
+    "token_accuracy": 0.966120625465376,
+    "example_count": 12,
+    "token_count": 2686,
+    "by_length_bucket": [
+      {
+        "bucket": "25<=steps<=48",
+        "example_count": 2,
+        "token_count": 930,
+        "loss": 0.12081440514133822,
+        "token_accuracy": 0.9548387096774194
+      },
+      {
+        "bucket": "steps<=24",
+        "example_count": 10,
+        "token_count": 1756,
+        "loss": 0.08965422175527638,
+        "token_accuracy": 0.9720956719817767
+      }
+    ]
+  },
+  "eval_metrics": {
+    "loss": 2.8999389001438693,
+    "token_accuracy": 0.7042050691244239,
+    "example_count": 8,
+    "token_count": 3472,
+    "by_length_bucket": [
+      {
+        "bucket": "25<=steps<=48",
+        "example_count": 2,
+        "token_count": 1210,
+        "loss": 1.5924854997760993,
+        "token_accuracy": 0.8
+      },
+      {
+        "bucket": "steps<=24",
+        "example_count": 4,
+        "token_count": 772,
+        "loss": 5.862028671669837,
+        "token_accuracy": 0.5012953367875648
+      },
+      {
+        "bucket": "steps>=49",
+        "example_count": 2,
+        "token_count": 1490,
+        "loss": 2.426976021504242,
+        "token_accuracy": 0.7315436241610739
+      }
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 5.502381165822347,
+      "eval_loss": 4.468390686995423
+    },
+    {
+      "epoch": 2,
+      "train_loss": 3.8118115266164145,
+      "eval_loss": 3.354115246696406
+    },
+    {
+      "epoch": 3,
+      "train_loss": 2.790928284327189,
+      "eval_loss": 2.732135530715714
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.1041489044825235,
+      "eval_loss": 2.317286641882037
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.5101921955744426,
+      "eval_loss": 2.056923542703901
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.2581317623456318,
+      "eval_loss": 1.973846089215048
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.8768481214841207,
+      "eval_loss": 2.0017810811885215
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.7946816384792328,
+      "eval_loss": 2.1109716693445835
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5616962015628815,
+      "eval_loss": 1.9804420725094833
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.4116251468658447,
+      "eval_loss": 2.0684183968514342
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.346910427014033,
+      "eval_loss": 2.3062429869470233
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.30780501166979474,
+      "eval_loss": 1.9947632634454333
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.24514939884344736,
+      "eval_loss": 2.1719611774838192
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.23802667359511057,
+      "eval_loss": 2.3728981063044565
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.18561908602714539,
+      "eval_loss": 2.183730775086973
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.16490502655506134,
+      "eval_loss": 2.144847946559092
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.15480888386567435,
+      "eval_loss": 2.2504750813275987
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.1374376912911733,
+      "eval_loss": 2.431027218373278
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.11349037289619446,
+      "eval_loss": 2.5209624327135525
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.12164267649253209,
+      "eval_loss": 2.3874897944487734
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.11436200638612111,
+      "eval_loss": 2.5991520602341898
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.11179147909084956,
+      "eval_loss": 2.608452667271899
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.09167927751938502,
+      "eval_loss": 2.8459200067488553
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.10001639276742935,
+      "eval_loss": 2.5449942006356157
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.10977588345607121,
+      "eval_loss": 2.4613928036927355
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.09644233932097752,
+      "eval_loss": 2.6088375849692227
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.0981612280011177,
+      "eval_loss": 2.692342227779775
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.0925670750439167,
+      "eval_loss": 2.665073551512259
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.07942774519324303,
+      "eval_loss": 2.6714435455470866
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.0793477048476537,
+      "eval_loss": 2.8999389001438693
+    }
+  ],
+  "group_metrics": {
+    "countdown_eval_teacher_forced": {
+      "loss": 2.0530006395445928,
+      "token_accuracy": 0.7622222222222222,
+      "example_count": 4,
+      "token_count": 2700,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "example_count": 2,
+          "token_count": 1210,
+          "loss": 1.5924854997760993,
+          "token_accuracy": 0.8
+        },
+        {
+          "bucket": "steps>=49",
+          "example_count": 2,
+          "token_count": 1490,
+          "loss": 2.426976021504242,
+          "token_accuracy": 0.7315436241610739
+        }
+      ]
+    },
+    "branch_eval_teacher_forced": {
+      "loss": 0.8625729084014893,
+      "token_accuracy": 0.8828828828828829,
+      "example_count": 2,
+      "token_count": 222,
+      "by_length_bucket": [
+        {
+          "bucket": "steps<=24",
+          "example_count": 2,
+          "token_count": 222,
+          "loss": 0.8625729084014893,
+          "token_accuracy": 0.8828828828828829
+        }
+      ]
+    },
+    "memory_eval_teacher_forced": {
+      "loss": 7.879990816116333,
+      "token_accuracy": 0.3472727272727273,
+      "example_count": 2,
+      "token_count": 550,
+      "by_length_bucket": [
+        {
+          "bucket": "steps<=24",
+          "example_count": 2,
+          "token_count": 550,
+          "loss": 7.879990816116333,
+          "token_accuracy": 0.3472727272727273
+        }
+      ]
+    },
+    "countdown_eval_rollout": {
+      "exact_sequence_accuracy": 0.0,
+      "example_count": 4,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "example_count": 2,
+          "exact_sequence_accuracy": 0.0
+        },
+        {
+          "bucket": "steps>=49",
+          "example_count": 2,
+          "exact_sequence_accuracy": 0.0
+        }
+      ],
+      "outcomes": [
+        {
+          "program_name": "countdown_7",
+          "program_steps": 39,
+          "exact_sequence_match": false,
+          "first_error_token_index": 28,
+          "generated_token_count": 153,
+          "failure_reason": "length_mismatch"
+        },
+        {
+          "program_name": "countdown_8",
+          "program_steps": 44,
+          "exact_sequence_match": false,
+          "first_error_token_index": 28,
+          "generated_token_count": 157,
+          "failure_reason": "length_mismatch"
+        },
+        {
+          "program_name": "countdown_9",
+          "program_steps": 49,
+          "exact_sequence_match": false,
+          "first_error_token_index": 28,
+          "generated_token_count": 221,
+          "failure_reason": "length_mismatch"
+        },
+        {
+          "program_name": "countdown_10",
+          "program_steps": 54,
+          "exact_sequence_match": false,
+          "first_error_token_index": 28,
+          "generated_token_count": 157,
+          "failure_reason": "length_mismatch"
+        }
+      ]
+    },
+    "branch_eval_rollout": {
+      "exact_sequence_accuracy": 0.0,
+      "example_count": 2,
+      "by_length_bucket": [
+        {
+          "bucket": "steps<=24",
+          "example_count": 2,
+          "exact_sequence_accuracy": 0.0
+        }
+      ],
+      "outcomes": [
+        {
+          "program_name": "eq_5_5",
+          "program_steps": 6,
+          "exact_sequence_match": false,
+          "first_error_token_index": 31,
+          "generated_token_count": 112,
+          "failure_reason": null
+        },
+        {
+          "program_name": "eq_2_9",
+          "program_steps": 6,
+          "exact_sequence_match": false,
+          "first_error_token_index": 31,
+          "generated_token_count": 112,
+          "failure_reason": null
+        }
+      ]
+    },
+    "memory_eval_rollout": {
+      "exact_sequence_accuracy": 0.0,
+      "example_count": 2,
+      "by_length_bucket": [
+        {
+          "bucket": "steps<=24",
+          "example_count": 2,
+          "exact_sequence_accuracy": 0.0
+        }
+      ],
+      "outcomes": [
+        {
+          "program_name": "dynamic_memory",
+          "program_steps": 16,
+          "exact_sequence_match": false,
+          "first_error_token_index": 51,
+          "generated_token_count": 112,
+          "failure_reason": "length_mismatch"
+        },
+        {
+          "program_name": "dynamic_memory_transfer",
+          "program_steps": 16,
+          "exact_sequence_match": false,
+          "first_error_token_index": 51,
+          "generated_token_count": 159,
+          "failure_reason": "length_mismatch"
+        }
+      ]
+    }
+  }
+}

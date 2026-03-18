@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import random
 from statistics import mean
 from typing import Iterable, Sequence
 
@@ -35,6 +36,68 @@ class TraceSequenceStats:
     min_length: int
     max_length: int
     mean_length: float
+
+
+@dataclass(frozen=True, slots=True)
+class EncodedTraceExample:
+    program_name: str
+    program_steps: int
+    token_ids: tuple[int, ...]
+    prompt_length: int
+
+
+@dataclass(frozen=True, slots=True)
+class TeacherForcedMetrics:
+    loss: float
+    token_accuracy: float
+    example_count: int
+    token_count: int
+    by_length_bucket: tuple[tuple[str, dict[str, float | int]], ...]
+
+
+@dataclass(frozen=True, slots=True)
+class RolloutOutcome:
+    program_name: str
+    program_steps: int
+    exact_sequence_match: bool
+    first_error_token_index: int | None
+    generated_token_count: int
+    failure_reason: str | None
+
+
+@dataclass(frozen=True, slots=True)
+class RolloutEvaluation:
+    exact_sequence_accuracy: float
+    example_count: int
+    by_length_bucket: tuple[tuple[str, dict[str, float | int]], ...]
+    outcomes: tuple[RolloutOutcome, ...]
+
+
+@dataclass(frozen=True, slots=True)
+class SoftmaxTrainingConfig:
+    epochs: int = 20
+    batch_size: int = 4
+    learning_rate: float = 3e-3
+    weight_decay: float = 0.0
+    seed: int = 0
+    max_grad_norm: float | None = 1.0
+    device: str | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class TrainingEpochStats:
+    epoch: int
+    train_loss: float
+    eval_loss: float | None
+
+
+@dataclass(slots=True)
+class SoftmaxTrainingRun:
+    model: "Standard2DSoftmaxTransformer"
+    train_metrics: TeacherForcedMetrics
+    eval_metrics: TeacherForcedMetrics | None
+    history: tuple[TrainingEpochStats, ...]
+    device: str
 
 
 @dataclass(frozen=True, slots=True)
@@ -157,6 +220,33 @@ def summarize_trace_sequences(examples: Sequence[TraceSequenceExample]) -> Trace
     )
 
 
+def prompt_length(example: TraceSequenceExample) -> int:
+    return example.tokens.index("<trace>") + 1
+
+
+def encode_trace_examples(
+    examples: Sequence[TraceSequenceExample],
+    vocabulary: TraceVocabulary,
+) -> tuple[EncodedTraceExample, ...]:
+    return tuple(
+        EncodedTraceExample(
+            program_name=example.program_name,
+            program_steps=example.program_steps,
+            token_ids=vocabulary.encode(example.tokens),
+            prompt_length=prompt_length(example),
+        )
+        for example in examples
+    )
+
+
+def baseline_bucket_name(program_steps: int) -> str:
+    if program_steps <= 24:
+        return "steps<=24"
+    if program_steps <= 48:
+        return "25<=steps<=48"
+    return "steps>=49"
+
+
 if torch is not None:  # pragma: no branch
 
     class Standard2DSoftmaxTransformer(nn.Module):
@@ -206,7 +296,275 @@ if torch is not None:  # pragma: no branch
 
 
     def causal_language_model_loss(logits: "torch.Tensor", targets: "torch.Tensor") -> "torch.Tensor":
-        return F.cross_entropy(logits.reshape(-1, logits.shape[-1]), targets.reshape(-1))
+        return F.cross_entropy(logits.reshape(-1, logits.shape[-1]), targets.reshape(-1), ignore_index=-100)
+
+
+    def default_baseline_device(preferred: str | None = None) -> str:
+        if preferred is not None:
+            return preferred
+        return "cuda" if torch.cuda.is_available() else "cpu"
+
+
+    def _batch_examples(
+        examples: Sequence[EncodedTraceExample],
+        *,
+        batch_size: int,
+        rng: random.Random | None = None,
+    ) -> list[list[EncodedTraceExample]]:
+        ordered = list(examples)
+        if rng is not None:
+            rng.shuffle(ordered)
+        return [ordered[index : index + batch_size] for index in range(0, len(ordered), batch_size)]
+
+
+    def _encode_batch(
+        examples: Sequence[EncodedTraceExample],
+        *,
+        device: str,
+    ) -> tuple["torch.Tensor", "torch.Tensor"]:
+        max_len = max(len(example.token_ids) for example in examples)
+        input_ids = torch.full((len(examples), max_len - 1), 0, dtype=torch.long, device=device)
+        targets = torch.full((len(examples), max_len - 1), -100, dtype=torch.long, device=device)
+
+        for index, example in enumerate(examples):
+            ids = torch.tensor(example.token_ids, dtype=torch.long, device=device)
+            usable = len(example.token_ids) - 1
+            input_ids[index, :usable] = ids[:-1]
+            targets[index, :usable] = ids[1:]
+
+        return (input_ids, targets)
+
+
+    def evaluate_teacher_forced_model(
+        model: "Standard2DSoftmaxTransformer",
+        examples: Sequence[EncodedTraceExample],
+        *,
+        device: str | None = None,
+    ) -> TeacherForcedMetrics:
+        if not examples:
+            return TeacherForcedMetrics(
+                loss=0.0,
+                token_accuracy=0.0,
+                example_count=0,
+                token_count=0,
+                by_length_bucket=(),
+            )
+
+        device = default_baseline_device(device)
+        model.eval()
+        per_bucket: dict[str, dict[str, float | int]] = {}
+        total_loss = 0.0
+        total_tokens = 0
+        total_correct = 0
+
+        with torch.no_grad():
+            for example in examples:
+                input_ids, targets = _encode_batch((example,), device=device)
+                logits = model(input_ids)
+                loss = causal_language_model_loss(logits, targets)
+                predictions = logits.argmax(dim=-1)
+                mask = targets != -100
+                token_count = int(mask.sum().item())
+                correct = int(((predictions == targets) & mask).sum().item())
+
+                total_loss += float(loss.item()) * token_count
+                total_tokens += token_count
+                total_correct += correct
+
+                bucket = baseline_bucket_name(example.program_steps)
+                bucket_state = per_bucket.setdefault(
+                    bucket,
+                    {
+                        "example_count": 0,
+                        "token_count": 0,
+                        "correct_tokens": 0,
+                        "weighted_loss": 0.0,
+                    },
+                )
+                bucket_state["example_count"] = int(bucket_state["example_count"]) + 1
+                bucket_state["token_count"] = int(bucket_state["token_count"]) + token_count
+                bucket_state["correct_tokens"] = int(bucket_state["correct_tokens"]) + correct
+                bucket_state["weighted_loss"] = float(bucket_state["weighted_loss"]) + (float(loss.item()) * token_count)
+
+        by_length_bucket = tuple(
+            (
+                bucket,
+                {
+                    "example_count": int(state["example_count"]),
+                    "token_count": int(state["token_count"]),
+                    "loss": float(state["weighted_loss"]) / int(state["token_count"]),
+                    "token_accuracy": int(state["correct_tokens"]) / int(state["token_count"]),
+                },
+            )
+            for bucket, state in sorted(per_bucket.items())
+        )
+
+        return TeacherForcedMetrics(
+            loss=total_loss / total_tokens,
+            token_accuracy=total_correct / total_tokens,
+            example_count=len(examples),
+            token_count=total_tokens,
+            by_length_bucket=by_length_bucket,
+        )
+
+
+    def train_teacher_forced_baseline(
+        train_examples: Sequence[EncodedTraceExample],
+        *,
+        model_config: SoftmaxBaselineConfig,
+        training_config: SoftmaxTrainingConfig | None = None,
+        eval_examples: Sequence[EncodedTraceExample] = (),
+    ) -> SoftmaxTrainingRun:
+        require_torch()
+        training_config = training_config or SoftmaxTrainingConfig()
+        device = default_baseline_device(training_config.device)
+        torch.manual_seed(training_config.seed)
+        random.seed(training_config.seed)
+
+        model = Standard2DSoftmaxTransformer(model_config).to(device)
+        optimizer = torch.optim.AdamW(
+            model.parameters(),
+            lr=training_config.learning_rate,
+            weight_decay=training_config.weight_decay,
+        )
+
+        history: list[TrainingEpochStats] = []
+        for epoch in range(1, training_config.epochs + 1):
+            model.train()
+            epoch_losses: list[float] = []
+            batches = _batch_examples(
+                train_examples,
+                batch_size=training_config.batch_size,
+                rng=random.Random(training_config.seed + epoch),
+            )
+            for batch in batches:
+                input_ids, targets = _encode_batch(batch, device=device)
+                optimizer.zero_grad(set_to_none=True)
+                logits = model(input_ids)
+                loss = causal_language_model_loss(logits, targets)
+                loss.backward()
+                if training_config.max_grad_norm is not None:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), training_config.max_grad_norm)
+                optimizer.step()
+                epoch_losses.append(float(loss.item()))
+
+            eval_metrics = evaluate_teacher_forced_model(model, eval_examples, device=device) if eval_examples else None
+            history.append(
+                TrainingEpochStats(
+                    epoch=epoch,
+                    train_loss=sum(epoch_losses) / len(epoch_losses),
+                    eval_loss=None if eval_metrics is None else eval_metrics.loss,
+                )
+            )
+
+        train_metrics = evaluate_teacher_forced_model(model, train_examples, device=device)
+        eval_metrics = evaluate_teacher_forced_model(model, eval_examples, device=device) if eval_examples else None
+        return SoftmaxTrainingRun(
+            model=model,
+            train_metrics=train_metrics,
+            eval_metrics=eval_metrics,
+            history=tuple(history),
+            device=device,
+        )
+
+
+    def greedy_rollout(
+        model: "Standard2DSoftmaxTransformer",
+        example: EncodedTraceExample,
+        *,
+        device: str | None = None,
+        eos_token_id: int,
+        max_total_tokens: int | None = None,
+    ) -> tuple[int, ...]:
+        device = default_baseline_device(device)
+        model.eval()
+        generated = list(example.token_ids[: example.prompt_length])
+        max_total_tokens = max_total_tokens or max(len(example.token_ids) + 16, example.prompt_length + 1)
+
+        with torch.no_grad():
+            while len(generated) < max_total_tokens:
+                input_ids = torch.tensor([generated], dtype=torch.long, device=device)
+                logits = model(input_ids)
+                next_token = int(logits[0, -1].argmax().item())
+                generated.append(next_token)
+                if next_token == eos_token_id:
+                    break
+
+        return tuple(generated)
+
+
+    def evaluate_free_running_rollout(
+        model: "Standard2DSoftmaxTransformer",
+        examples: Sequence[EncodedTraceExample],
+        *,
+        vocabulary: TraceVocabulary,
+        device: str | None = None,
+        max_total_tokens: int | None = None,
+    ) -> RolloutEvaluation:
+        if not examples:
+            return RolloutEvaluation(exact_sequence_accuracy=0.0, example_count=0, by_length_bucket=(), outcomes=())
+
+        eos_token_id = vocabulary.encode(("<eos>",))[0]
+        outcomes: list[RolloutOutcome] = []
+        per_bucket: dict[str, dict[str, int]] = {}
+
+        for example in examples:
+            generated = greedy_rollout(
+                model,
+                example,
+                device=device,
+                eos_token_id=eos_token_id,
+                max_total_tokens=max_total_tokens,
+            )
+            exact = generated == example.token_ids
+            first_error = None
+            for index, (expected, actual) in enumerate(zip(example.token_ids, generated)):
+                if expected != actual:
+                    first_error = index
+                    break
+            if first_error is None and len(generated) != len(example.token_ids):
+                first_error = min(len(generated), len(example.token_ids))
+
+            failure_reason = None
+            if not exact and generated[-1] != eos_token_id:
+                failure_reason = "missing_eos"
+            elif not exact and len(generated) != len(example.token_ids):
+                failure_reason = "length_mismatch"
+
+            outcomes.append(
+                RolloutOutcome(
+                    program_name=example.program_name,
+                    program_steps=example.program_steps,
+                    exact_sequence_match=exact,
+                    first_error_token_index=first_error,
+                    generated_token_count=len(generated),
+                    failure_reason=failure_reason,
+                )
+            )
+
+            bucket = baseline_bucket_name(example.program_steps)
+            bucket_state = per_bucket.setdefault(bucket, {"example_count": 0, "exact_count": 0})
+            bucket_state["example_count"] = int(bucket_state["example_count"]) + 1
+            bucket_state["exact_count"] = int(bucket_state["exact_count"]) + int(exact)
+
+        by_length_bucket = tuple(
+            (
+                bucket,
+                {
+                    "example_count": int(state["example_count"]),
+                    "exact_sequence_accuracy": int(state["exact_count"]) / int(state["example_count"]),
+                },
+            )
+            for bucket, state in sorted(per_bucket.items())
+        )
+
+        exact_total = sum(int(outcome.exact_sequence_match) for outcome in outcomes)
+        return RolloutEvaluation(
+            exact_sequence_accuracy=exact_total / len(outcomes),
+            example_count=len(outcomes),
+            by_length_bucket=by_length_bucket,
+            outcomes=tuple(outcomes),
+        )
 
 else:
 
@@ -216,4 +574,44 @@ else:
 
 
     def causal_language_model_loss(logits, targets):  # pragma: no cover - exercised only without torch
+        require_torch()
+
+
+    def default_baseline_device(preferred: str | None = None):  # pragma: no cover - exercised only without torch
+        require_torch()
+
+
+    def evaluate_teacher_forced_model(model, examples, *, device: str | None = None):  # pragma: no cover
+        require_torch()
+
+
+    def train_teacher_forced_baseline(
+        train_examples,
+        *,
+        model_config: SoftmaxBaselineConfig,
+        training_config: SoftmaxTrainingConfig | None = None,
+        eval_examples=(),
+    ):  # pragma: no cover - exercised only without torch
+        require_torch()
+
+
+    def greedy_rollout(
+        model,
+        example: EncodedTraceExample,
+        *,
+        device: str | None = None,
+        eos_token_id: int,
+        max_total_tokens: int | None = None,
+    ):  # pragma: no cover - exercised only without torch
+        require_torch()
+
+
+    def evaluate_free_running_rollout(
+        model,
+        examples,
+        *,
+        vocabulary: TraceVocabulary,
+        device: str | None = None,
+        max_total_tokens: int | None = None,
+    ):  # pragma: no cover - exercised only without torch
         require_torch()

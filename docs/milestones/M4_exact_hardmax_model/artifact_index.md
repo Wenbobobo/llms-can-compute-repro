@@ -7,5 +7,8 @@
 - `results/M4_exact_hardmax_model/free_running_executor.json`
   Free-running exact executor and stack-scorer rollout results by program
   family and length bucket.
+- `results/M4_exact_hardmax_model/induced_causal_executor.json`
+  Fitted structured transition rules plus exact held-out online rollout
+  results, including a branch combined with the current trainable stack scorer.
 - `results/M4_exact_hardmax_model/precision_stress.json`
   Finite-precision failure ranges for parabolic 2D latest-write addressing.

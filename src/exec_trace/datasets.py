@@ -89,3 +89,44 @@ def dynamic_memory_program() -> Program:
         Instruction(Opcode.HALT),
     )
     return Program(instructions=instructions, name="dynamic_memory")
+
+
+def dynamic_latest_write_program() -> Program:
+    """Exercise indirect latest-write behavior on one runtime-computed address."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 13),
+        Instruction(Opcode.PUSH_CONST, 4),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 17),
+        Instruction(Opcode.PUSH_CONST, 4),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 4),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.HALT),
+    )
+    return Program(instructions=instructions, name="dynamic_latest_write")
+
+
+def dynamic_memory_transfer_program() -> Program:
+    """Read two indirect addresses, combine them, and write the result back indirectly."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 4),
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 9),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.PUSH_CONST, 3),
+        Instruction(Opcode.STORE_AT),
+        Instruction(Opcode.PUSH_CONST, 3),
+        Instruction(Opcode.LOAD_AT),
+        Instruction(Opcode.HALT),
+    )
+    return Program(instructions=instructions, name="dynamic_memory_transfer")

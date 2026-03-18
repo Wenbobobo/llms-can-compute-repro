@@ -32,6 +32,12 @@ Current capability:
   - exact linear retrieval,
   - exact accelerated retrieval,
   - and the current trainable stack scorer with exact memory retrieval.
+- `induced_causal_executor.json` records the next M4 slice:
+  - fitted structured transition rules per opcode,
+  - exact online rollout on held-out countdown, branch, and indirect-memory
+    programs,
+  - and a combined run where induced event generation uses the current
+    trainable stack latest-write scorer.
 - `precision_stress.json` records finite-precision address-range failures for
   `float64`, `float32`, `bfloat16`, and `float16`.
 
@@ -52,6 +58,15 @@ The free-running executor artifact extends this further:
   countdown, branch, and current bounded-RAM slice because only stack-slot
   retrieval is learned in this checkpoint.
 
+The induced causal artifact extends this again:
+
+- the fitted transition library reaches exact trace accuracy `1.0` on its train
+  programs,
+- it also stays exact on held-out countdown, equality, and indirect-memory
+  programs,
+- and it remains exact when paired with the current trainable stack latest-write
+  scorer on the exported held-out slice.
+
 The current dynamic-address example still targets a single effective address at
 runtime. It is evidence that the bridge survives runtime address selection, not
 yet evidence for broad dynamic-address workloads. The new stack examples should
@@ -69,7 +84,7 @@ The precision artifact should be read as a warning label:
 
 ## Not Yet Included
 
-- trainable attention modules,
-- token-level parameterized models,
-- free-running learned rollouts,
-- learned generation of candidate writes or trace events.
+- token-level neural event decoders,
+- full neural free-running event generation,
+- finite-precision-stable million-step addressing,
+- broader mixed-memory workloads under the learned branch.

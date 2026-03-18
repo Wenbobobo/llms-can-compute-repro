@@ -9,20 +9,24 @@
 - M4 exact hard-max decode: deterministic latest-write bridge implemented for immediate and dynamic memory addressing plus stack-slot retrieval
 - M4 narrow trainable slice: two-parameter stack latest-write scorer fitted and validated on held-out longer traces
 - M4 free-running exact executor: linear and accelerated online rollout now match the reference trace on current countdown, branch, and bounded-RAM programs
+- M4 induced causal executor: structured transition rules fitted from reference traces now generate exact online events on held-out countdown, branch, and indirect-memory programs
 - M4 finite-precision stress: recorded address-range failure sweeps for float64/32/bfloat16/float16
 - M5 scaffold: structured trace dataset, vocabulary helpers, optional Torch baseline definition, and dataset preview artifact added
+- M5 CUDA baseline run: first teacher-forced training run completed on the tiny 2D-head softmax model, with nontrivial teacher-forced accuracy but zero exact free-running rollout on current eval groups
+- Runtime environment export: Python 3.12.9, `torch==2.10.0+cu128`, and CUDA device info are now recorded under `results/runtime_environment.json`
 - Packaging fix: renamed the trace package to avoid the Python stdlib conflict
 - Public GitHub repo created and initial push completed
 
 ## Immediate Next Actions
 
-1. Replace the fixed stack candidate-set scorer with a causal learned decode loop that emits or selects event decisions online.
-2. Decide whether the next learned `M4` target should be mixed memory-plus-stack execution or a deeper stack-only family without exact memory fallback.
-3. Install and run the first actual `M5` softmax baseline training slice.
+1. Replace the current induced structured executor with a genuinely neural token/event-level causal branch, or explicitly keep the synthesis-first branch as a separate claim line.
+2. Address the `M5` representation bottleneck: the current verbose structured serialization plus union vocabulary permits training but still yields zero exact free-running rollout.
+3. Push `M4-B` further with address decomposition or rescaling, because `float32` latest-write collapse still blocks any serious long-horizon claim.
 
 ## Known Blockers
 
 - None at the repository/bootstrap layer.
 - The main remaining risks are scientific: representation choices, tie semantics
-  at scale, finite-precision address collapse, and how far the current fast path
-  generalizes beyond the toy executor.
+  at scale, finite-precision address collapse, tokenization-induced baseline
+  brittleness, and how far the current fast path generalizes beyond the toy
+  executor.

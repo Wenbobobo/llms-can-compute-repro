@@ -10,5 +10,6 @@
 - [x] Implement exact free-running rollout with linear and accelerated latest-write retrieval
 - [x] Evaluate free-running rollout by length bucket
 - [x] Record finite-precision failure ranges for parabolic addressing
-- [ ] Replace the fixed candidate-set scorer with a causal learned decode loop
-- [ ] Extend learned rollout beyond stack-slot retrieval into mixed memory/stack execution
+- [x] Fit and validate an induced structured causal executor over exact event semantics
+- [ ] Replace the induced structured executor with a token/event-level neural causal decoder
+- [ ] Extend neural or induced rollout deeper into mixed memory/stack execution under finite-precision constraints

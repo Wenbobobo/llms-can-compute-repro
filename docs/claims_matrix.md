@@ -14,6 +14,7 @@
 | C1d | An online executor can recover value state from append-only latest-write history during rollout | Free-running exact linear and accelerated executors reproduce the reference trace on current stack, branch, and bounded-RAM programs | validated for current toy programs |
 | C2 | The executor survives long free-running rollout | Length-bucket evaluation on countdown-style programs and transfer to small branch/memory families | partially validated |
 | C2a | A narrow learned retrieval rule can stay exact in free-running rollout on current stack-family programs | Fit on short countdowns, then run the scorer online in held-out countdown, branch, and current bounded-RAM traces | validated for current toy programs |
-| C2b | A learned causal executor can generate event decisions online without exact fallback | Future token/event-level model branch | unvalidated |
+| C2b | A trace-induced structured executor can generate event decisions online without hand-coded opcode semantics | Fit per-opcode transition rules from reference traces, then run them online with latest-write retrieval on held-out countdown, branch, and indirect-memory programs | validated for current toy programs |
+| C2c | A neural causal executor can generate event decisions online without exact fallback | Future token/event-level model branch | unvalidated |
 | C3 | Finite-precision 2D addressing remains stable at practically relevant scales | Quantized parabolic latest-write stress tests across float64/32/bfloat16/float16 | partially validated with clear collapse limits |
 | D1 | A higher-level compiled pipeline can target this substrate | Restricted Wasm-like or tiny C-like compiler path | out of scope for bootstrap |

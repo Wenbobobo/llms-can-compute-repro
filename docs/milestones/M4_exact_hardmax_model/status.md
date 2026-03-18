@@ -4,8 +4,10 @@
 
 - exact latest-write decode over extracted read events,
 - a narrow trainable stack latest-write scorer,
-- and a free-running online executor that recovers value state through
-  latest-write retrieval during rollout.
+- a free-running online executor that recovers value state through
+  latest-write retrieval during rollout,
+- and a fitted structured transition library that reproduces opcode effects
+  online without hand-coded opcode semantics.
 
 Current scope:
 
@@ -15,6 +17,7 @@ Current scope:
 - validation against real `exec_trace` memory and stack examples,
 - a two-parameter trainable scorer fitted on short countdown stack traces,
 - free-running exact linear and accelerated executors,
+- an induced causal executor fitted from reference traces,
 - finite-precision stress checks for parabolic 2D addressing.
 
 Current exported results:
@@ -26,6 +29,11 @@ Current exported results:
 - the trainable stack scorer also reaches exact trace accuracy `1.0` on
   countdown train, countdown held-out, branch, and current memory program
   families, while memory reads remain exact in that checkpoint,
+- the induced causal executor reaches exact trace accuracy `1.0` on its train
+  slice, held-out countdowns, held-out equality branches, and held-out
+  indirect-memory programs,
+- the same induced executor also stays exact when combined with the current
+  trainable stack latest-write scorer on the exported held-out slice,
 - finite-precision stress shows local identity retrieval staying stable to
   address limit `8192` in `float64`, to `4096` in `float32`, failing by `64` in
   `float16`, and by `32` in `bfloat16`,
@@ -33,6 +41,7 @@ Current exported results:
   by `512` in `float32`, by `16` in `float16`, and immediately in small ranges
   for `bfloat16`.
 
-This is still not yet a token-level learned executor branch. The learned slice
-is causal only at the stack-read selection level, not at the event-generation
+This is still not yet a token-level learned executor branch. The project now
+has event-generation by induced structured rules, but the neural part is still
+causal only at the stack-read selection level, not at the token/event decoder
 level.
