@@ -1,0 +1,58 @@
+{
+  "experiment": "p5_callout_alignment_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": null
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "row_id": "introduction_claim_pair",
+      "status": "pass",
+      "notes": "The introduction should keep the claim-ladder figure and the supported/unsupported table paired and explicit."
+    },
+    {
+      "row_id": "precision_boundary_pair",
+      "status": "pass",
+      "notes": "The precision section should keep the figure/table pair aligned across manuscript, captions, and roles."
+    },
+    {
+      "row_id": "compiled_boundary_pair",
+      "status": "pass",
+      "notes": "The compiled-boundary section should keep the diagram/table pair explicit and main-text scoped."
+    },
+    {
+      "row_id": "compiled_boundary_companion_split",
+      "status": "pass",
+      "notes": "Starter-suite main-text evidence and companion compiled-boundary evidence should remain explicitly separated."
+    },
+    {
+      "row_id": "threats_table_alignment",
+      "status": "pass",
+      "notes": "Threats should remain tied to one explicit main-text table across the paper-facing ledgers."
+    }
+  ]
+}

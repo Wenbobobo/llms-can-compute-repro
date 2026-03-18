@@ -53,3 +53,6 @@
 - [x] Tighten the compiled-boundary wording so the main-text `D0` starter-suite
   table stays distinct from stress/reference and memory-surface companion
   evidence.
+- [x] Add one narrow `P5` export that audits whether the manuscript draft,
+  caption notes, figure/table narrative roles, and section map stay aligned on
+  the current main-text artifact pairs.

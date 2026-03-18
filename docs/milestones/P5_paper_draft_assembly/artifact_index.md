@@ -20,6 +20,10 @@
 - `docs/publication_record/negative_results.md`
 - `docs/publication_record/threats_to_validity.md`
 - `docs/plans/2026-03-19-p5-public-surface-sync-design.md`
+- `docs/plans/2026-03-19-p5-callout-alignment-design.md`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_public_surface_sync/checklist.json`
 - `results/P5_public_surface_sync/surface_snapshot.json`
+- `results/P5_callout_alignment/summary.json`
+- `results/P5_callout_alignment/checklist.json`
+- `results/P5_callout_alignment/snapshot.json`

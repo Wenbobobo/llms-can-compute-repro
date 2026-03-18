@@ -1,0 +1,70 @@
+{
+  "experiment": "p5_callout_alignment_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": null
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/publication_record/manuscript_bundle_draft.md",
+      "matched_lines": [
+        "A claim-ladder figure plus evidence matrix orients the narrowed mechanism story",
+        "The main-text support here stays compact: one real-trace boundary figure shows",
+        "A compact threats-to-validity table makes those boundary rows explicit,"
+      ]
+    },
+    {
+      "path": "docs/publication_record/caption_candidate_notes.md",
+      "matched_lines": [
+        "### Claim ladder + evidence matrix",
+        "### Real-trace precision boundary figure",
+        "### Frontend boundary diagram",
+        "### Exact-trace / final-state success table",
+        "### Threats-to-validity table"
+      ]
+    },
+    {
+      "path": "docs/publication_record/figure_table_narrative_roles.md",
+      "matched_lines": [
+        "| Claim ladder + evidence matrix | Defines the paper's actual target and keeps the reader inside the narrowed scope from the start. | The paper is a reproduction-plus-boundary study with explicit supported and unsupported claims. | The repo reproduces arbitrary C, general LLM computation, or a finished systems story. | `docs/publication_record/claim_ladder.md`, `docs/publication_record/claim_evidence_table.md`, `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json` |",
+        "| Real-trace precision boundary | States the current `C3e` boundary in one view. | Single-head fails on current exported families; decomposition helps on the validated suite; broader robustness remains unsupported. | The project has a general long-horizon precision robustness result. | `results/R1_precision_mechanism_closure/summary.json`, `results/P1_paper_readiness/m4_real_trace_boundary_figure.svg` |",
+        "| Exact-trace / final-state success table | Summarizes what the current `D0` starter suite actually proves in the main text. | The main-text table covers the frozen starter suite only; stress/reference and memory-surface rows remain companion evidence outside the table. | The current table generalizes to broader compiled demos or arbitrary runtimes. | `results/P1_paper_readiness/exact_trace_final_state_table.md`, `results/M6_stress_reference_followup/summary.json`, `results/M6_memory_surface_followup/summary.json` |",
+        "| Real-trace precision boundary table | Gives the exact family/scheme boundary behind the precision figure. | Boundary statements are suite-specific and scheme-specific. | The table establishes universal precision scaling laws. | `results/R1_precision_mechanism_closure/summary.json`, `results/P1_paper_readiness/m4_real_trace_boundary_rows.csv` |",
+        "| Threats-to-validity table | Consolidates what remains externally or internally unproven. | Mechanism, systems, and compiled-boundary limitations are distinct. | Mixed systems results can be ignored because the mechanism result is positive. | `docs/publication_record/threats_to_validity.md`, `docs/publication_record/negative_results.md` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/manuscript_section_map.md",
+      "matched_lines": [
+        "| Introduction | Explain why the source field note was directionally interesting but rhetorically too broad, and define the paper's narrower claim ladder. | `docs/publication_record/claim_ladder.md`, `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json` | main text |",
+        "| Precision boundary | State where single-head fails, where decomposition helps, and what remains unsupported. | `results/R1_precision_mechanism_closure/summary.json`, `results/P1_paper_readiness/m4_real_trace_boundary_figure.svg` | main text |",
+        "| Compiled boundary | Explain why the first compiled step is the tiny typed-bytecode `D0` boundary and why widening was explicitly rejected. | `results/P1_paper_readiness/m6_frontend_boundary_diagram.svg`, `results/P1_paper_readiness/exact_trace_final_state_table.md`, `results/M7_frontend_candidate_decision/decision_summary.json` | main text |",
+        "| Negative results and threats | Consolidate unsupported claims, failed baselines, mask-dependence closure, and mixed systems limits. | `docs/publication_record/negative_results.md`, `docs/publication_record/threats_to_validity.md`, `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json` | main text |"
+      ]
+    }
+  ]
+}

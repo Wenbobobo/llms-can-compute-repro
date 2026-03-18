@@ -33,6 +33,9 @@ Started on 2026-03-19 in the `paper` worktree.
 - a machine-readable `P5` public-surface sync audit now checks that
   `README.md`, `STATUS.md`, the release summary draft, and the manuscript draft
   all reflect the same current paper phase;
+- a machine-readable `P5` callout-alignment audit now checks that the
+  manuscript draft, caption candidates, narrative-role ledger, and section map
+  still agree on the current main-text artifact pairs;
 - the compiled-boundary wording now distinguishes more cleanly between the
   starter-suite main-text table and its stress/reference or memory-surface
   companions;
