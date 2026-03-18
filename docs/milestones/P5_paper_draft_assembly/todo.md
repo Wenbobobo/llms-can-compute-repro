@@ -47,3 +47,9 @@
   callouts.
 - [x] Do one minimal `README.md` / `STATUS.md` sync after the release-summary
   promotion so the public surface reflects the newer section-draft status.
+- [x] Add one narrow `P5` export that audits whether `README.md`, `STATUS.md`,
+  `release_summary_draft.md`, and `manuscript_bundle_draft.md` remain aligned
+  on the same paper phase and downstream short-summary source.
+- [x] Tighten the compiled-boundary wording so the main-text `D0` starter-suite
+  table stays distinct from stress/reference and memory-surface companion
+  evidence.

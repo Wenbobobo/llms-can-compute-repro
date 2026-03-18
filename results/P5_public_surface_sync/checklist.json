@@ -1,0 +1,73 @@
+{
+  "experiment": "p5_public_surface_sync_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": null
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "readme_keeps_narrow_scope",
+      "status": "pass",
+      "notes": "README keeps the narrow-scope guardrails explicit."
+    },
+    {
+      "item_id": "readme_tracks_current_paper_phase",
+      "status": "pass",
+      "notes": "README now describes the section-draft phase rather than an older assembly phase."
+    },
+    {
+      "item_id": "status_tracks_current_paper_phase",
+      "status": "pass",
+      "notes": "STATUS records the current polish phase and the downstream short-summary source."
+    },
+    {
+      "item_id": "publication_record_readme_tracks_downstream_source",
+      "status": "pass",
+      "notes": "Publication record README names the approved short-update source explicitly."
+    },
+    {
+      "item_id": "release_summary_stays_downstream",
+      "status": "pass",
+      "notes": "The release summary remains a downstream short public-surface artifact."
+    },
+    {
+      "item_id": "manuscript_tracks_section_draft_state",
+      "status": "pass",
+      "notes": "The manuscript draft states the current paper phase directly."
+    },
+    {
+      "item_id": "layout_log_records_release_summary_reuse",
+      "status": "pass",
+      "notes": "The layout decision log still records release-summary reuse as an explicit decision."
+    },
+    {
+      "item_id": "p5_ledger_tracks_recent_sync",
+      "status": "pass",
+      "notes": "The P5 milestone ledger records the new polish pass and the public-surface micro-sync."
+    }
+  ]
+}

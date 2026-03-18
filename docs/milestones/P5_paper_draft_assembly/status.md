@@ -30,5 +30,11 @@ Started on 2026-03-19 in the `paper` worktree.
 - a first sentence-level polish pass now removes most remaining planning-style
   future tense from the manuscript draft and clarifies section-level artifact
   callouts;
+- a machine-readable `P5` public-surface sync audit now checks that
+  `README.md`, `STATUS.md`, the release summary draft, and the manuscript draft
+  all reflect the same current paper phase;
+- the compiled-boundary wording now distinguishes more cleanly between the
+  starter-suite main-text table and its stress/reference or memory-surface
+  companions;
 - the next paper-lane work is sentence-level polish and later layout
   tightening, not another structural rewrite.

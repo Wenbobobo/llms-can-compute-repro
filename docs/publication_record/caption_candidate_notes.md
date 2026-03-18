@@ -45,9 +45,9 @@ branch could exist in principle.
 ### Frontend boundary diagram
 
 The current compiled endpoint is a tiny typed-bytecode `D0` slice with exact
-agreement on the frozen starter suite and one stress/reference companion. The
-diagram marks the endpoint of the present paper scope; it does not imply
-Wasm-like, arbitrary-C, or broader runtime coverage.
+agreement on the frozen starter suite under the current `M7` no-widening
+decision. The diagram marks an explicit stop at the present paper boundary; it
+does not imply Wasm-like, arbitrary-C, or broader runtime coverage.
 
 ## Table captions
 
@@ -59,10 +59,10 @@ boundaries, not deferred implementation work.
 
 ### Exact-trace / final-state success table
 
-Exact trace and exact final-state agreement for the frozen `D0` slice and its
-current stress/reference companion rows. Companion agreement strengthens the
-present compiled endpoint but does not authorize broader compiled demos or
-frontend widening.
+Exact trace and exact final-state agreement for the frozen `D0` starter suite.
+Dedicated stress/reference positives remain companion evidence outside the main
+table: they strengthen the present compiled endpoint but do not authorize
+broader compiled demos or frontend widening.
 
 ### Real-trace precision boundary table
 

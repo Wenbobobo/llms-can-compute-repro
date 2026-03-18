@@ -10,7 +10,7 @@ planning.
 We revisit a field-note claim that large language model mechanisms can behave
 like computation, but we freeze the paper around a narrower reproduction target:
 append-only execution traces, exact latest-write retrieval, and a small exact
-executor under explicit boundaries. On the current public artifact surface, the
+executor under explicit boundaries. On the current evidence bundle, the
 mechanism story remains positive at this narrower level: append-only trace
 semantics and exact retrieval survive, and a tiny typed-bytecode `D0` slice
 achieves exact trace or exact final-state agreement on the frozen starter
@@ -23,7 +23,9 @@ geometry benchmark, but the current lowered `exec_trace` path remains about
 `1.82x` slower than the best current reference/oracle path on the positive
 `D0` suites. We therefore keep the compiled endpoint at tiny typed bytecode and
 treat broader claims about arbitrary C, general LLM computation, or current
-end-to-end competitiveness as unsupported.
+end-to-end competitiveness as unsupported. Stopping at `D0` is therefore part
+of the current scientific conclusion, not an implementation gap waiting to be
+filled.
 
 ## 2. Introduction and Claim Ladder
 

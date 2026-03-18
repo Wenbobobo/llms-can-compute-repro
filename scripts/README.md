@@ -23,6 +23,8 @@
   frontend no-go / candidate decision bundle
 - `export_p4_blog_release_gate.py` — export the outward blog/README release
   gate and public-claim audit
+- `export_p5_public_surface_sync.py` — export the current `P5` public-surface
+  sync audit for README / STATUS / release-summary / manuscript alignment
 - `export_r1_precision_mechanism_closure.py` — export the unified precision
   boundary closure bundle
 - `export_r2_systems_baseline_gate.py` — profile the current systems gate and

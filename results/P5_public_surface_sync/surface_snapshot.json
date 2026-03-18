@@ -1,0 +1,91 @@
+{
+  "experiment": "p5_public_surface_sync_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": null
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "This repository does **not** claim that general LLMs are computers, that",
+        "The next engineering work is paper-lane sentence-level polish, callout cleanup,",
+        "- `docs/publication_record/manuscript_bundle_draft.md` \u2014 current manuscript section draft"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "- `P5` now has a manuscript section draft, appendix draft, caption candidates,",
+        "- Remaining paper-lane work is sentence-level polish, figure/table callout",
+        "`docs/publication_record/release_summary_draft.md`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `release_summary_draft.md` \u2014 short release-facing draft derived from the",
+        "manuscript bundle and approved as the source for future README-adjacent short",
+        "`release_summary_draft.md`, while the manuscript bundle remains the"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "is now stable enough to seed README-adjacent short updates, while remaining",
+        "narrower than the paper bundle itself."
+      ]
+    },
+    {
+      "path": "docs/publication_record/manuscript_bundle_draft.md",
+      "matched_lines": [
+        "Status: paper-shaped manuscript section draft after the first section-draft",
+        "polish and local figure/table callout cleanup, not another round of section"
+      ]
+    },
+    {
+      "path": "docs/publication_record/layout_decision_log.md",
+      "matched_lines": [
+        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the `D0` endpoint boundary without introducing new claims or marketing-style compression. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |"
+      ]
+    },
+    {
+      "path": "docs/milestones/P5_paper_draft_assembly/status.md",
+      "matched_lines": [
+        "- the remaining work is manuscript polish and public-surface maintenance, not",
+        "README-adjacent short updates, with the manuscript bundle kept as the"
+      ]
+    },
+    {
+      "path": "docs/milestones/P5_paper_draft_assembly/todo.md",
+      "matched_lines": [
+        "- [x] Convert the most visible planning-style future tense in",
+        "- [x] Do one minimal `README.md` / `STATUS.md` sync after the release-summary"
+      ]
+    }
+  ]
+}
