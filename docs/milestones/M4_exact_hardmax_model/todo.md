@@ -11,5 +11,8 @@
 - [x] Evaluate free-running rollout by length bucket
 - [x] Record finite-precision failure ranges for parabolic addressing
 - [x] Fit and validate an induced structured causal executor over exact event semantics
-- [ ] Replace the induced structured executor with a token/event-level neural causal decoder
+- [x] Replace the induced structured executor with a structured-label neural causal decoder
+- [x] Add scheme-aware precision sweeps for decomposition and recentering
+- [ ] Push the neural branch past the current opcode-conditioned rule table into a context-richer event decoder
 - [ ] Extend neural or induced rollout deeper into mixed memory/stack execution under finite-precision constraints
+- [ ] Validate the decomposition schemes on real mixed memory/stack trace reads, not just synthetic local sweeps

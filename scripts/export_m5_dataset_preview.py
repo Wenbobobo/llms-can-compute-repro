@@ -20,7 +20,7 @@ def main() -> None:
     ]
     variants: dict[str, dict[str, object]] = {}
 
-    for mode in ("atomic", "factorized"):
+    for mode in ("atomic", "factorized", "event_grouped"):
         examples = build_trace_sequences(programs, tokenization_mode=mode)
         stats = summarize_trace_sequences(examples, base_tokens=base_tokens_for_mode(mode))
         vocabulary = TraceVocabulary.from_examples(examples, base_tokens=base_tokens_for_mode(mode))

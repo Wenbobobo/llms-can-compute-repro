@@ -8,6 +8,8 @@
   latest-write retrieval during rollout,
 - and a fitted structured transition library that reproduces opcode effects
   online without hand-coded opcode semantics.
+- a trainable neural structured-event decoder that learns the same transition
+  label space and reaches exact held-out rollout on the current exported slice.
 
 Current scope:
 
@@ -18,7 +20,9 @@ Current scope:
 - a two-parameter trainable scorer fitted on short countdown stack traces,
 - free-running exact linear and accelerated executors,
 - an induced causal executor fitted from reference traces,
-- finite-precision stress checks for parabolic 2D addressing.
+- a neural event-level executor over structured transition labels,
+- finite-precision stress checks for parabolic 2D addressing,
+- and scheme-aware decomposition sweeps for the same precision bottleneck.
 
 Current exported results:
 
@@ -34,14 +38,21 @@ Current exported results:
   indirect-memory programs,
 - the same induced executor also stays exact when combined with the current
   trainable stack latest-write scorer on the exported held-out slice,
+- the new neural event executor reaches exact structured-label accuracy `1.0`
+  on both its train and eval slices, and exact trace accuracy `1.0` on the
+  exported held-out countdown, branch, and memory families,
 - finite-precision stress shows local identity retrieval staying stable to
   address limit `8192` in `float64`, to `4096` in `float32`, failing by `64` in
   `float16`, and by `32` in `bfloat16`,
 - latest-write time bias is much more fragile: the first local failure appears
   by `512` in `float32`, by `16` in `float16`, and immediately in small ranges
-  for `bfloat16`.
+  for `bfloat16`,
+- under the new decomposition sweeps, both `radix2` and
+  `block_recentered` extend `float32` local latest-write stability from `256`
+  to `4096`, although neither stays stable through `8192`.
 
-This is still not yet a token-level learned executor branch. The project now
-has event-generation by induced structured rules, but the neural part is still
-causal only at the stack-read selection level, not at the token/event decoder
-level.
+This is still not yet a token-level learned executor branch. The current neural
+checkpoint is an opcode-conditioned structured rule decoder, not a raw token
+language model over trace events. It is a stronger `C2c` result than the
+previous stack-only scorer, but still narrower than a general neural event
+executor claim.

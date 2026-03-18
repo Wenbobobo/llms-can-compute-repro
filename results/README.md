@@ -15,11 +15,14 @@ Tracked benchmark summaries and milestone outputs will live here.
   and the current stack-scorer rollout results
 - `M4_exact_hardmax_model/induced_causal_executor.json` records the induced
   structured event-generation branch and its held-out rollout results
-- `M4_exact_hardmax_model/precision_stress.json` records finite-precision
-  address-range failure sweeps for the current 2D encoding
+- `M4_neural_event_executor/summary.json` records the neural structured-event
+  decoder branch and its held-out rollout results
+- `M4_precision_scaling/summary.json` records single-head vs decomposition
+  precision sweeps for the current 2D addressing family
 - `M5_standard_2d_baseline/dataset_preview.json` records atomic vs factorized
-  serialization statistics for the standard softmax baseline branch
-- `M5_standard_2d_baseline/training_run.json` records the paired atomic vs
-  factorized CUDA baseline training runs and rollout evaluation
+  vs event-grouped serialization statistics for the standard softmax baseline
+  branch
+- `M5_standard_2d_baseline/training_run.json` records the atomic vs factorized
+  vs event-grouped CUDA baseline training runs and rollout evaluation
 - `runtime_environment.json` records the Python, Torch, and CUDA runtime used
   for the current exported checkpoints

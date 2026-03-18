@@ -188,6 +188,7 @@ def main() -> None:
             "This export now compares two representation choices under the same tiny 2D-head softmax baseline.",
             "The atomic branch keeps the original verbose whole-token serialization and still uses a train-plus-eval union vocabulary to avoid OOV failures.",
             "The factorized branch decomposes integers into stable digit-level pieces and builds its vocabulary from train-only traces plus fixed base tokens.",
+            "The event-grouped branch removes replay-recoverable fields such as step, next_pc, and stack-depth bookkeeping to test whether rollout failure is partly a serialization-boundary problem.",
         ],
     }
 
@@ -234,6 +235,16 @@ def main() -> None:
         "factorized_train_vocab": run_variant(
             variant_name="factorized_train_vocab",
             tokenization_mode="factorized",
+            vocab_source="train_only_plus_base",
+            train_programs=train_programs,
+            countdown_eval=countdown_eval,
+            branch_eval=branch_eval,
+            memory_eval=memory_eval,
+            training_config=SoftmaxTrainingConfig(epochs=24, batch_size=2, learning_rate=5e-3),
+        ),
+        "event_grouped_train_vocab": run_variant(
+            variant_name="event_grouped_train_vocab",
+            tokenization_mode="event_grouped",
             vocab_source="train_only_plus_base",
             train_programs=train_programs,
             countdown_eval=countdown_eval,

@@ -10,6 +10,7 @@ from typing import Callable, Literal, Sequence
 PrecisionFormat = Literal["float64", "float32", "bfloat16", "float16"]
 CheckKind = Literal["identity", "latest_write"]
 CheckMode = Literal["exhaustive", "local"]
+PrecisionScheme = Literal["single_head", "radix2", "block_recentered"]
 
 
 def _quantize_float64(value: float) -> float:
@@ -73,6 +74,110 @@ class RangeSweepRow:
     first_failure_query: int | None
 
 
+@dataclass(frozen=True, slots=True)
+class PrecisionSchemeFailure:
+    scheme: PrecisionScheme
+    kind: CheckKind
+    query_address: int
+    expected_address: int
+    expected_step: int
+    competing_address: int
+    competing_step: int
+    expected_scores: tuple[float, ...]
+    competing_scores: tuple[float, ...]
+
+
+@dataclass(frozen=True, slots=True)
+class PrecisionSchemeCheckResult:
+    fmt: PrecisionFormat
+    scheme: PrecisionScheme
+    kind: CheckKind
+    mode: CheckMode
+    address_limit: int
+    max_steps: int
+    passed: bool
+    first_failure: PrecisionSchemeFailure | None
+
+
+@dataclass(frozen=True, slots=True)
+class PrecisionSchemeSweepRow:
+    address_limit: int
+    passed: bool
+    first_failure_query: int | None
+
+
+@dataclass(frozen=True, slots=True)
+class PrecisionSchemeConfig:
+    scheme: PrecisionScheme
+    base: int = 64
+
+
+@dataclass(frozen=True, slots=True)
+class PrecisionStressReport:
+    fmt: PrecisionFormat
+    scheme: PrecisionScheme
+    kind: CheckKind
+    mode: CheckMode
+    rows: tuple[PrecisionSchemeSweepRow, ...]
+
+
+class PrecisionStressRunner:
+    """Run scheme-aware finite-precision sweeps with fixed configuration."""
+
+    def __init__(
+        self,
+        *,
+        fmt: PrecisionFormat,
+        scheme: PrecisionScheme,
+        base: int = 64,
+    ) -> None:
+        self.fmt = fmt
+        self.scheme = scheme
+        self.base = base
+
+    def run(
+        self,
+        *,
+        kind: CheckKind,
+        address_limit: int,
+        mode: CheckMode = "exhaustive",
+        max_steps: int | None = None,
+    ) -> PrecisionSchemeCheckResult:
+        return check_precision_scheme_range(
+            address_limit,
+            fmt=self.fmt,
+            kind=kind,
+            mode=mode,
+            scheme=self.scheme,
+            base=self.base,
+            max_steps=max_steps,
+        )
+
+    def sweep(
+        self,
+        ranges: Sequence[int],
+        *,
+        kind: CheckKind,
+        mode: CheckMode,
+        max_steps_fn: Callable[[int], int] | None = None,
+    ) -> PrecisionStressReport:
+        return PrecisionStressReport(
+            fmt=self.fmt,
+            scheme=self.scheme,
+            kind=kind,
+            mode=mode,
+            rows=sweep_precision_scheme_ranges(
+                ranges,
+                fmt=self.fmt,
+                kind=kind,
+                mode=mode,
+                scheme=self.scheme,
+                base=self.base,
+                max_steps_fn=max_steps_fn,
+            ),
+        )
+
+
 def quantize(value: float, fmt: PrecisionFormat) -> float:
     return QUANTIZERS[fmt](value)
 
@@ -101,6 +206,67 @@ def quantized_latest_write_score(
     time_term = quantized_mul(epsilon, float(candidate_step), fmt)
     k1 = quantized_add(base, time_term, fmt)
     return quantized_add(quantized_mul(q0, k0, fmt), quantized_mul(q1, k1, fmt), fmt)
+
+
+def quantized_identity_score(
+    query_address: int,
+    candidate_address: int,
+    *,
+    fmt: PrecisionFormat,
+) -> float:
+    q0 = quantize(2.0 * query_address, fmt)
+    q1 = quantize(1.0, fmt)
+    k0 = quantize(float(candidate_address), fmt)
+    k1 = quantize(float(-(candidate_address**2)), fmt)
+    return quantized_add(quantized_mul(q0, k0, fmt), quantized_mul(q1, k1, fmt), fmt)
+
+
+def quantized_scheme_score(
+    query_address: int,
+    candidate_address: int,
+    candidate_step: int,
+    *,
+    max_steps: int,
+    fmt: PrecisionFormat,
+    scheme: PrecisionScheme,
+    base: int = 64,
+) -> tuple[float, ...]:
+    if scheme == "single_head":
+        return (
+            quantized_latest_write_score(
+                query_address,
+                candidate_address,
+                candidate_step,
+                max_steps=max_steps,
+                fmt=fmt,
+            ),
+        )
+
+    if base <= 1:
+        raise ValueError("base must be greater than 1 for decomposed precision schemes.")
+
+    query_high, query_low = divmod(query_address, base)
+    candidate_high, candidate_low = divmod(candidate_address, base)
+    coarse = quantized_identity_score(query_high, candidate_high, fmt=fmt)
+
+    if scheme == "radix2":
+        fine_query = query_low
+        fine_candidate = candidate_low
+    elif scheme == "block_recentered":
+        center = query_high * base
+        fine_query = query_address - center
+        fine_candidate = candidate_address - center
+    else:
+        raise ValueError(f"Unsupported precision scheme: {scheme}")
+
+    fine = quantized_latest_write_score(
+        fine_query,
+        fine_candidate,
+        candidate_step,
+        max_steps=max_steps,
+        fmt=fmt,
+    )
+    return (coarse, fine)
 
 
 def check_precision_range(
@@ -173,6 +339,86 @@ def sweep_precision_ranges(
     return tuple(rows)
 
 
+def check_precision_scheme_range(
+    address_limit: int,
+    *,
+    fmt: PrecisionFormat,
+    kind: CheckKind,
+    mode: CheckMode = "exhaustive",
+    scheme: PrecisionScheme = "single_head",
+    base: int = 64,
+    max_steps: int | None = None,
+) -> PrecisionSchemeCheckResult:
+    if address_limit <= 0:
+        raise ValueError("address_limit must be positive.")
+    max_steps = max_steps or max(32, address_limit)
+
+    for query_address in range(address_limit):
+        failure = _check_single_query_for_scheme(
+            query_address,
+            address_limit=address_limit,
+            fmt=fmt,
+            kind=kind,
+            mode=mode,
+            max_steps=max_steps,
+            scheme=scheme,
+            base=base,
+        )
+        if failure is not None:
+            return PrecisionSchemeCheckResult(
+                fmt=fmt,
+                scheme=scheme,
+                kind=kind,
+                mode=mode,
+                address_limit=address_limit,
+                max_steps=max_steps,
+                passed=False,
+                first_failure=failure,
+            )
+
+    return PrecisionSchemeCheckResult(
+        fmt=fmt,
+        scheme=scheme,
+        kind=kind,
+        mode=mode,
+        address_limit=address_limit,
+        max_steps=max_steps,
+        passed=True,
+        first_failure=None,
+    )
+
+
+def sweep_precision_scheme_ranges(
+    ranges: Sequence[int],
+    *,
+    fmt: PrecisionFormat,
+    kind: CheckKind,
+    mode: CheckMode,
+    scheme: PrecisionScheme,
+    base: int = 64,
+    max_steps_fn: Callable[[int], int] | None = None,
+) -> tuple[PrecisionSchemeSweepRow, ...]:
+    rows: list[PrecisionSchemeSweepRow] = []
+    for address_limit in ranges:
+        result = check_precision_scheme_range(
+            address_limit,
+            fmt=fmt,
+            kind=kind,
+            mode=mode,
+            scheme=scheme,
+            base=base,
+            max_steps=(max_steps_fn(address_limit) if max_steps_fn is not None else None),
+        )
+        rows.append(
+            PrecisionSchemeSweepRow(
+                address_limit=address_limit,
+                passed=result.passed,
+                first_failure_query=None if result.first_failure is None else result.first_failure.query_address,
+            )
+        )
+    return tuple(rows)
+
+
 def _check_single_query(
     query_address: int,
     *,
@@ -216,6 +462,60 @@ def _check_single_query(
                 competing_step=candidate_step,
                 expected_score=expected_score,
                 competing_score=competing_score,
+            )
+    return None
+
+
+def _check_single_query_for_scheme(
+    query_address: int,
+    *,
+    address_limit: int,
+    fmt: PrecisionFormat,
+    kind: CheckKind,
+    mode: CheckMode,
+    max_steps: int,
+    scheme: PrecisionScheme,
+    base: int,
+) -> PrecisionSchemeFailure | None:
+    expected_step = 1 if kind == "latest_write" else 0
+    expected_scores = quantized_scheme_score(
+        query_address,
+        query_address,
+        expected_step,
+        max_steps=max_steps,
+        fmt=fmt,
+        scheme=scheme,
+        base=base,
+    )
+
+    for candidate_address, candidate_step in _candidate_iter(
+        query_address=query_address,
+        address_limit=address_limit,
+        kind=kind,
+        mode=mode,
+    ):
+        if candidate_address == query_address and candidate_step == expected_step:
+            continue
+        competing_scores = quantized_scheme_score(
+            query_address,
+            candidate_address,
+            candidate_step,
+            max_steps=max_steps,
+            fmt=fmt,
+            scheme=scheme,
+            base=base,
+        )
+        if competing_scores >= expected_scores:
+            return PrecisionSchemeFailure(
+                scheme=scheme,
+                kind=kind,
+                query_address=query_address,
+                expected_address=query_address,
+                expected_step=expected_step,
+                competing_address=candidate_address,
+                competing_step=candidate_step,
+                expected_scores=expected_scores,
+                competing_scores=competing_scores,
             )
     return None
 

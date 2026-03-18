@@ -65,6 +65,16 @@ def test_factorized_trace_sequence_exposes_stable_numeric_tokens() -> None:
     assert example.tokenization_mode == "factorized"
 
 
+def test_event_grouped_trace_sequence_is_more_compact_than_factorized() -> None:
+    grouped = build_trace_sequence(dynamic_memory_program(), tokenization_mode="event_grouped")
+    factorized = build_trace_sequence(dynamic_memory_program(), tokenization_mode="factorized")
+
+    assert grouped.tokenization_mode == "event_grouped"
+    assert len(grouped.tokens) < len(factorized.tokens)
+    assert "step" not in grouped.tokens
+    assert "next_pc" not in grouped.tokens
+
+
 def test_factorized_vocab_can_encode_heldout_examples_from_train_only() -> None:
     train_examples = build_trace_sequences((countdown_program(2), equality_branch_program(1, 1)), tokenization_mode="factorized")
     heldout_examples = build_trace_sequences((countdown_program(15), dynamic_memory_program()), tokenization_mode="factorized")
@@ -74,6 +84,23 @@ def test_factorized_vocab_can_encode_heldout_examples_from_train_only() -> None:
 
     assert len(encoded) == len(heldout_examples)
     assert all(example.tokenization_mode == "factorized" for example in encoded)
+
+
+def test_event_grouped_vocab_can_encode_heldout_examples_from_train_only() -> None:
+    train_examples = build_trace_sequences(
+        (countdown_program(2), equality_branch_program(1, 1)),
+        tokenization_mode="event_grouped",
+    )
+    heldout_examples = build_trace_sequences(
+        (countdown_program(15), dynamic_memory_program()),
+        tokenization_mode="event_grouped",
+    )
+    vocabulary = TraceVocabulary.from_examples(train_examples, base_tokens=base_tokens_for_mode("event_grouped"))
+
+    encoded = encode_trace_examples(heldout_examples, vocabulary)
+
+    assert len(encoded) == len(heldout_examples)
+    assert all(example.tokenization_mode == "event_grouped" for example in encoded)
 
 
 def test_require_torch_matches_environment() -> None:

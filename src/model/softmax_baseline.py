@@ -20,7 +20,7 @@ except ImportError:  # pragma: no cover - exercised in environments without torc
 
 
 SPECIAL_TOKENS = ("<pad>", "<bos>", "<instructions>", "<trace>", "<event>", "<eos>")
-TraceTokenizationMode = Literal["atomic", "factorized"]
+TraceTokenizationMode = Literal["atomic", "factorized", "event_grouped"]
 FACTORIZED_BASE_TOKENS = SPECIAL_TOKENS + (
     "<inst>",
     "</inst>",
@@ -57,6 +57,26 @@ FACTORIZED_BASE_TOKENS = SPECIAL_TOKENS + (
     "-",
     "none",
 ) + tuple(str(opcode) for opcode in Opcode)
+EVENT_GROUPED_BASE_TOKENS = SPECIAL_TOKENS + (
+    "<inst>",
+    "</inst>",
+    "<int>",
+    "</int>",
+    "<list>",
+    "</list>",
+    "<pair>",
+    "</pair>",
+    "<none>",
+    "pc",
+    "op",
+    "arg",
+    "popped",
+    "pushed",
+    "branch",
+    "memory_read",
+    "memory_write",
+    "halted",
+) + tuple(str(digit) for digit in range(10)) + ("-", "none") + tuple(str(opcode) for opcode in Opcode)
 
 
 @dataclass(frozen=True, slots=True)
@@ -189,7 +209,11 @@ def require_torch() -> None:
 
 
 def base_tokens_for_mode(mode: TraceTokenizationMode) -> tuple[str, ...]:
-    return SPECIAL_TOKENS if mode == "atomic" else FACTORIZED_BASE_TOKENS
+    if mode == "atomic":
+        return SPECIAL_TOKENS
+    if mode == "factorized":
+        return FACTORIZED_BASE_TOKENS
+    return EVENT_GROUPED_BASE_TOKENS
 
 
 def _encode_int_tokens(value: int) -> tuple[str, ...]:
@@ -298,11 +322,40 @@ def serialize_event_tokens(
     memory_write = "none" if event.memory_write is None else f"{event.memory_write[0]}:{event.memory_write[1]}"
     branch_taken = "none" if event.branch_taken is None else str(int(event.branch_taken))
 
-    tokens = ["<event>", "step"]
-    tokens.extend(_encode_int_tokens(event.step))
-    tokens.extend(("pc",))
-    tokens.extend(_encode_int_tokens(event.pc))
-    tokens.extend(("op", str(event.opcode), "arg"))
+    if tokenization_mode == "factorized":
+        tokens = ["<event>", "step"]
+        tokens.extend(_encode_int_tokens(event.step))
+        tokens.extend(("pc",))
+        tokens.extend(_encode_int_tokens(event.pc))
+        tokens.extend(("op", str(event.opcode), "arg"))
+        tokens.extend(_encode_optional_int_tokens(event.arg))
+        tokens.extend(("popped",))
+        tokens.extend(_encode_int_list_tokens(event.popped))
+        tokens.extend(("pushed",))
+        tokens.extend(_encode_int_list_tokens(event.pushed))
+        tokens.extend(("branch",))
+        if event.branch_taken is None:
+            tokens.append("<none>")
+        else:
+            tokens.extend(_encode_int_tokens(int(event.branch_taken)))
+        tokens.extend(("memory_read",))
+        if event.memory_read_address is None:
+            tokens.append("<none>")
+        else:
+            tokens.extend(_encode_optional_pair_tokens((event.memory_read_address, int(event.memory_read_value))))
+        tokens.extend(("memory_write",))
+        tokens.extend(_encode_optional_pair_tokens(event.memory_write))
+        tokens.extend(("next_pc",))
+        tokens.extend(_encode_int_tokens(event.next_pc))
+        tokens.extend(("stack_before",))
+        tokens.extend(_encode_int_tokens(event.stack_depth_before))
+        tokens.extend(("stack_after",))
+        tokens.extend(_encode_int_tokens(event.stack_depth_after))
+        tokens.extend(("halted",))
+        tokens.extend(_encode_int_tokens(int(event.halted)))
+        return tuple(tokens)
+
+    tokens = ["<event>", "op", str(event.opcode), "arg"]
     tokens.extend(_encode_optional_int_tokens(event.arg))
     tokens.extend(("popped",))
     tokens.extend(_encode_int_list_tokens(event.popped))
@@ -320,12 +373,6 @@ def serialize_event_tokens(
         tokens.extend(_encode_optional_pair_tokens((event.memory_read_address, int(event.memory_read_value))))
     tokens.extend(("memory_write",))
     tokens.extend(_encode_optional_pair_tokens(event.memory_write))
-    tokens.extend(("next_pc",))
-    tokens.extend(_encode_int_tokens(event.next_pc))
-    tokens.extend(("stack_before",))
-    tokens.extend(_encode_int_tokens(event.stack_depth_before))
-    tokens.extend(("stack_after",))
-    tokens.extend(_encode_int_tokens(event.stack_depth_after))
     tokens.extend(("halted",))
     tokens.extend(_encode_int_tokens(int(event.halted)))
     return tuple(tokens)

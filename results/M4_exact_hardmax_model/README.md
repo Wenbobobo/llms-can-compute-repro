@@ -38,8 +38,12 @@ Current capability:
     programs,
   - and a combined run where induced event generation uses the current
     trainable stack latest-write scorer.
-- `precision_stress.json` records finite-precision address-range failures for
-  `float64`, `float32`, `bfloat16`, and `float16`.
+- `precision_stress.json` records the original single-head finite-precision
+  address-range failures for `float64`, `float32`, `bfloat16`, and `float16`.
+- `../M4_neural_event_executor/summary.json` records the new neural
+  structured-event executor.
+- `../M4_precision_scaling/summary.json` records the scheme-aware precision
+  decomposition sweeps.
 
 For the current grid search, the selected scorer uses
 `quadratic_scale=0.25` and `time_scale=0.0005`. It reaches exact program
@@ -67,6 +71,15 @@ The induced causal artifact extends this again:
 - and it remains exact when paired with the current trainable stack latest-write
   scorer on the exported held-out slice.
 
+The neural event artifact extends this one step further:
+
+- it trains a neural multi-head decoder over the same structured transition
+  label space,
+- it reaches exact structured-label accuracy `1.0` on both the exported train
+  and eval slices,
+- and it reaches exact rollout `1.0` on held-out countdown, branch, and memory
+  program families.
+
 The current dynamic-address example still targets a single effective address at
 runtime. It is evidence that the bridge survives runtime address selection, not
 yet evidence for broad dynamic-address workloads. The new stack examples should
@@ -82,9 +95,15 @@ The precision artifact should be read as a warning label:
   latest-write time bias already breaks by `512`,
 - `float16` and `bfloat16` collapse much earlier.
 
+The new scheme-aware precision artifact should be read as a partial repair:
+
+- `single_head` keeps the current `float32` latest-write stability only through
+  local address limit `256`,
+- `radix2` extends that to `4096`,
+- and `block_recentered` does the same on the current local sweep.
+
 ## Not Yet Included
 
 - token-level neural event decoders,
-- full neural free-running event generation,
-- finite-precision-stable million-step addressing,
-- broader mixed-memory workloads under the learned branch.
+- million-step-stable addressing,
+- broader mixed-memory workloads under a context-richer learned branch.

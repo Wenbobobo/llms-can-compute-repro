@@ -19,8 +19,8 @@ The working target is narrower and more falsifiable:
 | M1 | Claims/scope lock, acceptance criteria, ambiguity register | complete |
 | M2 | Exact 2D hard-max geometry core | benchmarked correctness-first implementation |
 | M3 | Append-only trace DSL and reference executor | stack plus bounded-RAM reference semantics recorded |
-| M4 | Exact hard-max model branch | free-running exact executor plus induced causal event branch |
-| M5 | Standard 2D-head softmax baseline | atomic vs factorized CUDA comparison completed; exact free-running rollout still fails |
+| M4 | Exact hard-max model branch | exact, induced, and neural structured-event executors exported; precision decomposition checkpoint added |
+| M5 | Standard 2D-head softmax baseline | atomic vs factorized vs event-grouped CUDA comparison completed; exact free-running rollout still fails |
 | M6 | Restricted compiled-program demos | planned |
 
 ## Reproduction Stance
@@ -30,17 +30,6 @@ The working target is narrower and more falsifiable:
 - Keep exact hard-max, standard softmax, and approximate branches separate.
 - Judge success by free-running exact execution, not token plausibility.
 - Narrow claims when evidence is narrow.
-
-## Public Material Policy
-
-Raw source materials are kept in a local-only `docs/Origin/` directory and are
-excluded from version control. The public repository stores:
-
-- structured notes,
-- claim decomposition,
-- implementation artifacts,
-- benchmark outputs,
-- and explicit accounting of what was or was not reproduced.
 
 ## Repository Layout
 
@@ -59,7 +48,24 @@ excluded from version control. The public repository stores:
 - Geometry benchmarks show clearly sublinear query growth against history size.
 - The trace interpreter and replay engine agree on final state exactly.
 - The free-running exact executor reproduces reference traces by length bucket.
+- The current `M4` neural event branch reaches exact rollout on the exported
+  countdown, branch, and memory held-out slices, but it is still an
+  opcode-conditioned structured rule decoder rather than a raw token model.
+- The current precision branch records that `float32` latest-write retrieval is
+  locally stable only to `256` under the single-head encoding, but to `4096`
+  under the current radix/block decomposition schemes.
 - The project remains honest about unsupported claims and unresolved ambiguity.
+
+## Public Material Policy
+
+Raw source materials are kept in a local-only `docs/Origin/` directory and are
+excluded from version control. The public repository stores:
+
+- structured notes,
+- claim decomposition,
+- implementation artifacts,
+- benchmark outputs,
+- and explicit accounting of what was or was not reproduced.
 
 ## Environment
 
