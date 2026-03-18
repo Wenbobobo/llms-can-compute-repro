@@ -57,26 +57,39 @@ Boundary note:
 
 ## 3. Methods: Trace Substrate and Exact Retrieval
 
-Section target:
-- define append-only traces, exact latest-write retrieval, and the reference
-  execution setting as mechanism primitives rather than as a finished system
-  claim.
-
-Required beats:
-- tie this section to `A1` and `B1`;
-- use the geometry benchmark only to establish the retrieval signal;
-- keep broader runtime or language claims out of the methods framing.
+The methods section is anchored in exact semantics rather than model
+performance. The core representation is an append-only execution trace whose
+events expose the bounded state updates needed for later recovery: stack pops
+and pushes, branch decisions, next-program-counter transitions, and latest
+memory writes. Under that representation, the key read operations in the
+current scope become exact causal retrieval problems rather than opaque latent
+state recovery. Latest-write memory reads and stack-slot reads are phrased as
+2D hard-max retrieval over keys that encode both content address and temporal
+priority, and the current brute-force and specialized retrieval paths agree on
+the validated examples. The geometry benchmark belongs here only as evidence
+that exact retrieval admits a meaningful asymptotic signal. It should not be
+allowed to blur into a broader claim that the full current system is already
+competitive end to end.
 
 ## 4. Executor Branches and Negative Controls
 
-Section target:
-- compare exact/reference branches, staged branches, and negative controls on
-  the axis that matters here: free-running exactness.
-
-Required beats:
-- distinguish teacher-forced success from free-running success;
-- show why softmax baselines remain informative negative controls;
-- avoid model-leaderboard framing.
+The executor results are best read as a progression from exactness by
+construction toward learned or partially learned decision rules, with the
+evaluation criterion fixed throughout: free-running exactness, not local label
+fit alone. Exact and induced branches show that the append-only substrate can
+support a small executor on the current toy scope. The harder question is what
+survives once event decisions are predicted rather than derived. Here the
+staged pointer decoder is the strongest learned branch, but its success remains
+conditional on legality structure. On the widened staged suite, the fairer
+`opcode_shape` regime collapses to `0.0` held-out exact rollout, while
+`opcode_legal` remains exact only because stronger legality constraints remove
+impossible combinations at decode time. The negative controls matter for the
+same reason: they share the task surface and still fail. The event-level
+softmax baseline remains at zero exact rollout despite nonzero teacher-forced
+head accuracies, and the pointer-space softmax baseline remains at `0.0`
+exact-label accuracy with structural rollout still at `0.0 / 0.0` on the
+exported train/held-out slice. These failures make the staged branch's partial
+success informative without turning it into a general neural-executor claim.
 
 Main items:
 - staged decode regime comparison;
@@ -84,28 +97,37 @@ Main items:
 
 ## 5. Mask Dependence and Failure Provenance
 
-Section target:
-- explain why the fair staged positive claim does not survive the widened
-  suite.
-
-Required beats:
-- state that `opcode_shape` and later `step_budget` do not define surviving
-  fair regimes;
-- use provenance to show that later nontermination is downstream of earlier
-  semantic divergence.
+The staged follow-up is a closure step rather than a rescue attempt. Once the
+widened suite is included, the fair positive interpretation does not survive:
+the held-out `opcode_shape` regime no longer supports exact rollout, and the
+only exact regime is the stronger `opcode_legal` diagnostic. The provenance
+results then narrow the explanation further. The cleaned failure taxonomy
+separates direct semantic errors from later runtime failure and shows that many
+`step_budget` rows are downstream nontermination after an earlier semantic
+divergence. On the `opcode_shape` slice, the root-cause head is consistently
+`push_expr_0`, with the remaining failures explained by downstream
+consequences rather than a separate hidden regime. The staged story therefore
+ends as a sharper negative closure: legality structure still matters, and the
+paper should say so directly.
 
 Main item:
 - provenance-backed staged failure taxonomy figure.
 
 ## 6. Precision Boundary on Real / Organic Traces
 
-Section target:
-- present the `C3e` boundary as a suite-specific positive-with-boundary result.
-
-Required beats:
-- single-head fails early on many current streams;
-- decomposition remains exact on the validated suite;
-- broader long-horizon robustness remains unsupported.
+The precision section should make one bounded claim and then stop. On the
+current exported real and organic trace families, float32 single-head latest-
+write retrieval fails early often enough that broad robustness language is no
+longer defensible: 12 of 25 tracked streams fail under the single-head scheme,
+and 7 of those fail already at `1x`. At the same time, the results are not
+purely negative. At least one decomposition configuration remains exact on all
+25 tracked streams in the validated suite, and the failures that do appear are
+not arbitrary. The current observed failure mode is still `tie_collapse`, and
+the families where decomposition helps most are the memory-heavy streams where
+single-head addressing fails early. The correct paper claim is therefore a
+narrow positive-with-boundary statement: decomposition materially helps on the
+current validated suite, but nothing here supports universal base or horizon
+claims across unseen trace families or a broad long-horizon robustness result.
 
 Main items:
 - real-trace precision boundary figure;
@@ -157,14 +179,22 @@ Appendix companions:
 
 ## 9. Negative Results and Threats
 
-Section target:
-- unify unsupported claims, failed baselines, staged closure, narrow precision,
-  and mixed systems value into one explicit boundary statement.
-
-Required beats:
-- keep `negative_results.md` and `threats_to_validity.md` aligned;
-- state that mixed systems evidence remains part of the argument;
-- avoid recasting blocked claims as deferred engineering tasks.
+The negative-results section should read as part of the argument rather than as
+cleanup. Several tempting broader claims now have explicit contrary evidence or
+explicitly missing support: the project does not validate general LLM
+computation, arbitrary C reproduction, broader compiled demos, fair-regime
+staged-pointer exactness, broad long-horizon precision robustness, or
+current-scope end-to-end runtime superiority. These are not all the same kind
+of limitation, and the section should keep them distinct. Some are failures of
+learned execution under fair decode regimes; some are bounded precision
+results; some are systems-level no-go findings; and some are deliberate scope
+cuts made to avoid inflating `D0` into a broader language claim. Keeping these
+rows explicit is scientifically useful because it prevents the paper from
+borrowing rhetorical force from the motivating field note while quietly
+dropping the parts that did not survive the evidence freeze. The threats
+section then makes the matching external-validity point: the current bundle is
+a narrow, auditable endpoint, not a disguised claim about general
+language-model computation.
 
 Main item:
 - threats-to-validity table.

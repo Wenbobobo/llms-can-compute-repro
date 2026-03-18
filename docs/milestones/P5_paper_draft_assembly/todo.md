@@ -18,7 +18,11 @@
   manuscript bundle that can be expanded monotonically.
 - [x] Decide whether the mixed `R2` result should stay inline or gain a compact
   main-text table in the next paper-layout pass.
-- [ ] Turn the current structured notes for Methods / Executor branches /
+- [x] Turn the current structured notes for Methods / Executor branches /
   Precision / Negative results into near-prose section stubs.
-- [ ] Decide whether the current supported-vs-unsupported claim material works
+- [x] Decide whether the current supported-vs-unsupported claim material works
   better as one combined figure/table pair or as two separate main-text items.
+- [ ] Draft the appendix/reproducibility section into the same section-ordered
+  near-prose form as the main-text bundle.
+- [ ] Turn the current figure/table role notes into caption-candidate sentences
+  that can be dropped into a paper draft with minimal editing.

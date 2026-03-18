@@ -11,5 +11,8 @@ Started on 2026-03-19 in the `paper` worktree.
   section-ordered manuscript bundle;
 - the current `R2` layout rule is now fixed as inline main-text prose unless a
   later layout pass explicitly promotes a compact gate table;
-- the next gap is expanding the remaining methods / executor / precision /
-  threats sections from structured notes into near-prose manuscript text.
+- the remaining methods / executor / precision / threats sections are now also
+  converted into near-prose manuscript text;
+- the next gap is appendix-first work: turn reproducibility and artifact-map
+  material into a section-ordered appendix draft and tighten caption candidates
+  for the current fixed main-text figures and tables.
