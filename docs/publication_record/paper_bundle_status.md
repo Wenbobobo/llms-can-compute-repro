@@ -31,7 +31,7 @@ Caption candidates for the current fixed figure/table set now live in
 | Item | Status | Notes |
 | --- | --- | --- |
 | Supported vs unsupported claims | ready | Covered by claim ladder plus threats/negative-results ledgers; current main-text layout stays as a separate table paired with the claim-ladder figure rather than one merged artifact. |
-| Exact-trace / final-state success table | ready on current scope | Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. Broader compiled demos remain blocked unless a later `M7` decision explicitly approves widening. |
+| Exact-trace / final-state success table | ready | Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table is ready on the current frozen `D0` scope; broader compiled demos remain blocked unless a later `M7` decision explicitly approves widening. |
 | Real-trace precision boundary table | ready | Organic bundle plus scaling sweeps now also feed canonical `P1` boundary rows under `results/P1_paper_readiness/`. |
 | Threats-to-validity table | ready | Content exists; only wording polish remains. |
 

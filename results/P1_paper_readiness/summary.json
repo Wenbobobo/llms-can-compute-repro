@@ -33,12 +33,8 @@
     "table_count": 4,
     "by_status": [
       {
-        "status": "partial",
-        "count": 1
-      },
-      {
         "status": "ready",
-        "count": 9
+        "count": 10
       }
     ]
   },
@@ -51,8 +47,6 @@
       }
     ]
   },
-  "blocked_or_partial_items": [
-    "Exact-trace / final-state success table"
-  ],
+  "blocked_or_partial_items": [],
   "incomplete_claims": []
 }

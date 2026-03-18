@@ -125,6 +125,10 @@
         {
           "path": "results/M4_precision_organic_traces/claim_impact.json",
           "exists": true
+        },
+        {
+          "path": "results/R1_precision_mechanism_closure/summary.json",
+          "exists": true
         }
       ],
       "next_evidence_target": [],
@@ -132,7 +136,7 @@
     },
     {
       "claim_layer": "D0 First compiled frontend boundary",
-      "current_status": "control-flow-first implementation validated on tiny typed bytecode; the frozen slice now also survives one stress/reference follow-up with a standalone spec oracle and synced companion memory-surface diagnostics",
+      "current_status": "current tiny typed bytecode remains the compiled endpoint; the frozen slice is implemented, survives one stress/reference follow-up with a standalone spec oracle and synced companion memory-surface diagnostics, and is explicitly not widened by `M7`",
       "best_evidence": [
         {
           "path": "results/M6_typed_bytecode_harness/verifier_rows.json",
@@ -153,11 +157,13 @@
         {
           "path": "results/M6_stress_reference_followup/summary.json",
           "exists": true
+        },
+        {
+          "path": "results/M7_frontend_candidate_decision/decision_summary.json",
+          "exists": true
         }
       ],
-      "next_evidence_target": [
-        "docs/milestones/P1_paper_readiness/"
-      ],
+      "next_evidence_target": [],
       "completeness": "complete"
     }
   ],

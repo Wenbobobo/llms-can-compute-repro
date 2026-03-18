@@ -26,7 +26,7 @@
   near-prose form as the main-text bundle.
 - [x] Turn the current figure/table role notes into caption-candidate sentences
   that can be dropped into a paper draft with minimal editing.
-- [ ] Tighten the current `D0` exact-trace / final-state table wording from
+- [x] Tighten the current `D0` exact-trace / final-state table wording from
   `partial` toward a stable current-scope-ready paper note.
 - [ ] Do one paper-lane wording pass that checks README-facing phrasing against
   the newer manuscript bundle and caption candidates.

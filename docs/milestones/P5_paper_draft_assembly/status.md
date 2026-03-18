@@ -15,6 +15,7 @@ Started on 2026-03-19 in the `paper` worktree.
   converted into near-prose manuscript text;
 - appendix/reproducibility material and fixed figure/table caption candidates
   are now also drafted;
-- the next gap is polish rather than structure: tighten the one remaining
-  partial table (`D0` exact-trace / final-state`) and decide whether any table
-  wording should be simplified before a future README/paper sync pass.
+- the stale `D0` table-status mismatch is now being normalized back to a
+  current-scope `ready` note via a `P1` export refresh;
+- the next gap is a wording-only pass that checks README-facing phrasing
+  against the fuller manuscript bundle and caption candidates.
