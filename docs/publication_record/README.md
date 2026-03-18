@@ -18,6 +18,10 @@ Core ledgers:
   boundary-sensitive parts of the draft;
 - `manuscript_bundle_draft.md` — section-ordered draft bundle for monotonic
   expansion into a full manuscript;
+- `appendix_stub_notes.md` — near-prose appendix and reproducibility draft
+  material;
+- `caption_candidate_notes.md` — draft caption sentences for the fixed current
+  main-text figures and tables;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for

@@ -5,6 +5,8 @@
 - `docs/publication_record/section_caption_notes.md`
 - `docs/publication_record/manuscript_stub_notes.md`
 - `docs/publication_record/manuscript_bundle_draft.md`
+- `docs/publication_record/appendix_stub_notes.md`
+- `docs/publication_record/caption_candidate_notes.md`
 - `docs/publication_record/figure_table_narrative_roles.md`
 - `docs/publication_record/appendix_boundary_map.md`
 - `docs/publication_record/layout_decision_log.md`

@@ -22,7 +22,11 @@
   Precision / Negative results into near-prose section stubs.
 - [x] Decide whether the current supported-vs-unsupported claim material works
   better as one combined figure/table pair or as two separate main-text items.
-- [ ] Draft the appendix/reproducibility section into the same section-ordered
+- [x] Draft the appendix/reproducibility section into the same section-ordered
   near-prose form as the main-text bundle.
-- [ ] Turn the current figure/table role notes into caption-candidate sentences
+- [x] Turn the current figure/table role notes into caption-candidate sentences
   that can be dropped into a paper draft with minimal editing.
+- [ ] Tighten the current `D0` exact-trace / final-state table wording from
+  `partial` toward a stable current-scope-ready paper note.
+- [ ] Do one paper-lane wording pass that checks README-facing phrasing against
+  the newer manuscript bundle and caption candidates.

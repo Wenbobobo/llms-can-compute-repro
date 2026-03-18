@@ -201,12 +201,18 @@ Main item:
 
 ## 10. Reproducibility Appendix
 
-Section target:
-- collect regeneration commands, artifact ledgers, public-safe packaging
-  boundaries, and companion diagnostics.
-
-Required beats:
-- point to `experiment_manifest.md` and `results/P1_paper_readiness/`;
-- keep release-hygiene details downstream of the scientific argument;
-- preserve appendix-only placement for memory-surface and per-stream precision
-  artifacts.
+The appendix should make the current paper bundle auditable and regenerable
+without inflating companion diagnostics into new main-text claims. The guiding
+rule is simple: main text carries the distilled claim-bearing evidence, while
+the appendix carries regeneration commands, artifact maps, and companion views
+that strengthen auditability on the same frozen scope. The current appendix
+therefore has three jobs. First, it points readers to the canonical paper-ready
+bundle under `results/P1_paper_readiness/`, which contains rendered figures,
+table sources, and machine-readable bundle summaries. Second, it records how to
+regenerate the public-safe result bundles that matter for the compiled
+boundary, paper assembly, and release gate. Third, it keeps companion
+diagnostics such as memory-surface views, per-stream precision catalogs, and
+full staged failure digests visible and inspectable without letting them mutate
+into broader claims. Release-hygiene and packaging ledgers belong here for the
+same reason: they make the research engineering process reproducible and
+inspectable, but they remain downstream of the scientific argument itself.
