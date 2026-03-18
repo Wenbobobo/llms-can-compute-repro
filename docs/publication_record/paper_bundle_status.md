@@ -18,6 +18,9 @@ Caption-ready section notes now live in
 Near-prose stubs for `Abstract`, `Introduction`, `Systems gate`, and
 `Compiled boundary` now live in
 `docs/publication_record/manuscript_stub_notes.md`.
+The current section-ordered expansion target now lives in
+`docs/publication_record/manuscript_bundle_draft.md`, and the current `R2`
+placement choice is recorded in `docs/publication_record/layout_decision_log.md`.
 
 ## Mandatory tables
 

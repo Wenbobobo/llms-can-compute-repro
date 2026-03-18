@@ -16,10 +16,14 @@ Core ledgers:
   guardrails for the current manuscript skeleton;
 - `manuscript_stub_notes.md` — near-prose section stubs for the most
   boundary-sensitive parts of the draft;
+- `manuscript_bundle_draft.md` — section-ordered draft bundle for monotonic
+  expansion into a full manuscript;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for
   companion artifacts;
+- `layout_decision_log.md` — records layout choices that affect evidence
+  placement or claim wording;
 - `figure_backlog.md` — reserved future figures and tables;
 - `experiment_manifest.md` — reproducibility ledger for unattended runs;
 - `threats_to_validity.md` — constraints, caveats, and external-threat notes;

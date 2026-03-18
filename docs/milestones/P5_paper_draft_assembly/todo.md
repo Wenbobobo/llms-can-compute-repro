@@ -14,7 +14,11 @@
   claim/evidence wording.
 - [x] Draft near-prose section stubs for the mixed systems gate and the
   compiled-boundary no-go.
-- [ ] Merge the section notes and near-prose stubs into one section-ordered
+- [x] Merge the section notes and near-prose stubs into one section-ordered
   manuscript bundle that can be expanded monotonically.
-- [ ] Decide whether the mixed `R2` result should stay inline or gain a compact
+- [x] Decide whether the mixed `R2` result should stay inline or gain a compact
   main-text table in the next paper-layout pass.
+- [ ] Turn the current structured notes for Methods / Executor branches /
+  Precision / Negative results into near-prose section stubs.
+- [ ] Decide whether the current supported-vs-unsupported claim material works
+  better as one combined figure/table pair or as two separate main-text items.
