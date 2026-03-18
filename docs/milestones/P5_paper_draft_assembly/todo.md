@@ -10,7 +10,11 @@
   section map once caption wording stabilizes.
 - [x] Turn the section map into caption-ready section notes with explicit
   boundary phrasing for `R2` and `D0`.
-- [ ] Draft near-prose abstract/introduction seeds using only frozen
+- [x] Draft near-prose abstract/introduction seeds using only frozen
   claim/evidence wording.
-- [ ] Draft near-prose section stubs for the mixed systems gate and the
+- [x] Draft near-prose section stubs for the mixed systems gate and the
   compiled-boundary no-go.
+- [ ] Merge the section notes and near-prose stubs into one section-ordered
+  manuscript bundle that can be expanded monotonically.
+- [ ] Decide whether the mixed `R2` result should stay inline or gain a compact
+  main-text table in the next paper-layout pass.

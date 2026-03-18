@@ -14,6 +14,8 @@ Core ledgers:
   paper lane;
 - `section_caption_notes.md` — caption-ready section notes and phrasing
   guardrails for the current manuscript skeleton;
+- `manuscript_stub_notes.md` — near-prose section stubs for the most
+  boundary-sensitive parts of the draft;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for

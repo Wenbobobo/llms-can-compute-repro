@@ -8,5 +8,6 @@ Started on 2026-03-19 in the `paper` worktree.
 - current section map, figure/table roles, and appendix boundaries are now
   drafted;
 - caption-ready section notes are now added; the next gap is moving the
-  abstract/introduction and the `R2` / `D0` sections closer to near-prose
-  manuscript stubs without widening scope.
+  remaining section-by-section skeleton toward a unified manuscript bundle,
+  including a concrete layout decision for whether `R2` stays inline or gains a
+  compact main-text table.

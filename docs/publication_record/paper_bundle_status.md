@@ -15,6 +15,9 @@ Narrative-role draft: current main-text figure roles are fixed in
 `docs/publication_record/figure_table_narrative_roles.md`.
 Caption-ready section notes now live in
 `docs/publication_record/section_caption_notes.md`.
+Near-prose stubs for `Abstract`, `Introduction`, `Systems gate`, and
+`Compiled boundary` now live in
+`docs/publication_record/manuscript_stub_notes.md`.
 
 ## Mandatory tables
 
