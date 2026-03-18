@@ -1,8 +1,8 @@
 # Manuscript Bundle Draft
 
-Status: section-ordered draft bundle for monotonic expansion after the `M7`
-no-go decision. This file is not final paper prose, but future drafting should
-prefer extending it over re-planning section scope.
+Status: section-ordered manuscript draft after the first section-draft upgrade
+following the `M7` no-go decision. The remaining work is sentence-level polish
+and local figure/table callout cleanup, not another round of section planning.
 
 ## 1. Abstract
 
@@ -48,22 +48,32 @@ should remain at tiny typed bytecode `D0`: the current slice is exact and
 auditable, but the systems gate is mixed and therefore does not justify
 widening to a broader frontend.
 
-Main items:
-- claim ladder + evidence matrix;
-- supported vs unsupported claims table.
-
-Boundary note:
-- unsupported claims are outputs of the paper, not future-work placeholders.
+The section should point readers to two paired main-text artifacts. A
+claim-ladder figure plus evidence matrix should orient the narrowed mechanism
+story that survives the freeze, while a separate supported-versus-unsupported
+claims table should keep the excluded broader readings explicit and auditable.
+Those unsupported rows are part of the result rather than placeholders for
+future rhetorical widening.
 
 ## 3. Methods: Trace Substrate and Exact Retrieval
 
 The methods section is anchored in exact semantics rather than model
-performance. The core representation is an append-only execution trace whose
-events expose the bounded state updates needed for later recovery: stack pops
-and pushes, branch decisions, next-program-counter transitions, and latest
-memory writes. Under that representation, the key read operations in the
-current scope become exact causal retrieval problems rather than opaque latent
-state recovery. Latest-write memory reads and stack-slot reads are phrased as
+performance.
+
+### 3.1 Trace substrate semantics
+
+The core representation is an append-only execution trace whose events expose
+the bounded state updates needed for later recovery: stack pops and pushes,
+branch decisions, next-program-counter transitions, and latest memory writes.
+Under that representation, the relevant executor state is no longer treated as
+opaque latent memory. It is exposed as a causal history that can be audited
+event by event against exact execution semantics.
+
+### 3.2 Exact retrieval and geometry signal
+
+Once the trace is written in that form, the key read operations in the current
+scope become exact causal retrieval problems rather than latent-state
+reconstruction. Latest-write memory reads and stack-slot reads are phrased as
 2D hard-max retrieval over keys that encode both content address and temporal
 priority, and the current brute-force and specialized retrieval paths agree on
 the validated examples. The geometry benchmark belongs here only as evidence
@@ -91,9 +101,12 @@ exact-label accuracy with structural rollout still at `0.0 / 0.0` on the
 exported train/held-out slice. These failures make the staged branch's partial
 success informative without turning it into a general neural-executor claim.
 
-Main items:
-- staged decode regime comparison;
-- negative-control comparison.
+The paper evidence for this section should therefore be organized around one
+regime-comparison figure and one negative-control comparison. The first should
+show that exact rollout survives only under stronger legality structure, and
+the second should show that nearby softmax baselines still fail under the same
+free-running criterion. Read together, they support a bounded structural claim
+rather than a general learned-executor result.
 
 ## 5. Mask Dependence and Failure Provenance
 
@@ -110,8 +123,9 @@ consequences rather than a separate hidden regime. The staged story therefore
 ends as a sharper negative closure: legality structure still matters, and the
 paper should say so directly.
 
-Main item:
-- provenance-backed staged failure taxonomy figure.
+One provenance-backed staged failure taxonomy figure should carry this section's
+main evidence, with the figure used to separate root semantic mistakes from
+later runtime fallout rather than to imply a hidden positive regime.
 
 ## 6. Precision Boundary on Real / Organic Traces
 
@@ -129,9 +143,10 @@ narrow positive-with-boundary statement: decomposition materially helps on the
 current validated suite, but nothing here supports universal base or horizon
 claims across unseen trace families or a broad long-horizon robustness result.
 
-Main items:
-- real-trace precision boundary figure;
-- real-trace precision boundary table.
+The main-text support here should stay compact: one real-trace boundary figure
+to show where failures first appear across schemes, and one boundary table to
+make the current `12/25`, `7/25`, and `25/25` claims auditable without opening
+new generalization rhetoric.
 
 ## 7. Systems Gate
 
@@ -149,10 +164,11 @@ The correct conclusion is therefore mixed and operational: the specialized
 retrieval mechanism is real, but on the present validated scope it does not yet
 justify broader frontend widening or a general system-superiority claim.
 
-Current layout choice:
-- keep `R2` as a main-text paragraph with quantitative sentences;
-- keep the full baseline matrix and runtime rows out of the main text unless a
-  later layout pass specifically promotes a compact table.
+For layout, this result should remain a quantified main-text paragraph rather
+than a standalone table. The main text needs the mixed gate decision and its
+key timing anchors, while the full baseline matrix and runtime rows should stay
+in companion artifacts unless a later layout pass specifically promotes a
+compact gate table.
 
 ## 8. Compiled Boundary
 
@@ -169,13 +185,12 @@ evidence bundle already closes the narrow compiled claim, the project stops at
 tiny typed bytecode rather than widening toward Wasm-like or arbitrary-C
 language coverage.
 
-Main items:
-- frontend boundary diagram;
-- exact-trace / final-state success table.
-
-Appendix companions:
-- memory-surface diagnostics;
-- stress/reference companion rows beyond the main `D0` summary.
+The main text should support this endpoint with two artifacts: a frontend
+boundary diagram that makes the frozen `D0` slice explicit, and an
+exact-trace/final-state success table that records what the current starter
+suite does and does not validate. Companion appendix material should stay clearly
+downstream of that endpoint: memory-surface diagnostics and stress/reference
+rows help audit the boundary, but they do not widen it.
 
 ## 9. Negative Results and Threats
 
@@ -196,8 +211,10 @@ section then makes the matching external-validity point: the current bundle is
 a narrow, auditable endpoint, not a disguised claim about general
 language-model computation.
 
-Main item:
-- threats-to-validity table.
+One compact threats-to-validity table should make those boundary rows explicit,
+keeping failures of learned execution, finite-precision limits, systems no-go
+results, and deliberate scope cuts visible as distinct reasons rather than as a
+single undifferentiated limitation paragraph.
 
 ## 10. Reproducibility Appendix
 

@@ -21,5 +21,11 @@ Started on 2026-03-19 in the `paper` worktree.
   the fuller manuscript bundle and caption candidates;
 - the merge-ready public-surface sync back to `main` is now completed and
   recorded;
-- the next paper-lane mode is fixed: keep the manuscript bundle primary, and
-  use a separate short release-summary outline for future public-facing syncs.
+- the section-draft upgrade is now executed on
+  `manuscript_bundle_draft.md`, removing the largest remaining planning
+  scaffolds from the main sections;
+- the release summary draft is now approved as the future source for
+  README-adjacent short updates, with the manuscript bundle kept as the
+  authoritative paper-facing source;
+- the next paper-lane work is sentence-level polish and later layout
+  tightening, not another structural rewrite.

@@ -34,7 +34,11 @@
   back to `main`.
 - [x] Decide whether the next paper-lane pass should stay bundle-first or split
   into a manuscript-facing draft plus a shorter release-facing summary.
-- [ ] Start the shorter release-facing summary from the new outline, keeping it
+- [x] Start the shorter release-facing summary from the new outline, keeping it
   strictly downstream of the manuscript bundle.
-- [ ] Decide whether the next manuscript pass should focus on prose polish or
+- [x] Decide whether the next manuscript pass should focus on prose polish or
   on turning the current bundle into a more paper-shaped section draft.
+- [x] Execute the section-draft upgrade on `manuscript_bundle_draft.md` so the
+  main sections read less like assembly notes and more like a paper draft.
+- [x] Decide whether the release summary draft is stable enough to become the
+  future source for README-adjacent short updates.

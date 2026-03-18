@@ -16,14 +16,19 @@ Core ledgers:
   guardrails for the current manuscript skeleton;
 - `manuscript_stub_notes.md` — near-prose section stubs for the most
   boundary-sensitive parts of the draft;
-- `manuscript_bundle_draft.md` — section-ordered draft bundle for monotonic
-  expansion into a full manuscript;
+- `manuscript_bundle_draft.md` — current section-draft baseline for later
+  sentence-level polish and layout refinement;
 - `appendix_stub_notes.md` — near-prose appendix and reproducibility draft
   material;
 - `caption_candidate_notes.md` — draft caption sentences for the fixed current
   main-text figures and tables;
 - `release_summary_outline.md` — short downstream summary outline for future
   release-facing syncs;
+- `release_summary_draft.md` — short release-facing draft derived from the
+  manuscript bundle and approved as the source for future README-adjacent short
+  updates;
+- `section_draft_upgrade_outline.md` — record of the structural pass that
+  converted the bundle into a more paper-shaped section draft;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for
@@ -43,6 +48,9 @@ Operating rule:
 - appendix-level diagnostics that strengthen an existing claim row without
   widening scope should stay tied to that claim and the `P1` paper bundle,
   rather than becoming a new claim layer by default.
+- future short public-surface syncs should derive from
+  `release_summary_draft.md`, while the manuscript bundle remains the
+  authoritative paper-facing source.
 - `paper_outline.md` is active planning material for the current paper-first
   workflow.
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
