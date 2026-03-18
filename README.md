@@ -1,17 +1,18 @@
 # llms-can-compute-repro
 
-Careful reproduction of the execution-substrate claims behind Percepta's field
-note _Can LLMs Be Computers?_
+Careful reproduction of a narrowed execution-substrate reading of Percepta's
+field note _Can LLMs Be Computers?_
 
-This repository tests a narrow thesis:
+This repository tracks a paper-grade endpoint:
 
 1. deterministic computation can be encoded as an append-only execution trace;
-2. exact “latest relevant write” retrieval over that trace can be implemented
-   with specialized mechanisms, including structured 2D hard-max retrieval;
-3. those primitives may be sufficient for a small exact executor.
+2. exact latest-write retrieval over that trace can be implemented with
+   structured 2D hard-max retrieval;
+3. on the current validated scope, those primitives support a small exact
+   executor and a tiny typed-bytecode `D0` compiled endpoint.
 
 This repository does **not** claim that general LLMs are computers, that
-arbitrary C has been reproduced, or that presentation-first demos are evidence.
+arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 ## Current Boundary
 
@@ -27,9 +28,9 @@ arbitrary C has been reproduced, or that presentation-first demos are evidence.
 
 ## Current Gate Outcome
 
-- `P3` freezes the current paper scope without blocked figure/table items.
-- `R1` closes the precision story as a narrowed boundary, not a broad robustness claim.
-- `R2` stays mixed: geometry is strongly positive, but the lowered path is not yet competitive on current `D0` suites.
+- `P3` freezes the current paper scope; the current `P1` export now reports `10/10` ready figure/table items on that frozen scope.
+- `R1` closes the precision story as a narrowed boundary: float32 single-head fails on `12/25` tracked real/organic trace streams, `7/25` already at `1x`, while at least one decomposition stays exact on `25/25` tracked streams.
+- `R2` stays mixed: geometry is strongly positive, but the lowered path is still about `1.82x` slower than the best current reference/oracle path on positive `D0` suites.
 - `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
 - `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
 
@@ -41,6 +42,7 @@ not frontend widening or demo-first expansion.
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
+- `docs/publication_record/manuscript_bundle_draft.md` — current section-ordered manuscript bundle
 - `docs/milestones/P1_paper_readiness/` — current paper bundle staging area
 - `docs/milestones/P2_public_research_packaging/` — public-safe packaging ledger
 
@@ -73,6 +75,7 @@ uv run python scripts/export_p4_blog_release_gate.py
 
 ## Public Material Policy
 
-`docs/Origin/` contains local-only source material and stays out of version
-control. The public repository stores derived notes, code, benchmark outputs,
-claim ledgers, and explicit accounting of what was and was not reproduced.
+`docs/Origin/` and `docs/origin/` contain local-only source material and stay
+out of version control. The public repository stores derived notes, code,
+benchmark outputs, claim ledgers, and explicit accounting of what was and was
+not reproduced.

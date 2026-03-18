@@ -28,5 +28,9 @@
   that can be dropped into a paper draft with minimal editing.
 - [x] Tighten the current `D0` exact-trace / final-state table wording from
   `partial` toward a stable current-scope-ready paper note.
-- [ ] Do one paper-lane wording pass that checks README-facing phrasing against
+- [x] Do one paper-lane wording pass that checks README-facing phrasing against
   the newer manuscript bundle and caption candidates.
+- [ ] Prepare a merge-ready public-surface sync batch from the `paper` lane
+  back to `main`.
+- [ ] Decide whether the next paper-lane pass should stay bundle-first or split
+  into a manuscript-facing draft plus a shorter release-facing summary.

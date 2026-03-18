@@ -15,7 +15,9 @@ Started on 2026-03-19 in the `paper` worktree.
   converted into near-prose manuscript text;
 - appendix/reproducibility material and fixed figure/table caption candidates
   are now also drafted;
-- the stale `D0` table-status mismatch is now being normalized back to a
-  current-scope `ready` note via a `P1` export refresh;
-- the next gap is a wording-only pass that checks README-facing phrasing
-  against the fuller manuscript bundle and caption candidates.
+- the stale `D0` table-status mismatch is now closed by the refreshed `P1`
+  export;
+- the public-surface wording pass now aligns `README.md` and `STATUS.md` with
+  the fuller manuscript bundle and caption candidates;
+- the next gap is integration discipline: decide when this paper-lane wording
+  bundle is stable enough to sync back onto `main`.
