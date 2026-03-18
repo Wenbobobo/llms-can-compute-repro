@@ -26,6 +26,7 @@ m5 = [
 packages = [
   "src/geometry",
   "src/exec_trace",
+  "src/bytecode",
   "src/model",
   "src/benchmarks",
   "src/utils",

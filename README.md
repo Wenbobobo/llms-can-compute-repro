@@ -1,96 +1,78 @@
 # llms-can-compute-repro
 
-Careful reproduction of the core execution-substrate claims behind Percepta's
-field note _Can LLMs Be Computers?_
+Careful reproduction of the execution-substrate claims behind Percepta's field
+note _Can LLMs Be Computers?_
 
-This repository does **not** try to validate the headline literally.
-The working target is narrower and more falsifiable:
+This repository tests a narrow thesis:
 
-1. Can long exact computation be encoded as an append-only execution trace?
-2. Can critical reads over that trace be reduced from linear scan to sublinear
-   geometric retrieval under a 2D hard-max regime?
-3. Are those primitives sufficient to support a small exact executor?
+1. deterministic computation can be encoded as an append-only execution trace;
+2. exact “latest relevant write” retrieval over that trace can be implemented
+   with specialized mechanisms, including structured 2D hard-max retrieval;
+3. those primitives may be sufficient for a small exact executor.
 
-## Current Status
+This repository does **not** claim that general LLMs are computers, that
+arbitrary C has been reproduced, or that presentation-first demos are evidence.
 
-| Milestone | Scope | Status |
-| --- | --- | --- |
-| M0 | Public-safe scaffold, repo policy, research docs | complete |
-| M1 | Claims/scope lock, acceptance criteria, ambiguity register | complete |
-| M2 | Exact 2D hard-max geometry core | benchmarked correctness-first implementation |
-| M3 | Append-only trace DSL and reference executor | stack plus bounded-RAM reference semantics recorded |
-| M4 | Exact hard-max model branch | exact, induced, opcode-conditioned neural, and direct factorized event decoders exported; real-trace precision checkpoint added |
-| M5 | Standard 2D-head softmax baseline | flat-token and event-level baselines exported; exact free-running rollout still fails |
-| M6 | Restricted compiled-program demos | planned |
+## Current Boundary
 
-## Reproduction Stance
+| Track | Current state |
+| --- | --- |
+| `M0-M3` | repo scaffold, claim discipline, geometry core, and append-only trace executor are in place |
+| `M4` | exact retrieval/executor branches, staged-pointer caveats, and real-trace precision boundaries are exported |
+| `M5` | matched softmax baselines remain negative controls rather than positive evidence |
+| `M6` | the tiny typed-bytecode boundary is implemented and validated with a memory-surface diagnostic companion and a stress/reference follow-up |
+| `P1-P2` | paper bundle and public-safe packaging ledgers are active |
+| `P3-R2` | claim freeze, precision closure, and systems gate are exported; the systems result is mixed rather than triumphant |
+| `M7-P4` | the project stays on tiny typed bytecode, frontend widening is not authorized, and the blog remains blocked |
 
-- Treat the public source as a field note, not a complete artifact release.
-- Prioritize mechanistic clarity over resemblance to blog demos.
-- Keep exact hard-max, standard softmax, and approximate branches separate.
-- Judge success by free-running exact execution, not token plausibility.
-- Narrow claims when evidence is narrow.
+## Current Gate Outcome
 
-## Repository Layout
+- `P3` freezes the current paper scope without blocked figure/table items.
+- `R1` closes the precision story as a narrowed boundary, not a broad robustness claim.
+- `R2` stays mixed: geometry is strongly positive, but the lowered path is not yet competitive on current `D0` suites.
+- `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
+- `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
 
-- `docs/` — design docs, claim matrices, milestone logs
-- `src/geometry/` — exact hard-max reference path and accelerated cache
-- `src/exec_trace/` — append-only trace DSL, interpreter, replay
-- `src/model/` — later model branches
-- `src/benchmarks/` — benchmark helpers
-- `tests/` — unit tests and regression tests
-- `scripts/` — runnable benchmark and smoke-test entrypoints
-- `results/` — tracked benchmark summaries and milestone outputs
+The next engineering work is applying the recorded release-hygiene commit split
+and any future systems revisit, not frontend widening or demo-first expansion.
 
-## Near-Term Acceptance Criteria
+## Start Here
 
-- `HullKVCache` matches brute-force hard-max exactly, including ties.
-- Geometry benchmarks show clearly sublinear query growth against history size.
-- The trace interpreter and replay engine agree on final state exactly.
-- The free-running exact executor reproduces reference traces by length bucket.
-- The current `M4` neural event branch reaches exact rollout on the exported
-  countdown, branch, and memory held-out slices, but it is still an
-  opcode-conditioned structured rule decoder rather than a raw token model.
-- The newer direct `M4` factorized event-value decoder now records the harder
-  failure mode explicitly: teacher-forced label accuracy is nontrivial, but
-  free-running exact rollout remains poor on both train and held-out families.
-- The current precision branch records that `float32` latest-write retrieval is
-  locally stable only to `256` under the single-head encoding, but to `4096`
-  under the current radix/block decomposition schemes.
-- The real-trace precision branch now shows that offset real traces expose the
-  same failure pattern: `float32` single-head can fail on offset `1024`
-  memory streams, while the current radix/block decompositions recover the
-  current real-trace suite.
-- The event-level `M5` baseline is now exported on the same factorized event
-  targets as the richer `M4` branch; it remains a strong negative control with
-  near-zero teacher-forced exact-label accuracy and zero exact rollout.
-- The project remains honest about unsupported claims and unresolved ambiguity.
+- `STATUS.md` — current repository state and immediate gates
+- `docs/publication_record/claim_ladder.md` — claim boundary summary
+- `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
+- `docs/milestones/P1_paper_readiness/` — current paper bundle staging area
+- `docs/milestones/P2_public_research_packaging/` — public-safe packaging ledger
 
-## Public Material Policy
+## Quickstart
 
-Raw source materials are kept in a local-only `docs/Origin/` directory and are
-excluded from version control. The public repository stores:
-
-- structured notes,
-- claim decomposition,
-- implementation artifacts,
-- benchmark outputs,
-- and explicit accounting of what was or was not reproduced.
-
-## Environment
-
-The intended workflow uses Python 3.12 and `uv`. This repository now pins
-`3.12` in `.python-version`, and the current `M5` checkpoint was run in the
-project `.venv` with `torch==2.10.0+cu128` on CUDA.
+The intended workflow uses Python `3.12` and `uv`.
 
 ```bash
 uv sync --group dev
-pytest
-python scripts/benchmark_geometry.py
+uv run pytest -q
 ```
 
-Optional `M5` scaffold work can use:
+Common export commands:
 
 ```bash
-uv sync --group dev --group m5
+uv run python scripts/export_p1_figure_table_sources.py
+uv run python scripts/render_p1_paper_artifacts.py
+uv run python scripts/export_p1_paper_readiness.py
+uv run python scripts/export_m7_frontend_candidate_decision.py
+uv run python scripts/export_p4_blog_release_gate.py
 ```
+
+## Repository Layout
+
+- `docs/` — milestone logs, plans, claim ledgers, publication notes
+- `src/` — geometry, trace execution, model branches, typed-bytecode harness
+- `scripts/` — export and rendering entrypoints
+- `tests/` — regression and artifact tests
+- `results/` — tracked benchmark summaries and milestone outputs
+
+## Public Material Policy
+
+`docs/Origin/` contains local-only source material and stays out of version
+control. The public repository stores derived notes, code, benchmark outputs,
+claim ledgers, and explicit accounting of what was and was not reproduced.

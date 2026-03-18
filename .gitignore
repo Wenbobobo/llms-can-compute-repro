@@ -1,5 +1,6 @@
 # Local source archives and derived materials that should not go to the public repo.
 docs/Origin/
+docs/origin/
 
 # Python
 __pycache__/

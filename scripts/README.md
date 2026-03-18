@@ -16,3 +16,16 @@
   baseline checkpoint
 - `export_m5_event_level_baseline.py` — train and export the final event-level
   standard softmax baseline
+- `export_p3_paper_freeze.py` — export the paper-freeze claim/artifact map
+- `export_h0_release_hygiene.py` — export the current release-hygiene audit
+  and preferred commit split
+- `export_m7_frontend_candidate_decision.py` — export the post-`P3/R1/R2`
+  frontend no-go / candidate decision bundle
+- `export_p4_blog_release_gate.py` — export the outward blog/README release
+  gate and public-claim audit
+- `export_r1_precision_mechanism_closure.py` — export the unified precision
+  boundary closure bundle
+- `export_r2_systems_baseline_gate.py` — profile the current systems gate and
+  emit a stop/go baseline bundle
+- `setup_unattended_worktrees.ps1` — create the default unattended worktree
+  layout after the tree is clean enough to branch
