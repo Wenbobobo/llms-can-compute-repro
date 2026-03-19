@@ -34,8 +34,10 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
 - `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
 
-The next engineering work is paper-lane sentence-level polish, callout cleanup,
-and any future systems revisit, not frontend widening or demo-first expansion.
+The current paper-focused pass has completed sentence-level polish and callout
+cleanup under the `P5` audit guards. The next planned work is layout
+tightening, figure/table integration, and release-readiness packaging, not
+frontend widening or demo-first expansion.
 
 ## Start Here
 

@@ -1,5 +1,41 @@
 # Integration Log
 
+## 2026-03-19 — `P5` closure and `P6` scaffold
+
+### Scope
+
+- completed the sentence-level polish and callout-alignment pass on the current
+  manuscript bundle without reopening scope;
+- refreshed `README.md`, `STATUS.md`, and
+  `docs/publication_record/release_summary_draft.md` to reflect the completed
+  `P5` state and the next layout/readiness lane;
+- refreshed the narrow `P5` public-surface and callout-alignment audits so they
+  now report post-`P5` status;
+- created `docs/plans/2026-03-19-p6-layout-tightening-and-release-readiness-design.md`
+  and the `docs/milestones/P6_layout_tightening_and_release_readiness/`
+  scaffold for the next unattended paper-facing wave.
+
+### Validation
+
+- `D:\zWenbo\AI\LLMCompute\.venv\Scripts\python.exe scripts/export_p5_public_surface_sync.py`
+  passed;
+- `D:\zWenbo\AI\LLMCompute\.venv\Scripts\python.exe scripts/export_p5_callout_alignment.py`
+  passed;
+- `D:\zWenbo\AI\LLMCompute\.venv\Scripts\python.exe -m pytest -q tests/test_export_p5_public_surface_sync.py tests/test_export_p5_callout_alignment.py`
+  passed with `7 passed`;
+- `D:\zWenbo\AI\LLMCompute\.venv\Scripts\python.exe -m pytest -q`
+  passed with `136 passed, 1 warning`;
+- `git diff --check` passed with only line-ending normalization warnings on
+  regenerated `results/P5_*` artifacts.
+
+### Outcome
+
+- `P5` is now recorded as closed rather than merely in-progress;
+- the repo surface and machine-readable `P5` audits agree that the next work is
+  a separate layout-tightening / release-readiness wave;
+- `P6` now contains the minimum durable context needed for the next full
+  plan-mode replanning pass.
+
 ## 2026-03-19 — public-surface sync to `main`
 
 ### Scope

@@ -18,13 +18,16 @@ Caption-ready section notes now live in
 Near-prose stubs for `Abstract`, `Introduction`, `Systems gate`, and
 `Compiled boundary` now live in
 `docs/publication_record/manuscript_stub_notes.md`.
-The current section-ordered expansion target now lives in
+The current sentence-polished manuscript baseline now lives in
 `docs/publication_record/manuscript_bundle_draft.md`, and the current `R2`
 placement choice is recorded in `docs/publication_record/layout_decision_log.md`.
 The same near-prose stub set now also covers `Methods`, `Executor branches`,
 `Mask dependence`, `Precision boundary`, and `Negative results / threats`.
 Caption candidates for the current fixed figure/table set now live in
 `docs/publication_record/caption_candidate_notes.md`.
+The sentence-level polish and callout-alignment pass is now complete under the
+current `P5` audit guards; the next paper-facing work is layout tightening,
+figure/table integration, and release-readiness packaging.
 
 ## Mandatory tables
 

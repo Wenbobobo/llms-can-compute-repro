@@ -39,12 +39,12 @@
     "docs/milestones/P5_paper_draft_assembly/todo.md"
   ],
   "summary": {
-    "current_paper_phase": "sentence_level_polish_and_callout_cleanup",
+    "current_paper_phase": "p5_complete_layout_tightening_pending",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 8,
     "pass_count": 8,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "continue sentence-level manuscript polish and caption/callout alignment"
+    "recommended_next_action": "start the separate layout-tightening and release-readiness wave while keeping current claim/artifact boundaries fixed"
   }
 }

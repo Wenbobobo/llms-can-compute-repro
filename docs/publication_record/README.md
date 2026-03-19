@@ -16,8 +16,8 @@ Core ledgers:
   guardrails for the current manuscript skeleton;
 - `manuscript_stub_notes.md` — near-prose section stubs for the most
   boundary-sensitive parts of the draft;
-- `manuscript_bundle_draft.md` — current section-draft baseline for later
-  sentence-level polish and layout refinement;
+- `manuscript_bundle_draft.md` — current sentence-polished manuscript baseline
+  for later layout refinement and figure/table integration;
 - `appendix_stub_notes.md` — near-prose appendix and reproducibility draft
   material;
 - `caption_candidate_notes.md` — draft caption sentences for the fixed current

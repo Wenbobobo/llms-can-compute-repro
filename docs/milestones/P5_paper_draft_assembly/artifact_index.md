@@ -14,6 +14,13 @@
 - `docs/publication_record/appendix_boundary_map.md`
 - `docs/publication_record/layout_decision_log.md`
 - `docs/milestones/P5_paper_draft_assembly/integration_log.md`
+- `docs/plans/2026-03-19-p6-layout-tightening-and-release-readiness-design.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/README.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/status.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/todo.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/acceptance.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/research_notes.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/artifact_index.md`
 - `docs/publication_record/paper_bundle_status.md`
 - `docs/publication_record/claim_ladder.md`
 - `docs/publication_record/claim_evidence_table.md`

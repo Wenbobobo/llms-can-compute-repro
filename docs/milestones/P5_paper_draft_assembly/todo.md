@@ -56,3 +56,7 @@
 - [x] Add one narrow `P5` export that audits whether the manuscript draft,
   caption notes, figure/table narrative roles, and section map stay aligned on
   the current main-text artifact pairs.
+- [x] Finish one sentence-level polish and callout-alignment pass under the two
+  narrow `P5` audit guards.
+- [x] Freeze the completed `P5` output and spin up a separate post-`P5`
+  layout/readiness milestone scaffold.

@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "README now describes the section-draft phase rather than an older assembly phase."
+      "notes": "README now describes the post-P5 layout/readiness phase rather than the earlier polish-in-progress phase."
     },
     {
       "item_id": "status_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "STATUS records the current polish phase and the downstream short-summary source."
+      "notes": "STATUS records the completed P5 phase and the downstream short-summary source."
     },
     {
       "item_id": "publication_record_readme_tracks_downstream_source",
@@ -57,7 +57,7 @@
     {
       "item_id": "manuscript_tracks_section_draft_state",
       "status": "pass",
-      "notes": "The manuscript draft states the current paper phase directly."
+      "notes": "The manuscript draft states the post-P5 paper phase directly."
     },
     {
       "item_id": "layout_log_records_release_summary_reuse",
@@ -67,7 +67,7 @@
     {
       "item_id": "p5_ledger_tracks_recent_sync",
       "status": "pass",
-      "notes": "The P5 milestone ledger records the new polish pass and the public-surface micro-sync."
+      "notes": "The P5 milestone ledger records closure and the explicit handoff to the next layout/readiness phase."
     }
   ]
 }

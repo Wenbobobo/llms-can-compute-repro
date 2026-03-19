@@ -1,8 +1,8 @@
 # Manuscript Bundle Draft
 
-Status: paper-shaped manuscript section draft after the first section-draft
-upgrade following the `M7` no-go decision. The remaining work is sentence-level
-polish and local figure/table callout cleanup, not another round of section
+Status: paper-shaped manuscript section draft after the sentence-level polish
+and callout-alignment pass that followed the `M7` no-go decision. Later work
+is layout tightening and figure/table integration, not another round of section
 planning.
 
 ## 1. Abstract
@@ -14,18 +14,18 @@ executor under explicit boundaries. On the current evidence bundle, the
 mechanism story remains positive at this narrower level: append-only trace
 semantics and exact retrieval survive, and a tiny typed-bytecode `D0` slice
 achieves exact trace or exact final-state agreement on the frozen starter
-suite. The precision story is positive but bounded rather than open-ended:
-float32 single-head fails on 12 of 25 tracked real-trace streams, with 7
+suite. The precision story is positive but bounded rather than open-ended.
+Float32 single-head fails on 12 of 25 tracked real-trace streams, with 7
 failing already at `1x`, while at least one decomposition configuration
 remains exact on all 25 tracked streams in the validated suite. The systems
-story is mixed: cached retrieval retains a strong asymptotic advantage on the
+story is mixed. Cached retrieval retains a strong asymptotic advantage on the
 geometry benchmark, but the current lowered `exec_trace` path remains about
 `1.82x` slower than the best current reference/oracle path on the positive
-`D0` suites. We therefore keep the compiled endpoint at tiny typed bytecode and
-treat broader claims about arbitrary C, general LLM computation, or current
-end-to-end competitiveness as unsupported. Stopping at `D0` is therefore part
-of the current scientific conclusion, not an implementation gap waiting to be
-filled.
+`D0` suites. We therefore keep the compiled endpoint at tiny typed bytecode
+and treat broader claims about arbitrary C, general LLM computation, or
+current end-to-end competitiveness as unsupported. Stopping at `D0` is
+therefore part of the current scientific conclusion, not an implementation gap
+waiting to be filled.
 
 ## 2. Introduction and Claim Ladder
 
@@ -99,8 +99,8 @@ conditional on legality structure. On the widened staged suite, the fairer
 impossible combinations at decode time. The negative controls matter for the
 same reason: they share the task surface and still fail. The event-level
 softmax baseline remains at zero exact rollout despite nonzero teacher-forced
-head accuracies, and the pointer-space softmax baseline remains at `0.0`
-exact-label accuracy with structural rollout still at `0.0 / 0.0` on the
+head accuracies. The pointer-space softmax baseline remains at `0.0`
+exact-label accuracy, with structural rollout still at `0.0 / 0.0` on the
 exported train/held-out slice. These failures make the staged branch's partial
 success informative without turning it into a general neural-executor claim.
 
@@ -132,19 +132,20 @@ than implying a hidden positive regime.
 
 ## 6. Precision Boundary on Real / Organic Traces
 
-The precision section makes one bounded claim and then stops. On the
-current exported real and organic trace families, float32 single-head latest-
-write retrieval fails early often enough that broad robustness language is no
-longer defensible: 12 of 25 tracked streams fail under the single-head scheme,
+The precision section makes one bounded claim and then stops. On the current
+exported real and organic trace families, float32 single-head latest-write
+retrieval fails early often enough that broad robustness language is no longer
+defensible: 12 of 25 tracked streams fail under the single-head scheme,
 and 7 of those fail already at `1x`. At the same time, the results are not
 purely negative. At least one decomposition configuration remains exact on all
 25 tracked streams in the validated suite, and the failures that do appear are
 not arbitrary. The current observed failure mode is still `tie_collapse`, and
 the families where decomposition helps most are the memory-heavy streams where
 single-head addressing fails early. The correct paper claim is therefore a
-narrow positive-with-boundary statement: decomposition materially helps on the
-current validated suite, but nothing here supports universal base or horizon
-claims across unseen trace families or a broad long-horizon robustness result.
+narrow positive result with a clear boundary: decomposition materially helps on
+the current validated suite, but nothing here supports universal base or
+horizon claims across unseen trace families or a broad long-horizon robustness
+result.
 
 The main-text support here stays compact: one real-trace boundary figure shows
 where failures first appear across schemes, and one boundary table makes the
@@ -189,9 +190,9 @@ tiny typed bytecode rather than widening toward Wasm-like or arbitrary-C
 language coverage.
 
 The main text supports this endpoint with two artifacts: a frontend boundary
-diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-
-state success table that records what the current starter suite does and does
-not validate. Companion appendix material stays clearly downstream of that
+diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-state
+success table that records what the current starter suite does and does not
+validate. Companion appendix material stays clearly downstream of that
 endpoint: memory-surface diagnostics and stress/reference rows help audit the
 boundary, but they do not widen it.
 

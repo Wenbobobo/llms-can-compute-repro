@@ -23,23 +23,25 @@
 
 ## Current Paper State
 
-- `P5` now has a manuscript section draft, appendix draft, caption candidates,
-  and layout decisions under `docs/publication_record/`.
+- `P5` now has a sentence-polished manuscript section draft, appendix draft,
+  caption candidates, layout decisions, and machine-audited public-surface /
+  callout guards under `docs/publication_record/`.
 - `results/P1_paper_readiness/summary.json` now reports `10/10` ready
   figure/table items and no blocked or partial items on the frozen current
   scope.
-- Remaining paper-lane work is sentence-level polish, figure/table callout
-  cleanup, and restrained public-surface maintenance, not new claim expansion.
+- The sentence-level polish and callout-alignment pass is now complete;
+  remaining paper-facing work is layout tightening, figure/table integration,
+  and restrained public-surface maintenance, not new claim expansion.
 
 ## Immediate Next Actions
 
-1. Keep `README.md`, `STATUS.md`, and `docs/publication_record/` aligned, with
-   future short public-surface syncs derived from
-   `docs/publication_record/release_summary_draft.md`.
-2. Reopen `R1` or `R2` only if the project deliberately chooses a new evidence
-   wave; otherwise keep the current `D0` endpoint fixed.
-3. Keep frontend widening and blog release blocked unless a future scope change
-   clears both the systems and public-release gates.
+1. Keep `README.md`, `STATUS.md`, and future short public-surface syncs
+   downstream of `docs/publication_record/release_summary_draft.md`.
+2. Run the next paper-facing wave as layout tightening and release-readiness
+   work while keeping the current manuscript artifact pairings fixed unless a
+   deliberate layout pass records a different choice.
+3. Reopen `R1`, `R2`, or frontend widening only if the project deliberately
+   starts a new evidence wave; otherwise keep the current `D0` endpoint fixed.
 
 ## Known Blockers
 

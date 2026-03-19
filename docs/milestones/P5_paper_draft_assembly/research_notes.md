@@ -6,3 +6,5 @@
   the `M7` no-go decision and keeps the scientific story coherent.
 - `D0` should appear as a deliberately constrained compiled boundary rather
   than as a placeholder for arbitrary-C claims.
+- After the sentence-level polish pass, the remaining paper risk is layout
+  drift and release-surface churn, not another prose-structure gap.

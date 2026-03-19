@@ -39,5 +39,8 @@ Started on 2026-03-19 in the `paper` worktree.
 - the compiled-boundary wording now distinguishes more cleanly between the
   starter-suite main-text table and its stress/reference or memory-surface
   companions;
-- the next paper-lane work is sentence-level polish and later layout
-  tightening, not another structural rewrite.
+- the sentence-level polish and callout-alignment pass is now complete under
+  the machine-readable `P5` public-surface and callout-alignment audits;
+- `P5` acceptance is now satisfied;
+- subsequent paper-facing work should move to a separate layout-tightening /
+  release-readiness phase rather than reopen manuscript assembly.

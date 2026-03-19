@@ -1,7 +1,8 @@
 # Release Summary Draft
 
-Status: short downstream summary derived from the manuscript bundle. This draft
-is now stable enough to seed README-adjacent short updates, while remaining
+Status: short downstream summary derived from the manuscript bundle. The current
+manuscript pass has completed sentence-level polish and callout cleanup; this
+draft remains stable enough to seed README-adjacent short updates while staying
 narrower than the paper bundle itself.
 
 ## Narrow target
@@ -16,8 +17,9 @@ endpoint.
 
 ## Current gate chain
 
-The current evidence chain is explicit. `P3` freezes the paper scope and its
-unsupported claims. `R1` keeps the precision result positive but bounded:
+The current evidence chain runs through four gates. `P3` freezes the paper
+scope and its unsupported claims. `R1` keeps the precision result positive but
+bounded:
 float32 single-head fails on `12/25` tracked real/organic trace streams, with
 `7/25` failing already at `1x`, while at least one decomposition stays exact on
 `25/25` tracked streams in the validated suite. `R2` remains mixed rather than
@@ -36,6 +38,12 @@ diagnostics, and one stress/reference follow-up. This endpoint should be read
 as a current boundary, not as a bridge to arbitrary C, general LLM
 computation, or broader demo-first claims. Those broader readings remain
 explicitly unsupported on the current paper scope.
+
+## Current paper-facing follow-up
+
+The sentence-level manuscript polish pass is complete on the current frozen
+scope. The next paper-facing work is layout tightening, figure/table
+integration, and release-readiness packaging, not claim expansion.
 
 ## Reproducibility pointers
 

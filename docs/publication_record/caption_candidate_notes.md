@@ -53,7 +53,7 @@ does not imply Wasm-like, arbitrary-C, or broader runtime coverage.
 
 ### Supported vs unsupported claims table
 
-Supported and unsupported claims treated as first-class outputs of the
+Supported and unsupported claims are treated as first-class outputs of the
 reproduction rather than omitted failures. Unsupported rows are explicit scope
 boundaries, not deferred implementation work.
 
@@ -72,7 +72,7 @@ and should not be read as universal scaling laws.
 
 ### Threats-to-validity table
 
-External and internal limits that keep mechanism, systems, and compiled-
-boundary claims distinct on the current evidence bundle. Mixed systems results
-remain part of the argument and cannot be omitted because the mechanism story
-is stronger.
+External and internal limits keep mechanism, systems, and compiled-boundary
+claims distinct on the current evidence bundle. Mixed systems results remain
+part of the argument and cannot be omitted because the mechanism story is
+stronger.
