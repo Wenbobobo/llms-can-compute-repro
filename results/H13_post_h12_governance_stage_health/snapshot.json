@@ -32,9 +32,9 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync`",
-        "`H15_refreeze_and_decision_sync`.",
-        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage.",
+        "standing operational reference rather than an active science lane.",
+        "`H16_post_h15_same_scope_reopen_and_scope_lock` ->",
+        "- `H16_post_h15_same_scope_reopen_and_scope_lock` is preserved as the earlier",
         "and standing operational references."
       ]
     },

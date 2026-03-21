@@ -44,8 +44,8 @@ def test_build_summary_reports_green_reopen_guard() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_summary"])
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
-    assert summary["active_stage"] == "h15_refreeze_and_decision_sync"
+    assert summary["current_paper_phase"] == "h16_post_h15_same_scope_reopen_active"
+    assert summary["active_stage"] == "h16_post_h15_same_scope_reopen_and_scope_lock"
     assert summary["guarded_reopen_stage"] == "h14_core_first_reopen_and_scope_lock"
     assert summary["handoff_stage"] == "h13_post_h12_rollover_and_next_stage_staging_preserved"
     assert summary["stage_guard_state"] == "preserved_core_first_reopen_guard_green"
@@ -55,5 +55,5 @@ def test_build_summary_reports_green_reopen_guard() -> None:
     }
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use this summary as the preserved H14 packet entrypoint; keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, keep H13/V1 preserved as handoff state, preserve R11 and R12 as landed reopen outputs, and treat H15 as the current refrozen stage until a later explicit plan changes it"
+        "use this summary as the preserved H14 packet entrypoint; keep H16 as the active same-scope control stage, preserve H15 as the completed predecessor refreeze, keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, preserve H13/V1 as handoff state, and keep R16/R17/(optional R18)/H17 bounded to the same endpoint"
     )

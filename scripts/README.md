@@ -35,6 +35,17 @@
 - `export_h14_core_first_reopen_guard.py` — export the single-file active-stage
   guard for the current `H14` core-first reopen plan, preserved handoff, and
   standing guard chain
+- `export_h16_post_h15_same_scope_reopen_guard.py` — export the single-file
+  active-stage guard for the current `H16` same-scope reopen plan, preserved
+  `H15` decision, and standing guard chain
+- `export_h17_refreeze_and_conditional_frontier_recheck.py` — export the
+  machine-readable post-`H16` refreeze summary and frontier-review decision
+- `export_h18_post_h17_mainline_reopen_guard.py` — export the
+  machine-readable planning guard for the next same-scope runtime wave after
+  the frozen `H17` state
+- `export_h19_refreeze_and_next_scope_decision.py` — export the
+  machine-readable post-`H18` refreeze packet and next-scope decision for the
+  landed `R19/R20/R21` wave
 - `export_h13_post_h12_governance_stage_health.py` — export the preserved
   governance/runtime handoff summary for the `H13/V1` stack underneath active
   `H14`
@@ -63,6 +74,23 @@
   runtime bridge on the full exact-admitted `R6` family set
 - `export_r8_d0_retrieval_pressure_gate.py` — export the bounded heavier-family
   same-endpoint retrieval-pressure gate on the preserved direct baseline
+- `export_r15_d0_remaining_family_retrieval_pressure_gate.py` — export the
+  bounded same-endpoint retrieval-pressure complement on the four remaining
+  direct-baseline families
+- `export_r16_d0_real_trace_precision_boundary_saturation.py` — export the
+  bounded real-trace precision saturation pass on the full admitted `R8/R15`
+  same-endpoint memory surface
+- `export_r17_d0_full_surface_runtime_bridge.py` — export the bounded
+  full-surface same-endpoint runtime bridge on the admitted `R8/R15` surface
+- `export_r18_d0_same_endpoint_runtime_repair_counterfactual.py` — export the
+  bounded comparator-only runtime repair packet, including `R18b` pointer-like
+  exact retrieval and conditional `R18c` staged follow-up when needed
+- `export_r19_d0_pointer_like_surface_generalization_gate.py` — export the
+  bounded admitted-plus-heldout same-endpoint runtime gate, including the
+  landed exactness/runtime verdict and row-level profiles
+- `export_r20_d0_runtime_mechanism_ablation_matrix.py` — export the bounded
+  `R20` sample set and control matrix derived from the landed `R19` runtime
+  gate
 - `export_r9_d0_real_trace_precision_boundary_companion.py` — export the
   bounded real-trace precision companion on exact-admitted `R8` memory streams
 - `export_r10_d0_same_endpoint_cost_attribution.py` — export the bounded

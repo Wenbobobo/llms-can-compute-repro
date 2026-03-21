@@ -42,7 +42,7 @@
     {
       "item_id": "current_stage_driver_has_advanced_beyond_h4",
       "status": "pass",
-      "notes": "The repo should have advanced to the later H15 refrozen state instead of still treating H4 as active."
+      "notes": "The repo should have advanced to the later H16 same-scope reopen stage instead of still treating H4 as active."
     },
     {
       "item_id": "manifest_and_h5_archive_preserve_h4_artifacts",

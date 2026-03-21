@@ -48,18 +48,18 @@
     "results/M7_frontend_candidate_decision/decision_summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
-    "active_stage": "h15_refreeze_and_decision_sync",
+    "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
+    "active_stage": "h16_post_h15_same_scope_reopen_and_scope_lock",
     "guarded_reopen_stage": "h14_core_first_reopen_and_scope_lock",
     "handoff_stage": "h13_post_h12_rollover_and_next_stage_staging_preserved",
     "stage_guard_state": "preserved_core_first_reopen_guard_green",
     "release_commit_state": "dirty_worktree_release_commit_blocked",
     "prior_completed_checkpoint": "h10_h11_r8_r9_r10_h12",
-    "lane_order": "preserve_h12_and_h13_then_preserve_completed_h14_packet_then_hold_h15_refrozen",
+    "lane_order": "preserve_h12_and_h13_then_preserve_completed_h14_packet_under_h16_then_run_same_scope_followups",
     "check_count": 7,
     "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use this summary as the preserved H14 packet entrypoint; keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, keep H13/V1 preserved as handoff state, preserve R11 and R12 as landed reopen outputs, and treat H15 as the current refrozen stage until a later explicit plan changes it"
+    "recommended_next_action": "use this summary as the preserved H14 packet entrypoint; keep H16 as the active same-scope control stage, preserve H15 as the completed predecessor refreeze, keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, preserve H13/V1 as handoff state, and keep R16/R17/(optional R18)/H17 bounded to the same endpoint"
   }
 }

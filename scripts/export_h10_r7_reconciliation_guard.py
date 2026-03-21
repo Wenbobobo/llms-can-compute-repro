@@ -159,8 +159,8 @@ def build_checklist_rows(
             and contains_all(
                 claim_ladder_text,
                 [
-                    "profiles only the top `4` heaviest representatives",
-                    "`h10/h11/r8/r9/r10/h12`",
+                    "`h10/h11/r8/r9/r10/h12` retrieval-pressure follow-up packet",
+                    "`h20/r22/r23/h21` follow-up packet without widening",
                 ],
             )
             and contains_all(
@@ -227,14 +227,14 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+        "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
         "reconciled_stage": "h10_r7_reconciliation_and_refreeze",
         "check_count": len(rows),
         "pass_count": sum(row["status"] == "pass" for row in rows),
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "treat H8/R6/R7/H9 as the completed direct baseline and keep all future R7 wording on the bounded top-4-profile evidence while H15 preserves H14/R11/R12 as the completed reopen packet, H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and H13/V1 as preserved handoff state"
+            "treat H8/R6/R7/H9 as the completed direct baseline and keep all future R7 wording on the bounded top-4-profile evidence while H16 remains active, H15 preserves the prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, H10/H11/R8/R9/R10/H12 remains the latest completed checkpoint, and H13/V1 remains preserved handoff state"
             if not blocked_items
             else "resolve the blocked R7 reconciliation items before relying on the next packet"
         ),

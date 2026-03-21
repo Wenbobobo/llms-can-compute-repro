@@ -32,7 +32,7 @@
     {
       "item_id": "current_stage_driver_preserves_h13_handoff",
       "status": "pass",
-      "notes": "The canonical driver should keep H13/V1 explicit as preserved handoff while H15 remains the current refrozen stage."
+      "notes": "The canonical driver should keep H13/V1 explicit as preserved handoff while H16 remains the current same-scope reopen stage."
     },
     {
       "item_id": "h13_milestone_docs_track_preserved_handoff",
@@ -42,7 +42,7 @@
     {
       "item_id": "preserved_baseline_and_packet_guards_are_green",
       "status": "pass",
-      "notes": "The preserved packet wording and direct/deeper baseline guards should stay green under H15."
+      "notes": "The preserved packet wording and direct/deeper baseline guards should stay green under H16."
     },
     {
       "item_id": "publication_and_archive_controls_are_green",

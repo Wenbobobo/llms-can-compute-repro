@@ -39,13 +39,13 @@
     "results/M7_frontend_candidate_decision/decision_summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
-    "active_stage": "h15_refreeze_and_decision_sync",
-    "lane_order": "preserve_h12_then_preserve_h14_then_hold_refrozen_until_next_full_plan",
+    "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
+    "active_stage": "h16_post_h15_same_scope_reopen_and_scope_lock",
+    "lane_order": "preserve_h12_then_preserve_h14_h15_then_run_h16_same_scope_followups",
     "check_count": 6,
     "pass_count": 6,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "keep H10/H11/R8/R9/R10/H12 aligned as the latest completed checkpoint while H15 remains the current refrozen stage, preserve H14/R11/R12 as the completed reopen packet, preserve H13/V1 as handoff state, and use release_preflight_checklist_audit plus release_worktree_hygiene_snapshot as the outward-sync control reference"
+    "recommended_next_action": "keep H10/H11/R8/R9/R10/H12 aligned as the latest completed checkpoint while H16 remains active, preserve H15 as the prior refreeze decision, preserve H14/R11/R12 as the completed prior reopen packet, preserve H13/V1 as handoff state, and use release_preflight_checklist_audit plus release_worktree_hygiene_snapshot as the outward-sync control reference"
   }
 }

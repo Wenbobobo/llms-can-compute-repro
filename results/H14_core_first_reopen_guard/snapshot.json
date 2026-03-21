@@ -32,30 +32,27 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync`",
-        "`H14_core_first_reopen_and_scope_lock` with landed `R11` and `R12`.",
-        "`H14_core_first_reopen_and_scope_lock` ->",
-        "`R11_geometry_fastpath_reaudit` ->",
-        "`R12_append_only_executor_long_horizon` ->",
-        "`H15_refreeze_and_decision_sync`.",
-        "5. Preserve `H14_core_first_reopen_and_scope_lock` as the completed reopened",
-        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage."
+        "`H14_core_first_reopen_and_scope_lock` with landed `R11`, `R12`, and the",
+        "preserved `H15_refreeze_and_decision_sync` closeout, from the completed",
+        "`H16_post_h15_same_scope_reopen_and_scope_lock` ->",
+        "`R15_d0_remaining_family_retrieval_pressure_gate` ->",
+        "7. Preserve `H15_refreeze_and_decision_sync` as the prior completed refreeze",
+        "- `H16_post_h15_same_scope_reopen_and_scope_lock` is preserved as the earlier",
+        "- `H15_refreeze_and_decision_sync` is preserved as the prior refreeze and",
+        "- `H14_core_first_reopen_and_scope_lock` remains preserved as the completed"
       ]
     },
     {
       "path": "README.md",
       "matched_lines": [
         "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "- The current active post-`P9` stage is `H15_refreeze_and_decision_sync`."
+        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H15_refreeze_and_decision_sync`.",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
-        "`H14 -> R11 -> R12 -> conditional R13 -> bounded R14 -> H15`.",
-        "`H15_refreeze_and_decision_sync` under"
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened"
       ]
     },
     {

@@ -44,8 +44,8 @@ def test_build_summary_reports_preserved_handoff_state() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
-    assert summary["active_stage"] == "h15_refreeze_and_decision_sync"
+    assert summary["current_paper_phase"] == "h17_refreeze_and_conditional_frontier_recheck_complete"
+    assert summary["active_stage"] == "h17_refreeze_and_conditional_frontier_recheck"
     assert summary["preserved_stage"] == "h13_post_h12_rollover_and_next_stage_staging"
     assert summary["entrypoint_role"] == "preserved_governance_handoff_reference"
     assert summary["stage_health_state"] == "preserved_handoff_green"
@@ -55,5 +55,5 @@ def test_build_summary_reports_preserved_handoff_state() -> None:
     }
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use this summary as the preserved H13/V1 handoff reference while H15 keeps the repo refrozen; keep H14/R11/R12 preserved as the completed reopen packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
+        "use this summary as the preserved H13/V1 handoff reference while H17 keeps the same-scope packet frozen; preserve H16/R15/R16/R17/R18 as the completed same-scope reopen packet, preserve H15 as the prior refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
     )

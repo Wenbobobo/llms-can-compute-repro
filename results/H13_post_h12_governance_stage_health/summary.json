@@ -48,8 +48,8 @@
     "results/M7_frontend_candidate_decision/decision_summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
-    "active_stage": "h15_refreeze_and_decision_sync",
+    "current_paper_phase": "h17_refreeze_and_conditional_frontier_recheck_complete",
+    "active_stage": "h17_refreeze_and_conditional_frontier_recheck",
     "preserved_stage": "h13_post_h12_rollover_and_next_stage_staging",
     "entrypoint_role": "preserved_governance_handoff_reference",
     "stage_health_state": "preserved_handoff_green",
@@ -58,6 +58,6 @@
     "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use this summary as the preserved H13/V1 handoff reference while H15 keeps the repo refrozen; keep H14/R11/R12 preserved as the completed reopen packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
+    "recommended_next_action": "use this summary as the preserved H13/V1 handoff reference while H17 keeps the same-scope packet frozen; preserve H16/R15/R16/R17/R18 as the completed same-scope reopen packet, preserve H15 as the prior refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
   }
 }

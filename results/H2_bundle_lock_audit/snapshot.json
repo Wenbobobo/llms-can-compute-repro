@@ -35,20 +35,21 @@
         "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
         "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
         "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "- The current active post-`P9` stage is `H15_refreeze_and_decision_sync`."
+        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
+        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
+        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
         "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-        "stage. `V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+        "- `H13_post_h12_rollover_and_next_stage_staging` remains preserved. `V1`",
         "gate as `healthy_but_slow`.",
-        "`H15_refreeze_and_decision_sync`.",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
-        "- `P8` stage is complete on the current frozen scope.",
-        "- `P9` stage is complete on the same scope.",
-        "`H15_refreeze_and_decision_sync` under"
+        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
+        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
+        "- `P8` stage is complete on the current frozen scope."
       ]
     },
     {
@@ -67,14 +68,13 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync`",
-        "`H14_core_first_reopen_and_scope_lock` with landed `R11` and `R12`.",
-        "baseline. `H13_post_h12_rollover_and_next_stage_staging` remains preserved,",
-        "`H14_core_first_reopen_and_scope_lock` ->",
-        "`H15_refreeze_and_decision_sync`.",
-        "5. Preserve `H14_core_first_reopen_and_scope_lock` as the completed reopened",
-        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage.",
-        "- `H14_core_first_reopen_and_scope_lock` is preserved as the completed"
+        "`H14_core_first_reopen_and_scope_lock` with landed `R11`, `R12`, and the",
+        "preserved `H15_refreeze_and_decision_sync` closeout, from the completed",
+        "`H16_post_h15_same_scope_reopen_and_scope_lock` ->",
+        "7. Preserve `H15_refreeze_and_decision_sync` as the prior completed refreeze",
+        "- `H16_post_h15_same_scope_reopen_and_scope_lock` is preserved as the earlier",
+        "- `H15_refreeze_and_decision_sync` is preserved as the prior refreeze and",
+        "- `H14_core_first_reopen_and_scope_lock` remains preserved as the completed"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
         "The current frozen scope has a locked submission-candidate bundle. `P8` closed",
-        "then `H15_refreeze_and_decision_sync`. `E1c` remains conditional only and"
+        "stage, and `E1c` remains conditional only and contradiction-only on current"
       ]
     },
     {

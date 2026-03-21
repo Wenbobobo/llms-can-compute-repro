@@ -43,9 +43,9 @@ def test_build_summary_reports_reconciled_r7_phase() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
+    assert summary["current_paper_phase"] == "h16_post_h15_same_scope_reopen_active"
     assert summary["reconciled_stage"] == "h10_r7_reconciliation_and_refreeze"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "treat H8/R6/R7/H9 as the completed direct baseline and keep all future R7 wording on the bounded top-4-profile evidence while H15 preserves H14/R11/R12 as the completed reopen packet, H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and H13/V1 as preserved handoff state"
+        "treat H8/R6/R7/H9 as the completed direct baseline and keep all future R7 wording on the bounded top-4-profile evidence while H16 remains active, H15 preserves the prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, H10/H11/R8/R9/R10/H12 remains the latest completed checkpoint, and H13/V1 remains preserved handoff state"
     )

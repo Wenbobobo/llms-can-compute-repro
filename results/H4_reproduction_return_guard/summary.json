@@ -38,13 +38,13 @@
     "results/M7_frontend_candidate_decision/decision_summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+    "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
     "preserved_baseline_stage": "h4_reproduction_mainline_return",
     "successor_refreeze_stage": "h5_repro_sync_and_refreeze",
     "check_count": 5,
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H15 control chain while keeping the current repo state refrozen on H15"
+    "recommended_next_action": "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H16/H15 control chain while keeping the current repo state on the H16 same-scope reopen stage"
   }
 }

@@ -126,61 +126,111 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
+                    "`h16_post_h15_same_scope_reopen_and_scope_lock`",
+                    "`r15_d0_remaining_family_retrieval_pressure_gate`",
+                    "`h15_refreeze_and_decision_sync`",
                     "`h14_core_first_reopen_and_scope_lock`",
-                    "`r11_geometry_fastpath_reaudit`",
-                    "`r12_append_only_executor_long_horizon`",
-                    "`r14_bounded_compiled_probe`",
+                    "with landed `r11`, `r12`, and the preserved",
                     "`h13_post_h12_rollover_and_next_stage_staging`",
-                    "`v1_full_suite_validation_runtime_audit`",
                     "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint follow-up packet",
                 ],
             )
             else "blocked",
-            "notes": "The canonical driver should expose current H15 plus the preserved H14 packet and the required R11/R12-before-R14 ordering.",
+            "notes": "The canonical driver should expose current H16 plus the preserved H14 packet and the landed R11/R12/H15 chain that closed it.",
         },
         {
             "item_id": "root_and_public_docs_expose_h14_without_widening",
             "status": "pass"
-            if contains_all(
-                readme_text,
-                [
-                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                    "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
-                    "the current active post-`p9` stage is `h15_refreeze_and_decision_sync`",
-                    "v1 remains a standing operational reference under the preserved `h13`",
-                ],
+            if (
+                contains_all(
+                    readme_text,
+                    [
+                        "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
+                        "| `h16-h17` | completed bounded same-scope reopen/refreeze packet",
+                        "the current active post-`p9` stage is `h17_refreeze_and_conditional_frontier_recheck`",
+                        "`h15_refreeze_and_decision_sync` is now the preserved prior refreeze and",
+                        "`h14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+                    ],
+                )
+                or contains_all(
+                    readme_text,
+                    [
+                        "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
+                        "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
+                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
+                        "`h15_refreeze_and_decision_sync` is now the preserved prior refreeze and",
+                        "`h14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+                    ],
+                )
             )
-            and contains_all(
-                status_text,
-                [
-                    "`h15_refreeze_and_decision_sync`",
-                    "`h14_core_first_reopen_and_scope_lock`",
-                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                    "`healthy_but_slow`",
-                    "`h14 -> r11 -> r12 -> conditional r13 -> bounded r14 -> h15`",
-                ],
+            and (
+                contains_all(
+                    status_text,
+                    [
+                        "`h17_refreeze_and_conditional_frontier_recheck`",
+                        "`h15_refreeze_and_decision_sync` is now the completed predecessor refreeze",
+                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
+                        "`h14_core_first_reopen_and_scope_lock`",
+                        "`healthy_but_slow`",
+                        "`h16 -> r15 -> r16 -> r17 -> comparator-only r18 -> h17`",
+                    ],
+                )
+                or contains_all(
+                    status_text,
+                    [
+                        "`h21_refreeze_after_r22_r23`",
+                        "`h15_refreeze_and_decision_sync` is now the completed predecessor refreeze",
+                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
+                        "`h14_core_first_reopen_and_scope_lock`",
+                        "`healthy_but_slow`",
+                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
+                    ],
+                )
             )
-            and contains_all(
-                publication_readme_text,
-                [
-                    "`h15` refreeze-and-decision-sync",
-                    "`h14` / `r11` / `r12` remain the completed reopen packet",
-                    "`h13` / `v1` remain the completed governance/runtime handoff",
-                    "`h10` / `h11` / `r8` / `r9` / `r10` / `h12` remain the latest completed",
-                ],
+            and (
+                contains_all(
+                    publication_readme_text,
+                    [
+                        "`h16` / `r15` / `r16` / `r17` / comparator-only `r18` / `h17`",
+                        "`h15` is the completed predecessor refreeze stage",
+                        "`r15` remains the first landed same-scope lane under `h16`",
+                        "`h14` / `r11` / `r12` remain the completed prior reopen packet",
+                        "`h13` / `v1` remain the completed governance/runtime handoff",
+                    ],
+                )
+                or contains_all(
+                    publication_readme_text,
+                    [
+                        "canonical `active_driver` for the current `h21` frozen same-endpoint state",
+                        "`h19` remains the preserved prior same-endpoint refreeze stage",
+                        "`h17` remains the preserved prior same-scope refreeze stage",
+                        "`h14` / `r11` / `r12` remain the completed prior reopen packet",
+                        "`h13` / `v1` remain the completed governance/runtime handoff",
+                    ],
+                )
             )
-            and contains_all(
-                release_summary_text,
-                [
-                    "`h13/v1` is now the preserved governance/runtime handoff",
-                    "the current active post-`p9` stage is `h15_refreeze_and_decision_sync`",
-                    "`r11_geometry_fastpath_reaudit`",
-                    "`r12_append_only_executor_long_horizon`",
-                ],
+            and (
+                contains_all(
+                    release_summary_text,
+                    [
+                        "`h13/v1` is now the preserved governance/runtime handoff",
+                        "the current active post-`p9` stage is `h17_refreeze_and_conditional_frontier_recheck`",
+                        "`h15` is now the preserved prior refreeze decision",
+                        "`r15` has already landed",
+                    ],
+                )
+                or contains_all(
+                    release_summary_text,
+                    [
+                        "`h13/v1` is now the preserved governance/runtime handoff",
+                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
+                        "`h15_refreeze_and_decision_sync` remains the completed predecessor refreeze stage",
+                        "`h14` remains the completed prior reopened packet rather than the active stage",
+                    ],
+                )
             )
             else "blocked",
-            "notes": "Root and publication-facing docs should agree on current H15 and preserved H14/H13 semantics.",
+            "notes": "Root and publication-facing docs should agree on current H16 and preserved H14/H13 semantics.",
         },
         {
             "item_id": "h14_milestone_docs_track_scope_lock",
@@ -237,10 +287,16 @@ def build_checklist_rows(
             and blocked_count_from_summary(h11_summary) == 0
             and blocked_count_from_summary(h8_summary) == 0
             and blocked_count_from_summary(h6_summary) == 0
-            and contains_all(h11_summary_text, ["\"current_paper_phase\": \"h15_refreeze_and_decision_sync_complete\"", "\"blocked_count\": 0"])
-            and contains_all(h10_summary_text, ["\"current_paper_phase\": \"h15_refreeze_and_decision_sync_complete\"", "\"blocked_count\": 0"])
+            and contains_all(
+                h11_summary_text,
+                ["\"current_paper_phase\": \"h16_post_h15_same_scope_reopen_active\"", "\"blocked_count\": 0"],
+            )
+            and contains_all(
+                h10_summary_text,
+                ["\"current_paper_phase\": \"h16_post_h15_same_scope_reopen_active\"", "\"blocked_count\": 0"],
+            )
             else "blocked",
-            "notes": "The latest checkpoint plus the older direct/deeper baselines should stay green under H15.",
+            "notes": "The latest checkpoint plus the older direct/deeper baselines should stay green under H16.",
         },
         {
             "item_id": "preserved_v1_runtime_reference_remains_green",
@@ -252,7 +308,7 @@ def build_checklist_rows(
                 ["\"runtime_classification\": \"healthy_but_slow\"", "\"timed_out_file_count\": 0"],
             )
             else "blocked",
-            "notes": "The preserved V1 runtime reference should remain operationally bounded while H15 remains the current refrozen stage.",
+            "notes": "The preserved V1 runtime reference should remain operationally bounded while H16 remains the current same-scope reopen stage.",
         },
         {
             "item_id": "release_worktree_and_no_widening_constraints_remain_explicit",
@@ -291,15 +347,28 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["`H15_refreeze_and_decision_sync`", "`H14_core_first_reopen_and_scope_lock`", "`R11_geometry_fastpath_reaudit`", "`R12_append_only_executor_long_horizon`"],
+            [
+                "`H16_post_h15_same_scope_reopen_and_scope_lock`",
+                "`H15_refreeze_and_decision_sync`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`R15_d0_remaining_family_retrieval_pressure_gate`",
+            ],
         ),
         "README.md": (
             "readme_text",
-            ["| `H14-H15` | completed bounded core-first reopen/refreeze packet", "The current active post-`P9` stage is `H15_refreeze_and_decision_sync`"],
+            [
+                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
+                "| `H16-H17` | completed bounded same-scope reopen/refreeze packet",
+                "The current active post-`P9` stage is `H17_refreeze_and_conditional_frontier_recheck`",
+            ],
         ),
         "STATUS.md": (
             "status_text",
-            ["`H15_refreeze_and_decision_sync`", "`H14_core_first_reopen_and_scope_lock`", "`H14 -> R11 -> R12 -> conditional R13 -> bounded R14 -> H15`"],
+            [
+                "`H16_post_h15_same_scope_reopen_and_scope_lock`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`H16 -> R15 -> R16 -> R17 -> R18 -> H17`",
+            ],
         ),
         "docs/milestones/H14_core_first_reopen_and_scope_lock/status.md": (
             "h14_status_text",
@@ -331,20 +400,20 @@ def build_summary(
 ) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
-        "active_stage": "h15_refreeze_and_decision_sync",
+        "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
+        "active_stage": "h16_post_h15_same_scope_reopen_and_scope_lock",
         "guarded_reopen_stage": "h14_core_first_reopen_and_scope_lock",
         "handoff_stage": "h13_post_h12_rollover_and_next_stage_staging_preserved",
         "stage_guard_state": "preserved_core_first_reopen_guard_green" if not blocked_items else "blocked",
         "release_commit_state": release_commit_state_from_summary(worktree_summary),
         "prior_completed_checkpoint": "h10_h11_r8_r9_r10_h12",
-        "lane_order": "preserve_h12_and_h13_then_preserve_completed_h14_packet_then_hold_h15_refrozen",
+        "lane_order": "preserve_h12_and_h13_then_preserve_completed_h14_packet_under_h16_then_run_same_scope_followups",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this summary as the preserved H14 packet entrypoint; keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, keep H13/V1 preserved as handoff state, preserve R11 and R12 as landed reopen outputs, and treat H15 as the current refrozen stage until a later explicit plan changes it"
+            "use this summary as the preserved H14 packet entrypoint; keep H16 as the active same-scope control stage, preserve H15 as the completed predecessor refreeze, keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, preserve H13/V1 as handoff state, and keep R16/R17/(optional R18)/H17 bounded to the same endpoint"
             if not blocked_items
             else "resolve the blocked H14 driver-alignment items before treating the current core-first reopen as canonical"
         ),

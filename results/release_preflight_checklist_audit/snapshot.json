@@ -33,29 +33,35 @@
       "path": "README.md",
       "matched_lines": [
         "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |"
+        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
+        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
+        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
+        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
         "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
         "gate as `healthy_but_slow`.",
-        "`H15_refreeze_and_decision_sync`.",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
-        "`H15_refreeze_and_decision_sync` under"
+        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
+        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "then `H15_refreeze_and_decision_sync`. `E1c` remains conditional only and"
+        "stage, and `E1c` remains conditional only and contradiction-only on current"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
         "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
+        "- [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains",
+        "- [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`",
+        "- [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero",
         "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
         "- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies the",
         "- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",

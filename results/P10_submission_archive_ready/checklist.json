@@ -32,7 +32,7 @@
     {
       "item_id": "active_driver_names_current_packet",
       "status": "pass",
-      "notes": "The current-stage driver should expose current H15, preserved H14/H13/V1 state, the preserved H12 checkpoint, and the conditional compiled lane."
+      "notes": "The current-stage driver should expose current H19, preserved H17/H15/H14/H13/V1 state, the preserved older baselines, and the conditional compiled lane."
     },
     {
       "item_id": "planning_taxonomy_assigns_single_active_driver",
@@ -67,7 +67,7 @@
     {
       "item_id": "top_level_docs_align_with_current_driver",
       "status": "pass",
-      "notes": "README, STATUS, and the publication index should all reflect the same current H15 driver and preserved packet docs."
+      "notes": "README, STATUS, and the publication index should all reflect the same current H19 driver and preserved packet docs."
     },
     {
       "item_id": "packet_docs_keep_restricted_sources_out_of_public_bundle",

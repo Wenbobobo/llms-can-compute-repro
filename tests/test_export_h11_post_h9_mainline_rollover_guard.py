@@ -44,10 +44,10 @@ def test_build_summary_reports_h11_active_phase() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
-    assert summary["active_stage"] == "h15_refreeze_and_decision_sync"
-    assert summary["lane_order"] == "preserve_h12_then_preserve_h14_then_hold_refrozen_until_next_full_plan"
+    assert summary["current_paper_phase"] == "h16_post_h15_same_scope_reopen_active"
+    assert summary["active_stage"] == "h16_post_h15_same_scope_reopen_and_scope_lock"
+    assert summary["lane_order"] == "preserve_h12_then_preserve_h14_h15_then_run_h16_same_scope_followups"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep H10/H11/R8/R9/R10/H12 aligned as the latest completed checkpoint while H15 remains the current refrozen stage, preserve H14/R11/R12 as the completed reopen packet, preserve H13/V1 as handoff state, and use release_preflight_checklist_audit plus release_worktree_hygiene_snapshot as the outward-sync control reference"
+        "keep H10/H11/R8/R9/R10/H12 aligned as the latest completed checkpoint while H16 remains active, preserve H15 as the prior refreeze decision, preserve H14/R11/R12 as the completed prior reopen packet, preserve H13/V1 as handoff state, and use release_preflight_checklist_audit plus release_worktree_hygiene_snapshot as the outward-sync control reference"
     )

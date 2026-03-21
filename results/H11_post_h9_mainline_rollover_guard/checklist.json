@@ -37,17 +37,17 @@
     {
       "item_id": "current_stage_driver_names_retrieval_pressure_packet",
       "status": "pass",
-      "notes": "The canonical driver should expose current H15, preserve H14/H13/V1 state, preserve the completed H12 checkpoint, and preserve both older baselines."
+      "notes": "The canonical driver should expose current H16, preserve H15/H14/H13/V1 state, preserve the completed H12 checkpoint, and preserve both older baselines."
     },
     {
       "item_id": "top_level_docs_align_to_retrieval_pressure_packet",
       "status": "pass",
-      "notes": "README and STATUS should expose the same completed H12 checkpoint plus current H15 and preserved H14/H13/V1 state."
+      "notes": "README and STATUS should keep the H10/H11/R8/R9/R10/H12 checkpoint explicit even after the current public surface moves beyond it."
     },
     {
       "item_id": "publication_index_and_release_summary_align",
       "status": "pass",
-      "notes": "Publication-facing short docs should reflect the same preserved H12 checkpoint, preserved H14/H13/V1 state, and current H15 stage."
+      "notes": "Publication-facing short docs should keep the H10/H11/R8/R9/R10/H12 checkpoint explicit even after later H17/H19 packets land."
     },
     {
       "item_id": "release_preflight_audit_is_green",

@@ -55,9 +55,9 @@ def test_build_summary_reports_current_polish_phase() -> None:
     rows = module.build_sync_checklist(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
+    assert summary["current_paper_phase"] == "h19_refreeze_and_next_scope_decision_complete"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the current H15 refrozen stage aligned across public-surface docs while preserving H14/R11/R12 as the completed reopen packet, H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, H13/V1 as preserved handoff state, and H8/R6/R7/H9 plus H6/R3/R4/(inactive R5)/H7 as preserved baselines"
+        "keep the current H19 frozen same-endpoint state aligned across public-surface docs while preserving H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, H14/R11/R12 as the completed prior reopen packet, H13/V1 as preserved handoff state, and H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
     )

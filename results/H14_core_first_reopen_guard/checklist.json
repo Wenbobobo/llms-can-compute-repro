@@ -32,12 +32,12 @@
     {
       "item_id": "current_stage_driver_exposes_h14_core_first_order",
       "status": "pass",
-      "notes": "The canonical driver should expose current H15 plus the preserved H14 packet and the required R11/R12-before-R14 ordering."
+      "notes": "The canonical driver should expose current H16 plus the preserved H14 packet and the landed R11/R12/H15 chain that closed it."
     },
     {
       "item_id": "root_and_public_docs_expose_h14_without_widening",
       "status": "pass",
-      "notes": "Root and publication-facing docs should agree on current H15 and preserved H14/H13 semantics."
+      "notes": "Root and publication-facing docs should agree on current H16 and preserved H14/H13 semantics."
     },
     {
       "item_id": "h14_milestone_docs_track_scope_lock",
@@ -52,12 +52,12 @@
     {
       "item_id": "preserved_baseline_guards_are_green",
       "status": "pass",
-      "notes": "The latest checkpoint plus the older direct/deeper baselines should stay green under H15."
+      "notes": "The latest checkpoint plus the older direct/deeper baselines should stay green under H16."
     },
     {
       "item_id": "preserved_v1_runtime_reference_remains_green",
       "status": "pass",
-      "notes": "The preserved V1 runtime reference should remain operationally bounded while H15 remains the current refrozen stage."
+      "notes": "The preserved V1 runtime reference should remain operationally bounded while H16 remains the current same-scope reopen stage."
     },
     {
       "item_id": "release_worktree_and_no_widening_constraints_remain_explicit",

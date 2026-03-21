@@ -116,13 +116,13 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h15_refreeze_and_decision_sync`",
-                    "is the current refrozen control stage",
+                    "`h16_post_h15_same_scope_reopen_and_scope_lock`",
+                    "the current active stage is:",
                     "`docs/milestones/h15_refreeze_and_decision_sync/result_digest.md`",
                 ],
             )
             else "blocked",
-            "notes": "The repo should have advanced to the later H15 refrozen state instead of still treating H4 as active.",
+            "notes": "The repo should have advanced to the later H16 same-scope reopen stage instead of still treating H4 as active.",
         },
         {
             "item_id": "manifest_and_h5_archive_preserve_h4_artifacts",
@@ -187,7 +187,7 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["`H15_refreeze_and_decision_sync`", "is the current refrozen control stage"],
+            ["`H16_post_h15_same_scope_reopen_and_scope_lock`", "The current active stage is:"],
         ),
     }
     rows: list[dict[str, object]] = []
@@ -199,7 +199,7 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+        "current_paper_phase": "h16_post_h15_same_scope_reopen_active",
         "preserved_baseline_stage": "h4_reproduction_mainline_return",
         "successor_refreeze_stage": "h5_repro_sync_and_refreeze",
         "check_count": len(rows),
@@ -207,7 +207,7 @@ def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H15 control chain while keeping the current repo state refrozen on H15"
+            "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H16/H15 control chain while keeping the current repo state on the H16 same-scope reopen stage"
             if not blocked_items
             else "restore the missing H4 archival links before relying on the later refrozen control chain"
         ),

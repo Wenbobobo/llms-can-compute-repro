@@ -122,6 +122,9 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
+                    "`h16_post_h15_same_scope_reopen_and_scope_lock`",
+                    "`r15_d0_remaining_family_retrieval_pressure_gate`",
+                    "`h15_refreeze_and_decision_sync`",
                     "`h14_core_first_reopen_and_scope_lock`",
                     "`h13_post_h12_rollover_and_next_stage_staging`",
                     "`v1_full_suite_validation_runtime_audit`",
@@ -130,7 +133,7 @@ def build_checklist_rows(
                 ],
             )
             else "blocked",
-            "notes": "The canonical driver should keep H13/V1 explicit as preserved handoff while H15 remains the current refrozen stage.",
+            "notes": "The canonical driver should keep H13/V1 explicit as preserved handoff while H16 remains the current same-scope reopen stage.",
         },
         {
             "item_id": "h13_milestone_docs_track_preserved_handoff",
@@ -172,9 +175,12 @@ def build_checklist_rows(
             and blocked_count_from_summary(h11_summary) == 0
             and blocked_count_from_summary(h8_summary) == 0
             and blocked_count_from_summary(h6_summary) == 0
-            and contains_all(h11_summary_text, ["\"blocked_count\": 0", "\"current_paper_phase\": \"h15_refreeze_and_decision_sync_complete\""])
+            and contains_all(
+                h11_summary_text,
+                ["\"blocked_count\": 0", "\"current_paper_phase\": \"h16_post_h15_same_scope_reopen_active\""],
+            )
             else "blocked",
-            "notes": "The preserved packet wording and direct/deeper baseline guards should stay green under H15.",
+            "notes": "The preserved packet wording and direct/deeper baseline guards should stay green under H16.",
         },
         {
             "item_id": "publication_and_archive_controls_are_green",
@@ -186,7 +192,16 @@ def build_checklist_rows(
             and p10_summary["summary"]["packet_state"] == "archive_ready"
             and blocked_count_from_summary(p10_summary) == 0
             and contains_all(p10_summary_text, ["\"packet_state\": \"archive_ready\"", "\"blocked_count\": 0"])
-            and contains_all(p5_summary_text, ["\"current_paper_phase\": \"h15_refreeze_and_decision_sync_complete\""])
+            and (
+                contains_all(
+                    p5_summary_text,
+                    ["\"current_paper_phase\": \"h17_refreeze_and_conditional_frontier_recheck_complete\""],
+                )
+                or contains_all(
+                    p5_summary_text,
+                    ["\"current_paper_phase\": \"h19_refreeze_and_next_scope_decision_complete\""],
+                )
+            )
             else "blocked",
             "notes": "Public-surface sync, bundle lock, release preflight, and archive handoff should stay green together.",
         },
@@ -252,7 +267,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["`H15_refreeze_and_decision_sync`", "standing operational reference"],
+            ["`H16_post_h15_same_scope_reopen_and_scope_lock`", "standing operational reference"],
         ),
         "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/status.md": (
             "h13_status_text",
@@ -284,8 +299,8 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
-        "active_stage": "h15_refreeze_and_decision_sync",
+        "current_paper_phase": "h17_refreeze_and_conditional_frontier_recheck_complete",
+        "active_stage": "h17_refreeze_and_conditional_frontier_recheck",
         "preserved_stage": "h13_post_h12_rollover_and_next_stage_staging",
         "entrypoint_role": "preserved_governance_handoff_reference",
         "stage_health_state": "preserved_handoff_green" if not blocked_items else "blocked",
@@ -295,7 +310,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this summary as the preserved H13/V1 handoff reference while H15 keeps the repo refrozen; keep H14/R11/R12 preserved as the completed reopen packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
+            "use this summary as the preserved H13/V1 handoff reference while H17 keeps the same-scope packet frozen; preserve H16/R15/R16/R17/R18 as the completed same-scope reopen packet, preserve H15 as the prior refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
             if not blocked_items
             else "resolve the blocked H13 handoff items before treating the preserved governance/runtime handoff as healthy"
         ),

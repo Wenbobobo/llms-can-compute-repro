@@ -43,6 +43,6 @@ def test_build_summary_reports_h4_as_historical_phase() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
+    assert summary["current_paper_phase"] == "h16_post_h15_same_scope_reopen_active"
     assert summary["preserved_baseline_stage"] == "h4_reproduction_mainline_return"
     assert summary["blocked_count"] == 0

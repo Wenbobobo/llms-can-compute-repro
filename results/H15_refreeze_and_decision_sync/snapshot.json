@@ -34,7 +34,7 @@
       "fields": {
         "stage_guard_state": "preserved_core_first_reopen_guard_green",
         "blocked_count": 0,
-        "active_stage": "h15_refreeze_and_decision_sync"
+        "active_stage": "h16_post_h15_same_scope_reopen_and_scope_lock"
       }
     },
     {

@@ -32,7 +32,7 @@
     {
       "item_id": "top_level_release_surface_stays_narrow_and_active_stage_explicit",
       "status": "pass",
-      "notes": "README and STATUS should keep the narrow scope explicit while naming current H15, preserved H14/H13/V1 state, and bounded runtime classification."
+      "notes": "README and STATUS should keep the narrow scope explicit while naming current H19, preserved H17/H15/H14/H13/V1 state, and bounded runtime classification."
     },
     {
       "item_id": "release_preflight_checklist_tracks_current_machine_guards",
