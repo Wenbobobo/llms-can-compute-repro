@@ -9,8 +9,8 @@
   current `H19` frozen driver.
 - [ ] Wait for `P12` to finish the post-`H21` ledger updates before any further
   outward-facing sync is treated as stable.
-- [ ] Split staged commits so prior-wave closeout, runtime work, and
-  public-surface sync remain reviewable. This stays pending while the current
-  repo state is still a mixed dirty tree rather than an isolated split.
+- [ ] If later outward-sync edits reopen the tree, split those doc and hygiene
+  commits so ledger sync, root-doc sync, and release-facing audit refresh stay
+  reviewable.
 - [x] Run closeout validation for the touched docs and release-facing audits.
 - [x] Record the final artifact index.

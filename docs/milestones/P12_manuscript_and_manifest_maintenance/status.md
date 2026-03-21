@@ -10,4 +10,6 @@ maintenance lane.
   but the active ledger target is the landed `R22/R23/H21` packet;
 - it owns the conservative post-`H21` updates to claim ladders, evidence
   tables, manifests, and negative-result ledgers;
+- parallel planning-only `R24/R25` scaffolding may continue in the background,
+  but it does not displace `P12` as the active operational lane;
 - blog-style outward prose remains blocked here.

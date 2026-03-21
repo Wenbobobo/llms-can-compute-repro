@@ -33,8 +33,11 @@ The next downstream operational lane is
 `P12_manuscript_and_manifest_maintenance` under
 `docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md`. That lane updates
 claim/evidence ledgers and manifests downstream of landed `H21` evidence
-without reopening runtime scope. `P13` remains the later outward-sync / hygiene
-lane. Any later broader review remains blocked behind the planning-only
+without reopening runtime scope. In parallel, planning-only prelay may be kept
+current for `R24_d0_boundary_localization_zoom_followup` and the parked
+`R25_d0_same_endpoint_systems_recovery_hypotheses` notes lane. `P13` remains
+the later outward-sync / hygiene lane. Any later broader review remains
+blocked behind the planning-only
 `F2_future_frontier_recheck_activation_matrix`.
 
 Current status inside this driver: `H15` remains the preserved prior refreeze
@@ -140,11 +143,17 @@ The completed post-`H19` follow-up wave then ran in the order:
 
 ## Next planned order
 
-The next downstream sequence after landed `H21` is:
+The next downstream operational sequence after landed `H21` is:
 `P12_manuscript_and_manifest_maintenance` ->
 `P13_public_surface_sync_and_repo_hygiene` ->
 planning-only `F2_future_frontier_recheck_activation_matrix` if later review
 ever becomes worth re-evaluating.
+
+In parallel with that operational sequence, keep the planning-only prelay docs
+current for:
+
+- `R24_d0_boundary_localization_zoom_followup`
+- `R25_d0_same_endpoint_systems_recovery_hypotheses`
 
 Control references for that downstream wave:
 - `results/H21_refreeze_after_r22_r23/summary.json`
@@ -210,6 +219,12 @@ Control references for that downstream wave:
   same-endpoint systems follow-up and still leaves the systems story mixed.
 - `P12_manuscript_and_manifest_maintenance` is the immediate next-priority
   manuscript / manifest lane for landed `H21` evidence.
+- `R24_d0_boundary_localization_zoom_followup` is the planning-only
+  boundary-first reopen package for a later tighter same-endpoint boundary
+  localization attempt. It does not yet authorize execution.
+- `R25_d0_same_endpoint_systems_recovery_hypotheses` is a parked planning-only
+  notes lane that records what would have to change to overturn the mixed
+  same-endpoint systems verdict without widening scope.
 - `H18_post_h17_mainline_reopen_and_scope_lock` is preserved as the completed
   same-endpoint planning guard rather than the frozen state.
 - `R19_d0_pointer_like_surface_generalization_gate` has landed as the
