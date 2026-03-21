@@ -24,8 +24,9 @@ activation remains blocked.
 
 The next phase should therefore split cleanly:
 
-- active operational closeout: `P12_manuscript_and_manifest_maintenance`;
-- parallel planning-only reopen prelay:
+- preserved completed post-`H21` closeout:
+  `P12_manuscript_and_manifest_maintenance`;
+- current planning-only reopen prelay:
   `R24_d0_boundary_localization_zoom_followup`;
 - parked planning-only systems notes:
   `R25_d0_same_endpoint_systems_recovery_hypotheses`;
@@ -40,31 +41,34 @@ The next phase should therefore split cleanly:
 - Refresh `tmp/active_wave_plan.md` at the start of each unattended wave.
 - Use isolated write sets:
   - `main`: integration, root docs, validation, commit and push.
-  - `wt-p12`: claim/evidence/manuscript/manifest maintenance.
+  - `wt-p12`: optional follow-up only if a later outward/publication mismatch
+    requires a small post-closeout correction.
   - `wt-r24`: boundary-first reopen planning only.
   - `wt-r25`: parked systems-recovery notes only.
-  - `wt-p13`: later outward-sync and hygiene after `P12`.
+  - `wt-p13`: later outward-sync and hygiene after the planning-only prelay is
+    saved.
 - Do not let `R24` or `R25` become backdoor execution lanes. They exist to
   save future context, not to bypass the frozen `H21` state.
-- Keep path-scoped commits. Do not mix `P12` ledger closeout, future-lane
+- Keep path-scoped commits. Do not mix preserved `P12` closeout, future-lane
   planning, and outward-sync cleanup in one batch.
 
 ## Automatic Continue Algorithm
 
 1. Read `tmp/active_wave_plan.md`,
    `docs/publication_record/current_stage_driver.md`, `git status --short`,
-   and the current docs for `P12`, `R24`, `R25`, and `P13`.
-2. Finish `P12` closeout work before treating any later outward wording as
-   stable.
-3. If `P12` blocks on one ledger or root doc, continue with `R24` planning-only
-   scoping and then `R25` parked notes rather than opening a new runtime lane.
-4. Only return to `P13` after `P12` has stabilized the post-`H21` ledgers.
+   and the current docs for `R24`, `R25`, `P13`, and preserved `P12`.
+2. Keep `P12` preserved as the completed post-`H21` closeout unless a later
+   outward/publication mismatch exposes a real ledger inconsistency.
+3. Continue with `R24` planning-only scoping and then `R25` parked notes rather
+   than opening a new runtime lane.
+4. Only return to `P13` after the planning-only `R24/R25` packet is saved or a
+   concrete outward-sync need appears.
 5. Do not reopen science execution from inside this plan. A later explicit
    reopen plan is required first.
 
 ## Wave Order
 
-### Wave A: `P12_manuscript_and_manifest_maintenance`
+### Wave A: `P12_manuscript_and_manifest_maintenance` preserved closeout
 
 - Update `claim_ladder.md`, `claim_evidence_table.md`,
   `negative_results.md`, `experiment_manifest.md`,
@@ -125,7 +129,8 @@ Acceptance:
 ### Wave D: `P13_public_surface_sync_and_repo_hygiene`
 
 - Keep `P13` limited to outward-sync hygiene and commit splitting.
-- Only run it after `P12` has stabilized the post-`H21` ledgers.
+- Only run it after the preserved `P12` closeout and the planning-only
+  `R24/R25` packet are both saved.
 - Keep future outward commits reviewable and path-scoped.
 
 Acceptance:
@@ -145,8 +150,9 @@ Acceptance:
 This means the next unattended effort should not drift into widened demos,
 frontend resurrection, or broad “LLMs are computers” prose. The only
 scientifically honest near-term default is to preserve the fixed `D0` endpoint,
-keep the mixed systems result explicit, finish `P12`, and maintain only
-planning-level `R24/R25/F2` material until a later explicit reopen plan exists.
+keep the mixed systems result explicit, preserve the completed `P12` closeout,
+and maintain only planning-level `R24/R25/F2` material until a later explicit
+reopen plan exists.
 
 ## Validation
 

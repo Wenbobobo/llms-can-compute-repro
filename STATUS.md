@@ -104,10 +104,10 @@
   operational reference under the preserved `H13/V1` handoff.
 - The current active post-`P9` operational stage is
   `H21_refreeze_after_r22_r23`.
-- The immediate next-priority lane is
-  `P12_manuscript_and_manifest_maintenance`; `H21` has already refrozen the
-  landed `R22/R23` follow-up on top of the preserved `H18/R19/R20/R21/H19`
-  packet without widening the frozen `D0` boundary.
+- `H21` machine state recorded
+  `P12_manuscript_and_manifest_maintenance` as the immediate downstream lane;
+  that closeout is now preserved in docs, and the current planning-only
+  handoff before the next phase is `R24/R25`.
 - `H18` has now exported a machine-readable planning guard:
   `stage_guard_state = planned_same_scope_reopen_ready`,
   `next_priority_lane = h19_refreeze_and_next_scope_decision`, and
@@ -211,22 +211,24 @@
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
    `tmp/active_wave_plan.md` aligned on the rule that `H21` is now the frozen
-   state while `P12` is the immediate next-priority lane.
+   state, `P12` is the preserved completed post-`H21` closeout, and `R24/R25`
+   are the current planning-only handoff lanes.
 2. Use `results/H21_refreeze_after_r22_r23/summary.json` together with the
    landed `R22` and `R23` summaries as the current same-endpoint control
    surface for any outward-facing wording or ledger maintenance.
 3. Keep the `H21` claim partition explicit: `supported_here`,
    `unsupported_here`, and `disconfirmed_here` should drive README,
    publication ledgers, and any later release-facing summaries.
-4. Keep `P12_manuscript_and_manifest_maintenance` as the immediate downstream
-   documentation lane and keep `P13_public_surface_sync_and_repo_hygiene`
-   downstream-only; outward wording should not imply a wider endpoint, a
+4. Keep `R24_d0_boundary_localization_zoom_followup` and
+   `R25_d0_same_endpoint_systems_recovery_hypotheses` as the current
+   planning-only pre-next-phase lanes, keep `P13_public_surface_sync_and_repo_hygiene`
+   downstream-only, and do not let outward wording imply a wider endpoint, a
    broader systems result, or a frontier activation.
 5. Keep `F2_future_frontier_recheck_activation_matrix` planning-only until a
    later explicit plan says otherwise.
-6. Use `P12_manuscript_and_manifest_maintenance` for claim ledgers, negative
-   results, and figure/table placeholders whenever the experimental lanes are
-   blocked or waiting.
+6. Return to `P12_manuscript_and_manifest_maintenance` only if a later
+   outward/publication pass exposes a real post-`H21` ledger mismatch;
+   otherwise keep the remaining pre-next-phase work inside `R24/R25`.
 7. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
    `results/release_preflight_checklist_audit/summary.json` as the current
    outward-sync controls; a dirty tree still blocks release-facing commits but

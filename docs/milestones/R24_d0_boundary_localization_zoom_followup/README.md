@@ -7,4 +7,5 @@ failure boundary.
 
 This lane does not yet authorize execution. It exists so a later explicit
 reopen plan can start from a bounded, evidence-led matrix rather than another
-wide exploratory sweep.
+wide exploratory sweep. The current packet is centered on one explicit
+candidate-core plus zoom matrix, not on reopening the full `R21/R22` grid.

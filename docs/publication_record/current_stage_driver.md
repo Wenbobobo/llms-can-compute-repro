@@ -29,11 +29,11 @@ does not authorize a wider endpoint, a broader
 frontier review remains conditional-only and planning-only unless a later
 explicit plan says otherwise.
 
-The next downstream operational lane is
+The machine-state next downstream operational lane recorded by `H21` is
 `P12_manuscript_and_manifest_maintenance` under
-`docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md`. That lane updates
-claim/evidence ledgers and manifests downstream of landed `H21` evidence
-without reopening runtime scope. In parallel, planning-only prelay may be kept
+`docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md`. That downstream
+closeout is now preserved in the repo docs as the completed post-`H21`
+manuscript / manifest batch. In parallel, planning-only prelay may now be kept
 current for `R24_d0_boundary_localization_zoom_followup` and the parked
 `R25_d0_same_endpoint_systems_recovery_hypotheses` notes lane. `P13` remains
 the later outward-sync / hygiene lane. Any later broader review remains
@@ -143,14 +143,14 @@ The completed post-`H19` follow-up wave then ran in the order:
 
 ## Next planned order
 
-The next downstream operational sequence after landed `H21` is:
+The machine-state downstream operational sequence recorded by landed `H21` is:
 `P12_manuscript_and_manifest_maintenance` ->
 `P13_public_surface_sync_and_repo_hygiene` ->
 planning-only `F2_future_frontier_recheck_activation_matrix` if later review
 ever becomes worth re-evaluating.
 
-In parallel with that operational sequence, keep the planning-only prelay docs
-current for:
+The repo has now completed the `P12` closeout packet. The remaining pre-next-
+phase planning work is to keep the planning-only prelay docs current for:
 
 - `R24_d0_boundary_localization_zoom_followup`
 - `R25_d0_same_endpoint_systems_recovery_hypotheses`
@@ -217,8 +217,8 @@ Control references for that downstream wave:
   boundary follow-up and still did not localize a failure.
 - `R23_d0_same_endpoint_systems_overturn_gate` has landed as the harder
   same-endpoint systems follow-up and still leaves the systems story mixed.
-- `P12_manuscript_and_manifest_maintenance` is the immediate next-priority
-  manuscript / manifest lane for landed `H21` evidence.
+- `P12_manuscript_and_manifest_maintenance` is the completed post-`H21`
+  manuscript / manifest closeout lane recorded downstream of `H21`.
 - `R24_d0_boundary_localization_zoom_followup` is the planning-only
   boundary-first reopen package for a later tighter same-endpoint boundary
   localization attempt. It does not yet authorize execution.
@@ -242,7 +242,8 @@ Control references for that downstream wave:
 - `H15_refreeze_and_decision_sync` is preserved as the prior refreeze and
   decision-sync record rather than the active stage.
 - `P13_public_surface_sync_and_repo_hygiene` is the downstream public-surface
-  sync and repo-hygiene lane after `P12` stabilizes the post-`H21` ledgers.
+  sync and repo-hygiene lane after the preserved `P12` closeout and any
+  current planning-only prelay are both saved.
 - `F2_future_frontier_recheck_activation_matrix` remains planning-only and
   does not authorize widened experiments.
 - `H14_core_first_reopen_and_scope_lock` remains preserved as the completed

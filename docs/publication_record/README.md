@@ -15,13 +15,18 @@ Current control docs:
   follow-up packet, `H13/V1` preserved as the governance/runtime handoff, and
   future frontier work left conditional on a new explicit plan;
 - `docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md` — the current
-  execution plan for conservative post-`H21` closeout, with `P12` now the
-  immediate next-priority lane, `P13` kept downstream-only, and `F2` still
-  planning-only;
+  execution plan for conservative post-`H21` closeout, with the `P12` closeout
+  now preserved, `R24/R25` kept planning-only, `P13` kept downstream-only, and
+  `F2` still planning-only;
+- `docs/milestones/R24_d0_boundary_localization_zoom_followup/` and
+  `docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/` — the
+  current planning-only pre-next-phase packet, keeping boundary-first reopen
+  scoping and same-endpoint systems hypotheses explicit without authorizing new
+  execution;
 - `results/H21_refreeze_after_r22_r23/summary.json` — machine-readable
   refreeze for the post-`R22/R23` same-endpoint packet, including the current
   `supported_here` / `unsupported_here` / `disconfirmed_here` partition and
-  the downstream `P12` handoff;
+  the downstream `P12` handoff that has now been closed out in docs;
 - `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json` —
   machine-readable reentry guard for the `H19 -> R22/R23/H21` handoff;
 - `results/H18_post_h17_mainline_reopen_guard/summary.json` — machine-readable

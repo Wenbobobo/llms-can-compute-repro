@@ -5,4 +5,5 @@ on the current same endpoint before the project could honestly overturn the
 mixed systems verdict without widening scope.
 
 This lane is not a repair loop. It exists to capture hypotheses, thresholds,
-and disconfirmers while `P12` remains the active operational closeout lane.
+and disconfirmers after the landed `P12` closeout, so a later explicit reopen
+decision does not have to rediscover the same bounded systems story.

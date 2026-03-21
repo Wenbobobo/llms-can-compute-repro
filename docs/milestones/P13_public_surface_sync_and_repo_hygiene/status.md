@@ -12,8 +12,9 @@ downstream-only and is no longer the immediate next-priority lane.
 - historical guard exports that were touched by the outward `H19` rebase now
   pass again, including `H11_post_h9_mainline_rollover_guard` and
   `H18_post_h17_mainline_reopen_guard`;
-- the remaining open items are downstream-only: wait for `P12` to finish the
-  post-`H21` ledger updates, then keep any later outward-sync commits
-  path-scoped and reviewable;
+- the remaining open items are downstream-only: `P12` is now preserved as
+  complete, so any later outward-sync pass should only run when a real
+  root/publication mismatch appears, and its commits should stay path-scoped
+  and reviewable;
 - it must not widen wording beyond landed `H21` evidence or turn planning-only
   `R24`, `R25`, or `F2` material into active runtime scope.

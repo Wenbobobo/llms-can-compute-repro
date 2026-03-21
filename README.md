@@ -30,7 +30,7 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 | `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |
 | `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |
 | `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |
-| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the current machine-readable state with next-priority lane `P12` |
+| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the current machine-readable state; the downstream `P12` closeout is now preserved and the current planning-only pre-next-phase wave is `R24/R25` |
 
 ## Current Gate Outcome
 
@@ -173,9 +173,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
   `next_priority_lane = p12_manuscript_and_manifest_maintenance`.
 - that `H21` machine state still does not authorize a frontier run: any later
   broader review remains blocked behind the planning-only
-  `F2_future_frontier_recheck_activation_matrix`, the immediate downstream lane
-  is `P12_manuscript_and_manifest_maintenance`, and `P13` is now a later
-  outward-sync / hygiene lane rather than the next scientific handoff.
+  `F2_future_frontier_recheck_activation_matrix`, the machine-state downstream
+  handoff to `P12_manuscript_and_manifest_maintenance` has now been closed out
+  in docs, the current planning-only pre-next-phase wave is `R24/R25`, and
+  `P13` remains a later outward-sync / hygiene lane rather than the next
+  scientific handoff.
 - V1 remains a standing operational reference under the preserved `H13`
   handoff rather than an active science lane.
 - The compiled endpoint remains tiny typed bytecode `D0`; no active lane
@@ -229,7 +231,9 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
 - `docs/publication_record/manuscript_bundle_draft.md` — current manuscript section draft
 - `docs/milestones/H21_refreeze_after_r22_r23/` — current frozen-stage staging area
-- `docs/milestones/P12_manuscript_and_manifest_maintenance/` — immediate next-priority manuscript / manifest staging area
+- `docs/milestones/P12_manuscript_and_manifest_maintenance/` — preserved completed post-`H21` manuscript / manifest staging area
+- `docs/milestones/R24_d0_boundary_localization_zoom_followup/` — current planning-only boundary-first reopen prelay
+- `docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/` — current planning-only same-endpoint systems hypotheses packet
 - `docs/milestones/P13_public_surface_sync_and_repo_hygiene/` — later outward-sync and repo-hygiene staging area
 - `docs/milestones/H17_refreeze_and_conditional_frontier_recheck/` — preserved prior same-scope refreeze staging area
 - `docs/milestones/H16_post_h15_same_scope_reopen_and_scope_lock/` — completed reopen/refreeze staging area

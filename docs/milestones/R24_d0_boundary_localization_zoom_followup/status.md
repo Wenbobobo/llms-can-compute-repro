@@ -1,7 +1,6 @@
 # Status
 
-Drafted on 2026-03-21 as a planning-only boundary-first companion to the active
-`P12` wave.
+Refreshed on 2026-03-21 after the post-`H21` `P12` closeout was preserved.
 
 - this lane stays on the current tiny typed-bytecode `D0` endpoint and the
   same-endpoint runtime envelope;
@@ -9,5 +8,7 @@ Drafted on 2026-03-21 as a planning-only boundary-first companion to the active
   executor boundary unlocalized;
 - the intended next question is not “can the scan be even wider,” but “where is
   the nearest scientifically informative place to zoom in”;
-- no execution is authorized here while `H21` remains the frozen state and
-  `P12` remains the active operational lane.
+- it now records one candidate core, one predeclared zoom matrix, one explicit
+  stop-rule block, and one verdict vocabulary before any later execution is
+  considered;
+- no execution is authorized here while `H21` remains the frozen state.
