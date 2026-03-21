@@ -28,49 +28,27 @@
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
-  "branch": "main...origin/main [ahead 1]",
-  "rows": [
-    {
-      "status_code": " M",
-      "path": "results/release_worktree_hygiene_snapshot/status_snapshot.json"
-    },
-    {
-      "status_code": " M",
-      "path": "results/release_worktree_hygiene_snapshot/summary.json"
-    }
-  ],
+  "branch": "main...origin/main",
+  "rows": [],
   "worktree_audit": {
-    "branch": "main...origin/main [ahead 1]",
-    "changed_path_count": 2,
-    "modified_path_count": 2,
-    "tracked_dirty_count": 2,
+    "branch": "main...origin/main",
+    "changed_path_count": 0,
+    "modified_path_count": 0,
+    "tracked_dirty_count": 0,
     "untracked_path_count": 0,
     "untracked_count": 0,
     "staged_path_count": 0,
     "staged_count": 0,
-    "unstaged_path_count": 2,
-    "unstaged_count": 2,
-    "group_counts": [
-      {
-        "group": "docs_results_sync",
-        "count": 2
-      }
-    ],
-    "sample_paths": {
-      "docs_results_sync": [
-        "results/release_worktree_hygiene_snapshot/status_snapshot.json",
-        "results/release_worktree_hygiene_snapshot/summary.json"
-      ]
-    }
+    "unstaged_path_count": 0,
+    "unstaged_count": 0,
+    "group_counts": [],
+    "sample_paths": {}
   },
   "diff_check_summary": {
-    "git_diff_check_state": "warnings_only",
-    "warning_count": 2,
+    "git_diff_check_state": "clean",
+    "warning_count": 0,
     "issue_count": 0,
-    "sample_warnings": [
-      "warning: in the working copy of 'results/release_worktree_hygiene_snapshot/status_snapshot.json', CRLF will be replaced by LF the next time Git touches it",
-      "warning: in the working copy of 'results/release_worktree_hygiene_snapshot/summary.json', CRLF will be replaced by LF the next time Git touches it"
-    ],
+    "sample_warnings": [],
     "sample_issues": []
   }
 }
