@@ -1,7 +1,9 @@
 # Abstract and Contribution Pack
 
-Status: downstream-only derivative material. The authoritative paper-facing
-source remains `manuscript_bundle_draft.md`.
+Status: downstream-only derivative material. The current paper-shaped prose
+baseline remains `manuscript_bundle_draft.md`, while current routing/control
+state remains anchored in `current_stage_driver.md` and the claim/evidence
+ledgers until the manuscript is fully resynchronized.
 
 ## Venue-agnostic abstract
 

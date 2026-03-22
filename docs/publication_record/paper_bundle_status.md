@@ -18,10 +18,13 @@ Caption-ready section notes now live in
 Near-prose stubs for `Abstract`, `Introduction`, `Systems gate`, and
 `Compiled boundary` now live in
 `docs/publication_record/manuscript_stub_notes.md`.
-The current sentence-polished manuscript baseline now lives in
+The current paper-shaped manuscript baseline now lives in
 `docs/publication_record/manuscript_bundle_draft.md`, and the current
 systems-gate placement choice is recorded in
 `docs/publication_record/layout_decision_log.md`.
+That manuscript draft remains useful as prose structure, but a dedicated
+`H32/H34` narrative resync is still pending; current control authority remains
+`current_stage_driver.md` plus the claim/evidence ledgers.
 The same near-prose stub set now also covers `Methods`, `Executor branches`,
 `Mask dependence`, `Precision boundary`, and `Negative results / threats`.
 Caption-ready notes for the current fixed figure/table set now live in

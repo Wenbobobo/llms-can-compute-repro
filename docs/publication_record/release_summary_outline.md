@@ -1,8 +1,8 @@
 # Release Summary Outline
 
-Status: downstream companion to the manuscript bundle. This file is for future
-release-facing summaries that must stay shorter than the manuscript bundle and
-must not redefine claims.
+Status: downstream companion to the current `H32`/`H34`-controlled paper
+bundle. This file is for future release-facing summaries that must stay
+shorter than the manuscript bundle and must not redefine claims.
 
 ## Purpose
 
@@ -18,7 +18,8 @@ the same document.
 This summary should contain only:
 
 - one paragraph on the narrowed scientific target;
-- one paragraph on the current gate chain (`P3`, `R1`, `R2`, `M7`, `P4`);
+- one paragraph on the current control chain
+  (`H28 -> H29 -> R36 -> R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`);
 - one paragraph on the present compiled endpoint and blocked non-goals;
 - one short reproducibility pointer block.
 
@@ -27,7 +28,7 @@ This summary should not contain:
 - new claim wording absent from the manuscript bundle;
 - speculative future frontends;
 - demo-oriented rhetoric;
-- broader systems claims than the current `R2` result supports.
+- broader systems claims than the current mixed systems evidence supports.
 
 ## Draft structure
 
@@ -36,11 +37,14 @@ This summary should not contain:
 Reproduction of a narrow execution-substrate claim: append-only traces, exact
 latest-write retrieval, and a small exact executor under explicit boundaries.
 
-### 2. Current gate chain
+### 2. Current control chain
 
-`P3` freezes the current paper scope, `R1` gives a bounded precision result,
-`R2` is mixed, `M7` blocks frontend widening, and `P4` keeps the blog blocked
-while allowing a restrained repository landing page.
+`H32` is the current active routing/refreeze packet, `H34` is the current
+docs-only control packet above it, `H33` is the preserved prior
+question-selection step, and `R39` is the completed same-substrate audit that
+did not reopen a downstream runtime lane. Older controls such as
+`P3`/`R1`/`R2`/`M7`/`P4` remain preserved historical context rather than the
+current routing summary by themselves.
 
 ### 3. Current endpoint
 
@@ -55,6 +59,7 @@ Point to:
 
 - `README.md`
 - `STATUS.md`
+- `docs/publication_record/current_stage_driver.md`
 - `docs/publication_record/claim_ladder.md`
 - `docs/publication_record/manuscript_bundle_draft.md`
 - `results/P1_paper_readiness/summary.json`

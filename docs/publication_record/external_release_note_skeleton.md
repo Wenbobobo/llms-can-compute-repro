@@ -38,5 +38,5 @@ blocked.
 ## Use rule
 
 Reuse this skeleton only after `release_candidate_checklist.md` and
-`results/P10_submission_archive_ready/summary.json` are both green. The blog
-remains blocked unless `blog_release_rules.md` is also satisfied in full.
+`results/release_preflight_checklist_audit/summary.json` are both green. The
+blog remains blocked unless `blog_release_rules.md` is also satisfied in full.

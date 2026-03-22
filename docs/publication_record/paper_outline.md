@@ -1,6 +1,8 @@
 # Paper Outline
 
-Status: manuscript skeleton for the current no-go scope after `M7` and `P4`.
+Status: manuscript skeleton for the current narrow no-widening scope under
+`H32` plus docs-only `H34`, with older `M7` and `P4` preserved as historical
+controls.
 
 ## 1. Abstract
 

@@ -1,5 +1,12 @@
 # Manuscript Bundle
 
+Status note: this file remains the current paper-shaped prose baseline, but it
+is not yet fully resynchronized to the landed `H32 -> H33 -> R39 -> H34`
+control chain. Where later sections still discuss preserved post-`H21`
+placeholder packets, the authoritative current control state remains
+`current_stage_driver.md`, `claim_ladder.md`, `claim_evidence_table.md`, and
+`release_summary_draft.md` until a dedicated manuscript narrative resync lands.
+
 ## 1. Abstract
 
 We revisit a field-note claim that large language model mechanisms can behave

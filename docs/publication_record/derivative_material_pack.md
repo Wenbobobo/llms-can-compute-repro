@@ -19,7 +19,8 @@ still-blocked blog maintenance. The manuscript bundle remains authoritative.
 - General “LLMs are computers” framing remains unsupported.
 - Arbitrary C reproduction remains unsupported.
 - Broader compiled demos and frontend widening remain blocked by the current
-  `M7` no-widening boundary.
+  `H32/H34` compiled-boundary freeze, with the older `M7` no-widening decision
+  preserved as historical support rather than the current control packet.
 - Broad long-horizon precision robustness remains unsupported beyond the
   current validated suite.
 - Current-scope end-to-end systems superiority remains unsupported because the
