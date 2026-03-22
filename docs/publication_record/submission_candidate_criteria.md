@@ -2,8 +2,10 @@
 
 This file defines the minimum conditions for upgrading the current
 freeze-candidate checkpoint into a submission-candidate bundle on the same
-frozen scope, currently anchored on frozen `H23` evidence and active `H25`
-downstream routing.
+frozen scope, currently anchored on active `H32` evidence and the current
+docs-only `H34` control packet, while preserving `H33/R39` as the immediate
+prior question-selection and completed same-substrate audit chain and
+`H25/H23` as historical same-endpoint context.
 
 ## Must-pass criteria
 
@@ -23,12 +25,13 @@ downstream routing.
 4. Claim, threat, and negative-result ledgers stay synchronized.
    `claim_ladder.md`, `claim_evidence_table.md`, `negative_results.md`, and
    `threats_to_validity.md` must describe the same frozen endpoint, the same
-   blocked claims, and the same post-`H25` routing boundaries.
+   blocked claims, and the same post-`H34` routing boundaries.
 5. Release-facing summaries remain downstream.
    `release_summary_draft.md`, `README.md`, and `STATUS.md` may summarize the
    locked bundle, but they may not outrun it, imply a new evidence wave, or
-   blur the distinction between active `H25` routing and frozen `H23`
-   scientific evidence.
+   blur the distinction between active `H32` routing, current docs-only `H34`
+   control, preserved `H33/R39` context, and historical `H25/H23`
+   same-endpoint evidence.
 6. Standing audits remain green.
    `P1`, `P5` public-surface sync, `P5` callout alignment, and the `H2`
    bundle-lock audit must all report zero blocked items on the current repo
@@ -37,8 +40,10 @@ downstream routing.
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
-- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-- `results/H23_refreeze_after_r26_r27_r28/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`
 - `results/H2_bundle_lock_audit/summary.json`

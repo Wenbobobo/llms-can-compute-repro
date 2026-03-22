@@ -20,6 +20,10 @@
   result. Its exact agreement on the starter suite, plus its appendix-level
   memory-surface diagnostics, should not be inflated into a claim about
   arbitrary source languages or broader runtimes.
+- The landed `R39` follow-up audits only one declared helper-body permutation
+  with target renumbering on the same substrate. The absence of detected
+  control-surface dependence there should not be read as arbitrary
+  control-surface freedom or broader compiler support.
 - The first explicit systems gate still separates mechanism from system value:
   current geometry evidence is strong, but current-scope end-to-end timing does
   not show the lowered path beating the best current reference/oracle path.
@@ -47,3 +51,7 @@
   that boundary and only orders the next bounded same-endpoint work through
   `R32` first and deferred `R33` second; it is not itself scope
   reauthorization.
+- The landed `H34` packet is a docs-only interpretation step, not new runtime
+  evidence. It freezes the current compiled-boundary line as complete-for-now
+  and keeps any later same-substrate reopen conditional on a new
+  contradiction-driven explicit packet.

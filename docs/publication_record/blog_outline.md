@@ -1,16 +1,16 @@
 # Blog Outline
 
 Status: currently blocked by the 2026-03-19 `M7`/`P4` outcome, the current
-locked submission/release checkpoint, and the landed `H25` post-`H23`
-reauthorization packet. The README may remain a restrained landing page and
-the short public surface may remain synchronized, but broader blog prose
-should wait until both `submission_candidate_criteria.md` and
+locked submission/release checkpoint, and the landed `H34` post-`R39`
+scope-decision packet. The README may remain a restrained landing page and the
+short public surface may remain synchronized, but broader blog prose should
+wait until both `submission_candidate_criteria.md` and
 `release_candidate_checklist.md` are satisfied in full, together with
-`blog_release_rules.md`, and until the current `H25`-authorized next science
-lanes materially strengthen the evidence through `R32` and, if still needed,
-deferred `R33`. Any future blog work must remain derivative of the frozen
-manuscript bundle and approved short release summary rather than reopening
-claim framing on its own.
+`blog_release_rules.md`, and until a later explicit packet or materially
+stronger evidence changes the current complete-for-now compiled-boundary
+state. Any future blog work must remain derivative of the frozen manuscript
+bundle and approved short release summary rather than reopening claim framing
+on its own.
 
 Planned sections:
 1. What was actually reproduced.

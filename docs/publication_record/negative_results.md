@@ -108,3 +108,10 @@
   admitted bytecode subset lowers and executes exactly on the active
   Origin-core substrate, but that does not reopen arbitrary `C`, broader
   language support, or same-endpoint systems claims.
+- `R39` is narrow same-substrate follow-up evidence, not a broader compiler
+  opening: one declared helper-body permutation with target renumbering
+  survives on the admitted row and named same-family boundary probe, but that
+  does not justify arbitrary control-surface freedom or broader compiler
+  support.
+- `H34` therefore keeps the compiled-boundary line complete-for-now rather
+  than reopening a new same-substrate runtime lane by momentum.

@@ -2,8 +2,9 @@
 
 This file defines the minimum conditions for calling the current manuscript
 bundle a freeze candidate on the frozen paper scope, currently anchored on
-frozen `H23` evidence while remaining operationally downstream of active
-`H25`.
+active `H32` evidence plus the current docs-only `H34` control packet, while
+preserving `H33/R39` as the immediate prior question-selection and completed
+same-substrate audit chain and `H25/H23` as historical same-endpoint context.
 
 ## Must-pass criteria
 
@@ -30,7 +31,9 @@ frozen `H23` evidence while remaining operationally downstream of active
    `release_summary_draft.md` remains the short-update source for README and
    STATUS. Those public surfaces may summarize the frozen paper scope, but they
    may not outrun the manuscript bundle, blur the distinction between active
-   `H25` routing and frozen `H23` evidence, or soften the blocked-blog rule.
+   `H32` routing, current docs-only `H34` control, preserved `H33/R39`
+   context, and historical `H25/H23` same-endpoint context, or soften the
+   blocked-blog rule.
 6. Narrow audits remain green.
    The public-surface sync audit and the main-text callout-alignment audit must
    pass on the current repo state before the bundle is called frozen.
@@ -38,8 +41,10 @@ frozen `H23` evidence while remaining operationally downstream of active
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
-- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-- `results/H23_refreeze_after_r26_r27_r28/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`
 - `docs/publication_record/main_text_order.md`
