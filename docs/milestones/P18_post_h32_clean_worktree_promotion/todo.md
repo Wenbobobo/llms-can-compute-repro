@@ -7,5 +7,5 @@
 - [x] Keep dirty `main` and dirty `wip/h27-promotion` out of the implementation
   lane.
 - [x] Fix one focused test and diff-check runbook for the clean successor lane.
-- [ ] Keep `R29`, `F3`, and any further compiled-boundary widening blocked
+- [x] Keep `R29`, `F3`, and any further compiled-boundary widening blocked
   until a later plan deliberately opens a new packet.
