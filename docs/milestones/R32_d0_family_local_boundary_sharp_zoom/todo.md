@@ -10,4 +10,7 @@
 - [x] Save one planning-only execution manifest before any runtime batch.
 - [x] Fix one ceiling-relative first-pass zoom ladder before execution.
 - [x] Record the required output set before execution.
-- [ ] Execute only from a clean next-stage worktree or later explicit packet.
+- [x] Execute only from a clean next-stage worktree or later explicit packet.
+- [x] Export one machine-readable `R32` result packet.
+- [x] Record whether the lane localized a first failure or stayed bounded
+      without localization.

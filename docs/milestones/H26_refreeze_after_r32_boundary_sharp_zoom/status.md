@@ -1,11 +1,11 @@
 # Status
 
-Planned post-`R32` refreeze, not yet executed.
+Executed post-`R32` refreeze.
 
-- the lane should consume `R32` as a bounded same-endpoint follow-up rather
-  than reopen the historical full grid;
-- it should decide whether `R33` remains justified next, or whether current
-  same-endpoint work should stop on a stronger negative or no-localization
-  verdict;
-- it must keep `R29` and `F3` blocked unless a later explicit packet changes
-  their conditions.
+- the lane consumed `R32` as a bounded same-endpoint follow-up and did not
+  reopen the historical full grid;
+- it records that `R32` executed `60/60` planned candidates without a first
+  failing row;
+- it preserves deferred `R33` as the next justified same-endpoint audit lane;
+- `R29` and `F3` remain blocked unless a later explicit packet changes their
+  conditions.

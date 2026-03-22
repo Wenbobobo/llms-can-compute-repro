@@ -1,19 +1,21 @@
 # R32 D0 Family-Local Boundary Sharp Zoom
 
-Planned future lane authorized by `H25`.
+Executed bounded post-`H25` science lane on the fixed tiny typed-bytecode `D0`
+endpoint.
 
-`R32` is the first post-`H23` science lane that remains justified on current
-evidence. It exists to run one bounded family-local sharp zoom against the
-current unresolved executor boundary, not to reopen the full historical grid.
+`R32` consumed the one family-local sharp zoom authorized by `R30` and executed
+it from the clean `wip/r32-next` worktree. The lane stayed on the saved
+candidate core, used only the four approved axes, and did not reopen the
+historical full grid.
 
-The lane now has an explicit planning-only execution manifest in
-`execution_manifest.md`. That manifest fixes the candidate core, ceiling
-relative zoom ladder, required outputs, and stop rules before any execution
-batch starts.
+The realized first-pass outcome is now machine-readable in
+`results/R32_d0_family_local_boundary_sharp_zoom/summary.json`:
 
-The intended unattended order is:
+- `lane_verdict = grid_extended_still_not_localized`;
+- `executed_candidate_count = 60`;
+- `failure_candidate_count = 0`;
+- `resource_skipped_candidate_count = 0`.
 
-1. save the manifest and near-term design;
-2. activate `R32` only from a clean next-stage worktree or later explicit
-   packet;
-3. keep `R33` deferred while `R32` remains the primary justified science lane.
+`R32` therefore closes as a bounded no-localization result. The next step is no
+longer more boundary expansion by momentum; it is `H26`, which freezes this
+outcome and decides whether deferred `R33` remains justified next.
