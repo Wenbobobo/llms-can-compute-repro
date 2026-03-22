@@ -45,6 +45,8 @@ planning bundles. Read the current driver first, not the directory name alone.
   packet.
 - `P18_post_h32_clean_worktree_promotion/` — completed clean-branch closeout
   and promotion lane for the landed `H31/R38/H32` packet.
+- `P19_post_h32_publication_surface_alignment/` — completed docs-only
+  publication/control alignment after the saved post-`H32` planning surface.
 
 ## Conditional Future Lanes
 

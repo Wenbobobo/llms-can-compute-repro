@@ -211,38 +211,23 @@
 
 ## Current bounded mainline state
 
-- `H4` completed the bounded reproduction return packet, and `E1a/E1b/H5`
-  remain the immediate evidence baseline for current precision/systems wording.
-- `H23` is the current refrozen stage after the bounded
-  `H22/R26/R28/R27/H23` follow-up on top of the preserved
-  `H20/R22/R23/H21` packet.
-- `H22` locked the post-`H21` reopen to one explicit bounded dual-track
-  packet before any new execution ran.
-- `R26` completed the first-wave post-`H21` boundary scan and still did not
-  localize a true executor failure.
-- `R28` completed the parallel mechanism-contract audit and supported the
-  mechanism contract with only partial control isolation.
-- `R27` completed the bounded second-wave extension and still did not localize
-  a true executor failure.
-- `H21` remains the preserved immediate pre-reopen same-endpoint control
-  packet underneath `H23`.
-- `H20` separated dirty-tree hygiene from the next science wave without
-  widening the endpoint or changing the frozen evidence state by prose alone.
-- `R22` completed the harder same-endpoint boundary follow-up and strengthened
-  the no-break-observed story without localizing a true executor boundary.
-- `R23` completed the harder same-endpoint systems recheck, preserved exactness
-  on the full positive `D0` suite, and still left the systems verdict mixed.
-- `H19` remains the preserved earlier same-endpoint refreeze for the completed
-  `H18/R19/R20/R21` packet.
-- `H17` remains the preserved prior same-scope refreeze for the completed
-  `H16/R15/R16/R17/R18` packet.
-- `H15` remains the preserved prior refreeze for the completed
-  `H14/R11/R12` reopen packet.
-- `H8/R6/R7/H9` remains the completed direct same-endpoint baseline for the
-  current packet.
-- `H6/R3/R4/(inactive R5)/H7` remains the deeper completed
-  exactness/mechanism baseline underneath it.
-- `E1c` remains inactive unless the active packet exposes a concrete frozen-`D0`
-  contradiction that wording alone cannot repair.
+- `H32` is the current active routing/refreeze packet for the Origin-core line
+  after the preserved `H31 -> R38` compiled-boundary extension chain.
+- `H31` remains the preserved later explicit authorization packet and `H30`
+  remains the preserved prior compiled-boundary refreeze packet.
+- `H29` remains the preserved upstream Origin-core refreeze packet, and `H28`
+  remains the pivot packet that reanchored the project around append-only
+  traces, exact retrieval, and a small exact stack/VM executor.
+- `R36`, `R37`, and `R38` remain the active upstream support set for the
+  current narrow compiled-boundary claim.
+- `H27` remains the preserved negative closeout of the old same-endpoint
+  recovery route.
+- `H25`, `H23`, `H21`, `H19`, `H17`, and `H15` remain preserved historical
+  same-endpoint control packets, not the current mainline state.
+- `H8/R6/R7/H9` remain the completed direct same-endpoint baseline, and
+  `H6/R3/R4/(inactive R5)/H7` remain the deeper exactness/mechanism baseline
+  underneath that historical route.
+- `E1c` remains inactive unless the active Origin-core packet exposes a
+  concrete frozen-`D0` contradiction that wording alone cannot repair.
 - `H3` / `P10` / `P11` / `F1` remain the documentation/archive baseline while
   `H4/E1a/E1b/H5` remain the completed bounded return baseline.

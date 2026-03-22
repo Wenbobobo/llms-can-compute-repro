@@ -96,15 +96,15 @@ uv run pytest -q
   Origin-core pivot away from the older same-endpoint route
 - `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
   records the preserved negative closeout of the older same-endpoint route
-- `results/H23_refreeze_after_r26_r27_r28/summary.json` records the current
-  refrozen same-endpoint state, keeps the boundary unresolved inside the
+- `results/H23_refreeze_after_r26_r27_r28/summary.json` records the preserved
+  historical same-endpoint refreeze state, keeps the boundary unresolved inside the
   bounded `R22/R26/R27` envelope, keeps the mechanism contract positive only
   with partial control isolation, preserves the mixed systems verdict, and
   points the next downstream docs lane at `P14`
 - `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` records
-  the current active operational decision packet: `H23` stays the frozen
-  scientific state, `R32` becomes the primary next lane, `R33` stays deferred,
-  and `R29/F3` remain blocked
+  the preserved historical same-endpoint operational decision packet: `H23`
+  stays the frozen scientific state, `R32` becomes the primary next lane,
+  `R33` stays deferred, and `R29/F3` remain blocked
 - `results/R30_d0_boundary_reauthorization_packet/summary.json` records the
   post-`H23` boundary decision that routes the next justified boundary work
   through one family-local `R32` sharp zoom rather than another historical
