@@ -42,6 +42,9 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
 - `results/R37_origin_compiler_boundary_gate/summary.json`
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
 - `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
@@ -85,6 +88,9 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_r30_d0_boundary_reauthorization_packet.py`
 - `scripts/export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py`
 - `scripts/export_h25_refreeze_after_r30_r31_decision_packet.py`
+- `scripts/export_h33_post_h32_conditional_next_question_packet.py`
+- `scripts/export_r39_origin_compiler_control_surface_dependency_audit.py`
+- `scripts/export_h34_post_r39_later_explicit_scope_decision_packet.py`
 - `scripts/export_h20_post_h19_mainline_reentry_and_hygiene_split.py`
 - `scripts/export_r22_d0_true_boundary_localization_gate.py`
 - `scripts/export_r23_d0_same_endpoint_systems_overturn_gate.py`
@@ -112,6 +118,8 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current packet is anchored on active `H30`, with preserved upstream
-`H29/R37/R36/H28/H27` as the current Origin-core chain and preserved
-`H25/H23/H21/H19` as the older same-endpoint control stack.
+bundle. The current packet is anchored on active `H32` plus the current
+`H34` docs-only control packet, with preserved upstream
+`H33/R39/H31/H30/H29/R38/R37/R36/H28/H27` as the current Origin-core control
+chain and preserved `H25/H23/H21/H19` as the older same-endpoint control
+stack.

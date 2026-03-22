@@ -53,6 +53,9 @@ uv run python scripts/export_h29_refreeze_after_r34_r35_origin_core_gate.py
 uv run python scripts/export_r36_origin_long_horizon_precision_scaling_gate.py
 uv run python scripts/export_r37_origin_compiler_boundary_gate.py
 uv run python scripts/export_h30_post_r36_r37_scope_decision_packet.py
+uv run python scripts/export_h33_post_h32_conditional_next_question_packet.py
+uv run python scripts/export_r39_origin_compiler_control_surface_dependency_audit.py
+uv run python scripts/export_h34_post_r39_later_explicit_scope_decision_packet.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -83,6 +86,15 @@ uv run pytest -q
   current active Origin-core routing/refreeze packet after the explicit
   extension and keeps any later compiler-boundary extension conditional on a
   new plan packet
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+  records the preserved prior docs-only packet that selected exactly one
+  same-substrate question while keeping `H32` active
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+  records one declared helper-body permutation with target renumbering
+  surviving on the admitted row and the named same-family boundary probe
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+  records the current docs-only freeze-complete-for-now packet above `H32`
+  and the absence of any active downstream runtime lane
 - `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
   positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
   source reference, lowering parity, and free-running exact execution on the
@@ -160,9 +172,12 @@ This archive is evidence for a narrow mechanistic endpoint: append-only traces,
 exact latest-write retrieval, bounded precision, and one tiny compiled
 boundary on the active Origin-core substrate. It is not evidence for arbitrary
 `C`, general LLM computation, or current-scope end-to-end systems superiority.
-The landed `H30` packet preserves the `H29 -> R36 -> R37` chain as the current
-active state, while `H27/H28` explain the pivot away from the older
-same-endpoint route. The preserved `H23` packet strengthens same-endpoint
+The landed `H32` packet preserves the `H29 -> R36 -> R37 -> H30 -> H31 -> R38`
+chain as the current active routing state, `H33` preserves the one-question
+selection packet, `R39` preserves one narrow same-substrate dependency audit,
+and `H34` preserves the complete-for-now interpretation above that chain while
+leaving no active downstream runtime lane. `H27/H28` explain the pivot away
+from the older same-endpoint route. The preserved `H23` packet strengthens same-endpoint
 boundary and mechanism evidence inside the fixed `D0` boundary, but it still
 does not localize the true executor boundary, still preserves only partial
 control isolation, and still does not overturn the mixed same-endpoint systems

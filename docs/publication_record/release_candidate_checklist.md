@@ -4,7 +4,8 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H32` active / `H31-H30` preserved-upstream-decision /
+the current `H32` active / `H34` docs-only current-control /
+`H33-R39-H31-H30` preserved question-selection-and-decision /
 `H29` preserved-upstream-refreeze / `H27-H28`
 preserved-closeout-and-pivot stack.
 
@@ -12,7 +13,7 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H32`.
+  recorded by active `H32` plus current docs-only `H34`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
@@ -21,7 +22,8 @@ preserved-closeout-and-pivot stack.
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
   `publication_record/README.md` all describe the same `H32` active /
-  `H31-H30-H29-H27-H28` preserved current control package.
+  `H34` current docs-only control / `H33-R39-H31-H30-H29-H27-H28`
+  preserved current control package.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -31,6 +33,14 @@ preserved-closeout-and-pivot stack.
   items on the frozen scope.
 - [ ] `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
   reports the current active routing/refreeze packet without widening scope.
+- [ ] `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+  reports the current docs-only freeze-complete-for-now control packet without
+  reopening a downstream runtime lane.
+- [ ] `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+  reports one declared helper-body permutation with target renumbering only
+  and does not imply broader compiler support.
+- [ ] `results/H33_post_h32_conditional_next_question_packet/summary.json`
+  records the preserved prior docs-only question-selection packet.
 - [ ] `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
   reports one richer same-substrate compiled control family only and does not
   imply broader compiler support.

@@ -4,8 +4,10 @@ Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current active
 routing/refreeze packet is `H32_post_r38_compiled_boundary_refreeze`,
-preserving `H27` as the negative closeout of the old same-endpoint line and
-`H28` as the Origin-core pivot packet underneath it.
+with `H34_post_r39_later_explicit_scope_decision_packet` as the current
+docs-only control packet above it, preserving `H27` as the negative closeout
+of the old same-endpoint line and `H28` as the Origin-core pivot packet
+underneath it.
 
 ## Supported here on the current frozen scope
 
@@ -27,6 +29,10 @@ preserving `H27` as the negative closeout of the old same-endpoint line and
   and one non-admission boundary probe before execution;
 - `R38` supports one richer compiled control/call family on the same substrate
   with the same opcode surface as `R37`;
+- `R39` supports one declared helper-body permutation with target renumbering
+  on the same admitted row and named same-family boundary probe;
+- `H34` records that the current compiled-boundary line is complete-for-now
+  narrow support rather than an automatically reopened runtime lane;
 - preserved historical same-endpoint evidence remains available underneath the
   current line, but it is no longer the active routing target.
 
@@ -64,6 +70,9 @@ preserving `H27` as the negative closeout of the old same-endpoint line and
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
 - `manuscript_bundle_draft.md`
@@ -82,8 +91,9 @@ lane in `conditional_reopen_protocol.md`:
 Any later broader frontier review remains planning-only under
 `F2_future_frontier_recheck_activation_matrix` and the blocked
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
-that status. The current conditional future order now starts only after `H32`
-and requires a new plan before any further compiler-boundary extension. Review
+that status. The current conditional future order now starts only after the
+landed `H33 -> R39 -> H34` chain and requires a new contradiction-driven
+explicit packet before any further compiler-boundary extension. Review
 questions that can be answered by wording, packet indexing, or existing ledgers
-should stay downstream of the landed `H32/H31/H30/H29/H28/H27` stack rather
-than reopening science.
+should stay downstream of the landed `H34/H32/H33/R39/H31/H30/H29/H28/H27`
+stack rather than reopening science.

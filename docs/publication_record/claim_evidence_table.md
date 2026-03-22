@@ -213,12 +213,18 @@
 
 - `H32` is the current active routing/refreeze packet for the Origin-core line
   after the preserved `H31 -> R38` compiled-boundary extension chain.
+- `H34` is the current docs-only control packet above `H32`; it records
+  `freeze_compiled_boundary_as_complete_for_now` and leaves no active
+  downstream runtime lane.
+- `H33` remains the preserved prior docs-only question-selection packet, and
+  `R39` remains completed downstream same-substrate evidence rather than a
+  routing change.
 - `H31` remains the preserved later explicit authorization packet and `H30`
   remains the preserved prior compiled-boundary refreeze packet.
 - `H29` remains the preserved upstream Origin-core refreeze packet, and `H28`
   remains the pivot packet that reanchored the project around append-only
   traces, exact retrieval, and a small exact stack/VM executor.
-- `R36`, `R37`, and `R38` remain the active upstream support set for the
+- `R36`, `R37`, `R38`, and `R39` remain the active upstream support set for the
   current narrow compiled-boundary claim.
 - `H27` remains the preserved negative closeout of the old same-endpoint
   recovery route.

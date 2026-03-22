@@ -32,9 +32,10 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, anchored to the
-current `H32` Origin-core evidence chain while preserving `H25/H23` as
-historical same-endpoint control context, with claim/evidence scope kept
-closed by default.
+current `H32` Origin-core evidence chain plus the current `H34` docs-only
+control packet, while preserving `H33` as the prior question-selection step
+and `H25/H23` as historical same-endpoint control context, with claim/evidence
+scope kept closed by default.
 
 ## Mandatory tables
 

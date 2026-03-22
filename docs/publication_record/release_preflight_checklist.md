@@ -8,13 +8,15 @@ current freeze candidate is assembled.
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
 - [ ] `STATUS.md` reflects the current active `H32` routing/refreeze packet,
+  the current docs-only `H34` control packet above it, preserves `H33` as the
+  prior question-selection step plus `R39` as completed downstream evidence,
   preserves `H31/H30` as upstream decision packets plus `H29` as the upstream
   refreeze and `H27/H28` as the preserved closeout/pivot packet pair, and
   keeps later compiler-boundary extension / `R29` / `F3` execution conditional
-  or blocked as appropriate.
+  or blocked as appropriate with no active downstream runtime lane.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording downstream of landed `H32/R38/H31/H30` while preserving the narrow
-  Origin-core limits.
+  wording downstream of landed `H34/H32/R39/H33/H31/H30` while preserving the
+  narrow Origin-core limits.
 
 ## Paper-facing ledgers
 
@@ -31,6 +33,14 @@ current freeze candidate is assembled.
   figure/table items on the frozen scope.
 - [ ] `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
   reports zero blocked items on the current active routing/refreeze packet.
+- [ ] `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+  reports the current docs-only freeze-complete-for-now control packet and no
+  active downstream runtime lane.
+- [ ] `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+  remains available as the completed same-substrate dependency audit on one
+  declared helper-body permutation with target renumbering.
+- [ ] `results/H33_post_h32_conditional_next_question_packet/summary.json`
+  remains available as the preserved prior docs-only question-selection packet.
 - [ ] `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
   remains available as the current richer same-substrate compiled control gate.
 - [ ] `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`

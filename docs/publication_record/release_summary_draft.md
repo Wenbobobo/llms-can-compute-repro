@@ -24,7 +24,10 @@ The current execution-facing chain is now
 `H30_post_r36_r37_scope_decision_packet` ->
 `H31_post_h30_later_explicit_boundary_decision_packet` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
-`H32_post_r38_compiled_boundary_refreeze`.
+`H32_post_r38_compiled_boundary_refreeze` ->
+`H33_post_h32_conditional_next_question_packet` ->
+`R39_origin_compiler_control_surface_dependency_audit` ->
+`H34_post_r39_later_explicit_scope_decision_packet`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
@@ -104,8 +107,12 @@ Origin-core pivot packet, keeps `H29` as the positive narrow refreeze,
 records `R36` as a completed precision-boundary follow-up, records `R37` as
 one tiny compiled-boundary confirmation, records `H31` as the explicit
 later-decision packet, and records `R38` as one richer same-substrate
-control/call family rather than a scope-lift authorization. Any later
-compiler-boundary extension now requires a new plan packet.
+control/call family rather than a scope-lift authorization. Above that active
+routing packet, `H33` preserves the one-question docs-only selection step,
+`R39` preserves one narrow same-substrate dependency audit, and `H34`
+preserves the current freeze-complete-for-now interpretation with no active
+downstream runtime lane. Any later compiler-boundary extension now requires a
+new contradiction-driven explicit packet.
 
 ## Reproducibility pointers
 
