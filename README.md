@@ -268,9 +268,10 @@ summaries ahead of the historical packet inventory below.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the current `H31/R38/H32/P18` wave and the historical design stack
+- `docs/plans/README.md` — plans index for the current `post-H32` planning surface, the landed `H31/R38/H32/P18` wave, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
-- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — current post-`H30` design packet fixing the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the `H32/P18` closeout path
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — current post-`H32` planning packet fixing the next docs-only `H33` question-selection step and keeping any later runtime move behind a new explicit question
+- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` — one-file summary for the current active Origin-core refreeze packet
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json` — one-file summary for the completed one-richer compiled control/call-family gate
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` — one-file summary for the explicit later-extension authorization packet
@@ -280,11 +281,12 @@ summaries ahead of the historical packet inventory below.
 - `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — preserved historical design that landed `H24/R30/R31/H25`
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
-- `docs/milestones/P18_post_h32_clean_worktree_promotion/worktree_runbook.md` — operational clean-worktree packaging runbook for the current `H32` wave
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — planning-only scaffold for the next docs-only packet after `H32`
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/worktree_runbook.md` — operational clean-worktree packaging runbook for the completed `H32` closeout wave
 - `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — preserved internal handoff for the historical `H25` state, downstream lane order, and blocked follow-up paths
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md` — planning-only first-pass `R32` sharp-zoom manifest fixing the candidate core, ceiling-relative ladder, stop rules, and required outputs
 - `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md` — planning-only first-pass `R33` attribution manifest fixing the comparator set, stratified audit packet, escalation rule, component targets, and required outputs
-- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md` — planning-only frontier activation matrix tied to the full `H19 -> H25` control chain rather than momentum
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md` — planning-only frontier activation matrix tied to the current `H27 -> H32` control chain rather than momentum
 - `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md` — planning-only scope-lift gate clarifying that `R32` and deferred `R33` must still precede any later reauthorization discussion
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md` — origin-facing claim delta matrix anchored to frozen `H23` evidence while remaining downstream of `H25`
 - `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` — one-file entrypoint for the preserved historical post-`H23` decision packet, primary next lane, deferred audit lane, and preserved blockers

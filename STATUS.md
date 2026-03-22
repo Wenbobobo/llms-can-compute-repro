@@ -278,14 +278,16 @@
    active packet above preserved `H30/H31/R38`.
 2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
    `wip/p17-h30-clean`, and treat
-   `P18_post_h32_clean_worktree_promotion` as the current clean-worktree
+   `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree
    closeout lane for the `H31/R38/H32` packet.
 3. Use `results/H32_post_r38_compiled_boundary_refreeze/summary.json`,
    `results/R38_origin_compiler_control_surface_extension_gate/summary.json`,
    `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`,
    and `results/H30_post_r36_r37_scope_decision_packet/summary.json` plus
    `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` as the current
-   routing surface for future work.
+   landed routing surface for `H32`, and
+   `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` as the
+   current planning surface for post-`H32` work.
 4. Keep the `H32` claim partition explicit while preserving `H30` as the prior
    tiny compiled-boundary packet, `H31` as the explicit extension-only
    decision packet, and `H27` as the negative same-endpoint closeout.
@@ -295,9 +297,9 @@
    `F3_post_h23_scope_lift_decision_bundle`, and
    `F2_future_frontier_recheck_activation_matrix` blocked until a later
    explicit packet changes the preconditions.
-7. Keep `F4_post_h23_origin_claim_delta_matrix` and the saved `post-H30`
-   extension plan aligned as downstream aids rather than substitutes for new
-   evidence.
+7. Keep `F4_post_h23_origin_claim_delta_matrix`, the saved `post-H30`
+   extension plan, and the saved `post-H32` conditional-next-packet plan
+   aligned as downstream aids rather than substitutes for new evidence.
 8. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
    `results/release_preflight_checklist_audit/summary.json` as the current
    outward-sync controls; a dirty tree still blocks release-facing commits but
