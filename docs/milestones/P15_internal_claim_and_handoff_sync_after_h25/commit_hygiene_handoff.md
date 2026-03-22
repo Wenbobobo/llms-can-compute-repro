@@ -7,8 +7,9 @@ packet family.
 
 ## Stable Scientific / Routing State
 
-- `H30_post_r36_r37_scope_decision_packet` is the current active routing
-  packet.
+- At the time of this handoff, `H30_post_r36_r37_scope_decision_packet` was
+  the live routing packet. The repo now routes through
+  `H32_post_r38_compiled_boundary_refreeze`.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` is the preserved
   negative closeout of the old same-endpoint route.
 - On that preserved prior route,

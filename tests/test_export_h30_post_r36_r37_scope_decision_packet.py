@@ -44,3 +44,7 @@ def test_export_h30_writes_scope_decision_packet(tmp_path: Path) -> None:
     assert payload["summary"]["blocked_count"] == 0
     assert payload["summary"]["pass_count"] == len(checklist_rows)
     assert claim_packet["distilled_result"]["compiled_boundary_state"] == "tiny_compiled_boundary_supported_narrowly"
+    assert any(
+        row["item_id"] == "driver_and_active_wave_keep_h30_as_preserved_boundary_packet"
+        for row in checklist_rows
+    )

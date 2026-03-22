@@ -72,9 +72,17 @@ uv run pytest -q
 - `results/P1_paper_readiness/summary.json` shows `10/10` ready figure/table
   items and no blocked or partial rows
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json` records the
-  current active Origin-core routing/refreeze packet after the tiny compiled
-  boundary gate and keeps any later compiler-boundary extension conditional on
-  a later explicit packet
+  preserved prior Origin-core routing/refreeze packet after the tiny compiled
+  boundary gate
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+  records the explicit later decision packet that fixed the admitted extension
+  row and the boundary probe
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+  records one richer same-substrate compiled control/call family
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json` records the
+  current active Origin-core routing/refreeze packet after the explicit
+  extension and keeps any later compiler-boundary extension conditional on a
+  new plan packet
 - `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
   positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
   source reference, lowering parity, and free-running exact execution on the

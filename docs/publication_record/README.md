@@ -7,22 +7,23 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H30` active routing/refreeze packet, preserving `H27` as the negative
+  `H32` active routing/refreeze packet, preserving `H27` as the negative
   closeout of the old same-endpoint wave, `H28` as the Origin-core pivot
-  packet, `H29/R36/R37` as the frozen upstream evidence chain, the older
-  same-endpoint `H25/H23` stack as preserved historical context, and any later
-  compiler-boundary extension as conditional on a new explicit packet;
-- `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md` — the current
-  saved post-`H30` planning surface for docs-only closeout, clean-worktree
-  packaging, and any later explicit packet before extension;
-- `docs/milestones/P17_h30_commit_hygiene_and_clean_worktree_promotion/` —
-  the completed docs-only closeout lane that fixed the clean-worktree packet
-  split and runbook before any later explicit packet;
-- `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md` — the current
-  pre-execution post-`R36` planning packet that defined the narrow
+  packet, `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the
+  older same-endpoint `H25/H23` stack as preserved historical context, and any
+  later compiler-boundary extension as conditional on a new plan packet;
+- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — the current
+  saved post-`H30` execution surface for the explicit later decision packet,
+  one richer same-substrate extension gate, `H32` refreeze, and `P18` clean
+  closeout;
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/` — the current clean
+  worktree closeout lane that fixes packet split and runbook after `H32`;
+- `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md` — the
+  preserved historical pre-execution planning packet that defined the narrow
   `R37 -> H30` route before execution;
 - `docs/plans/README.md` — navigation index for the current unattended master
-  plan, the current post-`R36` design packet, and the historical design stack;
+  plan, the current `H31/R38/H32/P18` design packet, and the historical design
+  stack;
 - `docs/milestones/README.md` — navigation index for the current active/frozen
   milestones, deferred next lanes, blocked/planning-only bundles, and
   preserved historical packets;
@@ -31,11 +32,15 @@ Current control docs:
   `docs/milestones/R35_origin_append_only_stack_vm_execution_gate/`,
   `docs/milestones/H29_refreeze_after_r34_r35_origin_core_gate/`,
   `docs/milestones/R36_origin_long_horizon_precision_scaling_gate/`,
-  `docs/milestones/R37_origin_compiler_boundary_gate/`, and
-  `docs/milestones/H30_post_r36_r37_scope_decision_packet/` — the current
+  `docs/milestones/R37_origin_compiler_boundary_gate/`,
+  `docs/milestones/H30_post_r36_r37_scope_decision_packet/`,
+  `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`,
+  `docs/milestones/R38_origin_compiler_control_surface_extension_gate/`, and
+  `docs/milestones/H32_post_r38_compiled_boundary_refreeze/` — the current
   active/preserved Origin-core pivot packet, primitive gate, execution gate,
   upstream refreeze, narrow precision-boundary follow-up, tiny compiled-boundary
-  gate, and current scope-decision packet;
+  gate, explicit later decision packet, richer compiled control-surface gate,
+  and current refreeze packet;
 - `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/`,
   `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/`,
   `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/`, and
@@ -62,8 +67,15 @@ Current control docs:
 - `results/R37_origin_compiler_boundary_gate/summary.json` —
   machine-readable tiny compiled-boundary gate on the active substrate;
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json` —
-  machine-readable current active routing/refreeze packet for the narrow
+  machine-readable preserved prior routing/refreeze packet for the narrow
   Origin-core compiled-boundary state;
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` —
+  machine-readable explicit later decision packet after `H30`;
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json` —
+  machine-readable richer compiled control-surface gate on the same substrate;
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json` —
+  machine-readable current active routing/refreeze packet for the post-`R38`
+  narrow compiled-boundary state;
 - `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
   machine-readable boundary refreeze for the bounded `R32` follow-up;
 - `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` —
@@ -291,10 +303,12 @@ Operating rule:
   bounded timing follow-up as the current operational reference for full-suite
   runtime behavior, and leaves `E1c` dormant unless a completed packet or
   later explicit review exposes a true `D0` contradiction;
-- short-form alignment for guards: `H30` is the current active routing/refreeze
-  packet, `H29` is the preserved upstream Origin-core refreeze, `R37` is the
-  preserved tiny compiled-boundary gate, `R36` is the preserved precision
-  follow-up, `H27` is the preserved same-endpoint closeout, `H25` is the
+- short-form alignment for guards: `H32` is the current active routing/refreeze
+  packet, `H31` and `H30` are preserved upstream decision packets, `H29` is
+  the preserved upstream Origin-core refreeze, `R38` is the preserved richer
+  control-surface gate, `R37` is the preserved tiny compiled-boundary gate,
+  `R36` is the preserved precision follow-up, `H27` is the preserved
+  same-endpoint closeout, `H25` is the
   preserved prior active decision packet, `H23` is the preserved frozen
   same-endpoint scientific state, `P14` remains the completed downstream
   docs-only outward-sync lane, `H24` remains the completed

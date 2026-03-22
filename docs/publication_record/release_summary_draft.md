@@ -21,7 +21,10 @@ The current execution-facing chain is now
 `H29_refreeze_after_r34_r35_origin_core_gate` ->
 `R36_origin_long_horizon_precision_scaling_gate` ->
 `R37_origin_compiler_boundary_gate` ->
-`H30_post_r36_r37_scope_decision_packet`.
+`H30_post_r36_r37_scope_decision_packet` ->
+`H31_post_h30_later_explicit_boundary_decision_packet` ->
+`R38_origin_compiler_control_surface_extension_gate` ->
+`H32_post_r38_compiled_boundary_refreeze`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
@@ -95,13 +98,14 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H30_post_r36_r37_scope_decision_packet`, which preserves `H27` as the
+`H32_post_r38_compiled_boundary_refreeze`, which preserves `H27` as the
 negative closeout of the old same-endpoint route, preserves `H28` as the
 Origin-core pivot packet, keeps `H29` as the positive narrow refreeze,
-records `R36` as a completed precision-boundary follow-up, and records `R37`
-as one tiny compiled-boundary confirmation rather than a scope-lift
-authorization. Any later compiler-boundary extension remains conditional on a
-later explicit packet.
+records `R36` as a completed precision-boundary follow-up, records `R37` as
+one tiny compiled-boundary confirmation, records `H31` as the explicit
+later-decision packet, and records `R38` as one richer same-substrate
+control/call family rather than a scope-lift authorization. Any later
+compiler-boundary extension now requires a new plan packet.
 
 ## Reproducibility pointers
 

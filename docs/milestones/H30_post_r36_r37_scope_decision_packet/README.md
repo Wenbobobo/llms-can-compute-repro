@@ -7,5 +7,8 @@ compiled boundary remains narrow and local to the active Origin-core substrate,
 and preserves blocked lanes until a later explicit packet chooses whether any
 further compiler-boundary extension is worth spending budget on.
 
+`H30` is now preserved upstream of the landed `H31 -> R38 -> H32` packet
+rather than the current active routing stage.
+
 Immediate docs-only closeout after `H30` landed in
 `P17_h30_commit_hygiene_and_clean_worktree_promotion/`.

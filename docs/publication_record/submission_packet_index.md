@@ -39,6 +39,9 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 
 - `results/P1_paper_readiness/summary.json`
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `results/R37_origin_compiler_boundary_gate/summary.json`
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
 - `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`

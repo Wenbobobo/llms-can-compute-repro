@@ -18,22 +18,27 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 ## Current Mainline Note
 
 As of `2026-03-22`, the canonical current stage is no longer the old
-same-endpoint `D0` recovery line. The active routing packet is
-`H30_post_r36_r37_scope_decision_packet`, preserving:
+same-endpoint `D0` recovery line. The active routing/refreeze packet is
+`H32_post_r38_compiled_boundary_refreeze`, preserving:
 
 - `H27` as the negative closeout of the old same-endpoint recovery wave;
 - `H28` as the Origin-core pivot packet;
 - `H29` as the positive Origin-core refreeze packet on the current A/B/C chain;
 - `R36` as a narrow precision-boundary sharpening pass;
-- `R37` as a tiny compiled-boundary confirmation that stays on the current
-  append-only / exact-retrieval / small-VM substrate.
+- `R37` as the tiny compiled-boundary confirmation on the current
+  append-only / exact-retrieval / small-VM substrate;
+- `H30` as the preserved prior tiny compiled-boundary refreeze packet;
+- `H31` as the explicit one-more-extension authorization packet;
+- `R38` as the one-richer control/call-family compiled boundary gate on the
+  same opcode surface;
+- `P18` as the operational clean-worktree packaging lane for this packet.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
-`docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`, and the
-`results/H30...` / `results/R37...` summaries ahead of the historical packet
-inventory below.
+`docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`, and the
+`results/H32...` / `results/R38...` / `results/H31...` / `results/H30...`
+summaries ahead of the historical packet inventory below.
 
 ## Current Boundary
 
@@ -59,22 +64,30 @@ inventory below.
 
 ## Current Gate Outcome
 
-- The current active stage is `H30_post_r36_r37_scope_decision_packet`, not
-  the earlier `H25` same-endpoint decision packet.
+- The current active stage is `H32_post_r38_compiled_boundary_refreeze`, not
+  the preserved prior `H30` packet or the earlier `H25` same-endpoint
+  decision packet.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
 - `R34` supports the narrow retrieval primitive contract on `47/47`
   observations, `R35` supports exact rollout on `12/12` current bundle rows,
-  `R36` sharpens a suite-bounded precision boundary, and `R37` then shows that
-  one tiny admitted bytecode subset can lower onto the active substrate
-  exactly.
+  `R36` sharpens a suite-bounded precision boundary, `R37` shows that one tiny
+  admitted bytecode subset can lower onto the active substrate exactly, `H31`
+  names the only allowed later-explicit extension, `R38` validates one richer
+  compiled control/call family on the same substrate, and `H32` refreezes that
+  result without broadening scope.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
-  negatively, and `H30` keeps any later compiled-boundary extension behind a
-  fresh explicit packet rather than momentum.
-- The saved next-wave planning surface for any later extension discussion is
-  `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`; it is a
-  routing aid, not a new result.
+  negatively, `H30` preserved the first tiny compiled-boundary positive packet,
+  and `H31` then keeps further extension behind an explicit named decision
+  rather than momentum.
+- The current compiled-boundary claim remains narrow: the admitted
+  post-`H30` extension row is `subroutine_braid_program(6, base_address=80)`,
+  while `subroutine_braid_long_program(12, base_address=160)` is recorded as a
+  same-family boundary probe rather than an admitted widening.
+- The saved plan surface for this current wave is
+  `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`; any later
+  extension still requires a new plan beyond `H32`.
 
 - The current active stage still starts from the locked submission-candidate
   bundle and restrained release-candidate checkpoint created by `P8/P9`.
@@ -255,23 +268,27 @@ inventory below.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the unattended master plan, the current post-`R36` design packet, and the historical design stack
+- `docs/plans/README.md` — plans index for the current `H31/R38/H32/P18` wave and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
-- `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md` — current post-`R36` planning packet clarifying that `H29/R36` are frozen, `R37` is conditional, and any next execution wave needs a new explicit packet plus a clean worktree
-- `results/H30_post_r36_r37_scope_decision_packet/summary.json` — one-file summary for the current active Origin-core refreeze packet
+- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — current post-`H30` design packet fixing the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the `H32/P18` closeout path
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json` — one-file summary for the current active Origin-core refreeze packet
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json` — one-file summary for the completed one-richer compiled control/call-family gate
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` — one-file summary for the explicit later-extension authorization packet
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json` — one-file summary for the preserved prior tiny compiled-boundary refreeze packet
 - `results/R37_origin_compiler_boundary_gate/summary.json` — one-file summary for the completed tiny compiled-boundary gate
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json` — one-file summary for the completed narrow precision-boundary follow-up
 - `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — preserved historical design that landed `H24/R30/R31/H25`
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
-- `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — internal handoff for the current `H25` state, downstream lane order, and blocked follow-up paths
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/worktree_runbook.md` — operational clean-worktree packaging runbook for the current `H32` wave
+- `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — preserved internal handoff for the historical `H25` state, downstream lane order, and blocked follow-up paths
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md` — planning-only first-pass `R32` sharp-zoom manifest fixing the candidate core, ceiling-relative ladder, stop rules, and required outputs
 - `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md` — planning-only first-pass `R33` attribution manifest fixing the comparator set, stratified audit packet, escalation rule, component targets, and required outputs
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md` — planning-only frontier activation matrix tied to the full `H19 -> H25` control chain rather than momentum
 - `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md` — planning-only scope-lift gate clarifying that `R32` and deferred `R33` must still precede any later reauthorization discussion
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md` — origin-facing claim delta matrix anchored to frozen `H23` evidence while remaining downstream of `H25`
-- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` — one-file entrypoint for the current post-`H23` decision packet, primary next lane, deferred audit lane, and preserved blockers
-- `results/H23_refreeze_after_r26_r27_r28/summary.json` — one-file entrypoint for the current frozen post-`H22/R26/R28/R27` same-endpoint state, claim partition, and next-priority lane
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` — one-file entrypoint for the preserved historical post-`H23` decision packet, primary next lane, deferred audit lane, and preserved blockers
+- `results/H23_refreeze_after_r26_r27_r28/summary.json` — one-file entrypoint for the preserved historical post-`H22/R26/R28/R27` same-endpoint state, claim partition, and next-priority lane
 - `results/R30_d0_boundary_reauthorization_packet/summary.json` — machine-readable post-`H23` boundary reauthorization packet authorizing the future `R32` family-local sharp zoom
 - `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json` — machine-readable post-`H23` systems reauthorization packet routing later same-endpoint systems work through future `R33`
 - `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json` — machine-readable reopen-control packet for the bounded dual-track follow-up
@@ -315,9 +332,9 @@ inventory below.
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
 - `docs/publication_record/manuscript_bundle_draft.md` — current manuscript section draft
-- `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/` — current active decision-packet staging area
-- `docs/milestones/H23_refreeze_after_r26_r27_r28/` — current frozen scientific-stage staging area
-- `docs/milestones/H24_post_h23_reauthorization_and_hygiene_split/` — completed post-`H23` split stage for the current decision packet
+- `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/` — preserved historical decision-packet staging area
+- `docs/milestones/H23_refreeze_after_r26_r27_r28/` — preserved historical frozen scientific-stage staging area
+- `docs/milestones/H24_post_h23_reauthorization_and_hygiene_split/` — completed post-`H23` split stage for the preserved historical decision packet
 - `docs/milestones/R30_d0_boundary_reauthorization_packet/` — completed post-`H23` boundary reauthorization packet
 - `docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/` — completed post-`H23` systems reauthorization packet
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/` — authorized future boundary sharp-zoom lane

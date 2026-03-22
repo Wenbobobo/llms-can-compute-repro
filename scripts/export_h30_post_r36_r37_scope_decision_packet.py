@@ -78,7 +78,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             )
             and contains_all(
                 inputs["h30_status_text"],
-                ["current active routing/refreeze packet", "tiny compiled boundary", "r29", "f3"],
+                ["routing/refreeze packet", "tiny compiled boundary", "r29", "f3"],
             )
             and contains_all(
                 inputs["h30_todo_text"],
@@ -110,18 +110,18 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "H30 only freezes positively if the H29/R36/R37 chain remains narrow and exact.",
         },
         {
-            "item_id": "driver_and_active_wave_promote_h30_without_reopening_blocked_lanes",
+            "item_id": "driver_and_active_wave_keep_h30_as_preserved_boundary_packet",
             "status": "pass"
             if contains_all(
                 inputs["current_stage_driver_text"],
-                ["h30_post_r36_r37_scope_decision_packet", "r37_origin_compiler_boundary_gate", "r29", "f3"],
+                ["h30_post_r36_r37_scope_decision_packet", "r29", "f3"],
             )
             and contains_all(
                 inputs["active_wave_plan_text"],
-                ["h30_post_r36_r37_scope_decision_packet", "r37_origin_compiler_boundary_gate", "later explicit packet"],
+                ["h30_post_r36_r37_scope_decision_packet", "later explicit packet"],
             )
             else "blocked",
-            "notes": "The canonical driver and active-wave handoff should now route through H30, not treat R37 as future-only.",
+            "notes": "Later packets may supersede H30 as active routing, but the canonical driver and active-wave handoff should still preserve H30 explicitly.",
         },
         {
             "item_id": "blocked_and_planning_only_lanes_remain_explicit",

@@ -4,14 +4,15 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H30` active / `H29` preserved-upstream / `H27-H28`
+the current `H32` active / `H31-H30` preserved-upstream-decision /
+`H29` preserved-upstream-refreeze / `H27-H28`
 preserved-closeout-and-pivot stack.
 
 ## Wording and scope
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H30`.
+  recorded by active `H32`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
@@ -19,8 +20,8 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H30` active /
-  `H29-H27-H28` preserved current control package.
+  `publication_record/README.md` all describe the same `H32` active /
+  `H31-H30-H29-H27-H28` preserved current control package.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -28,8 +29,16 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- [ ] `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
   reports the current active routing/refreeze packet without widening scope.
+- [ ] `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+  reports one richer same-substrate compiled control family only and does not
+  imply broader compiler support.
+- [ ] `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+  records the preserved explicit later-decision packet.
+- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+  records the preserved prior compiled-boundary refreeze packet without
+  widening scope.
 - [ ] `results/R37_origin_compiler_boundary_gate/summary.json` reports one
   tiny compiled-boundary gate only and does not imply broader compiler support.
 - [ ] `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`

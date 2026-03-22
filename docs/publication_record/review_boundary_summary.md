@@ -3,7 +3,7 @@
 Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current active
-routing/refreeze packet is `H30_post_r36_r37_scope_decision_packet`,
+routing/refreeze packet is `H32_post_r38_compiled_boundary_refreeze`,
 preserving `H27` as the negative closeout of the old same-endpoint line and
 `H28` as the Origin-core pivot packet underneath it.
 
@@ -23,6 +23,10 @@ preserving `H27` as the negative closeout of the old same-endpoint line and
 - `R37` supports one tiny lowered bytecode subset on the active Origin-core
   substrate, with source reference, lowered interpreter, and free-running exact
   execution all agreeing on the admitted rows;
+- `H31` keeps the post-`H30` fork explicit by fixing one admitted extension row
+  and one non-admission boundary probe before execution;
+- `R38` supports one richer compiled control/call family on the same substrate
+  with the same opcode surface as `R37`;
 - preserved historical same-endpoint evidence remains available underneath the
   current line, but it is no longer the active routing target.
 
@@ -30,7 +34,8 @@ preserving `H27` as the negative closeout of the old same-endpoint line and
 
 - no general “LLMs are computers” claim;
 - no arbitrary C reproduction claim;
-- no broader compiled demos beyond the current tiny validated boundary;
+- no broader compiled demos beyond the current tiny boundary plus one richer
+  same-substrate control/call family;
 - no claim that the bounded `R21/R22` scans found the true executor failure
   boundary, or that the later `R26/R27` follow-up packet localized it;
 - no claim that `R36` authorizes compiler/demo/frontend scope lift;
@@ -56,6 +61,9 @@ preserving `H27` as the negative closeout of the old same-endpoint line and
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
 - `results/R37_origin_compiler_boundary_gate/summary.json`
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
 - `manuscript_bundle_draft.md`
@@ -74,8 +82,8 @@ lane in `conditional_reopen_protocol.md`:
 Any later broader frontier review remains planning-only under
 `F2_future_frontier_recheck_activation_matrix` and the blocked
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
-that status. The current conditional future order starts only after `H30` and
-still requires a later explicit packet before any compiler-boundary extension.
-Review questions that can be answered by wording, packet indexing, or existing
-ledgers should stay downstream of the landed `H30/H29/H28/H27` stack rather
+that status. The current conditional future order now starts only after `H32`
+and requires a new plan before any further compiler-boundary extension. Review
+questions that can be answered by wording, packet indexing, or existing ledgers
+should stay downstream of the landed `H32/H31/H30/H29/H28/H27` stack rather
 than reopening science.

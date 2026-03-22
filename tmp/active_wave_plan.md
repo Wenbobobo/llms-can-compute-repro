@@ -5,6 +5,10 @@
 Current scientific/control stack:
 
 - current active decision packet:
+  `H32_post_r38_compiled_boundary_refreeze`;
+- preserved later explicit packet:
+  `H31_post_h30_later_explicit_boundary_decision_packet`;
+- preserved prior compiled-boundary refreeze packet:
   `H30_post_r36_r37_scope_decision_packet`;
 - preserved prior Origin-core refreeze packet:
   `H29_refreeze_after_r34_r35_origin_core_gate`;
@@ -18,6 +22,8 @@ Current scientific/control stack:
   `R36_origin_long_horizon_precision_scaling_gate`;
 - preserved tiny compiled-boundary lane:
   `R37_origin_compiler_boundary_gate`;
+- preserved richer control-surface extension lane:
+  `R38_origin_compiler_control_surface_extension_gate`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -26,7 +32,8 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-Origin-core refreeze active after one narrow compiled-boundary confirmation
+Origin-core refreeze active after one explicit later-extension packet and one
+same-substrate richer control/call family check
 
 ## Current Facts
 
@@ -43,15 +50,23 @@ Origin-core refreeze active after one narrow compiled-boundary confirmation
   source reference, lowered interpreter, and accelerated free-running
   execution on the current substrate.
 - `H30` freezes that result as narrow compiled-boundary evidence only.
+- `H31` authorizes exactly one more tiny extension on the same substrate.
+- `R38` shows that one richer subroutine/control family and one longer
+  same-family boundary probe stay exact without widening the opcode surface.
+- `H32` freezes that result as narrow same-substrate evidence only.
 - `R29`, `F3`, and frontier/demo widening remain blocked.
 
 ## Immediate Objectives
 
-1. Preserve `H30` as the current active routing packet.
-2. Preserve `H29`, `R36`, and `R37` as the frozen upstream evidence chain.
-3. Keep the compiled-boundary result narrow: one tiny lowered subset only.
+1. Preserve `H32` as the current active routing packet.
+2. Preserve `H30`, `H31`, and `R38` as the narrow compiled-boundary evidence
+   chain above `H29/R36/R37`.
+3. Keep the compiled-boundary result narrow: one tiny subset plus one richer
+   control/call family only.
 4. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
    widening by momentum.
+5. Treat `P18_post_h32_clean_worktree_promotion` as the operational closeout
+   lane on this clean branch.
 
 ## Last Completed Order
 
@@ -68,36 +83,37 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H29_refreeze_after_r34_r35_origin_core_gate` ->
 `R36_origin_long_horizon_precision_scaling_gate` ->
 `R37_origin_compiler_boundary_gate` ->
-`H30_post_r36_r37_scope_decision_packet`
+`H30_post_r36_r37_scope_decision_packet` ->
+`H31_post_h30_later_explicit_boundary_decision_packet` ->
+`R38_origin_compiler_control_surface_extension_gate` ->
+`H32_post_r38_compiled_boundary_refreeze`
 
 ## Next Conditional Order
 
-later explicit packet ->
-conditional compiler-boundary extension or language-boundary clarification
-packet
+new plan packet ->
+conditional new substrate question or broader compiled-boundary justification
 
 ## Current References
 
+- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
-- `docs/milestones/P17_h30_commit_hygiene_and_clean_worktree_promotion/`
-- `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md`
-- `docs/milestones/H29_refreeze_after_r34_r35_origin_core_gate/`
-- `docs/milestones/R36_origin_long_horizon_precision_scaling_gate/`
-- `docs/milestones/R37_origin_compiler_boundary_gate/`
-- `docs/milestones/H30_post_r36_r37_scope_decision_packet/`
-- `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
-- `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
-- `results/R37_origin_compiler_boundary_gate/summary.json`
+- `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`
+- `docs/milestones/R38_origin_compiler_control_surface_extension_gate/`
+- `docs/milestones/H32_post_r38_compiled_boundary_refreeze/`
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 
 ## If Blocked
 
-- `P17` closeout is already complete on `wip/p17-h30-clean`; do not reopen it
-  unless the clean packet needs to be restaged;
-- do not reopen `R29` or `F3` by momentum;
-- do not convert `H27` into a soft authorization for same-endpoint recovery;
-- do not relabel one tiny compiled boundary as arbitrary-language support;
-- do not skip the saved post-`H30` plan when evaluating the next explicit
-  packet;
-- require a later explicit packet before any further compiler-boundary
-  extension.
+- `P17` closeout remains complete on `wip/p17-h30-clean`; do not reopen it;
+- `P18` is the current clean-branch packaging surface; do not merge back into
+  dirty `main` or dirty `wip/h27-promotion` by momentum;
+- do not reopen `R29` or `F3` by wording alone;
+- do not relabel one richer compiled control family as arbitrary-language
+  support;
+- do not skip the saved post-`H30` / `H31` / `R38` plan when evaluating any
+  later broader lane;
+- require a new plan before any further compiled-boundary extension.

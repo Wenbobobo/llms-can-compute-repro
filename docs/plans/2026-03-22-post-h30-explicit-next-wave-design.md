@@ -25,8 +25,10 @@ be explicitly reauthorized against the current `H30` machine state.
 
 ## Standing State After `H30`
 
-- `H30_post_r36_r37_scope_decision_packet` is the current active routing
-  packet.
+- At the time this design was written,
+  `H30_post_r36_r37_scope_decision_packet` was the live routing packet. It is
+  now preserved historical context under
+  `H32_post_r38_compiled_boundary_refreeze`.
 - `H29_refreeze_after_r34_r35_origin_core_gate` remains the preserved upstream
   positive refreeze packet.
 - `R36_origin_long_horizon_precision_scaling_gate` remains the preserved narrow

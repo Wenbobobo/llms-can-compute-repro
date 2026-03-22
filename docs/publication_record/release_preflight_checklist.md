@@ -7,12 +7,13 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects the current active `H30` routing/refreeze packet,
-  preserves `H29` as the upstream refreeze plus `H27/H28` as the preserved
-  closeout/pivot packet pair, and keeps later compiler-boundary extension /
-  `R29` / `F3` execution conditional or blocked as appropriate.
+- [ ] `STATUS.md` reflects the current active `H32` routing/refreeze packet,
+  preserves `H31/H30` as upstream decision packets plus `H29` as the upstream
+  refreeze and `H27/H28` as the preserved closeout/pivot packet pair, and
+  keeps later compiler-boundary extension / `R29` / `F3` execution conditional
+  or blocked as appropriate.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording downstream of landed `H30/R37` while preserving the narrow
+  wording downstream of landed `H32/R38/H31/H30` while preserving the narrow
   Origin-core limits.
 
 ## Paper-facing ledgers
@@ -28,10 +29,16 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
-- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- [ ] `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
   reports zero blocked items on the current active routing/refreeze packet.
+- [ ] `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+  remains available as the current richer same-substrate compiled control gate.
+- [ ] `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+  remains available as the preserved explicit later-decision packet.
+- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+  remains available as the preserved prior compiled-boundary refreeze packet.
 - [ ] `results/R37_origin_compiler_boundary_gate/summary.json` remains
-  available as the current tiny compiled-boundary gate.
+  available as the preserved tiny compiled-boundary gate.
 - [ ] `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
   remains available as the preserved upstream refreeze packet.
 - [ ] `results/H28_post_h27_origin_core_reanchor_packet/summary.json` remains

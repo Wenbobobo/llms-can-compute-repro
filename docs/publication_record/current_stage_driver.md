@@ -4,15 +4,17 @@
 
 The current active stage is:
 
-- `H30_post_r36_r37_scope_decision_packet`
+- `H32_post_r38_compiled_boundary_refreeze`
 
-This stage freezes the current Origin-core chain after one narrow compiled
-boundary gate:
+This stage freezes the current Origin-core chain after one explicit
+post-`H30` extension decision:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
-- `R36` sharpens a narrow precision boundary on the active bundle;
-- `R37` validates one tiny lowered/compiled bytecode subset on the same
-  substrate without reopening broader compiler or demo rhetoric.
+- `R36` preserves the narrow precision boundary on the active bundle;
+- `R37` preserves one tiny compiled boundary on the same substrate;
+- `H31` authorizes exactly one further tiny extension on the same substrate;
+- `R38` validates one richer compiled control/call family without widening the
+  opcode surface or reopening blocked lanes.
 
 ## Current Machine-State Meaning
 
@@ -28,13 +30,23 @@ boundary gate:
 - `R36` remains complete as a narrow precision-boundary audit:
   float32 `single_head` fails on selected inflated horizons while bounded
   decomposition schemes stay exact on the same rows;
-- `R37` is now complete as a tiny compiled-boundary gate:
+- `R37` remains complete as a tiny compiled-boundary gate:
   one admitted bytecode subset stays exact across source reference, lowered
   interpreter, and accelerated free-running execution on the current substrate;
-- `H30` is the current active routing/refreeze packet:
+- `H30` remains the preserved post-`R36/R37` scope-decision packet:
   `decision_state = origin_core_tiny_compiled_boundary_refrozen`,
-  `compiled_boundary_state = tiny_compiled_boundary_supported_narrowly`,
-  `next_required_lane = later_explicit_packet_required_before_any_compiler_boundary_extension`;
+  `compiled_boundary_state = tiny_compiled_boundary_supported_narrowly`;
+- `H31` remains the preserved later explicit authorization packet:
+  `authorization_outcome = execute_one_more_tiny_extension`,
+  `admitted_extension_case = bytecode_subroutine_braid_6_a80`,
+  `boundary_probe_case = bytecode_subroutine_braid_long_12_a160`;
+- `R38` is now complete as a narrow compiled control-surface extension gate:
+  one richer control/call family stays exact on the current substrate with the
+  same opcode surface as `R37`;
+- `H32` is the current active routing/refreeze packet:
+  `decision_state = origin_core_one_richer_compiled_control_family_refrozen`,
+  `compiled_boundary_state = one_richer_compiled_control_family_supported_narrowly`,
+  `next_required_lane = new_plan_required_before_any_further_compiled_boundary_or_scope_lift`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -56,22 +68,26 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H29_refreeze_after_r34_r35_origin_core_gate` ->
 `R36_origin_long_horizon_precision_scaling_gate` ->
 `R37_origin_compiler_boundary_gate` ->
-`H30_post_r36_r37_scope_decision_packet`
+`H30_post_r36_r37_scope_decision_packet` ->
+`H31_post_h30_later_explicit_boundary_decision_packet` ->
+`R38_origin_compiler_control_surface_extension_gate` ->
+`H32_post_r38_compiled_boundary_refreeze`
 
 ## Next Planned Order
 
-The current justified next move is still not automatic widening. `H30` makes
-the tiny compiled boundary explicit, but any broader lane still requires a
-later explicit packet. The immediate docs-only closeout lane
-`P17_h30_commit_hygiene_and_clean_worktree_promotion` is now complete on the
-clean branch `wip/p17-h30-clean`; no new runtime execution is active by
-default.
+The current justified next move is still not automatic widening.
+`H32` preserves the narrow compiled-boundary result after one explicit
+extension, and no further runtime extension is active by default.
+
+The immediate clean-worktree closeout lane
+`P18_post_h32_clean_worktree_promotion` is now the operational packaging
+surface on branch `wip/h31-later-explicit`; no new runtime execution is active
+by default.
 
 If reauthorized later, the next conditional order is:
 
-later explicit packet ->
-conditional compiler-boundary extension or language-boundary clarification
-packet
+new plan packet ->
+conditional new substrate question or broader compiled-boundary justification
 
 ## Control References
 
@@ -83,8 +99,11 @@ packet
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
 - `results/R37_origin_compiler_boundary_gate/summary.json`
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json`
-- `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
-- `docs/milestones/P17_h30_commit_hygiene_and_clean_worktree_promotion/`
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
 
 ## Standing Gates
@@ -93,18 +112,24 @@ packet
 - `F3` remains blocked and planning-only.
 - `F2` remains planning-only.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
-  platform parity remain blocked until a later explicit stage proves them.
+  platform parity remain blocked until a later stage proves them.
 
 ## Active Bounded Lanes
 
-- `H30_post_r36_r37_scope_decision_packet` is the current active routing
+- `H32_post_r38_compiled_boundary_refreeze` is the current active routing
   packet.
+- `H31_post_h30_later_explicit_boundary_decision_packet` remains the preserved
+  explicit authorization packet under `H32`.
+- `H30_post_r36_r37_scope_decision_packet` remains the preserved prior
+  compiled-boundary refreeze packet.
 - `H29_refreeze_after_r34_r35_origin_core_gate` remains the preserved upstream
-  refreeze packet under `H30`.
+  refreeze packet under `H32`.
 - `R36_origin_long_horizon_precision_scaling_gate` remains the preserved
   narrow precision-boundary lane.
 - `R37_origin_compiler_boundary_gate` remains the preserved tiny
   compiled-boundary gate.
+- `R38_origin_compiler_control_surface_extension_gate` remains the preserved
+  richer control-surface extension gate.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved
   negative same-endpoint closeout.
 
@@ -112,5 +137,5 @@ packet
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30` packet chain change the current routing target, not the
-historical record.
+`H29/R36/R37/H30/H31/R38/H32` packet chain change the current routing target,
+not the historical record.
