@@ -30,13 +30,20 @@
   `R6/R8` families and current exported modes; it does not establish
   unseen-family executor robustness or justify a broader trainable-executor
   claim.
-- The landed `R21/R22` boundary scans are still no-break-observed evidence, not
-  a localized true executor boundary. Larger exact grids reduce one class of
-  doubt while leaving the actual failure frontier unresolved.
+- The landed `R21/R22/R26/R27` boundary scans are still no-break-observed
+  evidence, not a localized true executor boundary. Larger exact grids reduce
+  one class of doubt while leaving the actual failure frontier unresolved.
 - The landed `R23` follow-up upgrades the same-endpoint runtime candidate but
   does not close the systems story: exactness on the full positive `D0` suite
   is not enough when the candidate still trails the best current reference path
   on the bounded gate criterion.
-- `H21` is therefore a scientific boundary, not only an operational refreeze.
-  It records that frontier review and wider compiled-language claims remain
-  blocked on current evidence rather than merely deferred for lack of effort.
+- The landed `R28` mechanism-contract audit strengthens the primitive-level
+  story, but partial control isolation and a non-retrieval-dominant bottleneck
+  do not by themselves close the systems story.
+- `H23` is therefore a scientific boundary, not only an operational refreeze.
+  It records that frontier review, wider compiled-language claims, and any
+  later scope lift remain blocked on current evidence rather than merely
+  deferred for lack of effort. The later `R30/R31/H25` decision layer preserves
+  that boundary and only orders the next bounded same-endpoint work through
+  `R32` first and deferred `R33` second; it is not itself scope
+  reauthorization.

@@ -38,6 +38,14 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 ## Required audit anchors
 
 - `results/P1_paper_readiness/summary.json`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+- `results/R30_d0_boundary_reauthorization_packet/summary.json`
+- `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
+- `results/H23_refreeze_after_r26_r27_r28/summary.json`
+- `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`
+- `results/R26_d0_boundary_localization_execution_gate/summary.json`
+- `results/R27_d0_boundary_localization_extension_gate/summary.json`
+- `results/R28_d0_trace_retrieval_contract_audit/summary.json`
 - `results/H21_refreeze_after_r22_r23/summary.json`
 - `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`
 - `results/R22_d0_true_boundary_localization_gate/summary.json`
@@ -60,6 +68,14 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_p1_figure_table_sources.py`
 - `scripts/render_p1_paper_artifacts.py`
 - `scripts/export_p1_paper_readiness.py`
+- `scripts/export_h22_post_h21_boundary_reopen_and_dual_track_lock.py`
+- `scripts/export_r26_d0_boundary_localization_execution_gate.py`
+- `scripts/export_r28_d0_trace_retrieval_contract_audit.py`
+- `scripts/export_r27_d0_boundary_localization_extension_gate.py`
+- `scripts/export_h23_refreeze_after_r26_r27_r28.py`
+- `scripts/export_r30_d0_boundary_reauthorization_packet.py`
+- `scripts/export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py`
+- `scripts/export_h25_refreeze_after_r30_r31_decision_packet.py`
 - `scripts/export_h20_post_h19_mainline_reentry_and_hygiene_split.py`
 - `scripts/export_r22_d0_true_boundary_localization_gate.py`
 - `scripts/export_r23_d0_same_endpoint_systems_overturn_gate.py`
@@ -87,5 +103,6 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current packet is anchored on landed `H21` rather than the
-preserved prior `H19` refreeze.
+bundle. The current packet is anchored on active `H25` plus frozen `H23`, with
+`H21` preserved as the immediate pre-reopen control and `H19` preserved as the
+earlier same-endpoint refreeze.

@@ -31,8 +31,9 @@ under the current public-surface and callout audit guards. Main-text artifact
 pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
-state under `docs/publication_record/paper_package_plan.md`, with claim/evidence
-scope kept closed by default.
+state under `docs/publication_record/paper_package_plan.md`, anchored to frozen
+`H23` evidence while remaining operationally downstream of active `H25`, with
+claim/evidence scope kept closed by default.
 
 ## Mandatory tables
 

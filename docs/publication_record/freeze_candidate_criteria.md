@@ -1,7 +1,9 @@
 # Freeze Candidate Criteria
 
 This file defines the minimum conditions for calling the current manuscript
-bundle a freeze candidate on the frozen paper scope.
+bundle a freeze candidate on the frozen paper scope, currently anchored on
+frozen `H23` evidence while remaining operationally downstream of active
+`H25`.
 
 ## Must-pass criteria
 
@@ -27,7 +29,8 @@ bundle a freeze candidate on the frozen paper scope.
 5. Release-facing derivatives remain downstream.
    `release_summary_draft.md` remains the short-update source for README and
    STATUS. Those public surfaces may summarize the frozen paper scope, but they
-   may not outrun the manuscript bundle or soften the blocked-blog rule.
+   may not outrun the manuscript bundle, blur the distinction between active
+   `H25` routing and frozen `H23` evidence, or soften the blocked-blog rule.
 6. Narrow audits remain green.
    The public-surface sync audit and the main-text callout-alignment audit must
    pass on the current repo state before the bundle is called frozen.
@@ -35,6 +38,8 @@ bundle a freeze candidate on the frozen paper scope.
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+- `results/H23_refreeze_after_r26_r27_r28/summary.json`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`
 - `docs/publication_record/main_text_order.md`

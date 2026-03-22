@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should keep H19 as the current frozen state while preserving H17/H15/H14/H13 history and the older same-endpoint baselines."
+      "notes": "README should keep H25 as the current active decision packet while preserving H23 as the frozen scientific state and the older same-endpoint baselines."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record H19 as current, preserve H17/H15/H14/H13/V1 state, and keep the older same-endpoint baselines explicit."
+      "notes": "STATUS should record H25 as current, preserve H23 as the frozen scientific state, and keep the older same-endpoint baselines explicit."
     },
     {
       "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
@@ -52,7 +52,7 @@
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary should stay narrow while naming H19 as current, H17 as preserved prior refreeze, and frontier work as still conditional."
+      "notes": "The release summary should stay narrow while naming H25 as current, H23 as the frozen scientific state, and frontier work as still conditional."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -62,7 +62,7 @@
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should expose current H19 plus preserved H17/H15/H14/H13/V1 state and the completed earlier baselines in one place."
+      "notes": "The current-stage driver should expose current H25 plus frozen H23, the landed R30/R31 decisions, the authorized R32/R33 lanes, and the preserved earlier baselines in one place."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",

@@ -56,37 +56,47 @@ exact-versus-lowered ratio stays around `2429.1x`. `H13/V1` is now the
 preserved governance/runtime handoff rather than the active science lane. `V1`
 records that `pytest --collect-only -q` succeeds on the current suite, and the
 bounded top-`6` per-file timing follow-up classifies full `pytest -q` as
-healthy but multi-minute rather than discovery-broken. The current active
-post-`P9` stage is `H21_refreeze_after_r22_r23`, which refreezes the completed
-same-endpoint packet
+healthy but multi-minute rather than discovery-broken. The current frozen
+scientific state inside the post-`P9` chain is
+`H23_refreeze_after_r26_r27_r28`, which refreezes the
+bounded post-`H21` packet
+`H22_post_h21_boundary_reopen_and_dual_track_lock` ->
+`R26_d0_boundary_localization_execution_gate` +
+`R28_d0_trace_retrieval_contract_audit` ->
+conditional `R27_d0_boundary_localization_extension_gate` ->
+`H23_refreeze_after_r26_r27_r28` on top of the preserved
 `H20_post_h19_mainline_reentry_and_hygiene_split` ->
 `R22_d0_true_boundary_localization_gate` ->
 `R23_d0_same_endpoint_systems_overturn_gate` ->
-`H21_refreeze_after_r22_r23` on top of the preserved
+`H21_refreeze_after_r22_r23` packet and the earlier preserved
 `H18_post_h17_mainline_reopen_and_scope_lock` ->
 `R19_d0_pointer_like_surface_generalization_gate` ->
 `R20_d0_runtime_mechanism_ablation_matrix` ->
 `R21_d0_exact_executor_boundary_break_map` ->
-`H19_refreeze_and_next_scope_decision` packet. `H21` keeps the claim partition
-explicit: same-endpoint runtime generalization and mechanism support remain
-supported on current evidence, the harder `R22` grid still did not localize a
-true executor failure, `R23` kept pointer-like exact exact on the full positive
-`D0` systems suite but still left the systems verdict mixed, broader endpoint
-widening remains unsupported, and future frontier review remains planning-only.
-`H19` is now the preserved pre-`R22/R23` refreeze decision for the completed
-`H18/R19/R20/R21` packet. `H17` remains the preserved prior same-scope
-refreeze decision for the completed `H16/R15/R16/R17/R18` packet.
-`H15_refreeze_and_decision_sync` remains the completed predecessor refreeze
-stage, `H14` remains the completed prior reopened packet rather than the active
-stage, and `E1c` remains conditional only and contradiction-only on current
-evidence.
+`H19_refreeze_and_next_scope_decision` packet. `H23` keeps the claim
+partition explicit: same-endpoint runtime generalization and bounded mechanism
+support remain supported on current evidence, `R22`, `R26`, and `R27` still do
+not localize a true executor failure, `R28` supports the mechanism contract
+only with partial control isolation and a non-retrieval-dominant bottleneck,
+`R23` still leaves the systems verdict mixed, broader endpoint widening
+remains unsupported, and future frontier review remains planning-only. `H21`
+is now the preserved immediate pre-reopen control for the completed
+`H20/R22/R23` packet. `H19` is now the preserved earlier same-endpoint
+refreeze decision for the completed `H18/R19/R20/R21` packet. `H17` remains
+the preserved prior same-scope refreeze decision for the completed
+`H16/R15/R16/R17/R18` packet. `H15_refreeze_and_decision_sync` remains the
+completed predecessor refreeze stage, `H14` remains the completed prior
+reopened packet rather than the active stage, and `E1c` remains conditional
+only and contradiction-only on current evidence.
 
-The downstream `P12` manuscript / manifest closeout implied by `H21` is now
-preserved in the repo docs. The current pre-next-phase work is therefore
-planning-only rather than experimental: `R24` keeps a boundary-first reopen
-packet ready without authorizing execution, `R25` keeps same-endpoint systems
-hypotheses and kill criteria explicit, and `P13` remains later outward-sync
-hygiene rather than an active science lane.
+The downstream `P14` public-surface sync implied by `H23` is docs-only and is
+already complete. The current active post-`P9` stage is now
+`H25_refreeze_after_r30_r31_decision_packet`, which preserves `H23` as the
+frozen scientific state while recording one bounded post-`H23` decision
+packet: `R30` authorizes one future family-local boundary sharp zoom through
+`R32`, `R31` routes any later same-endpoint systems recovery discussion
+through `R33` non-retrieval overhead localization first, `R29` and `F3`
+remain blocked, and `F2` remains planning-only on current evidence.
 
 ## Reproducibility pointers
 

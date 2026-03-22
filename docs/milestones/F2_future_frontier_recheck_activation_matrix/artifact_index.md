@@ -1,9 +1,14 @@
 # Artifact Index
 
-- `docs/plans/2026-03-21-h18-unattended-mainline-master-plan.md`
-- `docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md`
-- `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`
+- `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+- `results/R30_d0_boundary_reauthorization_packet/summary.json`
+- `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
+- `results/H23_refreeze_after_r26_r27_r28/summary.json`
+- `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md`
+- `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md`
 - `results/H21_refreeze_after_r22_r23/summary.json`
+- `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`
 - `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`
 - `results/H18_post_h17_mainline_reopen_guard/summary.json`
 - `results/H19_refreeze_and_next_scope_decision/summary.json`
@@ -15,7 +20,6 @@
 - `results/M7_frontend_candidate_decision/decision_summary.json`
 - `results/R2_systems_baseline_gate/summary.json`
 - `results/E1b_systems_patch/summary.json`
-- `docs/milestones/F2_future_frontier_recheck_activation_matrix/todo.md`
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/blocked_hypotheses.md`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
-- `docs/milestones/H17_refreeze_and_conditional_frontier_recheck/result_digest.md`
-- `docs/milestones/H19_refreeze_and_next_scope_decision/README.md`
+- `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md`

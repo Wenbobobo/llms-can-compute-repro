@@ -2,29 +2,19 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h25-clean\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h25-clean\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -33,9 +23,9 @@
       "path": "README.md",
       "matched_lines": [
         "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
-        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |"
+        "| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |",
+        "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |",
+        "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |"
       ]
     },
     {
@@ -44,35 +34,35 @@
         "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
         "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
         "gate as `healthy_but_slow`.",
+        "`H25_refreeze_after_r30_r31_decision_packet`.",
+        "- `H21` now remains the preserved pre-reopen same-endpoint control packet",
+        "- `H21` now remains the preserved pre-reopen same-endpoint control:",
         "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened"
+        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
-      "matched_lines": [
-        "stage, and `E1c` remains conditional only and contradiction-only on current"
-      ]
+      "matched_lines": []
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
         "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
-        "- [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains",
-        "- [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`",
-        "- [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero",
-        "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
-        "- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies the",
-        "- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
-        "- [ ] Use `results/release_worktree_hygiene_snapshot/summary.json` to decide"
+        "- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`",
+        "- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` reports zero",
+        "- [ ] `results/R30_d0_boundary_reauthorization_packet/summary.json` remains",
+        "- [ ] `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`",
+        "- [ ] `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`",
+        "- [ ] `results/R26_d0_boundary_localization_execution_gate/summary.json`",
+        "- [ ] `results/R27_d0_boundary_localization_extension_gate/summary.json`"
       ]
     },
     {
       "path": "results/release_worktree_hygiene_snapshot/summary.json",
       "matched_lines": [
-        "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
-        "\"git_diff_check_state\": \"clean\","
+        "\"release_commit_state\": \"dirty_worktree_release_commit_blocked\",",
+        "\"git_diff_check_state\": \"warnings_only\","
       ]
     },
     {
@@ -88,6 +78,7 @@
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
         "locked submission-candidate bundle now serves as the current frozen bundle",
+        "claim/evidence scope kept closed by default.",
         "The current submission/release controls also live in"
       ]
     },

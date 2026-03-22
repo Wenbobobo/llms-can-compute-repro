@@ -74,6 +74,10 @@ def load_inputs() -> dict[str, Any]:
         ),
         "blog_rules_text": read_text(ROOT / "docs" / "publication_record" / "blog_release_rules.md"),
         "p1_summary": read_json(ROOT / "results" / "P1_paper_readiness" / "summary.json"),
+        "h25_summary": read_json(ROOT / "results" / "H25_refreeze_after_r30_r31_decision_packet" / "summary.json"),
+        "h23_summary": read_json(ROOT / "results" / "H23_refreeze_after_r26_r27_r28" / "summary.json"),
+        "r30_summary": read_json(ROOT / "results" / "R30_d0_boundary_reauthorization_packet" / "summary.json"),
+        "r31_summary": read_json(ROOT / "results" / "R31_d0_same_endpoint_systems_recovery_reauthorization_packet" / "summary.json"),
         "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
         "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
         "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
@@ -133,6 +137,10 @@ def build_checklist_rows(
     appendix_scope_text: str,
     blog_rules_text: str,
     p1_summary: dict[str, Any],
+    h25_summary: dict[str, Any],
+    h23_summary: dict[str, Any],
+    r30_summary: dict[str, Any],
+    r31_summary: dict[str, Any],
     p5_summary: dict[str, Any],
     p5_callout_summary: dict[str, Any],
     h2_summary: dict[str, Any],
@@ -144,60 +152,36 @@ def build_checklist_rows(
         {
             "item_id": "top_level_release_surface_stays_narrow_and_active_stage_explicit",
             "status": "pass"
-            if (
-                contains_all(
-                    readme_text,
-                    [
-                        "does **not** claim that general llms are computers",
-                        "arbitrary c has been reproduced",
-                        "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                        "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
-                        "| `h16-h17` | completed bounded same-scope reopen/refreeze packet",
-                        "| `h18-h19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                        "the current active post-`p9` stage is `h19_refreeze_and_next_scope_decision`",
-                    ],
-                )
-                or contains_all(
-                    readme_text,
-                    [
-                        "does **not** claim that general llms are computers",
-                        "arbitrary c has been reproduced",
-                        "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                        "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
-                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
-                    ],
-                )
+            if contains_all(
+                readme_text,
+                [
+                    "does **not** claim that general llms are computers",
+                    "arbitrary c has been reproduced",
+                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
+                    "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
+                    "| `h22-h23` | completed bounded post-`h21` dual-track reopen/refreeze packet",
+                    "| `h24-h25` | completed post-`h23` reauthorization/refreeze packet",
+                    "the current active post-`p9` stage is `h25_refreeze_after_r30_r31_decision_packet`",
+                ],
             )
-            and (
-                contains_all(
-                    status_text,
-                    [
-                        "`h19_refreeze_and_next_scope_decision`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`h14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`healthy_but_slow`",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                    ],
-                )
-                or contains_all(
-                    status_text,
-                    [
-                        "`h21_refreeze_after_r22_r23`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`h14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`healthy_but_slow`",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                    ],
-                )
+            and contains_all(
+                status_text,
+                [
+                    "`h25_refreeze_after_r30_r31_decision_packet`",
+                    "`h22/r26/r28/r27/h23` packet preserved as the current frozen narrow-endpoint scientific state",
+                    "`h24/r30/r31/h25` packet preserved as the current decision/refreeze layer above it",
+                    "`h21` now remains the preserved pre-reopen same-endpoint control",
+                    "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
+                    "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
+                    "`h14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
+                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+                    "`healthy_but_slow`",
+                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
+                    "`e1c` remains conditional only",
+                ],
             )
             else "blocked",
-            "notes": "README and STATUS should keep the narrow scope explicit while naming current H19, preserved H17/H15/H14/H13/V1 state, and bounded runtime classification.",
+            "notes": "README and STATUS should keep the narrow scope explicit while naming current H25, frozen H23, preserved H21/H19/H17/H15/H14/H13/V1 state, and bounded runtime classification.",
         },
         {
             "item_id": "release_preflight_checklist_tracks_current_machine_guards",
@@ -206,6 +190,14 @@ def build_checklist_rows(
                 release_preflight_text,
                 [
                     "results/P1_paper_readiness/summary.json",
+                    "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+                    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+                    "results/R30_d0_boundary_reauthorization_packet/summary.json",
+                    "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
+                    "results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json",
+                    "results/R26_d0_boundary_localization_execution_gate/summary.json",
+                    "results/R27_d0_boundary_localization_extension_gate/summary.json",
+                    "results/R28_d0_trace_retrieval_contract_audit/summary.json",
                     "results/H21_refreeze_after_r22_r23/summary.json",
                     "results/H19_refreeze_and_next_scope_decision/summary.json",
                     "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
@@ -223,27 +215,17 @@ def build_checklist_rows(
         {
             "item_id": "release_summary_and_blog_rules_stay_downstream",
             "status": "pass"
-            if (
-                contains_all(
-                    release_summary_text,
-                    [
-                        "narrow execution-substrate claim",
-                        "`h13/v1` is now the preserved governance/runtime handoff",
-                        "the current active post-`p9` stage is `h19_refreeze_and_next_scope_decision`",
-                        "`h17` is now the preserved prior same-scope refreeze decision",
-                        "`e1c` remains conditional only",
-                    ],
-                )
-                or contains_all(
-                    release_summary_text,
-                    [
-                        "narrow execution-substrate claim",
-                        "`h13/v1` is now the preserved governance/runtime handoff",
-                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
-                        "`h17` remains the preserved prior same-scope refreeze decision",
-                        "`e1c` remains conditional only",
-                    ],
-                )
+            if contains_all(
+                release_summary_text,
+                [
+                    "narrow execution-substrate claim",
+                    "`h13/v1` is now the preserved governance/runtime handoff",
+                    "the current frozen scientific state inside the post-`p9` chain is `h23_refreeze_after_r26_r27_r28`",
+                    "the current active post-`p9` stage is now `h25_refreeze_after_r30_r31_decision_packet`",
+                    "`h21` is now the preserved immediate pre-reopen control",
+                    "`h17` remains the preserved prior same-scope refreeze decision",
+                    "`e1c` remains conditional only",
+                ],
             )
             and contains_all(
                 blog_rules_text,
@@ -335,13 +317,17 @@ def build_checklist_rows(
             "status": "pass"
             if ready_count_from_p1_summary(p1_summary) == 10
             and not p1_summary["blocked_or_partial_items"]
+            and blocked_count_from_summary(h25_summary) == 0
+            and blocked_count_from_summary(h23_summary) == 0
+            and blocked_count_from_summary(r30_summary) == 0
+            and blocked_count_from_summary(r31_summary) == 0
             and blocked_count_from_summary(p5_summary) == 0
             and blocked_count_from_summary(p5_callout_summary) == 0
             and blocked_count_from_summary(h2_summary) == 0
             and runtime_classification_from_summary(v1_timing_summary) == "healthy_but_slow"
             and timed_out_count_from_summary(v1_timing_summary) == 0
             else "blocked",
-            "notes": "The current release-preflight surface still depends on the frozen P1/P5/H2 chain and the bounded V1 timing classification.",
+            "notes": "The current release-preflight surface still depends on the H25/H23/R30/R31 decision chain, the frozen P1/P5/H2 chain, and the bounded V1 timing classification.",
         },
     ]
 
@@ -352,16 +338,19 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "readme_text",
             [
                 "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
-                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
-                "| `H16-H17` | completed bounded same-scope reopen/refreeze packet",
-                "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                "The current active post-`P9` stage is `H19_refreeze_and_next_scope_decision`",
+                "| `H20-H21` | completed post-`H19` reentry/refreeze packet",
+                "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet",
+                "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet",
+                "The current active post-`P9` stage is `H25_refreeze_after_r30_r31_decision_packet`",
             ],
         ),
         "STATUS.md": (
             "status_text",
             [
-                "`H19_refreeze_and_next_scope_decision`",
+                "`H25_refreeze_after_r30_r31_decision_packet`",
+                "`H22/R26/R28/R27/H23` packet preserved as the current frozen narrow-endpoint scientific state",
+                "`H24/R30/R31/H25` packet preserved as the current decision/refreeze layer above it",
+                "`H21` now remains the preserved pre-reopen same-endpoint control",
                 "`H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
                 "`H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
                 "`H14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
@@ -373,8 +362,10 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "release_summary_text",
             [
                 "`H13/V1` is now the preserved governance/runtime handoff",
-                "The current active post-`P9` stage is `H19_refreeze_and_next_scope_decision`",
-                "`H17` is now the preserved prior same-scope refreeze decision",
+                "The current frozen scientific state inside the post-`P9` chain is `H23_refreeze_after_r26_r27_r28`",
+                "The current active post-`P9` stage is now `H25_refreeze_after_r30_r31_decision_packet`",
+                "`H21` is now the preserved immediate pre-reopen control",
+                "`H17` remains the preserved prior same-scope refreeze decision",
                 "`E1c` remains conditional only",
             ],
         ),
@@ -382,6 +373,15 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "release_preflight_text",
             [
                 "results/P1_paper_readiness/summary.json",
+                "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+                "results/H23_refreeze_after_r26_r27_r28/summary.json",
+                "results/R30_d0_boundary_reauthorization_packet/summary.json",
+                "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
+                "results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json",
+                "results/R26_d0_boundary_localization_execution_gate/summary.json",
+                "results/R27_d0_boundary_localization_extension_gate/summary.json",
+                "results/R28_d0_trace_retrieval_contract_audit/summary.json",
+                "results/H21_refreeze_after_r22_r23/summary.json",
                 "results/H19_refreeze_and_next_scope_decision/summary.json",
                 "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
                 "results/H15_refreeze_and_decision_sync/summary.json",
@@ -456,7 +456,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h19_refreeze_and_next_scope_decision_complete",
+        "current_paper_phase": "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen",
         "preflight_scope": "outward_release_surface_and_frozen_paper_bundle",
         "preflight_state": "docs_and_audits_green" if not blocked_items else "blocked",
         "release_commit_state": release_commit_state_from_summary(worktree_hygiene_summary),
@@ -466,7 +466,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H19 remains the current frozen same-endpoint state, H18/R19/R20/R21 remains the completed same-endpoint mainline reopen packet, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
+            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H25 remains the current active decision packet, H23 remains the frozen same-endpoint scientific state, R30 and R31 remain the landed reauthorization packet pair for the R32/R33 routing decision, H22/R26/R28/R27 remains the completed bounded reopen packet, H21 remains the preserved pre-reopen control, H19 remains the earlier same-endpoint refreeze, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
             if not blocked_items
             else "resolve the blocked release-preflight items before treating outward-sync docs as stable"
         ),
@@ -515,6 +515,10 @@ def main() -> None:
                 "docs/publication_record/appendix_companion_scope.md",
                 "docs/publication_record/blog_release_rules.md",
                 "results/P1_paper_readiness/summary.json",
+                "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+                "results/H23_refreeze_after_r26_r27_r28/summary.json",
+                "results/R30_d0_boundary_reauthorization_packet/summary.json",
+                "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
                 "results/P5_public_surface_sync/summary.json",
                 "results/P5_callout_alignment/summary.json",
                 "results/H2_bundle_lock_audit/summary.json",
@@ -530,8 +534,9 @@ def main() -> None:
                 "# Release Preflight Checklist Audit",
                 "",
                 "Machine-readable audit of whether the current outward release-facing docs",
-                "and frozen paper bundle remain aligned on the current H19 frozen",
-                "same-endpoint state, the preserved H14 reopen packet, and the preserved H13/V1 handoff. Current release-commit readiness is carried by the",
+                "and frozen paper bundle remain aligned on the current H25 active decision",
+                "packet, the preserved H23 frozen same-endpoint scientific state, the",
+                "preserved H21/H19 control chain, and the preserved H13/V1 handoff. Current release-commit readiness is carried by the",
                 "separate worktree hygiene snapshot.",
                 "",
                 "Artifacts:",

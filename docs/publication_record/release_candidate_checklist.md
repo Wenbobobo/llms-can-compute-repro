@@ -3,12 +3,14 @@
 State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
-release-candidate state after the current submission-candidate bundle lock.
+release-candidate state after the current submission-candidate bundle lock on
+the current `H25` active / `H23` frozen stack.
 
 ## Wording and scope
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
-- [ ] `STATUS.md` matches the same frozen scope and current next action.
+- [ ] `STATUS.md` matches the same frozen scope and the current next action
+  recorded by active `H25`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
@@ -16,8 +18,8 @@ release-candidate state after the current submission-candidate bundle lock.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same post-`P7` control
-  package.
+  `publication_record/README.md` all describe the same `H25` active / `H23`
+  frozen control package.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -25,10 +27,15 @@ release-candidate state after the current submission-candidate bundle lock.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
+- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+  reports the current active operational decision packet without widening
+  scope.
+- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` still records the
+  current frozen scientific state.
 - [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero
-  blocked items on the current refrozen control surface.
+  blocked items on the preserved earlier refrozen control surface.
 - [ ] `results/H14_core_first_reopen_guard/summary.json` reports zero blocked
-  items on the preserved core-first reopen control surface.
+  items on the preserved earlier core-first reopen control surface.
 - [ ] `results/H13_post_h12_governance_stage_health/summary.json` reports zero
   blocked items on the preserved governance/runtime handoff.
 - [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.

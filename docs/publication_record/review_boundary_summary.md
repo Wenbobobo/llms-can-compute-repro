@@ -2,7 +2,9 @@
 
 Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
-appendix, claim/evidence ledgers, and landed `H21` packet.
+appendix, claim/evidence ledgers, and landed `H23` packet, while
+`H25_refreeze_after_r30_r31_decision_packet` is the current active operational
+decision packet for downstream routing.
 
 ## Supported here on the current frozen scope
 
@@ -13,9 +15,11 @@ appendix, claim/evidence ledgers, and landed `H21` packet.
   `D0` compiled endpoint on the validated slice;
 - same-endpoint runtime generalization is supported inside the admitted-plus-
   heldout `R19` envelope, the bounded `R20` mechanism result is supported on
-  the fixed `16`-row probe set, the harder `R22` executor grid still did not
-  expose a failure inside its executed range, and `R23` kept pointer-like exact
-  exact on the full positive `D0` systems suite;
+  the fixed `16`-row probe set, the harder `R22`, `R26`, and `R27` executor
+  grids still did not expose a failure inside their executed ranges, `R28`
+  supports the current mechanism contract with only partial control isolation,
+  and `R23` kept pointer-like exact exact on the full positive `D0` systems
+  suite;
 - the systems result remains mixed rather than triumphant.
 
 ## Unsupported here
@@ -24,7 +28,7 @@ appendix, claim/evidence ledgers, and landed `H21` packet.
 - no arbitrary C reproduction claim;
 - no broader compiled demos beyond the current `D0` boundary;
 - no claim that the bounded `R21/R22` scans found the true executor failure
-  boundary;
+  boundary, or that the later `R26/R27` follow-up packet localized it;
 - no current-scope end-to-end runtime-superiority claim.
 
 ## Disconfirmed here
@@ -35,10 +39,14 @@ appendix, claim/evidence ledgers, and landed `H21` packet.
   probe set;
 - the narrower expectation that the executed `R21` grid had already exposed an
   exactness failure is disconfirmed on the current bounded scan and remains
-  disconfirmed after `R22`.
+  disconfirmed after `R22`, `R26`, and `R27`.
 
 ## Canonical evidence anchors
 
+- `results/H23_refreeze_after_r26_r27_r28/summary.json`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+- `results/R30_d0_boundary_reauthorization_packet/summary.json`
+- `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
 - `results/H21_refreeze_after_r22_r23/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
@@ -56,7 +64,10 @@ lane in `conditional_reopen_protocol.md`:
 - `E1c_compiled_boundary_patch`
 
 Any later broader frontier review remains planning-only under
-`F2_future_frontier_recheck_activation_matrix` until a separate explicit plan
-is approved. Review questions that can be answered by wording, packet
-indexing, or existing ledgers should stay downstream of landed `H21` rather
-than reopening it.
+`F2_future_frontier_recheck_activation_matrix`, now downstream of active `H25`
+while preserving `H23` as the frozen scientific state, until a later explicit
+packet changes that status. The current same-endpoint order remains
+`R32 -> deferred R33 -> blocked R29/F3`, with `F2` only as the planning
+surface beyond that. Review questions that can be answered by wording, packet
+indexing, or existing ledgers should stay downstream of the landed `H25/H23`
+stack rather than reopening science.

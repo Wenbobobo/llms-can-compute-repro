@@ -30,7 +30,9 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 | `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |
 | `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |
 | `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |
-| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the current machine-readable state; the downstream `P12` closeout is now preserved and the current planning-only pre-next-phase wave is `R24/R25` |
+| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |
+| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |
+| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |
 
 ## Current Gate Outcome
 
@@ -79,10 +81,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
   timing follow-up classifies full `pytest -q` as healthy but multi-minute,
   and outward-sync control remains machine-audited.
 - The current active post-`P9` stage is
-  `H21_refreeze_after_r22_r23`. It refreezes the landed
-  `H20/R22/R23` follow-up on top of the preserved `H18/R19/R20/R21/H19`
-  packet, keeps the endpoint locked to tiny typed bytecode `D0`, and leaves
-  any later frontier review planning-only rather than activated.
+  `H25_refreeze_after_r30_r31_decision_packet`. It preserves
+  `H23_refreeze_after_r26_r27_r28` as the frozen same-endpoint scientific
+  state, keeps the endpoint locked to tiny typed bytecode `D0`, and records one
+  post-`H23` decision packet before any later science execution is treated as
+  authorized.
 - `H15_refreeze_and_decision_sync` is now the preserved prior refreeze and
   decision record. It still records `R13` as inactive and `R14` as
   unjustified on the fixed `D0` endpoint.
@@ -165,19 +168,43 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
   improved sharply versus imported accelerated, but still remained about
   `4.16x` slower than the best current reference path, so the lane verdict is
   `systems_still_mixed`.
-- `H21` has now recorded the post-`R22/R23` frozen same-endpoint state:
+- `H21` now remains the preserved pre-reopen same-endpoint control:
   `decision_state = post_r22_r23_refreeze_complete`,
   `boundary_verdict = extended_grid_no_break_still_not_localized`,
-  `systems_verdict = systems_still_mixed`,
-  `future_frontier_review_state = planning_only_conditionally_reviewable`, and
-  `next_priority_lane = p12_manuscript_and_manifest_maintenance`.
-- that `H21` machine state still does not authorize a frontier run: any later
-  broader review remains blocked behind the planning-only
-  `F2_future_frontier_recheck_activation_matrix`, the machine-state downstream
-  handoff to `P12_manuscript_and_manifest_maintenance` has now been closed out
-  in docs, the current planning-only pre-next-phase wave is `R24/R25`, and
-  `P13` remains a later outward-sync / hygiene lane rather than the next
-  scientific handoff.
+  `systems_verdict = systems_still_mixed`, and
+  `future_frontier_review_state = planning_only_conditionally_reviewable`.
+- `H22` then reopened the mainline only as one bounded dual-track packet on
+  the same `D0` endpoint.
+- `R26` closed the declared `22`-candidate first-wave boundary scan with
+  `22/22` exact candidates and no localized failure.
+- `R28` closed the parallel mechanism-contract audit with
+  `mechanism_contract_supported_with_partial_control_isolation` and a
+  `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
+- `R27` then closed the declared second-wave boundary extension with
+  `12/12` exact candidates and no localized failure.
+- `H23` now records the current frozen same-endpoint state:
+  `decision_state = post_r26_r27_r28_refreeze_complete`,
+  `boundary_verdict = bounded_grid_still_not_localized`,
+  `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
+  `systems_verdict = systems_still_mixed`, and
+  `next_priority_lane = p14_public_surface_sync_after_h23`.
+- `H24` then split post-`H23` reauthorization work from hygiene and kept
+  `R29`/`F3` blocked while the decision packet was assembled.
+- `R30` then authorized one future family-local boundary sharp zoom through
+  `R32_d0_family_local_boundary_sharp_zoom` rather than another historical
+  full-grid expansion.
+- `R31` then concluded that any later same-endpoint systems recovery story must
+  first pass through `R33_d0_non_retrieval_overhead_localization_audit`; direct
+  `R29` activation remains blocked.
+- `H25` now records the current active operational decision packet:
+  `decision_state = post_h23_reauthorization_packet_complete`,
+  `current_frozen_stage = h23_refreeze_after_r26_r27_r28`,
+  `next_priority_lane = r32_d0_family_local_boundary_sharp_zoom`, and
+  `deferred_audit_lane = r33_d0_non_retrieval_overhead_localization_audit`.
+- that `H25` machine state still does not authorize a frontier run: any later
+  broader review remains blocked behind true boundary localization, a
+  materially positive same-endpoint systems story, and an explicit later
+  scope-lift reauthorization.
 - V1 remains a standing operational reference under the preserved `H13`
   handoff rather than an active science lane.
 - The compiled endpoint remains tiny typed bytecode `D0`; no active lane
@@ -188,13 +215,28 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 ## Start Here
 
 - `STATUS.md` — current repository state and immediate gates
-- `docs/publication_record/current_stage_driver.md` — canonical current frozen-stage driver
-- `docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md` — current post-`H21` execution order for conservative mainline closeout
+- `docs/publication_record/current_stage_driver.md` — canonical current stage driver
+- `docs/plans/README.md` — plans index for the unattended master plan, current post-`H23` / post-`H25` designs, and historical design stack
+- `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
+- `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — current post-`H23` reauthorization/refreeze design that landed `H24/R30/R31/H25` and staged `R32/R33`
+- `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — current near-term post-`H25` handoff clarifying that `R32` is the first justified next science lane, `R33` stays deferred, and execution should wait for a clean next-stage worktree
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
-- `results/H21_refreeze_after_r22_r23/summary.json` — one-file entrypoint for the current frozen post-`R22/R23` same-endpoint state, current claim partition, and next-priority lane
-- `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json` — machine-readable reentry guard between `H19` and the landed `R22/R23/H21` packet
-- `results/R22_d0_true_boundary_localization_gate/summary.json` — machine-readable harder boundary follow-up showing no failure in the extended grid
-- `results/R23_d0_same_endpoint_systems_overturn_gate/summary.json` — machine-readable same-endpoint systems follow-up showing exactness preserved but systems still mixed
+- `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — internal handoff for the current `H25` state, downstream lane order, and blocked follow-up paths
+- `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md` — planning-only first-pass `R32` sharp-zoom manifest fixing the candidate core, ceiling-relative ladder, stop rules, and required outputs
+- `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md` — planning-only first-pass `R33` attribution manifest fixing the comparator set, stratified audit packet, escalation rule, component targets, and required outputs
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md` — planning-only frontier activation matrix tied to the full `H19 -> H25` control chain rather than momentum
+- `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md` — planning-only scope-lift gate clarifying that `R32` and deferred `R33` must still precede any later reauthorization discussion
+- `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md` — origin-facing claim delta matrix anchored to frozen `H23` evidence while remaining downstream of `H25`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` — one-file entrypoint for the current post-`H23` decision packet, primary next lane, deferred audit lane, and preserved blockers
+- `results/H23_refreeze_after_r26_r27_r28/summary.json` — one-file entrypoint for the current frozen post-`H22/R26/R28/R27` same-endpoint state, claim partition, and next-priority lane
+- `results/R30_d0_boundary_reauthorization_packet/summary.json` — machine-readable post-`H23` boundary reauthorization packet authorizing the future `R32` family-local sharp zoom
+- `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json` — machine-readable post-`H23` systems reauthorization packet routing later same-endpoint systems work through future `R33`
+- `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json` — machine-readable reopen-control packet for the bounded dual-track follow-up
+- `results/R26_d0_boundary_localization_execution_gate/summary.json` — machine-readable first-wave boundary scan showing `22/22` exact candidates and no localized failure
+- `results/R27_d0_boundary_localization_extension_gate/summary.json` — machine-readable conditional second-wave extension showing `12/12` exact candidates and no localized failure
+- `results/R28_d0_trace_retrieval_contract_audit/summary.json` — machine-readable mechanism-contract audit showing support with partial control isolation
+- `results/H21_refreeze_after_r22_r23/summary.json` — preserved pre-reopen same-endpoint control state after the landed `R22/R23` follow-up
+- `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json` — machine-readable reentry guard between `H19` and the preserved `R22/R23/H21` packet
 - `results/H19_refreeze_and_next_scope_decision/summary.json` — preserved pre-`R22/R23` frozen same-endpoint control state
 - `results/H18_post_h17_mainline_reopen_guard/summary.json` — machine-readable planning guard for the post-`H17` same-scope reopen handoff
 - `results/R19_d0_pointer_like_surface_generalization_gate/summary.json` — machine-readable exactness/runtime verdict for the landed `R19` same-endpoint gate
@@ -230,11 +272,17 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
 - `docs/publication_record/manuscript_bundle_draft.md` — current manuscript section draft
-- `docs/milestones/H21_refreeze_after_r22_r23/` — current frozen-stage staging area
-- `docs/milestones/P12_manuscript_and_manifest_maintenance/` — preserved completed post-`H21` manuscript / manifest staging area
-- `docs/milestones/R24_d0_boundary_localization_zoom_followup/` — current planning-only boundary-first reopen prelay
-- `docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/` — current planning-only same-endpoint systems hypotheses packet
-- `docs/milestones/P13_public_surface_sync_and_repo_hygiene/` — later outward-sync and repo-hygiene staging area
+- `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/` — current active decision-packet staging area
+- `docs/milestones/H23_refreeze_after_r26_r27_r28/` — current frozen scientific-stage staging area
+- `docs/milestones/H24_post_h23_reauthorization_and_hygiene_split/` — completed post-`H23` split stage for the current decision packet
+- `docs/milestones/R30_d0_boundary_reauthorization_packet/` — completed post-`H23` boundary reauthorization packet
+- `docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/` — completed post-`H23` systems reauthorization packet
+- `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/` — authorized future boundary sharp-zoom lane
+- `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/` — deferred future systems-audit lane
+- `docs/milestones/H21_refreeze_after_r22_r23/` — preserved pre-reopen frozen-stage staging area
+- `docs/milestones/P14_public_surface_sync_after_h23/` — current downstream outward-sync staging area
+- `docs/milestones/R29_d0_same_endpoint_systems_recovery_execution_gate/` — blocked future same-endpoint systems recovery lane
+- `docs/milestones/F3_post_h23_scope_lift_decision_bundle/` — blocked future scope-lift decision bundle
 - `docs/milestones/H17_refreeze_and_conditional_frontier_recheck/` — preserved prior same-scope refreeze staging area
 - `docs/milestones/H16_post_h15_same_scope_reopen_and_scope_lock/` — completed reopen/refreeze staging area
 - `docs/milestones/H15_refreeze_and_decision_sync/` — preserved prior refreeze staging area

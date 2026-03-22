@@ -103,11 +103,24 @@
 - `V1_full_suite_validation_runtime_audit` remains the standing bounded
   operational reference under the preserved `H13/V1` handoff.
 - The current active post-`P9` operational stage is
-  `H21_refreeze_after_r22_r23`.
-- `H21` machine state recorded
-  `P12_manuscript_and_manifest_maintenance` as the immediate downstream lane;
-  that closeout is now preserved in docs, and the current planning-only
-  handoff before the next phase is `R24/R25`.
+  `H25_refreeze_after_r30_r31_decision_packet`.
+- `H21` now remains the preserved pre-reopen same-endpoint control packet
+  underneath the current stage.
+- `H22` locked the post-`H21` reopen as one bounded dual-track packet on the
+  same `D0` endpoint.
+- `R26` then executed the declared first-wave boundary scan on `22/22`
+  candidates and still did not localize a failure.
+- `R28` then closed the parallel mechanism-contract audit with
+  `mechanism_contract_supported_with_partial_control_isolation` and a
+  `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
+- `R27` then executed the declared second-wave extension on `12/12`
+  candidates and still did not localize a failure.
+- `H23` now records the current frozen same-endpoint state:
+  `decision_state = post_r26_r27_r28_refreeze_complete`,
+  `boundary_verdict = bounded_grid_still_not_localized`,
+  `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
+  `systems_verdict = systems_still_mixed`, and
+  `next_priority_lane = p14_public_surface_sync_after_h23`.
 - `H18` has now exported a machine-readable planning guard:
   `stage_guard_state = planned_same_scope_reopen_ready`,
   `next_priority_lane = h19_refreeze_and_next_scope_decision`, and
@@ -149,12 +162,41 @@
   remained much faster than imported accelerated, but still remained about
   `4.16x` slower than the best current reference path, so the systems verdict
   stays mixed.
-- `H21` has now recorded the post-`R22/R23` frozen same-endpoint state:
+- `H21` now remains the preserved pre-reopen same-endpoint control:
   `decision_state = post_r22_r23_refreeze_complete`,
   `boundary_verdict = extended_grid_no_break_still_not_localized`,
-  `systems_verdict = systems_still_mixed`,
-  `future_frontier_review_state = planning_only_conditionally_reviewable`, and
-  `next_priority_lane = p12_manuscript_and_manifest_maintenance`.
+  `systems_verdict = systems_still_mixed`, and
+  `future_frontier_review_state = planning_only_conditionally_reviewable`.
+- `H22` then reopened the mainline only as one bounded dual-track packet on
+  the same `D0` endpoint.
+- `R26` then executed the declared first-wave boundary scan on `22/22`
+  candidates and still did not localize a failure.
+- `R28` then closed the parallel mechanism-contract audit with
+  `mechanism_contract_supported_with_partial_control_isolation` and a
+  `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
+- `R27` then executed the declared second-wave extension on `12/12`
+  candidates and still did not localize a failure.
+- `H23` now records the current frozen same-endpoint state:
+  `decision_state = post_r26_r27_r28_refreeze_complete`,
+  `boundary_verdict = bounded_grid_still_not_localized`,
+  `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
+  `systems_verdict = systems_still_mixed`, and
+  `next_priority_lane = p14_public_surface_sync_after_h23`.
+- `H24` then exported the post-`H23` reauthorization and hygiene split guard,
+  preserving `H23` as the frozen scientific state while preparing one bounded
+  decision packet.
+- `R30` then closed the post-`H23` boundary decision packet with
+  `boundary_reauthorization_verdict = execute_one_more_family_local_zoom`,
+  keeping one future family-local sharp zoom explicit through `R32`.
+- `R31` then closed the post-`H23` systems decision packet with
+  `systems_reauthorization_verdict = audit_non_retrieval_overhead_first`,
+  routing any later same-endpoint systems story through `R33` before `R29` can
+  be honestly reconsidered.
+- `H25` now records the current active operational decision packet:
+  `decision_state = post_h23_reauthorization_packet_complete`,
+  `current_frozen_stage = h23_refreeze_after_r26_r27_r28`,
+  `next_priority_lane = r32_d0_family_local_boundary_sharp_zoom`, and
+  `deferred_audit_lane = r33_d0_non_retrieval_overhead_localization_audit`.
 - `H15_refreeze_and_decision_sync` is now the completed predecessor refreeze
   stage for the active `H16` packet.
 - `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state
@@ -186,13 +228,15 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H21_refreeze_after_r22_r23` under
+  `H25_refreeze_after_r30_r31_decision_packet` under
   `docs/publication_record/current_stage_driver.md`, with the completed
-  `H20/R22/R23/H21` follow-up packet preserved on the same narrow endpoint,
-  the completed `H18/R19/R20/R21/H19` packet preserved as the immediate
-  pre-refreeze control, the
-  completed `H16/R15/R16/R17/R18/H17` packet preserved as the prior
-  same-scope refreeze baseline, and `H13/V1` preserved as the
+  `H22/R26/R28/R27/H23` packet preserved as the current frozen narrow-endpoint
+  scientific state, the completed `H24/R30/R31/H25` packet preserved as the
+  current decision/refreeze layer above it, the completed `H20/R22/R23/H21`
+  packet preserved as the immediate pre-reopen control, the completed
+  `H18/R19/R20/R21/H19` packet preserved as the earlier same-endpoint refreeze
+  control, the completed `H16/R15/R16/R17/R18/H17` packet preserved as the
+  prior same-scope refreeze baseline, and `H13/V1` preserved as the
   governance/runtime handoff.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline
   underneath the current stage.
@@ -210,25 +254,23 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H21` is now the frozen
-   state, `P12` is the preserved completed post-`H21` closeout, and `R24/R25`
-   are the current planning-only handoff lanes.
-2. Use `results/H21_refreeze_after_r22_r23/summary.json` together with the
-   landed `R22` and `R23` summaries as the current same-endpoint control
-   surface for any outward-facing wording or ledger maintenance.
-3. Keep the `H21` claim partition explicit: `supported_here`,
-   `unsupported_here`, and `disconfirmed_here` should drive README,
-   publication ledgers, and any later release-facing summaries.
-4. Keep `R24_d0_boundary_localization_zoom_followup` and
-   `R25_d0_same_endpoint_systems_recovery_hypotheses` as the current
-   planning-only pre-next-phase lanes, keep `P13_public_surface_sync_and_repo_hygiene`
-   downstream-only, and do not let outward wording imply a wider endpoint, a
-   broader systems result, or a frontier activation.
-5. Keep `F2_future_frontier_recheck_activation_matrix` planning-only until a
-   later explicit plan says otherwise.
-6. Return to `P12_manuscript_and_manifest_maintenance` only if a later
-   outward/publication pass exposes a real post-`H21` ledger mismatch;
-   otherwise keep the remaining pre-next-phase work inside `R24/R25`.
+   `tmp/active_wave_plan.md` aligned on the rule that `H25` is now the current
+   active decision packet while `H23` remains the frozen scientific state.
+2. Use `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+   together with the landed `R30` and `R31` summaries as the current routing
+   surface for future plan-mode work.
+3. Keep the `H25` claim partition explicit while preserving the narrower `H23`
+   scientific limits underneath it.
+4. Treat `R32_d0_family_local_boundary_sharp_zoom` as the primary authorized
+   next science lane and `R33_d0_non_retrieval_overhead_localization_audit` as
+   the deferred systems-audit lane.
+5. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
+   `F3_post_h23_scope_lift_decision_bundle`, and
+   `F2_future_frontier_recheck_activation_matrix` blocked until a later
+   explicit packet changes the preconditions.
+6. Keep `F4_post_h23_origin_claim_delta_matrix` and
+   `P15_internal_claim_and_handoff_sync_after_h25` aligned as internal-only
+   downstream aids rather than treating them as substitutes for new evidence.
 7. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
    `results/release_preflight_checklist_audit/summary.json` as the current
    outward-sync controls; a dirty tree still blocks release-facing commits but
@@ -245,7 +287,8 @@
   current systems gate.
 - No active lane authorizes arbitrary compiled-language claims or broader
   runtime generalization.
-- Any later frontier review remains blocked behind the planning-only
-  `F2_future_frontier_recheck_activation_matrix` and a later explicit plan.
+- Any later frontier review or scope lift remains blocked behind the
+  planning-only `F2_future_frontier_recheck_activation_matrix`, the blocked
+  `F3_post_h23_scope_lift_decision_bundle`, and a later explicit plan.
 - A dirty tree can still block release-facing commits even when the scientific
   packet is already frozen.

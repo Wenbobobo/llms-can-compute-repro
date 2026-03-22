@@ -55,7 +55,7 @@ def test_build_summary_reports_green_preflight_state() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "h19_refreeze_and_next_scope_decision_complete"
+    assert summary["current_paper_phase"] == "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen"
     assert summary["preflight_scope"] == "outward_release_surface_and_frozen_paper_bundle"
     assert summary["preflight_state"] == "docs_and_audits_green"
     assert summary["release_commit_state"] in {
@@ -65,5 +65,5 @@ def test_build_summary_reports_green_preflight_state() -> None:
     assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H19 remains the current frozen same-endpoint state, H18/R19/R20/R21 remains the completed same-endpoint mainline reopen packet, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
+        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H25 remains the current active decision packet, H23 remains the frozen same-endpoint scientific state, R30 and R31 remain the landed reauthorization packet pair for the R32/R33 routing decision, H22/R26/R28/R27 remains the completed bounded reopen packet, H21 remains the preserved pre-reopen control, H19 remains the earlier same-endpoint refreeze, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
     )

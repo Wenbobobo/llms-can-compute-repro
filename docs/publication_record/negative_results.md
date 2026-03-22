@@ -77,11 +77,21 @@
 - `R22` sharpens that caveat further: the harder `102`-candidate follow-up also
   stays exact, so the true executor boundary is still not localized on current
   evidence.
+- `R26` and `R27` extend that caveat into the post-`H21` reopen packet: the
+  bounded `22`-candidate first wave and the bounded `12`-candidate extension
+  also stay exact, so the true executor boundary remains unresolved even after
+  the later reopen wave.
 - `R23` is a first-class mixed systems result, not a near-win: pointer-like
   exact stays exact on `25/25` full-suite rows and is far faster than imported
   accelerated, but it remains about `4.16x` slower than the best current
   reference path and still slower than the lowered path on the bounded systems
   criterion.
-- `H21` therefore keeps frontier review planning-only: the same-endpoint
-  systems story is still not materially positive enough for broader systems,
-  frontend, or demo claims.
+- `R28` strengthens the mechanism story without overturning that mixed result:
+  the contract is supported with partial control isolation, but the bottleneck
+  remains non-retrieval dominated and the audit does not convert mechanism
+  support into a systems win.
+- `H23` therefore keeps frontier review planning-only, and `H25` preserves
+  that restraint while ordering the next bounded same-endpoint work through
+  `R32` first and deferred `R33` second: the systems story is still not
+  materially positive enough for broader systems, frontend, or demo claims,
+  and the executor boundary is still not localized.

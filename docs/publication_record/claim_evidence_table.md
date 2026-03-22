@@ -154,9 +154,40 @@
   still slower than both the best current reference path and the lowered path,
   so the systems verdict remains mixed.
 - `D0` — `results/H21_refreeze_after_r22_r23/summary.json`
-  Post-`R22/R23` refreeze: the current machine-readable state keeps scope
-  locked, records `systems_still_mixed`, leaves three frontier-activation
-  conditions unsatisfied, and routes the next priority to `P12`.
+  Post-`R22/R23` refreeze: the preserved pre-reopen control keeps scope
+  locked, records `systems_still_mixed`, leaves frontier activation
+  conditions unsatisfied, and preserves the same-endpoint control packet.
+- `D0` — `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`
+  Bounded reopen-control packet: the post-`H21` follow-up is locked to one
+  dual-track `D0` wave before any new execution runs.
+- `D0` — `results/R26_d0_boundary_localization_execution_gate/summary.json`
+  First-wave boundary scan: the declared `22`-candidate post-`H21` grid stays
+  exact throughout and still does not localize a true executor boundary.
+- `D0` — `results/R28_d0_trace_retrieval_contract_audit/summary.json`
+  Mechanism-contract audit: append-only trace, latest-write, stack, and
+  control-retrieval support remain positive on the current endpoint, but the
+  control isolation story is still only partial and the bottleneck remains
+  non-retrieval dominated.
+- `D0` — `results/R27_d0_boundary_localization_extension_gate/summary.json`
+  Conditional extension: the declared second-wave boundary packet stays exact
+  on `12/12` rows and still does not localize a true executor boundary.
+- `D0` — `results/H23_refreeze_after_r26_r27_r28/summary.json`
+  Current refreeze: the current machine-readable state keeps scope locked,
+  records `bounded_grid_still_not_localized`, carries
+  `mechanism_contract_supported_with_partial_control_isolation`, preserves
+  `systems_still_mixed`, and routes the next downstream docs lane to `P14`.
+- `D0` — `results/R30_d0_boundary_reauthorization_packet/summary.json`
+  Boundary reauthorization packet: the post-`H23` decision step authorizes one
+  future family-local sharp zoom through `R32` rather than reopening the
+  historical full-grid boundary search.
+- `D0` — `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
+  Systems reauthorization packet: the post-`H23` systems decision step keeps
+  `R29` blocked and routes any later same-endpoint systems story through the
+  narrower `R33` non-retrieval audit first.
+- `D0` — `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+  Active operational decision packet: `H25` preserves `H23` as the current
+  frozen scientific state while recording `R32` as the primary next lane,
+  `R33` as the deferred systems-audit lane, and `R29/F3` as still blocked.
 - `D0` — `results/M7_frontend_candidate_decision/decision_summary.json`
   Frontend decision bundle: the current endpoint stays on tiny typed bytecode,
   frontend widening is not authorized, and any revisit now requires a fresh
@@ -182,17 +213,27 @@
 
 - `H4` completed the bounded reproduction return packet, and `E1a/E1b/H5`
   remain the immediate evidence baseline for current precision/systems wording.
-- `H21` is the current refrozen stage after the bounded
-  `H20/R22/R23/H21` follow-up on top of the preserved `H18/R19/R20/R21/H19`
-  packet.
+- `H23` is the current refrozen stage after the bounded
+  `H22/R26/R28/R27/H23` follow-up on top of the preserved
+  `H20/R22/R23/H21` packet.
+- `H22` locked the post-`H21` reopen to one explicit bounded dual-track
+  packet before any new execution ran.
+- `R26` completed the first-wave post-`H21` boundary scan and still did not
+  localize a true executor failure.
+- `R28` completed the parallel mechanism-contract audit and supported the
+  mechanism contract with only partial control isolation.
+- `R27` completed the bounded second-wave extension and still did not localize
+  a true executor failure.
+- `H21` remains the preserved immediate pre-reopen same-endpoint control
+  packet underneath `H23`.
 - `H20` separated dirty-tree hygiene from the next science wave without
   widening the endpoint or changing the frozen evidence state by prose alone.
 - `R22` completed the harder same-endpoint boundary follow-up and strengthened
   the no-break-observed story without localizing a true executor boundary.
 - `R23` completed the harder same-endpoint systems recheck, preserved exactness
   on the full positive `D0` suite, and still left the systems verdict mixed.
-- `H19` remains the preserved pre-`R22/R23` same-endpoint refreeze for the
-  completed `H18/R19/R20/R21` packet.
+- `H19` remains the preserved earlier same-endpoint refreeze for the completed
+  `H18/R19/R20/R21` packet.
 - `H17` remains the preserved prior same-scope refreeze for the completed
   `H16/R15/R16/R17/R18` packet.
 - `H15` remains the preserved prior refreeze for the completed

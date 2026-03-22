@@ -7,11 +7,12 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects the current frozen `H21` same-endpoint state and
-  records the preserved `P12` closeout plus the current planning-only
-  `R24/R25` handoff while keeping `P13` downstream-only.
+- [ ] `STATUS.md` reflects the current active `H25` decision packet while
+  preserving `H23` as the current frozen same-endpoint scientific state and
+  keeps any later `R29` / `F3` execution blocked.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording downstream of landed `H21`.
+  wording downstream of landed `H25` while preserving the narrower `H23`
+  scientific limits.
 
 ## Paper-facing ledgers
 
@@ -26,8 +27,26 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
-- [ ] `results/H21_refreeze_after_r22_r23/summary.json` reports zero blocked
-  items on the current refrozen control surface.
+- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+  reports zero blocked items on the current active decision packet.
+- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` reports zero
+  blocked items on the current frozen scientific control surface.
+- [ ] `results/R30_d0_boundary_reauthorization_packet/summary.json` remains
+  available as the landed post-`H23` boundary decision packet.
+- [ ] `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
+  remains available as the landed post-`H23` systems decision packet.
+- [ ] `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`
+  remains available as the reopen-control packet for the current refrozen
+  surface.
+- [ ] `results/R26_d0_boundary_localization_execution_gate/summary.json`
+  remains available as the first-wave boundary packet for the current refrozen
+  surface.
+- [ ] `results/R27_d0_boundary_localization_extension_gate/summary.json`
+  remains available as the bounded second-wave extension packet.
+- [ ] `results/R28_d0_trace_retrieval_contract_audit/summary.json` remains
+  available as the mechanism-contract audit for the current refrozen surface.
+- [ ] `results/H21_refreeze_after_r22_r23/summary.json` remains available as
+  the preserved immediate pre-reopen control surface.
 - [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains
   available as the preserved pre-`R22/R23` control surface.
 - [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`

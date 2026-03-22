@@ -34,10 +34,10 @@
       "matched_lines": [
         "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
         "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
-        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |",
-        "- V1 remains a standing operational reference under the preserved `H13`"
+        "| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |",
+        "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |",
+        "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |",
+        "`H25_refreeze_after_r30_r31_decision_packet`. It preserves"
       ]
     },
     {
@@ -46,38 +46,37 @@
         "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
         "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
         "gate as `healthy_but_slow`.",
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened"
+        "`H25_refreeze_after_r30_r31_decision_packet`.",
+        "- `H21` now remains the preserved pre-reopen same-endpoint control packet",
+        "- `H21` now remains the preserved pre-reopen same-endpoint control:"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
         "- `current_stage_driver.md` \u2014 the canonical `active_driver` for the current",
-        "same-scope refreeze, `H15` is the completed predecessor refreeze stage, and",
-        "`H14` / `R11` / `R12` remain the completed prior reopen packet;",
-        "- `planning_state_taxonomy.md` \u2014 allowed planning-state labels and current",
-        "- `paper_package_plan.md` \u2014 completed post-`P7` stage design retained as a",
-        "- `submission_packet_index.md` \u2014 venue-agnostic packet index for current"
+        "follow-up packet, `H13/V1` preserved as the governance/runtime handoff, and",
+        "scientific state, stages `R32` as the primary future lane, keeps `R33`",
+        "- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` \u2014",
+        "- `results/H23_refreeze_after_r26_r27_r28/summary.json` \u2014 machine-readable",
+        "- `results/R30_d0_boundary_reauthorization_packet/summary.json` \u2014 the landed"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "`H14_core_first_reopen_and_scope_lock` with landed `R11`, `R12`, and the",
-        "preserved `H15_refreeze_and_decision_sync` closeout, from the completed",
-        "`H16_post_h15_same_scope_reopen_and_scope_lock` ->",
-        "`H19_refreeze_and_next_scope_decision`.",
-        "3. Preserve `H19_refreeze_and_next_scope_decision` as the immediate",
-        "4. Preserve `H18/R19/R20/R21` as the completed same-endpoint mainline reopen"
+        "`R30_d0_boundary_reauthorization_packet` +",
+        "`R31_d0_same_endpoint_systems_recovery_reauthorization_packet` ->",
+        "`R32_d0_family_local_boundary_sharp_zoom` ->",
+        "deferred `R33_d0_non_retrieval_overhead_localization_audit` ->",
+        "- `R30_d0_boundary_reauthorization_packet` remains the landed post-`H23`",
+        "- `R31_d0_same_endpoint_systems_recovery_reauthorization_packet` remains the"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "This repository reproduces a narrow execution-substrate claim rather than a",
-        "stage, and `E1c` remains conditional only and contradiction-only on current"
+        "This repository reproduces a narrow execution-substrate claim rather than a"
       ]
     },
     {

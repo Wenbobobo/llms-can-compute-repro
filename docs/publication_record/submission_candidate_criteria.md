@@ -2,7 +2,8 @@
 
 This file defines the minimum conditions for upgrading the current
 freeze-candidate checkpoint into a submission-candidate bundle on the same
-frozen scope.
+frozen scope, currently anchored on frozen `H23` evidence and active `H25`
+downstream routing.
 
 ## Must-pass criteria
 
@@ -21,11 +22,13 @@ frozen scope.
    clearly optional.
 4. Claim, threat, and negative-result ledgers stay synchronized.
    `claim_ladder.md`, `claim_evidence_table.md`, `negative_results.md`, and
-   `threats_to_validity.md` must describe the same frozen endpoint and blocked
-   claims.
+   `threats_to_validity.md` must describe the same frozen endpoint, the same
+   blocked claims, and the same post-`H25` routing boundaries.
 5. Release-facing summaries remain downstream.
    `release_summary_draft.md`, `README.md`, and `STATUS.md` may summarize the
-   locked bundle, but they may not outrun it or imply a new evidence wave.
+   locked bundle, but they may not outrun it, imply a new evidence wave, or
+   blur the distinction between active `H25` routing and frozen `H23`
+   scientific evidence.
 6. Standing audits remain green.
    `P1`, `P5` public-surface sync, `P5` callout alignment, and the `H2`
    bundle-lock audit must all report zero blocked items on the current repo
@@ -34,9 +37,12 @@ frozen scope.
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
+- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+- `results/H23_refreeze_after_r26_r27_r28/summary.json`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`
 - `results/H2_bundle_lock_audit/summary.json`
+- `docs/publication_record/current_stage_driver.md`
 - `docs/publication_record/main_text_order.md`
 - `docs/publication_record/appendix_companion_scope.md`
 - `docs/publication_record/conditional_reopen_protocol.md`
