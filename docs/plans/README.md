@@ -13,12 +13,17 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `Wave 0` save/push/fork, `F20/H41` control override, `P27` explicit merge
   hygiene, `R43` exact bounded-memory mainline, `R45` dual-mode model
   mainline, later `H42`, and conditional `R44`.
+- `2026-03-24-post-r42-f20-h41-control-override-design.md` — the current
+  control-override design surface that lands the planning-only `F20` model
+  bundle plus the docs-only `H41` aggressive long-arc decision packet above
+  completed `R42`.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
-- `2026-03-23-post-h38-h40-r42-activation-design.md` — the current execution
-  surface that lands the later explicit semantic-boundary activation packet
-  plus the completed first retrieval-contract gate, `H40 -> R42`.
+- `2026-03-23-post-h38-h40-r42-activation-design.md` — the preserved prior
+  execution surface that landed the later explicit semantic-boundary
+  activation packet plus the completed first retrieval-contract gate,
+  `H40 -> R42`.
 - `2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md` — the
   current control design surface for the landed `F16 -> H38 -> P26 -> F17`
   wave after `H37`.
@@ -66,14 +71,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/H40_post_h38_semantic_boundary_activation_packet/` —
+- `../milestones/H41_post_r42_aggressive_long_arc_decision_packet/` —
   current active docs-only decision packet.
 - `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — preserved
   active routing/refreeze packet for the bounded-scalar same-substrate wave.
 - `../milestones/R42_origin_append_only_memory_retrieval_contract_gate/` —
   completed current retrieval-contract gate on the semantic-boundary route.
+- `../milestones/F20_post_r42_dual_mode_model_mainline_bundle/` — current
+  planning-only coequal-mainline model bundle above completed `R42`.
 - `../milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/` —
   completed operational promotion/artifact audit lane.
+- `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
+  explicit next promotion/merge wave fixed by the post-`R42` override.
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
   candidate-isolation bundle for the saved `R41` catalog.
 - `../milestones/F17_post_h38_same_substrate_exit_criteria_bundle/` —
@@ -83,6 +92,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/` —
   current planning-only semantic-boundary roadmap for the preserved `F9`
   family.
+- `../milestones/H40_post_h38_semantic_boundary_activation_packet/` —
+  preserved prior semantic-boundary activation packet.
 - `../milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/` —
   preserved prior docs-only keep-freeze decision packet.
 - `../milestones/H37_post_h36_runtime_relevance_decision_packet/` — preserved
@@ -101,10 +112,15 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   deferred future runtime-audit lane fixed to the landed `R40` row pair and
   the two surviving threat families.
 - `../milestones/R43_origin_bounded_memory_small_vm_execution_gate/` —
-  deferred future bounded-memory small-VM execution gate downstream of `R42`.
+  authorized next exact bounded-memory small-VM execution gate downstream of
+  `H41`.
+- `../milestones/R45_origin_dual_mode_model_mainline_gate/` — authorized
+  coequal model lane downstream of `H41/F20`.
+- `../milestones/H42_post_r43_route_selection_packet/` — later explicit
+  route-selection packet required before any `R44` useful-case wave.
 - `../milestones/R44_origin_restricted_wasm_useful_case_execution_gate/` —
   deferred future restricted-Wasm / tiny-`C` useful-case gate downstream of
-  `R43`.
+  `H42`.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
   preserved prior docs-only scope-decision packet above `H32`.
 - `../milestones/H33_post_h32_conditional_next_question_packet/` — preserved
@@ -117,7 +133,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Historical Plan Groups
 
-- `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan set.
+- `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan and
+  control-override design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,
@@ -141,5 +158,5 @@ its status against:
 
 Do not treat an older plan as authorization to reopen a blocked lane. When a
 saved plan and the landed
-`H40/R42/H36/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack differ,
-trust the landed packet.
+`H41/F20/H40/R42/H36/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack
+differ, trust the landed packet.

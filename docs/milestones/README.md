@@ -12,15 +12,18 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H40_post_h38_semantic_boundary_activation_packet/` — current active
-  docs-only decision packet that activates the semantic-boundary route and
-  authorizes exactly `R42`.
+- `H41_post_r42_aggressive_long_arc_decision_packet/` — current active
+  docs-only decision packet that preserves completed `R42`, authorizes exact
+  `R43`, and admits coequal model `R45` under an explicit evidence boundary.
 - `H36_post_r40_bounded_scalar_family_refreeze/` — preserved active
   routing/refreeze packet freezing the bounded-scalar family narrowly on the
   current substrate.
 - `R42_origin_append_only_memory_retrieval_contract_gate/` — completed current
   retrieval-contract gate validating exact latest-write-by-address and
   stack-slot retrieval on fixed semantic-boundary tasks.
+- `F20_post_r42_dual_mode_model_mainline_bundle/` — current planning-only
+  coequal-mainline model bundle fixing the exact-versus-model evidence
+  boundary and dual implementation posture.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   operational promotion/artifact audit lane from the current clean branch.
 - `F18_post_h38_origin_core_long_arc_bundle/` — current planning-only
@@ -29,6 +32,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
+- `H40_post_h38_semantic_boundary_activation_packet/` — preserved prior
+  semantic-boundary activation packet above `H38`.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
   isolation bundle for the saved `R41` catalog.
 - `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
@@ -129,6 +134,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — explicit next
+  promotion/merge wave fixed by `H41`.
 - `F14_post_f13_conditional_reopen_readiness_bundle/` — preserved planning-only
   bundle that stores one future contradiction-driven packet blueprint and one
   future runtime-audit blueprint without authorizing either one.
@@ -138,10 +145,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
-- `R43_origin_bounded_memory_small_vm_execution_gate/` — deferred future
-  bounded-memory small-VM execution gate downstream of `R42`.
+- `R43_origin_bounded_memory_small_vm_execution_gate/` — authorized next exact
+  bounded-memory small-VM execution gate downstream of `H41`.
+- `R45_origin_dual_mode_model_mainline_gate/` — authorized coequal model lane
+  downstream of `H41/F20`.
+- `H42_post_r43_route_selection_packet/` — later explicit route-selection
+  packet required before any `R44` useful-case execution wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate/` — deferred future
-  restricted-Wasm / tiny-`C` useful-case gate downstream of `R43`.
+  restricted-Wasm / tiny-`C` useful-case gate downstream of `H42`.
 - `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
   that turns future same-substrate reopen admissibility into one mechanical
   contradiction-packet specification.
@@ -180,16 +191,18 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H40` is the active docs-only decision packet.
+- `H41` is the active docs-only decision packet.
 - `H36` is the preserved active routing/refreeze packet.
-- `R42` is the completed current retrieval-contract gate, not automatic
-  authorization of `R43`.
+- `R42` is the completed current retrieval-contract gate underneath `H41`.
+- `F20` is the current coequal-mainline model bundle.
 - `P26` is the completed operational promotion/artifact audit lane, not merge
   authorization.
+- `P27` is the explicit next promotion/merge wave.
 - `F16` is the current candidate-isolation bundle.
 - `F17` is the current planning-only route-selection bundle.
 - `F18` is the current planning-only long-arc bundle.
 - `F19` is the current planning-only semantic-boundary roadmap.
+- `H40` is the preserved prior semantic-boundary activation packet.
 - `H38` is the preserved prior docs-only decision packet.
 - `H37` is the preserved prior docs-only runtime-relevance decision packet.
 - `P25` is the preserved prior operational promotion-prep lane.
@@ -204,13 +217,15 @@ stack:
 - `R39` and `R40` are complete downstream audits/gates, not active routing
   changes by themselves.
 - `R41` is a deferred future runtime-audit design, not active work.
-- `R43` and `R44` are deferred future semantic-boundary gates, not active
-  work.
+- `R43` is the authorized next exact semantic-boundary gate.
+- `R45` is the authorized coequal model lane under the `F20` evidence rule.
+- `H42` is the later explicit route-selection packet required before `R44`.
+- `R44` remains deferred future useful-case work.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`
   remains new-substrate roadmap storage.
-- no active downstream runtime lane exists after completed `R42`; one later
-  explicit post-`R42` packet is required before `R43`.
+- `R43` and `R45` are not completed yet; exact evidence still comes only from
+  `R42` and upstream exact gates.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
   explicit packet.

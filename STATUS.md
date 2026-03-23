@@ -3,12 +3,15 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H40_post_h38_semantic_boundary_activation_packet`, not the preserved prior
-  `H30` packet or the earlier `H25` same-endpoint decision packet.
+  `H41_post_r42_aggressive_long_arc_decision_packet`, not the preserved prior
+  `H40` packet, the preserved prior `H30` packet, or the earlier `H25`
+  same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
   `R42_origin_append_only_memory_retrieval_contract_gate`.
+- The current coequal-mainline model bundle is
+  `F20_post_r42_dual_mode_model_mainline_bundle`.
 - The active scientific target is now the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -34,8 +37,11 @@
   audit branch and artifact policy with `audit_only` merge posture; `F17`
   stores the route-selection rules for later same-substrate exit; `F18/F19`
   fix the preferred semantic-boundary route plus the bounded `R42 -> R43 ->
-  R44` ladder; `H40` activates that route explicitly; and `R42` keeps it
-  alive on `6/6` fixed tasks with `65/65` exact observations.
+  R44` ladder; `H40` activates that route explicitly; `R42` keeps it alive on
+  `6/6` fixed tasks with `65/65` exact observations; `F20` records the
+  coequal-mainline dual-mode model posture; and `H41` authorizes exact `R43`
+  plus coequal model `R45` while keeping `R41` deferred, `R44` behind later
+  `H42`, and merge explicit through `P27`.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -53,10 +59,18 @@
   `F18_post_h38_origin_core_long_arc_bundle`.
 - The current semantic-boundary useful-case roadmap is
   `F19_post_f18_restricted_wasm_useful_case_roadmap`.
+- The preserved prior semantic-boundary activation packet is
+  `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- There is no currently active downstream runtime lane after completed `R42`;
-  one later explicit post-`R42` packet is required before `R43`.
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet` is now fixed as the
+  explicit next promotion/merge wave.
+- `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the
+  authorized next exact gate.
+- `R45_origin_dual_mode_model_mainline_gate` is now fixed as the authorized
+  coequal model lane.
+- `H42_post_r43_route_selection_packet` is now fixed as the later explicit
+  route-selection packet required before any `R44` useful-case wave.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
@@ -133,6 +147,12 @@
   it turns the preserved `F9` family into a bounded restricted-Wasm /
   useful-case roadmap and fixes `R42/R43/R44` as the saved semantic-boundary
   gate ladder.
+- `F20_post_r42_dual_mode_model_mainline_bundle` is now complete:
+  it records the coequal-mainline dual-mode model posture and keeps model
+  evidence non-substitutive relative to exact `R43`.
+- `H41_post_r42_aggressive_long_arc_decision_packet` is now complete:
+  it preserves completed `R42`, authorizes exact `R43`, admits coequal model
+  `R45`, keeps `R41` deferred, and keeps `R44` behind later `H42`.
 - `H40_post_h38_semantic_boundary_activation_packet` is now complete:
   it activates the semantic-boundary route explicitly, preserves `H36`
   underneath the stack, and authorizes exactly `R42`.
@@ -140,14 +160,18 @@
   it validates exact latest-write-by-address and stack-slot retrieval on six
   fixed contract tasks, preserving exact maximizer-row identity in addition to
   exact retrieved value.
-- `R43_origin_bounded_memory_small_vm_execution_gate` is now saved as a
-  deferred future design:
-  it fixes bounded-memory small-VM execution as the next gate downstream of
-  `R42`.
+- `R43_origin_bounded_memory_small_vm_execution_gate` is now the authorized
+  next exact gate:
+  it remains not yet executed, but is no longer just a saved future design.
+- `R45_origin_dual_mode_model_mainline_gate` is now the authorized coequal
+  model lane:
+  it remains not yet executed and stays downstream of exact `R43`.
+- `H42_post_r43_route_selection_packet` is now the saved later explicit route-
+  selection packet required before any `R44` useful-case wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` is now saved as a
   deferred future design:
   it fixes the restricted-Wasm / tiny-`C` useful-kernel ladder downstream of
-  `R43`.
+  `H42`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.

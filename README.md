@@ -17,21 +17,26 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 ## Current Mainline Note
 
-As of `2026-03-23`, the canonical current stage is no longer the old
-same-endpoint `D0` recovery line. The current docs-only decision packet is now
-`H40_post_h38_semantic_boundary_activation_packet`, the preserved active
+As of `2026-03-24`, the canonical current stage is no longer the old
+same-endpoint `D0` recovery line, and it is no longer parked at the preserved
+`H40 -> R42` activation state alone. The current docs-only decision packet is
+now `H41_post_r42_aggressive_long_arc_decision_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
-the current completed semantic-boundary retrieval-contract gate is
-`R42_origin_append_only_memory_retrieval_contract_gate`, the completed
-operational audit lane is `P26_post_h37_promotion_and_artifact_hygiene_audit`,
-the current canonical derivative bundle remains
+the current completed semantic-boundary retrieval-contract gate remains
+`R42_origin_append_only_memory_retrieval_contract_gate`, the current
+coequal-mainline model bundle is
+`F20_post_r42_dual_mode_model_mainline_bundle`, the completed operational
+audit lane remains `P26_post_h37_promotion_and_artifact_hygiene_audit`, the
+current canonical derivative bundle remains
 `F15_post_h36_origin_goal_reanchor_bundle`, the current candidate-isolation
 bundle is `F16_post_h37_r41_candidate_isolation_bundle`, the current
 same-substrate exit bundle is
 `F17_post_h38_same_substrate_exit_criteria_bundle`, the current long-arc
-planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, and the current
+planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, the current
 semantic-boundary roadmap is
-`F19_post_f18_restricted_wasm_useful_case_roadmap`.
+`F19_post_f18_restricted_wasm_useful_case_roadmap`, and the preserved prior
+semantic-boundary activation packet is
+`H40_post_h38_semantic_boundary_activation_packet`.
 
 The narrow current stack is:
 
@@ -47,18 +52,25 @@ The narrow current stack is:
 - `F18 -> F19 -> H40 -> R42` fixes `F9` as the preferred forward family,
   fixes `R42 -> R43 -> R44` as the bounded semantic-boundary ladder, then
   explicitly activates that route once and validates the first retrieval-
-  contract gate on `6/6` tasks and `65/65` exact observations.
+  contract gate on `6/6` tasks and `65/65` exact observations;
+- `F20 -> H41` records the coequal-mainline dual-mode model posture and then
+  explicitly authorizes exact `R43` plus coequal model `R45` while keeping
+  `R41` deferred, `R44` behind later `H42`, and merge explicit through `P27`.
 
 What stays blocked or deferred:
 
-- `R41` remains deferred behind a later explicit post-`H40` packet;
-- `R43` and `R44` remain deferred behind a later explicit post-`R42` packet;
+- `R41` remains deferred behind a later explicit contradiction packet;
+- `R43` is authorized but not completed;
+- `R45` is authorized but not completed;
+- `R44` remains deferred behind later `H42_post_r43_route_selection_packet`;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
+`docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`,
+`docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`,
 `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`,
 `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
@@ -96,12 +108,15 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H40_post_h38_semantic_boundary_activation_packet`, not the preserved prior
-  `H30` packet or the earlier `H25` same-endpoint decision packet.
+  `H41_post_r42_aggressive_long_arc_decision_packet`, not the preserved prior
+  `H40` packet, the earlier `H30` packet, or the earlier `H25`
+  same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
   `R42_origin_append_only_memory_retrieval_contract_gate`.
+- The current coequal-mainline model bundle is
+  `F20_post_r42_dual_mode_model_mainline_bundle`.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`, which names
   only `R40_origin_bounded_scalar_locals_and_flags_gate` as the justified
@@ -121,10 +136,18 @@ historical packet inventory below.
   `F18_post_h38_origin_core_long_arc_bundle`.
 - The current semantic-boundary useful-case roadmap is
   `F19_post_f18_restricted_wasm_useful_case_roadmap`.
+- The preserved prior semantic-boundary activation packet is
+  `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- There is no currently active downstream runtime lane after completed `R42`;
-  one later explicit post-`R42` packet is required before `R43`.
+- The explicit next promotion wave is
+  `P27_post_h41_clean_promotion_and_explicit_merge_packet`.
+- The authorized next exact gate is
+  `R43_origin_bounded_memory_small_vm_execution_gate`.
+- The authorized coequal model lane is
+  `R45_origin_dual_mode_model_mainline_gate`.
+- The later explicit route-selection packet required before `R44` is
+  `H42_post_r43_route_selection_packet`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -172,9 +195,11 @@ historical packet inventory below.
 - `R42` then validates exact retrieved value plus exact maximizer-row identity
   on `6/6` fixed append-only retrieval-contract tasks with `65/65` exact
   observations.
-- the saved future `R41` design still fixes the smallest later threat-stress
-  audit shape without authorizing it, and `R43/R44` remain deferred behind a
-  later explicit post-`R42` packet.
+- `F20` then records the coequal-mainline dual-mode model posture without
+  replacing exact evidence.
+- `H41` then authorizes exact `R43` plus coequal model `R45` while keeping
+  `R41` deferred, keeping `R44` behind later `H42`, and keeping merge explicit
+  through `P27`.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -381,6 +406,8 @@ historical packet inventory below.
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json` — one-file summary for the preserved prior docs-only bounded-family runtime-decision packet
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
+- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` — one-file summary for the current coequal-mainline model bundle
+- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` — one-file summary for the current docs-only aggressive long-arc decision packet
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json` — one-file summary for the current docs-only activation packet selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json` — one-file summary for the completed first semantic-boundary retrieval-contract gate
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json` — one-file summary for the preserved prior docs-only keep-freeze packet after `F16`
@@ -400,6 +427,8 @@ historical packet inventory below.
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/README.md` — landed docs-only bounded-family runtime-decision packet that authorizes exactly one same-substrate runtime gate
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
+- `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/README.md` — landed coequal-mainline model bundle fixing the exact-versus-model evidence boundary
+- `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/README.md` — landed current docs-only aggressive long-arc decision packet above `R42`
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/README.md` — landed current docs-only activation packet for the semantic-boundary route
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/README.md` — landed current retrieval-contract gate for exact latest-write-by-address and stack-slot retrieval
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — preserved prior docs-only keep-freeze packet after `F16`

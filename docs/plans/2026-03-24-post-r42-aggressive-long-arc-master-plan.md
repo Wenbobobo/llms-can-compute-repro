@@ -11,9 +11,10 @@ The current implementation adopts the following already-selected choices:
 
 - execution posture: `aggressive_long_arc`
 - merge posture: `explicit_merge_wave`
-- model posture: `coequal_mainline`
-- model implementation posture:
-  `dual_mode_trainable_2d_executor_plus_compiled_weight_executor`
+- model posture: `coequal mainline`
+- implementation posture: `dual mode`
+- admitted model implementations:
+  `trainable_2d_executor` and `compiled_weight_executor`
 
 These choices intentionally accelerate the semantic-boundary line without
 changing the narrow scientific thesis:
@@ -87,7 +88,7 @@ Objective:
 - preserve `H40` and `H36` underneath the stack;
 - interpret positive `R42` as sufficient to open the bounded-memory exact lane;
 - authorize `R43_origin_bounded_memory_small_vm_execution_gate`;
-- authorize `R45_dual_mode_model_mainline_gate` as a coequal comparator lane;
+- authorize `R45_origin_dual_mode_model_mainline_gate` as a coequal comparator lane;
 - keep `R41` deferred;
 - keep `R44` deferred until a later explicit post-`R43` / post-`R45` packet.
 
@@ -113,7 +114,7 @@ Acceptance:
 
 Objective:
 
-- land `P27_post_h41_clean_promotion_and_merge_packet`.
+- land `P27_post_h41_clean_promotion_and_explicit_merge_packet`.
 
 `P27` must:
 
@@ -152,7 +153,7 @@ Target evidence:
 
 Objective:
 
-- execute `R45_dual_mode_model_mainline_gate`.
+- execute `R45_origin_dual_mode_model_mainline_gate`.
 
 Scope:
 
@@ -167,11 +168,11 @@ Acceptance:
 - exact executor and model executors produce directly comparable manifests;
 - model wins never relabel an exact failure as a route success.
 
-### Wave 5: Post-R43/R45 Route Selection
+### Wave 5: Post-R43 Route Selection
 
 Objective:
 
-- land `H42_post_r43_r45_route_selection_packet`.
+- land `H42_post_r43_route_selection_packet`.
 
 Decision options:
 

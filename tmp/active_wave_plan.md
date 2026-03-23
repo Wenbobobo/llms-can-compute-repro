@@ -5,7 +5,7 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H40_post_h38_semantic_boundary_activation_packet`;
+  `H41_post_r42_aggressive_long_arc_decision_packet`;
 - preserved active routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`;
 - current completed semantic-boundary retrieval-contract gate:
@@ -22,14 +22,25 @@ Current scientific/control stack:
   `F18_post_h38_origin_core_long_arc_bundle`;
 - current semantic-boundary useful-case roadmap:
   `F19_post_f18_restricted_wasm_useful_case_roadmap`;
+- current coequal-mainline model bundle:
+  `F20_post_r42_dual_mode_model_mainline_bundle`;
+- preserved prior semantic-boundary activation packet:
+  `H40_post_h38_semantic_boundary_activation_packet`;
 - preserved prior docs-only reopen-decision packet:
   `H38_post_f16_runtime_relevance_reopen_decision_packet`;
 - preserved prior clean promotion-prep lane:
   `P25_post_h36_clean_promotion_prep`;
-- deferred future runtime blueprint:
+- deferred contradiction runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
-- deferred future semantic-boundary gates:
-  `R43_origin_bounded_memory_small_vm_execution_gate`,
+- authorized next exact gate:
+  `R43_origin_bounded_memory_small_vm_execution_gate`;
+- authorized coequal model lane:
+  `R45_origin_dual_mode_model_mainline_gate`;
+- explicit promotion/merge wave fixed next:
+  `P27_post_h41_clean_promotion_and_explicit_merge_packet`;
+- later route-selection packet fixed downstream:
+  `H42_post_r43_route_selection_packet`;
+- deferred future useful-case gate:
   `R44_origin_restricted_wasm_useful_case_execution_gate`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
@@ -37,40 +48,45 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H40` selects the semantic-boundary route explicitly and `R42` executes the
-first append-only retrieval-contract gate without authorizing `R43` by
-momentum.
+`F20` records the coequal-mainline dual-mode model posture, and `H41`
+explicitly authorizes exact `R43` plus coequal model `R45` without reopening
+`R41`, authorizing `R44`, or merging `main` by momentum.
 
 ## Current Facts
 
-- `wip/h40-r42-exec` is the clean execution branch for this wave.
-- `wip/p25-f15-h37-exec` remains the preserved prior clean source branch for
-  the landed `P25/F15/H37` wave.
-- `wip/f16-h38-p26-exec` remains the clean audit branch for the
-  `F16/H38/P26/F17` control wave.
+- `wip/h41-r43-mainline` is the clean execution branch for the current control
+  override wave.
+- `wip/h40-r42-exec` remains the preserved activation branch that landed the
+  `H40 -> R42` wave.
+- `wip/p27-promotion-merge` and `wip/r45-dualmode-model` exist as clean
+  parallel worktrees for later explicit merge and model work.
 - dirty `main` remains untouched by design in this wave.
 - `H36` still preserves
   `bounded_scalar_family_refrozen_narrowly`.
-- `H38` remains the preserved prior keep-freeze decision above `H36`.
-- `H40` selects
+- `H40` remains the preserved prior activation packet that selected
   `authorize_r42_origin_append_only_memory_retrieval_contract_gate`.
 - `R42` returns `keep_semantic_boundary_route` on `6` fixed tasks and `65`
   exact observations, including `1` duplicate/tie maximizer case and `3`
   default-row hits.
-- `P26` keeps promotion posture at `audit_only`.
-- `F18` still fixes `F9` as the preferred forward family after `H38`.
-- `F19` still fixes a bounded restricted-Wasm / tiny-`C` surface plus the
-  saved `R42 -> R43 -> R44` ladder.
+- `F20` records
+  `coequal_mainline_exact_non_substitutive`
+  and the admitted dual model implementations
+  `compiled_weight_executor` and `trainable_2d_executor`.
+- `H41` selects
+  `authorize_r43_exact_mainline_and_coequal_r45_model_lane`.
+- `P26` still keeps promotion posture at `audit_only`.
 
 ## Immediate Objectives
 
-1. Preserve `H40` as the current active docs-only decision packet.
+1. Preserve `H41` as the current active docs-only decision packet.
 2. Preserve `H36` as the routing/refreeze packet underneath the stack.
-3. Preserve `R42` as the completed retrieval-contract gate with exact value
-   and maximizer-row identity.
-4. Keep `R41`, `R43`, and `R44` deferred until later explicit packets.
-5. Keep `P26` as `audit_only`, not merge authorization.
-6. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
+3. Preserve completed `R42` as the first semantic-boundary retrieval-contract
+   gate.
+4. Keep exact `R43` as the decisive next runtime gate.
+5. Keep `R45` coequal but non-substitutive relative to exact `R43`.
+6. Keep `P27` explicit as the promotion/merge wave.
+7. Keep `R41` and `R44` deferred until later explicit packets.
+8. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
 
 ## Last Completed Order
@@ -108,39 +124,44 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F18_post_h38_origin_core_long_arc_bundle` ->
 `F19_post_f18_restricted_wasm_useful_case_roadmap` ->
 `H40_post_h38_semantic_boundary_activation_packet` ->
-`R42_origin_append_only_memory_retrieval_contract_gate`
+`R42_origin_append_only_memory_retrieval_contract_gate` ->
+`F20_post_r42_dual_mode_model_mainline_bundle` ->
+`H41_post_r42_aggressive_long_arc_decision_packet`
 
 ## Current Rule
 
-- `H40` is the current active docs-only packet.
+- `H41` is the current active docs-only packet.
 - `H36` remains the routing/refreeze packet underneath it.
-- `R42` is a completed gate, not automatic authorization of `R43`.
-- `H38` remains the preserved prior docs-only packet.
+- `R42` is a completed gate that justifies exact `R43`, but does not itself
+  count as bounded-memory small-VM execution evidence.
+- `F20` is the current model-mainline bundle and keeps model evidence
+  non-substitutive relative to exact `R43`.
 - `P26` remains audit-only and keeps dirty `main` untouched.
-- `F18` and `F19` remain the planning bundles that fixed the route and gate
-  ladder behind `H40`.
-- `R41` stays deferred until a later explicit post-`H40` packet.
-- `R43` and `R44` stay deferred until a later explicit post-`R42` packet.
+- `P27` is the explicit next merge/promotion wave.
+- `R41` stays deferred until a later contradiction packet.
+- `R43` is the authorized next exact gate.
+- `R45` is the authorized coequal model lane.
+- `R44` stays deferred until later `H42_post_r43_route_selection_packet`.
 
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
+- `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
-- `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
+- `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
+- `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/`
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/`
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
-- `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/`
-- `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
-- `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
-- `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/`
-- `docs/milestones/F18_post_h38_origin_core_long_arc_bundle/`
-- `docs/milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/`
-- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
+- `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
+- `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
+- `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
+- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
+- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
-- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
