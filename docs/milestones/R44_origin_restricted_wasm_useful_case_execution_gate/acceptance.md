@@ -5,5 +5,5 @@
 - lowered reference execution and accelerated execution must agree exactly;
 - any trainable / translated model variant is comparator-only until exact
   lowering survives;
-- `R44` is authorized by completed `H42`, but remains unexecuted until its own
-  exact gate artifacts land.
+- `R44` is authorized by completed `H42`, and its own exact gate artifacts now
+  land on `3/3` fixed kernels without widening the claim ceiling.

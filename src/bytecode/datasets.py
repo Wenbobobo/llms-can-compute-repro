@@ -76,6 +76,15 @@ class BoundedMemoryVMCase:
     gated_on_previous_exact: bool = False
 
 
+@dataclass(frozen=True, slots=True)
+class RestrictedWasmKernelCase:
+    kernel_id: str
+    description: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+
+
 def _frame_cell(
     address: int,
     cell_type: BytecodeType,
@@ -171,6 +180,247 @@ def _convert_trace_program(
                 raise ValueError(f"Unsupported trace opcode for bytecode conversion: {instruction.opcode}")
 
     return BytecodeProgram(instructions=tuple(instructions), name=name)
+
+
+AssemblyRow = str | tuple[BytecodeOpcode, int | str | None] | tuple[
+    BytecodeOpcode,
+    int | str | None,
+    tuple[BytecodeType, ...],
+    tuple[BytecodeType, ...],
+]
+
+
+def _assemble_program(
+    *,
+    name: str,
+    rows: list[AssemblyRow],
+    memory_layout: tuple[BytecodeMemoryCell, ...],
+) -> BytecodeProgram:
+    labels: dict[str, int] = {}
+    emitted_rows: list[tuple[BytecodeOpcode, int | str | None] | tuple[
+        BytecodeOpcode,
+        int | str | None,
+        tuple[BytecodeType, ...],
+        tuple[BytecodeType, ...],
+    ]] = []
+
+    for row in rows:
+        if isinstance(row, str):
+            if not row.endswith(":"):
+                raise ValueError(f"Assembly label must end with ':'; got {row!r}.")
+            labels[row[:-1]] = len(emitted_rows)
+            continue
+        emitted_rows.append(row)
+
+    instructions: list[BytecodeInstruction] = []
+    for row in emitted_rows:
+        if len(row) == 2:
+            opcode, arg = row
+            in_types: tuple[BytecodeType, ...] = ()
+            out_types: tuple[BytecodeType, ...] = ()
+        else:
+            opcode, arg, in_types, out_types = row
+        if isinstance(arg, str):
+            if arg not in labels:
+                raise ValueError(f"Unknown assembly label {arg!r} in {name}.")
+            arg = labels[arg]
+        instructions.append(
+            BytecodeInstruction(
+                opcode,
+                arg,
+                in_types=in_types,
+                out_types=out_types,
+            )
+        )
+    return BytecodeProgram(
+        instructions=tuple(instructions),
+        name=name,
+        memory_layout=memory_layout,
+    )
+
+
+def _frame_i32_range(base_address: int, count: int, label_prefix: str) -> tuple[BytecodeMemoryCell, ...]:
+    return tuple(
+        _frame_cell(base_address + offset, BytecodeType.I32, f"{label_prefix}_{offset}")
+        for offset in range(count)
+    )
+
+
+def sum_i32_buffer_program(
+    *,
+    input_values: tuple[int, ...] = (7, 0, -3, 5),
+    input_base_address: int = 400,
+    output_address: int = 404,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.CONST_I32, 0),
+            (BytecodeOpcode.STORE_STATIC, output_address),
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+        )
+    )
+    for offset in range(len(input_values)):
+        rows.extend(
+            (
+                (BytecodeOpcode.LOAD_STATIC, input_base_address + offset),
+                (BytecodeOpcode.ADD_I32, None),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.STORE_STATIC, output_address),
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "sum_input") + (
+        _frame_cell(output_address, BytecodeType.I32, "sum_output"),
+    )
+    return _assemble_program(
+        name="bytecode_sum_i32_buffer_fixed4",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
+
+
+def count_nonzero_i32_buffer_program(
+    *,
+    input_values: tuple[int, ...] = (5, 0, -2, 0, 3),
+    input_base_address: int = 416,
+    output_address: int = 432,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.CONST_I32, 0),
+            (BytecodeOpcode.STORE_STATIC, output_address),
+        )
+    )
+    for offset in range(len(input_values)):
+        increment_label = f"count_nonzero_inc_{offset}"
+        continue_label = f"count_nonzero_next_{offset}"
+        rows.extend(
+            (
+                (BytecodeOpcode.LOAD_STATIC, input_base_address + offset),
+                (BytecodeOpcode.CONST_I32, 0),
+                (BytecodeOpcode.EQ_I32, None),
+                (BytecodeOpcode.JZ_ZERO, increment_label),
+                (BytecodeOpcode.JMP, continue_label),
+                f"{increment_label}:",
+                (BytecodeOpcode.LOAD_STATIC, output_address),
+                (BytecodeOpcode.CONST_I32, 1),
+                (BytecodeOpcode.ADD_I32, None),
+                (BytecodeOpcode.STORE_STATIC, output_address),
+                f"{continue_label}:",
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "count_input") + (
+        _frame_cell(output_address, BytecodeType.I32, "count_nonzero_output"),
+    )
+    return _assemble_program(
+        name="bytecode_count_nonzero_i32_buffer_fixed5",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
+
+
+def _append_histogram_dispatch(
+    rows: list[AssemblyRow],
+    *,
+    input_address: int,
+    bin_base_address: int,
+    next_label: str,
+    label_prefix: str,
+) -> None:
+    rows.append((BytecodeOpcode.LOAD_STATIC, input_address))
+    for bucket in range(16):
+        next_check_label = f"{label_prefix}_next_check_{bucket}"
+        rows.extend(
+            (
+                (BytecodeOpcode.DUP, None),
+                (BytecodeOpcode.CONST_I32, bucket),
+                (BytecodeOpcode.EQ_I32, None),
+                (BytecodeOpcode.JZ_ZERO, next_check_label),
+                (BytecodeOpcode.POP, None),
+                (BytecodeOpcode.LOAD_STATIC, bin_base_address + bucket),
+                (BytecodeOpcode.CONST_I32, 1),
+                (BytecodeOpcode.ADD_I32, None),
+                (BytecodeOpcode.STORE_STATIC, bin_base_address + bucket),
+                (BytecodeOpcode.JMP, next_label),
+                f"{next_check_label}:",
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.POP, None),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+
+
+def histogram16_u8_program(
+    *,
+    input_values: tuple[int, ...] = (3, 1, 3, 15),
+    input_base_address: int = 448,
+    bin_base_address: int = 464,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    for bucket in range(16):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, 0),
+                (BytecodeOpcode.STORE_STATIC, bin_base_address + bucket),
+            )
+        )
+    for offset in range(len(input_values)):
+        next_label = f"histogram_next_{offset}"
+        _append_histogram_dispatch(
+            rows,
+            input_address=input_base_address + offset,
+            bin_base_address=bin_base_address,
+            next_label=next_label,
+            label_prefix=f"histogram_input_{offset}",
+        )
+        rows.append(f"{next_label}:")
+    rows.append((BytecodeOpcode.HALT, None))
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "histogram_input") + _frame_i32_range(
+        bin_base_address,
+        16,
+        "histogram_bin",
+    )
+    return _assemble_program(
+        name="bytecode_histogram16_u8_fixed4",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
 
 
 def arithmetic_smoke_program() -> BytecodeProgram:
@@ -1166,6 +1416,32 @@ def r43_bounded_memory_vm_cases() -> tuple[BoundedMemoryVMCase, ...]:
             max_steps=1024,
             program=iterated_helper_accumulator_program(20, counter_address=128, accumulator_address=129),
             gated_on_previous_exact=True,
+        ),
+    )
+
+
+def r44_restricted_wasm_useful_case_cases() -> tuple[RestrictedWasmKernelCase, ...]:
+    return (
+        RestrictedWasmKernelCase(
+            kernel_id="sum_i32_buffer",
+            description="Read-heavy fixed-buffer sum over one bounded static address range.",
+            comparison_mode="medium_exact_trace",
+            max_steps=256,
+            program=sum_i32_buffer_program(),
+        ),
+        RestrictedWasmKernelCase(
+            kernel_id="count_nonzero_i32_buffer",
+            description="Fixed-buffer nonzero count with data-dependent branching and unchanged memory surface.",
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=count_nonzero_i32_buffer_program(),
+        ),
+        RestrictedWasmKernelCase(
+            kernel_id="histogram16_u8",
+            description="Fixed 16-bin histogram with repeated latest-write-by-address pressure on bounded bin cells.",
+            comparison_mode="long_exact_final_state",
+            max_steps=2048,
+            program=histogram16_u8_program(),
         ),
     )
 
