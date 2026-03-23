@@ -49,10 +49,17 @@ and the current docs-only sync packet is
   authorizes exactly one bounded-scalar same-substrate runtime gate;
 - `R40` as the completed bounded-scalar runtime gate validating explicit
   bounded frame locals plus typed `FLAG` slots on the same substrate;
-- `H36` as the current active refreeze packet freezing that bounded-scalar
-  result narrowly and restoring no active downstream runtime lane by default;
+- `H36` as the preserved prior active refreeze packet freezing that bounded-
+  scalar result narrowly and restoring no active downstream runtime lane by
+  default;
 - `P24` as the completed control-surface sync for the landed
   `H35 -> R40 -> H36` wave;
+- `P25` as the completed operational promotion-prep lane that fixes the clean
+  source-of-truth branch and keeps merge mode at `prepare_only`;
+- `F15` as the current canonical derivative mapping from the origin materials
+  onto the landed `H36/P24/P25/H37` state;
+- `H37` as the current docs-only runtime-relevance decision packet that keeps
+  `H36` frozen and leaves `R41` deferred;
 - `P20` as the completed paper-facing manuscript/helper-doc resync that makes
   the prose bundle terminate on the landed `H34` state; and
 - `F5` as the completed planning-only contradiction scout that currently
@@ -67,9 +74,8 @@ and the current docs-only sync packet is
 - `F10` as the completed planning-only executor-value comparator matrix that
   makes richer value/comparator obligations explicit without authorizing a
   runtime lane; and
-- `F12` as the completed origin-facing reanchor bundle that replaces `F4` as
-  the current canonical derivative mapping from the origin materials onto the
-  landed `H34` state; and
+- `F12` as the completed earlier origin-facing reanchor bundle for the landed
+  `H34` state, preserved historically now that `F15` is current; and
 - `F13` as the completed bounded scalar value-family preactivation bundle that
   turns the nearest richer same-substrate family into one decision-complete
   spec without authorizing runtime; and

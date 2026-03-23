@@ -4,18 +4,23 @@
 
 The current active stage is:
 
+- `H37_post_h36_runtime_relevance_decision_packet`
+
+The preserved prior active routing/refreeze packet is:
+
 - `H36_post_r40_bounded_scalar_family_refreeze`
 
-The preserved prior docs-only control packet is:
+The completed operational promotion-prep lane is:
 
-- `H35_post_p23_bounded_scalar_family_runtime_decision_packet`
+- `P25_post_h36_clean_promotion_prep`
 
-The current docs-only sync packet is:
+The current canonical origin-facing derivative bundle is:
 
-- `P24_post_h36_bounded_scalar_runtime_sync`
+- `F15_post_h36_origin_goal_reanchor_bundle`
 
-This stage now freezes the current Origin-core chain after one explicit
-post-`P23` bounded-scalar runtime reopen:
+This stage keeps the current Origin-core chain frozen after one explicit
+post-`P23` bounded-scalar runtime reopen and one later explicit
+runtime-relevance decision:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
 - `R36` preserves the narrow precision boundary on the active bundle;
@@ -28,15 +33,18 @@ post-`P23` bounded-scalar runtime reopen:
 - `R39` executes one declared helper-body permutation with target renumbering
   and shows that exactness plus final-state preservation survive that declared
   control-surface change on both rows;
-- `H34` interprets that result as complete-for-now narrow support and leaves no
-  active downstream runtime lane;
+- `H34` interprets that result as `freeze_compiled_boundary_as_complete_for_now`
+  and leaves no active downstream runtime lane;
 - `H35` authorizes exactly one sharper bounded-scalar same-substrate runtime
   gate after `F13/F14/P23`;
 - `R40` validates explicit bounded frame locals and typed `FLAG` slots on the
   same substrate and same opcode surface;
-- `H36` refreezes that result as the current narrow top of stack;
-- `P24` syncs the driver and handoff surfaces to the landed `H35/R40/H36`
-  state.
+- `H36` refreezes that result as the preserved narrow top of stack;
+- `P25` inventories the landed packet window on a clean prep branch without
+  touching dirty `main`;
+- `F15` reanchors the origin-facing goal stack to the landed bounded-scalar
+  state and the post-`H36` no-reopen default;
+- `H37` keeps the `H36` freeze and does not activate `R41` by momentum.
 
 ## Current Machine-State Meaning
 
@@ -77,29 +85,47 @@ post-`P23` bounded-scalar runtime reopen:
   bundle;
 - `F8` remains complete as the planning-only beyond-Origin bridge roadmap;
 - `F10` remains complete as the planning-only executor-value comparator matrix;
-- `F12` remains complete as the post-`F10` origin-claim reanchor bundle;
+- `F12` remains preserved as the earlier canonical derivative surface for the
+  `H34/F10/P22` control state only;
 - `F13` remains complete as the bounded scalar value-family specification:
   `planning_surface_state = bounded_scalar_family_preactivation_specified_without_runtime_reauthorization`;
 - `F14` remains complete as the conditional reopen-readiness bundle;
-- `H35` is now the preserved prior docs-only bounded-family runtime-decision
+- `H35` remains the preserved prior docs-only bounded-family runtime-decision
   packet:
   `selected_outcome = authorize_one_bounded_scalar_family_runtime_gate`,
   `authorized_next_runtime_candidate = r40_origin_bounded_scalar_locals_and_flags_gate`,
   `authorized_runtime_scope = same_substrate_same_opcode_frame_only_bounded_scalar_locals_and_flags`;
-- `R40` is now complete as the bounded-scalar same-substrate runtime gate:
+- `R40` remains complete as the bounded-scalar same-substrate runtime gate:
   `lane_verdict = origin_bounded_scalar_locals_and_flags_supported_narrowly`,
   `same_opcode_surface_kept = true`,
   `flag_slot_case_count = 2`,
-  `negative_control_rejection_count = 3`,
-  `next_priority_lane = h36_post_r40_bounded_scalar_family_refreeze`;
-- `H36` is now the current active routing/refreeze packet:
+  `negative_control_rejection_count = 3`;
+- `H36` is now the preserved prior active routing/refreeze packet:
   `decision_state = bounded_scalar_family_refrozen_narrowly`,
   `bounded_scalar_family_state = explicit_bounded_scalar_locals_and_flags_supported_narrowly`,
   `authorized_next_runtime_candidate = none`,
   `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
   `next_required_lane = no_active_downstream_runtime_lane`;
-- `P24` is now the current docs-only control-surface sync:
+- `P24` remains the preserved prior docs-only control-surface sync:
   `control_surface_sync_state = post_h36_bounded_scalar_runtime_wave_indexed`;
+- `P25` is now complete as the operational promotion-prep lane:
+  `source_of_truth_branch = wip/h35-r40-p24-exec`,
+  `clean_prep_branch = wip/p25-f15-h37-exec`,
+  `promotion_mode = prepare_only`,
+  `target_branch = main`,
+  `merge_authorized = false`;
+- `F15` is now the current canonical derivative bundle:
+  `canonical_origin_claim_surface = current_after_h36_and_h37`,
+  `bounded_scalar_family_status = supported_here_narrowly`,
+  `top_unresolved_same_substrate_gaps = runtime_relevance_only`;
+- `H37` is now the current active docs-only decision packet:
+  `current_active_routing_stage = h36_post_r40_bounded_scalar_family_refreeze`,
+  `selected_outcome = keep_h36_freeze`,
+  `non_selected_outcome = authorize_r41_origin_runtime_relevance_threat_stress_audit`,
+  `authorized_next_runtime_candidate = none`,
+  `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
+  `decision_basis = no_uniquely_isolated_admissible_candidate_on_fixed_r40_row_pair`,
+  `next_required_lane = no_active_downstream_runtime_lane`;
 - `F9` remains preserved as blocked roadmap storage downstream of
   `F10/F13/H35/R40`:
   `future_storage_state = semantic_boundary_family_still_blocked`;
@@ -111,7 +137,7 @@ post-`P23` bounded-scalar runtime reopen:
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
   `F2_future_frontier_recheck_activation_matrix` and downstream of
-  `H35/R40/H36/F10/F13/F14/P24`.
+  `H37/H36/P25/F15/F14`.
 
 ## Completed Order
 
@@ -137,24 +163,31 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H34_post_r39_later_explicit_scope_decision_packet` ->
 `H35_post_p23_bounded_scalar_family_runtime_decision_packet` ->
 `R40_origin_bounded_scalar_locals_and_flags_gate` ->
-`H36_post_r40_bounded_scalar_family_refreeze`
+`H36_post_r40_bounded_scalar_family_refreeze` ->
+`P25_post_h36_clean_promotion_prep` ->
+`F15_post_h36_origin_goal_reanchor_bundle` ->
+`H37_post_h36_runtime_relevance_decision_packet`
 
 ## Next Planned Order
 
-The current justified next move is now the landed `H36` interpretation rather
-than another automatic runtime lane. `H35` named one bounded-scalar runtime
-question, `R40` answered it narrowly on the current substrate, and `H36`
-freezes that result without automatically activating the deferred threat lane.
+The current justified next move is now the landed `H37` interpretation rather
+than any active runtime lane. `H37` keeps `H36` frozen, leaves `R41`
+deferred, and does not authorize a reopen by momentum.
 
 The current admissible follow-on work is:
 
-- docs-only and planning-only maintenance under `P24`;
+- clean-promotion preparation only from `wip/p25-f15-h37-exec`;
 - low-priority manuscript / README / blog alignment work;
 - saved future design for
-  `R41_origin_runtime_relevance_threat_stress_audit` without activating it,
-  now at
-  `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`;
-- preserved planning-only roadmap work under `F2/F7/F8/F9/F10/F11/F12/F13/F14`.
+  `R41_origin_runtime_relevance_threat_stress_audit` without activating it;
+- preserved planning-only roadmap work under
+  `F2/F7/F8/F9/F10/F11/F12/F13/F14/F15`.
+
+If reauthorized later, the conditional order is:
+
+later explicit post-`H37` packet ->
+conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
+later refreeze packet
 
 The next required order is now:
 
@@ -179,18 +212,14 @@ no active downstream runtime lane
 - `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
-- `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
+- `results/P25_post_h36_clean_promotion_prep/summary.json`
+- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
+- `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
-- `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
-- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
-- `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
-- `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/`
+- `docs/milestones/P25_post_h36_clean_promotion_prep/`
+- `docs/milestones/F15_post_h36_origin_goal_reanchor_bundle/`
+- `docs/milestones/H37_post_h36_runtime_relevance_decision_packet/`
 - `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
-- `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/`
-- `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/`
-- `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
-- `docs/milestones/F13_post_f12_bounded_scalar_value_family_spec/`
-- `docs/milestones/F14_post_f13_conditional_reopen_readiness_bundle/`
 - `docs/publication_record/current_stage_driver.md`
 - `tmp/active_wave_plan.md`
 
@@ -199,21 +228,27 @@ no active downstream runtime lane
 - `R29` remains blocked and does not authorize execution.
 - `F3` remains blocked and planning-only.
 - `F2` remains planning-only and downstream of
-  `H35/R40/H36/F10/F13/F14/P24`.
+  `H37/H36/P25/F15/F14`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred and
-  inactive until a new explicit post-`H36` packet authorizes it.
+  inactive until a later explicit post-`H37` packet authorizes it.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 
 ## Active Bounded Lanes
 
-- `H36_post_r40_bounded_scalar_family_refreeze` is the current active routing
-  packet.
-- `H35_post_p23_bounded_scalar_family_runtime_decision_packet` is the
-  preserved prior docs-only control packet under `H36`.
-- `P24_post_h36_bounded_scalar_runtime_sync` is the current docs-only sync
-  packet.
-- `R40_origin_bounded_scalar_locals_and_flags_gate` is the completed
+- `H37_post_h36_runtime_relevance_decision_packet` is the current active
+  docs-only decision packet.
+- `H36_post_r40_bounded_scalar_family_refreeze` remains the preserved prior
+  active routing/refreeze packet.
+- `P25_post_h36_clean_promotion_prep` is the completed operational
+  promotion-prep lane.
+- `F15_post_h36_origin_goal_reanchor_bundle` is the current canonical
+  derivative claim-delta bundle.
+- `H35_post_p23_bounded_scalar_family_runtime_decision_packet` remains the
+  preserved prior docs-only control packet.
+- `P24_post_h36_bounded_scalar_runtime_sync` remains the preserved prior
+  docs-only sync packet.
+- `R40_origin_bounded_scalar_locals_and_flags_gate` remains the completed
   bounded-scalar runtime gate, not a routing change by itself.
 - `H34_post_r39_later_explicit_scope_decision_packet` remains the preserved
   earlier no-runtime interpretation packet above `H32`.
@@ -221,14 +256,14 @@ no active downstream runtime lane
   compiled-boundary refreeze packet.
 - `R39_origin_compiler_control_surface_dependency_audit` remains the completed
   same-substrate dependency audit, not a routing change by itself.
-- `F10`, `F12`, `F13`, and `F14` remain preserved planning/control surfaces
-  underneath the landed `H35/R40/H36` packet.
+- `F12`, `F13`, and `F14` remain preserved historical or planning/control
+  surfaces underneath the landed `H35/R40/H36/P25/F15/H37` packet chain.
 - `F9` remains blocked and `F11` remains new-substrate.
-- there is no active downstream runtime lane after `H36`.
+- there is no active downstream runtime lane after `H37`.
 
 ## Historical Reference
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36` packet chain change the
-current routing target, not the historical record.
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/P25/F15/H37` packet chain
+change the current routing target, not the historical record.

@@ -39,23 +39,28 @@ latest-write retrieval, and a small exact executor under explicit boundaries.
 
 ### 2. Current control chain
 
-`H32` is the current active routing/refreeze packet, `H34` is the current
-docs-only control packet above it, `H33` is the preserved prior
-question-selection step, and `R39` is the completed same-substrate audit that
-did not reopen a downstream runtime lane. Older controls such as
-`P3`/`R1`/`R2`/`M7`/`P4` remain preserved historical context rather than the
-current routing summary by themselves.
+`H37` is the current docs-only decision packet, `H36` is the preserved prior
+active routing/refreeze packet, `P25` is the completed operational
+promotion-prep lane, and `F15` is the current canonical derivative bundle.
+`H35` is the preserved prior bounded-scalar runtime-decision packet, `H34`
+and `H33` remain the preserved earlier docs-only control packets, and `R40`
+plus `R39` are completed same-substrate evidence rather than routing changes
+by themselves. Older controls such as `P3`/`R1`/`R2`/`M7`/`P4` remain
+preserved historical context rather than the current routing summary by
+themselves.
 
 ### 3. Current endpoint
 
-The current compiled endpoint is a narrow same-substrate bytecode line, backed
-by the landed `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` packet:
-verifier coverage, exact-trace / exact-final-state agreement on one tiny
-lowered subset, one richer control/call family, and one declared helper-body
-permutation audit that still ends in
-`freeze_compiled_boundary_as_complete_for_now`. The preserved first `D0`
-boundary remains useful historical context, but the active endpoint is the
-whole narrow same-substrate line, not a bridge to arbitrary `C`.
+The current endpoint is still a narrow same-substrate bytecode line, now
+extended through one bounded richer value family: explicit bounded frame
+locals plus typed `FLAG` slots. It is backed by the landed
+`R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34 -> H35 -> R40 -> H36 -> H37`
+packet chain: verifier coverage, exact-trace / exact-final-state agreement on
+one tiny lowered subset, one richer control/call family, one declared
+helper-body permutation audit, and one bounded scalar locals/flags family that
+still ends in `keep_h36_freeze`. The preserved first `D0` boundary remains
+useful historical context, but the active endpoint is the whole narrow
+same-substrate line, not a bridge to arbitrary `C`.
 
 ### 4. Reproducibility pointers
 

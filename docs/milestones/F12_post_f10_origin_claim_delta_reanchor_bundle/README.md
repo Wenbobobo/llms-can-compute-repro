@@ -1,16 +1,16 @@
 # F12 Post-F10 Origin Claim Delta Reanchor Bundle
 
-Planning-only origin-facing reanchor bundle after the completed `F10/P22`
-planning wave.
+Preserved historical origin-facing reanchor bundle after the completed
+`F10/P22` planning wave.
 
-`F12` exists to replace the older `F4_post_h23_origin_claim_delta_matrix` as
-the current canonical surface for mapping the origin article and the three
-discussion files onto the current `H34/F10/P22` state. It does not authorize
-runtime execution, scope lift, or public-surface expansion.
+`F12` once replaced the older `F4_post_h23_origin_claim_delta_matrix` as the
+canonical derivative surface for mapping the origin article and the three
+discussion files onto the landed `H34/F10/P22` state. It is now superseded by
+`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical
+origin-facing derivative surface.
 
-This bundle preserves:
+This bundle now preserves:
 
-- `H32` as the active routing packet;
-- `H34` as the current docs-only control packet;
-- `F10` as the current semantic/value comparator bridge surface;
-- `no active downstream runtime lane`.
+- the earlier `H34/F10/P22` control reading;
+- the first canonical derivative mapping before the bounded-scalar reopen;
+- `no active runtime authorization`.

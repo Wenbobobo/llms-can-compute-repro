@@ -12,13 +12,19 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H36_post_r40_bounded_scalar_family_refreeze/` — current active
+- `H37_post_h36_runtime_relevance_decision_packet/` — current active docs-only
+  decision packet keeping the `H36` freeze and leaving `R41` deferred.
+- `H36_post_r40_bounded_scalar_family_refreeze/` — preserved prior active
   routing/refreeze packet freezing the bounded-scalar family narrowly on the
   current substrate.
+- `P25_post_h36_clean_promotion_prep/` — completed operational clean
+  promotion-prep lane from the real source-of-truth branch.
+- `F15_post_h36_origin_goal_reanchor_bundle/` — current canonical
+  origin-facing derivative bundle after the bounded-scalar wave.
 - `H35_post_p23_bounded_scalar_family_runtime_decision_packet/` — preserved
   prior docs-only control packet that authorized exactly one bounded-scalar
   runtime gate.
-- `P24_post_h36_bounded_scalar_runtime_sync/` — current docs-only
+- `P24_post_h36_bounded_scalar_runtime_sync/` — preserved prior docs-only
   control-surface sync after the landed `H35/R40/H36` wave.
 - `H34_post_r39_later_explicit_scope_decision_packet/` — preserved earlier
   docs-only control packet that froze the compiled-boundary line
@@ -38,7 +44,7 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision/` — preserved closeout of
   the old same-endpoint recovery wave.
 
-## Current Downstream Lanes
+## Current Downstream Evidence Lanes
 
 - `R34_origin_retrieval_primitive_contract_gate/` — frozen primitive evidence
   under `H29/H32`.
@@ -68,22 +74,34 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P19_post_h32_publication_surface_alignment/` — completed docs-only
   publication/control alignment after the saved post-`H32` planning surface.
 - `P20_post_h34_manuscript_narrative_resync/` — completed docs-only manuscript
-  and helper-doc resync so the paper-facing bundle now terminates on
+  and helper-doc resync so the paper-facing bundle terminates on
   `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`.
 - `P21_post_h34_planning_surface_sync/` — completed docs-only planning-surface
   sync that recorded `F7/F8` as the first admissible follow-on surfaces while
   keeping runtime inactive.
 - `P22_post_f10_planning_surface_sync/` — completed prior docs-only
   planning-surface sync for the `F10` bridge wave.
-- `P23_post_f13_planning_surface_sync/` — completed current docs-only
-  planning-surface sync that records `F12/F13/F14` while keeping `F9` blocked,
-  `F11` new-substrate, and runtime inactive.
-- `P24_post_h36_bounded_scalar_runtime_sync/` — completed current docs-only
-  sync that records `H36` as active, `H35` as preserved prior control, and no
-  active downstream runtime lane after `R40`.
+- `P23_post_f13_planning_surface_sync/` — completed docs-only planning-surface
+  sync that recorded `F12/F13/F14` while keeping `F9` blocked, `F11`
+  new-substrate, and runtime inactive.
+- `P24_post_h36_bounded_scalar_runtime_sync/` — completed docs-only sync that
+  recorded `H36` as active and no active downstream runtime lane after `R40`.
+- `P25_post_h36_clean_promotion_prep/` — completed operational prep that fixes
+  the clean promotion branch, source-of-truth inventory, and no-merge rule.
 
-## Current Planning-Only Follow-ons
+## Current Planning And Deferred Follow-Ons
 
+- `F15_post_h36_origin_goal_reanchor_bundle/` — current canonical
+  origin-facing derivative bundle anchored to the landed bounded-scalar state.
+- `F14_post_f13_conditional_reopen_readiness_bundle/` — preserved planning-only
+  bundle that stores one future contradiction-driven packet blueprint and one
+  future runtime-audit blueprint without authorizing either one.
+- `../plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` —
+  saved future design surface for the deferred
+  `R41_origin_runtime_relevance_threat_stress_audit` lane.
+- `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
+  same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
+  two surviving `F14` threat families, and explicit stop rules.
 - `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
   that turns future same-substrate reopen admissibility into one mechanical
   contradiction-packet specification.
@@ -93,53 +111,18 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F10_post_h34_executor_value_comparator_matrix/` — planning-only bridge
   bundle that makes richer executor-visible value and comparator obligations
   explicit without authorizing runtime widening.
-- `F12_post_f10_origin_claim_delta_reanchor_bundle/` — planning-only bundle
-  that reanchors the origin article and discussion materials to the current
-  `H34/F10/P22` state and replaces `F4` as the current canonical derivative
-  origin-facing delta surface.
-- `F13_post_f12_bounded_scalar_value_family_spec/` — planning-only bounded
-  family-first preactivation bundle for `bounded scalar locals and flags`.
-- `F14_post_f13_conditional_reopen_readiness_bundle/` — planning-only bundle
-  that stores one future contradiction-driven packet blueprint and one future
-  runtime-audit blueprint without authorizing either one.
+- `F12_post_f10_origin_claim_delta_reanchor_bundle/` — preserved historical
+  canonical derivative surface for the earlier `H34/F10/P22` control state.
+- `F13_post_f12_bounded_scalar_value_family_spec/` — preserved planning-only
+  bounded family-first preactivation bundle for `bounded scalar locals and flags`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive roadmap
   storage for a later restricted-Wasm semantic-boundary family that remains
-  blocked even after `F10/F13`.
+  blocked.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — inactive roadmap
   storage for a later planner-plus-executor interface family that still
-  requires a new substrate even after `F10/F13`.
+  requires a new substrate.
 
-## Conditional Future Lanes
-
-- `../plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` —
-  saved future design surface for the deferred
-  `R41_origin_runtime_relevance_threat_stress_audit` lane.
-- `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
-  same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
-  two surviving `F14` threat families, and explicit stop rules.
-- `../plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
-  preserved design surface that led to the landed `H34` scope-decision
-  packet.
-- `../plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
-  preserved design surface that led to the landed `H35 -> R40 -> H36 -> P24`
-  wave.
-- `../plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-  — preserved design surface that led to the completed `R39`
-  same-substrate audit.
-- `../plans/2026-03-23-post-h32-conditional-next-packet-design.md` — saved
-  post-`H32` planning surface that led to the landed docs-only `H33` packet.
-- `R39_origin_compiler_control_surface_dependency_audit/` — completed
-  same-substrate dependency audit, not an automatic routing change.
-- `H34_post_r39_later_explicit_scope_decision_packet/` — completed docs-only
-  interpretation packet, not a routing change.
-- `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
-  the landed explicit-extension wave after `H30`.
-- no further same-substrate or compiler-boundary extension is active by
-  default after `H36`.
-- any later runtime, broader compiled, or frontier lane now requires a new
-  contradiction-driven explicit packet.
-
-## Blocked Or Planning-Only Lanes
+## Blocked Or Historical Lanes
 
 - `R29_d0_same_endpoint_systems_recovery_execution_gate/` — blocked future
   same-endpoint systems lane.
@@ -147,32 +130,24 @@ planning bundles. Read the current driver first, not the directory name alone.
   activation surface.
 - `F3_post_h23_scope_lift_decision_bundle/` — blocked scope-lift gate.
 - `F4_post_h23_origin_claim_delta_matrix/` — preserved historical
-  origin-facing delta surface superseded by `F12` as the current canonical
-  derivative mapping.
-- `F5_post_h34_contradiction_scout_matrix/` — planning-only post-`H34`
-  contradiction scout that currently concludes no reopen candidate survives.
-- `F6_post_p20_future_option_matrix/` — planning-only post-`P20/F5` option
-  matrix that keeps docs/planning work admissible while leaving runtime
-  inactive by default.
-- `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only
-  contradiction/reopen specification surface under `H34`.
-- `F8_post_h34_beyond_origin_bridge_roadmap/` — planning-only beyond-Origin
-  roadmap surface under `H34`.
-- `F10_post_h34_executor_value_comparator_matrix/` — current planning-only
-  bridge surface under `H34`.
-- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — blocked roadmap
-  storage downstream of `F10`.
-- `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — new-substrate
-  roadmap storage downstream of `F10`.
+  origin-facing delta surface superseded first by `F12` and now by `F15`.
+- `F5_post_h34_contradiction_scout_matrix/` — planning-only contradiction
+  scout concluding no reopen candidate survives on the current evidence.
+- `F6_post_p20_future_option_matrix/` — planning-only option matrix keeping
+  docs/planning work admissible while runtime remains inactive by default.
 
 ## Current Rule
 
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H36` is active routing.
+- `H37` is the active docs-only decision packet.
+- `H36` is the preserved prior active routing/refreeze packet.
+- `P25` is the completed operational promotion-prep lane, not merge
+  authorization.
+- `F15` is the current canonical derivative claim-delta surface.
 - `H35` is the preserved prior docs-only control packet.
-- `P24` is the current docs-only sync packet.
+- `P24` is the preserved prior docs-only sync packet.
 - `H34` and `H33` are preserved earlier docs-only packets.
 - `H31` and `H30` are preserved upstream decision packets, not the next
   objective.
@@ -181,16 +156,10 @@ stack:
 - `R39` and `R40` are complete downstream audits/gates, not active routing
   changes by themselves.
 - `R41` is a deferred future runtime-audit design, not active work.
-- `F7` and `F8` are preserved planning-only follow-on surfaces, not runtime
-  packets.
-- `F10` is the current planning-only bridge surface, not a runtime packet.
-- `F12` is the current origin-facing canonical delta surface.
-- `F13` is the current bounded family-first preactivation surface.
-- `F14` is the current conditional reopen-readiness surface.
+- `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
+  runtime packets.
 - `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
   storage.
-- no active downstream runtime lane exists after `H36`.
-- one richer compiled control family still does not authorize broader compiler
-  or demo scope lift.
+- no active downstream runtime lane exists after `H37`.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
-  plan packet.
+  explicit packet.

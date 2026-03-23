@@ -7,19 +7,25 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H36` active routing/refreeze packet plus the preserved prior `H35`
-  docs-only control packet and current `P24` sync packet, preserving `H27`
-  as the negative closeout of the old same-endpoint wave, `H28` as the
-  Origin-core pivot packet, `H29/R36/R37/H30/H31/R38/H32/H33/H34` as
-  preserved upstream evidence/control context, treating `R39` and `R40` as
-  completed same-substrate downstream evidence rather than automatic routing
-  changes, and recording `H36` as the current bounded-scalar refreeze packet;
+  `H37` docs-only runtime-relevance decision packet, preserving `H36` as the
+  prior active routing/refreeze packet, `P25` as the completed operational
+  promotion-prep lane, `F15` as the current canonical origin-facing derivative
+  bundle, `H35` as the preserved prior docs-only control packet, `P24` as the
+  preserved prior sync packet, preserving `H27` as the negative closeout of
+  the old same-endpoint wave, `H28` as the Origin-core pivot packet,
+  `H29/R36/R37/H30/H31/R38/H32/H33/H34` as preserved upstream evidence/control
+  context, treating `R39` and `R40` as completed same-substrate downstream
+  evidence rather than automatic routing changes, and recording `H37` as the
+  current no-reopen decision packet;
+- `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md` — the
+  current saved post-`H36` design surface that landed `P25/F15/H37` without
+  authorizing a new runtime lane;
 - `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
   the preserved design surface for the landed bounded-scalar runtime reopen
   wave after `P23`;
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` —
   the saved future design surface for the deferred
-  `R41_origin_runtime_relevance_threat_stress_audit` lane after `H36`;
+  `R41_origin_runtime_relevance_threat_stress_audit` lane after `H37`;
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md` —
   the preserved design surface for the current family-first post-`F10`
   planning-only wave that landed `F12/F13/F14/P23`;
@@ -84,9 +90,19 @@ Current control docs:
   the landed `R40` row pair, the measurement rules, and the stop conditions
   without authorizing execution;
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/` — the
-  landed current active routing/refreeze packet for the bounded-scalar wave;
+  landed preserved prior active routing/refreeze packet for the bounded-scalar
+  wave;
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/` — the landed
-  current docs-only control-surface sync after `H36`;
+  preserved prior docs-only control-surface sync after `H36`;
+- `docs/milestones/P25_post_h36_clean_promotion_prep/` — the completed
+  operational clean-promotion-prep lane that inventories the landed packet
+  stack from the real source-of-truth branch without touching dirty `main`;
+- `docs/milestones/F15_post_h36_origin_goal_reanchor_bundle/` — the completed
+  planning-only origin-facing reanchor bundle that replaces `F12` as the
+  current canonical derivative surface after `H36/P24/P25/H37`;
+- `docs/milestones/H37_post_h36_runtime_relevance_decision_packet/` — the
+  landed current docs-only post-`H36` runtime-relevance decision packet that
+  keeps `H36` frozen and leaves `R41` deferred;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   the completed same-substrate dependency audit authorized by `H33`;
 - `docs/milestones/P20_post_h34_manuscript_narrative_resync/` — the completed
@@ -108,9 +124,9 @@ Current control docs:
   completed planning-only bridge bundle that makes richer executor-visible
   value/comparator obligations explicit without authorizing runtime widening;
 - `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/` — the
-  completed planning-only origin-facing reanchor bundle that replaces `F4` as
-  the current canonical derivative claim-delta surface while preserving `F4`
-  historically;
+  completed earlier planning-only origin-facing reanchor bundle for the
+  `H34/F10/P22` control state, preserved historically now that `F15` is the
+  canonical derivative surface;
 - `docs/milestones/F13_post_f12_bounded_scalar_value_family_spec/` — the
   completed planning-only bounded scalar-local-and-flag family specification
   that now serves as the current family-first preactivation surface;
@@ -186,7 +202,14 @@ Current control docs:
   machine-readable bounded-scalar runtime-gate summary on the current
   substrate;
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` —
-  machine-readable current active refreeze packet for the bounded-scalar wave;
+  machine-readable preserved prior active refreeze packet for the
+  bounded-scalar wave;
+- `results/P25_post_h36_clean_promotion_prep/summary.json` —
+  machine-readable operational prep packet fixing the clean source branch,
+  clean prep branch, and `prepare_only` merge posture after `H36/P24`;
+- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json` —
+  machine-readable current docs-only decision packet selecting
+  `keep_h36_freeze` and leaving `R41` deferred after `H36/P24/P25/F15`;
 - `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/execution_manifest.md`
   — saved future execution manifest for the deferred `R41` threat stress lane;
 - `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
@@ -416,19 +439,22 @@ Operating rule:
   bounded timing follow-up as the current operational reference for full-suite
   runtime behavior, and leaves `E1c` dormant unless a completed packet or
   later explicit review exposes a true `D0` contradiction;
-- short-form alignment for guards: `H32` is the current active routing/refreeze
-  packet, `H31` and `H30` are preserved upstream decision packets, `H29` is
-  the preserved upstream Origin-core refreeze, `R38` is the preserved richer
-  control-surface gate, `R37` is the preserved tiny compiled-boundary gate,
-  `R36` is the preserved precision follow-up, `H27` is the preserved
-  same-endpoint closeout, `H25` is the
-  preserved prior active decision packet, `H23` is the preserved frozen
-  same-endpoint scientific state, `P14` remains the completed downstream
-  docs-only outward-sync lane, `H24` remains the completed
-  post-`H23` split stage, `R30` and `R31` remain the landed post-`H23`
-  decision packets, `R32` remains the authorized next science lane, `R33`
-  remains the deferred systems-audit lane, `H22` remains the completed bounded
-  reopen-control stage,
+- short-form alignment for guards: `H37` is the current docs-only
+  runtime-relevance decision packet, `H36` is the preserved prior active
+  routing/refreeze packet, `P25` is the completed operational promotion-prep
+  lane, `F15` is the current canonical derivative bundle, `H35` is the
+  preserved prior docs-only control packet, `H34/H32/H31/H30` are preserved
+  upstream decision/refreeze packets, `H29` is the preserved upstream
+  Origin-core refreeze, `R40` is the completed bounded-scalar gate, `R39` and
+  `R38` are preserved richer same-substrate gates, `R37` is the preserved tiny
+  compiled-boundary gate, `R36` is the preserved precision follow-up, `H27` is
+  the preserved same-endpoint closeout, `H25` is the preserved prior active
+  decision packet, `H23` is the preserved frozen same-endpoint scientific
+  state, `P14` remains the completed downstream docs-only outward-sync lane,
+  `H24` remains the completed post-`H23` split stage, `R30` and `R31` remain
+  the landed post-`H23` decision packets, `R32` remains the authorized next
+  science lane, `R33` remains the deferred systems-audit lane, `H22` remains
+  the completed bounded reopen-control stage,
   `H21` remains the preserved immediate pre-reopen control,
   `H20` remains the completed reentry-and-hygiene split guard,
   `H19` remains the preserved earlier same-endpoint refreeze stage,

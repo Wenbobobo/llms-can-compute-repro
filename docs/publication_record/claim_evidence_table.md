@@ -211,21 +211,28 @@
 
 ## Current bounded mainline state
 
-- `H32` is the current active routing/refreeze packet for the Origin-core line
-  after the preserved `H31 -> R38` compiled-boundary extension chain.
-- `H34` is the current docs-only control packet above `H32`; it records
-  `freeze_compiled_boundary_as_complete_for_now` and leaves no active
-  downstream runtime lane.
-- `H33` remains the preserved prior docs-only question-selection packet, and
-  `R39` remains completed downstream same-substrate evidence rather than a
-  routing change.
+- `H37` is the current active docs-only decision packet for the bounded
+  mainline after the landed `H35 -> R40 -> H36 -> P25 -> F15` wave.
+- `H36` is the preserved prior active routing/refreeze packet; it freezes the
+  bounded-scalar family narrowly and restores no active downstream runtime
+  lane.
+- `P25` is the completed operational promotion-prep lane and `F15` is the
+  current canonical derivative bundle; neither changes the scientific lane by
+  itself.
+- `H35` is the preserved prior docs-only bounded-scalar runtime-decision
+  packet, `H34` is the preserved earlier no-runtime interpretation packet,
+  and `H33` remains the preserved prior docs-only question-selection packet.
+- `R40` and `R39` remain completed downstream same-substrate evidence rather
+  than routing changes by themselves.
+- `H32` remains the preserved earlier active routing/refreeze packet for the
+  compiled-boundary line after the preserved `H31 -> R38` extension chain.
 - `H31` remains the preserved later explicit authorization packet and `H30`
   remains the preserved prior compiled-boundary refreeze packet.
 - `H29` remains the preserved upstream Origin-core refreeze packet, and `H28`
   remains the pivot packet that reanchored the project around append-only
   traces, exact retrieval, and a small exact stack/VM executor.
-- `R36`, `R37`, `R38`, and `R39` remain the active upstream support set for the
-  current narrow compiled-boundary claim.
+- `R36`, `R37`, and `R38` remain the upstream support set for the current
+  narrow same-substrate claim.
 - `H27` remains the preserved negative closeout of the old same-endpoint
   recovery route.
 - `H25`, `H23`, `H21`, `H19`, `H17`, and `H15` remain preserved historical

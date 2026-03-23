@@ -8,53 +8,41 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-h36-p25-f15-h37-control-design.md` — the current control
+  design surface for the landed `P25 -> F15 -> H37` wave after `H36`.
 - `2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — the saved
   future design surface for the deferred `R41` runtime-relevance threat lane.
 - `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` — the
   preserved design surface for the landed bounded-scalar runtime reopen and
   refreeze wave after `P23`.
 - `2026-03-23-post-f10-family-first-preactivation-design.md` — the preserved
-  design surface for the current family-first preactivation wave after the
-  completed `F10/P22` bridge wave.
-- `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the preserved
-  design surface for the preserved prior `F10`-led planning-only bridge wave
-  after the first `F7/F8/P21` post-`H34` handoff.
-- `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the preserved
-  design surface for the first planning-only follow-on wave after the landed
-  `P20/F5/F6` no-reopen closeout.
-- `2026-03-23-post-p20-f6-future-option-design.md` — the preserved design
-  surface for the planning-only `F6_post_p20_future_option_matrix` lane.
-- `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the preserved
-  post-`P20/F5` handoff surface that records the completed manuscript resync,
-  the planning-only `no_reopen_candidate_survives` outcome, and the fact that
-  there is still no active downstream runtime lane.
+  design surface for the family-first preactivation wave that landed
+  `F12/F13/F14/P23`.
 - `2026-03-23-post-r39-later-explicit-scope-decision-design.md` — the
-  current preserved design surface for the landed post-`R39` docs-only scope
-  decision packet, `H34_post_r39_later_explicit_scope_decision_packet`.
+  preserved design surface for the landed post-`R39` docs-only scope decision
+  packet, `H34_post_r39_later_explicit_scope_decision_packet`.
 - `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — the
   preserved design surface that led to the completed post-`H33`
   same-substrate audit, `R39_origin_compiler_control_surface_dependency_audit`.
 - `2026-03-23-post-h32-conditional-next-packet-design.md` — the preserved
   post-`H32` planning surface that led to the landed docs-only `H33`
   question-selection packet.
-- `2026-03-22-post-h30-h31-r38-extension-plan.md` — the current saved
-  post-`H30` execution surface that landed the explicit later decision packet,
-  one richer same-substrate extension gate, `H32` refreeze, and `P18`
-  clean-worktree closeout.
+- `2026-03-22-post-h30-h31-r38-extension-plan.md` — the preserved post-`H30`
+  execution surface that landed the explicit later decision packet, one richer
+  same-substrate extension gate, `H32` refreeze, and `P18` clean closeout.
 - `2026-03-22-post-h30-explicit-next-wave-design.md` — the preserved pre-`H31`
   planning surface that required a later explicit packet before any further
-  compiler-boundary extension.
+  compiled-boundary extension.
 - `2026-03-22-post-r36-explicit-next-wave-design.md` — the saved post-`R36`
-  explicit-next-wave handoff that led to the landed `R37 -> H30` packet; keep
-  it as pre-`H31` rationale rather than the current machine state.
+  explicit-next-wave handoff that led to the landed `R37 -> H30` packet.
 - `2026-03-22-post-unattended-r32-mainline-design.md` — preserved historical
   same-endpoint handoff for the earlier `P16 -> R32 -> H26 -> R33/H27` route.
 - `2026-03-21-h18-unattended-mainline-master-plan.md` — broad unattended
-  master plan for the mainline reproduction program.
+  master plan for the earlier mainline reproduction program.
 - `2026-03-22-post-h23-reauthorization-design.md` — the design that landed the
   preserved prior `H24/R30/R31/H25` reauthorization/refreeze packet.
 - `2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical
-  near-term handoff for `R32` first and deferred `R33` second on the old
+  handoff for `R32` first and deferred `R33` second on the old
   same-endpoint route.
 
 ## Use With
@@ -63,37 +51,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `2026-03-23-post-f10-family-first-preactivation-design.md` — preserved
-  design surface for the current family-first preactivation wave.
-- `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — preserved design
-  surface for the preserved prior `F10`-led planning-only bridge wave.
-- `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — preserved design
-  surface for the first post-`H34` planning-only follow-on wave.
-- `2026-03-23-post-p20-f6-future-option-design.md` — preserved design
-  surface for the post-`P20/F5` future-option matrix.
-- `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — preserved handoff
-  surface after the completed manuscript resync and contradiction scout.
-- `2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future
-  design surface for the deferred `R41` runtime-relevance threat lane.
-- `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
-  preserved design surface for the landed `H35 -> R40 -> H36 -> P24` wave.
-- `2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
-  preserved design surface that led to the landed post-`R39` docs-only scope
-  decision packet.
-- `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` —
-  preserved design surface that led to the completed post-`H33`
-  same-substrate audit.
-- `2026-03-23-post-h32-conditional-next-packet-design.md` — preserved design
-  surface for the conditional post-`H32` question-selection packet.
-- `2026-03-22-post-h30-h31-r38-extension-plan.md` — current design surface for
-  the landed `H31 -> R38 -> H32` wave.
-- `../milestones/P18_post_h32_clean_worktree_promotion/` — completed clean
-  worktree packaging lane for the post-`H32` bundle.
-- `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — current
-  active routing/refreeze packet for the bounded-scalar same-substrate wave.
+- `../milestones/H37_post_h36_runtime_relevance_decision_packet/` — current
+  active docs-only decision packet.
+- `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — preserved
+  prior active routing/refreeze packet for the bounded-scalar same-substrate
+  wave.
+- `../milestones/P25_post_h36_clean_promotion_prep/` — completed operational
+  promotion-prep lane.
+- `../milestones/F15_post_h36_origin_goal_reanchor_bundle/` — current
+  canonical derivative bundle.
 - `../milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
   — preserved prior docs-only control packet that authorized `R40`.
-- `../milestones/P24_post_h36_bounded_scalar_runtime_sync/` — current
+- `../milestones/P24_post_h36_bounded_scalar_runtime_sync/` — preserved prior
   docs-only sync packet for the landed bounded-scalar runtime wave.
 - `../milestones/R40_origin_bounded_scalar_locals_and_flags_gate/` —
   completed bounded-scalar runtime gate on the current substrate.
@@ -101,36 +70,21 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   deferred future runtime-audit lane fixed to the landed `R40` row pair and
   the two surviving threat families.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
-  preserved prior docs-only scope-decision packet above `H32` that freezes the
-  compiled-boundary line complete-for-now.
-- `../milestones/H33_post_h32_conditional_next_question_packet/` — landed
-  docs-only packet above the preserved `H32` refreeze that selects the next
+  preserved prior docs-only scope-decision packet above `H32`.
+- `../milestones/H33_post_h32_conditional_next_question_packet/` — preserved
+  docs-only packet above the preserved `H32` refreeze that selected the next
   question.
 - `../milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   completed same-substrate dependency audit downstream of `H33`.
-- `../milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
-  — execution manifest for the completed `R39` audit.
 - `../milestones/H32_post_r38_compiled_boundary_refreeze/` — preserved earlier
   routing/refreeze packet in the Origin-core line.
-- `../milestones/R38_origin_compiler_control_surface_extension_gate/` —
-  landed richer compiled control-surface extension gate on the active
-  substrate.
-- `../milestones/H31_post_h30_later_explicit_boundary_decision_packet/` —
-  preserved explicit authorization packet between `H30` and `R38`.
-- `../milestones/H30_post_r36_r37_scope_decision_packet/` — preserved prior
-  compiled-boundary refreeze packet.
-- `../milestones/P16_h25_commit_hygiene_and_clean_worktree_promotion/` —
-  immediate historical closeout lane before the later Origin-core packet stack.
-- `../milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md`
-  — first-pass `R32` execution manifest.
-- `../milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md`
-  — first-pass `R33` audit manifest.
 
 ## Historical Plan Groups
 
-- `2026-03-21-*` and `2026-03-22-*` — current post-`H30` / post-`H31` / `R38`
-  design set plus the preserved post-`H19`, post-`H21`, post-`H23`, and
-  post-`H25` design stack.
+- `2026-03-23-*` — current post-`H34`, post-`P23`, and post-`H36` design set
+  for the Origin-core line.
+- `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,
+  post-`H23`, post-`H25`, and post-`H30` design stack.
 - `2026-03-20-*` — `H10` through `H17`, `R8` through `R18`, and release/control
   audit design set.
 - `2026-03-19-*` — `H1` through `H9`, `R3` through `R7`, `P5` through `P10`,
@@ -148,6 +102,6 @@ its status against:
 3. the corresponding milestone `README.md` / `status.md`
 4. the corresponding `results/<lane>/summary.json`
 
-Do not treat an older plan as authorization to reopen a blocked lane.
-When a saved plan and the landed `H36/H35/P24/R40` stack plus preserved
-`H34/H32` context differ, trust the landed packet.
+Do not treat an older plan as authorization to reopen a blocked lane. When a
+saved plan and the landed `H37/H36/P25/F15/H35/P24/R40` stack differ, trust
+the landed packet.

@@ -55,14 +55,20 @@
   it makes richer executor-visible value and comparator obligations explicit
   while keeping the line planning-only and runtime-inactive.
 - `F12_post_f10_origin_claim_delta_reanchor_bundle` is now complete:
-  it becomes the current canonical derivative mapping from the origin
-  materials onto the landed `H34` state.
+  it remains the preserved earlier canonical derivative mapping for the landed
+  `H34` control state.
 - `F13_post_f12_bounded_scalar_value_family_spec` is now complete:
   it specifies `bounded scalar locals and flags` as one bounded same-substrate
   richer family without authorizing runtime evaluation.
 - `F14_post_f13_conditional_reopen_readiness_bundle` is now complete:
   it stores one future contradiction-driven packet blueprint and one future
   runtime-audit blueprint without activating either one.
+- `P25_post_h36_clean_promotion_prep` is now complete:
+  it fixes the clean source-of-truth branch, clean prep branch, and
+  `prepare_only` promotion posture without authorizing a merge.
+- `F15_post_h36_origin_goal_reanchor_bundle` is now complete:
+  it becomes the current canonical derivative mapping from the origin
+  materials onto the landed `H36/P24/P25/H37` state.
 - `R41_origin_runtime_relevance_threat_stress_audit` is now saved as a
   deferred future design:
   it fixes the landed `R40` row pair, the two surviving threat families, the
