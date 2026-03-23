@@ -92,6 +92,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   surface.
 - `F5_post_h34_contradiction_scout_matrix/` — planning-only post-`H34`
   contradiction scout that currently concludes no reopen candidate survives.
+- `F6_post_p20_future_option_matrix/` — planning-only post-`P20/F5` option
+  matrix that keeps docs/planning work admissible while leaving runtime
+  inactive by default.
 
 ## Current Rule
 

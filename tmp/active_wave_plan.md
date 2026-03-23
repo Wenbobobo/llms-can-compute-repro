@@ -94,7 +94,9 @@ downstream runtime lane
 9. Preserve `P20_post_h34_manuscript_narrative_resync` as completed paper-
    facing closeout and `F5_post_h34_contradiction_scout_matrix` as completed
    planning-only no-reopen filtration.
-10. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
+10. Preserve `F6_post_p20_future_option_matrix` as the planning-only matrix
+    for admissible post-`P20/F5` work.
+11. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
     downstream of `H33/R39`.
 
 ## Last Completed Order
@@ -137,6 +139,8 @@ no active downstream runtime lane
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/`
 - `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
 - `docs/milestones/F5_post_h34_contradiction_scout_matrix/`
+- `docs/milestones/F6_post_p20_future_option_matrix/`
+- `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
 - `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`

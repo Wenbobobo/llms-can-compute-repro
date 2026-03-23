@@ -74,6 +74,11 @@ Current control docs:
 - `docs/milestones/F5_post_h34_contradiction_scout_matrix/` — the completed
   planning-only contradiction scout that currently concludes
   `no_reopen_candidate_survives`;
+- `docs/milestones/F6_post_p20_future_option_matrix/` — the completed
+  planning-only option matrix that keeps docs/planning work admissible while
+  preserving the no-reopen default;
+- `docs/plans/2026-03-23-post-p20-f6-future-option-design.md` — the
+  preserved design surface for that post-`P20/F5` option matrix;
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the
   preserved handoff surface after `P20/F5`, recording that no active
   downstream runtime lane exists and no default reopen should be created;
