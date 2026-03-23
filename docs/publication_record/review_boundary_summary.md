@@ -3,11 +3,13 @@
 Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current active
-routing/refreeze packet is `H32_post_r38_compiled_boundary_refreeze`,
-with `H34_post_r39_later_explicit_scope_decision_packet` as the current
-docs-only control packet above it, preserving `H27` as the negative closeout
-of the old same-endpoint line and `H28` as the Origin-core pivot packet
-underneath it.
+routing/decision state is `H37_post_h36_runtime_relevance_decision_packet`,
+with `H36_post_r40_bounded_scalar_family_refreeze` as the preserved prior
+active routing/refreeze packet, `P25_post_h36_clean_promotion_prep` as the
+completed operational support lane, and `F15_post_h36_origin_goal_reanchor_bundle`
+as the current canonical derivative bundle, preserving `H27` as the negative
+closeout of the old same-endpoint line and `H28` as the Origin-core pivot
+packet underneath it.
 
 ## Supported here on the current frozen scope
 
@@ -31,17 +33,25 @@ underneath it.
   with the same opcode surface as `R37`;
 - `R39` supports one declared helper-body permutation with target renumbering
   on the same admitted row and named same-family boundary probe;
-- `H34` records that the current compiled-boundary line is complete-for-now
-  narrow support rather than an automatically reopened runtime lane;
+- `H34` records that the compiled-boundary line is complete-for-now narrow
+  support rather than an automatically reopened runtime lane;
+- `H35` authorizes exactly one bounded-scalar same-substrate runtime gate;
+- `R40` supports one bounded scalar locals-and-flags family on the same
+  substrate and same opcode surface, on one admitted row plus one same-family
+  boundary row;
+- `H36` freezes that bounded-scalar result narrowly and restores no active
+  downstream runtime lane;
+- `H37` keeps that `H36` freeze by default because no uniquely isolated
+  admissible contradiction survives on the fixed landed `R40` row pair;
 - `F7` preserves a mechanical contradiction/reopen specification under that
   no-reopen state, `F8` preserves the broader roadmap classification,
-  `F10` preserves the current richer-value/comparator bridge surface,
-  `F12` preserves the current origin-facing claim-delta reanchor,
-  `F13` preserves the current bounded scalar-local-and-flag family-first
-  preactivation surface, `F14` preserves the current conditional reopen
-  readiness without activating `H35` or `R40`, and `P23` preserves the current
-  control-surface sync for that planning-only interpretation while `P22`
-  remains the preserved prior sync;
+  `F10` preserves the richer-value/comparator bridge surface, `F12` preserves
+  the earlier origin-facing claim-delta reanchor, `F13` preserves the bounded
+  scalar-local-and-flag family-first preactivation surface, `F14` preserves
+  the conditional reopen readiness, `F15` preserves the current origin-facing
+  derivative interpretation, and `P23/P24/P25` preserve the planning/control
+  sync layers for that post-`H37` interpretation while `P22` remains the
+  preserved prior sync;
 - preserved historical same-endpoint evidence remains available underneath the
   current line, but it is no longer the active routing target.
 
@@ -82,6 +92,11 @@ underneath it.
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 - `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
+- `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`
+- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
+- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
+- `results/P25_post_h36_clean_promotion_prep/summary.json`
+- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
 - `manuscript_bundle_draft.md`
@@ -101,11 +116,11 @@ Any later broader frontier review remains planning-only under
 `F2_future_frontier_recheck_activation_matrix` and the blocked
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
 that status. The current conditional future order now starts only after the
-landed `H33 -> R39 -> H34` chain, the preserved `F7/F8` planning layer, the
-completed `F10` bridge, the current `F13/F14` family-first preactivation
-surfaces, and the completed `P23` sync, and it still requires a new
-contradiction-driven explicit packet before any further compiler-boundary
-extension. Review questions that can be answered by wording, packet indexing,
-existing ledgers, or the completed `F10` bridge plus the current
+landed `H35 -> R40 -> H36 -> P25 -> F15 -> H37` chain above the earlier
+`H34/H32/H33/R39/H31/H30/H29/H28/H27` stack, and it still requires a new
+later explicit post-`H37` packet before any further same-substrate runtime
+reopen. Review questions that can be answered by wording, packet indexing,
+existing ledgers, or the completed `F10` bridge plus the preserved
 `F12/F13/F14` planning surfaces should stay downstream of the landed
-`H34/H32/H33/R39/H31/H30/H29/H28/H27` stack rather than reopening science.
+`H37/H36/P25/F15/H35/H34/H32/H33/R39/H31/H30/H29/H28/H27` stack rather than
+reopening science.

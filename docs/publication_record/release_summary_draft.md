@@ -27,18 +27,25 @@ The current execution-facing chain is now
 `H32_post_r38_compiled_boundary_refreeze` ->
 `H33_post_h32_conditional_next_question_packet` ->
 `R39_origin_compiler_control_surface_dependency_audit` ->
-`H34_post_r39_later_explicit_scope_decision_packet`.
+`H34_post_r39_later_explicit_scope_decision_packet` ->
+`H35_post_p23_bounded_scalar_family_runtime_decision_packet` ->
+`R40_origin_bounded_scalar_locals_and_flags_gate` ->
+`H36_post_r40_bounded_scalar_family_refreeze` ->
+`P25_post_h36_clean_promotion_prep` ->
+`F15_post_h36_origin_goal_reanchor_bundle` ->
+`H37_post_h36_runtime_relevance_decision_packet`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The active endpoint on current evidence is the narrower Origin-core substrate:
-append-only traces, exact retrieval, and a small exact stack/VM executor. The
-earlier tiny typed-bytecode `D0` endpoint remains a preserved historical
-boundary and should not be read as the current bridge to arbitrary C, general
-LLM computation, or broader demo-first claims. Those broader readings remain
+The active endpoint on current evidence is still the narrower Origin-core
+substrate, now extended through one bounded richer same-substrate value
+family: explicit bounded frame locals plus typed `FLAG` slots. The earlier
+tiny typed-bytecode `D0` endpoint remains a preserved historical boundary and
+should not be read as the current bridge to arbitrary C, general LLM
+computation, or broader demo-first claims. Those broader readings remain
 explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
@@ -101,33 +108,38 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H32_post_r38_compiled_boundary_refreeze`, which preserves `H27` as the
-negative closeout of the old same-endpoint route, preserves `H28` as the
-Origin-core pivot packet, keeps `H29` as the positive narrow refreeze,
-records `R36` as a completed precision-boundary follow-up, records `R37` as
-one tiny compiled-boundary confirmation, records `H31` as the explicit
-later-decision packet, and records `R38` as one richer same-substrate
-control/call family rather than a scope-lift authorization. Above that active
-routing packet, `H33` preserves the one-question docs-only selection step,
-`R39` preserves one narrow same-substrate dependency audit, and `H34`
-preserves the current freeze-complete-for-now interpretation with no active
-downstream runtime lane. Any later compiler-boundary extension now requires a
-new contradiction-driven explicit packet. The later paper-facing and planning-
-only closeout lanes now also align to that reading: `P20` rewrites the
-manuscript bundle to terminate on the landed `H34` state, `F5` concludes
-`no_reopen_candidate_survives`, and `F6` records docs/planning maintenance as
-the current admissible default rather than a new runtime wave. The next landed
-follow-on waves remain planning-only: `F7` makes future same-substrate reopen
-criteria mechanical, `F8` stores beyond-Origin milestone families without
-activating them, `F10` now makes richer executor-visible value/comparator
-obligations explicit without authorizing runtime widening, `F12` now reanchors
-the origin-facing claim delta to the current control state, `F13` now fixes
-`bounded scalar locals and flags` as the current bounded same-substrate
-family-first preactivation surface, `F14` now stores a conditional reopen
-readiness blueprint without activating `H35` or `R40`, `F9` remains blocked,
-`F11` remains new-substrate, `P21` and `P22` remain preserved prior planning
-syncs, and `P23` aligns the driver and handoff surfaces to the current
-family-first no-reopen reading.
+`H37_post_h36_runtime_relevance_decision_packet`, which preserves
+`H36_post_r40_bounded_scalar_family_refreeze` as the prior active
+routing/refreeze packet, `P25_post_h36_clean_promotion_prep` as the completed
+operational promotion-prep lane, and
+`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical
+derivative bundle. Under that state, `H27` remains the negative closeout of
+the old same-endpoint route, `H28` remains the Origin-core pivot packet,
+`H29` remains the positive narrow refreeze, `R36` remains the completed
+precision-boundary follow-up, `R37` remains one tiny compiled-boundary
+confirmation, `H31` remains the explicit later-decision packet, `R38` remains
+one richer same-substrate control/call family, `H33` preserves the one-
+question docs-only selection step, `R39` preserves one narrow same-substrate
+dependency audit, `H34` preserves the freeze-complete-for-now compiled line,
+`H35` authorizes exactly one bounded-scalar same-substrate runtime gate, and
+`R40` validates bounded scalar locals and typed `FLAG` slots on one admitted
+row plus one same-family boundary row. `H37` then keeps that `H36` freeze and
+leaves `R41` deferred because no uniquely isolated admissible contradiction
+yet survives on the fixed landed `R40` row pair. The later paper-facing and
+planning-only closeout lanes now also align to that reading: `P20` rewrites
+the manuscript bundle to terminate on the landed `H34` state, `F5` concludes
+`no_reopen_candidate_survives`, `F6` records docs/planning maintenance as the
+admissible default rather than a new runtime wave, `F7` makes future same-
+substrate reopen criteria mechanical, `F8` stores beyond-Origin milestone
+families without activating them, `F10` makes richer executor-visible
+value/comparator obligations explicit without authorizing runtime widening,
+`F12` remains the preserved earlier origin-facing claim delta reanchor, `F13`
+fixes `bounded scalar locals and flags` as the bounded same-substrate family-
+first preactivation surface, `F14` stores a conditional reopen-readiness
+blueprint, `F15` reanchors the origin-facing claim delta to the current
+control state, `F9` remains blocked, `F11` remains new-substrate, `P21` and
+`P22` remain preserved prior planning syncs, and `P23/P24/P25` align the
+driver and handoff surfaces to the current post-`H37` no-reopen reading.
 
 ## Reproducibility pointers
 

@@ -37,21 +37,25 @@ under the current public-surface and callout audit guards. Main-text artifact
 pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
-state under `docs/publication_record/paper_package_plan.md`, anchored to the
-current `H32` Origin-core evidence chain plus the current `H34` docs-only
-control packet, while preserving `H33` as the prior question-selection step
-and `H25/H23` as historical same-endpoint control context, with claim/evidence
-scope kept closed by default. The latest downstream follow-on work remains
+state under `docs/publication_record/paper_package_plan.md`, but authoritative
+control has moved beyond the prose baseline: `H37` is the current docs-only
+decision packet, `H36` is the preserved prior active routing/refreeze packet,
+`P25` is the completed operational promotion-prep lane, and `F15` is the
+current canonical derivative bundle. The manuscript draft still terminates on
+the landed `H34` narrative line by design, so current packet authority remains
+`current_stage_driver.md` plus the claim/evidence ledgers when prose and
+landed packet state differ. The latest downstream follow-on work remains
 planning-only rather than experimental widening: `F7` preserves a mechanical
 same-substrate reopen specification, `F8` preserves beyond-Origin roadmap
-storage, `F10` preserves the current richer-value/comparator bridge surface,
-`F12` preserves the current origin-facing reanchor, `F13` preserves the
-current bounded scalar-local-and-flag family-first preactivation surface,
-`F14` preserves the current conditional reopen-readiness blueprint while
-keeping `H35/R40` inactive, `F9` remains blocked downstream of `F10/F13`,
-`F11` remains new-substrate downstream of `F10/F13`, `P21` and `P22` preserve
-prior post-`H34` sync surfaces, and `P23` keeps the driver and wave-plan
-surfaces aligned to the current family-first no-reopen state.
+storage, `F10` preserves the richer-value/comparator bridge surface, `F12`
+remains the preserved earlier origin-facing reanchor, `F13` preserves the
+bounded scalar-local-and-flag family-first preactivation surface, `F14`
+preserves the conditional reopen-readiness blueprint, `F15` is the current
+origin-facing derivative bundle, `R41` remains deferred under `H37`, `F9`
+remains blocked downstream of `F10/F13`, `F11` remains new-substrate
+downstream of `F10/F13`, `P21` and `P22` preserve prior post-`H34` sync
+surfaces, and `P23/P24/P25` preserve the planning/control surfaces that lead
+into the current post-`H37` no-reopen state.
 
 ## Mandatory tables
 
