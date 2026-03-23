@@ -2,9 +2,11 @@
 
 ## Current Scientific State
 
-- The current active routing packet is
-  `H36_post_r40_bounded_scalar_family_refreeze`, not the preserved prior
+- The current active docs-only decision packet is
+  `H37_post_h36_runtime_relevance_decision_packet`, not the preserved prior
   `H30` packet or the earlier `H25` same-endpoint decision packet.
+- The preserved prior active routing/refreeze packet is
+  `H36_post_r40_bounded_scalar_family_refreeze`.
 - The active scientific target is now the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -19,13 +21,20 @@
   refreeze; `R39` completes one declared same-substrate dependency audit
   without changing routing; `H35` authorizes exactly one bounded-scalar
   same-substrate runtime gate; `R40` validates explicit bounded frame locals
-  plus typed `FLAG` slots on that same substrate; and `H36` freezes that
-  result narrowly without activating another runtime lane.
+  plus typed `FLAG` slots on that same substrate; `H36` freezes that
+  result narrowly without activating another runtime lane; `P25` records the
+  clean source-of-truth branch and `prepare_only` promotion posture; `F15`
+  reanchors the origin-facing derivative claim surface; and `H37` keeps that
+  `H36` freeze because no uniquely isolated admissible contradiction survives.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
-- The current docs-only sync packet is
-  `P24_post_h36_bounded_scalar_runtime_sync`, and there is no active
-  downstream runtime lane after `H36`.
+- The preserved prior docs-only sync packet is
+  `P24_post_h36_bounded_scalar_runtime_sync`.
+- The completed operational support lane is
+  `P25_post_h36_clean_promotion_prep`, and it does not authorize a merge.
+- The current canonical derivative bundle is
+  `F15_post_h36_origin_goal_reanchor_bundle`.
+- There is no active downstream runtime lane after `H37`.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
@@ -80,6 +89,9 @@
 - `H36_post_r40_bounded_scalar_family_refreeze` is now complete:
   it freezes that bounded-scalar result narrowly and restores the stack to no
   active downstream runtime lane.
+- `H37_post_h36_runtime_relevance_decision_packet` is now complete:
+  it keeps the `H36` freeze by default, records `keep_h36_freeze`, and leaves
+  `R41` deferred behind a later explicit packet.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   blocked roadmap storage downstream of `F10/F13`.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains preserved as
@@ -197,7 +209,7 @@
 - `V1_full_suite_validation_runtime_audit` remains the standing bounded
   operational reference under the preserved `H13/V1` handoff.
 - The current active post-`P9` operational stage is
-  `H36_post_r40_bounded_scalar_family_refreeze`.
+  `H37_post_h36_runtime_relevance_decision_packet`.
 - `H21` now remains the preserved pre-reopen same-endpoint control packet
   underneath the current stage.
 - `H22` locked the post-`H21` reopen as one bounded dual-track packet on the
