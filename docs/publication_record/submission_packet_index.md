@@ -34,6 +34,10 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `submission_candidate_criteria.md`
 - `release_candidate_checklist.md`
 - `conditional_reopen_protocol.md`
+- `../plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
+- `../milestones/F7_post_h34_reopen_trigger_specification_bundle/`
+- `../milestones/F8_post_h34_beyond_origin_bridge_roadmap/`
+- `../milestones/P21_post_h34_planning_surface_sync/`
 
 ## Required audit anchors
 
@@ -122,4 +126,8 @@ bundle. The current packet is anchored on active `H32` plus the current
 `H34` docs-only control packet, with preserved upstream
 `H33/R39/H31/H30/H29/R38/R37/R36/H28/H27` as the current Origin-core control
 chain and preserved `H25/H23/H21/H19` as the older same-endpoint control
-stack.
+stack. The latest downstream follow-on wave remains planning-only:
+`F7` makes future same-substrate reopen criteria mechanical,
+`F8` stores beyond-Origin milestone families without activating them,
+`F9/F10/F11` remain inactive roadmap storage only, and `P21` aligns the
+top-level control surfaces to that same no-reopen interpretation.

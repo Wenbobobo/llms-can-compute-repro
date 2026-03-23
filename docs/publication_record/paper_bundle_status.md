@@ -41,7 +41,11 @@ state under `docs/publication_record/paper_package_plan.md`, anchored to the
 current `H32` Origin-core evidence chain plus the current `H34` docs-only
 control packet, while preserving `H33` as the prior question-selection step
 and `H25/H23` as historical same-endpoint control context, with claim/evidence
-scope kept closed by default.
+scope kept closed by default. The latest downstream follow-on work remains
+planning-only rather than experimental widening: `F7` preserves a mechanical
+same-substrate reopen specification, `F8` preserves beyond-Origin roadmap
+storage, `F9/F10/F11` remain inactive placeholders only, and `P21` keeps the
+driver and wave-plan surfaces aligned to that no-reopen state.
 
 ## Mandatory tables
 
