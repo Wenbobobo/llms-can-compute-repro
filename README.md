@@ -26,8 +26,11 @@ the current completed semantic-boundary retrieval-contract gate remains
 `R42_origin_append_only_memory_retrieval_contract_gate`, the current
 coequal-mainline model bundle is
 `F20_post_r42_dual_mode_model_mainline_bundle`, the completed operational
-audit lane remains `P26_post_h37_promotion_and_artifact_hygiene_audit`, the
-current canonical derivative bundle remains
+explicit merge packet is
+`P27_post_h41_clean_promotion_and_explicit_merge_packet`, the preserved prior
+operational audit lane remains
+`P26_post_h37_promotion_and_artifact_hygiene_audit`, the current canonical
+derivative bundle remains
 `F15_post_h36_origin_goal_reanchor_bundle`, the current candidate-isolation
 bundle is `F16_post_h37_r41_candidate_isolation_bundle`, the current
 same-substrate exit bundle is
@@ -53,13 +56,15 @@ The narrow current stack is:
   fixes `R42 -> R43 -> R44` as the bounded semantic-boundary ladder, then
   explicitly activates that route once and validates the first retrieval-
   contract gate on `6/6` tasks and `65/65` exact observations;
-- `F20 -> H41` records the coequal-mainline dual-mode model posture and then
-  explicitly authorizes exact `R43` plus coequal model `R45` while keeping
-  `R41` deferred, `R44` behind later `H42`, and merge explicit through `P27`.
+- `F20 -> H41 -> P27` records the coequal-mainline dual-mode model posture,
+  explicitly authorizes exact `R43` plus coequal model `R45`, and then lands
+  one explicit merge packet that keeps `main` untouched while fixing `R43` as
+  the next required lane.
 
 What stays blocked or deferred:
 
 - `R41` remains deferred behind a later explicit contradiction packet;
+- merge back to `main` remains staged and unexecuted inside `P27`;
 - `R43` is authorized but not completed;
 - `R45` is authorized but not completed;
 - `R44` remains deferred behind later `H42_post_r43_route_selection_packet`;
@@ -71,13 +76,15 @@ For current work, trust
 `tmp/active_wave_plan.md`,
 `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`,
 `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`,
+`docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`,
 `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`,
 `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
 `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
 `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`,
-`results/H40...`, `results/R42...`, `results/H38...`, `results/P26...`,
+`results/P27...`, `results/H40...`, `results/R42...`, `results/H38...`,
+`results/P26...`,
 `results/H37...`, `results/P25...`, `results/H36...`, `results/H35...`,
 `results/R40...`, and the preserved
 `results/H34...` / `results/H32...` / `results/R39...` summaries ahead of the
@@ -124,6 +131,9 @@ historical packet inventory below.
 - The preserved prior docs-only sync packet is
   `P24_post_h36_bounded_scalar_runtime_sync`.
 - The completed operational support lane is
+  `P27_post_h41_clean_promotion_and_explicit_merge_packet`, with
+  `promotion_mode = explicit_merge_wave` and `merge_executed = false`.
+- The preserved prior operational audit lane is
   `P26_post_h37_promotion_and_artifact_hygiene_audit`, and it remains
   `audit_only`.
 - The current canonical derivative bundle is
@@ -140,8 +150,6 @@ historical packet inventory below.
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- The explicit next promotion wave is
-  `P27_post_h41_clean_promotion_and_explicit_merge_packet`.
 - The authorized next exact gate is
   `R43_origin_bounded_memory_small_vm_execution_gate`.
 - The authorized coequal model lane is
@@ -200,6 +208,9 @@ historical packet inventory below.
 - `H41` then authorizes exact `R43` plus coequal model `R45` while keeping
   `R41` deferred, keeping `R44` behind later `H42`, and keeping merge explicit
   through `P27`.
+- `P27` then records the clean post-`H41` source branch, lands one explicit
+  merge packet on `wip/p27-promotion-merge`, and still leaves `main`
+  unmerged.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -394,9 +405,9 @@ historical packet inventory below.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the landed `F16/H38/P26/F17`
-  control wave, the current `F18/F19` post-`H38` planning surface, the
-  preserved `P25/F15/H37` wave, the deferred `R41` design surface, and the
+- `docs/plans/README.md` — plans index for the landed `F20/H41/P27`
+  post-`R42` control stack, the current `F18/F19` post-`H38` planning surface,
+  the preserved `P25/F15/H37` wave, the deferred `R41` design surface, and the
   historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future design fixing the deferred `R41` threat-stress scope without activating it
@@ -408,6 +419,7 @@ historical packet inventory below.
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` — one-file summary for the current coequal-mainline model bundle
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` — one-file summary for the current docs-only aggressive long-arc decision packet
+- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json` — one-file summary for the completed operational explicit merge packet
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json` — one-file summary for the current docs-only activation packet selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json` — one-file summary for the completed first semantic-boundary retrieval-contract gate
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json` — one-file summary for the preserved prior docs-only keep-freeze packet after `F16`
@@ -429,6 +441,7 @@ historical packet inventory below.
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/README.md` — landed coequal-mainline model bundle fixing the exact-versus-model evidence boundary
 - `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/README.md` — landed current docs-only aggressive long-arc decision packet above `R42`
+- `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/README.md` — completed operational explicit merge packet that stages merge posture without merging `main`
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/README.md` — landed current docs-only activation packet for the semantic-boundary route
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/README.md` — landed current retrieval-contract gate for exact latest-write-by-address and stack-slot retrieval
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — preserved prior docs-only keep-freeze packet after `F16`

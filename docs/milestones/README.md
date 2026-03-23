@@ -21,11 +21,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R42_origin_append_only_memory_retrieval_contract_gate/` — completed current
   retrieval-contract gate validating exact latest-write-by-address and
   stack-slot retrieval on fixed semantic-boundary tasks.
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
+  operational explicit merge packet for the clean post-`H41` stack.
 - `F20_post_r42_dual_mode_model_mainline_bundle/` — current planning-only
   coequal-mainline model bundle fixing the exact-versus-model evidence
   boundary and dual implementation posture.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
-  operational promotion/artifact audit lane from the current clean branch.
+  preserved prior operational promotion/artifact audit lane from the earlier
+  clean branch.
 - `F18_post_h38_origin_core_long_arc_bundle/` — current planning-only
   long-arc bundle fixing the post-`H38` claim ladder, preferred route, and
   worktree/merge policy.
@@ -119,6 +122,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   operational audit that records packet split, branch posture, and large-
   artifact policy above `H38`.
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
+  operational merge packet that stages explicit merge posture without merging
+  `main`.
 
 ## Current Planning And Deferred Follow-Ons
 
@@ -134,8 +140,6 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
-- `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — explicit next
-  promotion/merge wave fixed by `H41`.
 - `F14_post_f13_conditional_reopen_readiness_bundle/` — preserved planning-only
   bundle that stores one future contradiction-driven packet blueprint and one
   future runtime-audit blueprint without authorizing either one.
@@ -195,9 +199,10 @@ stack:
 - `H36` is the preserved active routing/refreeze packet.
 - `R42` is the completed current retrieval-contract gate underneath `H41`.
 - `F20` is the current coequal-mainline model bundle.
-- `P26` is the completed operational promotion/artifact audit lane, not merge
-  authorization.
-- `P27` is the explicit next promotion/merge wave.
+- `P27` is the completed operational explicit merge packet and keeps
+  `merge_executed = false`.
+- `P26` is the preserved prior operational promotion/artifact audit lane, not
+  merge authorization.
 - `F16` is the current candidate-isolation bundle.
 - `F17` is the current planning-only route-selection bundle.
 - `F18` is the current planning-only long-arc bundle.

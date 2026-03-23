@@ -18,7 +18,11 @@ The current coequal-mainline model bundle is:
 
 - `F20_post_r42_dual_mode_model_mainline_bundle`
 
-The completed operational promotion/artifact audit lane is:
+The completed operational explicit merge packet is:
+
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet`
+
+The preserved prior operational promotion/artifact audit lane is:
 
 - `P26_post_h37_promotion_and_artifact_hygiene_audit`
 
@@ -47,8 +51,9 @@ The preserved prior semantic-boundary activation packet is:
 - `H40_post_h38_semantic_boundary_activation_packet`
 
 This stage keeps the current Origin-core chain explicit through one completed
-retrieval-contract gate, one planning-only coequal-model bundle, and one later
-explicit post-`R42` decision packet:
+retrieval-contract gate, one planning-only coequal-model bundle, one later
+explicit post-`R42` decision packet, and one completed operational merge
+packet:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
 - `R36` preserves the narrow precision boundary on the active bundle;
@@ -93,7 +98,10 @@ explicit post-`R42` decision packet:
   replacing exact evidence; and
 - `H41` explicitly authorizes exact `R43` plus coequal model `R45` while
   keeping `R41` deferred, keeping `R44` behind later `H42`, and keeping merge
-  explicit through `P27`.
+  explicit through `P27`; and
+- `P27` records the clean post-`H41` source branch, stages explicit merge
+  posture on a dedicated packet branch, and still leaves `merge_executed =
+  false`.
 
 ## Current Machine-State Meaning
 
@@ -186,6 +194,12 @@ explicit post-`R42` decision packet:
   `promotion_mode = audit_only`,
   `target_branch = main`,
   `merge_recommended = false`;
+- `P27` is now complete as the operational explicit merge packet:
+  `current_clean_source_branch = wip/h41-r43-mainline`,
+  `explicit_merge_branch = wip/p27-promotion-merge`,
+  `promotion_mode = explicit_merge_wave`,
+  `merge_recommended = false`,
+  `merge_executed = false`;
 - `F17` is now complete as the same-substrate exit-criteria bundle:
   `same_substrate_route_state = later_explicit_packet_still_required`,
   `semantic_boundary_route = f9`,
@@ -255,7 +269,7 @@ explicit post-`R42` decision packet:
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
   `F2_future_frontier_recheck_activation_matrix` and downstream of
-  `H41/F20/H40/H36/F16/F17/F18/F19/P26/F15/F14/R42`.
+  `H41/F20/P27/H40/H36/F16/F17/F18/F19/P26/F15/F14/R42`.
 
 ## Completed Order
 
@@ -294,29 +308,30 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H40_post_h38_semantic_boundary_activation_packet` ->
 `R42_origin_append_only_memory_retrieval_contract_gate` ->
 `F20_post_r42_dual_mode_model_mainline_bundle` ->
-`H41_post_r42_aggressive_long_arc_decision_packet`
+`H41_post_r42_aggressive_long_arc_decision_packet` ->
+`P27_post_h41_clean_promotion_and_explicit_merge_packet`
 
 ## Next Planned Order
 
 The current justified next move is no longer a post-`R42` control-override
-design. `F20` and `H41` have already landed. The stack now fixes one explicit
-promotion wave plus one exact next gate and one coequal model lane.
+design or an unresolved merge wave. `F20`, `H41`, and `P27` have already
+landed. The stack now fixes one completed operational merge packet, one exact
+next gate, and one coequal model lane.
 
 The current admissible follow-on work is:
 
 - low-priority manuscript / README / blog alignment work;
-- explicit `P27` promotion/merge follow-through only after the clean stack is
-  reviewed;
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20`;
 - bounded-memory small-vm execution under the authorized `R43` exact gate;
 - coequal model work under the authorized `R45` lane;
 - later `H42` route-selection preparation, but not `R44` execution by
-  momentum.
+  momentum; and
+- later explicit merge review only if a future operational packet decides to
+  merge `main` after the clean source branch remains coherent.
 
 The current conditional forward order is:
 
-`P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
 `R43_origin_bounded_memory_small_vm_execution_gate` ->
 `R45_origin_dual_mode_model_mainline_gate` ->
 `H42_post_r43_route_selection_packet` ->
@@ -331,7 +346,7 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`P27_post_h41_clean_promotion_and_explicit_merge_packet`
+`R43_origin_bounded_memory_small_vm_execution_gate`
 
 ## Control References
 
@@ -358,10 +373,12 @@ The next required order is now:
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
+- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
+- `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
@@ -400,6 +417,8 @@ The next required order is now:
   case execution wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` remains deferred and
   inactive until `H42` authorizes it.
+- merge back to `main` remains unexecuted; `P27` records explicit merge
+  posture only.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 
@@ -413,7 +432,9 @@ The next required order is now:
   current retrieval-contract gate.
 - `F20_post_r42_dual_mode_model_mainline_bundle` is the current coequal-
   mainline model bundle.
-- `P26_post_h37_promotion_and_artifact_hygiene_audit` is the completed
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the completed
+  operational explicit merge packet and keeps `merge_executed = false`.
+- `P26_post_h37_promotion_and_artifact_hygiene_audit` is the preserved prior
   operational promotion/artifact audit lane.
 - `F16_post_h37_r41_candidate_isolation_bundle` is the current candidate
   isolation bundle.
@@ -440,8 +461,6 @@ The next required order is now:
 - `F19_post_f18_restricted_wasm_useful_case_roadmap` remains the current
   semantic-boundary roadmap behind `H40/R42`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred.
-- `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the explicit
-  next promotion/merge wave.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is the authorized next
   exact gate.
 - `R45_origin_dual_mode_model_mainline_gate` is the authorized coequal model
@@ -460,11 +479,11 @@ The next required order is now:
 - `F9` remains the preferred forward semantic-boundary roadmap and `F11`
   remains new-substrate.
 - the current forward execution ladder is
-  `P27 -> R43 -> R45 -> H42 -> conditional R44`.
+  `R43 -> R45 -> H42 -> conditional R44`.
 
 ## Historical Reference
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42/F20/H41`
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42/F20/H41/P27`
 packet chain change the current routing target, not the historical record.

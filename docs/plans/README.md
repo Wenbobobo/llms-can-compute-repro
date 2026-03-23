@@ -17,6 +17,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   control-override design surface that lands the planning-only `F20` model
   bundle plus the docs-only `H41` aggressive long-arc decision packet above
   completed `R42`.
+- `2026-03-24-post-h41-p27-explicit-merge-wave-design.md` — the current
+  operational merge-wave design surface that lands `P27` and keeps `main`
+  untouched while fixing `R43` as the next required exact lane.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -82,7 +85,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/` —
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
-  explicit next promotion/merge wave fixed by the post-`R42` override.
+  completed operational explicit merge packet for the post-`R42` override.
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
   candidate-isolation bundle for the saved `R41` catalog.
 - `../milestones/F17_post_h38_same_substrate_exit_criteria_bundle/` —
@@ -133,8 +136,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Historical Plan Groups
 
-- `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan and
-  control-override design set.
+- `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
+  control-override, and explicit merge-wave design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

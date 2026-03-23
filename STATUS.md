@@ -39,14 +39,18 @@
   fix the preferred semantic-boundary route plus the bounded `R42 -> R43 ->
   R44` ladder; `H40` activates that route explicitly; `R42` keeps it alive on
   `6/6` fixed tasks with `65/65` exact observations; `F20` records the
-  coequal-mainline dual-mode model posture; and `H41` authorizes exact `R43`
-  plus coequal model `R45` while keeping `R41` deferred, `R44` behind later
-  `H42`, and merge explicit through `P27`.
+  coequal-mainline dual-mode model posture; `H41` authorizes exact `R43`
+  plus coequal model `R45` while keeping `R41` deferred and `R44` behind later
+  `H42`; and `P27` then lands the explicit merge packet while still keeping
+  `main` untouched.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
   `P24_post_h36_bounded_scalar_runtime_sync`.
 - The completed operational support lane is
+  `P27_post_h41_clean_promotion_and_explicit_merge_packet`, with
+  `promotion_mode = explicit_merge_wave` and `merge_executed = false`.
+- The preserved prior operational audit lane is
   `P26_post_h37_promotion_and_artifact_hygiene_audit`, and it does not
   authorize a merge.
 - The current canonical derivative bundle is
@@ -63,8 +67,6 @@
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- `P27_post_h41_clean_promotion_and_explicit_merge_packet` is now fixed as the
-  explicit next promotion/merge wave.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the
   authorized next exact gate.
 - `R45_origin_dual_mode_model_mainline_gate` is now fixed as the authorized
@@ -137,6 +139,10 @@
 - `P26_post_h37_promotion_and_artifact_hygiene_audit` is now complete:
   it fixes the current clean audit branch, packet split, and large-artifact
   policy without authorizing a merge.
+- `P27_post_h41_clean_promotion_and_explicit_merge_packet` is now complete:
+  it fixes the clean post-`H41` source branch, stages explicit merge posture on
+  `wip/p27-promotion-merge`, keeps `merge_executed = false`, and makes `R43`
+  the next required exact lane.
 - `F17_post_h38_same_substrate_exit_criteria_bundle` is now complete:
   it records the later route-selection rules without authorizing a runtime
   lane.
