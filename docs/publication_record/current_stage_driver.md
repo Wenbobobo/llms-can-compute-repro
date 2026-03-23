@@ -4,14 +4,18 @@
 
 The current active stage is:
 
-- `H32_post_r38_compiled_boundary_refreeze`
+- `H36_post_r40_bounded_scalar_family_refreeze`
 
-The current docs-only control packet is:
+The preserved prior docs-only control packet is:
 
-- `H34_post_r39_later_explicit_scope_decision_packet`
+- `H35_post_p23_bounded_scalar_family_runtime_decision_packet`
 
-This stage freezes the current Origin-core chain after one explicit
-post-`H30` extension decision:
+The current docs-only sync packet is:
+
+- `P24_post_h36_bounded_scalar_runtime_sync`
+
+This stage now freezes the current Origin-core chain after one explicit
+post-`P23` bounded-scalar runtime reopen:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
 - `R36` preserves the narrow precision boundary on the active bundle;
@@ -19,14 +23,20 @@ post-`H30` extension decision:
 - `H31` authorizes exactly one further tiny extension on the same substrate;
 - `R38` validates one richer compiled control/call family without widening the
   opcode surface or reopening blocked lanes;
-- `H33` keeps `H32` active while selecting one same-substrate next question
-  rather than automatic broader compiled execution;
+- `H33` builds on the preserved `H32` refreeze while selecting one
+  same-substrate next question;
 - `R39` executes one declared helper-body permutation with target renumbering
   and shows that exactness plus final-state preservation survive that declared
   control-surface change on both rows;
-- `H34` keeps `H32` active while selecting
-  `freeze_compiled_boundary_as_complete_for_now` and leaving no active
-  downstream runtime lane.
+- `H34` interprets that result as complete-for-now narrow support and leaves no
+  active downstream runtime lane;
+- `H35` authorizes exactly one sharper bounded-scalar same-substrate runtime
+  gate after `F13/F14/P23`;
+- `R40` validates explicit bounded frame locals and typed `FLAG` slots on the
+  same substrate and same opcode surface;
+- `H36` refreezes that result as the current narrow top of stack;
+- `P24` syncs the driver and handoff surfaces to the landed `H35/R40/H36`
+  state.
 
 ## Current Machine-State Meaning
 
@@ -39,75 +49,69 @@ post-`H30` extension decision:
   `scientific_target = origin_core_append_only_retrieval_small_vm`;
 - `H29` remains the preserved upstream Origin-core refreeze packet:
   `origin_core_chain_state = positive_on_current_bundle`;
-- `R36` remains complete as a narrow precision-boundary audit:
-  float32 `single_head` fails on selected inflated horizons while bounded
-  decomposition schemes stay exact on the same rows;
-- `R37` remains complete as a tiny compiled-boundary gate:
-  one admitted bytecode subset stays exact across source reference, lowered
-  interpreter, and accelerated free-running execution on the current substrate;
+- `R36` remains complete as a narrow precision-boundary audit;
+- `R37` remains complete as a tiny compiled-boundary gate;
 - `H30` remains the preserved post-`R36/R37` scope-decision packet:
-  `decision_state = origin_core_tiny_compiled_boundary_refrozen`,
-  `compiled_boundary_state = tiny_compiled_boundary_supported_narrowly`;
+  `decision_state = origin_core_tiny_compiled_boundary_refrozen`;
 - `H31` remains the preserved later explicit authorization packet:
   `authorization_outcome = execute_one_more_tiny_extension`,
   `admitted_extension_case = bytecode_subroutine_braid_6_a80`,
   `boundary_probe_case = bytecode_subroutine_braid_long_12_a160`;
-- `R38` is now complete as a narrow compiled control-surface extension gate:
-  one richer control/call family stays exact on the current substrate with the
-  same opcode surface as `R37`;
-- `H32` is the current active routing/refreeze packet:
+- `R38` remains complete as a narrow compiled control-surface extension gate;
+- `H32` remains the preserved compiled-boundary refreeze packet:
   `decision_state = origin_core_one_richer_compiled_control_family_refrozen`,
-  `compiled_boundary_state = one_richer_compiled_control_family_supported_narrowly`,
-  `next_required_lane = new_plan_required_before_any_further_compiled_boundary_or_scope_lift`;
-- `H33` remains the preserved prior docs-only control packet:
-  `decision_state = one_origin_core_substrate_question_authorized_docs_only`,
+  `compiled_boundary_state = one_richer_compiled_control_family_supported_narrowly`;
+- `H33` remains the preserved prior docs-only question-selection packet:
   `selected_outcome = authorize_one_origin_core_substrate_question`,
   `authorized_next_runtime_candidate = r39_origin_compiler_control_surface_dependency_audit`;
-- `R39` is now complete as a same-substrate dependency audit:
-  `lane_verdict = control_surface_dependence_not_detected_on_declared_permutation`,
-  `declared_perturbation = helper_body_permutation_with_target_renumbering`,
-  `next_priority_lane = later_explicit_post_r39_decision_packet_required`;
-- `H34` is the current docs-only control packet:
-  `decision_state = compiled_boundary_complete_for_now_docs_only`,
+- `R39` remains complete as a same-substrate dependency audit:
+  `lane_verdict = control_surface_dependence_not_detected_on_declared_permutation`;
+- `H34` remains the preserved no-runtime interpretation packet:
   `selected_outcome = freeze_compiled_boundary_as_complete_for_now`,
-  `authorized_next_runtime_candidate = none`,
-  `reopen_precondition = new_contradiction_or_sharper_same_substrate_gap_required`,
-  `next_required_lane = no_active_downstream_runtime_lane`;
+  `authorized_next_runtime_candidate = none`;
 - `F5` remains complete as the post-`H34` contradiction scout:
   `reopen_candidate_state = no_reopen_candidate_survives`;
 - `F6` remains complete as the post-`P20` future-option matrix:
   `default_next_mode = hold_no_reopen_freeze_and_continue_docs_or_planning_only_work`;
-- `F7` is now complete as the planning-only reopen-trigger specification
-  bundle:
-  `planning_surface_state = reopen_rules_mechanicalized_without_runtime_reauthorization`;
-- `F8` is now complete as the planning-only beyond-Origin bridge roadmap:
-  `future_storage_state = roadmap_families_saved_without_scope_lift`;
-- `F10` is now complete as the planning-only executor-value comparator matrix:
-  `planning_surface_state = richer_value_obligations_made_explicit_without_runtime_reauthorization`;
-- `F12` is now complete as the post-`F10` origin-claim reanchor bundle:
-  `planning_surface_state = current_origin_facing_delta_reanchored_under_h34`;
-- `F13` is now complete as the bounded scalar value-family spec:
+- `F7` remains complete as the planning-only reopen-trigger specification
+  bundle;
+- `F8` remains complete as the planning-only beyond-Origin bridge roadmap;
+- `F10` remains complete as the planning-only executor-value comparator matrix;
+- `F12` remains complete as the post-`F10` origin-claim reanchor bundle;
+- `F13` remains complete as the bounded scalar value-family specification:
   `planning_surface_state = bounded_scalar_family_preactivation_specified_without_runtime_reauthorization`;
-- `F14` is now complete as the conditional reopen-readiness bundle:
-  `planning_surface_state = contradiction_blueprint_saved_without_runtime_reauthorization`;
-- `F9` now remains preserved as blocked roadmap storage downstream of
-  `F10/F13`:
+- `F14` remains complete as the conditional reopen-readiness bundle;
+- `H35` is now the preserved prior docs-only bounded-family runtime-decision
+  packet:
+  `selected_outcome = authorize_one_bounded_scalar_family_runtime_gate`,
+  `authorized_next_runtime_candidate = r40_origin_bounded_scalar_locals_and_flags_gate`,
+  `authorized_runtime_scope = same_substrate_same_opcode_frame_only_bounded_scalar_locals_and_flags`;
+- `R40` is now complete as the bounded-scalar same-substrate runtime gate:
+  `lane_verdict = origin_bounded_scalar_locals_and_flags_supported_narrowly`,
+  `same_opcode_surface_kept = true`,
+  `flag_slot_case_count = 2`,
+  `negative_control_rejection_count = 3`,
+  `next_priority_lane = h36_post_r40_bounded_scalar_family_refreeze`;
+- `H36` is now the current active routing/refreeze packet:
+  `decision_state = bounded_scalar_family_refrozen_narrowly`,
+  `bounded_scalar_family_state = explicit_bounded_scalar_locals_and_flags_supported_narrowly`,
+  `authorized_next_runtime_candidate = none`,
+  `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
+  `next_required_lane = no_active_downstream_runtime_lane`;
+- `P24` is now the current docs-only control-surface sync:
+  `control_surface_sync_state = post_h36_bounded_scalar_runtime_wave_indexed`;
+- `F9` remains preserved as blocked roadmap storage downstream of
+  `F10/F13/H35/R40`:
   `future_storage_state = semantic_boundary_family_still_blocked`;
-- `F11` now remains preserved as new-substrate roadmap storage downstream of
-  `F10/F13`:
+- `F11` remains preserved as new-substrate roadmap storage downstream of
+  `F10/F13/H35/R40`:
   `future_storage_state = hybrid_family_still_requires_new_substrate`;
-- `P21` remains complete as the prior docs-only planning-surface sync:
-  `control_surface_sync_state = first_post_h34_planning_wave_indexed`;
-- `P22` remains complete as the prior docs-only planning-surface sync:
-  `control_surface_sync_state = post_f10_planning_wave_indexed`;
-- `P23` is now complete as the current docs-only planning-surface sync:
-  `control_surface_sync_state = post_f13_family_first_wave_indexed`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
   `F2_future_frontier_recheck_activation_matrix` and downstream of
-  `F10/F13/F14/P23`.
+  `H35/R40/H36/F10/F13/F14/P24`.
 
 ## Completed Order
 
@@ -130,66 +134,25 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H32_post_r38_compiled_boundary_refreeze` ->
 `H33_post_h32_conditional_next_question_packet` ->
 `R39_origin_compiler_control_surface_dependency_audit` ->
-`H34_post_r39_later_explicit_scope_decision_packet`
+`H34_post_r39_later_explicit_scope_decision_packet` ->
+`H35_post_p23_bounded_scalar_family_runtime_decision_packet` ->
+`R40_origin_bounded_scalar_locals_and_flags_gate` ->
+`H36_post_r40_bounded_scalar_family_refreeze`
 
 ## Next Planned Order
 
-The current justified next move is now the landed `H34` interpretation rather
-than another automatic runtime lane. `H32` still preserves the narrow
-compiled-boundary result after one explicit extension, `H33` converted the
-next step into one explicit same-substrate question, and `R39` answered that
-question on one declared perturbation. `H34` now interprets that result as
-`freeze_compiled_boundary_as_complete_for_now`.
+The current justified next move is now the landed `H36` interpretation rather
+than another automatic runtime lane. `H35` named one bounded-scalar runtime
+question, `R40` answered it narrowly on the current substrate, and `H36`
+freezes that result without automatically activating the deferred threat lane.
 
-The clean-worktree closeout lane
-`P18_post_h32_clean_worktree_promotion` is now complete on branch
-`wip/h31-later-explicit`, `R39` is complete as a downstream runtime audit, and
-`H34` is complete as the required later explicit interpretation packet.
-The downstream closeout/support lanes are also now complete:
+The current admissible follow-on work is:
 
-- `P20_post_h34_manuscript_narrative_resync` aligns the paper-facing bundle to
-  the landed `H34` state;
-- `F5_post_h34_contradiction_scout_matrix` records that
-  `no_reopen_candidate_survives`;
-- `F6_post_p20_future_option_matrix` records docs/planning maintenance as the
-  current admissible default while runtime remains inactive.
-
-The current admissible follow-on work is planning-only and docs-only:
-
-- `F7_post_h34_reopen_trigger_specification_bundle` preserves the mechanical
-  contradiction/reopen rules without authorizing one now;
-- `F8_post_h34_beyond_origin_bridge_roadmap` preserves the broader roadmap
-  classification layer;
-- `F10_post_h34_executor_value_comparator_matrix` now makes richer
-  executor-visible value and comparator obligations explicit without opening a
-  runtime lane;
-- `F12_post_f10_origin_claim_delta_reanchor_bundle` now reanchors the origin
-  materials to the current `H34` interpretation without reopening runtime;
-- `F13_post_f12_bounded_scalar_value_family_spec` now specifies the nearest
-  same-substrate richer value family at bounded preactivation granularity;
-- `F14_post_f13_conditional_reopen_readiness_bundle` now stores one
-  contradiction-led future packet and audit blueprint without authorizing
-  either one;
-- `P23_post_f13_planning_surface_sync` aligns the control surfaces to that
-  family-first planning-only reading while keeping `F9` blocked and `F11`
-  new-substrate.
-
-The preserved execution design surface for `R39` is:
-
-- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-
-The preserved interpretation design surface for `H34` is:
-
-- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
-
-The preserved planning-wave design surfaces after `H34/F5/F6` are:
-
-- `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
-- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
-- `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
-
-Those designs keep the line narrow, preserve the no-reopen state, and fix the
-current planning work as comparator-first rather than automatic widening.
+- docs-only and planning-only maintenance under `P24`;
+- low-priority manuscript / README / blog alignment work;
+- saved future design for
+  `R41_origin_runtime_relevance_threat_stress_audit` without activating it;
+- preserved planning-only roadmap work under `F2/F7/F8/F9/F10/F11/F12/F13/F14`.
 
 The next required order is now:
 
@@ -211,98 +174,57 @@ no active downstream runtime lane
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 - `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
-- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
-- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
-- `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
-- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/`
-- `docs/milestones/H33_post_h32_conditional_next_question_packet/`
-- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
-- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
-- `docs/milestones/P18_post_h32_clean_worktree_promotion/`
-- `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
-- `docs/milestones/F5_post_h34_contradiction_scout_matrix/`
-- `docs/milestones/F6_post_p20_future_option_matrix/`
-- `docs/milestones/F7_post_h34_reopen_trigger_specification_bundle/`
-- `docs/milestones/F8_post_h34_beyond_origin_bridge_roadmap/`
-- `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/`
-- `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`
-- `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/`
-- `docs/milestones/P21_post_h34_planning_surface_sync/`
-- `docs/milestones/P22_post_f10_planning_surface_sync/`
-- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
-- `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
-- `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
-- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
+- `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`
+- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
+- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
+- `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
-- `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
-- `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
+- `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
+- `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/`
+- `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/`
+- `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/`
 - `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
 - `docs/milestones/F13_post_f12_bounded_scalar_value_family_spec/`
 - `docs/milestones/F14_post_f13_conditional_reopen_readiness_bundle/`
-- `docs/milestones/P23_post_f13_planning_surface_sync/`
+- `docs/publication_record/current_stage_driver.md`
+- `tmp/active_wave_plan.md`
 
 ## Standing Gates
 
 - `R29` remains blocked and does not authorize execution.
 - `F3` remains blocked and planning-only.
-- `F2` remains planning-only and downstream of `H33/R39/H34/F10/F13/F14/P23`.
+- `F2` remains planning-only and downstream of
+  `H35/R40/H36/F10/F13/F14/P24`.
+- `R41_origin_runtime_relevance_threat_stress_audit` remains deferred and
+  inactive until a new explicit post-`R40` packet authorizes it.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 
 ## Active Bounded Lanes
 
-- `H32_post_r38_compiled_boundary_refreeze` is the current active routing
+- `H36_post_r40_bounded_scalar_family_refreeze` is the current active routing
   packet.
-- `H34_post_r39_later_explicit_scope_decision_packet` is the current docs-only
-  control packet above `H32`.
-- `H33_post_h32_conditional_next_question_packet` remains the preserved prior
-  docs-only question-selection packet under `H34`.
-- `H31_post_h30_later_explicit_boundary_decision_packet` remains the preserved
-  explicit authorization packet under `H32`.
-- `H30_post_r36_r37_scope_decision_packet` remains the preserved prior
+- `H35_post_p23_bounded_scalar_family_runtime_decision_packet` is the
+  preserved prior docs-only control packet under `H36`.
+- `P24_post_h36_bounded_scalar_runtime_sync` is the current docs-only sync
+  packet.
+- `R40_origin_bounded_scalar_locals_and_flags_gate` is the completed
+  bounded-scalar runtime gate, not a routing change by itself.
+- `H34_post_r39_later_explicit_scope_decision_packet` remains the preserved
+  earlier no-runtime interpretation packet above `H32`.
+- `H32_post_r38_compiled_boundary_refreeze` remains the preserved earlier
   compiled-boundary refreeze packet.
-- `H29_refreeze_after_r34_r35_origin_core_gate` remains the preserved upstream
-  refreeze packet under `H32`.
-- `R36_origin_long_horizon_precision_scaling_gate` remains the preserved
-  narrow precision-boundary lane.
-- `R37_origin_compiler_boundary_gate` remains the preserved tiny
-  compiled-boundary gate.
-- `R38_origin_compiler_control_surface_extension_gate` remains the preserved
-  richer control-surface extension gate.
-- `R39_origin_compiler_control_surface_dependency_audit` is the completed
+- `R39_origin_compiler_control_surface_dependency_audit` remains the completed
   same-substrate dependency audit, not a routing change by itself.
-- `F7_post_h34_reopen_trigger_specification_bundle` remains the preserved
-  planning-only contradiction/reopen specification surface under `H34`.
-- `F8_post_h34_beyond_origin_bridge_roadmap` remains the preserved
-  planning-only beyond-Origin roadmap surface under `H34`.
-- `F10_post_h34_executor_value_comparator_matrix` remains the current
-  planning-only semantic bridge surface for richer executor-visible value
-  obligations.
-- `F12_post_f10_origin_claim_delta_reanchor_bundle` is the current
-  origin-facing canonical delta surface under `H34`.
-- `F13_post_f12_bounded_scalar_value_family_spec` is the current bounded
-  family-first preactivation surface under `H34`.
-- `F14_post_f13_conditional_reopen_readiness_bundle` is the current
-  conditional reopen-readiness surface under `H34`.
-- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains blocked
-  roadmap storage downstream of `F10/F13`.
-- `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains
-  new-substrate roadmap storage downstream of `F10/F13`.
-- `P21_post_h34_planning_surface_sync` remains the preserved prior docs-only
-  control-surface sync for the first post-`H34` planning wave.
-- `P22_post_f10_planning_surface_sync` remains the preserved prior docs-only
-  control-surface sync for the `F10`-led planning wave.
-- `P23_post_f13_planning_surface_sync` is the completed docs-only control
-  surface sync for the current family-first planning wave.
-- there is no active downstream runtime lane after `H34`; any future same-
-  substrate reopen requires a new contradiction-driven explicit packet.
-- `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved
-  negative same-endpoint closeout.
+- `F10`, `F12`, `F13`, and `F14` remain preserved planning/control surfaces
+  underneath the landed `H35/R40/H36` packet.
+- `F9` remains blocked and `F11` remains new-substrate.
+- there is no active downstream runtime lane after `H36`.
 
 ## Historical Reference
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34` packet chain change the current
-routing target, not the historical record.
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36` packet chain change the
+current routing target, not the historical record.

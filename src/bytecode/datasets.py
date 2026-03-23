@@ -632,6 +632,176 @@ def subroutine_braid_long_permuted_helpers_program(start: int, *, base_address: 
     )
 
 
+def bounded_scalar_flag_loop_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    if start < 0:
+        raise ValueError("bounded_scalar_flag_loop_program expects a non-negative start.")
+    counter_address = base_address
+    flag_address = base_address + 1
+    local_address = base_address + 2
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, start),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.EQ_I32),
+            BytecodeInstruction(
+                BytecodeOpcode.STORE_STATIC,
+                flag_address,
+                in_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                flag_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 12),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.SUB_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.JMP, 4),
+        ),
+        name=f"bytecode_bounded_scalar_flag_loop_{start}_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+            _frame_cell(local_address, BytecodeType.I32, "local_sum"),
+        ),
+    )
+
+
+def bounded_scalar_flag_loop_long_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    if start < 0:
+        raise ValueError("bounded_scalar_flag_loop_long_program expects a non-negative start.")
+    counter_address = base_address
+    flag_address = base_address + 1
+    left_address = base_address + 2
+    right_address = base_address + 3
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, start),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.EQ_I32),
+            BytecodeInstruction(
+                BytecodeOpcode.STORE_STATIC,
+                flag_address,
+                in_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                flag_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 16),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.SUB_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.JMP, 6),
+        ),
+        name=f"bytecode_bounded_scalar_flag_loop_long_{start}_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+            _frame_cell(left_address, BytecodeType.I32, "left_local"),
+            _frame_cell(right_address, BytecodeType.I32, "right_local"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_flag_branch_program(*, base_address: int = 0) -> BytecodeProgram:
+    local_address = base_address
+    flag_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 5),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_flag_branch_a{base_address}",
+        memory_layout=(
+            _frame_cell(local_address, BytecodeType.I32, "local_slot"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_flag_layout_program(*, base_address: int = 0) -> BytecodeProgram:
+    local_address = base_address
+    flag_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                local_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 5),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_flag_layout_a{base_address}",
+        memory_layout=(
+            _frame_cell(local_address, BytecodeType.I32, "local_slot"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_heap_escape_program(*, base_address: int = 0) -> BytecodeProgram:
+    counter_address = base_address
+    spilled_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 2),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 5),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, spilled_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, spilled_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_heap_escape_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _heap_cell(spilled_address, BytecodeType.I32, "spilled_local"),
+        ),
+    )
+
+
 def _helper_checkpoint_braid_layout(
     base_address: int,
     *,
@@ -923,6 +1093,31 @@ def harness_cases() -> tuple[BytecodeCase, ...]:
             iterated_helper_accumulator_program(20, counter_address=128, accumulator_address=129),
         ),
         BytecodeCase("control_flow", "long_exact_final_state", 768, subroutine_braid_long_program(12, base_address=160)),
+    )
+
+
+def bounded_scalar_family_cases() -> tuple[BytecodeCase, ...]:
+    return (
+        BytecodeCase(
+            "bounded_scalar_family",
+            "medium_exact_trace",
+            256,
+            bounded_scalar_flag_loop_program(6, base_address=320),
+        ),
+        BytecodeCase(
+            "bounded_scalar_family",
+            "long_exact_final_state",
+            768,
+            bounded_scalar_flag_loop_long_program(12, base_address=336),
+        ),
+    )
+
+
+def bounded_scalar_family_negative_programs() -> tuple[BytecodeProgram, ...]:
+    return (
+        invalid_bounded_scalar_flag_branch_program(base_address=352),
+        invalid_bounded_scalar_flag_layout_program(base_address=360),
+        invalid_bounded_scalar_heap_escape_program(base_address=368),
     )
 
 

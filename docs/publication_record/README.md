@@ -7,14 +7,16 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H32` active routing/refreeze packet plus the current `H34` docs-only
-  control packet, preserving `H27` as the negative closeout of the old
-  same-endpoint wave, `H28` as the Origin-core pivot packet,
-  `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the older
-  same-endpoint `H25/H23` stack as preserved historical context, treating
-  `R39` as one completed same-substrate audit rather than an automatic routing
-  change, and recording `H34` as the freeze-complete-for-now interpretation
-  packet rather than a new runtime authorization;
+  `H36` active routing/refreeze packet plus the preserved prior `H35`
+  docs-only control packet and current `P24` sync packet, preserving `H27`
+  as the negative closeout of the old same-endpoint wave, `H28` as the
+  Origin-core pivot packet, `H29/R36/R37/H30/H31/R38/H32/H33/H34` as
+  preserved upstream evidence/control context, treating `R39` and `R40` as
+  completed same-substrate downstream evidence rather than automatic routing
+  changes, and recording `H36` as the current bounded-scalar refreeze packet;
+- `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
+  the preserved design surface for the landed bounded-scalar runtime reopen
+  wave after `P23`;
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md` —
   the preserved design surface for the current family-first post-`F10`
   planning-only wave that landed `F12/F13/F14/P23`;
@@ -38,8 +40,8 @@ Current control docs:
   preserved historical pre-execution planning packet that defined the narrow
   `R37 -> H30` route before execution;
 - `docs/plans/README.md` — navigation index for the current unattended master
-  plan, the current `H31/R38/H32/P18` design packet, and the historical design
-  stack;
+  plan, the landed bounded-scalar runtime design packet, and the historical
+  design stack;
 - `docs/milestones/README.md` — navigation index for the current active/frozen
   milestones, deferred next lanes, blocked/planning-only bundles, and
   preserved historical packets;
@@ -52,11 +54,11 @@ Current control docs:
   `docs/milestones/H30_post_r36_r37_scope_decision_packet/`,
   `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`,
   `docs/milestones/R38_origin_compiler_control_surface_extension_gate/`, and
-  `docs/milestones/H32_post_r38_compiled_boundary_refreeze/` — the current
-  active/preserved Origin-core pivot packet, primitive gate, execution gate,
-  upstream refreeze, narrow precision-boundary follow-up, tiny compiled-boundary
-  gate, explicit later decision packet, richer compiled control-surface gate,
-  and current refreeze packet;
+  `docs/milestones/H32_post_r38_compiled_boundary_refreeze/` — the preserved
+  upstream Origin-core pivot packet, primitive gate, execution gate, upstream
+  refreeze, narrow precision-boundary follow-up, tiny compiled-boundary gate,
+  explicit later decision packet, richer compiled control-surface gate, and
+  earlier refreeze packet;
 - `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/`,
   `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/`,
   `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/`, and
@@ -64,11 +66,20 @@ Current control docs:
   preserved prior same-endpoint decision/closeout stack that remains historical
   rather than active.
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/` — the
-  landed docs-only packet that keeps `H32` active while authorizing only one
-  same-substrate next question;
+  landed docs-only packet above the preserved `H32` refreeze that authorizes
+  only one same-substrate next question;
 - `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/` — the
-  landed docs-only packet that keeps `H32` active while selecting
+  landed docs-only packet above the preserved `H32` refreeze that selects
   `freeze_compiled_boundary_as_complete_for_now`;
+- `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
+  — the landed docs-only packet that authorizes exactly one bounded-scalar
+  same-substrate runtime gate;
+- `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/` — the
+  completed bounded-scalar same-substrate runtime gate;
+- `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/` — the
+  landed current active routing/refreeze packet for the bounded-scalar wave;
+- `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/` — the landed
+  current docs-only control-surface sync after `H36`;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   the completed same-substrate dependency audit authorized by `H33`;
 - `docs/milestones/P20_post_h34_manuscript_narrative_resync/` — the completed
@@ -153,7 +164,7 @@ Current control docs:
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json` —
   machine-readable richer compiled control-surface gate on the same substrate;
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` —
-  machine-readable current active routing/refreeze packet for the post-`R38`
+  machine-readable preserved earlier routing/refreeze packet for the post-`R38`
   narrow compiled-boundary state;
 - `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` —
   machine-readable docs-only scope-decision packet freezing the current
@@ -161,6 +172,14 @@ Current control docs:
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
   — machine-readable same-substrate dependency-audit summary for one declared
   helper-body permutation with target renumbering;
+- `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`
+  — machine-readable docs-only packet authorizing exactly one bounded-scalar
+  runtime gate;
+- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` —
+  machine-readable bounded-scalar runtime-gate summary on the current
+  substrate;
+- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` —
+  machine-readable current active refreeze packet for the bounded-scalar wave;
 - `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
   machine-readable boundary refreeze for the bounded `R32` follow-up;
 - `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` —

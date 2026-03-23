@@ -12,13 +12,21 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H34_post_r39_later_explicit_scope_decision_packet/` — current docs-only
-  control packet that keeps `H32` active while selecting
-  `freeze_compiled_boundary_as_complete_for_now`.
-- `H32_post_r38_compiled_boundary_refreeze/` — current active routing/refreeze
-  packet.
-- `H33_post_h32_conditional_next_question_packet/` — preserved prior docs-only
-  control packet that selected the one justified next question.
+- `H36_post_r40_bounded_scalar_family_refreeze/` — current active
+  routing/refreeze packet freezing the bounded-scalar family narrowly on the
+  current substrate.
+- `H35_post_p23_bounded_scalar_family_runtime_decision_packet/` — preserved
+  prior docs-only control packet that authorized exactly one bounded-scalar
+  runtime gate.
+- `P24_post_h36_bounded_scalar_runtime_sync/` — current docs-only
+  control-surface sync after the landed `H35/R40/H36` wave.
+- `H34_post_r39_later_explicit_scope_decision_packet/` — preserved earlier
+  docs-only control packet that froze the compiled-boundary line
+  complete-for-now before the bounded-scalar reopen.
+- `H32_post_r38_compiled_boundary_refreeze/` — preserved earlier active
+  compiled-boundary refreeze packet.
+- `H33_post_h32_conditional_next_question_packet/` — preserved earlier
+  docs-only control packet that selected the one justified next question.
 - `H31_post_h30_later_explicit_boundary_decision_packet/` — preserved explicit
   authorization packet between `H30` and `R38`.
 - `H30_post_r36_r37_scope_decision_packet/` — preserved prior compiled-boundary
@@ -46,6 +54,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   same-substrate dependency audit on one declared helper-body permutation with
   target renumbering; it preserves narrow scope and does not change routing by
   itself.
+- `R40_origin_bounded_scalar_locals_and_flags_gate/` — completed bounded-
+  scalar same-substrate runtime gate validating explicit frame locals plus
+  typed `FLAG` slots on the same opcode surface.
 
 ## Completed Current-Wave Closeout
 
@@ -67,6 +78,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P23_post_f13_planning_surface_sync/` — completed current docs-only
   planning-surface sync that records `F12/F13/F14` while keeping `F9` blocked,
   `F11` new-substrate, and runtime inactive.
+- `P24_post_h36_bounded_scalar_runtime_sync/` — completed current docs-only
+  sync that records `H36` as active, `H35` as preserved prior control, and no
+  active downstream runtime lane after `R40`.
 
 ## Current Planning-Only Follow-ons
 
@@ -100,6 +114,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `../plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
   preserved design surface that led to the landed `H34` scope-decision
   packet.
+- `../plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
+  preserved design surface that led to the landed `H35 -> R40 -> H36 -> P24`
+  wave.
 - `../plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
   — preserved design surface that led to the completed `R39`
   same-substrate audit.
@@ -112,7 +129,7 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
   the landed explicit-extension wave after `H30`.
 - no further same-substrate or compiler-boundary extension is active by
-  default.
+  default after `H36`.
 - any later runtime, broader compiled, or frontier lane now requires a new
   contradiction-driven explicit packet.
 
@@ -147,14 +164,16 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H32` is active routing.
-- `H34` is the current docs-only control packet.
-- `H33` is the preserved prior docs-only question-selection packet.
+- `H36` is active routing.
+- `H35` is the preserved prior docs-only control packet.
+- `P24` is the current docs-only sync packet.
+- `H34` and `H33` are preserved earlier docs-only packets.
 - `H31` and `H30` are preserved upstream decision packets, not the next
   objective.
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
-- `R39` is complete as a downstream audit, not an active routing change.
+- `R39` and `R40` are complete downstream audits/gates, not active routing
+  changes by themselves.
 - `F7` and `F8` are preserved planning-only follow-on surfaces, not runtime
   packets.
 - `F10` is the current planning-only bridge surface, not a runtime packet.
@@ -163,7 +182,7 @@ stack:
 - `F14` is the current conditional reopen-readiness surface.
 - `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
   storage.
-- no active downstream runtime lane exists after `H34`.
+- no active downstream runtime lane exists after `H36`.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new

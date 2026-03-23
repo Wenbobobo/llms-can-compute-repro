@@ -8,6 +8,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` — the
+  preserved design surface for the landed bounded-scalar runtime reopen and
+  refreeze wave after `P23`.
 - `2026-03-23-post-f10-family-first-preactivation-design.md` — the preserved
   design surface for the current family-first preactivation wave after the
   completed `F10/P22` bridge wave.
@@ -68,6 +71,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   surface for the post-`P20/F5` future-option matrix.
 - `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — preserved handoff
   surface after the completed manuscript resync and contradiction scout.
+- `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
+  preserved design surface for the landed `H35 -> R40 -> H36 -> P24` wave.
 - `2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
   preserved design surface that led to the landed post-`R39` docs-only scope
   decision packet.
@@ -80,17 +85,26 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   the landed `H31 -> R38 -> H32` wave.
 - `../milestones/P18_post_h32_clean_worktree_promotion/` — completed clean
   worktree packaging lane for the post-`H32` bundle.
+- `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — current
+  active routing/refreeze packet for the bounded-scalar same-substrate wave.
+- `../milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
+  — preserved prior docs-only control packet that authorized `R40`.
+- `../milestones/P24_post_h36_bounded_scalar_runtime_sync/` — current
+  docs-only sync packet for the landed bounded-scalar runtime wave.
+- `../milestones/R40_origin_bounded_scalar_locals_and_flags_gate/` —
+  completed bounded-scalar runtime gate on the current substrate.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
-  landed docs-only scope-decision packet that keeps `H32` active while
-  freezing the compiled-boundary line complete-for-now.
+  preserved prior docs-only scope-decision packet above `H32` that freezes the
+  compiled-boundary line complete-for-now.
 - `../milestones/H33_post_h32_conditional_next_question_packet/` — landed
-  docs-only packet that keeps `H32` active while selecting the next question.
+  docs-only packet above the preserved `H32` refreeze that selects the next
+  question.
 - `../milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   completed same-substrate dependency audit downstream of `H33`.
 - `../milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
   — execution manifest for the completed `R39` audit.
-- `../milestones/H32_post_r38_compiled_boundary_refreeze/` — current active
-  routing/refreeze packet for the Origin-core line.
+- `../milestones/H32_post_r38_compiled_boundary_refreeze/` — preserved earlier
+  routing/refreeze packet in the Origin-core line.
 - `../milestones/R38_origin_compiler_control_surface_extension_gate/` —
   landed richer compiled control-surface extension gate on the active
   substrate.
@@ -128,5 +142,5 @@ its status against:
 4. the corresponding `results/<lane>/summary.json`
 
 Do not treat an older plan as authorization to reopen a blocked lane.
-When a saved plan and the current `H34/H32/H33/R39/R38/H31/H30` packet differ,
-trust the landed packet.
+When a saved plan and the landed `H36/H35/P24/R40` stack plus preserved
+`H34/H32` context differ, trust the landed packet.

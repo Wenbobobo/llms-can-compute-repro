@@ -113,13 +113,14 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "H32 is only positive if H30 stays narrow, H31 stays explicit, and R38 passes on the same substrate.",
         },
         {
-            "item_id": "driver_and_active_wave_route_through_h32_without_scope_lift",
+            "item_id": "driver_and_active_wave_preserve_h32_as_upstream_refreeze_without_scope_lift",
             "status": "pass"
             if contains_all(
                 inputs["current_stage_driver_text"],
                 [
+                    "h36_post_r40_bounded_scalar_family_refreeze",
+                    "h35_post_p23_bounded_scalar_family_runtime_decision_packet",
                     "h32_post_r38_compiled_boundary_refreeze",
-                    "h31_post_h30_later_explicit_boundary_decision_packet",
                     "r38_origin_compiler_control_surface_extension_gate",
                     "r29",
                     "f3",
@@ -128,13 +129,14 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
+                    "h36_post_r40_bounded_scalar_family_refreeze",
                     "h32_post_r38_compiled_boundary_refreeze",
                     "r38_origin_compiler_control_surface_extension_gate",
-                    "p18_post_h32_clean_worktree_promotion",
+                    "h35_post_p23_bounded_scalar_family_runtime_decision_packet",
                 ],
             )
             else "blocked",
-            "notes": "The canonical driver and short active-wave handoff should now route through H32, not stop at H30.",
+            "notes": "The canonical driver and short active-wave handoff should still preserve H32 as upstream refreeze context even though H36 is now active.",
         },
         {
             "item_id": "blocked_and_planning_only_lanes_remain_explicit",

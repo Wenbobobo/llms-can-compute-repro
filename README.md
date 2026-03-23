@@ -18,9 +18,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 ## Current Mainline Note
 
 As of `2026-03-23`, the canonical current stage is no longer the old
-same-endpoint `D0` recovery line. The active routing/refreeze packet remains
-`H32_post_r38_compiled_boundary_refreeze`, and the current docs-only control
-packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
+same-endpoint `D0` recovery line. The active routing/refreeze packet is now
+`H36_post_r40_bounded_scalar_family_refreeze`, the preserved prior docs-only
+control packet is `H35_post_p23_bounded_scalar_family_runtime_decision_packet`,
+and the current docs-only sync packet is
+`P24_post_h36_bounded_scalar_runtime_sync`, preserving:
 
 - `H27` as the negative closeout of the old same-endpoint recovery wave;
 - `H28` as the Origin-core pivot packet;
@@ -33,14 +35,24 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 - `R38` as the one-richer control/call-family compiled boundary gate on the
   same opcode surface;
 - `P18` as the operational clean-worktree packaging lane for this packet;
-- `H33` as the prior docs-only next-question packet that keeps `H32` active while
-  naming only `R39_origin_compiler_control_surface_dependency_audit` as the
-  one justified same-substrate follow-up question; and
+- `H33` as the prior docs-only next-question packet above the preserved `H32`
+  refreeze, naming only
+  `R39_origin_compiler_control_surface_dependency_audit` as the one justified
+  same-substrate follow-up question; and
 - `R39` as the completed same-substrate dependency audit showing that one
   declared helper-body permutation with target renumbering can preserve exact
   final state and workload while still changing the trace on both audited rows;
-- `H34` as the docs-only later explicit scope-decision packet that keeps `H32`
-  active while selecting `freeze_compiled_boundary_as_complete_for_now`;
+- `H34` as the docs-only later explicit scope-decision packet above the
+  preserved `H32` refreeze, selecting
+  `freeze_compiled_boundary_as_complete_for_now`;
+- `H35` as the docs-only bounded-family runtime-decision packet that
+  authorizes exactly one bounded-scalar same-substrate runtime gate;
+- `R40` as the completed bounded-scalar runtime gate validating explicit
+  bounded frame locals plus typed `FLAG` slots on the same substrate;
+- `H36` as the current active refreeze packet freezing that bounded-scalar
+  result narrowly and restoring no active downstream runtime lane by default;
+- `P24` as the completed control-surface sync for the landed
+  `H35 -> R40 -> H36` wave;
 - `P20` as the completed paper-facing manuscript/helper-doc resync that makes
   the prose bundle terminate on the landed `H34` state; and
 - `F5` as the completed planning-only contradiction scout that currently
@@ -78,10 +90,10 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
-`docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`,
-`results/H33...`, `results/R39...`, and the `results/H32...` / `results/R38...` /
-`results/H31...` / `results/H30...` summaries ahead of the historical packet
-inventory below.
+`docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
+`results/H35...`, `results/R40...`, `results/H36...`, and the preserved
+`results/H34...` / `results/H32...` / `results/R39...` summaries ahead of the
+historical packet inventory below.
 
 ## Current Boundary
 
@@ -107,13 +119,16 @@ inventory below.
 
 ## Current Gate Outcome
 
-- The current active stage is `H32_post_r38_compiled_boundary_refreeze`, not
+- The current active stage is `H36_post_r40_bounded_scalar_family_refreeze`, not
   the preserved prior `H30` packet or the earlier `H25` same-endpoint
   decision packet.
-- The current docs-only control packet is
-  `H34_post_r39_later_explicit_scope_decision_packet`, which selects
-  `freeze_compiled_boundary_as_complete_for_now` and names no active
-  downstream runtime lane.
+- The preserved prior docs-only control packet is
+  `H35_post_p23_bounded_scalar_family_runtime_decision_packet`, which names
+  only `R40_origin_bounded_scalar_locals_and_flags_gate` as the justified
+  bounded-scalar reopen.
+- The current docs-only sync packet is
+  `P24_post_h36_bounded_scalar_runtime_sync`, and there is no active
+  downstream runtime lane after `H36`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -131,6 +146,13 @@ inventory below.
   arbitrary control-surface freedom or broader compiler claims.
 - `H34` then interprets that result as complete-for-now narrow support rather
   than authorizing another same-substrate runtime move by momentum.
+- `H35` then authorizes exactly one sharper bounded-scalar same-substrate
+  runtime gate.
+- `R40` then shows that explicit bounded frame locals and typed `FLAG` slots
+  stay exact on one admitted row and one same-family boundary row while the
+  declared negatives are rejected.
+- `H36` then freezes that bounded-scalar result narrowly and does not activate
+  `R41` by momentum.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -331,8 +353,10 @@ inventory below.
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` — preserved design that led to the landed post-`R39` docs-only scope-decision packet, `H34`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — preserved post-`H32` planning packet that led to the landed docs-only `H33` question-selection step
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
-- `results/H32_post_r38_compiled_boundary_refreeze/summary.json` — one-file summary for the current active Origin-core refreeze packet
-- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` — one-file summary for the current docs-only scope-decision packet freezing the compiled-boundary line complete-for-now
+- `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json` — one-file summary for the preserved prior docs-only bounded-family runtime-decision packet
+- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
+- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` — one-file summary for the current active bounded-scalar refreeze packet
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` — one-file summary for the preserved prior docs-only scope-decision packet freezing the compiled-boundary line complete-for-now
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json` — one-file summary for the completed same-substrate dependency audit on one declared helper-body permutation
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json` — one-file summary for the completed one-richer compiled control/call-family gate
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` — one-file summary for the explicit later-extension authorization packet
@@ -342,8 +366,11 @@ inventory below.
 - `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — preserved historical design that landed `H24/R30/R31/H25`
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
-- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/README.md` — landed docs-only post-`R39` scope-decision packet that keeps `H32` active and selects freeze-complete-for-now
-- `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — landed docs-only conditional next-question packet that keeps `H32` active and authorizes only `R39`
+- `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/README.md` — landed docs-only bounded-family runtime-decision packet that authorizes exactly one same-substrate runtime gate
+- `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
+- `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/README.md` — landed current active refreeze packet for the bounded-scalar wave
+- `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/README.md` — landed docs-only sync packet after the bounded-scalar wave
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — landed docs-only conditional next-question packet above the preserved `H32` refreeze that authorizes only `R39`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/README.md` — completed same-substrate dependency audit authorized by `H33`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md` — execution manifest for the completed `R39` audit
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/worktree_runbook.md` — operational clean-worktree packaging runbook for the completed `H32` closeout wave
