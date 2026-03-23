@@ -11,7 +11,8 @@ no unrestricted Wasm, and no model lane replacing exact evidence.
 
 This milestone preserves:
 
-- `H42` as the current active docs-only route-selection packet;
+- `H42` as the completed upstream docs-only route-selection packet that
+  authorized `R44`;
 - `H36` as the preserved active routing/refreeze packet;
 - `F19` as the fixed semantic-boundary useful-case roadmap;
 - `R43` as the decisive upstream exact bounded-memory execution gate;

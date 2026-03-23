@@ -20,14 +20,17 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-24`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line, and it is no longer parked at the preserved
 `H40 -> R42` activation state alone. The current docs-only decision packet is
-now `H42_post_r43_route_selection_packet`, the preserved prior docs-only
-decision packet is
+now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only
+decision packet is `H42_post_r43_route_selection_packet`, the preserved
+earlier docs-only decision packet is
 `H41_post_r42_aggressive_long_arc_decision_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
 the current completed semantic-boundary retrieval-contract gate remains
 `R42_origin_append_only_memory_retrieval_contract_gate`, the current
 completed exact bounded-memory small-VM gate is now
 `R43_origin_bounded_memory_small_vm_execution_gate`, the current
+completed restricted useful-case gate is now
+`R44_origin_restricted_wasm_useful_case_execution_gate`, the current
 completed coequal model gate is now
 `R45_origin_dual_mode_model_mainline_gate`, the current
 coequal-mainline model bundle is
@@ -62,19 +65,21 @@ The narrow current stack is:
   fixes `R42 -> R43 -> R44` as the bounded semantic-boundary ladder, then
   explicitly activates that route once and validates the first retrieval-
   contract gate on `6/6` tasks and `65/65` exact observations;
-- `F20 -> H41 -> P27 -> R43 -> R45 -> H42` records the coequal-mainline
+- `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43` records the coequal-mainline
   dual-mode model posture, explicitly authorizes exact `R43` plus coequal
   model `R45`, lands one explicit merge packet that keeps `main` untouched,
   validates bounded-memory exact execution on `5/5` fixed families plus
   model-side exact execution on `2/2` admitted modes over the same family
-  set, and then explicitly authorizes `R44` as the next exact useful-case
-  gate.
+  set, validates the fixed `R44` useful-case kernel ladder exactly, and then
+  explicitly refreezes that result as bounded useful-case support only.
 
 What stays blocked or deferred:
 
 - `R41` remains deferred behind a later explicit contradiction packet;
 - merge back to `main` remains staged and unexecuted inside `P27`;
-- `R44` is now the next required exact useful-case gate;
+- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the
+  completed current restricted-Wasm / tiny-`C` useful-case gate;
+- no active downstream runtime lane now follows `H43`;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
 
@@ -86,6 +91,7 @@ For current work, trust
 `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`,
 `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`,
 `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`,
+`docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`,
 `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`,
 `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
@@ -124,8 +130,8 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H42_post_r43_route_selection_packet`, not the preserved prior
-  `H41` packet, the preserved prior
+  `H43_post_r44_useful_case_refreeze`, not the preserved prior
+  `H42` packet, the preserved earlier `H41` packet, the preserved prior
   `H40` packet, the earlier `H30` packet, or the earlier `H25`
   same-endpoint decision packet.
 - The active routing/refreeze packet remains
@@ -164,9 +170,10 @@ historical packet inventory below.
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- The current active route-selection packet is
-  `H42_post_r43_route_selection_packet`, and the next required exact lane is
-  `R44_origin_restricted_wasm_useful_case_execution_gate`.
+- The current active useful-case refreeze packet is
+  `H43_post_r44_useful_case_refreeze`, the preserved prior route-selection
+  packet is `H42_post_r43_route_selection_packet`, and no active downstream
+  runtime lane now follows `H43`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -432,7 +439,8 @@ historical packet inventory below.
 - `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json` — one-file summary for the preserved prior docs-only bounded-family runtime-decision packet
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` — one-file summary for the current coequal-mainline model bundle
-- `results/H42_post_r43_route_selection_packet/summary.json` — one-file summary for the current docs-only route-selection packet authorizing `R44`
+- `results/H42_post_r43_route_selection_packet/summary.json` — one-file summary for the preserved prior docs-only route-selection packet authorizing `R44`
+- `results/H43_post_r44_useful_case_refreeze/summary.json` — one-file summary for the current docs-only useful-case refreeze packet after completed `R44`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` — one-file summary for the preserved prior docs-only aggressive long-arc decision packet
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json` — one-file summary for the completed operational explicit merge packet
 - `results/R45_origin_dual_mode_model_mainline_gate/summary.json` — one-file summary for the completed coequal dual-mode model gate
@@ -457,12 +465,13 @@ historical packet inventory below.
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/README.md` — landed docs-only bounded-family runtime-decision packet that authorizes exactly one same-substrate runtime gate
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/README.md` — landed coequal-mainline model bundle fixing the exact-versus-model evidence boundary
-- `docs/milestones/H42_post_r43_route_selection_packet/README.md` — landed current docs-only route-selection packet above `R43/R45`
+- `docs/milestones/H43_post_r44_useful_case_refreeze/README.md` — landed current docs-only useful-case refreeze packet above `R44`
+- `docs/milestones/H42_post_r43_route_selection_packet/README.md` — landed preserved prior docs-only route-selection packet above `R43/R45`
 - `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/README.md` — landed preserved prior docs-only aggressive long-arc decision packet above `R42`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/README.md` — completed operational explicit merge packet that stages merge posture without merging `main`
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/README.md` — completed coequal model gate on the landed bounded-memory contract family
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/README.md` — completed bounded-memory small-VM exact gate on five fixed families
-- `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/README.md` — authorized next exact restricted-Wasm / tiny-`C` useful-case gate
+- `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/README.md` — completed current restricted-Wasm / tiny-`C` useful-case gate
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/README.md` — landed preserved prior docs-only activation packet for the semantic-boundary route
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/README.md` — landed current retrieval-contract gate for exact latest-write-by-address and stack-slot retrieval
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — preserved prior docs-only keep-freeze packet after `F16`

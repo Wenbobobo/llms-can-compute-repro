@@ -12,7 +12,11 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H42_post_r43_route_selection_packet/` — current active docs-only
+- `H43_post_r44_useful_case_refreeze/` — current active docs-only
+  useful-case refreeze packet that preserves `H42/H36/F20/P27/R43/R44/R45`,
+  records claim `D` as `supported_here_narrowly`, and restores
+  `no_active_downstream_runtime_lane`.
+- `H42_post_r43_route_selection_packet/` — preserved prior docs-only
   route-selection packet that preserves `H41/H36/F20/P27/R43/R45` and
   authorizes exact `R44`.
 - `H41_post_r42_aggressive_long_arc_decision_packet/` — preserved prior
@@ -26,6 +30,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   stack-slot retrieval on fixed semantic-boundary tasks.
 - `R43_origin_bounded_memory_small_vm_execution_gate/` — completed current
   bounded-memory small-VM exact gate validating five fixed families end-to-end.
+- `R44_origin_restricted_wasm_useful_case_execution_gate/` — completed current
+  restricted-Wasm / tiny-`C` useful-case gate validating the fixed
+  three-kernel ladder exactly on the same append-only substrate.
 - `R45_origin_dual_mode_model_mainline_gate/` — completed current coequal
   model gate evaluating both admitted model modes on the landed `R43`
   contract family.
@@ -162,8 +169,6 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
-- `R44_origin_restricted_wasm_useful_case_execution_gate/` — authorized next
-  restricted-Wasm / tiny-`C` useful-case gate downstream of completed `H42`.
 - `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
   that turns future same-substrate reopen admissibility into one mechanical
   contradiction-packet specification.
@@ -202,8 +207,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H42` is the active docs-only decision packet.
-- `H41` is the preserved prior docs-only aggressive-long-arc packet.
+- `H43` is the active docs-only decision packet.
+- `H42` is the preserved prior docs-only route-selection packet.
+- `H41` is the preserved earlier docs-only aggressive-long-arc packet.
 - `H36` is the preserved active routing/refreeze packet.
 - `R42` is the completed current retrieval-contract gate underneath `H41`.
 - `F20` is the current coequal-mainline model bundle.
@@ -233,7 +239,8 @@ stack:
 - `R43` is the completed current exact semantic-boundary gate.
 - `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
-- `R44` is the next authorized exact useful-case lane.
+- `R44` is the completed current restricted useful-case gate.
+- no active downstream runtime lane exists after `H43`.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`

@@ -26,6 +26,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-24-post-r43-h42-route-selection-design.md` — the current
   route-selection design surface that turns saved `H42` into the completed
   packet authorizing `R44` as the next exact useful-case gate.
+- `2026-03-24-post-r44-h43-refreeze-design.md` — the current post-`R44`
+  refreeze design surface that turns landed `R44` into the completed current
+  narrow useful-case gate and returns the stack to no active downstream
+  runtime lane.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -80,8 +84,11 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/H42_post_r43_route_selection_packet/` — current active
-  docs-only route-selection packet that authorizes `R44` explicitly.
+- `../milestones/H43_post_r44_useful_case_refreeze/` — current active
+  docs-only refreeze packet that records `R44` as completed narrow useful-case
+  evidence and restores `no_active_downstream_runtime_lane`.
+- `../milestones/H42_post_r43_route_selection_packet/` — preserved prior
+  docs-only route-selection packet that authorized `R44` explicitly.
 - `../milestones/H41_post_r42_aggressive_long_arc_decision_packet/` —
   preserved prior docs-only aggressive-long-arc decision packet.
 - `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — preserved
@@ -127,7 +134,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/R45_origin_dual_mode_model_mainline_gate/` — completed
   coequal model lane downstream of `H41/F20`.
 - `../milestones/R44_origin_restricted_wasm_useful_case_execution_gate/` —
-  authorized next restricted-Wasm / tiny-`C` useful-case gate downstream of
+  completed current restricted-Wasm / tiny-`C` useful-case gate downstream of
   completed `H42`.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
   preserved prior docs-only scope-decision packet above `H32`.
@@ -142,8 +149,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 ## Historical Plan Groups
 
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
-  control-override, explicit merge-wave, dual-mode execution, and post-`R43`
-  route-selection design set.
+  control-override, explicit merge-wave, dual-mode execution, post-`R43`
+  route-selection, and post-`R44` useful-case refreeze design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,
@@ -167,5 +174,5 @@ its status against:
 
 Do not treat an older plan as authorization to reopen a blocked lane. When a
 saved plan and the landed
-`H41/F20/H40/R42/H36/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack
+`H43/H42/H41/F20/H40/R42/H36/P27/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack
 differ, trust the landed packet.

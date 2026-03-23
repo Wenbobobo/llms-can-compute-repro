@@ -3,8 +3,8 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H42_post_r43_route_selection_packet`, not the preserved prior
-  `H41` packet, the preserved prior
+  `H43_post_r44_useful_case_refreeze`, not the preserved prior
+  `H42` packet, the preserved earlier `H41` packet, the preserved prior
   `H40` packet, the preserved prior `H30` packet, or the earlier `H25`
   same-endpoint decision packet.
 - The active routing/refreeze packet remains
@@ -49,7 +49,9 @@
   still keeping `main` untouched; `R43` validates bounded-memory exact
   execution on `5/5` fixed families; `R45` then validates the two admitted
   model modes on the same fixed family set without replacing exact evidence;
-  and `H42` finally authorizes exact `R44` while keeping `R41` deferred.
+  and `H42` finally authorizes exact `R44` while keeping `R41` deferred;
+  `R44` then lands exactly on the fixed useful-case ladder, and `H43`
+  refreezes that result as bounded useful-case support only.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -78,8 +80,10 @@
   completed current exact bounded-memory gate.
 - `R45_origin_dual_mode_model_mainline_gate` is now fixed as the completed
   current coequal model gate.
-- `H42_post_r43_route_selection_packet` is now fixed as the completed current
-  route-selection packet that authorizes `R44`.
+- `H42_post_r43_route_selection_packet` is now fixed as the completed
+  preserved prior route-selection packet that authorizes `R44`.
+- `R44_origin_restricted_wasm_useful_case_execution_gate` is now fixed as the
+  completed current restricted useful-case gate.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
@@ -182,14 +186,19 @@
   coequal model lane:
   both admitted modes stay exact on the fixed `R43` family set, while the
   trainable mode also stays exact on the held-out optional family.
-- `H42_post_r43_route_selection_packet` is now complete as the current active
+- `H42_post_r43_route_selection_packet` is now complete as the preserved prior
   docs-only route-selection packet:
   it preserves `H41/H36/F20/P27/R43/R45`, authorizes exactly `R44`, keeps
   `R41` deferred, and keeps `merge_executed = false`.
-- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the
-  authorized next exact useful-case gate:
+- `R44_origin_restricted_wasm_useful_case_execution_gate` is now complete as
+  the current restricted useful-case gate:
   it fixes the restricted-Wasm / tiny-`C` useful-kernel ladder downstream of
-  completed `H42`.
+  completed `H42` and returns `useful_case_surface_supported_narrowly`.
+- `H43_post_r44_useful_case_refreeze` is now complete as the current active
+  docs-only useful-case refreeze packet:
+  it preserves `H42/H36/F20/P27/R43/R44/R45`, records claim `D` as
+  `supported_here_narrowly`, keeps `R41` deferred, and restores
+  `no active downstream runtime lane`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.

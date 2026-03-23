@@ -5,13 +5,15 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H42_post_r43_route_selection_packet`;
+  `H43_post_r44_useful_case_refreeze`;
 - preserved active routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`;
 - current completed semantic-boundary retrieval-contract gate:
   `R42_origin_append_only_memory_retrieval_contract_gate`;
 - current completed exact bounded-memory small-VM gate:
   `R43_origin_bounded_memory_small_vm_execution_gate`;
+- current completed useful-case gate:
+  `R44_origin_restricted_wasm_useful_case_execution_gate`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -38,18 +40,17 @@ Current scientific/control stack:
   `P25_post_h36_clean_promotion_prep`;
 - deferred contradiction runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
-- current completed route-selection packet:
+- preserved prior completed route-selection packet:
   `H42_post_r43_route_selection_packet`;
-- authorized next useful-case gate:
-  `R44_origin_restricted_wasm_useful_case_execution_gate`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`.
 
 Immediate active wave:
 
-`H42` is complete. The current active wave is now `R44` preparation downstream
-of the landed `H42/H41/F20/P27/R43/R45` control stack.
+`H43` is complete. There is now no active downstream runtime lane after the
+landed `H42/R43/R44/R45/F20/P27` stack. Near-term work is limited to
+low-priority docs/control hygiene or a later explicit planning packet.
 
 ## Current Facts
 
@@ -61,7 +62,9 @@ of the landed `H42/H41/F20/P27/R43/R45` control stack.
 - `wip/p27-promotion-merge` is the clean explicit merge packet branch.
 - `wip/r45-dualmode-model` remains a clean parallel worktree for model-lane
   follow-up.
-- `wip/h42-route-selection` is the clean route-selection packet branch.
+- `wip/h42-route-selection` is the clean preserved route-selection packet branch.
+- `wip/r44-useful-case-gate` is the clean restricted useful-case execution branch.
+- `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -86,22 +89,26 @@ of the landed `H42/H41/F20/P27/R43/R45` control stack.
   `authorize_r43_exact_mainline_and_coequal_r45_model_lane`.
 - `H42` selects
   `authorize_r44_origin_restricted_wasm_useful_case_execution_gate`.
-- `R44` is authorized as the next exact useful-case gate.
+- `R44` returns `useful_case_surface_supported_narrowly` on the fixed
+  `3/3` kernel ladder and exceeds article-level substrate evidence narrowly.
+- `H43` selects `freeze_r44_as_narrow_supported_here`.
+- `H43` records `next_required_lane = no_active_downstream_runtime_lane`.
 
 ## Immediate Objectives
 
-1. Preserve `H42` as the current active docs-only decision packet.
-2. Preserve `H36` as the routing/refreeze packet underneath the stack.
-3. Preserve completed `R42` as the first semantic-boundary retrieval-contract
+1. Preserve `H43` as the current active docs-only decision packet.
+2. Preserve `H42` as the preserved prior route-selection packet.
+3. Preserve `H36` as the routing/refreeze packet underneath the stack.
+4. Preserve completed `R42` as the first semantic-boundary retrieval-contract
    gate.
-4. Preserve completed `P27` as the operational merge packet without merging
+5. Preserve completed `P27` as the operational merge packet without merging
    `main`.
-5. Preserve completed exact `R43` as the decisive current runtime gate.
-6. Preserve completed `R45` as the current coequal model lane without
+6. Preserve completed exact `R43` as the decisive upstream exact runtime gate.
+7. Preserve completed `R44` as the current narrow useful-case gate.
+8. Preserve completed `R45` as the current coequal model lane without
    weakening the exact evidence boundary.
-7. Authorize `R44` as the next exact useful-case gate and keep `R41`
-   deferred until later explicit contradiction routing.
-8. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
+9. Keep `R41` deferred until later explicit contradiction routing.
+10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
 
 ## Last Completed Order
@@ -145,12 +152,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
 `R43_origin_bounded_memory_small_vm_execution_gate` ->
 `R45_origin_dual_mode_model_mainline_gate` ->
-`H42_post_r43_route_selection_packet`
+`H42_post_r43_route_selection_packet` ->
+`R44_origin_restricted_wasm_useful_case_execution_gate` ->
+`H43_post_r44_useful_case_refreeze`
 
 ## Current Rule
 
-- `H42` is the current active docs-only packet.
-- `H41` is the preserved prior docs-only packet.
+- `H43` is the current active docs-only packet.
+- `H42` is the preserved prior docs-only packet.
+- `H41` is the preserved earlier docs-only packet.
 - `H36` remains the routing/refreeze packet underneath it.
 - `R42` is a completed gate that justifies exact `R43`, but does not itself
   count as bounded-memory small-VM execution evidence.
@@ -161,8 +171,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
 - `R43` is the completed current exact gate.
+- `R44` is the completed current restricted useful-case gate.
 - `R45` is the completed current coequal model lane.
-- `R44` is the next required exact useful-case gate.
+- no active downstream runtime lane follows `H43`.
 
 ## Control References
 
@@ -172,6 +183,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
+- `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
@@ -182,12 +194,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/H42_post_r43_route_selection_packet/`
+- `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`
+- `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
+- `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
