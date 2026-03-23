@@ -56,6 +56,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   and promotion lane for the landed `H31/R38/H32` packet.
 - `P19_post_h32_publication_surface_alignment/` — completed docs-only
   publication/control alignment after the saved post-`H32` planning surface.
+- `P20_post_h34_manuscript_narrative_resync/` — completed docs-only manuscript
+  and helper-doc resync so the paper-facing bundle now terminates on
+  `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`.
 
 ## Conditional Future Lanes
 
@@ -87,6 +90,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F3_post_h23_scope_lift_decision_bundle/` — blocked scope-lift gate.
 - `F4_post_h23_origin_claim_delta_matrix/` — preserved origin-facing delta
   surface.
+- `F5_post_h34_contradiction_scout_matrix/` — planning-only post-`H34`
+  contradiction scout that currently concludes no reopen candidate survives.
 
 ## Current Rule
 

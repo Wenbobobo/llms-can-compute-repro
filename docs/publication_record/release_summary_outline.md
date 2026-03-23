@@ -48,10 +48,14 @@ current routing summary by themselves.
 
 ### 3. Current endpoint
 
-The current compiled endpoint is tiny typed bytecode `D0`, backed by verifier
-coverage, exact-trace / exact-final-state agreement, memory-surface companion
-diagnostics, and one stress/reference follow-up. It is an endpoint on current
-evidence, not a bridge to arbitrary C.
+The current compiled endpoint is a narrow same-substrate bytecode line, backed
+by the landed `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` packet:
+verifier coverage, exact-trace / exact-final-state agreement on one tiny
+lowered subset, one richer control/call family, and one declared helper-body
+permutation audit that still ends in
+`freeze_compiled_boundary_as_complete_for_now`. The preserved first `D0`
+boundary remains useful historical context, but the active endpoint is the
+whole narrow same-substrate line, not a bridge to arbitrary `C`.
 
 ### 4. Reproducibility pointers
 

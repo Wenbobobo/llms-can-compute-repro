@@ -22,9 +22,12 @@ The current paper-shaped manuscript baseline now lives in
 `docs/publication_record/manuscript_bundle_draft.md`, and the current
 systems-gate placement choice is recorded in
 `docs/publication_record/layout_decision_log.md`.
-That manuscript draft remains useful as prose structure, but a dedicated
-`H32/H34` narrative resync is still pending; current control authority remains
-`current_stage_driver.md` plus the claim/evidence ledgers.
+That manuscript draft is now resynchronized to the landed
+`R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` compiled-boundary line
+and treats preserved same-endpoint packets only as historical context beneath
+the current Origin-core route. Current control authority still remains
+`current_stage_driver.md` plus the claim/evidence ledgers when prose and
+landed packet state differ.
 The same near-prose stub set now also covers `Methods`, `Executor branches`,
 `Mask dependence`, `Precision boundary`, and `Negative results / threats`.
 Caption-ready notes for the current fixed figure/table set now live in
@@ -45,7 +48,7 @@ scope kept closed by default.
 | Item | Status | Notes |
 | --- | --- | --- |
 | Supported vs unsupported claims | ready | Covered by claim ladder plus threats/negative-results ledgers; current main-text layout stays as a separate table paired with the claim-ladder figure rather than one merged artifact. |
-| Exact-trace / final-state success table | ready | Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table is ready on the current frozen `D0` scope; broader compiled demos remain blocked unless a deliberate scope decision explicitly approves widening. |
+| Exact-trace / final-state success table | ready | Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the preserved first compiled slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table remains ready for the preserved first compiled slice while still anchoring the current narrow same-substrate line; broader compiled demos remain blocked unless a deliberate scope decision explicitly approves widening. |
 | Real-trace precision boundary table | ready | Organic bundle plus scaling sweeps now also feed canonical `P1` boundary rows under `results/P1_paper_readiness/`. |
 | Threats-to-validity table | ready | Content exists; only wording polish remains. |
 

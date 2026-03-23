@@ -1,7 +1,9 @@
 # Derivative Material Pack
 
 Status: downstream-only preparation material for future paper, README, and
-still-blocked blog maintenance. The manuscript bundle remains authoritative.
+still-blocked blog maintenance. The manuscript bundle is now aligned to the
+current `H32/H34` endpoint, and this pack stays subordinate to that narrow
+no-widening conclusion.
 
 ## What survived reproduction
 
@@ -10,7 +12,8 @@ still-blocked blog maintenance. The manuscript bundle remains authoritative.
 - Exact latest-write retrieval over that trace remains supported with the
   structured 2D hard-max mechanism.
 - The current executor story survives at a narrow endpoint: one small exact
-  executor plus a tiny typed-bytecode `D0` compiled boundary.
+  executor plus a same-substrate compiled line that begins with a tiny lowered
+  boundary and stops after one richer control/call-family extension.
 - The paper bundle is locked tightly enough that claim/evidence ownership,
   appendix boundaries, and public-surface sync can be audited mechanically.
 
@@ -37,11 +40,11 @@ still-blocked blog maintenance. The manuscript bundle remains authoritative.
 
 ## FAQ-style notes
 
-### Why stop at `D0`?
+### Why stop at the narrow compiled line?
 
-Because the current compiled evidence is exact only on the tiny typed-bytecode
-boundary and the systems gate is still mixed. Stopping here is part of the
-current conclusion, not an omitted implementation step.
+Because the current compiled evidence is exact only on a narrowly delimited
+same-substrate line and the systems gate is still mixed. Stopping here is part
+of the current conclusion, not an omitted implementation step.
 
 ### Why keep the blog blocked?
 
