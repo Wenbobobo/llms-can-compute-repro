@@ -12,13 +12,15 @@ Refreshed on 2026-03-23 after `H34` landed on the clean successor branch.
 - the completed downstream `H33 -> R39 -> H34` chain is now explicit:
   one same-substrate question was asked, answered narrowly, and then frozen as
   complete-for-now rather than reopened by momentum;
-- the completed `F10 -> P22` planning wave is now explicit:
-  any later frontier draft must name its richer value family and comparator
-  obligations before it can even become plan-worthy;
+- the completed `F10` bridge plus the current `F13 -> F14 -> P23` planning
+  stack is now explicit:
+  any later frontier draft must name one bounded same-substrate value family,
+  its comparator obligations, and the contradiction/readiness boundary before
+  it can even become plan-worthy;
 - its currently unsatisfied conditions remain
   `broader_question_explicitly_reauthorized` and
   `systems_or_frontier_story_materially_changed`;
-- any future frontier-plan draft must remain downstream of `H33/R39/H34` and a
-  new contradiction-driven explicit packet rather than bypassing them by
-  momentum;
+- any future frontier-plan draft must remain downstream of
+  `H33/R39/H34/F10/F13/F14/P23` and a new contradiction-driven explicit packet
+  rather than bypassing them by momentum;
 - it must not become a backdoor widening lane.

@@ -35,15 +35,18 @@ Current scientific/control stack:
   `F3_post_h23_scope_lift_decision_bundle`;
 - future frontier review:
   `F2_future_frontier_recheck_activation_matrix` remains planning-only and
-  downstream of `H33/R39/H34/F10/P22`.
+  downstream of `H33/R39/H34/F10/F13/F14/P23`.
 
 Immediate active wave:
 
 Origin-core refreeze remains active while `H34` holds the docs-only control
 surface, `R39` sits as completed downstream evidence, `P20/F5/F6` preserve the
 landed no-reopen closeout state, `F7` and `F8` remain preserved planning-only
-support surfaces, `F10` now serves as the current planning-only bridge surface,
-`P22` records the control-surface sync, `F9` remains blocked, `F11` remains
+support surfaces, `F10` remains the current semantic bridge surface, `F12`
+now serves as the current origin-facing canonical delta surface, `F13` now
+serves as the current bounded family-first preactivation surface, `F14` now
+serves as the current conditional reopen-readiness surface, `P23` records the
+current control-surface sync, `F9` remains blocked, `F11` remains
 new-substrate, and there is still no active downstream runtime lane
 
 ## Current Facts
@@ -84,11 +87,20 @@ new-substrate, and there is still no active downstream runtime lane
   current authorization.
 - `F10` now makes richer executor-visible value and comparator obligations
   explicit without authorizing a runtime lane.
-- `F9` remains blocked roadmap storage downstream of `F10`.
-- `F11` remains new-substrate roadmap storage downstream of `F10`.
+- `F12` now reanchors the origin article and the three discussion files to the
+  current `H34/F10/P22` state and replaces `F4` as the current canonical
+  origin-facing delta surface.
+- `F13` now specifies `bounded scalar locals and flags` as one bounded
+  same-substrate richer family without authorizing runtime evaluation.
+- `F14` now stores one conditional contradiction-readiness surface for
+  runtime-irrelevance and easy-part-only risk without authorizing `H35` or
+  `R40`.
+- `F9` remains blocked roadmap storage downstream of `F10/F13`.
+- `F11` remains new-substrate roadmap storage downstream of `F10/F13`.
 - `P21` remains the preserved first post-`H34` control-surface sync.
-- `P22` now synchronizes the current driver and wave plan to the
-  `F10`-led planning-only interpretation.
+- `P22` remains the preserved prior post-`F10` control-surface sync.
+- `P23` now synchronizes the current driver and wave plan to the new
+  family-first planning-only interpretation.
 - `R29`, `F3`, and frontier/demo widening remain blocked.
 
 ## Immediate Objectives
@@ -119,13 +131,18 @@ new-substrate, and there is still no active downstream runtime lane
 12. Preserve `F8_post_h34_beyond_origin_bridge_roadmap` as the planning-only
     beyond-Origin storage surface.
 13. Preserve `F10_post_h34_executor_value_comparator_matrix` as the current
-    planning-only bridge surface for richer executor-visible value obligations.
-14. Keep `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` blocked and
-    keep `F11_post_h34_hybrid_planner_executor_bridge_roadmap` new-substrate.
-15. Preserve `P21_post_h34_planning_surface_sync` as the prior docs-only
-    control sync and `P22_post_f10_planning_surface_sync` as the current one.
+    semantic bridge surface for richer executor-visible value obligations and
+    preserve `F12_post_f10_origin_claim_delta_reanchor_bundle` as the current
+    origin-facing canonical delta surface.
+14. Preserve `F13_post_f12_bounded_scalar_value_family_spec` as the current
+    bounded family-first preactivation surface and preserve
+    `F14_post_f13_conditional_reopen_readiness_bundle` as the current
+    conditional reopen-readiness surface.
+15. Keep `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` blocked, keep
+    `F11_post_h34_hybrid_planner_executor_bridge_roadmap` new-substrate, and
+    preserve `P21` and `P22` as prior control syncs while `P23` is current.
 16. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
-    downstream of `H33/R39/H34/F10/P22`.
+    downstream of `H33/R39/H34/F10/F13/F14/P23`.
 
 ## Last Completed Order
 
@@ -173,8 +190,13 @@ no active downstream runtime lane
 - `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/`
 - `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`
 - `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/`
+- `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
+- `docs/milestones/F13_post_f12_bounded_scalar_value_family_spec/`
+- `docs/milestones/F14_post_f13_conditional_reopen_readiness_bundle/`
 - `docs/milestones/P21_post_h34_planning_surface_sync/`
 - `docs/milestones/P22_post_f10_planning_surface_sync/`
+- `docs/milestones/P23_post_f13_planning_surface_sync/`
+- `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
 - `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
@@ -201,9 +223,10 @@ no active downstream runtime lane
 - do not reopen `R29` or `F3` by wording alone;
 - do not relabel one richer compiled control family as arbitrary-language
   support;
-- do not treat `F7`, `F8`, `F10`, or the non-active `F9/F11` roadmap storage
-  as authorization for `H35`, `R40`, restricted Wasm execution,
-  value-comparator execution, or hybrid planner/executor runtime work;
+- do not treat `F7`, `F8`, `F10`, `F12`, `F13`, `F14`, or the non-active
+  `F9/F11` roadmap storage as authorization for `H35`, `R40`, restricted Wasm
+  execution, bounded-scalar runtime execution, value-comparator execution, or
+  hybrid planner/executor runtime work;
 - do not skip the saved post-`H30` / `H31` / `R38` plan, the saved
   post-`H32` plan, or the landed `R39` audit when evaluating any later
   broader lane;

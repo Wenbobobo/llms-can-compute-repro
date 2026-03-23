@@ -8,6 +8,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-f10-family-first-preactivation-design.md` — the preserved
+  design surface for the current family-first preactivation wave after the
+  completed `F10/P22` bridge wave.
 - `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the preserved
   design surface for the current `F10`-led planning-only bridge wave after the
   first `F7/F8/P21` post-`H34` handoff.
@@ -55,6 +58,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `2026-03-23-post-f10-family-first-preactivation-design.md` — preserved
+  design surface for the current family-first preactivation wave.
 - `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — preserved design
   surface for the current `F10`-led planning-only bridge wave.
 - `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — preserved design

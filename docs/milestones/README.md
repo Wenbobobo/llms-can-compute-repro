@@ -62,9 +62,11 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P21_post_h34_planning_surface_sync/` — completed docs-only planning-surface
   sync that recorded `F7/F8` as the first admissible follow-on surfaces while
   keeping runtime inactive.
-- `P22_post_f10_planning_surface_sync/` — completed docs-only planning-surface
-  sync that records `F10` as the current planning-only bridge surface while
-  keeping `F9` blocked, `F11` new-substrate, and runtime inactive.
+- `P22_post_f10_planning_surface_sync/` — completed prior docs-only
+  planning-surface sync for the `F10` bridge wave.
+- `P23_post_f13_planning_surface_sync/` — completed current docs-only
+  planning-surface sync that records `F12/F13/F14` while keeping `F9` blocked,
+  `F11` new-substrate, and runtime inactive.
 
 ## Current Planning-Only Follow-ons
 
@@ -77,12 +79,21 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F10_post_h34_executor_value_comparator_matrix/` — planning-only bridge
   bundle that makes richer executor-visible value and comparator obligations
   explicit without authorizing runtime widening.
+- `F12_post_f10_origin_claim_delta_reanchor_bundle/` — planning-only bundle
+  that reanchors the origin article and discussion materials to the current
+  `H34/F10/P22` state and replaces `F4` as the current canonical derivative
+  origin-facing delta surface.
+- `F13_post_f12_bounded_scalar_value_family_spec/` — planning-only bounded
+  family-first preactivation bundle for `bounded scalar locals and flags`.
+- `F14_post_f13_conditional_reopen_readiness_bundle/` — planning-only bundle
+  that stores one future contradiction-driven packet blueprint and one future
+  runtime-audit blueprint without authorizing either one.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive roadmap
   storage for a later restricted-Wasm semantic-boundary family that remains
-  blocked even after `F10`.
+  blocked even after `F10/F13`.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — inactive roadmap
   storage for a later planner-plus-executor interface family that still
-  requires a new substrate.
+  requires a new substrate even after `F10/F13`.
 
 ## Conditional Future Lanes
 
@@ -112,8 +123,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F2_future_frontier_recheck_activation_matrix/` — planning-only frontier
   activation surface.
 - `F3_post_h23_scope_lift_decision_bundle/` — blocked scope-lift gate.
-- `F4_post_h23_origin_claim_delta_matrix/` — preserved origin-facing delta
-  surface.
+- `F4_post_h23_origin_claim_delta_matrix/` — preserved historical
+  origin-facing delta surface superseded by `F12` as the current canonical
+  derivative mapping.
 - `F5_post_h34_contradiction_scout_matrix/` — planning-only post-`H34`
   contradiction scout that currently concludes no reopen candidate survives.
 - `F6_post_p20_future_option_matrix/` — planning-only post-`P20/F5` option
@@ -146,6 +158,9 @@ stack:
 - `F7` and `F8` are preserved planning-only follow-on surfaces, not runtime
   packets.
 - `F10` is the current planning-only bridge surface, not a runtime packet.
+- `F12` is the current origin-facing canonical delta surface.
+- `F13` is the current bounded family-first preactivation surface.
+- `F14` is the current conditional reopen-readiness surface.
 - `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
   storage.
 - no active downstream runtime lane exists after `H34`.

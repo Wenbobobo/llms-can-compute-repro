@@ -38,7 +38,8 @@ current freeze candidate is assembled.
   `appendix_companion_scope.md` remain synchronized.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
   completed `P20/F5/F6` closeout plus the preserved `F7/F8/P21` wave and the
-  current `F10/P22` planning wave without widening wording.
+  preserved `F10/P22` bridge wave plus the current `F12/F13/F14/P23`
+  family-first planning wave without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
 ## Machine-audited guards

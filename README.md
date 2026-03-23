@@ -55,12 +55,25 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 - `F10` as the completed planning-only executor-value comparator matrix that
   makes richer value/comparator obligations explicit without authorizing a
   runtime lane; and
-- `F9` as the preserved blocked semantic-boundary roadmap downstream of `F10`;
-- `F11` as the preserved new-substrate hybrid roadmap downstream of `F10`; and
+- `F12` as the completed origin-facing reanchor bundle that replaces `F4` as
+  the current canonical derivative mapping from the origin materials onto the
+  landed `H34` state; and
+- `F13` as the completed bounded scalar value-family preactivation bundle that
+  turns the nearest richer same-substrate family into one decision-complete
+  spec without authorizing runtime; and
+- `F14` as the completed conditional reopen-readiness bundle that stores one
+  future contradiction-driven packet blueprint and one future runtime-audit
+  blueprint without activating either one; and
+- `F9` as the preserved blocked semantic-boundary roadmap downstream of
+  `F10/F13`;
+- `F11` as the preserved new-substrate hybrid roadmap downstream of
+  `F10/F13`; and
 - `P21` as the completed prior docs-only control-surface sync for the first
   post-`H34` planning wave; and
-- `P22` as the completed docs-only control-surface sync that aligns the current
-  driver and wave plan to the `F10`-led planning-only post-`H34` state.
+- `P22` as the completed prior docs-only control-surface sync for the
+  `F10`-led planning-only post-`H34` state; and
+- `P23` as the completed current docs-only control-surface sync that aligns the
+  driver and wave plan to the family-first post-`F10` planning state.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,

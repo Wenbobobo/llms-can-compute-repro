@@ -45,9 +45,13 @@ scope kept closed by default. The latest downstream follow-on work remains
 planning-only rather than experimental widening: `F7` preserves a mechanical
 same-substrate reopen specification, `F8` preserves beyond-Origin roadmap
 storage, `F10` preserves the current richer-value/comparator bridge surface,
-`F9` remains blocked, `F11` remains new-substrate, `P21` preserves the first
-post-`H34` sync, and `P22` keeps the driver and wave-plan surfaces aligned to
-that current no-reopen state.
+`F12` preserves the current origin-facing reanchor, `F13` preserves the
+current bounded scalar-local-and-flag family-first preactivation surface,
+`F14` preserves the current conditional reopen-readiness blueprint while
+keeping `H35/R40` inactive, `F9` remains blocked downstream of `F10/F13`,
+`F11` remains new-substrate downstream of `F10/F13`, `P21` and `P22` preserve
+prior post-`H34` sync surfaces, and `P23` keeps the driver and wave-plan
+surfaces aligned to the current family-first no-reopen state.
 
 ## Mandatory tables
 

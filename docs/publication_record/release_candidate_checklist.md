@@ -34,8 +34,9 @@ preserved-closeout-and-pivot stack.
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved post-`H34` planning-wave
-  surfaces present the preserved `F7/F8/P21` wave plus the current `F10/P22`
-  wave while keeping `F9` blocked and `F11` new-substrate.
+  surfaces present the preserved `F7/F8/P21` wave, the preserved `F10/P22`
+  bridge wave, and the current `F12/F13/F14/P23` family-first wave while
+  keeping `F9` blocked and `F11` new-substrate.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 

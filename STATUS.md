@@ -50,15 +50,26 @@
 - `F10_post_h34_executor_value_comparator_matrix` is now complete:
   it makes richer executor-visible value and comparator obligations explicit
   while keeping the line planning-only and runtime-inactive.
+- `F12_post_f10_origin_claim_delta_reanchor_bundle` is now complete:
+  it becomes the current canonical derivative mapping from the origin
+  materials onto the landed `H34` state.
+- `F13_post_f12_bounded_scalar_value_family_spec` is now complete:
+  it specifies `bounded scalar locals and flags` as one bounded same-substrate
+  richer family without authorizing runtime evaluation.
+- `F14_post_f13_conditional_reopen_readiness_bundle` is now complete:
+  it stores one future contradiction-driven packet blueprint and one future
+  runtime-audit blueprint without activating either one.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
-  blocked roadmap storage downstream of `F10`.
+  blocked roadmap storage downstream of `F10/F13`.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains preserved as
-  new-substrate roadmap storage downstream of `F10`.
+  new-substrate roadmap storage downstream of `F10/F13`.
 - `P21_post_h34_planning_surface_sync` remains complete as the preserved first
   post-`H34` planning-surface sync.
-- `P22_post_f10_planning_surface_sync` is now complete:
+- `P22_post_f10_planning_surface_sync` remains complete as the preserved prior
+  control-surface sync for the `F10`-led planning-only post-`H34` reading.
+- `P23_post_f13_planning_surface_sync` is now complete:
   it aligns the driver, wave plan, and top-level indexes to the current
-  `F10`-led planning-only post-`H34` reading.
+  family-first planning-only post-`F10` reading.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family

@@ -15,6 +15,9 @@ Current control docs:
   `R39` as one completed same-substrate audit rather than an automatic routing
   change, and recording `H34` as the freeze-complete-for-now interpretation
   packet rather than a new runtime authorization;
+- `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md` —
+  the preserved design surface for the current family-first post-`F10`
+  planning-only wave that landed `F12/F13/F14/P23`;
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
   — the preserved design surface that led to the landed post-`R39`
   scope-decision packet, `H34`;
@@ -86,19 +89,34 @@ Current control docs:
 - `docs/milestones/F10_post_h34_executor_value_comparator_matrix/` — the
   completed planning-only bridge bundle that makes richer executor-visible
   value/comparator obligations explicit without authorizing runtime widening;
+- `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/` — the
+  completed planning-only origin-facing reanchor bundle that replaces `F4` as
+  the current canonical derivative claim-delta surface while preserving `F4`
+  historically;
+- `docs/milestones/F13_post_f12_bounded_scalar_value_family_spec/` — the
+  completed planning-only bounded scalar-local-and-flag family specification
+  that now serves as the current family-first preactivation surface;
+- `docs/milestones/F14_post_f13_conditional_reopen_readiness_bundle/` — the
+  completed planning-only conditional reopen-readiness bundle that keeps
+  `H35/R40` blueprint-only rather than active;
 - `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` —
-  blocked roadmap storage downstream of `F10`, not active runtime
+  blocked roadmap storage downstream of `F10/F13`, not active runtime
   authorization;
 - `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/` —
-  new-substrate roadmap storage downstream of `F10`, not active runtime
+  new-substrate roadmap storage downstream of `F10/F13`, not active runtime
   authorization;
 - `docs/milestones/P21_post_h34_planning_surface_sync/` — the completed prior
   docs-only control-surface sync for the first post-`H34` planning wave;
 - `docs/milestones/P22_post_f10_planning_surface_sync/` — the completed
-  docs-only control-surface sync for the current `F10`-led planning wave;
+  prior docs-only control-surface sync for the initial `F10`-led bridge wave;
+- `docs/milestones/P23_post_f13_planning_surface_sync/` — the completed
+  current docs-only control-surface sync for the family-first post-`F10`
+  planning wave;
+- `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md` — the
+  preserved design surface for the current family-first post-`F10`
+  planning-only wave;
 - `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the
-  preserved design surface for the current `F10`-led planning-only bridge
-  wave;
+  preserved design surface for the prior `F10`-led planning-only bridge wave;
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the
   preserved design surface for the first planning-only follow-on wave;
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md` — the
