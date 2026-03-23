@@ -3,10 +3,12 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H38_post_f16_runtime_relevance_reopen_decision_packet`, not the preserved prior
+  `H40_post_h38_semantic_boundary_activation_packet`, not the preserved prior
   `H30` packet or the earlier `H25` same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
+- The current completed semantic-boundary retrieval-contract gate is
+  `R42_origin_append_only_memory_retrieval_contract_gate`.
 - The active scientific target is now the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -29,8 +31,11 @@
   `F16` reduces the saved `R41` catalog to explicit statuses and still yields
   `no_candidate_ready`; `H38` keeps the `H36` freeze again because `F16`
   produces zero execution-ready candidates; `P26` records the current clean
-  audit branch and artifact policy with `audit_only` merge posture; and `F17`
-  stores the route-selection rules for later same-substrate exit.
+  audit branch and artifact policy with `audit_only` merge posture; `F17`
+  stores the route-selection rules for later same-substrate exit; `F18/F19`
+  fix the preferred semantic-boundary route plus the bounded `R42 -> R43 ->
+  R44` ladder; `H40` activates that route explicitly; and `R42` keeps it
+  alive on `6/6` fixed tasks with `65/65` exact observations.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -48,7 +53,10 @@
   `F18_post_h38_origin_core_long_arc_bundle`.
 - The current semantic-boundary useful-case roadmap is
   `F19_post_f18_restricted_wasm_useful_case_roadmap`.
-- There is no active downstream runtime lane after `H38`.
+- The preserved prior docs-only reopen-decision packet is
+  `H38_post_f16_runtime_relevance_reopen_decision_packet`.
+- There is no currently active downstream runtime lane after completed `R42`;
+  one later explicit post-`R42` packet is required before `R43`.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
@@ -123,11 +131,15 @@
   policy while keeping routing frozen.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap` is now complete:
   it turns the preserved `F9` family into a bounded restricted-Wasm /
-  useful-case roadmap and freezes `R42/R43/R44` as deferred future gates.
-- `R42_origin_append_only_memory_retrieval_contract_gate` is now saved as a
-  deferred future design:
-  it fixes latest-write-by-address and stack-slot retrieval as the first
-  semantic-boundary contract gate.
+  useful-case roadmap and fixes `R42/R43/R44` as the saved semantic-boundary
+  gate ladder.
+- `H40_post_h38_semantic_boundary_activation_packet` is now complete:
+  it activates the semantic-boundary route explicitly, preserves `H36`
+  underneath the stack, and authorizes exactly `R42`.
+- `R42_origin_append_only_memory_retrieval_contract_gate` is now complete:
+  it validates exact latest-write-by-address and stack-slot retrieval on six
+  fixed contract tasks, preserving exact maximizer-row identity in addition to
+  exact retrieved value.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is now saved as a
   deferred future design:
   it fixes bounded-memory small-VM execution as the next gate downstream of
@@ -138,7 +150,7 @@
   `R43`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
-  `F10/F13/F18/F19`, but still inactive until a later explicit packet.
+  `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains preserved as
   new-substrate roadmap storage downstream of `F10/F13`.
 - `P21_post_h34_planning_surface_sync` remains complete as the preserved first

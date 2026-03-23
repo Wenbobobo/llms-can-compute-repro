@@ -12,12 +12,15 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H38_post_f16_runtime_relevance_reopen_decision_packet/` — current active
-  docs-only decision packet keeping the `H36` freeze after `F16` reports
-  `no_candidate_ready`.
+- `H40_post_h38_semantic_boundary_activation_packet/` — current active
+  docs-only decision packet that activates the semantic-boundary route and
+  authorizes exactly `R42`.
 - `H36_post_r40_bounded_scalar_family_refreeze/` — preserved active
   routing/refreeze packet freezing the bounded-scalar family narrowly on the
   current substrate.
+- `R42_origin_append_only_memory_retrieval_contract_gate/` — completed current
+  retrieval-contract gate validating exact latest-write-by-address and
+  stack-slot retrieval on fixed semantic-boundary tasks.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   operational promotion/artifact audit lane from the current clean branch.
 - `F18_post_h38_origin_core_long_arc_bundle/` — current planning-only
@@ -30,6 +33,8 @@ planning bundles. Read the current driver first, not the directory name alone.
   isolation bundle for the saved `R41` catalog.
 - `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
   route-selection bundle after `H38`.
+- `H38_post_f16_runtime_relevance_reopen_decision_packet/` — preserved prior
+  docs-only keep-freeze decision packet above `H36`.
 - `H37_post_h36_runtime_relevance_decision_packet/` — preserved prior docs-
   only runtime-relevance decision packet.
 - `P25_post_h36_clean_promotion_prep/` — preserved prior clean
@@ -78,6 +83,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R40_origin_bounded_scalar_locals_and_flags_gate/` — completed bounded-
   scalar same-substrate runtime gate validating explicit frame locals plus
   typed `FLAG` slots on the same opcode surface.
+- `R42_origin_append_only_memory_retrieval_contract_gate/` — completed
+  semantic-boundary retrieval-contract gate validating exact value and
+  maximizer-row identity on six fixed task families.
 
 ## Completed Current-Wave Closeout
 
@@ -130,9 +138,6 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
-- `R42_origin_append_only_memory_retrieval_contract_gate/` — deferred future
-  semantic-boundary retrieval-contract gate for latest-write-by-address and
-  stack-slot retrieval under append-only history.
 - `R43_origin_bounded_memory_small_vm_execution_gate/` — deferred future
   bounded-memory small-VM execution gate downstream of `R42`.
 - `R44_origin_restricted_wasm_useful_case_execution_gate/` — deferred future
@@ -175,14 +180,17 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H38` is the active docs-only decision packet.
+- `H40` is the active docs-only decision packet.
 - `H36` is the preserved active routing/refreeze packet.
+- `R42` is the completed current retrieval-contract gate, not automatic
+  authorization of `R43`.
 - `P26` is the completed operational promotion/artifact audit lane, not merge
   authorization.
 - `F16` is the current candidate-isolation bundle.
 - `F17` is the current planning-only route-selection bundle.
 - `F18` is the current planning-only long-arc bundle.
 - `F19` is the current planning-only semantic-boundary roadmap.
+- `H38` is the preserved prior docs-only decision packet.
 - `H37` is the preserved prior docs-only runtime-relevance decision packet.
 - `P25` is the preserved prior operational promotion-prep lane.
 - `F15` is the current canonical derivative claim-delta surface.
@@ -196,12 +204,13 @@ stack:
 - `R39` and `R40` are complete downstream audits/gates, not active routing
   changes by themselves.
 - `R41` is a deferred future runtime-audit design, not active work.
-- `R42`, `R43`, and `R44` are deferred future semantic-boundary gates, not
-  active work.
+- `R43` and `R44` are deferred future semantic-boundary gates, not active
+  work.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`
   remains new-substrate roadmap storage.
-- no active downstream runtime lane exists after `H38`.
+- no active downstream runtime lane exists after completed `R42`; one later
+  explicit post-`R42` packet is required before `R43`.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
   explicit packet.

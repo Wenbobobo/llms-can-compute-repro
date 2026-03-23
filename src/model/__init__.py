@@ -2,6 +2,7 @@
 
 from .exact_hardmax import (
     config_for_operations,
+    DecodeCandidateRow,
     DecodeObservation,
     DecodeRun,
     LatestWriteDecodeConfig,
@@ -149,6 +150,7 @@ from .trainable_latest_write import (
 
 __all__ = [
     "config_for_operations",
+    "DecodeCandidateRow",
     "DecodeObservation",
     "DecodeRun",
     "EncodedTraceExample",

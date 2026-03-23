@@ -7,14 +7,16 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects the current `H38` docs-only decision packet,
-  preserved `H36` routing/refreeze packet, completed `P26` promotion/artifact
-  audit lane, current `F16/F17` control bundles, preserved `H37/P25` prior
+- [ ] `STATUS.md` reflects the current `H40` docs-only activation packet,
+  preserved `H36` routing/refreeze packet, completed `R42`
+  retrieval-contract gate, completed `P26` promotion/artifact audit lane,
+  current `F16/F17/F18/F19` control bundles, preserved `H38/H37/P25` prior
   support lanes, current `F15` derivative bundle, preserved
   `H35/H34/H33/H32/H31/H30/H29/H28/H27` stack context, and keeps `R41`,
-  `R29`, and `F3` non-active with no active downstream runtime lane.
+  `R29`, `F3`, `R43`, and `R44` non-active.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording downstream of landed `H38/H36/F16/F17/P26/H37/P25/F15/H35/H34/H32/R40/R39`
+  wording downstream of landed
+  `H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/R40/R39`
   while preserving the narrow Origin-core limits.
 - [ ] `P20_post_h34_manuscript_narrative_resync`,
   `F5_post_h34_contradiction_scout_matrix`, and
@@ -39,24 +41,32 @@ current freeze candidate is assembled.
   `freeze_candidate_criteria.md`, `main_text_order.md`, and
   `appendix_companion_scope.md` remain synchronized.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `F16/H38/P26/F17` control wave plus the preserved `P25/F15/H37`
-  control wave, the preserved `P20/F5/F6` closeout, the preserved `F7/F8/P21`
-  wave, the preserved `F10/P22` bridge wave, and the preserved
-  `F12/F13/F14/P23` family-first planning wave without widening wording.
+  completed `F16/H38/P26/F17/F18/F19/H40/R42` control wave plus the preserved
+  `P25/F15/H37` control wave, the preserved `P20/F5/F6` closeout, the
+  preserved `F7/F8/P21` wave, the preserved `F10/P22` bridge wave, and the
+  preserved `F12/F13/F14/P23` family-first planning wave without widening
+  wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
 ## Machine-audited guards
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
+  reports `authorize_r42_origin_append_only_memory_retrieval_contract_gate`,
+  preserves `H36` as the current active routing stage, and reports zero
+  blocked items.
+- [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
+  reports `keep_semantic_boundary_route`, exact value plus maximizer-row
+  identity, and `later_explicit_packet_required = true`.
 - [ ] `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
-  reports `keep_h36_freeze`, preserves `H36` as the current active routing
-  stage, and reports no active downstream runtime lane.
+  reports `keep_h36_freeze` and remains available as the preserved prior
+  docs-only decision packet.
 - [ ] `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
   reports `audit_only`, `merge_recommended = false`, and the clean audit
   branch/worktree.
 - [ ] `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
-  reports `keep_h36_freeze` and remains available as the preserved prior
+  reports `keep_h36_freeze` and remains available as the preserved earlier
   docs-only decision packet.
 - [ ] `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
   reports the preserved active routing/refreeze packet and keeps `R41`

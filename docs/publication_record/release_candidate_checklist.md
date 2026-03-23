@@ -4,10 +4,11 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H38` docs-only decision / `H36` preserved-active /
-`P26-F16-F17-F15` current-control-support / `H37-P25`
-preserved immediate-predecessor support / `H35-H34-H33-H32-H31-H30`
-preserved question-selection-and-decision /
+the current `H40` docs-only activation / `H36` preserved-active /
+`R42` completed-retrieval-gate /
+`P26-F16-F17-F18-F19-F15` current-control-support /
+`H38-H37-P25` preserved immediate-predecessor support /
+`H35-H34-H33-H32-H31-H30` preserved question-selection-and-decision /
 `H29` preserved-upstream-refreeze / `H27-H28`
 preserved-closeout-and-pivot stack.
 
@@ -15,8 +16,8 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by `H38`, preserved `H36`, completed `P26`, current `F16/F17`,
-  preserved `H37/P25`, and current `F15`.
+  recorded by `H40`, preserved `H36`, completed `R42`, completed `P26`,
+  current `F16/F17/F18/F19`, preserved `H38/H37/P25`, and current `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -31,18 +32,19 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H38` current /
-  `H36` preserved active / `P26-F16-F17-F15` current support /
-  `H37-P25` preserved immediate-predecessor support /
+  `publication_record/README.md` all describe the same `H40` current /
+  `H36` preserved active / `R42` completed current gate /
+  `P26-F16-F17-F18-F19-F15` current support /
+  `H38-H37-P25` preserved immediate-predecessor support /
   `H35-H34-H33-H32-H31-H30-H29-H27-H28` preserved current control package.
 - [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved planning-wave surfaces
-  present the completed `F16/H38/P26/F17` wave, the preserved `P25/F15/H37`
-  wave, the preserved `F7/F8/P21` wave, the preserved `F10/P22` bridge wave,
-  and the preserved `F12/F13/F14/P23` family-first wave while keeping `F9`
-  blocked and `F11` new-substrate.
+  present the completed `F16/H38/P26/F17/F18/F19/H40/R42` wave, the preserved
+  `P25/F15/H37` wave, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
+  bridge wave, and the preserved `F12/F13/F14/P23` family-first wave while
+  keeping `F9` blocked and `F11` new-substrate.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -50,9 +52,17 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
+- [ ] `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
+  reports the current docs-only activation packet,
+  `authorize_r42_origin_append_only_memory_retrieval_contract_gate`, and zero
+  blocked items.
+- [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
+  reports the completed current retrieval-contract gate,
+  `keep_semantic_boundary_route`, exact value plus maximizer-row identity, and
+  `later_explicit_packet_required = true`.
 - [ ] `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
-  reports the current docs-only decision packet, `keep_h36_freeze`, and no
-  active downstream runtime lane.
+  reports the preserved prior docs-only decision packet, `keep_h36_freeze`,
+  and no active downstream runtime lane.
 - [ ] `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
   reports the completed operational audit lane and `audit_only` merge posture.
 - [ ] `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`

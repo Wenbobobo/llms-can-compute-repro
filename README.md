@@ -19,116 +19,55 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 As of `2026-03-23`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line. The current docs-only decision packet is now
-`H38_post_f16_runtime_relevance_reopen_decision_packet`, the active
+`H40_post_h38_semantic_boundary_activation_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
-the completed operational audit lane is
-`P26_post_h37_promotion_and_artifact_hygiene_audit`, the current canonical
-derivative bundle remains `F15_post_h36_origin_goal_reanchor_bundle`, the
-current candidate-isolation bundle is
-`F16_post_h37_r41_candidate_isolation_bundle`, and the current same-substrate
-exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, the current
-long-arc planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, and
-the current semantic-boundary useful-case roadmap is
-`F19_post_f18_restricted_wasm_useful_case_roadmap`, preserving:
+the current completed semantic-boundary retrieval-contract gate is
+`R42_origin_append_only_memory_retrieval_contract_gate`, the completed
+operational audit lane is `P26_post_h37_promotion_and_artifact_hygiene_audit`,
+the current canonical derivative bundle remains
+`F15_post_h36_origin_goal_reanchor_bundle`, the current candidate-isolation
+bundle is `F16_post_h37_r41_candidate_isolation_bundle`, the current
+same-substrate exit bundle is
+`F17_post_h38_same_substrate_exit_criteria_bundle`, the current long-arc
+planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, and the current
+semantic-boundary roadmap is
+`F19_post_f18_restricted_wasm_useful_case_roadmap`.
 
-- `H27` as the negative closeout of the old same-endpoint recovery wave;
-- `H28` as the Origin-core pivot packet;
-- `H29` as the positive Origin-core refreeze packet on the current A/B/C chain;
-- `R36` as a narrow precision-boundary sharpening pass;
-- `R37` as the tiny compiled-boundary confirmation on the current
-  append-only / exact-retrieval / small-VM substrate;
-- `H30` as the preserved prior tiny compiled-boundary refreeze packet;
-- `H31` as the explicit one-more-extension authorization packet;
-- `R38` as the one-richer control/call-family compiled boundary gate on the
-  same opcode surface;
-- `P18` as the operational clean-worktree packaging lane for this packet;
-- `H33` as the prior docs-only next-question packet above the preserved `H32`
-  refreeze, naming only
-  `R39_origin_compiler_control_surface_dependency_audit` as the one justified
-  same-substrate follow-up question; and
-- `R39` as the completed same-substrate dependency audit showing that one
-  declared helper-body permutation with target renumbering can preserve exact
-  final state and workload while still changing the trace on both audited rows;
-- `H34` as the docs-only later explicit scope-decision packet above the
-  preserved `H32` refreeze, selecting
-  `freeze_compiled_boundary_as_complete_for_now`;
-- `H35` as the docs-only bounded-family runtime-decision packet that
-  authorizes exactly one bounded-scalar same-substrate runtime gate;
-- `R40` as the completed bounded-scalar runtime gate validating explicit
-  bounded frame locals plus typed `FLAG` slots on the same substrate;
-- `H36` as the preserved prior active refreeze packet freezing that bounded-
-  scalar result narrowly and restoring no active downstream runtime lane by
-  default;
-- `P24` as the completed control-surface sync for the landed
-  `H35 -> R40 -> H36` wave;
-- `P25` as the preserved prior operational promotion-prep lane that fixes the
-  clean source-of-truth branch and keeps merge mode at `prepare_only`;
-- `F15` as the current canonical derivative mapping from the origin materials
-  onto the landed `H36/P24/P25/H37/H38` state;
-- `H37` as the preserved prior docs-only runtime-relevance decision packet
-  that keeps `H36` frozen and leaves `R41` deferred;
-- `F16` as the current candidate-isolation bundle that reduces the saved `R41`
-  catalog to explicit statuses and still yields `no_candidate_ready`;
-- `H38` as the current docs-only runtime-relevance reopen decision packet that
-  keeps `H36` frozen again because `F16` yields zero execution-ready
-  candidates;
-- `P26` as the completed operational promotion/artifact audit lane that fixes
-  the current clean audit branch, packet split, and large-artifact policy
-  without touching dirty `main`; and
-- `F17` as the current planning-only same-substrate exit bundle that routes
-  future work to later explicit `R41`, `F9`, `F11`, or publication-only
-  maintenance without authorizing any now;
-- `F18` as the current planning-only long-arc bundle that makes `F9` the
-  preferred forward family after `H38` while keeping `R41` deferred; and
-- `F19` as the current planning-only semantic-boundary roadmap that fixes a
-  bounded restricted-Wasm / useful-case surface and freezes
-  `R42/R43/R44` as deferred future gates;
-- `P20` as the completed paper-facing manuscript/helper-doc resync that makes
-  the prose bundle terminate on the landed `H34` state; and
-- `F5` as the completed planning-only contradiction scout that currently
-  concludes `no_reopen_candidate_survives`; and
-- `F6` as the completed planning-only future-option matrix that keeps
-  docs/planning work admissible while runtime remains inactive by default; and
-- `F7` as the completed planning-only contradiction/reopen specification bundle
-  that makes future same-substrate reopen criteria mechanical without
-  authorizing one now; and
-- `F8` as the completed planning-only beyond-Origin bridge roadmap that stores
-  future milestone families while keeping them inactive; and
-- `F10` as the completed planning-only executor-value comparator matrix that
-  makes richer value/comparator obligations explicit without authorizing a
-  runtime lane; and
-- `F12` as the completed earlier origin-facing reanchor bundle for the landed
-  `H34` state, preserved historically now that `F15` is current; and
-- `F13` as the completed bounded scalar value-family preactivation bundle that
-  turns the nearest richer same-substrate family into one decision-complete
-  spec without authorizing runtime; and
-- `F14` as the completed conditional reopen-readiness bundle that stores one
-  future contradiction-driven packet blueprint and one future runtime-audit
-  blueprint without activating either one; and
-- `R41` as the saved deferred runtime-relevance threat design that fixes the
-  future row pair, threat families, measurement rules, and stop conditions
-  without authorizing execution; and
-- `F9` as the preserved blocked semantic-boundary roadmap downstream of
-  `F10/F13`;
-- `F11` as the preserved new-substrate hybrid roadmap downstream of
-  `F10/F13`; and
-- `P21` as the completed prior docs-only control-surface sync for the first
-  post-`H34` planning wave; and
-- `P22` as the completed prior docs-only control-surface sync for the
-  `F10`-led planning-only post-`H34` state; and
-- `P23` as the completed current docs-only control-surface sync that aligns the
-  driver and wave plan to the family-first post-`F10` planning state.
+The narrow current stack is:
+
+- `H27 -> H29` closes the old same-endpoint wave, pivots to the Origin-core
+  line, and freezes the first positive append-only / exact-retrieval /
+  small-VM chain;
+- `R36 -> R40 -> H36` sharpens precision, validates one tiny compiled
+  boundary, extends one richer control/call family, and then validates one
+  bounded-scalar same-substrate runtime family before refreezing;
+- `H37 -> F16 -> H38 -> P26 -> F17` keeps same-substrate `R41` deferred,
+  records `no_candidate_ready`, preserves audit-only promotion posture, and
+  stores route-selection logic without authorizing a lane;
+- `F18 -> F19 -> H40 -> R42` fixes `F9` as the preferred forward family,
+  fixes `R42 -> R43 -> R44` as the bounded semantic-boundary ladder, then
+  explicitly activates that route once and validates the first retrieval-
+  contract gate on `6/6` tasks and `65/65` exact observations.
+
+What stays blocked or deferred:
+
+- `R41` remains deferred behind a later explicit post-`H40` packet;
+- `R43` and `R44` remain deferred behind a later explicit post-`R42` packet;
+- `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
+  scope widening remain blocked.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
+`docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`,
 `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
 `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
 `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`,
-`results/H38...`, `results/P26...`, `results/H37...`, `results/P25...`,
-`results/H36...`, `results/H35...`, `results/R40...`, and the preserved
+`results/H40...`, `results/R42...`, `results/H38...`, `results/P26...`,
+`results/H37...`, `results/P25...`, `results/H36...`, `results/H35...`,
+`results/R40...`, and the preserved
 `results/H34...` / `results/H32...` / `results/R39...` summaries ahead of the
 historical packet inventory below.
 
@@ -157,10 +96,12 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H38_post_f16_runtime_relevance_reopen_decision_packet`, not the preserved prior
+  `H40_post_h38_semantic_boundary_activation_packet`, not the preserved prior
   `H30` packet or the earlier `H25` same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
+- The current completed semantic-boundary retrieval-contract gate is
+  `R42_origin_append_only_memory_retrieval_contract_gate`.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`, which names
   only `R40_origin_bounded_scalar_locals_and_flags_gate` as the justified
@@ -180,7 +121,10 @@ historical packet inventory below.
   `F18_post_h38_origin_core_long_arc_bundle`.
 - The current semantic-boundary useful-case roadmap is
   `F19_post_f18_restricted_wasm_useful_case_roadmap`.
-- There is no active downstream runtime lane after `H38`.
+- The preserved prior docs-only reopen-decision packet is
+  `H38_post_f16_runtime_relevance_reopen_decision_packet`.
+- There is no currently active downstream runtime lane after completed `R42`;
+  one later explicit post-`R42` packet is required before `R43`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -221,10 +165,16 @@ historical packet inventory below.
 - `F18` then fixes the post-`H38` claim ladder, preferred route, and
   worktree/merge policy without changing active routing.
 - `F19` then turns the preserved `F9` family into a decision-complete
-  restricted-Wasm / useful-case roadmap and fixes `R42/R43/R44` as deferred
-  future gates.
-- the saved future `R41` design now fixes the smallest later threat-stress
-  audit shape without authorizing it.
+  restricted-Wasm / useful-case roadmap and fixes `R42/R43/R44` as the saved
+  semantic-boundary gate ladder.
+- `H40` then activates that semantic-boundary route explicitly while keeping
+  `H36` preserved underneath and leaving `R41` deferred.
+- `R42` then validates exact retrieved value plus exact maximizer-row identity
+  on `6/6` fixed append-only retrieval-contract tasks with `65/65` exact
+  observations.
+- the saved future `R41` design still fixes the smallest later threat-stress
+  audit shape without authorizing it, and `R43/R44` remain deferred behind a
+  later explicit post-`R42` packet.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -431,7 +381,9 @@ historical packet inventory below.
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json` — one-file summary for the preserved prior docs-only bounded-family runtime-decision packet
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
-- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json` — one-file summary for the current docs-only decision packet selecting `keep_h36_freeze` after `F16`
+- `results/H40_post_h38_semantic_boundary_activation_packet/summary.json` — one-file summary for the current docs-only activation packet selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`
+- `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json` — one-file summary for the completed first semantic-boundary retrieval-contract gate
+- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json` — one-file summary for the preserved prior docs-only keep-freeze packet after `F16`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json` — one-file summary for the completed operational promotion/artifact audit lane
 - `results/H37_post_h36_runtime_relevance_decision_packet/summary.json` — one-file summary for the preserved prior docs-only decision packet selecting `keep_h36_freeze`
 - `results/P25_post_h36_clean_promotion_prep/summary.json` — one-file summary for the preserved prior operational promotion-prep lane
@@ -448,7 +400,9 @@ historical packet inventory below.
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/README.md` — landed docs-only bounded-family runtime-decision packet that authorizes exactly one same-substrate runtime gate
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
-- `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — landed current docs-only decision packet after `F16`
+- `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/README.md` — landed current docs-only activation packet for the semantic-boundary route
+- `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/README.md` — landed current retrieval-contract gate for exact latest-write-by-address and stack-slot retrieval
+- `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — preserved prior docs-only keep-freeze packet after `F16`
 - `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/README.md` — completed operational promotion/artifact audit lane after `H38`
 - `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/README.md` — current candidate-isolation bundle for the saved `R41` catalog
 - `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/README.md` — current planning-only route-selection bundle after `H38`

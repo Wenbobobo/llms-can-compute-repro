@@ -4,11 +4,15 @@
 
 The current active stage is:
 
-- `H38_post_f16_runtime_relevance_reopen_decision_packet`
+- `H40_post_h38_semantic_boundary_activation_packet`
 
 The preserved active routing/refreeze packet is:
 
 - `H36_post_r40_bounded_scalar_family_refreeze`
+
+The current completed semantic-boundary retrieval-contract gate is:
+
+- `R42_origin_append_only_memory_retrieval_contract_gate`
 
 The completed operational promotion/artifact audit lane is:
 
@@ -34,9 +38,9 @@ The current semantic-boundary useful-case roadmap is:
 
 - `F19_post_f18_restricted_wasm_useful_case_roadmap`
 
-This stage keeps the current Origin-core chain frozen after one explicit
-bounded-scalar reopen, two later docs-only runtime-relevance decisions, and
-one clean promotion/artifact audit:
+This stage keeps the current Origin-core chain frozen through one later
+explicit semantic-boundary activation packet and one completed retrieval-
+contract gate:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
 - `R36` preserves the narrow precision boundary on the active bundle;
@@ -72,7 +76,11 @@ one clean promotion/artifact audit:
 - `F18` fixes the post-`H38` claim ladder, preferred route, and worktree/merge
   policy without changing routing;
 - `F19` turns the saved `F9` family into a decision-complete restricted-Wasm /
-  useful-case roadmap and freezes `R42/R43/R44` as deferred future gates.
+  useful-case roadmap and freezes `R42/R43/R44` as future gates;
+- `H40` selects the semantic-boundary route explicitly and authorizes exactly
+  `R42` without reopening `R41` by momentum; and
+- `R42` validates append-only latest-write-by-address and stack-slot retrieval
+  on six fixed contract tasks with exact value and maximizer-row identity.
 
 ## Current Machine-State Meaning
 
@@ -132,8 +140,7 @@ one clean promotion/artifact audit:
   `decision_state = bounded_scalar_family_refrozen_narrowly`,
   `bounded_scalar_family_state = explicit_bounded_scalar_locals_and_flags_supported_narrowly`,
   `authorized_next_runtime_candidate = none`,
-  `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
-  `next_required_lane = no_active_downstream_runtime_lane`;
+  `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`;
 - `P24` remains the preserved prior docs-only control-surface sync:
   `control_surface_sync_state = post_h36_bounded_scalar_runtime_wave_indexed`;
 - `P25` remains complete as the preserved prior operational promotion-prep
@@ -144,7 +151,7 @@ one clean promotion/artifact audit:
   `target_branch = main`,
   `merge_authorized = false`;
 - `F15` remains the current canonical derivative bundle:
-  `canonical_origin_claim_surface = current_after_h36_h37_h38`,
+  `canonical_origin_claim_surface = current_after_h36_h37_h38_h40_r42`,
   `bounded_scalar_family_status = supported_here_narrowly`,
   `top_unresolved_same_substrate_gaps = runtime_relevance_only`;
 - `H37` remains the preserved prior docs-only decision packet:
@@ -155,14 +162,11 @@ one clean promotion/artifact audit:
   `execution_ready_candidate_count = 0`,
   `nonunique_candidate_count = 2`,
   `inadmissible_candidate_count = 1`;
-- `H38` is now the current active docs-only decision packet:
-  `current_active_routing_stage = h36_post_r40_bounded_scalar_family_refreeze`,
+- `H38` remains the preserved prior docs-only reopen-decision packet:
   `selected_outcome = keep_h36_freeze`,
-  `non_selected_outcome = authorize_r41_origin_runtime_relevance_threat_stress_audit`,
   `authorized_next_runtime_candidate = none`,
   `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
-  `decision_basis = f16_no_candidate_ready_on_fixed_r40_row_pair`,
-  `next_required_lane = no_active_downstream_runtime_lane`;
+  `decision_basis = f16_no_candidate_ready_on_fixed_r40_row_pair`;
 - `P26` is now complete as the operational promotion/artifact audit lane:
   `current_clean_audit_branch = wip/f16-h38-p26-exec`,
   `preserved_prior_clean_source_branch = wip/p25-f15-h37-exec`,
@@ -182,15 +186,33 @@ one clean promotion/artifact audit:
   `restricted_surface_state = bounded_pointer_free_i32_surface_specified`,
   `future_gate_family = r42_r43_r44_indexed_planning_only`,
   `useful_case_kernel_suite = sum_count_nonzero_histogram16`;
-- `R42` remains preserved as a deferred future retrieval-contract gate:
-  `future_lane_state = append_only_memory_retrieval_contract_saved_only`;
+- `H40` is now the current active docs-only decision packet:
+  `current_active_routing_stage = h36_post_r40_bounded_scalar_family_refreeze`,
+  `selected_outcome = authorize_r42_origin_append_only_memory_retrieval_contract_gate`,
+  `non_selected_outcome = keep_h36_freeze_and_continue_planning_only`,
+  `authorized_next_runtime_candidate = r42_origin_append_only_memory_retrieval_contract_gate`,
+  `deferred_future_runtime_candidate = r41_origin_runtime_relevance_threat_stress_audit`,
+  `deferred_future_semantic_boundary_candidates = r43_origin_bounded_memory_small_vm_execution_gate, r44_origin_restricted_wasm_useful_case_execution_gate`,
+  `decision_basis = f18_prefers_f9_and_f19_fixes_r42_as_first_gate`,
+  `next_required_lane = later_explicit_post_r42_packet`;
+- `R42` is now complete as the current retrieval-contract gate:
+  `lane_verdict = keep_semantic_boundary_route`,
+  `task_count = 6`,
+  `exact_task_count = 6`,
+  `observation_count = 65`,
+  `exact_row_identity_observation_count = 65`,
+  `tie_observation_count = 1`,
+  `duplicate_maximizer_observation_count = 1`,
+  `default_hit_observation_count = 3`,
+  `later_explicit_packet_required = true`,
+  `conditional_next_runtime_candidate = r43_origin_bounded_memory_small_vm_execution_gate`;
 - `R43` remains preserved as a deferred future bounded-memory small-vm gate:
   `future_lane_state = bounded_memory_small_vm_execution_saved_only`;
 - `R44` remains preserved as a deferred future useful-case gate:
   `future_lane_state = restricted_wasm_useful_case_execution_saved_only`;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
   downstream of `F10/F13/H35/R40/F18/F19`:
-  `future_storage_state = default_forward_route_inactive_until_later_explicit_packet`;
+  `future_storage_state = activated_once_through_h40_r42_first_gate`;
 - `F11` remains preserved as new-substrate roadmap storage downstream of
   `F10/F13/H35/R40/F18`:
   `future_storage_state = hybrid_family_still_requires_new_substrate`;
@@ -199,11 +221,11 @@ one clean promotion/artifact audit:
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
   `F2_future_frontier_recheck_activation_matrix` and downstream of
-  `H38/H36/F16/F17/F18/F19/P26/F15/F14`.
+  `H40/H36/F16/F17/F18/F19/P26/F15/F14/R42`.
 
 ## Completed Order
 
-The completed order through the current planning surface is:
+The completed order through the current semantic-boundary activation surface is:
 
 `P16_h25_commit_hygiene_and_clean_worktree_promotion` ->
 clean-worktree `R32_d0_family_local_boundary_sharp_zoom` ->
@@ -234,29 +256,30 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `P26_post_h37_promotion_and_artifact_hygiene_audit` ->
 `F17_post_h38_same_substrate_exit_criteria_bundle` ->
 `F18_post_h38_origin_core_long_arc_bundle` ->
-`F19_post_f18_restricted_wasm_useful_case_roadmap`
+`F19_post_f18_restricted_wasm_useful_case_roadmap` ->
+`H40_post_h38_semantic_boundary_activation_packet` ->
+`R42_origin_append_only_memory_retrieval_contract_gate`
 
 ## Next Planned Order
 
-The current justified next move is still a keep-frozen state rather than any
-active runtime lane. `H38` keeps `H36` frozen, leaves `R41` deferred, and does
-not authorize a reopen by momentum.
+The current justified next move is no longer a post-`H38` activation design.
+`H40` has already selected the semantic-boundary route and `R42` has already
+executed the first retrieval-contract gate. The stack now requires one later
+explicit post-`R42` packet before any `R43` move.
 
 The current admissible follow-on work is:
 
 - low-priority manuscript / README / blog alignment work;
 - promotion audit follow-through only after dirty `main` is reconciled;
-- later explicit packet design only if one same-substrate candidate becomes
-  uniquely isolating on the fixed landed `R40` row pair;
+- later explicit post-`R42` packet design and control-surface sync;
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19`;
-- deferred future semantic-boundary gate preparation only under the saved
-  `R42/R43/R44` scope locks.
+- bounded-memory small-vm preparation only under the saved `R43` scope lock,
+  not as active execution by momentum.
 
-If the semantic-boundary route is activated later, the conditional order is:
+If the semantic-boundary route continues later, the conditional order is:
 
-later explicit post-`H38` semantic-boundary packet ->
-conditional `R42_origin_append_only_memory_retrieval_contract_gate` ->
+later explicit post-`R42` packet ->
 conditional `R43_origin_bounded_memory_small_vm_execution_gate` ->
 conditional `R44_origin_restricted_wasm_useful_case_execution_gate` ->
 later explicit refreeze / route-selection packet
@@ -264,13 +287,13 @@ later explicit refreeze / route-selection packet
 If the same-substrate contradiction route is reauthorized later, the
 conditional order is:
 
-later explicit post-`H38` packet ->
+later explicit post-`H40` packet ->
 conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 `H39_post_r41_runtime_relevance_refreeze`
 
 The next required order is now:
 
-no active downstream runtime lane
+later explicit post-`R42` packet
 
 ## Control References
 
@@ -293,8 +316,11 @@ no active downstream runtime lane
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
 - `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
+- `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
+- `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
+- `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
@@ -302,6 +328,8 @@ no active downstream runtime lane
 - `docs/milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/future_gate_matrix.md`
 - `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
 - `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/`
+- `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/`
+- `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
 - `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
 - `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/`
@@ -314,26 +342,34 @@ no active downstream runtime lane
 - `R29` remains blocked and does not authorize execution.
 - `F3` remains blocked and planning-only.
 - `F2` remains planning-only and downstream of
-  `H38/H36/F16/F17/P26/F15/F14`.
+  `H40/H36/F16/F17/P26/F15/F14/R42`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred and
-  inactive until a later explicit post-`H38` packet authorizes it.
+  inactive until a later explicit post-`H40` packet authorizes it.
+- `R43_origin_bounded_memory_small_vm_execution_gate` remains deferred and
+  inactive until a later explicit post-`R42` packet authorizes it.
+- `R44_origin_restricted_wasm_useful_case_execution_gate` remains deferred and
+  inactive until a later explicit post-`R42` packet authorizes it.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 
 ## Active Bounded Lanes
 
-- `H38_post_f16_runtime_relevance_reopen_decision_packet` is the current
-  active docs-only decision packet.
+- `H40_post_h38_semantic_boundary_activation_packet` is the current active
+  docs-only decision packet.
 - `H36_post_r40_bounded_scalar_family_refreeze` remains the preserved active
   routing/refreeze packet.
+- `R42_origin_append_only_memory_retrieval_contract_gate` is the completed
+  current retrieval-contract gate.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit` is the completed
   operational promotion/artifact audit lane.
 - `F16_post_h37_r41_candidate_isolation_bundle` is the current candidate
   isolation bundle.
 - `F17_post_h38_same_substrate_exit_criteria_bundle` is the current
   same-substrate exit bundle.
+- `H38_post_f16_runtime_relevance_reopen_decision_packet` remains the
+  preserved prior docs-only decision packet.
 - `H37_post_h36_runtime_relevance_decision_packet` remains the preserved prior
-  docs-only decision packet.
+  docs-only runtime-relevance decision packet.
 - `P25_post_h36_clean_promotion_prep` remains the preserved prior operational
   promotion-prep lane.
 - `F15_post_h36_origin_goal_reanchor_bundle` remains the current canonical
@@ -344,22 +380,29 @@ no active downstream runtime lane
   docs-only sync packet.
 - `R40_origin_bounded_scalar_locals_and_flags_gate` remains the completed
   bounded-scalar runtime gate, not a routing change by itself.
-- `H34_post_r39_later_explicit_scope_decision_packet` remains the preserved
-  earlier no-runtime interpretation packet above `H32`.
-- `H32_post_r38_compiled_boundary_refreeze` remains the preserved earlier
-  compiled-boundary refreeze packet.
+- `F18_post_h38_origin_core_long_arc_bundle` remains the current long-arc
+  planning bundle behind `H40`.
+- `F19_post_f18_restricted_wasm_useful_case_roadmap` remains the current
+  semantic-boundary roadmap behind `H40/R42`.
+- `R41_origin_runtime_relevance_threat_stress_audit` remains deferred.
+- `R43_origin_bounded_memory_small_vm_execution_gate` and
+  `R44_origin_restricted_wasm_useful_case_execution_gate` remain deferred.
+- `H34_post_r39_later_explicit_scope_decision_packet` and
+  `H32_post_r38_compiled_boundary_refreeze` remain preserved earlier
+  control packets.
 - `R39_origin_compiler_control_surface_dependency_audit` remains the completed
   same-substrate dependency audit, not a routing change by itself.
 - `F12`, `F13`, and `F14` remain preserved historical or planning/control
   surfaces underneath the landed
-  `H35/R40/H36/H37/F16/H38/P26/F17/F18/F19` packet chain.
+  `H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42` packet chain.
 - `F9` remains the preferred forward semantic-boundary roadmap and `F11`
   remains new-substrate.
-- there is no active downstream runtime lane after `H38`.
+- there is no currently active downstream runtime lane after completed `R42`;
+  one later explicit post-`R42` packet is required before `R43`.
 
 ## Historical Reference
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17`
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42`
 packet chain change the current routing target, not the historical record.

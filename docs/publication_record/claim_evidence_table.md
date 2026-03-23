@@ -211,19 +211,27 @@
 
 ## Current bounded mainline state
 
-- `H38` is the current active docs-only decision packet for the bounded
-  mainline after the landed `H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16`
-  control wave; it still selects `keep_h36_freeze`.
+- `H40` is the current active docs-only semantic-boundary activation packet
+  for the bounded mainline after the landed
+  `H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19`
+  control wave; it selects
+  `authorize_r42_origin_append_only_memory_retrieval_contract_gate` and keeps
+  `R41/R43/R44` non-active here.
 - `H36` is the preserved active routing/refreeze packet; it freezes the
-  bounded-scalar family narrowly and restores no active downstream runtime
-  lane.
+  bounded-scalar family narrowly and remains the routing packet underneath the
+  new semantic-boundary activation surface.
+- `R42` is the completed current semantic-boundary retrieval-contract gate; it
+  validates exact latest-write retrieval by address and stack slot on six fixed
+  tasks with exact value and maximizer-row identity, but it does not authorize
+  `R43` by momentum.
 - `P26` is the completed operational promotion/artifact audit lane, `F16` is
   the current candidate-isolation bundle, `F17` is the current same-substrate
-  exit bundle, and `F15` is the current canonical derivative bundle; none of
-  them changes the scientific lane by itself.
-- `H37` remains the preserved prior docs-only decision packet and `P25`
+  exit bundle, `F18` is the current long-arc planning bundle, `F19` is the
+  current semantic-boundary roadmap, and `F15` is the current canonical
+  derivative bundle; none of them changes the scientific lane by itself.
+- `H38` and `H37` remain preserved prior docs-only decision packets and `P25`
   remains the preserved prior operational promotion-prep lane underneath the
-  current `H38/P26/F16/F17` control surface.
+  current `H40/R42/P26/F16/F17/F18/F19` control surface.
 - `H35` is the preserved prior docs-only bounded-scalar runtime-decision
   packet, `H34` is the preserved earlier no-runtime interpretation packet,
   and `H33` remains the preserved prior docs-only question-selection packet.
@@ -238,6 +246,8 @@
   traces, exact retrieval, and a small exact stack/VM executor.
 - `R36`, `R37`, and `R38` remain the upstream support set for the current
   narrow same-substrate claim.
+- `R41` remains deferred until a later explicit post-`H40` packet, while
+  `R43/R44` remain deferred until a later explicit post-`R42` packet.
 - `H27` remains the preserved negative closeout of the old same-endpoint
   recovery route.
 - `H25`, `H23`, `H21`, `H19`, `H17`, and `H15` remain preserved historical

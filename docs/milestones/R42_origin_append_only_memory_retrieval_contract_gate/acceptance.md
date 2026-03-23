@@ -4,4 +4,5 @@
 - accelerated retrieval must match brute-force reference exactly;
 - duplicate, tie, degenerate, and precision/range cases are included;
 - no hidden mutable state or approximate fallback is allowed;
-- `R42` remains deferred until a later explicit packet authorizes it.
+- the gate records exact maximizer-row identity, not value-only agreement;
+- `R42` stops below bounded-memory VM execution and restricted-Wasm usefulness.

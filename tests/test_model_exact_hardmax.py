@@ -54,6 +54,13 @@ def test_latest_write_decode_matches_trace_example() -> None:
     assert observation.expected_value == 9
     assert observation.linear_value == 9
     assert observation.accelerated_value == 9
+    assert [row.label for row in decode_run.candidate_rows] == [
+        "default:memory:a0",
+        "store:memory:a0:s1:r1",
+        "store:memory:a0:s3:r2",
+    ]
+    assert observation.linear_maximizer_indices == (2,)
+    assert observation.accelerated_maximizer_indices == (2,)
 
 
 def test_latest_write_decode_matches_multi_slot_trace_example() -> None:
@@ -165,3 +172,27 @@ def test_latest_write_decode_modes_match_random_operation_stream() -> None:
     for observation in decode_run.observations:
         assert observation.linear_value == observation.expected_value
         assert observation.accelerated_value == observation.expected_value
+
+
+def test_latest_write_decode_records_duplicate_row_identity_ties() -> None:
+    decode_run = run_latest_write_decode(
+        (
+            MemoryOperation(step=0, kind="store", address=5, value=3),
+            MemoryOperation(step=0, kind="store", address=5, value=7),
+            MemoryOperation(step=1, kind="load", address=5, value=5),
+        ),
+        LatestWriteDecodeConfig(max_steps=1, addresses=(5,)),
+    )
+
+    observation = decode_run.observations[0]
+
+    assert observation.expected_value == 5
+    assert observation.linear_value == 5
+    assert observation.accelerated_value == 5
+    assert observation.linear_maximizer_indices == (1, 2)
+    assert observation.accelerated_maximizer_indices == (1, 2)
+    assert [row.label for row in decode_run.candidate_rows] == [
+        "default:memory:a5",
+        "store:memory:a5:s0:r1",
+        "store:memory:a5:s0:r2",
+    ]
