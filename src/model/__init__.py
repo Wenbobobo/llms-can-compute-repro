@@ -147,6 +147,15 @@ from .trainable_latest_write import (
     evaluate_scorer,
     fit_scorer,
 )
+from .r45_dual_mode import (
+    R45ContractProgram,
+    R45ModeEvaluation,
+    build_stack_latest_write_samples_for_contract_programs,
+    compiled_weight_executor_scorer,
+    evaluate_r45_dual_mode,
+    fit_trainable_2d_executor,
+    r45_contract_programs,
+)
 
 __all__ = [
     "config_for_operations",
@@ -249,6 +258,7 @@ __all__ = [
     "extract_memory_operations",
     "extract_stack_slot_operations",
     "fit_scorer",
+    "compiled_weight_executor_scorer",
     "fit_transition_library",
     "quantized_latest_write_score",
     "quantized_scheme_score",
@@ -272,6 +282,12 @@ __all__ = [
     "summarize_trace_sequences",
     "sweep_precision_ranges",
     "sweep_precision_scheme_ranges",
+    "R45ContractProgram",
+    "R45ModeEvaluation",
+    "build_stack_latest_write_samples_for_contract_programs",
+    "evaluate_r45_dual_mode",
+    "fit_trainable_2d_executor",
+    "r45_contract_programs",
     "train_event_level_softmax_baseline",
     "train_factorized_event_model",
     "train_neural_event_executor",

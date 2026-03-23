@@ -20,6 +20,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-24-post-h41-p27-explicit-merge-wave-design.md` — the current
   operational merge-wave design surface that lands `P27`, keeps `main`
   untouched, and precedes the later completed exact `R43` lane.
+- `2026-03-24-post-r43-r45-dual-mode-execution-design.md` — the current
+  narrow dual-mode execution design surface that maps `R45` onto analytic and
+  fitted stack latest-write scorers on the landed `R43` family set.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -115,9 +118,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   deferred future runtime-audit lane fixed to the landed `R40` row pair and
   the two surviving threat families.
 - `../milestones/R43_origin_bounded_memory_small_vm_execution_gate/` —
-  authorized next exact bounded-memory small-VM execution gate downstream of
-  `H41`.
-- `../milestones/R45_origin_dual_mode_model_mainline_gate/` — authorized
+  completed current exact bounded-memory small-VM gate downstream of `H41`.
+- `../milestones/R45_origin_dual_mode_model_mainline_gate/` — completed
   coequal model lane downstream of `H41/F20`.
 - `../milestones/H42_post_r43_route_selection_packet/` — later explicit
   route-selection packet required before any `R44` useful-case wave.
@@ -137,7 +139,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 ## Historical Plan Groups
 
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
-  control-override, and explicit merge-wave design set.
+  control-override, explicit merge-wave, and dual-mode execution design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

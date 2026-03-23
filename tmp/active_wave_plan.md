@@ -12,6 +12,8 @@ Current scientific/control stack:
   `R42_origin_append_only_memory_retrieval_contract_gate`;
 - current completed exact bounded-memory small-VM gate:
   `R43_origin_bounded_memory_small_vm_execution_gate`;
+- current completed coequal model gate:
+  `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
   `F20_post_r42_dual_mode_model_mainline_bundle`;
 - completed operational explicit merge packet:
@@ -36,8 +38,6 @@ Current scientific/control stack:
   `P25_post_h36_clean_promotion_prep`;
 - deferred contradiction runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
-- authorized next coequal model lane:
-  `R45_origin_dual_mode_model_mainline_gate`;
 - later route-selection packet fixed downstream:
   `H42_post_r43_route_selection_packet`;
 - deferred future useful-case gate:
@@ -48,8 +48,9 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`P27` and exact `R43` are complete. The current execution wave is now coequal
-`R45` downstream of the landed `H41/F20/P27/R43` control stack.
+`P27`, exact `R43`, and coequal `R45` are complete. The current active wave is
+now later explicit `H42` preparation downstream of the landed
+`H41/F20/P27/R43/R45` control stack.
 
 ## Current Facts
 
@@ -74,6 +75,9 @@ Immediate active wave:
 - `R43` returns `keep_semantic_boundary_route` on `5` fixed families, with
   `5/5` exact families, `4/4` exact core families, and the gated optional
   call/return family also exact.
+- `R45` returns
+  `coequal_model_lane_supported_without_replacing_exact` with `2/2` exact
+  model modes and `10/10` exact family-mode rows.
 - `F20` records
   `coequal_mainline_exact_non_substitutive`
   and the admitted dual model implementations
@@ -90,9 +94,10 @@ Immediate active wave:
 4. Preserve completed `P27` as the operational merge packet without merging
    `main`.
 5. Preserve completed exact `R43` as the decisive current runtime gate.
-6. Execute `R45` as the next coequal model lane without weakening the exact
-   evidence boundary.
-7. Keep `R41` and `R44` deferred until later explicit packets.
+6. Preserve completed `R45` as the current coequal model lane without
+   weakening the exact evidence boundary.
+7. Prepare `H42` as the next required packet and keep `R41` and `R44`
+   deferred until later explicit routing.
 8. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
 
@@ -135,7 +140,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F20_post_r42_dual_mode_model_mainline_bundle` ->
 `H41_post_r42_aggressive_long_arc_decision_packet` ->
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
-`R43_origin_bounded_memory_small_vm_execution_gate`
+`R43_origin_bounded_memory_small_vm_execution_gate` ->
+`R45_origin_dual_mode_model_mainline_gate`
 
 ## Current Rule
 
@@ -150,7 +156,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
 - `R43` is the completed current exact gate.
-- `R45` is the authorized next coequal model lane.
+- `R45` is the completed current coequal model lane.
+- `H42` is the next required explicit route-selection packet.
 - `R44` stays deferred until later `H42_post_r43_route_selection_packet`.
 
 ## Control References
@@ -159,6 +166,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
 - `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
+- `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
@@ -173,6 +181,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
 - `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`

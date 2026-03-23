@@ -18,6 +18,10 @@ The current completed exact bounded-memory small-vm gate is:
 
 - `R43_origin_bounded_memory_small_vm_execution_gate`
 
+The current completed coequal model gate is:
+
+- `R45_origin_dual_mode_model_mainline_gate`
+
 The current coequal-mainline model bundle is:
 
 - `F20_post_r42_dual_mode_model_mainline_bundle`
@@ -56,8 +60,9 @@ The preserved prior semantic-boundary activation packet is:
 
 This stage keeps the current Origin-core chain explicit through one completed
 retrieval-contract gate, one completed bounded-memory small-vm exact gate, one
-planning-only coequal-model bundle, one later explicit post-`R42` decision
-packet, and one completed operational merge packet:
+completed coequal model gate, one planning-only coequal-model bundle, one
+later explicit post-`R42` decision packet, and one completed operational merge
+packet:
 
 - `H29` preserves the positive append-only / exact-retrieval / small-VM chain;
 - `R36` preserves the narrow precision boundary on the active bundle;
@@ -108,7 +113,9 @@ packet, and one completed operational merge packet:
   false`; and
 - `R43` validates five fixed bounded-memory small-vm families end-to-end,
   keeps the semantic-boundary route positive on `5/5` exact families, and
-  makes `R45` the next required lane.
+  preserves the fixed exact contract that the later `R45` model lane reuses; and
+- `R45` validates both admitted model-side executor modes on the same bounded
+  `R43` contract family and makes `H42` the next required packet.
 
 ## Current Machine-State Meaning
 
@@ -269,9 +276,17 @@ packet, and one completed operational merge packet:
   `later_explicit_packet_required = true`,
   `conditional_next_runtime_candidate = r45_origin_dual_mode_model_mainline_gate`,
   `later_explicit_followup_packet = h42_post_r43_route_selection_packet`;
-- `R45` is now the authorized next coequal model lane:
-  `future_lane_state = dual_mode_model_mainline_authorized_by_h41`,
-  `execution_prerequisite = exact_r43_completed`;
+- `R45` is now complete as the current coequal model lane:
+  `lane_verdict = coequal_model_lane_supported_without_replacing_exact`,
+  `mode_count = 2`,
+  `exact_mode_count = 2`,
+  `contract_family_count = 5`,
+  `exact_family_mode_row_count = 10`,
+  `family_mode_row_count = 10`,
+  `trainable_heldout_family_exact = true`,
+  `exact_r43_dependency_satisfied = true`,
+  `later_explicit_packet_required = true`,
+  `next_required_packet = h42_post_r43_route_selection_packet`;
 - `H42` is now the saved later explicit route-selection packet:
   `future_packet_state = post_r43_useful_case_route_selection_required`;
 - `R44` remains preserved as a deferred future useful-case gate:
@@ -291,7 +306,7 @@ packet, and one completed operational merge packet:
 
 ## Completed Order
 
-The completed order through the current bounded-memory exact surface is:
+The completed order through the current coequal-model surface is:
 
 `P16_h25_commit_hygiene_and_clean_worktree_promotion` ->
 clean-worktree `R32_d0_family_local_boundary_sharp_zoom` ->
@@ -328,22 +343,23 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F20_post_r42_dual_mode_model_mainline_bundle` ->
 `H41_post_r42_aggressive_long_arc_decision_packet` ->
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
-`R43_origin_bounded_memory_small_vm_execution_gate`
+`R43_origin_bounded_memory_small_vm_execution_gate` ->
+`R45_origin_dual_mode_model_mainline_gate`
 
 ## Next Planned Order
 
 The current justified next move is no longer a post-`R42` control-override
-design, an unresolved merge wave, or exact `R43` execution. `F20`, `H41`,
-`P27`, and `R43` have already landed. The stack now fixes one completed
-operational merge packet, one completed exact bounded-memory gate, and one
-authorized downstream coequal model lane.
+design, an unresolved merge wave, exact `R43` execution, or coequal `R45`
+execution. `F20`, `H41`, `P27`, `R43`, and `R45` have already landed. The
+stack now fixes one completed operational merge packet, one completed exact
+bounded-memory gate, one completed coequal model gate, and one later explicit
+route-selection packet as the next required move.
 
 The current admissible follow-on work is:
 
 - low-priority manuscript / README / blog alignment work;
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20`;
-- coequal model work under the authorized `R45` lane;
 - later `H42` route-selection preparation, but not `R44` execution by
   momentum; and
 - later explicit merge review only if a future operational packet decides to
@@ -351,7 +367,6 @@ The current admissible follow-on work is:
 
 The current conditional forward order is:
 
-`R45_origin_dual_mode_model_mainline_gate` ->
 `H42_post_r43_route_selection_packet` ->
 conditional `R44_origin_restricted_wasm_useful_case_execution_gate`
 
@@ -364,7 +379,7 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`R45_origin_dual_mode_model_mainline_gate`
+`H42_post_r43_route_selection_packet`
 
 ## Control References
 
@@ -390,6 +405,7 @@ The next required order is now:
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
 - `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
@@ -398,6 +414,7 @@ The next required order is now:
 - `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
 - `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
+- `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
@@ -411,6 +428,7 @@ The next required order is now:
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/`
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
+- `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
 - `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
@@ -431,8 +449,8 @@ The next required order is now:
   inactive until a later explicit contradiction packet authorizes it.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is completed and remains
   the current exact semantic-boundary gate.
-- `R45_origin_dual_mode_model_mainline_gate` is authorized by `H41/F20` as the
-  next coequal model lane, but not completed yet.
+- `R45_origin_dual_mode_model_mainline_gate` is completed and remains the
+  current coequal model lane.
 - `H42_post_r43_route_selection_packet` is required before any `R44` useful-
   case execution wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` remains deferred and
@@ -452,6 +470,8 @@ The next required order is now:
   current retrieval-contract gate underneath the landed exact `R43` gate.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is the completed
   current exact bounded-memory small-vm gate.
+- `R45_origin_dual_mode_model_mainline_gate` is the completed current coequal
+  model gate.
 - `F20_post_r42_dual_mode_model_mainline_bundle` is the current coequal-
   mainline model bundle.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the completed
@@ -483,8 +503,6 @@ The next required order is now:
 - `F19_post_f18_restricted_wasm_useful_case_roadmap` remains the current
   semantic-boundary roadmap behind `H40/R42/R43`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred.
-- `R45_origin_dual_mode_model_mainline_gate` is the authorized next coequal
-  model lane.
 - `H42_post_r43_route_selection_packet` is the later explicit route-selection
   packet required before `R44`.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` remains deferred.
@@ -499,11 +517,11 @@ The next required order is now:
 - `F9` remains the preferred forward semantic-boundary roadmap and `F11`
   remains new-substrate.
 - the current forward execution ladder is
-  `R45 -> H42 -> conditional R44`.
+  `H42 -> conditional R44`.
 
 ## Historical Reference
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42/F20/H41/P27/R43`
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34/H35/R40/H36/H37/F16/H38/P26/F17/F18/F19/H40/R42/F20/H41/P27/R43/R45`
 packet chain change the current routing target, not the historical record.

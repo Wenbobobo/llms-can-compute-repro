@@ -12,6 +12,8 @@
   `R42_origin_append_only_memory_retrieval_contract_gate`.
 - The current completed exact bounded-memory small-VM gate is
   `R43_origin_bounded_memory_small_vm_execution_gate`.
+- The current completed coequal model gate is
+  `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
   `F20_post_r42_dual_mode_model_mainline_bundle`.
 - The active scientific target is now the narrower Origin-core line:
@@ -44,8 +46,9 @@
   coequal-mainline dual-mode model posture; `H41` authorizes exact `R43`
   plus coequal model `R45` while keeping `R41` deferred and `R44` behind later
   `H42`; `P27` then lands the explicit merge packet while still keeping
-  `main` untouched; and `R43` finally validates bounded-memory exact execution
-  on `5/5` fixed families.
+  `main` untouched; `R43` validates bounded-memory exact execution on `5/5`
+  fixed families; and `R45` then validates the two admitted model modes on the
+  same fixed family set without replacing exact evidence.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -72,8 +75,8 @@
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the
   completed current exact bounded-memory gate.
-- `R45_origin_dual_mode_model_mainline_gate` is now fixed as the authorized
-  next coequal model lane.
+- `R45_origin_dual_mode_model_mainline_gate` is now fixed as the completed
+  current coequal model gate.
 - `H42_post_r43_route_selection_packet` is now fixed as the later explicit
   route-selection packet required before any `R44` useful-case wave.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
@@ -173,9 +176,10 @@
   current exact bounded-memory small-VM gate:
   it keeps `keep_semantic_boundary_route` on `5/5` executed families, with
   `4/4` exact core families before the gated optional call/return family.
-- `R45_origin_dual_mode_model_mainline_gate` is now the authorized next
+- `R45_origin_dual_mode_model_mainline_gate` is now complete as the current
   coequal model lane:
-  it remains not yet executed and stays downstream of exact `R43`.
+  both admitted modes stay exact on the fixed `R43` family set, while the
+  trainable mode also stays exact on the held-out optional family.
 - `H42_post_r43_route_selection_packet` is now the saved later explicit route-
   selection packet required before any `R44` useful-case wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` is now saved as a

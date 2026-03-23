@@ -23,6 +23,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   stack-slot retrieval on fixed semantic-boundary tasks.
 - `R43_origin_bounded_memory_small_vm_execution_gate/` — completed current
   bounded-memory small-VM exact gate validating five fixed families end-to-end.
+- `R45_origin_dual_mode_model_mainline_gate/` — completed current coequal
+  model gate evaluating both admitted model modes on the landed `R43`
+  contract family.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
 - `F20_post_r42_dual_mode_model_mainline_bundle/` — current planning-only
@@ -99,6 +102,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R43_origin_bounded_memory_small_vm_execution_gate/` — completed exact
   bounded-memory small-VM gate validating five fixed families without widening
   the admitted substrate.
+- `R45_origin_dual_mode_model_mainline_gate/` — completed coequal model gate
+  validating two admitted model modes on the same bounded-memory contract.
 
 ## Completed Current-Wave Closeout
 
@@ -154,8 +159,6 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
-- `R45_origin_dual_mode_model_mainline_gate/` — authorized coequal model lane
-  downstream of `H41/F20` and downstream of the landed exact `R43` gate.
 - `H42_post_r43_route_selection_packet/` — later explicit route-selection
   packet required before any `R44` useful-case execution wave.
 - `R44_origin_restricted_wasm_useful_case_execution_gate/` — deferred future
@@ -226,7 +229,7 @@ stack:
   changes by themselves.
 - `R41` is a deferred future runtime-audit design, not active work.
 - `R43` is the completed current exact semantic-boundary gate.
-- `R45` is the authorized next coequal model lane under the `F20` evidence
+- `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
 - `H42` is the later explicit route-selection packet required before `R44`.
 - `R44` remains deferred future useful-case work.
@@ -234,7 +237,7 @@ stack:
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`
   remains new-substrate roadmap storage.
-- `R43` is now completed; `R45` is not completed yet, and model evidence
-  remains downstream of the landed exact `R43` contract set.
+- `R43` and `R45` are now both completed; model evidence still remains
+  downstream of the landed exact `R43` contract set.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
   explicit packet.

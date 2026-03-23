@@ -26,6 +26,8 @@ the current completed semantic-boundary retrieval-contract gate remains
 `R42_origin_append_only_memory_retrieval_contract_gate`, the current
 completed exact bounded-memory small-VM gate is now
 `R43_origin_bounded_memory_small_vm_execution_gate`, the current
+completed coequal model gate is now
+`R45_origin_dual_mode_model_mainline_gate`, the current
 coequal-mainline model bundle is
 `F20_post_r42_dual_mode_model_mainline_bundle`, the completed operational
 explicit merge packet is
@@ -58,16 +60,17 @@ The narrow current stack is:
   fixes `R42 -> R43 -> R44` as the bounded semantic-boundary ladder, then
   explicitly activates that route once and validates the first retrieval-
   contract gate on `6/6` tasks and `65/65` exact observations;
-- `F20 -> H41 -> P27 -> R43` records the coequal-mainline dual-mode model
+- `F20 -> H41 -> P27 -> R43 -> R45` records the coequal-mainline dual-mode model
   posture, explicitly authorizes exact `R43` plus coequal model `R45`, lands
   one explicit merge packet that keeps `main` untouched, and then validates
-  bounded-memory exact execution on `5/5` fixed families.
+  bounded-memory exact execution on `5/5` fixed families plus model-side exact
+  execution on `2/2` admitted modes over the same family set.
 
 What stays blocked or deferred:
 
 - `R41` remains deferred behind a later explicit contradiction packet;
 - merge back to `main` remains staged and unexecuted inside `P27`;
-- `R45` is authorized as the next coequal model lane but not completed;
+- `H42` is now the next required explicit route-selection packet;
 - `R44` remains deferred behind later `H42_post_r43_route_selection_packet`;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
@@ -78,13 +81,14 @@ For current work, trust
 `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`,
 `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`,
 `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`,
+`docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`,
 `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`,
 `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
 `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
 `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`,
-`results/P27...`, `results/R43...`, `results/H40...`, `results/R42...`, `results/H38...`,
+`results/P27...`, `results/R45...`, `results/R43...`, `results/H40...`, `results/R42...`, `results/H38...`,
 `results/P26...`,
 `results/H37...`, `results/P25...`, `results/H36...`, `results/H35...`,
 `results/R40...`, and the preserved
@@ -125,6 +129,8 @@ historical packet inventory below.
   `R42_origin_append_only_memory_retrieval_contract_gate`.
 - The current completed exact bounded-memory small-VM gate is
   `R43_origin_bounded_memory_small_vm_execution_gate`.
+- The current completed coequal model gate is
+  `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
   `F20_post_r42_dual_mode_model_mainline_bundle`.
 - The preserved prior docs-only control packet is
@@ -153,8 +159,6 @@ historical packet inventory below.
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- The authorized next coequal model lane is
-  `R45_origin_dual_mode_model_mainline_gate`.
 - The later explicit route-selection packet required before `R44` is
   `H42_post_r43_route_selection_packet`.
 - The current active scientific target is the narrower Origin-core line:
@@ -212,6 +216,9 @@ historical packet inventory below.
 - `P27` then records the clean post-`H41` source branch, lands one explicit
   merge packet on `wip/p27-promotion-merge`, and still leaves `main`
   unmerged.
+- `R45` then evaluates the admitted `compiled_weight_executor` and
+  `trainable_2d_executor` on the landed `R43` bounded-memory contract family,
+  with both modes staying exact on the exported five-family suite.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -421,6 +428,7 @@ historical packet inventory below.
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` — one-file summary for the current coequal-mainline model bundle
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` — one-file summary for the current docs-only aggressive long-arc decision packet
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json` — one-file summary for the completed operational explicit merge packet
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json` — one-file summary for the completed coequal dual-mode model gate
 - `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json` — one-file summary for the completed bounded-memory small-VM exact gate
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json` — one-file summary for the current docs-only activation packet selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json` — one-file summary for the completed first semantic-boundary retrieval-contract gate
@@ -444,6 +452,7 @@ historical packet inventory below.
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/README.md` — landed coequal-mainline model bundle fixing the exact-versus-model evidence boundary
 - `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/README.md` — landed current docs-only aggressive long-arc decision packet above `R42`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/README.md` — completed operational explicit merge packet that stages merge posture without merging `main`
+- `docs/milestones/R45_origin_dual_mode_model_mainline_gate/README.md` — completed coequal model gate on the landed bounded-memory contract family
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/README.md` — completed bounded-memory small-VM exact gate on five fixed families
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/README.md` — landed current docs-only activation packet for the semantic-boundary route
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/README.md` — landed current retrieval-contract gate for exact latest-write-by-address and stack-slot retrieval
