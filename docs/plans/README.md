@@ -8,6 +8,11 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-24-post-r42-aggressive-long-arc-master-plan.md` — the current
+  post-`R42` saved master plan that fixes the aggressive long-arc wave order:
+  `Wave 0` save/push/fork, `F20/H41` control override, `P27` explicit merge
+  hygiene, `R43` exact bounded-memory mainline, `R45` dual-mode model
+  mainline, later `H42`, and conditional `R44`.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -112,6 +117,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Historical Plan Groups
 
+- `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,
