@@ -1,0 +1,8 @@
+# Todo
+
+- [ ] Only activate this roadmap if a later packet establishes a genuine
+  new-substrate question.
+- [ ] If activated, separate planner semantics, executor semantics, and
+  systems claims before any implementation batch.
+- [ ] Keep this family from backdooring general LLM-computer or arbitrary-`C`
+  rhetoric.
