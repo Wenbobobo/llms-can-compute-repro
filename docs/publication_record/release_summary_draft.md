@@ -41,7 +41,15 @@ The current execution-facing chain is now
 `F18_post_h38_origin_core_long_arc_bundle` ->
 `F19_post_f18_restricted_wasm_useful_case_roadmap` ->
 `H40_post_h38_semantic_boundary_activation_packet` ->
-`R42_origin_append_only_memory_retrieval_contract_gate`.
+`R42_origin_append_only_memory_retrieval_contract_gate` ->
+`F20_post_r42_dual_mode_model_mainline_bundle` ->
+`H41_post_r42_aggressive_long_arc_decision_packet` ->
+`P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
+`R43_origin_bounded_memory_small_vm_execution_gate` ->
+`R45_origin_dual_mode_model_mainline_gate` ->
+`H42_post_r43_route_selection_packet` ->
+`R44_origin_restricted_wasm_useful_case_execution_gate` ->
+`H43_post_r44_useful_case_refreeze`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
@@ -116,21 +124,28 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H40_post_h38_semantic_boundary_activation_packet`, which preserves
+`H43_post_r44_useful_case_refreeze`, which preserves
+`H42_post_r43_route_selection_packet` and
+`H41_post_r42_aggressive_long_arc_decision_packet` as the prior docs-only
+decision packets, preserves
 `H36_post_r40_bounded_scalar_family_refreeze` as the active routing/refreeze
-packet, records
-`R42_origin_append_only_memory_retrieval_contract_gate` as the completed
-current semantic-boundary retrieval-contract gate,
-`P26_post_h37_promotion_and_artifact_hygiene_audit` as the completed
-operational audit lane, `F16_post_h37_r41_candidate_isolation_bundle` as the
-current candidate-isolation bundle,
-`F17_post_h38_same_substrate_exit_criteria_bundle` as the current
-same-substrate exit bundle,
-`F18_post_h38_origin_core_long_arc_bundle` as the current long-arc planning
-bundle, `F19_post_f18_restricted_wasm_useful_case_roadmap` as the current
-semantic-boundary roadmap, and
-`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical derivative
-bundle while preserving `H38_post_f16_runtime_relevance_reopen_decision_packet`,
+packet, records `R42_origin_append_only_memory_retrieval_contract_gate`,
+`R43_origin_bounded_memory_small_vm_execution_gate`,
+`R44_origin_restricted_wasm_useful_case_execution_gate`, and
+`R45_origin_dual_mode_model_mainline_gate` as the completed current
+semantic-boundary gate stack, records
+`F20_post_r42_dual_mode_model_mainline_bundle` as the coequal-mainline model
+bundle, records `P27_post_h41_clean_promotion_and_explicit_merge_packet` as
+the completed explicit merge packet with `merge_executed = false`, records
+`P26_post_h37_promotion_and_artifact_hygiene_audit` as the preserved prior
+operational audit lane, records
+`F16_post_h37_r41_candidate_isolation_bundle`,
+`F17_post_h38_same_substrate_exit_criteria_bundle`,
+`F18_post_h38_origin_core_long_arc_bundle`,
+`F19_post_f18_restricted_wasm_useful_case_roadmap`, and
+`F15_post_h36_origin_goal_reanchor_bundle` as the current planning/control
+bundle set, and keeps `H40_post_h38_semantic_boundary_activation_packet`,
+`H38_post_f16_runtime_relevance_reopen_decision_packet`,
 `H37_post_h36_runtime_relevance_decision_packet`, and
 `P25_post_h36_clean_promotion_prep` as the prior decision/audit support wave.
 Under that state, `H27` remains the negative closeout of the old
@@ -147,27 +162,31 @@ row plus one same-family boundary row. `H37` first keeps that `H36` freeze,
 `F16` then reduces the saved `R41` catalog to fixed candidate statuses and
 concludes `no_candidate_ready`, `H38` keeps the same freeze again because
 there is still no `execution_ready` candidate on the landed `R40` row pair,
-`P26` records an `audit_only` promotion posture, `F17` stores the future
-same-substrate exit routes without activating any runtime lane, `F18/F19`
-select and constrain the semantic-boundary route, `H40` authorizes exactly
-`R42`, and `R42` validates the first append-only retrieval contract on six
-fixed tasks while still requiring a later explicit packet before `R43`. The
-later paper-facing and planning-only closeout lanes now also align to that
-reading: `P20` rewrites the manuscript bundle to terminate on the landed `H34`
-state, `F5` concludes `no_reopen_candidate_survives`, `F6` records
-docs/planning maintenance as the admissible default rather than a new runtime
-wave, `F7` makes future same-substrate reopen criteria mechanical, `F8` stores
+`P26` records an `audit_only` promotion posture, `F17/F18/F19` select and
+constrain the semantic-boundary route, `H40` authorizes exactly `R42`, `R42`
+validates the first append-only retrieval contract, `F20/H41/P27` make the
+later exact-versus-model and explicit-merge posture canonical, `R43` lands the
+bounded-memory exact gate, `R45` lands the coequal model gate, `H42`
+authorizes exact `R44`, `R44` lands the fixed useful-case ladder, and `H43`
+refreezes that result as bounded useful-case support only. The later
+paper-facing and planning-only closeout lanes now also align to that reading:
+`P20` rewrites the manuscript bundle to terminate on the landed `H34` state,
+`F5` concludes `no_reopen_candidate_survives`, `F6` records docs/planning
+maintenance as the admissible default rather than a new runtime wave, `F7`
+makes future same-substrate reopen criteria mechanical, `F8` stores
 beyond-Origin milestone families without activating them, `F10` makes richer
 executor-visible value/comparator obligations explicit without authorizing
 runtime widening, `F12` remains the preserved earlier origin-facing claim
 delta reanchor, `F13` fixes `bounded scalar locals and flags` as the bounded
 same-substrate family-first preactivation surface, `F14` stores a conditional
 reopen-readiness blueprint, `F15` reanchors the origin-facing claim delta to
-the current control state, `F9` remains blocked, `F11` remains new-substrate,
-`P21` and `P22` remain preserved prior planning syncs, `P23/P24/P25` preserve
-the earlier driver and handoff surfaces, `P26` preserves the audit posture,
-`R41` remains deferred behind a later explicit post-`H40` packet, and
-`R43/R44` remain deferred behind a later explicit post-`R42` packet.
+the current control state, `P28` aligns publication-facing ledgers to landed
+`H43`, `F9` remains blocked, `F11` remains new-substrate, `P21` and `P22`
+remain preserved prior planning syncs, `P23/P24/P25` preserve the earlier
+driver and handoff surfaces, `P26/P27` preserve the audit-plus-explicit-merge
+operational posture, `R41` remains deferred behind a later explicit
+contradiction packet, and no active downstream runtime lane exists after
+`H43`.
 
 ## Reproducibility pointers
 

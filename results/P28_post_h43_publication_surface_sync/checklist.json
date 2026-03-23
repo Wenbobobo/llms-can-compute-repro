@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p28_packet_docs_define_low_priority_publication_sync_without_scientific_widening",
+      "status": "pass",
+      "notes": "P28 should remain a docs-only publication sync packet, not a new scientific stage."
+    },
+    {
+      "item_id": "upstream_h43_r44_r45_r43_and_p27_results_justify_the_synced_surface",
+      "status": "pass",
+      "notes": "The synced publication surface must stay grounded in the landed H43/R44/R45/R43/P27 result stack."
+    },
+    {
+      "item_id": "publication_ledgers_now_present_h43_as_current_and_no_runtime_lane_after_it",
+      "status": "pass",
+      "notes": "The paper-facing ledgers should agree that H43 is current and that no further runtime lane is active."
+    },
+    {
+      "item_id": "release_review_submission_indexes_and_wave_handoff_record_p28_while_preserving_h43_current",
+      "status": "pass",
+      "notes": "Release/review/submission helpers and active-wave handoff should reflect P28 while preserving H43 as the current scientific stage."
+    }
+  ]
+}

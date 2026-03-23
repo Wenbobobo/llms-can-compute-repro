@@ -48,9 +48,10 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H43` is complete. There is now no active downstream runtime lane after the
-landed `H42/R43/R44/R45/F20/P27` stack. Near-term work is limited to
-low-priority docs/control hygiene or a later explicit planning packet.
+`H43` remains the current scientific stage. `P28_post_h43_publication_surface_sync`
+is the current low-priority operational/docs wave. It aligns paper-facing
+ledgers to the landed `H42/R43/R44/R45/F20/P27/H43` stack without creating a
+new runtime lane.
 
 ## Current Facts
 
@@ -65,6 +66,8 @@ low-priority docs/control hygiene or a later explicit planning packet.
 - `wip/h42-route-selection` is the clean preserved route-selection packet branch.
 - `wip/r44-useful-case-gate` is the clean restricted useful-case execution branch.
 - `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
+- `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
+  sync branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -110,6 +113,8 @@ low-priority docs/control hygiene or a later explicit planning packet.
 9. Keep `R41` deferred until later explicit contradiction routing.
 10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
+11. Keep publication-facing ledgers downstream of `H43` without changing the
+    scientific stage driver.
 
 ## Last Completed Order
 
@@ -168,6 +173,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   non-substitutive relative to exact `R43`.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
+- `P28` is the current low-priority publication/control sync wave and does not
+  change the active scientific stage.
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
 - `R43` is the completed current exact gate.
@@ -184,6 +191,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
@@ -195,12 +203,14 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
+- `docs/milestones/P28_post_h43_publication_surface_sync/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/P28_post_h43_publication_surface_sync/summary.json`
 - `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`

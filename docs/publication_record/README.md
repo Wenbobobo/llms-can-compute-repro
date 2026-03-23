@@ -7,25 +7,45 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H40` docs-only semantic-boundary activation packet, preserving `H36` as the
-  active routing/refreeze packet, `R42` as the completed current
-  semantic-boundary retrieval-contract gate, `P26` as the completed
-  operational promotion/artifact audit lane, `F18` as the current long-arc
-  planning bundle, `F19` as the current semantic-boundary useful-case
-  roadmap, `F16` as the current candidate-isolation bundle, `F17` as the
-  current same-substrate exit bundle, `F15` as the current canonical
-  origin-facing derivative bundle, `H38/H37/P25` as the preserved prior
-  decision/audit support wave, `H35` as the preserved prior docs-only control
-  packet, `P24` as the preserved prior sync packet, preserving `H27` as the
-  negative closeout of the old same-endpoint wave, `H28` as the Origin-core
-  pivot packet, `H29/R36/R37/H30/H31/R38/H32/H33/H34` as preserved upstream
+  `H43` docs-only useful-case refreeze packet, preserving `H42/H41` as the
+  prior docs-only decision packets, preserving `H36` as the active
+  routing/refreeze packet, recording completed `R42`, `R43`, `R44`, and `R45`
+  as the current semantic-boundary gate stack, preserving `F20` as the
+  coequal-mainline model bundle, preserving `P27` as the completed explicit
+  merge packet with `merge_executed = false`, preserving `P26` as the prior
+  operational audit lane, preserving `F18/F19/F16/F17/F15` as the current
+  planning/control bundles, preserving `H40/H38/H37/P25` as the prior
+  decision/audit support wave, preserving `H35/P24` as the earlier
+  bounded-scalar control surfaces, preserving `H27` as the negative closeout of
+  the old same-endpoint wave, preserving `H28` as the Origin-core pivot packet,
+  preserving `H29/R36/R37/H30/H31/R38/H32/H33/H34` as upstream
   evidence/control context, treating `R39` and `R40` as completed
   same-substrate downstream evidence rather than automatic routing changes, and
-  recording `H40` as the current route-selection packet plus `R42` as the
-  first completed semantic-boundary gate;
-- `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md` — the current
-  saved post-`H38` activation design surface that landed `H40/R42` while
-  keeping `R41`, `R43`, and `R44` deferred pending later explicit packets;
+  recording `H43` as the current stage plus
+  `no_active_downstream_runtime_lane` as the current follow-on state;
+- `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md` — the
+  preserved design surface that landed `F20/H41` and turned post-`R42`
+  aggressive-long-arc routing into the current exact-versus-model evidence
+  boundary;
+- `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md` — the
+  preserved design surface that landed `P27` and kept merge posture explicit
+  without merging `main`;
+- `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md` — the
+  preserved design surface that landed `R45` as a coequal, non-substitutive
+  model lane on the landed `R43` contract family;
+- `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md` — the
+  preserved design surface that turned `H42` into the completed route-selection
+  packet authorizing exact `R44`;
+- `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md` — the preserved
+  design surface that turned landed `R44` into the completed current narrow
+  useful-case gate and restored `no_active_downstream_runtime_lane`;
+- `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md` —
+  the current low-priority design surface for syncing publication-facing
+  ledgers to landed `H43/R44/R45/R43/P27` state without changing scientific
+  stage;
+- `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md` — the
+  preserved post-`H38` activation design surface that landed `H40/R42` before
+  the later completed `H41/P27/R43/R45/H42/R44/H43` stack;
 - `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
   — the current saved post-`H37` design surface that landed `F16/H38/P26/F17`
   without authorizing a new runtime lane;
@@ -113,13 +133,37 @@ Current control docs:
   saved `R41` catalog to explicit statuses and concludes
   `no_candidate_ready`;
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/` — the
-  landed current docs-only semantic-boundary activation packet that preserves
-  `H36`, keeps `H38` explicit as the prior decision packet, and authorizes
-  exactly `R42`;
+  landed preserved prior docs-only semantic-boundary activation packet that
+  preserves `H36`, keeps `H38` explicit as the prior decision packet, and
+  authorizes exactly `R42`;
 - `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/` —
   the completed semantic-boundary retrieval-contract gate that validates exact
-  latest-write retrieval on six fixed tasks without authorizing `R43` by
-  momentum;
+  latest-write retrieval on six fixed tasks underneath the later completed
+  `R43/R44/R45/H42/H43` stack;
+- `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/` — the
+  planning-only coequal-mainline model bundle fixing the exact-versus-model
+  evidence boundary above completed `R42`;
+- `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/` — the
+  preserved prior docs-only decision packet that authorizes exact `R43`,
+  admits coequal `R45`, and keeps `R44` behind later `H42`;
+- `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
+  the completed operational explicit merge packet that records merge posture
+  without merging `main`;
+- `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/` — the
+  completed current exact bounded-memory small-VM gate on five fixed families;
+- `docs/milestones/R45_origin_dual_mode_model_mainline_gate/` — the completed
+  current coequal model gate on the landed `R43` contract family;
+- `docs/milestones/H42_post_r43_route_selection_packet/` — the preserved prior
+  docs-only route-selection packet that authorizes exact `R44`;
+- `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/` —
+  the completed current restricted useful-case gate on the fixed three-kernel
+  ladder;
+- `docs/milestones/H43_post_r44_useful_case_refreeze/` — the current active
+  docs-only useful-case refreeze packet that records claim `D` as
+  `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
+- `docs/milestones/P28_post_h43_publication_surface_sync/` — the current
+  low-priority operational publication/control sync packet that aligns the
+  paper-facing ledgers to landed `H43` without changing scientific stage;
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/` —
   the landed preserved prior docs-only post-`F16` runtime-relevance decision
   packet that keeps `H36` frozen and leaves `R41` deferred;
@@ -251,11 +295,38 @@ Current control docs:
   machine-readable preserved active refreeze packet for the
   bounded-scalar wave;
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json` —
-  machine-readable current docs-only semantic-boundary activation packet
-  selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`;
+  machine-readable preserved prior docs-only semantic-boundary activation
+  packet selecting `authorize_r42_origin_append_only_memory_retrieval_contract_gate`;
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
   — machine-readable current semantic-boundary retrieval-contract gate
   recording exact value and maximizer-row identity on six fixed tasks;
+- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` —
+  machine-readable current coequal-mainline model bundle fixing the
+  exact-versus-model evidence boundary;
+- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` —
+  machine-readable preserved prior docs-only decision packet authorizing exact
+  `R43` plus coequal `R45`;
+- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+  — machine-readable explicit merge packet preserving `merge_executed = false`;
+- `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json` —
+  machine-readable current exact bounded-memory small-VM gate on five fixed
+  families;
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json` —
+  machine-readable current coequal model gate on the landed `R43` contract
+  family;
+- `results/H42_post_r43_route_selection_packet/summary.json` —
+  machine-readable preserved prior docs-only route-selection packet
+  authorizing exact `R44`;
+- `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
+  — machine-readable current restricted useful-case gate on the fixed
+  three-kernel ladder;
+- `results/H43_post_r44_useful_case_refreeze/summary.json` —
+  machine-readable current docs-only useful-case refreeze packet recording
+  claim `D` as `supported_here_narrowly` and restoring
+  `no_active_downstream_runtime_lane`;
+- `results/P28_post_h43_publication_surface_sync/summary.json` —
+  machine-readable low-priority publication/control sync packet downstream of
+  landed `H43`;
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
   — machine-readable preserved prior docs-only decision packet selecting
   `keep_h36_freeze` after `F16` yields `no_candidate_ready`;
@@ -498,46 +569,49 @@ Operating rule:
   bounded timing follow-up as the current operational reference for full-suite
   runtime behavior, and leaves `E1c` dormant unless a completed packet or
   later explicit review exposes a true `D0` contradiction;
-- short-form alignment for guards: `H40` is the current docs-only
-  semantic-boundary activation packet, `H36` is the preserved active
-  routing/refreeze packet, `R42` is the completed current semantic-boundary
-  retrieval-contract gate, `P26` is the completed operational
-  promotion/artifact audit lane, `F18` is the current long-arc planning
-  bundle, `F19` is the current semantic-boundary roadmap, `F16` is the
-  current candidate-isolation bundle, `F17` is the current same-substrate exit
-  bundle, `F15` is the current canonical derivative bundle, `H38/H37/P25` are
-  the preserved immediate predecessor decision/audit support wave, `H35` is
-  the preserved prior docs-only control packet, `H34/H32/H31/H30` are
+- short-form alignment for guards: `H43` is the current docs-only useful-case
+  refreeze packet, `H42/H41` are the preserved prior docs-only decision
+  packets, `H36` is the preserved active routing/refreeze packet, `R42` is the
+  completed current retrieval-contract gate, `R43` is the completed current
+  exact bounded-memory small-VM gate, `R44` is the completed current
+  restricted useful-case gate, `R45` is the completed current coequal model
+  gate, `F20` is the current coequal-mainline model bundle, `P27` is the
+  completed explicit merge packet with `merge_executed = false`, `P26` is the
+  preserved prior operational audit lane, `F18/F19/F16/F17/F15` are the
+  current planning/control bundles, `H40/H38/H37/P25` are the preserved
+  immediate predecessor decision/audit support wave, `H35/P24` are the
+  preserved earlier bounded-scalar control surfaces, `H34/H32/H31/H30` are
   preserved upstream decision/refreeze packets, `H29` is the preserved
   upstream Origin-core refreeze, `R40` is the completed bounded-scalar gate,
   `R39` and `R38` are preserved richer same-substrate gates, `R37` is the
   preserved tiny compiled-boundary gate, `R36` is the preserved precision
-  follow-up, `R41` remains deferred until a later explicit post-`H40` packet,
-  `R43/R44` remain deferred until a later explicit post-`R42` packet, `H27`
-  is the preserved same-endpoint closeout, `H25` is the preserved prior active
+  follow-up, `R41` remains deferred until a later explicit contradiction
+  packet, no active downstream runtime lane exists after `H43`, `H27` is the
+  preserved same-endpoint closeout, `H25` is the preserved prior active
   decision packet, `H23` is the preserved frozen same-endpoint scientific
   state, `P14` remains the completed downstream docs-only outward-sync lane,
   `H24` remains the completed post-`H23` split stage, `R30` and `R31` remain
   the landed post-`H23` decision packets, `R32` remains the authorized next
-  science lane, `R33` remains the deferred systems-audit lane, `H22` remains
-  the completed bounded reopen-control stage, `H21` remains the preserved
-  immediate pre-reopen control, `H20` remains the completed reentry-and-hygiene
-  split guard, `H19` remains the preserved earlier same-endpoint refreeze
-  stage, `H18` remains the completed same-endpoint reopen-and-scope-lock
-  packet, `H17` remains the preserved prior same-scope refreeze stage, `H16`
-  remains the completed earlier same-scope reopen-and-scope-lock packet, `R19`
-  remains the landed admitted-plus-heldout runtime generalization lane, `R20`
-  remains the landed mechanism lane, `R21` remains the landed bounded
-  executor-boundary lane, `R22` remains the landed harder boundary follow-up
-  underneath `H21`, `R23` remains the landed same-endpoint systems follow-up
-  underneath `H21`, `R26` remains the landed first-wave boundary scan, `R28`
-  remains the landed mechanism-contract audit, `R27` remains the landed bounded
-  second-wave extension, `R18` remains the completed comparator-only repair
-  closeout, `H14` / `R11` / `R12` remain the completed prior reopen packet,
-  `H13` / `V1` remain the completed governance/runtime handoff,
-  `H10` / `H11` / `R8` / `R9` / `R10` / `H12` remain the latest older
-  same-endpoint packet, and `H8` / `R6` / `R7` / `H9` remain the completed
-  bounded long-horizon direct baseline;
+  science lane on the old same-endpoint route, `R33` remains the deferred
+  systems-audit lane there, `H22` remains the completed bounded reopen-control
+  stage, `H21` remains the preserved immediate pre-reopen control, `H20`
+  remains the completed reentry-and-hygiene split guard, `H19` remains the
+  preserved earlier same-endpoint refreeze stage, `H18` remains the completed
+  same-endpoint reopen-and-scope-lock packet, `H17` remains the preserved
+  prior same-scope refreeze stage, `H16` remains the completed earlier
+  same-scope reopen-and-scope-lock packet, `R19` remains the landed
+  admitted-plus-heldout runtime generalization lane, `R20` remains the landed
+  mechanism lane, `R21` remains the landed bounded executor-boundary lane,
+  `R22` remains the landed harder boundary follow-up underneath `H21`, `R23`
+  remains the landed same-endpoint systems follow-up underneath `H21`, `R26`
+  remains the landed first-wave boundary scan, `R28` remains the landed
+  mechanism-contract audit, `R27` remains the landed bounded second-wave
+  extension, `R18` remains the completed comparator-only repair closeout,
+  `H14` / `R11` / `R12` remain the completed prior reopen packet, `H13` / `V1`
+  remain the completed governance/runtime handoff, `H10` / `H11` / `R8` / `R9`
+  / `R10` / `H12` remain the latest older same-endpoint packet, and `H8` /
+  `R6` / `R7` / `H9` remain the completed bounded long-horizon direct
+  baseline;
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
   a no-widening decision, so broader blog prose should not outrun the present
   paper-grade endpoint.

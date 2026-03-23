@@ -38,6 +38,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   contract family.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
+- `P28_post_h43_publication_surface_sync/` — current low-priority operational
+  publication/control sync packet aligning paper-facing ledgers to the landed
+  `H43` state without changing scientific stage.
 - `F20_post_r42_dual_mode_model_mainline_bundle/` — current planning-only
   coequal-mainline model bundle fixing the exact-versus-model evidence
   boundary and dual implementation posture.
@@ -145,6 +148,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational merge packet that stages explicit merge posture without merging
   `main`.
+- `P28_post_h43_publication_surface_sync/` — completed operational
+  publication/control sync packet that keeps `H43` current while aligning
+  paper-facing ledgers downstream of landed evidence.
 
 ## Current Planning And Deferred Follow-Ons
 

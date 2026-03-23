@@ -42,8 +42,23 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../plans/2026-03-23-post-f10-family-first-preactivation-design.md`
 - `../plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `../plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
+- `../plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
+- `../plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
+- `../plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
+- `../plans/2026-03-24-post-r43-h42-route-selection-design.md`
+- `../plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `../plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
 - `../milestones/H40_post_h38_semantic_boundary_activation_packet/`
 - `../milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
+- `../milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
+- `../milestones/H41_post_r42_aggressive_long_arc_decision_packet/`
+- `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
+- `../milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
+- `../milestones/R45_origin_dual_mode_model_mainline_gate/`
+- `../milestones/H42_post_r43_route_selection_packet/`
+- `../milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
+- `../milestones/H43_post_r44_useful_case_refreeze/`
+- `../milestones/P28_post_h43_publication_surface_sync/`
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/`
 - `../milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
 - `../milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
@@ -78,6 +93,15 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
+- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
+- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
+- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+- `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
+- `results/H42_post_r43_route_selection_packet/summary.json`
+- `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
+- `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/P28_post_h43_publication_surface_sync/summary.json`
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
@@ -135,6 +159,15 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_h38_post_f16_runtime_relevance_reopen_decision_packet.py`
 - `scripts/export_h40_post_h38_semantic_boundary_activation_packet.py`
 - `scripts/export_r42_origin_append_only_memory_retrieval_contract_gate.py`
+- `scripts/export_f20_post_r42_dual_mode_model_mainline_bundle.py`
+- `scripts/export_h41_post_r42_aggressive_long_arc_decision_packet.py`
+- `scripts/export_p27_post_h41_clean_promotion_and_explicit_merge_packet.py`
+- `scripts/export_r43_origin_bounded_memory_small_vm_execution_gate.py`
+- `scripts/export_r45_origin_dual_mode_model_mainline_gate.py`
+- `scripts/export_h42_post_r43_route_selection_packet.py`
+- `scripts/export_r44_origin_restricted_wasm_useful_case_execution_gate.py`
+- `scripts/export_h43_post_r44_useful_case_refreeze.py`
+- `scripts/export_p28_post_h43_publication_surface_sync.py`
 - `scripts/export_p26_post_h37_promotion_and_artifact_hygiene_audit.py`
 - `scripts/export_h20_post_h19_mainline_reentry_and_hygiene_split.py`
 - `scripts/export_r22_d0_true_boundary_localization_gate.py`
@@ -163,27 +196,29 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current packet is anchored on `H40` as the current docs-only
-semantic-boundary activation packet, `H36` as the preserved active
-routing/refreeze packet, `R42` as the completed current semantic-boundary
-retrieval-contract gate, `P26` as the completed operational
-promotion/artifact audit lane, `F18` as the current long-arc planning bundle,
-`F19` as the current semantic-boundary roadmap, `F16` as the current
-candidate-isolation bundle, `F17` as the current same-substrate exit bundle,
-`H38/H37/P25` as the preserved prior decision/audit support wave, and `F15`
-as the current canonical derivative bundle, with preserved upstream
-`H35/H34/H33/R40/R39/H32/H31/H30/H29/R38/R37/R36/H28/H27` as the current
-Origin-core control chain and preserved `H25/H23/H21/H19` as the older
-same-endpoint control stack. The latest downstream follow-on wave remains
-non-active: `F7` makes future same-substrate reopen criteria mechanical, `F8`
-stores beyond-Origin milestone families without activating them, `F10` makes
-richer executor-visible value/comparator obligations explicit without
-authorizing runtime widening, `F12` preserves the earlier origin-facing
-claim-delta reanchor, `F13` preserves the bounded family-first preactivation
-surface, `F14` preserves the conditional reopen-readiness blueprint, `F15`
-preserves the current origin-facing derivative interpretation, `R41` remains
-deferred behind a later explicit post-`H40` packet, `R43/R44` remain deferred
-behind a later explicit post-`R42` packet, `F9` remains blocked, `F11`
-remains new-substrate, `P21` and `P22` remain preserved prior planning syncs,
-`P23/P24/P25` preserve the earlier top-level control surfaces, and `P26`
-preserves the current audit-only interpretation.
+bundle. The current packet is anchored on `H43` as the current docs-only
+useful-case refreeze packet, `H42/H41` as the preserved prior docs-only
+decision packets, `H36` as the preserved active routing/refreeze packet,
+`R42`, `R43`, `R44`, and `R45` as the completed current semantic-boundary
+gate stack, `F20` as the current coequal-mainline model bundle, `P27` as the
+completed explicit merge packet with `merge_executed = false`, `P26` as the
+preserved prior operational audit lane, `F18/F19/F16/F17` as the current
+planning/control bundle set, `H40/H38/H37/P25` as the preserved prior
+decision/audit support wave, and `F15` as the current canonical derivative
+bundle, with preserved upstream `H35/H34/H33/R40/R39/H32/H31/H30/H29/R38/R37/R36/H28/H27`
+as the current Origin-core control chain and preserved `H25/H23/H21/H19` as
+the older same-endpoint control stack. The latest downstream follow-on wave
+remains non-active scientifically: `P28` only aligns publication-facing
+ledgers to landed `H43`, `F7` makes future same-substrate reopen criteria
+mechanical, `F8` stores beyond-Origin milestone families without activating
+them, `F10` makes richer executor-visible value/comparator obligations
+explicit without authorizing runtime widening, `F12` preserves the earlier
+origin-facing claim-delta reanchor, `F13` preserves the bounded family-first
+preactivation surface, `F14` preserves the conditional reopen-readiness
+blueprint, `F15` preserves the current origin-facing derivative
+interpretation, `R41` remains deferred behind a later explicit contradiction
+packet, no active downstream runtime lane exists after `H43`, `F9` remains
+blocked, `F11` remains new-substrate, `P21` and `P22` remain preserved prior
+planning syncs, `P23/P24/P25` preserve the earlier top-level control surfaces,
+and `P26/P27` preserve the current audit-plus-explicit-merge operational
+interpretation without merging `main`.

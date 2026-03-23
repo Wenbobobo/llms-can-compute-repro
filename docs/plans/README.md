@@ -30,6 +30,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   refreeze design surface that turns landed `R44` into the completed current
   narrow useful-case gate and returns the stack to no active downstream
   runtime lane.
+- `2026-03-24-post-h43-p28-publication-surface-sync-design.md` — the current
+  low-priority publication/control sync design surface that aligns paper-facing
+  ledgers to landed `H43/R44/R45/R43/P27` state without changing the
+  scientific stage.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -87,6 +91,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
+- `../milestones/P28_post_h43_publication_surface_sync/` — current
+  low-priority operational publication/control sync packet that aligns
+  paper-facing ledgers to the landed `H43` state.
 - `../milestones/H42_post_r43_route_selection_packet/` — preserved prior
   docs-only route-selection packet that authorized `R44` explicitly.
 - `../milestones/H41_post_r42_aggressive_long_arc_decision_packet/` —
@@ -101,6 +108,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
   completed operational explicit merge packet for the post-`R42` override.
+- `../milestones/P28_post_h43_publication_surface_sync/` — completed
+  operational publication/control sync packet downstream of `H43`.
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
   candidate-isolation bundle for the saved `R41` catalog.
 - `../milestones/F17_post_h38_same_substrate_exit_criteria_bundle/` —

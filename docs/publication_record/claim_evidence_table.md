@@ -211,27 +211,37 @@
 
 ## Current bounded mainline state
 
-- `H40` is the current active docs-only semantic-boundary activation packet
-  for the bounded mainline after the landed
-  `H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19`
-  control wave; it selects
-  `authorize_r42_origin_append_only_memory_retrieval_contract_gate` and keeps
-  `R41/R43/R44` non-active here.
+- `H43` is the current active docs-only useful-case refreeze packet for the
+  bounded mainline after the landed
+  `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44` follow-on stack above
+  `H40/R42`; it records claim `D` as `supported_here_narrowly` and restores
+  `no_active_downstream_runtime_lane`.
+- `H42` and `H41` are the preserved prior docs-only decision packets that
+  respectively authorized exact `R44` and authorized exact `R43` plus coequal
+  `R45`.
 - `H36` is the preserved active routing/refreeze packet; it freezes the
   bounded-scalar family narrowly and remains the routing packet underneath the
-  new semantic-boundary activation surface.
-- `R42` is the completed current semantic-boundary retrieval-contract gate; it
-  validates exact latest-write retrieval by address and stack slot on six fixed
-  tasks with exact value and maximizer-row identity, but it does not authorize
-  `R43` by momentum.
-- `P26` is the completed operational promotion/artifact audit lane, `F16` is
-  the current candidate-isolation bundle, `F17` is the current same-substrate
-  exit bundle, `F18` is the current long-arc planning bundle, `F19` is the
-  current semantic-boundary roadmap, and `F15` is the current canonical
-  derivative bundle; none of them changes the scientific lane by itself.
-- `H38` and `H37` remain preserved prior docs-only decision packets and `P25`
-  remains the preserved prior operational promotion-prep lane underneath the
-  current `H40/R42/P26/F16/F17/F18/F19` control surface.
+  later semantic-boundary stack.
+- `R42` is the completed current semantic-boundary retrieval-contract gate;
+  it validates exact latest-write retrieval by address and stack slot on six
+  fixed tasks with exact value and maximizer-row identity underneath the later
+  completed `R43/R44/R45` stack.
+- `R43` is the completed current exact bounded-memory small-VM gate on five
+  fixed families.
+- `R44` is the completed current restricted useful-case gate on the fixed
+  three-kernel ladder.
+- `R45` is the completed current coequal model gate and remains explicitly
+  non-substitutive relative to exact `R43`.
+- `P27` is the completed operational explicit merge packet with
+  `merge_executed = false`; `P26` remains the preserved prior operational
+  promotion/artifact audit lane.
+- `F20` is the current coequal-mainline model bundle, while `F16`, `F17`,
+  `F18`, `F19`, and `F15` remain the current planning/control bundles; none of
+  them changes the scientific lane by itself.
+- `H40`, `H38`, and `H37` remain preserved prior docs-only decision packets,
+  and `P25` remains the preserved prior operational promotion-prep lane
+  underneath the current `H43/H42/H41/R45/R44/R43/R42/P27/P26/F20/F18/F19`
+  control surface.
 - `H35` is the preserved prior docs-only bounded-scalar runtime-decision
   packet, `H34` is the preserved earlier no-runtime interpretation packet,
   and `H33` remains the preserved prior docs-only question-selection packet.
@@ -246,8 +256,7 @@
   traces, exact retrieval, and a small exact stack/VM executor.
 - `R36`, `R37`, and `R38` remain the upstream support set for the current
   narrow same-substrate claim.
-- `R41` remains deferred until a later explicit post-`H40` packet, while
-  `R43/R44` remain deferred until a later explicit post-`R42` packet.
+- `R41` remains deferred until a later explicit contradiction packet.
 - `H27` remains the preserved negative closeout of the old same-endpoint
   recovery route.
 - `H25`, `H23`, `H21`, `H19`, `H17`, and `H15` remain preserved historical
