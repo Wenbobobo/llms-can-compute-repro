@@ -1,4 +1,5 @@
 from .datasets import (
+    BoundedMemoryVMCase,
     BytecodeCase,
     LongHorizonScalingCase,
     RetrievalPressureCase,
@@ -35,6 +36,7 @@ from .datasets import (
     loop_with_subroutine_update_program,
     memory_surface_cases,
     memory_surface_negative_programs,
+    r43_bounded_memory_vm_cases,
     r3_d0_exact_execution_stress_cases,
     r15_d0_remaining_family_retrieval_pressure_cases,
     r6_d0_long_horizon_scaling_cases,
@@ -82,6 +84,7 @@ from .verifier import VerifierResult, verify_program
 
 __all__ = [
     "BytecodeCase",
+    "BoundedMemoryVMCase",
     "BytecodeInstruction",
     "BytecodeMemoryCell",
     "BytecodeMemoryRegion",
@@ -135,6 +138,7 @@ __all__ = [
     "loop_with_subroutine_update_program",
     "memory_surface_cases",
     "memory_surface_negative_programs",
+    "r43_bounded_memory_vm_cases",
     "r3_d0_exact_execution_stress_cases",
     "r15_d0_remaining_family_retrieval_pressure_cases",
     "r6_d0_long_horizon_scaling_cases",

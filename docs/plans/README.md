@@ -18,8 +18,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   bundle plus the docs-only `H41` aggressive long-arc decision packet above
   completed `R42`.
 - `2026-03-24-post-h41-p27-explicit-merge-wave-design.md` — the current
-  operational merge-wave design surface that lands `P27` and keeps `main`
-  untouched while fixing `R43` as the next required exact lane.
+  operational merge-wave design surface that lands `P27`, keeps `main`
+  untouched, and precedes the later completed exact `R43` lane.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.

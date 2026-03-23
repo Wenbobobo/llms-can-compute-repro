@@ -65,6 +65,17 @@ class RetrievalPressureCase:
     diagnostic_surface: bool = False
 
 
+@dataclass(frozen=True, slots=True)
+class BoundedMemoryVMCase:
+    family_id: str
+    description: str
+    family_role: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    gated_on_previous_exact: bool = False
+
+
 def _frame_cell(
     address: int,
     cell_type: BytecodeType,
@@ -1109,6 +1120,52 @@ def bounded_scalar_family_cases() -> tuple[BytecodeCase, ...]:
             "long_exact_final_state",
             768,
             bounded_scalar_flag_loop_long_program(12, base_address=336),
+        ),
+    )
+
+
+def r43_bounded_memory_vm_cases() -> tuple[BoundedMemoryVMCase, ...]:
+    return (
+        BoundedMemoryVMCase(
+            family_id="bounded_static_sum_loop",
+            description="Bounded static accumulator loop over one fixed-address memory slot.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=512,
+            program=accumulator_loop_program(12),
+        ),
+        BoundedMemoryVMCase(
+            family_id="bounded_branch_accumulator",
+            description="Bounded branch-and-accumulate loop over a fixed static address pair.",
+            family_role="core",
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=alternating_memory_loop_bytecode_program(6, base_address=16),
+        ),
+        BoundedMemoryVMCase(
+            family_id="bounded_memory_reuse_loop",
+            description="Bounded memory reuse loop with fixed address checkpoints and replay reads.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=selector_checkpoint_bank_bytecode_program(6, base_address=32),
+        ),
+        BoundedMemoryVMCase(
+            family_id="stack_depth_revisit_loop",
+            description="Bounded stack-depth revisit loop with repeated stack/memory braid reads.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=stack_memory_braid_program(8, base_address=64),
+        ),
+        BoundedMemoryVMCase(
+            family_id="single_call_return_accumulator",
+            description="Single-layer call/return accumulator executed only after the first four families stay exact.",
+            family_role="gated_optional",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=iterated_helper_accumulator_program(20, counter_address=128, accumulator_address=129),
+            gated_on_previous_exact=True,
         ),
     )
 

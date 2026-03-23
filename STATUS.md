@@ -10,6 +10,8 @@
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
   `R42_origin_append_only_memory_retrieval_contract_gate`.
+- The current completed exact bounded-memory small-VM gate is
+  `R43_origin_bounded_memory_small_vm_execution_gate`.
 - The current coequal-mainline model bundle is
   `F20_post_r42_dual_mode_model_mainline_bundle`.
 - The active scientific target is now the narrower Origin-core line:
@@ -41,8 +43,9 @@
   `6/6` fixed tasks with `65/65` exact observations; `F20` records the
   coequal-mainline dual-mode model posture; `H41` authorizes exact `R43`
   plus coequal model `R45` while keeping `R41` deferred and `R44` behind later
-  `H42`; and `P27` then lands the explicit merge packet while still keeping
-  `main` untouched.
+  `H42`; `P27` then lands the explicit merge packet while still keeping
+  `main` untouched; and `R43` finally validates bounded-memory exact execution
+  on `5/5` fixed families.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -68,9 +71,9 @@
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
 - `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the
-  authorized next exact gate.
+  completed current exact bounded-memory gate.
 - `R45_origin_dual_mode_model_mainline_gate` is now fixed as the authorized
-  coequal model lane.
+  next coequal model lane.
 - `H42_post_r43_route_selection_packet` is now fixed as the later explicit
   route-selection packet required before any `R44` useful-case wave.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
@@ -141,8 +144,8 @@
   policy without authorizing a merge.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet` is now complete:
   it fixes the clean post-`H41` source branch, stages explicit merge posture on
-  `wip/p27-promotion-merge`, keeps `merge_executed = false`, and makes `R43`
-  the next required exact lane.
+  `wip/p27-promotion-merge`, keeps `merge_executed = false`, and preserves
+  explicit merge posture after the later completed `R43` exact gate.
 - `F17_post_h38_same_substrate_exit_criteria_bundle` is now complete:
   it records the later route-selection rules without authorizing a runtime
   lane.
@@ -166,11 +169,12 @@
   it validates exact latest-write-by-address and stack-slot retrieval on six
   fixed contract tasks, preserving exact maximizer-row identity in addition to
   exact retrieved value.
-- `R43_origin_bounded_memory_small_vm_execution_gate` is now the authorized
-  next exact gate:
-  it remains not yet executed, but is no longer just a saved future design.
-- `R45_origin_dual_mode_model_mainline_gate` is now the authorized coequal
-  model lane:
+- `R43_origin_bounded_memory_small_vm_execution_gate` is now complete as the
+  current exact bounded-memory small-VM gate:
+  it keeps `keep_semantic_boundary_route` on `5/5` executed families, with
+  `4/4` exact core families before the gated optional call/return family.
+- `R45_origin_dual_mode_model_mainline_gate` is now the authorized next
+  coequal model lane:
   it remains not yet executed and stays downstream of exact `R43`.
 - `H42_post_r43_route_selection_packet` is now the saved later explicit route-
   selection packet required before any `R44` useful-case wave.

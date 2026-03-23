@@ -10,6 +10,8 @@ Current scientific/control stack:
   `H36_post_r40_bounded_scalar_family_refreeze`;
 - current completed semantic-boundary retrieval-contract gate:
   `R42_origin_append_only_memory_retrieval_contract_gate`;
+- current completed exact bounded-memory small-VM gate:
+  `R43_origin_bounded_memory_small_vm_execution_gate`;
 - current coequal-mainline model bundle:
   `F20_post_r42_dual_mode_model_mainline_bundle`;
 - completed operational explicit merge packet:
@@ -34,9 +36,7 @@ Current scientific/control stack:
   `P25_post_h36_clean_promotion_prep`;
 - deferred contradiction runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
-- authorized next exact gate:
-  `R43_origin_bounded_memory_small_vm_execution_gate`;
-- authorized coequal model lane:
+- authorized next coequal model lane:
   `R45_origin_dual_mode_model_mainline_gate`;
 - later route-selection packet fixed downstream:
   `H42_post_r43_route_selection_packet`;
@@ -48,8 +48,8 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`P27` is complete. The current execution wave is now exact `R43` plus coequal
-`R45` downstream of the landed `H41/F20/P27` control stack.
+`P27` and exact `R43` are complete. The current execution wave is now coequal
+`R45` downstream of the landed `H41/F20/P27/R43` control stack.
 
 ## Current Facts
 
@@ -71,6 +71,9 @@ Immediate active wave:
 - `R42` returns `keep_semantic_boundary_route` on `6` fixed tasks and `65`
   exact observations, including `1` duplicate/tie maximizer case and `3`
   default-row hits.
+- `R43` returns `keep_semantic_boundary_route` on `5` fixed families, with
+  `5/5` exact families, `4/4` exact core families, and the gated optional
+  call/return family also exact.
 - `F20` records
   `coequal_mainline_exact_non_substitutive`
   and the admitted dual model implementations
@@ -86,8 +89,9 @@ Immediate active wave:
    gate.
 4. Preserve completed `P27` as the operational merge packet without merging
    `main`.
-5. Execute exact `R43` as the decisive next runtime gate.
-6. Keep `R45` coequal but non-substitutive relative to exact `R43`.
+5. Preserve completed exact `R43` as the decisive current runtime gate.
+6. Execute `R45` as the next coequal model lane without weakening the exact
+   evidence boundary.
 7. Keep `R41` and `R44` deferred until later explicit packets.
 8. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
@@ -130,7 +134,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R42_origin_append_only_memory_retrieval_contract_gate` ->
 `F20_post_r42_dual_mode_model_mainline_bundle` ->
 `H41_post_r42_aggressive_long_arc_decision_packet` ->
-`P27_post_h41_clean_promotion_and_explicit_merge_packet`
+`P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
+`R43_origin_bounded_memory_small_vm_execution_gate`
 
 ## Current Rule
 
@@ -144,8 +149,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   `merge_executed = false`.
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
-- `R43` is the authorized next exact gate.
-- `R45` is the authorized coequal model lane.
+- `R43` is the completed current exact gate.
+- `R45` is the authorized next coequal model lane.
 - `R44` stays deferred until later `H42_post_r43_route_selection_packet`.
 
 ## Control References
@@ -168,6 +173,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+- `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
 - `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
 - `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`

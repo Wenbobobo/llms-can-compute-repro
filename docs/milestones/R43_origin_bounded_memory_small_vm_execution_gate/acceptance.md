@@ -1,7 +1,11 @@
 # R43 Acceptance
 
-- execution tasks are fixed before runtime;
-- exact free-running trace comparison is mandatory;
-- final-state comparison is mandatory and not a substitute for trace match;
-- no new substrate, heap, or widened semantic surface is introduced;
-- `R43` remains deferred until a later explicit packet authorizes it.
+- execution families are fixed before runtime;
+- exact source/spec comparison is mandatory;
+- exact source/lowered comparison is mandatory;
+- exact accelerated free-running trace and final-state comparison is mandatory;
+- no heap region, new substrate, or widened semantic surface is introduced;
+- the optional call/return family may execute only after the four core
+  families stay exact; and
+- `R43` stops below `R45` model comparison and below any `R44` useful-case
+  widening.
