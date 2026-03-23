@@ -8,6 +8,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — the saved
+  future design surface for the deferred `R41` runtime-relevance threat lane.
 - `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` — the
   preserved design surface for the landed bounded-scalar runtime reopen and
   refreeze wave after `P23`.
@@ -71,6 +73,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   surface for the post-`P20/F5` future-option matrix.
 - `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — preserved handoff
   surface after the completed manuscript resync and contradiction scout.
+- `2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future
+  design surface for the deferred `R41` runtime-relevance threat lane.
 - `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
   preserved design surface for the landed `H35 -> R40 -> H36 -> P24` wave.
 - `2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
@@ -93,6 +97,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   docs-only sync packet for the landed bounded-scalar runtime wave.
 - `../milestones/R40_origin_bounded_scalar_locals_and_flags_gate/` —
   completed bounded-scalar runtime gate on the current substrate.
+- `../milestones/R41_origin_runtime_relevance_threat_stress_audit/` —
+  deferred future runtime-audit lane fixed to the landed `R40` row pair and
+  the two surviving threat families.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
   preserved prior docs-only scope-decision packet above `H32` that freezes the
   compiled-boundary line complete-for-now.

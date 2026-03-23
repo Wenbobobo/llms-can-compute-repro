@@ -17,6 +17,9 @@ Current control docs:
 - `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` —
   the preserved design surface for the landed bounded-scalar runtime reopen
   wave after `P23`;
+- `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` —
+  the saved future design surface for the deferred
+  `R41_origin_runtime_relevance_threat_stress_audit` lane after `H36`;
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md` —
   the preserved design surface for the current family-first post-`F10`
   planning-only wave that landed `F12/F13/F14/P23`;
@@ -76,6 +79,10 @@ Current control docs:
   same-substrate runtime gate;
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/` — the
   completed bounded-scalar same-substrate runtime gate;
+- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/` — the
+  deferred future runtime-audit lane fixing the two surviving threat families,
+  the landed `R40` row pair, the measurement rules, and the stop conditions
+  without authorizing execution;
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/` — the
   landed current active routing/refreeze packet for the bounded-scalar wave;
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/` — the landed
@@ -180,6 +187,8 @@ Current control docs:
   substrate;
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` —
   machine-readable current active refreeze packet for the bounded-scalar wave;
+- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/execution_manifest.md`
+  — saved future execution manifest for the deferred `R41` threat stress lane;
 - `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
   machine-readable boundary refreeze for the bounded `R32` follow-up;
 - `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` —

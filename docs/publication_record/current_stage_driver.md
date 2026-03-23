@@ -151,7 +151,9 @@ The current admissible follow-on work is:
 - docs-only and planning-only maintenance under `P24`;
 - low-priority manuscript / README / blog alignment work;
 - saved future design for
-  `R41_origin_runtime_relevance_threat_stress_audit` without activating it;
+  `R41_origin_runtime_relevance_threat_stress_audit` without activating it,
+  now at
+  `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`;
 - preserved planning-only roadmap work under `F2/F7/F8/F9/F10/F11/F12/F13/F14`.
 
 The next required order is now:
@@ -178,10 +180,12 @@ no active downstream runtime lane
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
 - `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
+- `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/`
+- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/`
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/`
 - `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
@@ -197,7 +201,7 @@ no active downstream runtime lane
 - `F2` remains planning-only and downstream of
   `H35/R40/H36/F10/F13/F14/P24`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred and
-  inactive until a new explicit post-`R40` packet authorizes it.
+  inactive until a new explicit post-`H36` packet authorizes it.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 

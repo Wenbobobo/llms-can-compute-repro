@@ -111,6 +111,12 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Conditional Future Lanes
 
+- `../plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` —
+  saved future design surface for the deferred
+  `R41_origin_runtime_relevance_threat_stress_audit` lane.
+- `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
+  same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
+  two surviving `F14` threat families, and explicit stop rules.
 - `../plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
   preserved design surface that led to the landed `H34` scope-decision
   packet.
@@ -174,6 +180,7 @@ stack:
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
 - `R39` and `R40` are complete downstream audits/gates, not active routing
   changes by themselves.
+- `R41` is a deferred future runtime-audit design, not active work.
 - `F7` and `F8` are preserved planning-only follow-on surfaces, not runtime
   packets.
 - `F10` is the current planning-only bridge surface, not a runtime packet.

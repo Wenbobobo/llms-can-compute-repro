@@ -105,7 +105,7 @@ lane.
    locals and typed `FLAG` slots only.
 4. Preserve `H34/H32/R39/R38/H31/H30` as earlier preserved packet context,
    not as the next objective.
-5. Keep `R41` deferred until a new explicit post-`R40` packet authorizes it.
+5. Keep `R41` deferred until a new explicit post-`H36` packet authorizes it.
 6. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
    widening by momentum.
 7. Keep `F9` blocked, keep `F11` new-substrate, and keep `F2` planning-only.
@@ -144,10 +144,12 @@ no active downstream runtime lane
 ## Current References
 
 - `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
+- `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
 - `docs/plans/2026-03-23-post-f10-family-first-preactivation-design.md`
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/`
+- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/`
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/`
 - `docs/milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
@@ -165,6 +167,8 @@ no active downstream runtime lane
   momentum;
 - do not treat `H36`, `H35`, or the local `R40` positive result as broader
   compiler, Wasm, frontier, or arbitrary-language authorization;
+- do not treat the saved `R41` design surface as authorization to execute
+  `R41`;
 - do not reopen `R29` or `F3` by wording alone;
 - do not treat `F7`, `F8`, `F10`, `F12`, `F13`, or `F14` as authorization for
   `R41`, restricted-Wasm execution, or hybrid planner/executor runtime work;
