@@ -7,11 +7,14 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H43` docs-only useful-case refreeze packet, preserving `H42/H41` as the
-  prior docs-only decision packets, preserving `H36` as the active
+  `H44` docs-only route reauthorization packet, preserving `H43` as the
+  preserved prior useful-case refreeze packet and present `H43` paper-grade
+  endpoint, preserving `H42/H41` as the earlier docs-only decision packets,
+  preserving `H36` as the active
   routing/refreeze packet, recording completed `R42`, `R43`, `R44`, and `R45`
   as the current semantic-boundary gate stack, preserving `F20` as the
-  coequal-mainline model bundle, preserving `P27` as the completed explicit
+  coequal-mainline model bundle, preserving `F21` as the current exact-first
+  post-`H43` planning bundle, preserving `P27` as the completed explicit
   merge packet with `merge_executed = false`, preserving `P26` as the prior
   operational audit lane, preserving `F18/F19/F16/F17/F15` as the current
   planning/control bundles, preserving `H40/H38/H37/P25` as the prior
@@ -20,9 +23,13 @@ Current control docs:
   the old same-endpoint wave, preserving `H28` as the Origin-core pivot packet,
   preserving `H29/R36/R37/H30/H31/R38/H32/H33/H34` as upstream
   evidence/control context, treating `R39` and `R40` as completed
-  same-substrate downstream evidence rather than automatic routing changes, and
-  recording `H43` as the current stage plus
-  `no_active_downstream_runtime_lane` as the current follow-on state;
+  same-substrate downstream evidence rather than automatic routing changes,
+  recording `H44` as the current stage plus `R46` as the current follow-on
+  state, and preserving `H43` with
+  `no_active_downstream_runtime_lane` as the landed paper-grade closeout;
+- `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
+  current master plan for exact-first post-`H43` reentry, fixing `F21`,
+  `H44`, `R46`, conditional `R47`, and conditional `R48`;
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md` — the
   preserved design surface that landed `F20/H41` and turned post-`R42`
   aggressive-long-arc routing into the current exact-versus-model evidence
@@ -178,8 +185,14 @@ Current control docs:
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/` —
   the completed current restricted useful-case gate on the fixed three-kernel
   ladder;
-- `docs/milestones/H43_post_r44_useful_case_refreeze/` — the current active
-  docs-only useful-case refreeze packet that records claim `D` as
+- `docs/milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — the
+  current exact-first post-`H43` planning bundle that fixes `R46` as the first
+  admissible next runtime candidate while keeping `R47/R48` conditional;
+- `docs/milestones/H44_post_h43_route_reauthorization_packet/` — the current
+  `H44` docs-only route reauthorization packet that preserves `H43` as the
+  paper-grade endpoint and authorizes exactly `R46`;
+- `docs/milestones/H43_post_r44_useful_case_refreeze/` — the preserved prior
+  useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/` — the current
   low-priority operational blocked-blog/helper guardrail refresh packet that
@@ -363,8 +376,14 @@ Current control docs:
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
   — machine-readable current restricted useful-case gate on the fixed
   three-kernel ladder;
+- `results/F21_post_h43_exact_useful_case_expansion_bundle/summary.json` —
+  machine-readable current exact-first planning bundle downstream of landed
+  `H43`;
+- `results/H44_post_h43_route_reauthorization_packet/summary.json` —
+  machine-readable current docs-only route reauthorization packet selecting
+  exact `R46` while preserving the present `H43` paper-grade endpoint;
 - `results/H43_post_r44_useful_case_refreeze/summary.json` —
-  machine-readable current docs-only useful-case refreeze packet recording
+  machine-readable preserved prior useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
   `no_active_downstream_runtime_lane`;
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json` — machine-

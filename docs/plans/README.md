@@ -8,6 +8,11 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-24-post-h43-mainline-reentry-master-plan.md` — the current
+  post-`H43` saved master plan that fixes the exact-first reentry wave order:
+  `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
+  docs-only route reauthorization packet, `R46` exact surface-generalization
+  gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
 - `2026-03-24-post-r42-aggressive-long-arc-master-plan.md` — the current
   post-`R42` saved master plan that fixes the aggressive long-arc wave order:
   `Wave 0` save/push/fork, `F20/H41` control override, `P27` explicit merge
@@ -119,6 +124,12 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   low-priority operational blocked-blog/helper guardrail refresh packet that
   updates stale downstream blog plus manuscript-helper controls without
   changing scientific stage.
+- `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
+  exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
+  fixes `R46` as the first admissible next runtime candidate.
+- `../milestones/H44_post_h43_route_reauthorization_packet/` — current
+  docs-only route reauthorization packet that preserves `H43` and authorizes
+  exactly `R46`.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` regeneration-facing wording.
@@ -128,9 +139,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/P34_post_h43_live_surface_wording_guardrail/` — completed
   auxiliary live-surface wording guardrail packet that keeps `P31` current
   while machine-checking current helper/control surfaces.
-- `../milestones/H43_post_r44_useful_case_refreeze/` — current active
-  docs-only refreeze packet that records `R44` as completed narrow useful-case
-  evidence and restores `no_active_downstream_runtime_lane`.
+- `../milestones/H43_post_r44_useful_case_refreeze/` — preserved prior
+  useful-case refreeze packet and current paper-grade endpoint that records
+  `R44` as completed narrow useful-case evidence and restores
+  `no_active_downstream_runtime_lane`.
 - `../milestones/P30_post_h43_manuscript_surface_refresh/` — completed prior
   low-priority operational manuscript-surface refresh packet that aligned
   stale paper-facing prose baselines and derivative helper docs to landed
@@ -221,10 +233,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 ## Historical Plan Groups
 
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
-  control-override, explicit merge-wave, dual-mode execution, post-`R43`
-  route-selection, post-`R44` useful-case refreeze, and post-`H43`
-  operational sync/audit-refresh/manuscript/helper-doc/dormant-playbook/
-  wording-guardrail design set.
+  post-`H43` mainline-reentry master-plan, control-override, explicit
+  merge-wave, dual-mode execution, post-`R43` route-selection, post-`R44`
+  useful-case refreeze, and post-`H43` operational sync/audit-refresh/
+  manuscript/helper-doc/dormant-playbook/wording-guardrail design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

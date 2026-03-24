@@ -20,9 +20,10 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-24`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line, and it is no longer parked at the preserved
 `H40 -> R42` activation state alone. The current docs-only decision packet is
-now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only
-decision packet is `H42_post_r43_route_selection_packet`, the preserved
-earlier docs-only decision packet is
+now `H44_post_h43_route_reauthorization_packet`, the preserved prior docs-only
+decision packet is now `H43_post_r44_useful_case_refreeze`, the preserved
+earlier docs-only decision packets are
+`H42_post_r43_route_selection_packet` and
 `H41_post_r42_aggressive_long_arc_decision_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
 the current completed semantic-boundary retrieval-contract gate remains
@@ -34,8 +35,9 @@ completed restricted useful-case gate is now
 completed coequal model gate is now
 `R45_origin_dual_mode_model_mainline_gate`, the current
 coequal-mainline model bundle is
-`F20_post_r42_dual_mode_model_mainline_bundle`, the completed operational
-explicit merge packet is
+`F20_post_r42_dual_mode_model_mainline_bundle`, the current exact post-`H43`
+planning bundle is `F21_post_h43_exact_useful_case_expansion_bundle`, the
+completed operational explicit merge packet is
 `P27_post_h41_clean_promotion_and_explicit_merge_packet`, the preserved prior
 operational audit lane remains
 `P26_post_h37_promotion_and_artifact_hygiene_audit`, the current canonical
@@ -48,7 +50,10 @@ planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, the current
 semantic-boundary roadmap is
 `F19_post_f18_restricted_wasm_useful_case_roadmap`, and the preserved prior
 semantic-boundary activation packet is
-`H40_post_h38_semantic_boundary_activation_packet`.
+`H40_post_h38_semantic_boundary_activation_packet`. The current paper-grade
+endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
+`H44` authorizes exact `R46` as the next runtime candidate and keeps `P31` as
+the current low-priority docs wave.
 
 The narrow current stack is:
 
@@ -130,10 +135,10 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H43_post_r44_useful_case_refreeze`, not the preserved prior
-  `H42` packet, the preserved earlier `H41` packet, the preserved prior
-  `H40` packet, the earlier `H30` packet, or the earlier `H25`
-  same-endpoint decision packet.
+  `H44_post_h43_route_reauthorization_packet`, not the preserved prior
+  `H43` packet, the preserved earlier `H42` packet, the preserved earlier
+  `H41` packet, the preserved prior `H40` packet, the earlier `H30` packet,
+  or the earlier `H25` same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
@@ -166,14 +171,18 @@ historical packet inventory below.
   `F18_post_h38_origin_core_long_arc_bundle`.
 - The current semantic-boundary useful-case roadmap is
   `F19_post_f18_restricted_wasm_useful_case_roadmap`.
+- The current exact post-`H43` planning bundle is
+  `F21_post_h43_exact_useful_case_expansion_bundle`.
 - The preserved prior semantic-boundary activation packet is
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- The current active useful-case refreeze packet is
-  `H43_post_r44_useful_case_refreeze`, the preserved prior route-selection
-  packet is `H42_post_r43_route_selection_packet`, and no active downstream
-  runtime lane now follows `H43`.
+- The current active docs-only route packet is
+  `H44_post_h43_route_reauthorization_packet`, the preserved prior
+  useful-case refreeze packet is `H43_post_r44_useful_case_refreeze`, the
+  preserved prior route-selection packet is
+  `H42_post_r43_route_selection_packet`, and `H43` remains the current
+  paper-grade endpoint rather than a widened runtime claim.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.

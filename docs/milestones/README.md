@@ -12,10 +12,13 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H43_post_r44_useful_case_refreeze/` — current active docs-only
-  useful-case refreeze packet that preserves `H42/H36/F20/P27/R43/R44/R45`,
-  records claim `D` as `supported_here_narrowly`, and restores
-  `no_active_downstream_runtime_lane`.
+- `H44_post_h43_route_reauthorization_packet/` — current active docs-only
+  route reauthorization packet that preserves `H43/H42/H36/F20/P27/R43/R44/R45`,
+  incorporates `F21`, and authorizes exactly `R46`.
+- `H43_post_r44_useful_case_refreeze/` — preserved prior useful-case refreeze
+  packet and current paper-grade endpoint that preserves
+  `H42/H36/F20/P27/R43/R44/R45`, records claim `D` as
+  `supported_here_narrowly`, and restores `no_active_downstream_runtime_lane`.
 - `H42_post_r43_route_selection_packet/` — preserved prior docs-only
   route-selection packet that preserves `H41/H36/F20/P27/R43/R45` and
   authorizes exact `R44`.
@@ -68,6 +71,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F20_post_r42_dual_mode_model_mainline_bundle/` — current planning-only
   coequal-mainline model bundle fixing the exact-versus-model evidence
   boundary and dual implementation posture.
+- `F21_post_h43_exact_useful_case_expansion_bundle/` — current planning-only
+  exact-first post-`H43` bundle fixing `R46` as the first admissible next
+  runtime candidate while keeping `R47/R48` conditional.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   preserved prior operational promotion/artifact audit lane from the earlier
   clean branch.
@@ -77,6 +83,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
+- `R46_origin_useful_case_surface_generalization_gate/` — next authorized
+  exact runtime lane under `H44`, still pending execution.
+- `H45_post_r46_surface_decision_packet/` — saved future decision packet that
+  interprets `R46` before any frontend/model widening.
+- `R47_origin_restricted_frontend_translation_gate/` — conditional future
+  exact frontend bridge lane, downstream of positive `R46`.
+- `R48_origin_dual_mode_useful_case_model_gate/` — conditional future
+  comparator-only model lane on the preserved useful-case contract.
 - `H40_post_h38_semantic_boundary_activation_packet/` — preserved prior
   semantic-boundary activation packet above `H38`.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
@@ -255,12 +269,15 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H43` is the active docs-only decision packet.
-- `H42` is the preserved prior docs-only route-selection packet.
+- `H44` is the active docs-only decision packet.
+- `H43` is the preserved prior useful-case refreeze packet and current
+  paper-grade endpoint.
+- `H42` is the preserved earlier docs-only route-selection packet.
 - `H41` is the preserved earlier docs-only aggressive-long-arc packet.
 - `H36` is the preserved active routing/refreeze packet.
 - `R42` is the completed current retrieval-contract gate underneath `H41`.
 - `F20` is the current coequal-mainline model bundle.
+- `F21` is the current exact-first post-`H43` planning bundle.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
 - `P26` is the preserved prior operational promotion/artifact audit lane, not
@@ -288,7 +305,8 @@ stack:
 - `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
 - `R44` is the completed current restricted useful-case gate.
-- no active downstream runtime lane exists after `H43`.
+- `R46` is the current authorized next exact runtime lane under `H44`, while
+  `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h44_docs_reauthorize_r46_while_preserving_h43_paper_grade_endpoint",
+      "status": "pass",
+      "notes": "H44 should reauthorize R46 explicitly while preserving H43 as the bounded paper-grade endpoint."
+    },
+    {
+      "item_id": "h43_exact_state_and_f21_bundle_justify_the_reauthorization",
+      "status": "pass",
+      "notes": "H44 is only justified if H43 preserved a real bounded useful-case result and F21 fixed the exact-first route above it."
+    },
+    {
+      "item_id": "shared_control_surfaces_promote_h44_current_while_keeping_p31_low_priority",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H44 current, preserve H43, index F21, and keep P31 current as the low-priority docs wave."
+    }
+  ]
+}

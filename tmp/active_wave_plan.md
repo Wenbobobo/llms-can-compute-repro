@@ -5,6 +5,8 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
+  `H44_post_h43_route_reauthorization_packet`;
+- preserved prior useful-case refreeze packet and current paper-grade endpoint:
   `H43_post_r44_useful_case_refreeze`;
 - preserved active routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`;
@@ -18,6 +20,8 @@ Current scientific/control stack:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
   `F20_post_r42_dual_mode_model_mainline_bundle`;
+- current exact post-`H43` planning bundle:
+  `F21_post_h43_exact_useful_case_expansion_bundle`;
 - completed operational explicit merge packet:
   `P27_post_h41_clean_promotion_and_explicit_merge_packet`;
 - preserved prior operational promotion/artifact audit lane:
@@ -48,14 +52,18 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H43` remains the current scientific stage.
+`H44_post_h43_route_reauthorization_packet` is the current active docs-only
+packet.
+`F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
+bundle.
+`H43` remains the current paper-grade endpoint.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
 operational/docs wave. It refreshes blocked downstream blog plus
 manuscript/caption/appendix helper guardrail docs that still freeze the
 current paper-grade endpoint at the preserved `H32/H34` compiled-boundary
 line, so the downstream helper/control surface matches the landed
-`H42/R43/R44/R45/F20/P27/P30/P29/P28/H43` stack without creating a new
-runtime lane or unblocking the blog.
+`H44/F21/H43/H42/R43/R44/R45/F20/P27/P30/P29/P28` stack without creating a new
+scientific widening or unblocking the blog.
 `P32_post_h43_historical_wording_refresh` is the completed auxiliary
 historical/regeneration wording refresh packet. It only refreshes preserved
 `H0/P3` machine-readable wording that still treated `D0` as the whole current
@@ -85,6 +93,7 @@ current low-priority wave.
 - `wip/h42-route-selection` is the clean preserved route-selection packet branch.
 - `wip/r44-useful-case-gate` is the clean restricted useful-case execution branch.
 - `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
+- `wip/f21-h44-post-h43-route` is the clean post-`H43` reentry control branch.
 - `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
   sync branch.
 - `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
@@ -190,18 +199,23 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R45_origin_dual_mode_model_mainline_gate` ->
 `H42_post_r43_route_selection_packet` ->
 `R44_origin_restricted_wasm_useful_case_execution_gate` ->
-`H43_post_r44_useful_case_refreeze`
+`H43_post_r44_useful_case_refreeze` ->
+`F21_post_h43_exact_useful_case_expansion_bundle` ->
+`H44_post_h43_route_reauthorization_packet`
 
 ## Current Rule
 
-- `H43` is the current active docs-only packet.
-- `H42` is the preserved prior docs-only packet.
+- `H44` is the current active docs-only packet.
+- `H43` is the preserved prior useful-case refreeze packet and current
+  paper-grade endpoint.
+- `H42` is the preserved earlier docs-only packet.
 - `H41` is the preserved earlier docs-only packet.
 - `H36` remains the routing/refreeze packet underneath it.
 - `R42` is a completed gate that justifies exact `R43`, but does not itself
   count as bounded-memory small-VM execution evidence.
 - `F20` is the current model-mainline bundle and keeps model evidence
   non-substitutive relative to exact `R43`.
+- `F21` is the current exact-first post-`H43` planning bundle.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
 - `P31` is the current low-priority blocked-blog/helper guardrail refresh wave
@@ -220,11 +234,13 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R43` is the completed current exact gate.
 - `R44` is the completed current restricted useful-case gate.
 - `R45` is the completed current coequal model lane.
+- `R46` is the current authorized next exact runtime lane under `H44`.
 - no active downstream runtime lane follows `H43`.
 
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
 - `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
@@ -241,6 +257,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
+- `docs/milestones/F21_post_h43_exact_useful_case_expansion_bundle/`
+- `docs/milestones/H44_post_h43_route_reauthorization_packet/`
 - `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/`
@@ -258,6 +276,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/P28_post_h43_publication_surface_sync/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
+- `results/F21_post_h43_exact_useful_case_expansion_bundle/summary.json`
+- `results/H44_post_h43_route_reauthorization_packet/summary.json`
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`

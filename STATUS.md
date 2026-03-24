@@ -3,10 +3,10 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H43_post_r44_useful_case_refreeze`, not the preserved prior
-  `H42` packet, the preserved earlier `H41` packet, the preserved prior
-  `H40` packet, the preserved prior `H30` packet, or the earlier `H25`
-  same-endpoint decision packet.
+  `H44_post_h43_route_reauthorization_packet`, not the preserved prior
+  `H43` packet, the preserved earlier `H42` packet, the preserved earlier
+  `H41` packet, the preserved prior `H40` packet, the preserved prior `H30`
+  packet, or the earlier `H25` same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
@@ -17,6 +17,11 @@
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
   `F20_post_r42_dual_mode_model_mainline_bundle`.
+- `F21_post_h43_exact_useful_case_expansion_bundle` is now complete as the
+  current exact post-`H43` planning bundle fixing the exact-first reentry
+  route.
+- `P31_post_h43_blog_guardrails_refresh` remains the current low-priority
+  blocked-blog/helper guardrail refresh wave.
 - The active scientific target is now the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -196,11 +201,18 @@
   the current restricted useful-case gate:
   it fixes the restricted-Wasm / tiny-`C` useful-kernel ladder downstream of
   completed `H42` and returns `useful_case_surface_supported_narrowly`.
-- `H43_post_r44_useful_case_refreeze` is now complete as the current active
-  docs-only useful-case refreeze packet:
+- `H43_post_r44_useful_case_refreeze` is now complete as the preserved prior
+  useful-case refreeze packet and current paper-grade endpoint:
   it preserves `H42/H36/F20/P27/R43/R44/R45`, records claim `D` as
   `supported_here_narrowly`, keeps `R41` deferred, and restores
   `no active downstream runtime lane`.
+- `H44_post_h43_route_reauthorization_packet` is now complete as the current
+  active docs-only route reauthorization packet:
+  it preserves `H43/H42/H36/F20/P27/R43/R44/R45`, incorporates
+  `F21_post_h43_exact_useful_case_expansion_bundle`, authorizes exactly
+  `R46_origin_useful_case_surface_generalization_gate`, keeps `R47/R48/R41`
+  deferred, keeps `merge_executed = false`, and requires a later explicit
+  packet before any scope widening.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -445,14 +457,15 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H43_post_r44_useful_case_refreeze` under
+  `H44_post_h43_route_reauthorization_packet` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H42/H41/H40/H38/H37`, preserved active
+  preserved prior docs-only packets `H43/H42/H41/H40/H38/H37`, preserved active
   routing/refreeze packet `H36_post_r40_bounded_scalar_family_refreeze`,
   completed current `R42/R43/R44/R45` semantic-boundary gate stack, current
-  coequal-mainline model bundle `F20`, completed explicit merge packet `P27`,
-  completed prior low-priority sync packets `P30/P29/P28`, current low-
-  priority blocked-blog/helper guardrail refresh wave `P31`, completed
+  coequal-mainline model bundle `F20`, current exact post-`H43` planning
+  bundle `F21`, completed explicit merge packet `P27`, completed prior
+  low-priority sync packets `P30/P29/P28`, current low-priority blocked-
+  blog/helper guardrail refresh wave `P31`, completed
   auxiliary historical/regeneration wording refresh packet `P32`, completed
   auxiliary dormant playbook/historical-helper wording refresh packet `P33`,
   completed auxiliary live-surface wording guardrail packet `P34`,
@@ -480,17 +493,19 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H43` remains the
-   current active docs-only packet, `H42/H41` remain the preserved prior
-   docs-only packets, `H36` remains the preserved active routing/refreeze
-   packet beneath them, `P31` remains the current low-priority blocked-
+   `tmp/active_wave_plan.md` aligned on the rule that `H44` is the current
+   active docs-only packet, `H43` remains the preserved prior useful-case
+   refreeze packet and current paper-grade endpoint, `H42/H41` remain the
+   preserved earlier docs-only packets, `H36` remains the preserved active
+   routing/refreeze packet beneath them, `F21` remains the current exact
+   post-`H43` planning bundle, `P31` remains the current low-priority blocked-
    blog/helper guardrail refresh wave, `P32` remains the completed auxiliary
    historical/regeneration wording refresh packet, `P33` remains the completed
    auxiliary dormant playbook/historical-helper wording refresh packet, `P34`
    remains the completed auxiliary live-surface wording guardrail packet,
    `P30/P29/P28` remain the completed prior operational sync waves,
-   `R43/R44/R45` remain completed downstream evidence, and no active
-   downstream runtime lane exists after `H43`.
+   `R43/R44/R45` remain completed downstream evidence, and the current
+   authorized next exact runtime lane is `R46` under `H44`.
 2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
    `wip/p17-h30-clean`, and treat
    `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree
