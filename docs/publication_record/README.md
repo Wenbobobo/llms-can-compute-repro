@@ -35,9 +35,11 @@ Current control docs:
   the completed current comparator-only useful-case model gate,
   `R49` as the completed current numeric-scaling gate, `F22` as the current
   comparator-planning bundle, `F23` as the completed post-`H47`
-  numeric-scaling planning bundle, `F25` as the next authorized planning
-  bundle, `no_active_downstream_runtime_lane` as the restored downstream
-  scientific lane, and preserving `H43` as the landed paper-grade closeout;
+  numeric-scaling planning bundle, `F25` as the current post-`H48` planning
+  bundle, `R50` as the only next runtime candidate fixed by `F25`, `H49` as
+  the only follow-up packet fixed by `F25`,
+  `no_active_downstream_runtime_lane` as the restored downstream scientific
+  lane, and preserving `H43` as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
   `H44`, `R46`, `H45`, authorized `R47`, blocked `F22`, and conditional
@@ -79,7 +81,11 @@ Current control docs:
 - `docs/plans/2026-03-24-post-r49-h48-numeric-scaling-decision-design.md` —
   the current design surface for the landed `H48` decision packet that reads
   completed `R49`, selects the positive planning-only route, and fixes
-  `F25` as the next authorized planning bundle;
+  `F25` as the current post-`H48` planning bundle;
+- `docs/plans/2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md` —
+  the current planning surface for the only admissible post-`H48` runtime
+  question, fixing `R50` as the only next runtime candidate and `H49` as the
+  only follow-up packet while preserving the `R47` useful-case contract first;
 - `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md` —
   the current planning surface for the only admissible post-`H47` runtime
   question, fixing `R49` as the only next runtime candidate while keeping

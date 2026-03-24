@@ -32,8 +32,12 @@ Current scientific/control stack:
   `no_active_downstream_runtime_lane`;
 - current completed numeric-scaling gate:
   `R49_origin_useful_case_numeric_scaling_gate`;
-- next authorized planning bundle:
+- current post-`H48` planning bundle:
   `F25_post_h48_restricted_tinyc_lowering_bundle`;
+- only next runtime candidate fixed by `F25`:
+  `R50_origin_restricted_tinyc_lowering_gate`;
+- only follow-up packet fixed by `F25`:
+  `H49_post_r50_tinyc_lowering_decision_packet`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -76,8 +80,14 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H48_post_r49_numeric_scaling_decision_packet` is the current active docs-only
-numeric-scaling decision packet.
+`H48_post_r49_numeric_scaling_decision_packet` remains the current active
+docs-only numeric-scaling decision packet.
+`F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
+planning bundle.
+`R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
+candidate, and it must start from the preserved `R47` `8/8` useful-case
+variants across the fixed `3/3` kernel ladder before any later packet
+considers broader wording.
 `H47_post_r48_useful_case_bridge_refreeze` is the preserved prior docs-only
 decision packet.
 `H46_post_r47_frontend_bridge_decision_packet` is the preserved earlier
@@ -105,8 +115,11 @@ numeric-scaling gate. It records `numeric_scaling_survives_through_bucket_c`,
 keeps all `9/9` widened rows exact across the fixed `3/3` useful-case
 kernels, exposes `7/9` `float32_single_head` failures, and is now interpreted
 through landed `H48_post_r49_numeric_scaling_decision_packet`.
-`F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
+`F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
 planning bundle.
+`R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
+candidate, and `H49_post_r50_tinyc_lowering_decision_packet` is the only
+follow-up packet.
 `P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
 closeout bundle.
 `P35_post_h47_research_record_rollup` is the current low-priority

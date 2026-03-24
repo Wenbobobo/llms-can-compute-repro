@@ -42,9 +42,17 @@ The current downstream scientific lane after `H48` is:
 
 - `no_active_downstream_runtime_lane`
 
-The next authorized planning bundle is:
+The current post-`H48` planning bundle is:
 
 - `F25_post_h48_restricted_tinyc_lowering_bundle`
+
+The only next runtime candidate fixed by `F25` is:
+
+- `R50_origin_restricted_tinyc_lowering_gate`
+
+The only follow-up packet fixed by `F25` is:
+
+- `H49_post_r50_tinyc_lowering_decision_packet`
 
 The current completed coequal model gate is:
 
@@ -611,7 +619,7 @@ current exact-first planning bundle, one current comparator-planning bundle,
 one current post-`H47` numeric-scaling planning bundle, one completed current
 exact frontend bridge gate, one completed current comparator-only useful-case
 model gate, one completed current numeric-scaling gate, one current active
-docs-only numeric-scaling decision packet, one next authorized planning bundle,
+docs-only numeric-scaling decision packet, one current post-`H48` planning bundle,
 and one current low-priority operational/docs rollup wave.
 
 The current admissible follow-on work is:
@@ -788,8 +796,12 @@ The next required order is now:
 - `H48_post_r49_numeric_scaling_decision_packet` is now complete as the current
   active docs-only numeric-scaling decision packet.
 - `no_active_downstream_runtime_lane` now follows the scientific stack.
-- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
-  planning bundle.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current
+  post-`H48` planning bundle.
+- `R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
+  candidate.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the only follow-up
+  packet.
 - `P31_post_h43_blog_guardrails_refresh`,
   `P32_post_h43_historical_wording_refresh`,
   `P33_post_h43_dormant_playbook_wording_refresh`, and
@@ -883,8 +895,11 @@ The next required order is now:
   preserved prior docs-only refreeze packet,
   `H48_post_r49_numeric_scaling_decision_packet` is the current active
   docs-only decision packet, `F25_post_h48_restricted_tinyc_lowering_bundle`
-  is the next authorized planning bundle,
-  `no_active_downstream_runtime_lane` now follows the stack, and `H43`
+  is the current post-`H48` planning bundle,
+  `R50_origin_restricted_tinyc_lowering_gate` is the only next runtime
+  candidate, `H49_post_r50_tinyc_lowering_decision_packet` is the only
+  follow-up packet, `no_active_downstream_runtime_lane` now follows the
+  stack, and `H43`
   remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `H34_post_r39_later_explicit_scope_decision_packet` and

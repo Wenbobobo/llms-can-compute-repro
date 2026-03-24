@@ -24,6 +24,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   docs-only decision surface that reads completed `R49`, records `H48` as the
   active interpretation packet, and authorizes exactly `F25` as the next
   planning-only bundle.
+- `2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md` — the current
+  planning surface for the only admissible post-`H48` runtime question,
+  fixing `R50` as the only next runtime candidate and `H49` as the only
+  follow-up packet while preserving the `R47` useful-case contract first.
 - `2026-03-24-post-h47-r49-useful-case-numeric-scaling-design.md` — the
   current execution design surface for the landed `R49` numeric-scaling gate,
   preserving `H47/H43`, executing the fixed three-kernel ladder through the

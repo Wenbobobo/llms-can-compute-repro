@@ -16,6 +16,10 @@ planning bundles. Read the current driver first, not the directory name alone.
   numeric-scaling decision packet that preserves `H47/H43/H36/F20/F21/F22/P27`,
   records completed `R49`, restores `no_active_downstream_runtime_lane`, and
   authorizes exactly `F25`.
+- `F25_post_h48_restricted_tinyc_lowering_bundle/` — current post-`H48`
+  planning-only bundle that preserves `H48/H43`, records completed `R49`,
+  fixes `R50` as the only next runtime candidate, and fixes `H49` as the only
+  follow-up packet.
 - `H47_post_r48_useful_case_bridge_refreeze/` — preserved prior docs-only
   useful-case refreeze packet that preserves `H46/H43/H36/F20/F21/F22/P27`,
   freezes landed comparator-only `R48` narrowly, and hands the stack to `H48`.
@@ -112,14 +116,16 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F23_post_h47_numeric_scaling_bundle/` — current planning-only post-`H47`
   numeric-scaling bundle fixing `R49` as the only next runtime candidate,
   keeping `F24` dormant, and leaving `F25/P36` as placeholders only.
-- `F25_post_h48_restricted_tinyc_lowering_bundle/` — next authorized
-  planning-only bundle selected by completed `H48` for one restricted tiny-`C`
-  lowering question.
 - `R49_origin_useful_case_numeric_scaling_gate/` — completed current
   numeric-scaling gate validating `9/9` widened useful-case rows
   across the fixed `3/3` kernels, exposing `7/9` `float32_single_head`
   failures, and preserving both admitted float32 recovery regimes through
   `bucket_c_8x`.
+- `R50_origin_restricted_tinyc_lowering_gate/` — only next runtime candidate
+  fixed by completed `F25` for one restricted tiny-`C` lowering test on the
+  preserved `R47` useful-case contract.
+- `H49_post_r50_tinyc_lowering_decision_packet/` — only explicit follow-up
+  packet fixed by completed `F25` for interpreting any later `R50` result.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.

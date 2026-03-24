@@ -26,8 +26,12 @@
   `R49_origin_useful_case_numeric_scaling_gate`.
 - The current downstream scientific lane after `H48` is
   `no_active_downstream_runtime_lane`.
-- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
   planning bundle.
+- `R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
+  candidate fixed by `F25`.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the only follow-up
+  packet fixed by `F25`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -42,6 +46,10 @@
   post-`H47` numeric-scaling planning bundle: it preserves `H47/H43`,
   keeps the executed `R49` envelope machine-readable, keeps `F24` dormant,
   and leaves `F25/P36` downstream of `H48`.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is now complete as the
+  current post-`H48` planning bundle: it preserves `H48/H43`, records `R49`
+  as completed evidence, fixes `R50` as the only next runtime candidate, and
+  fixes `H49` as the only follow-up packet.
 - `P35_post_h47_research_record_rollup` is now the current low-priority
   operational/docs wave recording post-`H47` research state, hygiene rules,
   and preserved negative-result accounting.
@@ -546,7 +554,8 @@
   comparator-planning bundle `F22`, completed current exact frontend bridge
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
   completed current numeric-scaling gate `R49`, restored downstream lane
-  `no_active_downstream_runtime_lane`, next authorized planning bundle `F25`,
+  `no_active_downstream_runtime_lane`, current post-`H48` planning bundle
+  `F25`, only next runtime candidate `R50`, only follow-up packet `H49`,
   completed explicit merge packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority operational
   rollup wave `P35`, completed prior blocked-blog/helper guardrail refresh
@@ -583,8 +592,10 @@
    packet, `H43` remains the current paper-grade endpoint,
    `R49_origin_useful_case_numeric_scaling_gate` is the completed current
    numeric-scaling gate, `F25_post_h48_restricted_tinyc_lowering_bundle` is the
-   next authorized planning bundle, and `no_active_downstream_runtime_lane`
-   now follows the scientific stack.
+   current post-`H48` planning bundle, `R50_origin_restricted_tinyc_lowering_gate`
+   is the only next runtime candidate, `H49_post_r50_tinyc_lowering_decision_packet`
+   is the only follow-up packet, and
+   `no_active_downstream_runtime_lane` now follows the scientific stack.
 2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
    only evidence on the preserved useful-case contract: exact evidence remains
    decisive, broader Wasm/C remains unauthorized, and model positives do not

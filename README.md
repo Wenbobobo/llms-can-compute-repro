@@ -76,11 +76,13 @@ current numeric-scaling gate with `numeric_scaling_survives_through_bucket_c`,
 `F24` remains dormant, `R48` remains the completed current comparator-only
 useful-case model gate, `no_active_downstream_runtime_lane` now follows the
 scientific stack after `H48`, `F25_post_h48_restricted_tinyc_lowering_bundle`
-is now the next authorized planning bundle, and
-`P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
-closeout route. `P35` is now the current low-priority research-record
-rollup/docs wave while `P31/P32/P33/P34` remain preserved prior helper refresh
-packets.
+is now the current post-`H48` planning bundle, it fixes
+`R50_origin_restricted_tinyc_lowering_gate` as the only next runtime
+candidate and `H49_post_r50_tinyc_lowering_decision_packet` as the only
+follow-up packet, and `P36_post_h48_falsification_closeout_bundle` remains the
+explicit non-selected closeout route inherited from `H48`. `P35` is now the
+current low-priority research-record rollup/docs wave while `P31/P32/P33/P34`
+remain preserved prior helper refresh packets.
 
 The narrow current stack is:
 
@@ -207,8 +209,12 @@ historical packet inventory below.
   `R49_origin_useful_case_numeric_scaling_gate`.
 - The current downstream scientific lane after `H48` is
   `no_active_downstream_runtime_lane`.
-- The next authorized planning bundle is
+- The current post-`H48` planning bundle is
   `F25_post_h48_restricted_tinyc_lowering_bundle`.
+- The only next runtime candidate fixed by `F25` is
+  `R50_origin_restricted_tinyc_lowering_gate`.
+- The only follow-up packet fixed by `F25` is
+  `H49_post_r50_tinyc_lowering_decision_packet`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -266,9 +272,11 @@ historical packet inventory below.
   variants). `R49_origin_useful_case_numeric_scaling_gate` is now the
   completed current numeric-scaling gate, `H48_post_r49_numeric_scaling_decision_packet`
   is now the current active docs-only interpretation packet, and
-  `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
-  planning bundle while `no_active_downstream_runtime_lane` follows the
-  scientific stack.
+  `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current
+  post-`H48` planning bundle while `R50_origin_restricted_tinyc_lowering_gate`
+  is the only next runtime candidate, `H49_post_r50_tinyc_lowering_decision_packet`
+  is the only follow-up packet, and `no_active_downstream_runtime_lane`
+  follows the scientific stack.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
