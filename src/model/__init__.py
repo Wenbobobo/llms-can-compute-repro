@@ -156,6 +156,16 @@ from .r45_dual_mode import (
     fit_trainable_2d_executor,
     r45_contract_programs,
 )
+from .r48_dual_mode_useful_case import (
+    HELDOUT_KERNEL_ID,
+    R48ContractProgram,
+    R48ModeEvaluation,
+    build_stack_latest_write_samples_for_useful_case_programs,
+    compiled_weight_executor_scorer_for_useful_case,
+    evaluate_r48_dual_mode_useful_case,
+    fit_trainable_2d_executor_for_useful_case,
+    r48_contract_programs,
+)
 
 __all__ = [
     "config_for_operations",
@@ -284,10 +294,18 @@ __all__ = [
     "sweep_precision_scheme_ranges",
     "R45ContractProgram",
     "R45ModeEvaluation",
+    "R48ContractProgram",
+    "R48ModeEvaluation",
     "build_stack_latest_write_samples_for_contract_programs",
+    "build_stack_latest_write_samples_for_useful_case_programs",
     "evaluate_r45_dual_mode",
+    "evaluate_r48_dual_mode_useful_case",
     "fit_trainable_2d_executor",
+    "fit_trainable_2d_executor_for_useful_case",
     "r45_contract_programs",
+    "r48_contract_programs",
+    "compiled_weight_executor_scorer_for_useful_case",
+    "HELDOUT_KERNEL_ID",
     "train_event_level_softmax_baseline",
     "train_factorized_event_model",
     "train_neural_event_executor",

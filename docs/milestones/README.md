@@ -15,7 +15,10 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `H46_post_r47_frontend_bridge_decision_packet/` — current active docs-only
   frontend-bridge decision packet that preserves `H45/H44/H43/H36/F20/F21/P27`,
   interprets completed `R47`, promotes `F22` into the current
-  comparator-planning bundle, and authorizes exactly `R48`.
+  comparator-planning bundle, and authorizes the landed `R48`.
+- `H47_post_r48_useful_case_bridge_refreeze/` — next required docs-only
+  useful-case refreeze packet that will interpret landed comparator-only
+  `R48` without letting model positives replace exact evidence.
 - `H45_post_r46_surface_decision_packet/` — preserved prior docs-only
   surface-decision packet that preserves `H44/H43/H36/F20/F21/P27/R43/R44/R45`,
   interprets completed `R46`, authorizes exactly `R47`, and keeps later
@@ -97,13 +100,13 @@ planning bundles. Read the current driver first, not the directory name alone.
   decision-complete restricted-Wasm / useful-case surface.
 - `F22_post_r46_useful_case_model_bridge_bundle/` — current comparator-
   planning bundle that stays downstream of exact frontend evidence and scopes
-  the authorized `R48` lane.
+  the landed `R48` lane plus the follow-on `H47` interpretation packet.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.
-- `R48_origin_dual_mode_useful_case_model_gate/` — next required
-  comparator-only model lane on the preserved useful-case contract, now
-  authorized by exact `R47` plus explicit `H46`.
+- `R48_origin_dual_mode_useful_case_model_gate/` — completed current
+  comparator-only model lane on the preserved useful-case contract, authorized
+  by exact `R47` plus explicit `H46`.
 - `H40_post_h38_semantic_boundary_activation_packet/` — preserved prior
   semantic-boundary activation packet above `H38`.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
@@ -323,7 +326,8 @@ stack:
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
 - `F22` is the current comparator-planning bundle, not active execution work.
 - `R47` is the completed current exact frontend bridge gate.
-- `R48` is the next required comparator-only model gate.
+- `R48` is the completed current comparator-only useful-case model gate.
+- `H47` is the next required docs-only useful-case refreeze packet.
 - `H43` remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not

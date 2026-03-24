@@ -11,9 +11,9 @@
       "notes": "H46 is only justified if H45 authorized R47 and R47 really preserved narrow exact frontend support on the fixed useful-case ladder."
     },
     {
-      "item_id": "shared_control_surfaces_make_h46_current_with_r48_next",
+      "item_id": "shared_control_surfaces_make_h46_current_with_r48_completed_and_h47_next",
       "status": "pass",
-      "notes": "Shared control surfaces should make H46 current, preserve H45 as prior, and fix R48 as the only authorized next comparator-only model lane."
+      "notes": "Shared control surfaces should keep H46 current, preserve H45 as prior, record completed comparator-only R48, and point explicitly to docs-only H47 next."
     }
   ]
 }

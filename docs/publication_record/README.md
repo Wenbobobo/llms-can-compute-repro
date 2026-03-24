@@ -30,9 +30,10 @@ Current control docs:
   recording `H46` as the current active docs-only stage, `H45` as the
   preserved prior decision packet, `R46` as the completed preserved prior
   post-`H44` exact runtime gate, `R47` as the completed current exact frontend
-  bridge gate, `R48` as the next required comparator-only model gate, `F22`
-  as the current comparator-planning bundle, and preserving `H43` as the
-  landed paper-grade closeout;
+  bridge gate, `R48` as the completed current comparator-only useful-case
+  model gate, `H47` as the next required docs-only useful-case bridge
+  refreeze packet, `F22` as the current comparator-planning bundle, and
+  preserving `H43` as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
   `H44`, `R46`, `H45`, authorized `R47`, blocked `F22`, and conditional
@@ -217,14 +218,23 @@ Current control docs:
   completed preserved prior post-`H44` exact runtime gate that keeps the
   held-out in-surface useful-case matrix exact on `8/8` variants across `3/3`
   kernels;
-- `docs/milestones/H45_post_r46_surface_decision_packet/` — the current active
-  docs-only decision packet that interprets landed `R46`, authorizes exactly
-  `R47`, and keeps `F22/R48` blocked behind later explicit packets;
-- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/` — the saved
-  blocked comparator bundle downstream of exact frontend evidence plus later
-  explicit `H46`;
+- `docs/milestones/H46_post_r47_frontend_bridge_decision_packet/` — the
+  current active docs-only decision packet that interprets landed `R47`,
+  authorizes the landed `R48` lane, and keeps `F22` current without widening
+  the paper-grade endpoint;
+- `docs/milestones/H45_post_r46_surface_decision_packet/` — the preserved
+  prior docs-only decision packet that interprets landed `R46`, authorizes
+  exactly `R47`, and keeps `F22/R48` explicit at that stage;
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/` — the
+  current comparator-planning bundle downstream of exact frontend evidence and
+  active `H46`;
 - `docs/milestones/R47_origin_restricted_frontend_translation_gate/` — the
-  next authorized exact frontend bridge lane;
+  completed current exact frontend bridge lane;
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/` — the
+  completed current comparator-only useful-case model gate on the preserved
+  `R47` contract;
+- `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/` — the next
+  required docs-only refreeze packet after landed `R48`;
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the preserved prior
   useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
@@ -418,9 +428,16 @@ Current control docs:
   selecting exact `R46` while preserving the present `H43` paper-grade
   endpoint;
 - `results/H45_post_r46_surface_decision_packet/summary.json` —
-  machine-readable current active docs-only decision packet selecting exact
-  `R47` while keeping `F22` blocked and preserving the present `H43`
-  paper-grade endpoint;
+  machine-readable preserved prior docs-only decision packet selecting exact
+  `R47` while keeping `F22/R48` explicit at that stage and preserving the
+  present `H43` paper-grade endpoint;
+- `results/H46_post_r47_frontend_bridge_decision_packet/summary.json` —
+  machine-readable current active docs-only decision packet selecting
+  comparator-only `R48` while preserving the present `H43` paper-grade
+  endpoint;
+- `results/R48_origin_dual_mode_useful_case_model_gate/summary.json` —
+  machine-readable completed current comparator-only useful-case model gate on
+  the preserved `R47` contract;
 - `results/H43_post_r44_useful_case_refreeze/summary.json` —
   machine-readable preserved prior useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
@@ -690,19 +707,20 @@ Operating rule:
   bounded timing follow-up as the current operational reference for full-suite
   runtime behavior, and leaves `E1c` dormant unless a completed packet or
   later explicit review exposes a true `D0` contradiction;
-- short-form alignment for guards: `H45` is the current active docs-only
-  decision packet, `H44` is the preserved prior docs-only route packet, `H43`
-  is the current paper-grade endpoint, `H42/H41` are the preserved prior
-  docs-only decision packets, `H36` is the preserved active routing/refreeze
-  packet, `R42` is the completed current retrieval-contract gate, `R43` is the
-  completed current exact bounded-memory small-VM gate, `R44` is the completed
-  current restricted useful-case gate, `R45` is the completed current coequal
-  model gate, `R46` is the completed preserved prior post-`H44` exact runtime
-  gate, `R47` is the completed current exact frontend bridge gate, `H46` is
-  the next required docs-only interpretation packet, `F22` is the saved
-  blocked comparator bundle, `F20` is the current coequal-mainline model
-  bundle, `P27` is the completed explicit merge packet with
-  `merge_executed = false`, `P26` is the
+- short-form alignment for guards: `H46` is the current active docs-only
+  decision packet, `H45` is the preserved prior docs-only decision packet,
+  `H44` is the preserved prior docs-only route packet, `H43` is the current
+  paper-grade endpoint, `H42/H41` are the preserved prior docs-only decision
+  packets, `H36` is the preserved active routing/refreeze packet, `R42` is the
+  completed current retrieval-contract gate, `R43` is the completed current
+  exact bounded-memory small-VM gate, `R44` is the completed current
+  restricted useful-case gate, `R45` is the completed current coequal model
+  gate, `R46` is the completed preserved prior post-`H44` exact runtime gate,
+  `R47` is the completed current exact frontend bridge gate, `R48` is the
+  completed current comparator-only useful-case model gate, `H47` is the next
+  required docs-only refreeze packet, `F22` is the current comparator-planning
+  bundle, `F20` is the current coequal-mainline model bundle, `P27` is the
+  completed explicit merge packet with `merge_executed = false`, `P26` is the
   preserved prior operational audit lane, `F18/F19/F16/F17/F15` are the
   current planning/control bundles, `H40/H38/H37/P25` are the preserved
   immediate predecessor decision/audit support wave, `H35/P24` are the

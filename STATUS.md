@@ -19,8 +19,10 @@
   `R46_origin_useful_case_surface_generalization_gate`.
 - The current completed exact frontend bridge gate is
   `R47_origin_restricted_frontend_translation_gate`.
-- The next required comparator-only model gate is
+- The current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`.
+- The next required docs-only useful-case bridge refreeze packet is
+  `H47_post_r48_useful_case_bridge_refreeze`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -229,8 +231,8 @@
   fixed `3/3` kernels, records `surface_generalizes_narrowly`, keeps the claim
   ceiling `bounded_useful_cases_only`, and routes the next interpretation step
   through `H45_post_r46_surface_decision_packet`.
-- `H45_post_r46_surface_decision_packet` is now complete as the current active
-  docs-only surface-decision packet:
+- `H45_post_r46_surface_decision_packet` is now complete as the preserved
+  prior docs-only surface-decision packet:
   it preserves `H44/H43/H42/H36/F20/F21/P27/R43/R44/R45`, reads completed
   `R46` exactly as landed, authorizes exactly
   `R47_origin_restricted_frontend_translation_gate`, saves
@@ -244,6 +246,29 @@
   records `restricted_frontend_supported_narrowly`, routes the next
   interpretation step through `H46_post_r47_frontend_bridge_decision_packet`,
   and does not widen the claim ceiling beyond `bounded_useful_cases_only`.
+- `H46_post_r47_frontend_bridge_decision_packet` is now complete as the
+  current active docs-only frontend-bridge decision packet:
+  it preserves `H45/H44/H43/H36/F20/F21/P27/R43/R44/R45`, interprets completed
+  `R47` exactly as landed, authorizes exactly
+  `R48_origin_dual_mode_useful_case_model_gate`, promotes
+  `F22_post_r46_useful_case_model_bridge_bundle` into the current
+  comparator-planning bundle, keeps merge posture explicit through `P27`, and
+  still requires a later explicit packet before any scope widening.
+- `R48_origin_dual_mode_useful_case_model_gate` is now complete as the current
+  comparator-only useful-case model gate:
+  it records `useful_case_model_lane_supported_without_replacing_exact`,
+  keeps both admitted modes exact on the preserved `8/8` useful-case variants
+  across the fixed `3/3` kernels, keeps the trainable mode exact on the
+  explicit held-out `histogram16_u8` family (`3/3` variants), keeps exact
+  evidence decisive relative to model evidence, and routes the next
+  interpretation through `H47_post_r48_useful_case_bridge_refreeze`.
+- `H47_post_r48_useful_case_bridge_refreeze` is now the next required
+  docs-only useful-case bridge refreeze packet:
+  it preserves `H46` as the current active docs-only decision packet,
+  preserves `H43` as the current paper-grade endpoint, preserves `R47` as the
+  completed current exact frontend bridge gate, preserves `R48` as the
+  completed current comparator-only useful-case model gate, and keeps claim
+  ceilings bounded to useful cases only.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -488,14 +513,17 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H45_post_r46_surface_decision_packet` under
+  `H46_post_r47_frontend_bridge_decision_packet` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H44/H43/H42/H41/H40/H38/H37`, preserved active
-  routing/refreeze packet `H36_post_r40_bounded_scalar_family_refreeze`,
-  completed current `R42/R43/R44/R45` semantic-boundary gate stack, current
-  coequal-mainline model bundle `F20`, current exact post-`H43` planning
-  bundle `F21`, completed explicit merge packet `P27`, next exact frontend
-  candidate `R47`, saved blocked comparator bundle `F22`, completed prior
+  preserved prior docs-only packets `H45/H44/H43/H42/H41/H40/H38/H37`,
+  preserved active routing/refreeze packet
+  `H36_post_r40_bounded_scalar_family_refreeze`, completed current
+  `R42/R43/R44/R45` semantic-boundary gate stack, current coequal-mainline
+  model bundle `F20`, current exact post-`H43` planning bundle `F21`, current
+  comparator-planning bundle `F22`, completed current exact frontend bridge
+  gate `R47`, completed current comparator-only useful-case model gate `R48`,
+  next required docs-only refreeze packet `H47`, completed explicit merge
+  packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority blocked-
   blog/helper guardrail refresh wave `P31`, completed
   auxiliary historical/regeneration wording refresh packet `P32`, completed
@@ -525,59 +553,27 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H44` is the current
-   active docs-only packet, `H43` remains the preserved prior useful-case
-   refreeze packet and current paper-grade endpoint, `H42/H41` remain the
-   preserved earlier docs-only packets, `H36` remains the preserved active
-   routing/refreeze packet beneath them, `F21` remains the current exact
-   post-`H43` planning bundle, `P31` remains the current low-priority blocked-
-   blog/helper guardrail refresh wave, `P32` remains the completed auxiliary
-   historical/regeneration wording refresh packet, `P33` remains the completed
-   auxiliary dormant playbook/historical-helper wording refresh packet, `P34`
-   remains the completed auxiliary live-surface wording guardrail packet,
-   `P30/P29/P28` remain the completed prior operational sync waves,
-   `R43/R44/R45` remain completed downstream evidence, and the current
-   authorized next exact runtime lane is `R46` under `H44`.
-2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
-   `wip/p17-h30-clean`, and treat
-   `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree
-   closeout lane for the preserved `H31/R38/H32` packet.
-3. Use `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`,
-   `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`,
-   `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`,
-   `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`,
-   `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`,
-   and `results/H32_post_r38_compiled_boundary_refreeze/summary.json` plus
-   `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
-   as the landed routing surface for the bounded-scalar wave,
-   `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
-   as the saved deferred future threat-stress design,
-   `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-   as the preserved design/execution surface for the completed `R39` audit, and
-   `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
-   as the preserved design surface for `H34`.
-4. Keep the `H32` claim partition explicit while preserving `H30` as the prior
-   tiny compiled-boundary packet, `H31` as the explicit extension-only
-   decision packet, and `H27` as the negative same-endpoint closeout.
-5. Treat `R39_origin_compiler_control_surface_dependency_audit` and
-   `R40_origin_bounded_scalar_locals_and_flags_gate` as completed
-   same-substrate evidence rather than active routing changes; `H34` remains
-   preserved upstream compiled-line interpretation context, `H36` remains the
-   preserved active routing/refreeze packet beneath the current `H43` stack,
-   and no active downstream runtime lane exists after `H43`.
-6. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
-   `F3_post_h23_scope_lift_decision_bundle`, and
-   `F2_future_frontier_recheck_activation_matrix` blocked until a later
-   explicit packet changes the preconditions.
-7. Keep `F4_post_h23_origin_claim_delta_matrix`, the saved `post-H30`
-   extension plan, and the saved `post-H32` conditional-next-packet plan
-   aligned as downstream aids rather than substitutes for new evidence.
-8. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
+   `tmp/active_wave_plan.md` aligned on the rule that `H46` is the current
+   active docs-only packet, `H45` is the preserved prior docs-only decision
+   packet, `H43` remains the current paper-grade endpoint, `R47` remains the
+   completed current exact frontend bridge gate, `R48` remains the completed
+   current comparator-only useful-case model gate, `H47` is the next required
+   docs-only refreeze packet, and `F22` remains the current comparator-
+   planning bundle.
+2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
+   only evidence on the preserved useful-case contract: exact evidence remains
+   decisive, broader Wasm/C remains unauthorized, and model positives do not
+   replace exact failures.
+3. Use the landed bounded-scalar and semantic-boundary routing surfaces under
+   `H36/R40/H40/R42/R43/R44/R46/R47` plus the preserved design docs for
+   `H34`, `R39`, and deferred `R41` as upstream context rather than as active
+   scope-widening authority.
+4. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
    `results/release_preflight_checklist_audit/summary.json` as the current
-   outward-sync controls; a dirty tree still blocks release-facing commits but
-   does not reopen scientific scope.
-9. Reserve full `pytest -q` and heavier release audits for unattended windows;
-   use the existing focused suites and `git diff --check` for short-loop
+   outward-sync controls; a dirty tree can still block release-facing commits
+   but does not reopen scientific scope.
+5. Reserve full `pytest -q` and heavier release audits for unattended windows;
+   use focused exporter/runtime suites plus `git diff --check` for short-loop
    validation.
 
 ## Known Blockers

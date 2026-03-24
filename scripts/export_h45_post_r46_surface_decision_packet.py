@@ -110,6 +110,9 @@ def load_inputs() -> dict[str, Any]:
         "r47_artifact_index_text": read_text(
             ROOT / "docs" / "milestones" / "R47_origin_restricted_frontend_translation_gate" / "artifact_index.md"
         ),
+        "h47_readme_text": read_text(
+            ROOT / "docs" / "milestones" / "H47_post_r48_useful_case_bridge_refreeze" / "README.md"
+        ),
         "design_text": read_text(ROOT / "docs" / "plans" / "2026-03-24-post-r46-h45-surface-decision-design.md"),
         "readme_text": read_text(ROOT / "README.md"),
         "status_text": read_text(ROOT / "STATUS.md"),
@@ -217,14 +220,15 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "H45 is only justified if H44 authorized R46 and R46 really preserved narrow exact useful-case surface generalization.",
         },
         {
-            "item_id": "shared_control_surfaces_preserve_h45_after_h46",
+            "item_id": "shared_control_surfaces_preserve_h45_after_r48",
             "status": "pass"
             if contains_all(
                 inputs["readme_text"],
                 [
                     "the current docs-only decision packet is now `h46_post_r47_frontend_bridge_decision_packet`",
                     "the preserved prior docs-only decision packet is now `h45_post_r46_surface_decision_packet`",
-                    "`r48` is now the next required comparator-only model gate",
+                    "`r48` is now the completed current comparator-only useful-case model gate",
+                    "`h47_post_r48_useful_case_bridge_refreeze` is now the next required docs-only refreeze packet",
                     "`f22` is now the current comparator-planning bundle",
                 ],
             )
@@ -240,7 +244,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["publication_readme_text"],
                 [
                     "`h46` docs-only frontend-bridge decision packet",
-                    "`r48` as the next required comparator-only model gate",
+                    "`r48` as the completed current comparator-only useful-case model gate",
+                    "`h47` as the next required docs-only useful-case bridge refreeze packet",
                     "`f22` as the current comparator-planning bundle",
                 ],
             )
@@ -259,6 +264,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "h45_post_r46_surface_decision_packet/",
                     "f22_post_r46_useful_case_model_bridge_bundle/",
                     "r48_origin_dual_mode_useful_case_model_gate/",
+                    "h47_post_r48_useful_case_bridge_refreeze/",
                 ],
             )
             and contains_all(
@@ -275,6 +281,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "the current active stage is:",
                     "h46_post_r47_frontend_bridge_decision_packet",
                     "r47_origin_restricted_frontend_translation_gate",
+                    "h47_post_r48_useful_case_bridge_refreeze",
                 ],
             )
             and contains_all(
@@ -283,18 +290,26 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "`h46_post_r47_frontend_bridge_decision_packet` is the current active docs-only",
                     "`r47_origin_restricted_frontend_translation_gate` is now the completed current exact frontend bridge lane",
                     "`f22_post_r46_useful_case_model_bridge_bundle` is now the current comparator-planning bundle",
+                    "`h47_post_r48_useful_case_bridge_refreeze` is now the next required docs-only refreeze packet",
                 ],
             )
             and contains_all(
                 inputs["experiment_manifest_text"],
                 [
+                    "post-`h46` `r48` dual-mode useful-case model wave",
                     "post-`r47` `h46` frontend-bridge decision wave",
                     "refreshed `scripts/export_h45_post_r46_surface_decision_packet.py`",
                     "refreshed `results/h45_post_r46_surface_decision_packet/*`",
                 ],
             )
+            and contains_all(
+                inputs["h47_readme_text"],
+                [
+                    "planned next docs-only refreeze packet after landed comparator-only `r48`",
+                ],
+            )
             else "blocked",
-            "notes": "Shared control surfaces should preserve H45 as the prior decision packet after H46 lands and promotes R48.",
+            "notes": "Shared control surfaces should preserve H45 as the prior decision packet after H46 stays active, R48 lands, and H47 becomes next.",
         },
     ]
 
@@ -359,11 +374,19 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["h46_post_r47_frontend_bridge_decision_packet", "r47_origin_restricted_frontend_translation_gate"],
+            [
+                "h46_post_r47_frontend_bridge_decision_packet",
+                "r47_origin_restricted_frontend_translation_gate",
+                "h47_post_r48_useful_case_bridge_refreeze",
+            ],
         ),
         "tmp/active_wave_plan.md": (
             "active_wave_plan_text",
-            ["`h46_post_r47_frontend_bridge_decision_packet` is the current active docs-only", "`f22_post_r46_useful_case_model_bridge_bundle` is now the current comparator-planning bundle"],
+            [
+                "`h46_post_r47_frontend_bridge_decision_packet` is the current active docs-only",
+                "`f22_post_r46_useful_case_model_bridge_bundle` is now the current comparator-planning bundle",
+                "`h47_post_r48_useful_case_bridge_refreeze` is now the next required docs-only refreeze packet",
+            ],
         ),
     }
     rows: list[dict[str, object]] = []

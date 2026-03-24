@@ -11,9 +11,9 @@
       "notes": "H45 is only justified if H44 authorized R46 and R46 really preserved narrow exact useful-case surface generalization."
     },
     {
-      "item_id": "shared_control_surfaces_preserve_h45_after_h46",
+      "item_id": "shared_control_surfaces_preserve_h45_after_r48",
       "status": "pass",
-      "notes": "Shared control surfaces should preserve H45 as the prior decision packet after H46 lands and promotes R48."
+      "notes": "Shared control surfaces should preserve H45 as the prior decision packet after H46 stays active, R48 lands, and H47 becomes next."
     }
   ]
 }

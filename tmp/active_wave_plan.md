@@ -22,6 +22,12 @@ Current scientific/control stack:
   `R44_origin_restricted_wasm_useful_case_execution_gate`;
 - current completed post-`H44` exact runtime gate:
   `R46_origin_useful_case_surface_generalization_gate`;
+- current completed exact frontend bridge gate:
+  `R47_origin_restricted_frontend_translation_gate`;
+- current completed comparator-only useful-case model gate:
+  `R48_origin_dual_mode_useful_case_model_gate`;
+- next required docs-only useful-case bridge refreeze packet:
+  `H47_post_r48_useful_case_bridge_refreeze`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -71,8 +77,10 @@ bundle.
 post-`H44` exact runtime gate on the fixed held-out useful-case surface.
 `R47_origin_restricted_frontend_translation_gate` is now the completed current
 exact frontend bridge lane.
-`R48_origin_dual_mode_useful_case_model_gate` is now the next required
-comparator-only model lane.
+`R48_origin_dual_mode_useful_case_model_gate` is now the completed current
+comparator-only useful-case model lane.
+`H47_post_r48_useful_case_bridge_refreeze` is now the next required docs-only
+refreeze packet.
 `F22_post_r46_useful_case_model_bridge_bundle` is now the current
 comparator-planning bundle.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
@@ -114,6 +122,8 @@ current low-priority wave.
 - `wip/f21-h44-post-h43-route` is the clean post-`H43` reentry control branch.
 - `wip/r46-useful-case-surface-generalization` is the clean post-`H44`
   held-out useful-case surface-generalization branch.
+- `wip/r48-origin-dual-mode-useful-case-model` is the clean post-`H46`
+  comparator-only useful-case model branch.
 - `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
   sync branch.
 - `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
@@ -162,26 +172,31 @@ current low-priority wave.
 - `R47` returns `restricted_frontend_supported_narrowly` on `8/8` held-out
   useful-case variants across the fixed `3/3` kernel ladder and keeps
   `translation_identity_exact_count = 8`.
+- `R48` returns
+  `useful_case_model_lane_supported_without_replacing_exact` with `2/2`
+  admitted modes exact on the preserved `8/8` useful-case variants, while the
+  trainable mode also stays exact on the explicit held-out `histogram16_u8`
+  family (`3/3`).
 
 ## Immediate Objectives
 
-1. Preserve `H44` as the current active docs-only decision packet.
-2. Preserve `H42` as the preserved prior route-selection packet.
-3. Preserve `H36` as the routing/refreeze packet underneath the stack.
-4. Preserve completed `R42` as the first semantic-boundary retrieval-contract
-   gate.
-5. Preserve completed `P27` as the operational merge packet without merging
+1. Preserve `H46` as the current active docs-only decision packet.
+2. Preserve `H45` as the preserved prior docs-only decision packet.
+3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
+   routing/refreeze packet underneath the stack.
+4. Preserve completed `R47` as the decisive exact frontend bridge gate.
+5. Preserve completed `R48` as comparator-only, non-substitutive useful-case
+   model evidence.
+6. Treat `H47` as the next required docs-only refreeze packet rather than
+   widening by momentum.
+7. Keep `F22` current as the comparator-planning bundle, not as substitute
+   evidence.
+8. Preserve completed `P27` as the operational merge packet without merging
    `main`.
-6. Preserve completed exact `R43` as the decisive upstream exact runtime gate.
-7. Preserve completed `R44` as the current narrow useful-case gate.
-8. Preserve completed `R46` as the current held-out in-surface exact runtime
-   gate without widening the claim ceiling.
-9. Preserve completed `R45` as the current coequal model lane without
-   weakening the exact evidence boundary.
-10. Keep `R41` deferred until later explicit contradiction routing.
-11. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
-   frontier widening by momentum.
-12. Keep release/public audit surfaces downstream of `H43` without changing
+9. Keep `R41` deferred until later explicit contradiction routing.
+10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
+    frontier widening by momentum.
+11. Keep release/public audit surfaces downstream of `H43` without changing
     the scientific stage driver.
 
 ## Last Completed Order
@@ -231,11 +246,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F21_post_h43_exact_useful_case_expansion_bundle` ->
 `H44_post_h43_route_reauthorization_packet` ->
 `R46_origin_useful_case_surface_generalization_gate` ->
-`H45_post_r46_surface_decision_packet`
+`H45_post_r46_surface_decision_packet` ->
+`R47_origin_restricted_frontend_translation_gate` ->
+`H46_post_r47_frontend_bridge_decision_packet` ->
+`R48_origin_dual_mode_useful_case_model_gate`
 
 ## Current Rule
 
-- `H45` is the current active docs-only packet.
+- `H46` is the current active docs-only packet.
+- `H45` is the preserved prior docs-only decision packet.
 - `H44` is the preserved prior docs-only route packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
@@ -267,9 +286,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R45` is the completed current coequal model lane.
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
 - `R47` is the completed current exact frontend bridge gate.
+- `R48` is the completed current comparator-only useful-case model gate.
 - `H46` is the current active docs-only interpretation packet.
 - `F22` is the current comparator-planning bundle.
-- `R48` is the next required comparator-only model gate.
+- `H47` is the next required docs-only useful-case bridge refreeze packet.
 
 ## Control References
 
@@ -283,6 +303,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
 - `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md`
+- `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`
@@ -305,6 +326,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/R46_origin_useful_case_surface_generalization_gate/`
 - `docs/milestones/H45_post_r46_surface_decision_packet/`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/`
+- `docs/milestones/H46_post_r47_frontend_bridge_decision_packet/`
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/`
+- `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/`
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
 - `docs/milestones/P32_post_h43_historical_wording_refresh/`
 - `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`
@@ -321,6 +346,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
+- `results/R47_origin_restricted_frontend_translation_gate/summary.json`
+- `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
 - `results/P32_post_h43_historical_wording_refresh/summary.json`
 - `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`

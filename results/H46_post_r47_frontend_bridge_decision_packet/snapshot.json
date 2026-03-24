@@ -29,12 +29,12 @@
       "matched_lines": [
         "- `H46_post_r47_frontend_bridge_decision_packet`",
         "- `R48_origin_dual_mode_useful_case_model_gate`",
+        "- `H47_post_r48_useful_case_bridge_refreeze`",
         "`deferred_future_model_candidate = r48_origin_dual_mode_useful_case_model_gate`,",
         "`next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;",
-        "`H46_post_r47_frontend_bridge_decision_packet`",
-        "- comparator-only `R48_origin_dual_mode_useful_case_model_gate` as the current",
-        "`R48_origin_dual_mode_useful_case_model_gate`",
-        "- `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`"
+        "`selected_outcome = authorize_r48_origin_dual_mode_useful_case_model_gate`,",
+        "`authorized_next_model_candidate = r48_origin_dual_mode_useful_case_model_gate`,",
+        "`next_required_lane = r48_origin_dual_mode_useful_case_model_gate`;"
       ]
     },
     {

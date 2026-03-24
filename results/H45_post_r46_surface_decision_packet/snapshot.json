@@ -32,12 +32,12 @@
       "matched_lines": [
         "- `H46_post_r47_frontend_bridge_decision_packet`",
         "- `R47_origin_restricted_frontend_translation_gate`",
+        "- `H47_post_r48_useful_case_bridge_refreeze`",
         "`deferred_future_runtime_candidate = r47_origin_restricted_frontend_translation_gate`,",
         "`selected_outcome = authorize_r47_origin_restricted_frontend_translation_gate`,",
         "`authorized_next_runtime_candidate = r47_origin_restricted_frontend_translation_gate`,",
         "`next_required_lane = r47_origin_restricted_frontend_translation_gate`;",
-        "`next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;",
-        "`R47_origin_restricted_frontend_translation_gate` ->"
+        "`next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;"
       ]
     },
     {
