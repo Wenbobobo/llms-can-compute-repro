@@ -1,7 +1,14 @@
 # P37 Acceptance
 
 - `P37` remains operational/docs-only;
-- `P37` is inactive on the landed negative `H50` branch;
-- `P37` does not authorize `F27`, `R53`, `R54`, or any broader runtime lane;
-  and
-- `P37` exists only as future closeout-maintenance storage.
+- `H51` remains the current active docs-only packet;
+- `H50` remains the preserved prior closeout;
+- `H43` remains the current paper-grade endpoint;
+- the clean `F28/H51` worktree remains the control surface for this wave;
+- descendant clean worktrees remain the only scientific execution surfaces for
+  `R55` and `R56`;
+- raw step rows, trace rows, per-read rows, and artifacts above roughly
+  `10 MiB` stay out of git by default;
+- compact summaries, manifests, stop rules, and first-fail digests stay in
+  git; and
+- merge back to `main` does not occur during this wave.

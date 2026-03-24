@@ -1,7 +1,11 @@
 # P37 Todo
 
-- [x] save one explicit post-`H50` closeout-maintenance surface;
-- [x] keep the surface operational/docs-only rather than scientific;
-- [x] keep merge, publication, and artifact hygiene separated from route
-  reopening; and
-- [x] leave the packet inactive unless later closeout maintenance is needed.
+- record one clean control-worktree strategy for the post-`H50` mechanism
+  reentry wave;
+- record clean descendant execution-worktree rules for `R55` and `R56`;
+- record one artifact policy separating compact summaries from raw row dumps;
+- record one commit cadence for `F28`, `H51`, `P37`, `R55`, `R56`, `R57`, and
+  `H52`;
+- keep merge posture explicit and non-executed here; and
+- keep row-level artifacts above roughly `10 MiB` out of git unless a later
+  explicit review-critical packet says otherwise.

@@ -1,8 +1,19 @@
 # P37 Post-H50 Narrow Executor Closeout Sync
 
-Saved future low-priority operational/docs sync packet after landed negative
-`H50`.
+Completed low-priority operational/docs sync packet for the post-`H50`
+mechanism reentry wave.
 
-`P37` is not active here. It exists only to preserve one explicit place for
-later closeout hygiene if the branch eventually needs manuscript, release, or
-driver sync after the current `stop_as_exact_without_system_value` result.
+`P37` does not alter the active scientific stage. It preserves `H51` as the
+current active docs-only packet, preserves `H50` as the preserved prior
+closeout, preserves `H43` as the paper-grade endpoint, and codifies the
+worktree, artifact, and commit policy needed for
+`F28 -> H51 -> R55 -> R56 -> R57 -> H52`.
+
+The packet fixes:
+
+- one worktree strategy note;
+- one artifact policy note;
+- one commit-cadence note;
+- one acceptance note keeping dirty root `main` untouched during this wave; and
+- one explicit split between compact in-git summaries and raw row dumps that
+  stay out of git by default.
