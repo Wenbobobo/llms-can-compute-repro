@@ -8,13 +8,13 @@ driver and machine-readable `results/` summaries first.
 ## Current Start Points
 
 - `2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
-  active master plan for the current mechanism-first wave
+  preserved master plan for the now-closed mechanism-first wave
 - `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
   planning-only bundle that fixes `H51 -> R55 -> R56 -> R57 -> H52`
-- `../milestones/H51_post_h50_origin_mechanism_reentry_packet/`
-  active docs-only reentry packet
+- `../milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
+  current active docs-only closeout packet
 - `../milestones/P37_post_h50_narrow_executor_closeout_sync/`
-  current low-priority hygiene sidecar
+  aligned low-priority hygiene sidecar for the closed wave
 
 ## Current Route
 
@@ -45,10 +45,10 @@ Blocked by default:
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
 - `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
-- `../milestones/H51_post_h50_origin_mechanism_reentry_packet/`
+- `../milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
 - `../milestones/P37_post_h50_narrow_executor_closeout_sync/`
 - `../../results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
-- `../../results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
+- `../../results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
 - `../../results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
 
 Historical design files remain useful for lineage reconstruction, but they are
