@@ -152,6 +152,14 @@ wave, while `P31/P32/P33/P34` remain preserved prior helper refresh packets.
 - `wip/p35-f23-post-h47-mainline-extension` is the clean post-`H47`
   extension branch for the current low-priority rollup plus next numeric
   planning wave.
+- `wip/f26-h50-post-h49-next-wave` is the clean parent control branch for the
+  landed `F26 -> R51 -> R52 -> H50` wave.
+- `wip/f26-h50-post-h49-next-wave` is synced to
+  `origin/wip/f26-h50-post-h49-next-wave`.
+- `wip/r51-post-h49-memory-control-sufficiency` is the clean post-`H49`
+  runtime/comparator execution branch for landed `R51/R52`.
+- `wip/r51-post-h49-memory-control-sufficiency` is synced to
+  `origin/wip/r51-post-h49-memory-control-sufficiency`.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -199,44 +207,39 @@ wave, while `P31/P32/P33/P34` remain preserved prior helper refresh packets.
 
 ## Immediate Objectives
 
-1. Preserve `H49` as the current active docs-only decision packet.
-2. Preserve `H48` as the preserved prior docs-only decision packet.
+1. Preserve `H50` as the current active docs-only decision packet.
+2. Preserve `H49` as the preserved prior docs-only decision packet and `H48`
+   as the preserved earlier docs-only decision packet.
 3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
    routing/refreeze packet underneath the stack.
-4. Preserve completed `R47` as the decisive exact frontend bridge gate.
-5. Preserve completed `R48` as comparator-only, non-substitutive useful-case
+4. Treat completed `R51` as narrow substrate-sufficiency evidence only, not
+   as authorization to widen scope.
+5. Treat completed `R52` as the bounded value falsifier that closes the
+   post-`H49` route negatively.
+6. Keep `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
+   blocked and non-selected after negative `H50`.
+7. Keep `no_active_downstream_runtime_lane` restored after landed `H50`.
+8. Preserve completed `R47` as the decisive exact frontend bridge gate.
+9. Preserve completed `R48` as comparator-only, non-substitutive useful-case
    model evidence.
-6. Preserve completed `R50` as restricted tiny-`C` evidence only and restore
-   `no_active_downstream_runtime_lane`.
-6. Treat `H47` as the explicit narrow refreeze packet rather than widening by
-   momentum.
-7. Keep `F22` current as the comparator-planning bundle, not as substitute
-   evidence.
-8. Preserve completed `P27` as the operational merge packet without merging
-   `main`.
-9. Keep `R41` deferred until later explicit contradiction routing.
-10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
+10. Preserve completed `R50` as restricted tiny-`C` evidence only, not as
+    widening authorization.
+11. Keep `F22` current as the comparator-planning bundle, not as substitute
+    evidence.
+12. Preserve completed `P27` as the operational merge packet without merging
+    `main`.
+13. Keep `P36` as the current low-priority operational/docs wave and `P35` as
+    the preserved prior low-priority wave while `P31/P32/P33/P34` remain
+    preserved prior helper refresh packets.
+14. Keep `R41` deferred until later explicit contradiction routing.
+15. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
     frontier widening by momentum.
-11. Keep release/public audit surfaces downstream of `H43` without changing
+16. Keep release/public audit surfaces downstream of `H43` without changing
     the scientific stage driver.
-12. Record `P35` as the preserved prior low-priority operational/docs wave
-    while keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
-13. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
-    bundle.
-14. Treat completed `R49_origin_useful_case_numeric_scaling_gate` as the
-    completed current numeric-scaling gate interpreted by landed
-    `H48_post_r49_numeric_scaling_decision_packet`.
-15. Keep `F24_post_h47_hybrid_executor_growth_bundle` dormant and
-    non-authorized.
-16. Treat `F25_post_h48_restricted_tinyc_lowering_bundle` as the completed
+17. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
+    bundle and keep `F24_post_h47_hybrid_executor_growth_bundle` dormant.
+18. Treat `F25_post_h48_restricted_tinyc_lowering_bundle` as the completed
     current post-`H48` planning bundle rather than as pending future work.
-17. Treat `R50_origin_restricted_tinyc_lowering_gate` as the completed current
-    restricted tiny-`C` lowering gate interpreted by landed `H49`.
-18. Treat `H49_post_r50_tinyc_lowering_decision_packet` as the current active
-    docs-only closeout packet and restore
-    `no_active_downstream_runtime_lane`.
-19. Keep `P36_post_h48_falsification_closeout_bundle` as the explicit
-    non-selected closeout route.
 
 ## Last Completed Order
 
@@ -296,12 +299,18 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H48_post_r49_numeric_scaling_decision_packet` ->
 `F25_post_h48_restricted_tinyc_lowering_bundle` ->
 `R50_origin_restricted_tinyc_lowering_gate` ->
-`H49_post_r50_tinyc_lowering_decision_packet`
+`H49_post_r50_tinyc_lowering_decision_packet` ->
+`F26_post_h49_origin_claim_delta_and_next_question_bundle` ->
+`P36_post_h49_cleanline_hygiene_and_artifact_policy` ->
+`R51_origin_memory_control_surface_sufficiency_gate` ->
+`R52_origin_internal_vs_external_executor_value_gate` ->
+`H50_post_r51_r52_scope_decision_packet`
 
 ## Current Rule
 
-- `H49` is the current active docs-only packet.
-- `H48` is the preserved prior docs-only decision packet.
+- `H50` is the current active docs-only packet.
+- `H49` is the preserved prior docs-only decision packet.
+- `H48` is the preserved earlier docs-only decision packet.
 - `H47` is the preserved earlier docs-only decision packet.
 - `H46` is the preserved earlier docs-only decision packet before that.
 - `H45` is the preserved earlier docs-only decision packet.
@@ -335,11 +344,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R48` is the completed current comparator-only useful-case model gate.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is the completed current
   post-`H48` planning bundle.
-- `R50_origin_restricted_tinyc_lowering_gate` is the completed current
+- `R50_origin_restricted_tinyc_lowering_gate` is the completed preserved prior
   restricted tiny-`C` lowering gate.
 - `H49_post_r50_tinyc_lowering_decision_packet` is now the preserved prior
   docs-only interpretation packet and restores
   `no_active_downstream_runtime_lane`.
+- `F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
+  completed post-`H49` planning bundle fixing only `R51`, `R52`, and `H50`.
+- `P36_post_h49_cleanline_hygiene_and_artifact_policy` is now the current
+  low-priority operational/docs wave.
 - `R51_origin_memory_control_surface_sufficiency_gate` is now the completed
   post-`H49` runtime sufficiency gate.
 - `R52_origin_internal_vs_external_executor_value_gate` is now the completed
@@ -347,6 +360,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `H50_post_r51_r52_scope_decision_packet` is now the current active
   docs-only interpretation packet and selects
   `stop_as_exact_without_system_value`.
+- `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle` is
+  saved only, blocked, and non-selected after negative `H50`.
 - `F22` is the current comparator-planning bundle.
 - `F23` is the current post-`H47` numeric-scaling planning bundle.
 - `R49` is the completed current numeric-scaling gate.
@@ -365,6 +380,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
+- `docs/plans/2026-03-24-post-h49-origin-core-next-wave-design.md`
 - `docs/plans/2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md`
 - `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md`
 - `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
@@ -415,6 +431,11 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/R47_origin_restricted_frontend_translation_gate/summary.json`
 - `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
 - `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
+- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/summary.json`
+- `results/P36_post_h49_cleanline_hygiene_and_artifact_policy/summary.json`
+- `results/R51_origin_memory_control_surface_sufficiency_gate/summary.json`
+- `results/R52_origin_internal_vs_external_executor_value_gate/summary.json`
+- `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/P35_post_h47_research_record_rollup/summary.json`
 - `results/F23_post_h47_numeric_scaling_bundle/summary.json`
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
