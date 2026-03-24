@@ -9,8 +9,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 ## Current Start Points
 
 - `2026-03-24-post-h49-origin-core-next-wave-design.md` — the current saved
-  post-`H49` next-wave design that fixes the route:
-  `F26 -> P36 -> R51 -> R52 -> H50`, while keeping `F27` saved only.
+  post-`H49` next-wave design that fixed and now closes the route:
+  `F26 -> P36 -> R51 -> R52 -> H50`, while keeping `F27` saved but blocked.
 - `2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md` — the
   current saved post-`H47` master plan that fixes the next wave order:
   `P35` research-record rollup, `F23` numeric-scaling bundle, one narrow
@@ -31,10 +31,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   planning surface for the only admissible post-`H48` runtime question,
   fixing `R50` as the only next runtime candidate and `H49` as the only
   follow-up packet while preserving the `R47` useful-case contract first.
-- `2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md` — the current
-  docs-only decision surface that reads completed `R50`, records `H49` as the
-  active interpretation packet, freezes `R50` as narrow exact tiny-`C`
-  support only, and restores `no_active_downstream_runtime_lane`.
+- `2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md` — the preserved
+  prior docs-only decision surface that reads completed `R50`, records landed
+  `H49`, freezes `R50` as narrow exact tiny-`C` support only, and restores
+  `no_active_downstream_runtime_lane`.
 - `2026-03-24-post-f25-r50-restricted-tinyc-lowering-design.md` — the current
   execution design surface for the landed `R50` restricted tiny-`C` lowering
   gate, preserving `H48/H43`, executing only the admitted single-function
@@ -181,9 +181,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `../milestones/H50_post_r51_r52_scope_decision_packet/` — current active
+  docs-only closeout packet reading completed `R51/R52`, selecting
+  `stop_as_exact_without_system_value`, and restoring
+  `no_active_downstream_runtime_lane`.
 - `../milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/` —
-  current post-`H49` planning-only claim-delta bundle fixing `R51`, `R52`,
-  and `H50` while preserving `H49/H43/H36`.
+  completed post-`H49` planning-only claim-delta bundle that fixed `R51`,
+  `R52`, and `H50` while preserving `H49/H43/H36`.
 - `../milestones/P36_post_h49_cleanline_hygiene_and_artifact_policy/` —
   current low-priority operational/docs packet fixing cleanline execution
   posture, artifact policy, and no-merge discipline for the post-`H49` wave.
@@ -194,8 +198,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
-- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — current
-  active docs-only interpretation packet that reads completed `R50`,
+- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — preserved
+  prior docs-only interpretation packet that reads completed `R50`,
   preserves `H43` as the paper-grade endpoint, freezes `R50` narrowly, and
   restores `no_active_downstream_runtime_lane`.
 - `../milestones/H48_post_r49_numeric_scaling_decision_packet/` — preserved
@@ -228,11 +232,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   current post-`H48` planning-only bundle selected by completed `H48` that
   fixed `R50` and `H49`.
 - `../milestones/R50_origin_restricted_tinyc_lowering_gate/` — completed
-  current restricted tiny-`C` lowering gate downstream of completed `F25`,
-  preserving `8/8` exact admitted variants across the fixed `3/3` useful-case
-  kernels and fixing `H49` as the next required packet.
-- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — current
-  active docs-only follow-up packet after completed `R50`.
+  preserved prior restricted tiny-`C` lowering gate downstream of completed
+  `F25`, preserving `8/8` exact admitted variants across the fixed `3/3`
+  useful-case kernels and fixing `H49` as the next required packet.
+- `../milestones/R51_origin_memory_control_surface_sufficiency_gate/` —
+  completed post-`H49` runtime sufficiency gate that keeps the bounded richer
+  memory/control surface exact on `5/5` families.
+- `../milestones/R52_origin_internal_vs_external_executor_value_gate/` —
+  completed post-`H49` comparator gate that stays exact but disconfirms
+  bounded internal-route value over simpler baselines.
+- `../milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/` —
+  saved future planning-only entry bundle left non-selected and blocked after
+  negative `H50`.
 - `../milestones/R49_origin_useful_case_numeric_scaling_gate/` — completed
   current numeric-scaling gate downstream of completed `F23` and before
   landed `H48`.

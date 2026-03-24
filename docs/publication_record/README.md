@@ -7,8 +7,9 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H49` docs-only tiny-`C` lowering decision packet, preserving `H48` as the
-  preserved prior docs-only decision packet, preserving `H47` as the
+  `H50` docs-only post-`R51/R52` closeout packet, preserving `H49` as the
+  preserved prior docs-only decision packet, preserving `H48` as the
+  preserved earlier docs-only decision packet, preserving `H47` as the
   preserved earlier docs-only decision packet, preserving `H46` as the
   preserved earlier docs-only decision packet, preserving `H45` as the
   preserved earlier docs-only interpretation packet, preserving `H44` as the
@@ -29,20 +30,22 @@ Current control docs:
   preserving `H29/R36/R37/H30/H31/R38/H32/H33/H34` as upstream
   evidence/control context, treating `R39` and `R40` as completed
   same-substrate downstream evidence rather than automatic routing changes,
-  recording `H49` as the current active docs-only stage, `H48` as the
-  preserved prior decision packet, `H47` as the preserved earlier decision
+  recording `H50` as the current active docs-only stage, `H49` as the
+  preserved prior decision packet, `H48` as the preserved earlier decision
   packet, `R46` as the completed preserved prior post-`H44` exact runtime
   gate, `R47` as the completed current exact frontend bridge gate, `R48` as
   the completed current comparator-only useful-case model gate,
   `R49` as the completed current numeric-scaling gate, `F22` as the current
   comparator-planning bundle, `F23` as the completed post-`H47`
   numeric-scaling planning bundle, `F25` as the completed current post-`H48`
-  planning bundle, `R50` as the completed current restricted tiny-`C`
-  lowering gate, `F26` as the current post-`H49` planning bundle, `P36` as
+  planning bundle, `R50` as the completed preserved-prior restricted tiny-`C`
+  lowering gate, `F26` as the completed post-`H49` planning bundle, `P36` as
   the current low-priority operational/docs wave, `P35` as the preserved prior
-  low-priority wave, `R51` as the only next runtime candidate,
-  `no_active_downstream_runtime_lane` restored by `H49`, and preserving `H43`
-  as the landed paper-grade closeout;
+  low-priority wave, `R51` as the completed post-`H49` runtime sufficiency
+  gate, `R52` as the completed post-`H49` comparator gate,
+  `no_active_downstream_runtime_lane` restored by `H50`, and preserving `H43`
+  as the landed paper-grade closeout while `F27` remains non-selected and
+  blocked;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
   `H44`, `R46`, `H45`, authorized `R47`, blocked `F22`, and conditional
@@ -242,8 +245,13 @@ Current control docs:
   completed preserved prior post-`H44` exact runtime gate that keeps the
   held-out in-surface useful-case matrix exact on `8/8` variants across `3/3`
   kernels;
+- `docs/milestones/H50_post_r51_r52_scope_decision_packet/` — the current
+  active docs-only post-`R51/R52` closeout packet that records completed
+  positive `R51`, completed negative `R52`, preserves `H43` as the
+  paper-grade endpoint, selects `stop_as_exact_without_system_value`, and
+  restores `no_active_downstream_runtime_lane`;
 - `docs/milestones/H49_post_r50_tinyc_lowering_decision_packet/` — the
-  current active docs-only tiny-`C` lowering decision packet that records
+  preserved prior docs-only tiny-`C` lowering decision packet that records
   completed `R50`, preserves `H43` as the paper-grade endpoint, freezes
   narrow exact tiny-`C` support only, and restores
   `no_active_downstream_runtime_lane`;
@@ -481,8 +489,11 @@ Current control docs:
   machine-readable preserved prior docs-only decision packet selecting exact
   `R47` while keeping `F22/R48` explicit at that stage and preserving the
   present `H43` paper-grade endpoint;
+- `results/H50_post_r51_r52_scope_decision_packet/summary.json` —
+  machine-readable current active docs-only closeout packet that selects
+  `stop_as_exact_without_system_value` after completed `R51/R52`;
 - `results/H49_post_r50_tinyc_lowering_decision_packet/summary.json` —
-  machine-readable current active docs-only tiny-`C` lowering decision packet
+  machine-readable preserved prior docs-only tiny-`C` lowering decision packet
   that selects `freeze_r50_as_narrow_exact_tinyc_support_only` after
   completed `R50`;
 - `results/H48_post_r49_numeric_scaling_decision_packet/summary.json` —
@@ -778,37 +789,39 @@ Operating rule:
   bounded timing follow-up as the current operational reference for full-suite
   runtime behavior, and leaves `E1c` dormant unless a completed packet or
   later explicit review exposes a true `D0` contradiction;
-- short-form alignment for guards: `H49` is the current active docs-only
-  decision packet, `H48` is the preserved prior docs-only decision packet,
-  `H47` is the preserved earlier docs-only decision packet, `H46` is the
-  preserved earlier docs-only decision packet, `H45` is the
-  preserved earlier docs-only decision packet, `H44` is the
-  preserved prior docs-only route packet, `H43` is the current paper-grade
-  endpoint, `H42/H41` are the preserved prior docs-only decision packets,
-  `H36` is the preserved active routing/refreeze packet, `R42` is the
-  completed current retrieval-contract gate, `R43` is the completed current
-  exact bounded-memory small-VM gate, `R44` is the completed current
-  restricted useful-case gate, `R45` is the completed current coequal model
-  gate, `R46` is the completed preserved prior post-`H44` exact runtime gate,
-  `R47` is the completed current exact frontend bridge gate, `R48` is the
-  completed current comparator-only useful-case model gate, `R49` is the
-  completed current numeric-scaling gate, `F22` is the current
-  comparator-planning bundle, `F25` is the completed current post-`H48`
-  planning bundle, `R50` is the completed current restricted tiny-`C`
-  lowering gate, `no_active_downstream_runtime_lane` is restored by `H49`,
-  `F20` is the current
-  coequal-mainline model bundle, `P27` is the completed explicit merge packet
-  with `merge_executed = false`, `P26` is the preserved prior operational
-  audit lane, `F18/F19/F16/F17/F15` are the current planning/control bundles,
-  `H40/H38/H37/P25` are the preserved
-  immediate predecessor decision/audit support wave, `H35/P24` are the
-  preserved earlier bounded-scalar control surfaces, `H34/H32/H31/H30` are
-  preserved upstream decision/refreeze packets, `H29` is the preserved
-  upstream Origin-core refreeze, `R40` is the completed bounded-scalar gate,
-  `R39` and `R38` are preserved richer same-substrate gates, `R37` is the
-  preserved tiny compiled-boundary gate, `R36` is the preserved precision
-  follow-up, `R41` remains deferred until a later explicit contradiction
-  packet, no active downstream runtime lane exists after `H43`, `H27` is the
+- short-form alignment for guards: `H50` is the current active docs-only
+  decision packet, `H49` is the preserved prior docs-only decision packet,
+  `H48` is the preserved earlier docs-only decision packet, `H47` is the
+  preserved earlier docs-only decision packet, `H46` is the preserved earlier
+  docs-only decision packet, `H45` is the preserved earlier docs-only
+  decision packet, `H44` is the preserved prior docs-only route packet, `H43`
+  is the current paper-grade endpoint, `H42/H41` are the preserved prior
+  docs-only decision packets, `H36` is the preserved active
+  routing/refreeze packet, `R42` is the completed current
+  retrieval-contract gate, `R43` is the completed current exact
+  bounded-memory small-VM gate, `R44` is the completed current restricted
+  useful-case gate, `R45` is the completed current coequal model gate, `R46`
+  is the completed preserved prior post-`H44` exact runtime gate, `R47` is
+  the completed current exact frontend bridge gate, `R48` is the completed
+  current comparator-only useful-case model gate, `R49` is the completed
+  current numeric-scaling gate, `F22` is the current comparator-planning
+  bundle, `F25` is the completed current post-`H48` planning bundle, `F26`
+  is the completed post-`H49` planning bundle, `R50` is the completed
+  preserved prior restricted tiny-`C` lowering gate, `R51` is the completed
+  post-`H49` runtime sufficiency gate, `R52` is the completed post-`H49`
+  comparator gate, `no_active_downstream_runtime_lane` is restored by `H50`,
+  `F20` is the current coequal-mainline model bundle, `P27` is the completed
+  explicit merge packet with `merge_executed = false`, `P26` is the preserved
+  prior operational audit lane, `F18/F19/F16/F17/F15` are the current
+  planning/control bundles, `H40/H38/H37/P25` are the preserved immediate
+  predecessor decision/audit support wave, `H35/P24` are the preserved
+  earlier bounded-scalar control surfaces, `H34/H32/H31/H30` are preserved
+  upstream decision/refreeze packets, `H29` is the preserved upstream
+  Origin-core refreeze, `R40` is the completed bounded-scalar gate, `R39`
+  and `R38` are preserved richer same-substrate gates, `R37` is the preserved
+  tiny compiled-boundary gate, `R36` is the preserved precision follow-up,
+  `R41` remains deferred until a later explicit contradiction packet, no
+  active downstream runtime lane exists after `H50`, `H27` is the
   preserved same-endpoint closeout, `H25` is the preserved prior active
   decision packet, `H23` is the preserved frozen same-endpoint scientific
   state, `P14` remains the completed downstream docs-only outward-sync lane,
