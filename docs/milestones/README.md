@@ -12,19 +12,41 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H49_post_r50_tinyc_lowering_decision_packet/` — current active docs-only
+- `H50_post_r51_r52_scope_decision_packet/` — current active docs-only
+  closeout packet that preserves `H49/H43/H36/P36`, selects
+  `stop_as_exact_without_system_value`, and restores
+  `no_active_downstream_runtime_lane`.
+- `H49_post_r50_tinyc_lowering_decision_packet/` — preserved prior docs-only
   tiny-`C` lowering decision packet that preserves `H48/H43/H36/F20/F21/F22/P27`,
   records completed `R50`, freezes narrow exact tiny-`C` support only, and
   restores `no_active_downstream_runtime_lane`.
-- `F26_post_h49_origin_claim_delta_and_next_question_bundle/` — current
+- `F26_post_h49_origin_claim_delta_and_next_question_bundle/` — completed
   post-`H49` planning-only claim-delta bundle that preserves `H49/H43/H36`,
-  fixes `R51` as the only next runtime candidate, fixes `R52` as the only
-  later comparator/value gate, fixes `H50` as the only follow-up packet, and
-  keeps `F27` blocked behind later explicit `H50`.
+  fixed `R51` as the only next runtime candidate, fixed `R52` as the only
+  later comparator/value gate, fixed `H50` as the only follow-up packet, and
+  keeps `F27` blocked after landed negative `H50`.
+- `R52_origin_internal_vs_external_executor_value_gate/` — completed
+  post-`H49` comparator/value gate that kept all comparators exact on `5/5`
+  rows but found that the internal route lacks bounded value over simpler
+  baselines.
+- `R51_origin_memory_control_surface_sufficiency_gate/` — completed
+  post-`H49` runtime sufficiency gate that kept the bounded richer
+  memory/control surface exact on `5/5` families with `5/5` maximizer-row
+  identity passes and `5/5` budget-clean rows.
+- `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/` —
+  saved future planning-only entry bundle left non-selected and blocked after
+  landed negative `H50`.
+- `P37_post_h50_narrow_executor_closeout_sync/` — saved future low-priority
+  operational/docs sync packet for later closeout maintenance only.
+- `R53_origin_transformed_executor_entry_gate/` — deferred future transformed
+  executor entry gate blocked behind any later explicit overturn of `H50`.
+- `R54_origin_trainable_executor_comparator_gate/` — deferred future
+  trainable-executor comparator gate blocked behind any later explicit
+  overturn of `H50`.
 - `P36_post_h49_cleanline_hygiene_and_artifact_policy/` — current
   low-priority operational/docs packet that fixes clean worktree execution
   posture, artifact policy, and no-merge discipline for the post-`H49` wave.
-- `H48_post_r49_numeric_scaling_decision_packet/` — preserved prior docs-only
+- `H48_post_r49_numeric_scaling_decision_packet/` — preserved earlier docs-only
   numeric-scaling decision packet that preserves `H47/H43/H36/F20/F21/F22/P27`,
   records completed `R49`, and authorizes exactly `F25`.
 - `R50_origin_restricted_tinyc_lowering_gate/` — completed current restricted

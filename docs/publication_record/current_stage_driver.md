@@ -4,7 +4,7 @@
 
 The current active stage is:
 
-- `H49_post_r50_tinyc_lowering_decision_packet`
+- `H50_post_r51_r52_scope_decision_packet`
 
 The preserved active routing/refreeze packet is:
 
@@ -38,27 +38,27 @@ The current completed numeric-scaling gate is:
 
 - `R49_origin_useful_case_numeric_scaling_gate`
 
-The current downstream scientific lane after `H49` is:
+The current downstream scientific lane after `H50` is:
 
 - `no_active_downstream_runtime_lane`
 
-The current post-`H49` planning bundle is:
+The completed post-`H49` planning bundle is:
 
 - `F26_post_h49_origin_claim_delta_and_next_question_bundle`
 
-The only next runtime candidate fixed by `F26` is:
+The completed post-`H49` runtime sufficiency gate fixed by `F26` is:
 
 - `R51_origin_memory_control_surface_sufficiency_gate`
 
-The only later comparator/value gate fixed by `F26` is:
+The completed post-`H49` comparator/value gate fixed by `F26` is:
 
 - `R52_origin_internal_vs_external_executor_value_gate`
 
-The only follow-up packet fixed by `F26` is:
+The completed closeout packet fixed by `F26` is:
 
 - `H50_post_r51_r52_scope_decision_packet`
 
-The saved future bundle blocked behind later explicit `H50` is:
+The saved future bundle blocked after landed negative `H50` is:
 
 - `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
 
@@ -72,7 +72,7 @@ The current completed restricted tiny-`C` lowering gate is:
 
 The preserved prior docs-only decision packet is:
 
-- `H48_post_r49_numeric_scaling_decision_packet`
+- `H49_post_r50_tinyc_lowering_decision_packet`
 
 The current completed coequal model gate is:
 
@@ -865,14 +865,22 @@ The next required order is now:
 - `H47_post_r48_useful_case_bridge_refreeze` is completed and remains the
   preserved prior docs-only useful-case bridge refreeze packet.
 - `H48_post_r49_numeric_scaling_decision_packet` is now complete as the
-  preserved prior docs-only numeric-scaling decision packet.
-- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current
+  preserved earlier docs-only numeric-scaling decision packet.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the completed current
   post-`H48` planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
   restricted tiny-`C` lowering gate.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the preserved prior
   docs-only closeout packet and restores
   `no_active_downstream_runtime_lane`.
+- `R51_origin_memory_control_surface_sufficiency_gate` is now the completed
+  post-`H49` runtime sufficiency gate with
+  `memory_control_surface_supported_narrowly`.
+- `R52_origin_internal_vs_external_executor_value_gate` is now the completed
+  post-`H49` comparator/value gate with
+  `internal_route_lacks_bounded_value`.
+- `H50_post_r51_r52_scope_decision_packet` is now the current active docs-only
+  closeout packet and selects `stop_as_exact_without_system_value`.
 - `P31_post_h43_blog_guardrails_refresh`,
   `P32_post_h43_historical_wording_refresh`,
   `P33_post_h43_dormant_playbook_wording_refresh`, and
@@ -885,9 +893,11 @@ The next required order is now:
 
 ## Active Bounded Lanes
 
-- `H49_post_r50_tinyc_lowering_decision_packet` is the current active
+- `H50_post_r51_r52_scope_decision_packet` is the current active
   docs-only decision packet.
-- `H48_post_r49_numeric_scaling_decision_packet` is the preserved prior
+- `H49_post_r50_tinyc_lowering_decision_packet` is the preserved prior
+  docs-only decision packet.
+- `H48_post_r49_numeric_scaling_decision_packet` is the preserved earlier
   docs-only decision packet.
 - `H47_post_r48_useful_case_bridge_refreeze` is the preserved earlier
   docs-only decision packet.
@@ -928,8 +938,12 @@ The next required order is now:
   post-`H48` planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is the completed current
   restricted tiny-`C` lowering gate.
+- `R51_origin_memory_control_surface_sufficiency_gate` is the completed
+  post-`H49` runtime sufficiency gate.
+- `R52_origin_internal_vs_external_executor_value_gate` is the completed
+  post-`H49` comparator/value gate.
 - `no_active_downstream_runtime_lane` is the restored downstream state after
-  landed `H49`.
+  landed `H50`.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the completed
   operational explicit merge packet and keeps `merge_executed = false`.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit` is the preserved prior

@@ -1,6 +1,7 @@
 # F27 Status
 
-- saved future planning-only entry bundle;
+- saved future planning-only entry bundle only;
 - not active here;
-- blocked behind explicit positive `H50`; and
+- explicitly non-selected by landed negative `H50`;
+- blocked unless a later explicit packet reopens the question; and
 - does not authorize runtime or scope lift by itself.

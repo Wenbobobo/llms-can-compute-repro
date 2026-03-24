@@ -3,9 +3,9 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H49_post_r50_tinyc_lowering_decision_packet`, not the preserved prior
-  `H48` packet, the preserved earlier `H47` packet, the preserved earlier `H46` packet, the preserved earlier `H45`
-  packet, the preserved prior `H44`
+  `H50_post_r51_r52_scope_decision_packet`, not the preserved prior
+  `H49` packet, the preserved earlier `H48` packet, the preserved earlier `H47` packet, the preserved earlier `H46`
+  packet, the preserved earlier `H45` packet, the preserved prior `H44`
   packet, the preserved prior `H43` packet, the preserved earlier `H42`
   packet, the preserved earlier `H41` packet, the preserved prior `H40`
   packet, the preserved prior `H30` packet, or the earlier `H25`
@@ -24,24 +24,27 @@
   `R48_origin_dual_mode_useful_case_model_gate`.
 - The current completed numeric-scaling gate is
   `R49_origin_useful_case_numeric_scaling_gate`.
-- The current downstream scientific lane after `H49` is
+- The current downstream scientific lane after `H50` is
   `no_active_downstream_runtime_lane`.
 - `F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
-  current post-`H49` planning bundle.
-- `R51_origin_memory_control_surface_sufficiency_gate` as the only next
-  runtime candidate is now fixed by `F26`.
-- `R52_origin_internal_vs_external_executor_value_gate` is now the only later
-  comparator/value gate fixed by `F26`.
-- `H50_post_r51_r52_scope_decision_packet` is now the only follow-up packet
-  fixed by `F26`.
+  completed post-`H49` planning bundle.
+- `R51_origin_memory_control_surface_sufficiency_gate` is now the completed
+  post-`H49` runtime sufficiency gate fixed by `F26`.
+- `R52_origin_internal_vs_external_executor_value_gate` is now the completed
+  post-`H49` comparator/value gate fixed by `F26`.
+- `H50_post_r51_r52_scope_decision_packet` is now the completed post-`R51/R52`
+  closeout packet fixed by `F26`.
 - `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
-  remains planning-only and blocked behind later explicit `H50`.
+  remains planning-only, non-selected, and blocked after negative `H50`.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
   planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
   restricted tiny-`C` lowering gate fixed by `F25`.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the preserved prior
   docs-only closeout packet after completed `R50`.
+- `H50_post_r51_r52_scope_decision_packet` selects
+  `stop_as_exact_without_system_value`, keeps `F27` non-selected, and
+  restores `no_active_downstream_runtime_lane`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -313,7 +316,7 @@
   restores `no_active_downstream_runtime_lane`, and sets
   `next_required_lane = f25_post_h48_restricted_tinyc_lowering_bundle`.
 - `H49_post_r50_tinyc_lowering_decision_packet` is now complete as the
-  current active docs-only tiny-`C` lowering decision packet:
+  preserved prior docs-only tiny-`C` lowering decision packet:
   it preserves `H48` as the preserved prior docs-only packet, preserves `H43`
   as the current paper-grade endpoint, records `R50` as the completed current
   restricted tiny-`C` lowering gate, selects
@@ -321,6 +324,26 @@
   `treat_r50_as_scope_widening_authorization` non-selected, restores
   `no_active_downstream_runtime_lane`, and sets
   `next_required_lane = no_active_downstream_runtime_lane`.
+- `R51_origin_memory_control_surface_sufficiency_gate` is now complete:
+  it keeps the bounded post-`H49` memory/control surface exact on `5/5`
+  families, preserves `5/5` maximizer-row identity passes, keeps `5/5`
+  budget-clean rows, records
+  `memory_control_surface_supported_narrowly`, and sets
+  `next_required_packet = r52_origin_internal_vs_external_executor_value_gate`.
+- `R52_origin_internal_vs_external_executor_value_gate` is now complete:
+  it keeps accelerated internal, linear/reference internal, and external
+  interpreter routes exact on `5/5` rows, but accelerated exact beats linear
+  on only `3/5` rows and beats external on `0/5` rows, so it records
+  `internal_route_lacks_bounded_value` and sets
+  `next_required_packet = h50_post_r51_r52_scope_decision_packet`.
+- `H50_post_r51_r52_scope_decision_packet` is now complete as the current
+  active docs-only post-`R51/R52` closeout packet:
+  it preserves `H49` as the preserved prior docs-only packet, preserves `H43`
+  as the current paper-grade endpoint, selects
+  `stop_as_exact_without_system_value`, leaves
+  `freeze_as_narrow_specialized_executor_only` and
+  `allow_planning_only_f27_entry_bundle` non-selected, and restores
+  `no_active_downstream_runtime_lane`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.

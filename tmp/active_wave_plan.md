@@ -5,10 +5,12 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H49_post_r50_tinyc_lowering_decision_packet`;
+  `H50_post_r51_r52_scope_decision_packet`;
 - preserved prior docs-only decision packet:
-  `H48_post_r49_numeric_scaling_decision_packet`;
+  `H49_post_r50_tinyc_lowering_decision_packet`;
 - preserved earlier docs-only decision packet:
+  `H48_post_r49_numeric_scaling_decision_packet`;
+- preserved earlier docs-only decision packet before that:
   `H47_post_r48_useful_case_bridge_refreeze`;
 - preserved earlier docs-only decision packet before that:
   `H46_post_r47_frontend_bridge_decision_packet`;
@@ -32,21 +34,23 @@ Current scientific/control stack:
   `R48_origin_dual_mode_useful_case_model_gate`;
 - current downstream scientific lane:
   `no_active_downstream_runtime_lane`;
-- current post-`H49` planning bundle:
+- completed post-`H49` planning bundle:
   `F26_post_h49_origin_claim_delta_and_next_question_bundle`;
-- only next runtime candidate fixed by `F26`:
+- completed post-`H49` runtime sufficiency gate fixed by `F26`:
   `R51_origin_memory_control_surface_sufficiency_gate`;
-- only later comparator/value gate fixed by `F26`:
+- completed post-`H49` comparator/value gate fixed by `F26`:
   `R52_origin_internal_vs_external_executor_value_gate`;
-- only follow-up packet fixed by `F26`:
+- completed post-`R51/R52` closeout packet fixed by `F26`:
   `H50_post_r51_r52_scope_decision_packet`;
+- saved future bundle left non-selected after negative `H50`:
+  `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`;
 - current completed numeric-scaling gate:
   `R49_origin_useful_case_numeric_scaling_gate`;
 - current post-`H48` planning bundle:
   `F25_post_h48_restricted_tinyc_lowering_bundle`;
 - current completed restricted tiny-`C` lowering gate:
   `R50_origin_restricted_tinyc_lowering_gate`;
-- current active docs-only closeout after `R50`:
+- preserved prior docs-only closeout after `R50`:
   `H49_post_r50_tinyc_lowering_decision_packet`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
@@ -92,27 +96,24 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H49_post_r50_tinyc_lowering_decision_packet` remains the current active
-docs-only packet.
-`H49` continues to select
-`freeze_r50_as_narrow_exact_tinyc_support_only` and continues to restore
-`no_active_downstream_runtime_lane` after the completed narrow `R50` result.
-`F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the current
-post-`H49` planning bundle. It preserves `H49/H43/H36`, maps claim layers
-`A/B/C/D` onto the landed evidence stack, fixes
-`R51_origin_memory_control_surface_sufficiency_gate` is the only next runtime
-candidate, fixes
-`R52_origin_internal_vs_external_executor_value_gate` as the only later
-comparator/value gate, fixes
-`H50_post_r51_r52_scope_decision_packet` as the only follow-up packet, and
-keeps `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
-planning-only and inactive.
+`H50_post_r51_r52_scope_decision_packet` is now the current active docs-only
+packet. It reads positive `R51` plus negative `R52` together, selects
+`stop_as_exact_without_system_value`, restores
+`no_active_downstream_runtime_lane`, and keeps
+`F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
+non-selected and inactive.
+`F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
+completed post-`H49` planning bundle. Its fixed sequence has now fully
+landed: `R51_origin_memory_control_surface_sufficiency_gate` completed with
+`memory_control_surface_supported_narrowly`, `R52_origin_internal_vs_external_executor_value_gate`
+completed with `internal_route_lacks_bounded_value`, and
+`H50_post_r51_r52_scope_decision_packet` completed as the explicit closeout.
 `P36_post_h49_cleanline_hygiene_and_artifact_policy` is the current
 low-priority operational/docs wave. It records that dirty root `main` remains
 quarantined, that clean descendant worktrees are the only scientific
 execution surfaces for this wave, that raw probe/per-read dumps remain out of
 git by default, and that merge back to `main` remains non-executed during the
-`F26 -> R51 -> R52 -> H50` sequence.
+completed `F26 -> R51 -> R52 -> H50` sequence.
 `P35_post_h47_research_record_rollup` is now the preserved prior low-priority
 wave, while `P31/P32/P33/P34` remain preserved prior helper refresh packets.
 
@@ -336,9 +337,16 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   post-`H48` planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is the completed current
   restricted tiny-`C` lowering gate.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the preserved prior
   docs-only interpretation packet and restores
   `no_active_downstream_runtime_lane`.
+- `R51_origin_memory_control_surface_sufficiency_gate` is now the completed
+  post-`H49` runtime sufficiency gate.
+- `R52_origin_internal_vs_external_executor_value_gate` is now the completed
+  post-`H49` comparator/value gate.
+- `H50_post_r51_r52_scope_decision_packet` is now the current active
+  docs-only interpretation packet and selects
+  `stop_as_exact_without_system_value`.
 - `F22` is the current comparator-planning bundle.
 - `F23` is the current post-`H47` numeric-scaling planning bundle.
 - `R49` is the completed current numeric-scaling gate.
