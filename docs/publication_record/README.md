@@ -33,7 +33,9 @@ Current control docs:
   packet, `R46` as the completed preserved prior
   post-`H44` exact runtime gate, `R47` as the completed current exact frontend
   bridge gate, `R48` as the completed current comparator-only useful-case
-  model gate, `F22` as the current comparator-planning bundle,
+  model gate, `F22` as the current comparator-planning bundle, `F23` as the
+  current post-`H47` numeric-scaling planning bundle fixing `R49` as the only
+  next runtime candidate while keeping `F24` dormant,
   `no_active_downstream_runtime_lane` as the restored downstream scientific
   lane, and preserving `H43` as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
@@ -74,6 +76,10 @@ Current control docs:
 - `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md` —
   the current low-priority design surface for post-`H47` research-record
   rollup, hygiene quarantine, and preserved negative-result accounting;
+- `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md` —
+  the current planning surface for the only admissible post-`H47` runtime
+  question, fixing `R49` as the only next runtime candidate while keeping
+  `H47/H43` intact;
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` —
   the preserved prior helper-doc design surface for refreshing blocked
   downstream blog plus manuscript-helper guardrails downstream of landed
@@ -249,6 +255,10 @@ Current control docs:
   low-priority operational/docs rollup packet that records post-`H47`
   research state, hygiene policy, and preserved negative-result accounting
   without changing scientific stage;
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/` — the current
+  planning-only post-`H47` numeric-scaling bundle that fixes `R49` as the
+  only next runtime candidate, keeps `F24` dormant, and leaves `F25/P36`
+  as placeholders only;
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/` — the completed
   prior low-priority blocked-blog/helper guardrail refresh packet that keeps
   `H43` current while refreshing stale downstream blog plus manuscript-helper
@@ -460,6 +470,9 @@ Current control docs:
 - `results/P35_post_h47_research_record_rollup/summary.json` — machine-
   readable current low-priority operational/docs rollup packet downstream of
   landed `H47`;
+- `results/F23_post_h47_numeric_scaling_bundle/summary.json` — machine-
+  readable current planning-only post-`H47` numeric-scaling bundle fixing
+  `R49` as the only next runtime candidate;
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json` — machine-
   readable completed prior low-priority blocked-blog/helper guardrail refresh
   packet downstream of landed `H43`;

@@ -54,6 +54,10 @@ The current comparator-planning bundle is:
 
 - `F22_post_r46_useful_case_model_bridge_bundle`
 
+The current post-`H47` numeric-scaling planning bundle is:
+
+- `F23_post_h47_numeric_scaling_bundle`
+
 The completed operational explicit merge packet is:
 
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet`
@@ -61,6 +65,10 @@ The completed operational explicit merge packet is:
 The preserved prior operational promotion/artifact audit lane is:
 
 - `P26_post_h37_promotion_and_artifact_hygiene_audit`
+
+The current low-priority operational/docs wave is:
+
+- `P35_post_h47_research_record_rollup`
 
 The current canonical origin-facing derivative bundle remains:
 
@@ -454,6 +462,21 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   completed current comparator-only useful-case model gate, keeps exact
   evidence decisive relative to model evidence, keeps claim ceilings bounded
   to useful cases only, and restores `no_active_downstream_runtime_lane`;
+- `P35` is now complete as the current low-priority operational/docs wave:
+  `selected_outcome = research_record_rollup_saved_without_scientific_widening`,
+  `current_low_priority_wave = p35_post_h47_research_record_rollup`,
+  `preserved_prior_low_priority_wave = p31_post_h43_blog_guardrails_refresh`,
+  `next_required_lane = f23_post_h47_numeric_scaling_bundle`;
+- `F23` is now complete as the current post-`H47` numeric-scaling planning
+  bundle:
+  `current_active_docs_only_stage = h47_post_r48_useful_case_bridge_refreeze`,
+  `current_paper_grade_endpoint = h43_post_r44_useful_case_refreeze`,
+  `selected_outcome = post_h47_numeric_scaling_bundle_saved`,
+  `only_next_runtime_candidate = r49_origin_useful_case_numeric_scaling_gate`,
+  `dormant_parallel_bundle = f24_post_h47_hybrid_executor_growth_bundle`,
+  `positive_downstream_placeholder = f25_post_h48_restricted_tinyc_lowering_bundle`,
+  `negative_downstream_placeholder = p36_post_h48_falsification_closeout_bundle`,
+  `next_required_lane = r49_origin_useful_case_numeric_scaling_gate`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
@@ -519,7 +542,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H45_post_r46_surface_decision_packet` ->
 `R47_origin_restricted_frontend_translation_gate` ->
 `H46_post_r47_frontend_bridge_decision_packet` ->
-`R48_origin_dual_mode_useful_case_model_gate`
+`R48_origin_dual_mode_useful_case_model_gate` ->
+`H47_post_r48_useful_case_bridge_refreeze` ->
+`P35_post_h47_research_record_rollup` ->
+`F23_post_h47_numeric_scaling_bundle`
 
 ## Next Planned Order
 
@@ -528,24 +554,31 @@ design, an unresolved merge wave, exact `R43` execution, coequal `R45`
 execution, later `H42` route-selection preparation, exact `R44` useful-case
 execution, a hold-at-`H43` no-runtime posture, or an unresolved post-`R46`
 surface-decision step. `F20`, `H41`, `P27`, `R43`, `R45`, `H42`, `R44`, `H43`,
-`F21`, `H44`, `R46`, `H45`, `R47`, `H46`, and `R48` have already landed. The
+`F21`, `H44`, `R46`, `H45`, `R47`, `H46`, `R48`, `H47`, `P35`, and `F23` have
+already landed. The
 stack now fixes one completed operational merge packet, one completed exact
 bounded-memory gate, one completed restricted useful-case gate, one completed
 coequal model gate, one preserved paper-grade `H43` refreeze packet, one
 current exact-first planning bundle, one current comparator-planning bundle,
-one completed current exact frontend bridge gate, one current docs-only
-frontend-bridge decision packet, one completed current comparator-only
-useful-case model gate, and one next required docs-only useful-case bridge
-refreeze packet.
+one current post-`H47` numeric-scaling planning bundle, one completed current
+exact frontend bridge gate, one current active docs-only useful-case bridge
+refreeze packet, one completed current comparator-only useful-case model gate,
+and one current low-priority operational/docs rollup wave.
 
 The current admissible follow-on work is:
 
 - low-priority manuscript / README / blog alignment work;
 - preserved planning-only roadmap work under
-  `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20/F21/F22`;
+  `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20/F21/F22/F23`;
 - docs-only `H47_post_r48_useful_case_bridge_refreeze` as the current active
   refreeze packet that returns the scientific stack to
   `no_active_downstream_runtime_lane`;
+- planning-only `F23_post_h47_numeric_scaling_bundle` as the current
+  post-`H47` bundle fixing `R49_origin_useful_case_numeric_scaling_gate` as
+  the only next runtime candidate while keeping `F24` dormant;
+- later explicit narrow runtime execution only through
+  `R49_origin_useful_case_numeric_scaling_gate` followed by
+  `H48_post_r49_numeric_scaling_decision_packet`;
 - later explicit planning for any broader semantic-boundary, contradiction, or
   merge review packet, but not arbitrary surface widening by momentum; and
 - later explicit merge review only if a future operational packet decides to
@@ -553,7 +586,8 @@ The current admissible follow-on work is:
 
 The current forward order is:
 
-`no_active_downstream_runtime_lane`
+`R49_origin_useful_case_numeric_scaling_gate` ->
+`H48_post_r49_numeric_scaling_decision_packet`
 
 If the same-substrate contradiction route is reauthorized later, the
 conditional order is still:
@@ -564,7 +598,8 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`no_active_downstream_runtime_lane`
+`R49_origin_useful_case_numeric_scaling_gate` ->
+`H48_post_r49_numeric_scaling_decision_packet`
 
 ## Control References
 
@@ -602,6 +637,8 @@ The next required order is now:
 - `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
 - `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
 - `results/H47_post_r48_useful_case_bridge_refreeze/summary.json`
+- `results/P35_post_h47_research_record_rollup/summary.json`
+- `results/F23_post_h47_numeric_scaling_bundle/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
@@ -613,6 +650,9 @@ The next required order is now:
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
 - `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
+- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
+- `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`
+- `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
@@ -635,6 +675,8 @@ The next required order is now:
 - `docs/milestones/R47_origin_restricted_frontend_translation_gate/`
 - `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/`
 - `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/`
+- `docs/milestones/P35_post_h47_research_record_rollup/`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
@@ -674,6 +716,9 @@ The next required order is now:
   the current exact frontend bridge gate.
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
   comparator-planning bundle.
+- `F23_post_h47_numeric_scaling_bundle` is now the current post-`H47`
+  numeric-scaling planning bundle fixing `R49` as the only next runtime
+  candidate while keeping `F24` dormant.
 - `P35_post_h47_research_record_rollup` is now the current low-priority
   operational/docs wave.
 - `H46_post_r47_frontend_bridge_decision_packet` is completed and remains the
@@ -725,6 +770,9 @@ The next required order is now:
   planning bundle above `H43`.
 - `F22_post_r46_useful_case_model_bridge_bundle` is the current comparator-
   planning bundle above exact `R47`.
+- `F23_post_h47_numeric_scaling_bundle` is the current post-`H47`
+  numeric-scaling planning bundle fixing `R49` as the only next runtime
+  candidate while keeping `F24` dormant and `F25/P36` as placeholders only.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the completed
   operational explicit merge packet and keeps `merge_executed = false`.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit` is the preserved prior

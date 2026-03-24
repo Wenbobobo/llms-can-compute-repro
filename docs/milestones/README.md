@@ -106,6 +106,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F22_post_r46_useful_case_model_bridge_bundle/` — current comparator-
   planning bundle that stays downstream of exact frontend evidence and scopes
   the landed `R48` lane plus the landed `H47` interpretation packet.
+- `F23_post_h47_numeric_scaling_bundle/` — current planning-only post-`H47`
+  numeric-scaling bundle fixing `R49` as the only next runtime candidate,
+  keeping `F24` dormant, and leaving `F25/P36` as placeholders only.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.

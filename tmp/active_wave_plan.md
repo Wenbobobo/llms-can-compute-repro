@@ -38,10 +38,14 @@ Current scientific/control stack:
   `F21_post_h43_exact_useful_case_expansion_bundle`;
 - current comparator-planning bundle:
   `F22_post_r46_useful_case_model_bridge_bundle`;
+- current post-`H47` numeric-scaling planning bundle:
+  `F23_post_h47_numeric_scaling_bundle`;
 - completed operational explicit merge packet:
   `P27_post_h41_clean_promotion_and_explicit_merge_packet`;
 - preserved prior operational promotion/artifact audit lane:
   `P26_post_h37_promotion_and_artifact_hygiene_audit`;
+- current low-priority operational/docs wave:
+  `P35_post_h47_research_record_rollup`;
 - current canonical origin-facing derivative bundle:
   `F15_post_h36_origin_goal_reanchor_bundle`;
 - current candidate-isolation bundle:
@@ -87,6 +91,11 @@ comparator-only useful-case model lane.
 completed `H47`.
 `F22_post_r46_useful_case_model_bridge_bundle` is now the current
 comparator-planning bundle.
+`F23_post_h47_numeric_scaling_bundle` is now the current post-`H47`
+numeric-scaling planning bundle. It fixes
+`R49_origin_useful_case_numeric_scaling_gate` as the only next runtime
+candidate, keeps `F24_post_h47_hybrid_executor_growth_bundle` dormant, and
+leaves `F25/P36` as placeholders only.
 `P35_post_h47_research_record_rollup` is the current low-priority
 operational/docs wave. It records post-`H47` research state, quarantines dirty
 root `main`, records explicit no-merge posture, preserves negative-result
@@ -192,6 +201,13 @@ the current low-priority wave.
     the scientific stage driver.
 12. Promote `P35` as the current low-priority operational/docs wave while
     keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
+13. Keep `F23` as the current post-`H47` numeric-scaling planning bundle.
+14. Fix `R49_origin_useful_case_numeric_scaling_gate` as the only next
+    runtime candidate.
+15. Keep `F24_post_h47_hybrid_executor_growth_bundle` dormant and
+    non-authorized.
+16. Keep `F25_post_h48_restricted_tinyc_lowering_bundle` and
+    `P36_post_h48_falsification_closeout_bundle` as placeholders only.
 
 ## Last Completed Order
 
@@ -243,11 +259,14 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H45_post_r46_surface_decision_packet` ->
 `R47_origin_restricted_frontend_translation_gate` ->
 `H46_post_r47_frontend_bridge_decision_packet` ->
-`R48_origin_dual_mode_useful_case_model_gate`
+`R48_origin_dual_mode_useful_case_model_gate` ->
+`H47_post_r48_useful_case_bridge_refreeze` ->
+`P35_post_h47_research_record_rollup` ->
+`F23_post_h47_numeric_scaling_bundle`
 
 ## Current Rule
 
-- `H46` is the current active docs-only packet.
+- `H47` is the current active docs-only packet.
 - `H45` is the preserved prior docs-only decision packet.
 - `H44` is the preserved prior docs-only route packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
@@ -277,13 +296,17 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
 - `R47` is the completed current exact frontend bridge gate.
 - `R48` is the completed current comparator-only useful-case model gate.
-- `H46` is the current active docs-only interpretation packet.
+- `H47` is the current active docs-only interpretation packet.
 - `F22` is the current comparator-planning bundle.
-- `H47` is the next required docs-only useful-case bridge refreeze packet.
+- `F23` is the current post-`H47` numeric-scaling planning bundle.
+- `R49` is the only next runtime candidate fixed by current planning.
 
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
+- `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`
+- `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md`
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
@@ -320,6 +343,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/H46_post_r47_frontend_bridge_decision_packet/`
 - `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/`
 - `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/`
+- `docs/milestones/P35_post_h47_research_record_rollup/`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/`
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
 - `docs/milestones/P32_post_h43_historical_wording_refresh/`
 - `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`
@@ -339,6 +364,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/R47_origin_restricted_frontend_translation_gate/summary.json`
 - `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
 - `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
+- `results/P35_post_h47_research_record_rollup/summary.json`
+- `results/F23_post_h47_numeric_scaling_bundle/summary.json`
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
 - `results/P32_post_h43_historical_wording_refresh/summary.json`
 - `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`

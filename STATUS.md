@@ -33,6 +33,11 @@
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
   comparator-planning bundle scoped by exact `R47`, preserved prior `H46`,
   and active `H47`.
+- `F23_post_h47_numeric_scaling_bundle` is now complete as the current
+  post-`H47` numeric-scaling planning bundle: it preserves `H47/H43`,
+  fixes `R49_origin_useful_case_numeric_scaling_gate` as the only next
+  runtime candidate, keeps `F24` dormant, and leaves `F25/P36` as
+  placeholders only.
 - `P35_post_h47_research_record_rollup` is now the current low-priority
   operational/docs wave recording post-`H47` research state, hygiene rules,
   and preserved negative-result accounting.

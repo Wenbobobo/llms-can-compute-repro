@@ -16,6 +16,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   low-priority operational/docs design surface that records artifact policy,
   root-dirty quarantine, push state, merge posture, and preserved negative
   results after landed `H47`.
+- `2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md` — the current
+  planning surface for the only admissible post-`H47` runtime question,
+  fixing `R49` as the only next runtime candidate while keeping `H47/H43`
+  intact.
 - `2026-03-24-post-h43-mainline-reentry-master-plan.md` — the current
   post-`H43` saved master plan that fixes the exact-first reentry wave order:
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
@@ -182,6 +186,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F22_post_r46_useful_case_model_bridge_bundle/` — current
   comparator-planning bundle downstream of exact frontend evidence and active
   `H47`.
+- `../milestones/F23_post_h47_numeric_scaling_bundle/` — current post-`H47`
+  planning-only numeric-scaling bundle fixing `R49` as the only next runtime
+  candidate while keeping `F24` dormant.
 - `../milestones/R47_origin_restricted_frontend_translation_gate/` —
   completed current exact frontend bridge lane that now underwrites landed
   `R48`.
