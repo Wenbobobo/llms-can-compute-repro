@@ -29,7 +29,7 @@ Current scientific/control stack:
 - current completed comparator-only useful-case model gate:
   `R48_origin_dual_mode_useful_case_model_gate`;
 - current downstream scientific lane:
-  `no_active_downstream_runtime_lane`;
+  `R49_origin_useful_case_numeric_scaling_gate`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -87,8 +87,6 @@ post-`H44` exact runtime gate on the fixed held-out useful-case surface.
 exact frontend bridge lane.
 `R48_origin_dual_mode_useful_case_model_gate` is now the completed current
 comparator-only useful-case model lane.
-`no_active_downstream_runtime_lane` now follows the scientific stack after
-completed `H47`.
 `F22_post_r46_useful_case_model_bridge_bundle` is now the current
 comparator-planning bundle.
 `F23_post_h47_numeric_scaling_bundle` is now the current post-`H47`
@@ -96,6 +94,11 @@ numeric-scaling planning bundle. It fixes
 `R49_origin_useful_case_numeric_scaling_gate` as the only next runtime
 candidate, keeps `F24_post_h47_hybrid_executor_growth_bundle` dormant, and
 leaves `F25/P36` as placeholders only.
+`R49_origin_useful_case_numeric_scaling_gate` is now the completed current
+active runtime lane. It records `numeric_scaling_survives_through_bucket_c`,
+keeps all `9/9` widened rows exact across the fixed `3/3` useful-case
+kernels, exposes `7/9` `float32_single_head` failures, and hands
+interpretation to `H48_post_r49_numeric_scaling_decision_packet`.
 `P35_post_h47_research_record_rollup` is the current low-priority
 operational/docs wave. It records post-`H47` research state, quarantines dirty
 root `main`, records explicit no-merge posture, preserves negative-result
@@ -178,6 +181,11 @@ the current low-priority wave.
   admitted modes exact on the preserved `8/8` useful-case variants, while the
   trainable mode also stays exact on the explicit held-out `histogram16_u8`
   family (`3/3`).
+- `R49` returns `numeric_scaling_survives_through_bucket_c` with `9/9`
+  widened variants exact across the fixed `3/3` useful-case kernels, `30`
+  precision rows exported, `7/9` `float32_single_head` failures by
+  `tie_collapse`, and both admitted float32 recovery regimes exact on
+  `bucket_a`, `bucket_b`, and `bucket_c`.
 
 ## Immediate Objectives
 
@@ -201,13 +209,16 @@ the current low-priority wave.
     the scientific stage driver.
 12. Promote `P35` as the current low-priority operational/docs wave while
     keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
-13. Keep `F23` as the current post-`H47` numeric-scaling planning bundle.
-14. Fix `R49_origin_useful_case_numeric_scaling_gate` as the only next
-    runtime candidate.
+13. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
+    bundle.
+14. Treat completed `R49_origin_useful_case_numeric_scaling_gate` as the
+    current active runtime lane and hand interpretation to
+    `H48_post_r49_numeric_scaling_decision_packet`.
 15. Keep `F24_post_h47_hybrid_executor_growth_bundle` dormant and
     non-authorized.
 16. Keep `F25_post_h48_restricted_tinyc_lowering_bundle` and
-    `P36_post_h48_falsification_closeout_bundle` as placeholders only.
+    `P36_post_h48_falsification_closeout_bundle` downstream of `H48` rather
+    than auto-authorized by momentum.
 
 ## Last Completed Order
 

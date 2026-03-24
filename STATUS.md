@@ -21,8 +21,9 @@
   `R47_origin_restricted_frontend_translation_gate`.
 - The current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`.
-- The current downstream scientific lane after `H47` is
-  `no_active_downstream_runtime_lane`.
+- The current active runtime lane after `H47` is
+  `R49_origin_useful_case_numeric_scaling_gate`, with the next required
+  packet now `H48_post_r49_numeric_scaling_decision_packet`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -35,9 +36,8 @@
   and active `H47`.
 - `F23_post_h47_numeric_scaling_bundle` is now complete as the current
   post-`H47` numeric-scaling planning bundle: it preserves `H47/H43`,
-  fixes `R49_origin_useful_case_numeric_scaling_gate` as the only next
-  runtime candidate, keeps `F24` dormant, and leaves `F25/P36` as
-  placeholders only.
+  keeps the executed `R49` envelope machine-readable, keeps `F24` dormant,
+  and leaves `F25/P36` downstream of `H48`.
 - `P35_post_h47_research_record_rollup` is now the current low-priority
   operational/docs wave recording post-`H47` research state, hygiene rules,
   and preserved negative-result accounting.

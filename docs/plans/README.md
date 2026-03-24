@@ -20,6 +20,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   planning surface for the only admissible post-`H47` runtime question,
   fixing `R49` as the only next runtime candidate while keeping `H47/H43`
   intact.
+- `2026-03-24-post-h47-r49-useful-case-numeric-scaling-design.md` — the
+  current execution design surface for the landed `R49` numeric-scaling gate,
+  preserving `H47/H43`, executing the fixed three-kernel ladder through the
+  saved `F23` buckets, and handing interpretation to `H48`.
 - `2026-03-24-post-h43-mainline-reentry-master-plan.md` — the current
   post-`H43` saved master plan that fixes the exact-first reentry wave order:
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`

@@ -114,6 +114,19 @@ class RestrictedFrontendTranslationCase:
     canonical_program: BytecodeProgram
 
 
+@dataclass(frozen=True, slots=True)
+class UsefulCaseNumericScalingCase:
+    bucket_id: str
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    precision_reference_sampled: bool = False
+
+
 def _frame_cell(
     address: int,
     cell_type: BytecodeType,
@@ -273,6 +286,24 @@ def _frame_i32_range(base_address: int, count: int, label_prefix: str) -> tuple[
         _frame_cell(base_address + offset, BytecodeType.I32, f"{label_prefix}_{offset}")
         for offset in range(count)
     )
+
+
+def _repeat_pattern(pattern: tuple[int, ...], length: int) -> tuple[int, ...]:
+    if length <= 0:
+        raise ValueError("length must be positive.")
+    return tuple(pattern[index % len(pattern)] for index in range(length))
+
+
+def _scaled_sum_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((4, -1, 9, -5, 3, -2, 8, -4), length)
+
+
+def _dense_nonzero_count_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((1, 2, 3, 4, 5), length)
+
+
+def _low_bin_histogram_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((0, 1, 2, 3), length)
 
 
 def sum_i32_buffer_program(
@@ -1756,6 +1787,149 @@ def r47_restricted_frontend_translation_cases() -> tuple[RestrictedFrontendTrans
                 bin_base_address=816,
                 name="bytecode_histogram16_u8_wide_len10_a800",
             ),
+        ),
+    )
+
+
+def r49_useful_case_numeric_scaling_cases() -> tuple[UsefulCaseNumericScalingCase, ...]:
+    return (
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len16_shift256",
+            description="2x sum bucket with longer fixed buffer and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=600,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(16),
+                input_base_address=816,
+                output_address=848,
+                name="bytecode_sum_i32_buffer_len16_a816",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len18_dense_shift256",
+            description="2x count bucket with dense nonzero branch pressure and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=600,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(18),
+                input_base_address=936,
+                output_address=972,
+                name="bytecode_count_nonzero_i32_buffer_len18_a936",
+            ),
+            precision_reference_sampled=True,
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len16_lowbin_shift256",
+            description="2x histogram bucket with low-bin skew and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=600,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(16),
+                input_base_address=1056,
+                bin_base_address=1088,
+                name="bytecode_histogram16_u8_len16_a1056",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len32_shift1024",
+            description="4x sum bucket with longer fixed buffer and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1600,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(32),
+                input_base_address=1584,
+                output_address=1648,
+                name="bytecode_sum_i32_buffer_len32_a1584",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len36_dense_shift1024",
+            description="4x count bucket with dense nonzero branch pressure and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1600,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(36),
+                input_base_address=1704,
+                output_address=1776,
+                name="bytecode_count_nonzero_i32_buffer_len36_a1704",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len32_lowbin_shift1024",
+            description="4x histogram bucket with low-bin skew and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=1600,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(32),
+                input_base_address=1824,
+                bin_base_address=1888,
+                name="bytecode_histogram16_u8_len32_a1824",
+            ),
+            precision_reference_sampled=True,
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len64_shift4096",
+            description="8x sum bucket with longer fixed buffer and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=4000,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(64),
+                input_base_address=4656,
+                output_address=4784,
+                name="bytecode_sum_i32_buffer_len64_a4656",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len72_dense_shift4096",
+            description="8x count bucket with dense nonzero branch pressure and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=4000,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(72),
+                input_base_address=4776,
+                output_address=4920,
+                name="bytecode_count_nonzero_i32_buffer_len72_a4776",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len64_lowbin_shift4096",
+            description="8x histogram bucket with low-bin skew and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4000,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(64),
+                input_base_address=4896,
+                bin_base_address=5024,
+                name="bytecode_histogram16_u8_len64_a4896",
+            ),
+            precision_reference_sampled=True,
         ),
     )
 

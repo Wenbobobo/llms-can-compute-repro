@@ -109,6 +109,11 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F23_post_h47_numeric_scaling_bundle/` — current planning-only post-`H47`
   numeric-scaling bundle fixing `R49` as the only next runtime candidate,
   keeping `F24` dormant, and leaving `F25/P36` as placeholders only.
+- `R49_origin_useful_case_numeric_scaling_gate/` — completed current active
+  runtime numeric-scaling gate validating `9/9` widened useful-case rows
+  across the fixed `3/3` kernels, exposing `7/9` `float32_single_head`
+  failures, and preserving both admitted float32 recovery regimes through
+  `bucket_c_8x`.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.

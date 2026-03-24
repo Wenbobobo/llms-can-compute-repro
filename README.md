@@ -67,11 +67,12 @@ kernels, landed exact `R47` remains the completed current restricted frontend
 bridge gate that kept all `8/8` held-out useful-case variants exact with
 instruction-identical lowering across the same fixed `3/3` kernels, `F22`
 remains the current comparator-planning bundle, `F23` is now the current
-post-`H47` numeric-scaling planning bundle that fixes
-`R49_origin_useful_case_numeric_scaling_gate` as the only next runtime
-candidate while keeping `F24` dormant, `R48` remains the completed current
-comparator-only useful-case model gate, `H47` now restores
-`no_active_downstream_runtime_lane`, and `P35` is now the current
+post-`H47` numeric-scaling planning bundle that preserves the saved `F23`
+envelope, `R49_origin_useful_case_numeric_scaling_gate` is now the completed
+current active runtime lane with `numeric_scaling_survives_through_bucket_c`,
+`F24` remains dormant, `R48` remains the completed current comparator-only
+useful-case model gate, the next required packet is now
+`H48_post_r49_numeric_scaling_decision_packet`, and `P35` is now the current
 low-priority research-record rollup/docs wave while `P31/P32/P33/P34` remain
 preserved prior helper refresh packets.
 

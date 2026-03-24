@@ -477,6 +477,15 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   `positive_downstream_placeholder = f25_post_h48_restricted_tinyc_lowering_bundle`,
   `negative_downstream_placeholder = p36_post_h48_falsification_closeout_bundle`,
   `next_required_lane = r49_origin_useful_case_numeric_scaling_gate`;
+- `R49` is now complete as the current active runtime numeric-scaling gate:
+  `lane_verdict = numeric_scaling_survives_through_bucket_c`,
+  `planned_case_count = 9`,
+  `exact_case_count = 9`,
+  `bucket_count = 3`,
+  `precision_row_count = 30`,
+  `single_head_failure_case_count = 7`,
+  `decomposition_recovery_case_count = 7`,
+  `next_required_packet = h48_post_r49_numeric_scaling_decision_packet`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
