@@ -211,14 +211,17 @@
 
 ## Current bounded mainline state
 
-- `H46` is the current active docs-only decision packet for the bounded
+- `H47` is the current active docs-only interpretation packet for the bounded
   mainline after the landed
   `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> F21 -> R46 -> H45 -> R47 -> R48`
-  follow-on stack above `H40/R42`; it preserves `H45` as the prior decision
-  packet, preserves `H44` as the prior route packet, preserves `H43` as the
-  paper-grade endpoint, and keeps `F22` current without widening the claim
-  ceiling.
-- `H45` is the preserved prior docs-only decision packet that authorized exact
+  follow-on stack above `H40/R42`; it preserves `H46` as the prior decision
+  packet, preserves `H45` as the earlier decision packet, preserves `H44` as
+  the prior route packet, preserves `H43` as the paper-grade endpoint, keeps
+  `F22` current without widening the claim ceiling, and restores
+  `no_active_downstream_runtime_lane`.
+- `H46` is the preserved prior docs-only interpretation packet that authorized
+  exactly `R48`, while `F22` became the current comparator-planning bundle.
+- `H45` is the preserved earlier docs-only decision packet that authorized exact
   `R47` while keeping `F22/R48` explicit at that stage.
 - `H44` is the preserved prior docs-only route packet that authorized exact
   `R46` without widening the paper-grade endpoint.
@@ -244,15 +247,14 @@
   held-out useful-case variants exact with instruction-identical lowering
   across the fixed `3/3` kernels and records
   `restricted_frontend_supported_narrowly`.
-- `H46` is now the current active docs-only interpretation packet; it
-  authorizes exactly `R48`, while `F22` becomes the current
-  comparator-planning bundle.
 - `R48` is now the completed current comparator-only useful-case model gate;
   it keeps both admitted modes exact on the preserved `8/8` useful-case
   variants across the fixed `3/3` kernels, keeps the trainable mode exact on
   the explicit held-out `histogram16_u8` family, and remains non-substitutive
   relative to exact `R46/R47`.
-- `H47` is the next required docs-only refreeze packet after landed `R48`.
+- `H47` is now the current active docs-only interpretation packet; it freezes
+  `R48` as narrow comparator-only support and restores
+  `no_active_downstream_runtime_lane`.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.
 - `R45` is the completed current coequal model gate and remains explicitly

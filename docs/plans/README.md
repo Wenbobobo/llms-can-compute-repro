@@ -13,14 +13,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
   docs-only route reauthorization packet, `R46` exact surface-generalization
   gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
+- `2026-03-24-post-r48-h47-useful-case-bridge-refreeze-design.md` — the
+  current execution design surface for the landed docs-only `H47` refreeze
+  packet that freezes positive comparator-only `R48` narrowly and restores
+  `no_active_downstream_runtime_lane`.
 - `2026-03-24-post-r47-h46-frontend-bridge-decision-design.md` — the
   preserved prior execution design surface for the landed docs-only `H46`
   interpretation packet that reads completed `R47`, authorizes exactly `R48`,
   and turns `F22` into the current comparator-planning bundle.
 - `2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md` — the
-  current execution design surface for the landed comparator-only `R48`
-  useful-case model gate that evaluates both admitted modes on the preserved
-  `R47` contract and hands interpretation to `H47`.
+  preserved prior execution design surface for the landed comparator-only
+  `R48` useful-case model gate that evaluates both admitted modes on the
+  preserved `R47` contract and hands interpretation to `H47`.
 - `2026-03-24-post-r46-h45-surface-decision-design.md` — the preserved prior
   execution design surface for the landed docs-only `H45` interpretation
   packet that reads completed `R46`, authorizes exactly `R47`, keeps `F22`
@@ -149,8 +153,12 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
-- `../milestones/H46_post_r47_frontend_bridge_decision_packet/` — current
-  active docs-only interpretation packet that reads completed `R47`,
+- `../milestones/H47_post_r48_useful_case_bridge_refreeze/` — current active
+  docs-only interpretation packet that freezes landed comparator-only `R48`
+  narrowly, preserves `H43` as the paper-grade endpoint, and restores
+  `no_active_downstream_runtime_lane`.
+- `../milestones/H46_post_r47_frontend_bridge_decision_packet/` — preserved
+  prior docs-only interpretation packet that reads completed `R47`,
   authorizes the landed `R48` lane, and keeps `F22` current without widening
   the paper-grade endpoint.
 - `../milestones/H45_post_r46_surface_decision_packet/` — preserved prior
@@ -165,15 +173,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   kernels.
 - `../milestones/F22_post_r46_useful_case_model_bridge_bundle/` — current
   comparator-planning bundle downstream of exact frontend evidence and active
-  `H46`.
+  `H47`.
 - `../milestones/R47_origin_restricted_frontend_translation_gate/` —
   completed current exact frontend bridge lane that now underwrites landed
   `R48`.
 - `../milestones/R48_origin_dual_mode_useful_case_model_gate/` — completed
   current comparator-only useful-case model gate on the preserved `R47`
   contract.
-- `../milestones/H47_post_r48_useful_case_bridge_refreeze/` — next required
-  docs-only refreeze packet after landed `R48`.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` regeneration-facing wording.

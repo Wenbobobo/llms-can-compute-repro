@@ -5,8 +5,10 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H46_post_r47_frontend_bridge_decision_packet`;
+  `H47_post_r48_useful_case_bridge_refreeze`;
 - preserved prior docs-only decision packet:
+  `H46_post_r47_frontend_bridge_decision_packet`;
+- preserved earlier docs-only decision packet:
   `H45_post_r46_surface_decision_packet`;
 - preserved prior docs-only route packet:
   `H44_post_h43_route_reauthorization_packet`;
@@ -26,8 +28,8 @@ Current scientific/control stack:
   `R47_origin_restricted_frontend_translation_gate`;
 - current completed comparator-only useful-case model gate:
   `R48_origin_dual_mode_useful_case_model_gate`;
-- next required docs-only useful-case bridge refreeze packet:
-  `H47_post_r48_useful_case_bridge_refreeze`;
+- current downstream scientific lane:
+  `no_active_downstream_runtime_lane`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -66,9 +68,11 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H46_post_r47_frontend_bridge_decision_packet` is the current active docs-only
-frontend-bridge decision packet.
-`H45_post_r46_surface_decision_packet` is the preserved prior docs-only
+`H47_post_r48_useful_case_bridge_refreeze` is the current active docs-only
+useful-case bridge refreeze packet.
+`H46_post_r47_frontend_bridge_decision_packet` is the preserved prior
+docs-only decision packet.
+`H45_post_r46_surface_decision_packet` is the preserved earlier docs-only
 surface-decision packet.
 `F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
 bundle.
@@ -79,8 +83,8 @@ post-`H44` exact runtime gate on the fixed held-out useful-case surface.
 exact frontend bridge lane.
 `R48_origin_dual_mode_useful_case_model_gate` is now the completed current
 comparator-only useful-case model lane.
-`H47_post_r48_useful_case_bridge_refreeze` is now the next required docs-only
-refreeze packet.
+`no_active_downstream_runtime_lane` now follows the scientific stack after
+completed `H47`.
 `F22_post_r46_useful_case_model_bridge_bundle` is now the current
 comparator-planning bundle.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
@@ -180,15 +184,15 @@ current low-priority wave.
 
 ## Immediate Objectives
 
-1. Preserve `H46` as the current active docs-only decision packet.
-2. Preserve `H45` as the preserved prior docs-only decision packet.
+1. Preserve `H47` as the current active docs-only decision packet.
+2. Preserve `H46` as the preserved prior docs-only decision packet.
 3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
    routing/refreeze packet underneath the stack.
 4. Preserve completed `R47` as the decisive exact frontend bridge gate.
 5. Preserve completed `R48` as comparator-only, non-substitutive useful-case
    model evidence.
-6. Treat `H47` as the next required docs-only refreeze packet rather than
-   widening by momentum.
+6. Treat `H47` as the explicit narrow refreeze packet rather than widening by
+   momentum.
 7. Keep `F22` current as the comparator-planning bundle, not as substitute
    evidence.
 8. Preserve completed `P27` as the operational merge packet without merging

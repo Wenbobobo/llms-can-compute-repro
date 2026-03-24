@@ -4,7 +4,7 @@
 
 The current active stage is:
 
-- `H46_post_r47_frontend_bridge_decision_packet`
+- `H47_post_r48_useful_case_bridge_refreeze`
 
 The preserved active routing/refreeze packet is:
 
@@ -34,9 +34,9 @@ The current completed comparator-only useful-case model gate is:
 
 - `R48_origin_dual_mode_useful_case_model_gate`
 
-The next required docs-only useful-case bridge refreeze packet is:
+The current downstream scientific lane after `H47` is:
 
-- `H47_post_r48_useful_case_bridge_refreeze`
+- `no_active_downstream_runtime_lane`
 
 The current completed coequal model gate is:
 
@@ -420,7 +420,7 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   `translation_identity_exact_count = 8`,
   `claim_ceiling = bounded_useful_cases_only`,
   `next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;
-- `H46` is now the current active docs-only frontend-bridge decision packet:
+- `H46` is now the preserved prior docs-only frontend-bridge decision packet:
   `current_active_routing_stage = h36_post_r40_bounded_scalar_family_refreeze`,
   `preserved_prior_docs_only_decision_packet = h45_post_r46_surface_decision_packet`,
   `preserved_route_reauthorization_packet = h44_post_h43_route_reauthorization_packet`,
@@ -446,13 +446,14 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   `trainable_heldout_family_exact = true`,
   `claim_ceiling = bounded_useful_cases_only`,
   `next_required_packet = h47_post_r48_useful_case_bridge_refreeze`;
-- `H47` is now the next required docs-only useful-case bridge refreeze packet:
-  it preserves `H46` as the current active docs-only decision packet,
+- `H47` is now the current active docs-only useful-case bridge refreeze
+  packet:
+  it preserves `H46` as the preserved prior docs-only decision packet,
   preserves `H43` as the current paper-grade endpoint, preserves `R47` as the
   completed current exact frontend bridge gate, preserves `R48` as the
   completed current comparator-only useful-case model gate, keeps exact
-  evidence decisive relative to model evidence, and keeps claim ceilings
-  bounded to useful cases only;
+  evidence decisive relative to model evidence, keeps claim ceilings bounded
+  to useful cases only, and restores `no_active_downstream_runtime_lane`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
@@ -542,8 +543,9 @@ The current admissible follow-on work is:
 - low-priority manuscript / README / blog alignment work;
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20/F21/F22`;
-- docs-only `H47_post_r48_useful_case_bridge_refreeze` as the current required
-  follow-on lane;
+- docs-only `H47_post_r48_useful_case_bridge_refreeze` as the current active
+  refreeze packet that returns the scientific stack to
+  `no_active_downstream_runtime_lane`;
 - later explicit planning for any broader semantic-boundary, contradiction, or
   merge review packet, but not arbitrary surface widening by momentum; and
 - later explicit merge review only if a future operational packet decides to
@@ -551,7 +553,7 @@ The current admissible follow-on work is:
 
 The current forward order is:
 
-`H47_post_r48_useful_case_bridge_refreeze`
+`no_active_downstream_runtime_lane`
 
 If the same-substrate contradiction route is reauthorized later, the
 conditional order is still:
@@ -562,7 +564,7 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`H47_post_r48_useful_case_bridge_refreeze`
+`no_active_downstream_runtime_lane`
 
 ## Control References
 
@@ -599,6 +601,7 @@ The next required order is now:
 - `results/R47_origin_restricted_frontend_translation_gate/summary.json`
 - `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
 - `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
+- `results/H47_post_r48_useful_case_bridge_refreeze/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
@@ -672,11 +675,12 @@ The next required order is now:
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
   comparator-planning bundle.
 - `H46_post_r47_frontend_bridge_decision_packet` is completed and remains the
-  current active docs-only frontend-bridge decision packet.
+  preserved prior docs-only frontend-bridge decision packet.
 - `R48_origin_dual_mode_useful_case_model_gate` is completed and remains the
   current comparator-only useful-case model gate.
-- `H47_post_r48_useful_case_bridge_refreeze` is now the next required
-  docs-only useful-case bridge refreeze packet.
+- `H47_post_r48_useful_case_bridge_refreeze` is completed and remains the
+  current active docs-only useful-case bridge refreeze packet.
+- `no_active_downstream_runtime_lane` now follows the scientific stack.
 - merge back to `main` remains unexecuted; `P27` records explicit merge
   posture only.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
@@ -684,9 +688,11 @@ The next required order is now:
 
 ## Active Bounded Lanes
 
-- `H46_post_r47_frontend_bridge_decision_packet` is the current active
+- `H47_post_r48_useful_case_bridge_refreeze` is the current active docs-only
+  decision packet.
+- `H46_post_r47_frontend_bridge_decision_packet` is the preserved prior
   docs-only decision packet.
-- `H45_post_r46_surface_decision_packet` is the preserved prior docs-only
+- `H45_post_r46_surface_decision_packet` is the preserved earlier docs-only
   decision packet.
 - `H44_post_h43_route_reauthorization_packet` is the preserved prior docs-only
   route reauthorization packet.
@@ -746,12 +752,13 @@ The next required order is now:
   `R47_origin_restricted_frontend_translation_gate` is the completed current
   exact frontend bridge lane, `F22_post_r46_useful_case_model_bridge_bundle`
   is the current comparator-planning bundle,
-  `H46_post_r47_frontend_bridge_decision_packet` is the current active
+  `H46_post_r47_frontend_bridge_decision_packet` is the preserved prior
   interpretation packet, `R48_origin_dual_mode_useful_case_model_gate` is the
   completed current comparator-only useful-case model lane,
-  `H47_post_r48_useful_case_bridge_refreeze` is the next required docs-only
-  refreeze packet, and `H43` remains the landed paper-grade closeout
-  underneath the later explicit reentry ladder.
+  `H47_post_r48_useful_case_bridge_refreeze` is the current active docs-only
+  refreeze packet, `no_active_downstream_runtime_lane` now follows the stack,
+  and `H43` remains the landed paper-grade closeout underneath the later
+  explicit reentry ladder.
 - `H34_post_r39_later_explicit_scope_decision_packet` and
   `H32_post_r38_compiled_boundary_refreeze` remain preserved earlier
   control packets.

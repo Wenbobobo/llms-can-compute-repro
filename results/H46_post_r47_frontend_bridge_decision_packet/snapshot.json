@@ -27,21 +27,19 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H46_post_r47_frontend_bridge_decision_packet`",
-        "- `R48_origin_dual_mode_useful_case_model_gate`",
         "- `H47_post_r48_useful_case_bridge_refreeze`",
+        "- `R48_origin_dual_mode_useful_case_model_gate`",
         "`deferred_future_model_candidate = r48_origin_dual_mode_useful_case_model_gate`,",
         "`next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;",
         "`selected_outcome = authorize_r48_origin_dual_mode_useful_case_model_gate`,",
         "`authorized_next_model_candidate = r48_origin_dual_mode_useful_case_model_gate`,",
-        "`next_required_lane = r48_origin_dual_mode_useful_case_model_gate`;"
+        "`next_required_lane = r48_origin_dual_mode_useful_case_model_gate`;",
+        "`next_required_packet = h47_post_r48_useful_case_bridge_refreeze`;"
       ]
     },
     {
       "path": "tmp/active_wave_plan.md",
-      "matched_lines": [
-        "`H46_post_r47_frontend_bridge_decision_packet` is the current active docs-only"
-      ]
+      "matched_lines": []
     }
   ]
 }

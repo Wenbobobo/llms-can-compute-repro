@@ -12,13 +12,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H46_post_r47_frontend_bridge_decision_packet/` — current active docs-only
+- `H47_post_r48_useful_case_bridge_refreeze/` — current active docs-only
+  useful-case refreeze packet that preserves `H46/H43/H36/F20/F21/F22/P27`,
+  freezes landed comparator-only `R48` narrowly, and restores
+  `no_active_downstream_runtime_lane`.
+- `H46_post_r47_frontend_bridge_decision_packet/` — preserved prior docs-only
   frontend-bridge decision packet that preserves `H45/H44/H43/H36/F20/F21/P27`,
   interprets completed `R47`, promotes `F22` into the current
   comparator-planning bundle, and authorizes the landed `R48`.
-- `H47_post_r48_useful_case_bridge_refreeze/` — next required docs-only
-  useful-case refreeze packet that will interpret landed comparator-only
-  `R48` without letting model positives replace exact evidence.
 - `H45_post_r46_surface_decision_packet/` — preserved prior docs-only
   surface-decision packet that preserves `H44/H43/H36/F20/F21/P27/R43/R44/R45`,
   interprets completed `R46`, authorizes exactly `R47`, and keeps later
@@ -100,7 +101,7 @@ planning bundles. Read the current driver first, not the directory name alone.
   decision-complete restricted-Wasm / useful-case surface.
 - `F22_post_r46_useful_case_model_bridge_bundle/` — current comparator-
   planning bundle that stays downstream of exact frontend evidence and scopes
-  the landed `R48` lane plus the follow-on `H47` interpretation packet.
+  the landed `R48` lane plus the landed `H47` interpretation packet.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.
@@ -285,8 +286,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H46` is the active docs-only decision packet.
-- `H45` is the preserved prior docs-only decision packet.
+- `H47` is the active docs-only decision packet.
+- `H46` is the preserved prior docs-only decision packet.
+- `H45` is the preserved earlier docs-only decision packet.
 - `H44` is the preserved prior docs-only route reauthorization packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
@@ -327,7 +329,7 @@ stack:
 - `F22` is the current comparator-planning bundle, not active execution work.
 - `R47` is the completed current exact frontend bridge gate.
 - `R48` is the completed current comparator-only useful-case model gate.
-- `H47` is the next required docs-only useful-case refreeze packet.
+- `H47` restores `no_active_downstream_runtime_lane`.
 - `H43` remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not

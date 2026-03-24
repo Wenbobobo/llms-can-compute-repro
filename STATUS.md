@@ -3,9 +3,9 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H46_post_r47_frontend_bridge_decision_packet`, not the preserved prior
-  `H45` packet, the preserved prior `H44` packet, the preserved prior `H43`
-  packet, the preserved earlier `H42`
+  `H47_post_r48_useful_case_bridge_refreeze`, not the preserved prior
+  `H46` packet, the preserved earlier `H45` packet, the preserved prior `H44`
+  packet, the preserved prior `H43` packet, the preserved earlier `H42`
   packet, the preserved earlier `H41` packet, the preserved prior `H40`
   packet, the preserved prior `H30` packet, or the earlier `H25`
   same-endpoint decision packet.
@@ -21,8 +21,8 @@
   `R47_origin_restricted_frontend_translation_gate`.
 - The current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`.
-- The next required docs-only useful-case bridge refreeze packet is
-  `H47_post_r48_useful_case_bridge_refreeze`.
+- The current downstream scientific lane after `H47` is
+  `no_active_downstream_runtime_lane`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -31,7 +31,8 @@
   current exact post-`H43` planning bundle fixing the exact-first reentry
   route.
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
-  comparator-planning bundle scoped by exact `R47` and explicit `H46`.
+  comparator-planning bundle scoped by exact `R47`, preserved prior `H46`,
+  and active `H47`.
 - `P31_post_h43_blog_guardrails_refresh` remains the current low-priority
   blocked-blog/helper guardrail refresh wave.
 - The active scientific target is now the narrower Origin-core line:
@@ -247,7 +248,7 @@
   interpretation step through `H46_post_r47_frontend_bridge_decision_packet`,
   and does not widen the claim ceiling beyond `bounded_useful_cases_only`.
 - `H46_post_r47_frontend_bridge_decision_packet` is now complete as the
-  current active docs-only frontend-bridge decision packet:
+  preserved prior docs-only frontend-bridge decision packet:
   it preserves `H45/H44/H43/H36/F20/F21/P27/R43/R44/R45`, interprets completed
   `R47` exactly as landed, authorizes exactly
   `R48_origin_dual_mode_useful_case_model_gate`, promotes
@@ -262,13 +263,14 @@
   explicit held-out `histogram16_u8` family (`3/3` variants), keeps exact
   evidence decisive relative to model evidence, and routes the next
   interpretation through `H47_post_r48_useful_case_bridge_refreeze`.
-- `H47_post_r48_useful_case_bridge_refreeze` is now the next required
-  docs-only useful-case bridge refreeze packet:
-  it preserves `H46` as the current active docs-only decision packet,
+- `H47_post_r48_useful_case_bridge_refreeze` is now complete as the current
+  active docs-only useful-case bridge refreeze packet:
+  it preserves `H46` as the preserved prior docs-only decision packet,
   preserves `H43` as the current paper-grade endpoint, preserves `R47` as the
   completed current exact frontend bridge gate, preserves `R48` as the
-  completed current comparator-only useful-case model gate, and keeps claim
-  ceilings bounded to useful cases only.
+  completed current comparator-only useful-case model gate, keeps claim
+  ceilings bounded to useful cases only, and restores
+  `no_active_downstream_runtime_lane`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -513,16 +515,16 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H46_post_r47_frontend_bridge_decision_packet` under
+  `H47_post_r48_useful_case_bridge_refreeze` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H45/H44/H43/H42/H41/H40/H38/H37`,
+  preserved prior docs-only packets `H46/H45/H44/H43/H42/H41/H40/H38/H37`,
   preserved active routing/refreeze packet
   `H36_post_r40_bounded_scalar_family_refreeze`, completed current
   `R42/R43/R44/R45` semantic-boundary gate stack, current coequal-mainline
   model bundle `F20`, current exact post-`H43` planning bundle `F21`, current
   comparator-planning bundle `F22`, completed current exact frontend bridge
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
-  next required docs-only refreeze packet `H47`, completed explicit merge
+  restored downstream lane `no_active_downstream_runtime_lane`, completed explicit merge
   packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority blocked-
   blog/helper guardrail refresh wave `P31`, completed
@@ -553,13 +555,13 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H46` is the current
-   active docs-only packet, `H45` is the preserved prior docs-only decision
+   `tmp/active_wave_plan.md` aligned on the rule that `H47` is the current
+   active docs-only packet, `H46` is the preserved prior docs-only decision
    packet, `H43` remains the current paper-grade endpoint, `R47` remains the
    completed current exact frontend bridge gate, `R48` remains the completed
-   current comparator-only useful-case model gate, `H47` is the next required
-   docs-only refreeze packet, and `F22` remains the current comparator-
-   planning bundle.
+   current comparator-only useful-case model gate, `F22` remains the current
+   comparator-planning bundle, and `no_active_downstream_runtime_lane` now
+   follows the scientific stack.
 2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
    only evidence on the preserved useful-case contract: exact evidence remains
    decisive, broader Wasm/C remains unauthorized, and model positives do not
