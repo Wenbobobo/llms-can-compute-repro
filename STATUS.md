@@ -25,13 +25,13 @@
 - The current completed numeric-scaling gate is
   `R49_origin_useful_case_numeric_scaling_gate`.
 - The current downstream scientific lane after `H48` is
-  `no_active_downstream_runtime_lane`.
+  `R50_origin_restricted_tinyc_lowering_gate`.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
   planning bundle.
-- `R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
-  candidate fixed by `F25`.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the only follow-up
-  packet fixed by `F25`.
+- `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
+  restricted tiny-`C` lowering gate fixed by `F25`.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the only next required
+  follow-up packet after completed `R50`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -553,9 +553,9 @@
   model bundle `F20`, current exact post-`H43` planning bundle `F21`, current
   comparator-planning bundle `F22`, completed current exact frontend bridge
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
-  completed current numeric-scaling gate `R49`, restored downstream lane
-  `no_active_downstream_runtime_lane`, current post-`H48` planning bundle
-  `F25`, only next runtime candidate `R50`, only follow-up packet `H49`,
+  completed current numeric-scaling gate `R49`, completed current post-`H48`
+  planning bundle `F25`, completed current restricted tiny-`C` lowering gate
+  `R50`, only next required follow-up packet `H49`,
   completed explicit merge packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority operational
   rollup wave `P35`, completed prior blocked-blog/helper guardrail refresh
@@ -592,10 +592,10 @@
    packet, `H43` remains the current paper-grade endpoint,
    `R49_origin_useful_case_numeric_scaling_gate` is the completed current
    numeric-scaling gate, `F25_post_h48_restricted_tinyc_lowering_bundle` is the
-   current post-`H48` planning bundle, `R50_origin_restricted_tinyc_lowering_gate`
-   is the only next runtime candidate, `H49_post_r50_tinyc_lowering_decision_packet`
-   is the only follow-up packet, and
-   `no_active_downstream_runtime_lane` now follows the scientific stack.
+   completed current post-`H48` planning bundle,
+   `R50_origin_restricted_tinyc_lowering_gate` is the completed current active
+   runtime lane, and `H49_post_r50_tinyc_lowering_decision_packet` is the only
+   next required follow-up packet.
 2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
    only evidence on the preserved useful-case contract: exact evidence remains
    decisive, broader Wasm/C remains unauthorized, and model positives do not

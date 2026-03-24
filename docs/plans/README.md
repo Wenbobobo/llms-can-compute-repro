@@ -28,6 +28,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   planning surface for the only admissible post-`H48` runtime question,
   fixing `R50` as the only next runtime candidate and `H49` as the only
   follow-up packet while preserving the `R47` useful-case contract first.
+- `2026-03-24-post-f25-r50-restricted-tinyc-lowering-design.md` — the current
+  execution design surface for the landed `R50` restricted tiny-`C` lowering
+  gate, preserving `H48/H43`, executing only the admitted single-function
+  static `i32` surface, and handing interpretation to `H49`.
 - `2026-03-24-post-h47-r49-useful-case-numeric-scaling-design.md` — the
   current execution design surface for the landed `R49` numeric-scaling gate,
   preserving `H47/H43`, executing the fixed three-kernel ladder through the
@@ -204,8 +208,15 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F23_post_h47_numeric_scaling_bundle/` — current post-`H47`
   planning-only numeric-scaling bundle fixing `R49` as the only next runtime
   candidate while keeping `F24` dormant.
-- `../milestones/F25_post_h48_restricted_tinyc_lowering_bundle/` — next
-  authorized planning-only bundle selected by completed `H48`.
+- `../milestones/F25_post_h48_restricted_tinyc_lowering_bundle/` — completed
+  current post-`H48` planning-only bundle selected by completed `H48` that
+  fixed `R50` and `H49`.
+- `../milestones/R50_origin_restricted_tinyc_lowering_gate/` — completed
+  current restricted tiny-`C` lowering gate downstream of completed `F25`,
+  preserving `8/8` exact admitted variants across the fixed `3/3` useful-case
+  kernels and fixing `H49` as the next required packet.
+- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — next
+  required docs-only follow-up packet after completed `R50`.
 - `../milestones/R49_origin_useful_case_numeric_scaling_gate/` — completed
   current numeric-scaling gate downstream of completed `F23` and before
   landed `H48`.

@@ -1,10 +1,9 @@
 # H49 Post-R50 Tiny-C Lowering Decision Packet
 
-Future docs-only interpretation packet after potential `R50`.
+Next required docs-only interpretation packet after completed `R50`.
 
-`H49` is not active yet. If `R50` is executed later, `H49` is the only
-explicit follow-up packet allowed to interpret the result without widening by
-momentum. Any broader scope lift still requires a later explicit packet beyond
-this placeholder.
+`H49` is not executed yet. It is now the only explicit follow-up packet
+allowed to interpret landed `R50` without widening by momentum. Any broader
+scope lift still requires a later explicit packet beyond this handoff point.
 
-Current status: `placeholder_only`.
+Current status: `next_required_after_r50`.

@@ -20,6 +20,12 @@ from .restricted_frontend import (
     histogram16_u8_frontend_program,
     sum_i32_buffer_frontend_program,
 )
+from .restricted_tinyc import (
+    RestrictedTinyCProgram,
+    count_nonzero_i32_buffer_tinyc_program,
+    histogram16_u8_tinyc_program,
+    sum_i32_buffer_tinyc_program,
+)
 from .types import BytecodeMemoryCell, BytecodeMemoryRegion, BytecodeType
 
 
@@ -125,6 +131,18 @@ class UsefulCaseNumericScalingCase:
     max_steps: int
     program: BytecodeProgram
     precision_reference_sampled: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class RestrictedTinyCLoweringCase:
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    tinyc_program: RestrictedTinyCProgram
+    canonical_program: BytecodeProgram
 
 
 def _frame_cell(
@@ -1780,6 +1798,171 @@ def r47_restricted_frontend_translation_cases() -> tuple[RestrictedFrontendTrans
                 input_base_address=800,
                 bin_base_address=816,
                 name="frontend_histogram16_u8_wide_len10_a800",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="bytecode_histogram16_u8_wide_len10_a800",
+            ),
+        ),
+    )
+
+
+def r50_restricted_tinyc_lowering_cases() -> tuple[RestrictedTinyCLoweringCase, ...]:
+    return (
+        RestrictedTinyCLoweringCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len6_shifted_base",
+            description="Restricted tiny-C lowers a longer fixed-buffer sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=384,
+            tinyc_program=sum_i32_buffer_tinyc_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="tinyc_sum_i32_buffer_len6_a520",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="bytecode_sum_i32_buffer_len6_a520",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len8_dense_mixed_sign",
+            description="Restricted tiny-C lowers a wider mixed-sign sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            tinyc_program=sum_i32_buffer_tinyc_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="tinyc_sum_i32_buffer_len8_a560",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="bytecode_sum_i32_buffer_len8_a560",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_sparse_len8_shifted_base",
+            description="Restricted tiny-C lowers a sparse nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="tinyc_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="bytecode_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_dense_len7_shifted_base",
+            description="Restricted tiny-C lowers a dense nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="tinyc_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="bytecode_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_mixed_len9_shifted_base",
+            description="Restricted tiny-C lowers a mixed-density nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1024,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="tinyc_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="bytecode_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_bimodal_len6_shifted_base",
+            description="Restricted tiny-C lowers a bimodal histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="tinyc_histogram16_u8_bimodal_len6_a720",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="bytecode_histogram16_u8_bimodal_len6_a720",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_low_bin_skew_len8",
+            description="Restricted tiny-C lowers a low-bin skew histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="tinyc_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="bytecode_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_wide_len10_shifted_base",
+            description="Restricted tiny-C lowers a wider histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=6144,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="tinyc_histogram16_u8_wide_len10_a800",
             ),
             canonical_program=histogram16_u8_program(
                 input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),

@@ -40,17 +40,17 @@ The current completed numeric-scaling gate is:
 
 The current downstream scientific lane after `H48` is:
 
-- `no_active_downstream_runtime_lane`
+- `R50_origin_restricted_tinyc_lowering_gate`
 
 The current post-`H48` planning bundle is:
 
 - `F25_post_h48_restricted_tinyc_lowering_bundle`
 
-The only next runtime candidate fixed by `F25` is:
+The current completed restricted tiny-`C` lowering gate is:
 
 - `R50_origin_restricted_tinyc_lowering_gate`
 
-The only follow-up packet fixed by `F25` is:
+The next required follow-up packet after `R50` is:
 
 - `H49_post_r50_tinyc_lowering_decision_packet`
 
@@ -203,7 +203,16 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   decision packet that preserves `H47` as the preserved prior decision packet,
   keeps `H43` as the paper-grade endpoint, restores
   `no_active_downstream_runtime_lane`, and authorizes exactly
-  `F25_post_h48_restricted_tinyc_lowering_bundle`.
+  `F25_post_h48_restricted_tinyc_lowering_bundle`; and
+- `F25` then saves the only admissible post-`H48` restricted tiny-`C`
+  lowering bundle, fixes `R50` as the only next runtime candidate, fixes
+  `H49` as the only follow-up packet, and keeps the claim ceiling bounded to
+  useful cases only; and
+- `R50` then keeps the admitted single-function static tiny-`C` surface exact
+  on `8/8` variants across the fixed `3/3` useful-case kernels, preserves
+  `translation_identity_exact_count = 8`, records
+  `restricted_tinyc_lowering_supported_narrowly`, and fixes `H49` as the next
+  required packet.
 
 ## Current Machine-State Meaning
 
@@ -531,6 +540,24 @@ interpretation ladder above `R42`, and one completed operational merge packet:
   `merge_executed = false`,
   `later_explicit_packet_required_before_scope_widening = true`,
   `next_required_lane = f25_post_h48_restricted_tinyc_lowering_bundle`;
+- `F25` is now complete as the current post-`H48` planning bundle:
+  `current_active_docs_only_stage = h48_post_r49_numeric_scaling_decision_packet`,
+  `current_paper_grade_endpoint = h43_post_r44_useful_case_refreeze`,
+  `selected_outcome = post_h48_restricted_tinyc_lowering_bundle_saved`,
+  `only_next_runtime_candidate = r50_origin_restricted_tinyc_lowering_gate`,
+  `only_followup_packet = h49_post_r50_tinyc_lowering_decision_packet`,
+  `claim_ceiling = bounded_useful_cases_only`,
+  `next_required_lane = r50_origin_restricted_tinyc_lowering_gate`;
+- `R50` is now complete as the current restricted tiny-`C` lowering gate:
+  `lane_verdict = restricted_tinyc_lowering_supported_narrowly`,
+  `restricted_tinyc_surface = single_function_static_i32_only`,
+  `planned_variant_count = 8`,
+  `executed_variant_count = 8`,
+  `exact_variant_count = 8`,
+  `exact_kernel_count = 3`,
+  `translation_identity_exact_count = 8`,
+  `claim_ceiling = bounded_useful_cases_only`,
+  `next_required_packet = h49_post_r50_tinyc_lowering_decision_packet`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
@@ -601,7 +628,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `P35_post_h47_research_record_rollup` ->
 `F23_post_h47_numeric_scaling_bundle` ->
 `R49_origin_useful_case_numeric_scaling_gate` ->
-`H48_post_r49_numeric_scaling_decision_packet`
+`H48_post_r49_numeric_scaling_decision_packet` ->
+`F25_post_h48_restricted_tinyc_lowering_bundle` ->
+`R50_origin_restricted_tinyc_lowering_gate`
 
 ## Next Planned Order
 
@@ -611,7 +640,7 @@ execution, later `H42` route-selection preparation, exact `R44` useful-case
 execution, a hold-at-`H43` no-runtime posture, or an unresolved post-`R46`
 surface-decision step. `F20`, `H41`, `P27`, `R43`, `R45`, `H42`, `R44`, `H43`,
 `F21`, `H44`, `R46`, `H45`, `R47`, `H46`, `R48`, `H47`, `P35`, `F23`, `R49`,
-and `H48` have already landed. The
+`H48`, `F25`, and `R50` have already landed. The
 stack now fixes one completed operational merge packet, one completed exact
 bounded-memory gate, one completed restricted useful-case gate, one completed
 coequal model gate, one preserved paper-grade `H43` refreeze packet, one
@@ -619,8 +648,9 @@ current exact-first planning bundle, one current comparator-planning bundle,
 one current post-`H47` numeric-scaling planning bundle, one completed current
 exact frontend bridge gate, one completed current comparator-only useful-case
 model gate, one completed current numeric-scaling gate, one current active
-docs-only numeric-scaling decision packet, one current post-`H48` planning bundle,
-and one current low-priority operational/docs rollup wave.
+docs-only numeric-scaling decision packet, one current post-`H48` planning
+bundle, one completed current restricted tiny-`C` lowering gate, and one
+current low-priority operational/docs rollup wave.
 
 The current admissible follow-on work is:
 
@@ -628,15 +658,20 @@ The current admissible follow-on work is:
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20/F21/F22/F23`;
 - docs-only `H48_post_r49_numeric_scaling_decision_packet` as the current
-  active decision packet that returns the scientific stack to
-  `no_active_downstream_runtime_lane`;
+  active decision packet that remains the governing interpretation packet
+  above landed `R50`;
 - planning-only `F23_post_h47_numeric_scaling_bundle` as the completed
   post-`H47` bundle that fixed `R49_origin_useful_case_numeric_scaling_gate`
   as the only admissible next runtime candidate while keeping `F24` dormant;
 - completed `R49_origin_useful_case_numeric_scaling_gate` as the current
   numeric-scaling gate rather than an active runtime lane;
-- planning-only `F25_post_h48_restricted_tinyc_lowering_bundle` as the next
-  authorized planning bundle after landed `H48`;
+- planning-only `F25_post_h48_restricted_tinyc_lowering_bundle` as the
+  completed post-`H48` bundle that fixed `R50` and `H49`;
+- completed `R50_origin_restricted_tinyc_lowering_gate` as the current active
+  runtime lane with `8/8` exact admitted variants across the fixed `3/3`
+  kernels and `translation_identity_exact_count = 8`;
+- docs-only `H49_post_r50_tinyc_lowering_decision_packet` as the only next
+  required follow-up packet;
 - explicit non-selected closeout storage under
   `P36_post_h48_falsification_closeout_bundle`;
 - later explicit planning for any broader semantic-boundary, contradiction, or
@@ -646,7 +681,7 @@ The current admissible follow-on work is:
 
 The current forward order is:
 
-`F25_post_h48_restricted_tinyc_lowering_bundle`
+`H49_post_r50_tinyc_lowering_decision_packet`
 
 If the same-substrate contradiction route is reauthorized later, the
 conditional order is still:
@@ -657,7 +692,7 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`F25_post_h48_restricted_tinyc_lowering_bundle`
+`H49_post_r50_tinyc_lowering_decision_packet`
 
 ## Control References
 
@@ -699,6 +734,7 @@ The next required order is now:
 - `results/F23_post_h47_numeric_scaling_bundle/summary.json`
 - `results/R49_origin_useful_case_numeric_scaling_gate/summary.json`
 - `results/H48_post_r49_numeric_scaling_decision_packet/summary.json`
+- `results/R50_origin_restricted_tinyc_lowering_gate/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
@@ -714,6 +750,8 @@ The next required order is now:
 - `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`
 - `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md`
 - `docs/plans/2026-03-24-post-r49-h48-numeric-scaling-decision-design.md`
+- `docs/plans/2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md`
+- `docs/plans/2026-03-24-post-f25-r50-restricted-tinyc-lowering-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
@@ -741,6 +779,8 @@ The next required order is now:
 - `docs/milestones/R49_origin_useful_case_numeric_scaling_gate/`
 - `docs/milestones/H48_post_r49_numeric_scaling_decision_packet/`
 - `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/`
+- `docs/milestones/R50_origin_restricted_tinyc_lowering_gate/`
+- `docs/milestones/H49_post_r50_tinyc_lowering_decision_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
@@ -795,13 +835,12 @@ The next required order is now:
   preserved prior docs-only useful-case bridge refreeze packet.
 - `H48_post_r49_numeric_scaling_decision_packet` is now complete as the current
   active docs-only numeric-scaling decision packet.
-- `no_active_downstream_runtime_lane` now follows the scientific stack.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current
   post-`H48` planning bundle.
-- `R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime
-  candidate.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the only follow-up
-  packet.
+- `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
+  active restricted tiny-`C` lowering lane.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the only next required
+  follow-up packet.
 - `P31_post_h43_blog_guardrails_refresh`,
   `P32_post_h43_historical_wording_refresh`,
   `P33_post_h43_dormant_playbook_wording_refresh`, and
@@ -851,8 +890,12 @@ The next required order is now:
   candidate while keeping `F24` dormant and `F25/P36` as placeholders only.
 - `R49_origin_useful_case_numeric_scaling_gate` is the completed current
   numeric-scaling gate.
-- `F25_post_h48_restricted_tinyc_lowering_bundle` is the next authorized
-  planning bundle.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is the completed current
+  post-`H48` planning bundle.
+- `R50_origin_restricted_tinyc_lowering_gate` is the completed current
+  restricted tiny-`C` lowering gate.
+- `H49_post_r50_tinyc_lowering_decision_packet` is the only next required
+  follow-up packet.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet` is the completed
   operational explicit merge packet and keeps `merge_executed = false`.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit` is the preserved prior
@@ -895,11 +938,11 @@ The next required order is now:
   preserved prior docs-only refreeze packet,
   `H48_post_r49_numeric_scaling_decision_packet` is the current active
   docs-only decision packet, `F25_post_h48_restricted_tinyc_lowering_bundle`
-  is the current post-`H48` planning bundle,
-  `R50_origin_restricted_tinyc_lowering_gate` is the only next runtime
-  candidate, `H49_post_r50_tinyc_lowering_decision_packet` is the only
-  follow-up packet, `no_active_downstream_runtime_lane` now follows the
-  stack, and `H43`
+  is the completed current post-`H48` planning bundle,
+  `R50_origin_restricted_tinyc_lowering_gate` is the completed current
+  restricted tiny-`C` lowering gate,
+  `H49_post_r50_tinyc_lowering_decision_packet` is the only next required
+  follow-up packet, and `H43`
   remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `H34_post_r39_later_explicit_scope_decision_packet` and
