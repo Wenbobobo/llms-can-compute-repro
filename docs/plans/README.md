@@ -8,6 +8,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md` — the
+  current saved post-`H47` master plan that fixes the next wave order:
+  `P35` research-record rollup, `F23` numeric-scaling bundle, one narrow
+  `R49` runtime gate, and later explicit `H48` stop/go interpretation.
+- `2026-03-24-post-h47-p35-research-record-rollup-design.md` — the current
+  low-priority operational/docs design surface that records artifact policy,
+  root-dirty quarantine, push state, merge posture, and preserved negative
+  results after landed `H47`.
 - `2026-03-24-post-h43-mainline-reentry-master-plan.md` — the current
   post-`H43` saved master plan that fixes the exact-first reentry wave order:
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
@@ -146,10 +154,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/P31_post_h43_blog_guardrails_refresh/` — current
-  low-priority operational blocked-blog/helper guardrail refresh packet that
-  updates stale downstream blog plus manuscript-helper controls without
-  changing scientific stage.
+- `../milestones/P35_post_h47_research_record_rollup/` — current low-priority
+  operational/docs rollup packet that records post-`H47` research state,
+  hygiene policy, and preserved negative-result accounting without changing
+  scientific stage.
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
@@ -217,9 +225,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
   completed operational explicit merge packet for the post-`R42` override.
-- `../milestones/P31_post_h43_blog_guardrails_refresh/` — current low-priority
-  operational blocked-blog/helper guardrail refresh packet downstream of
-  `H43`.
+- `../milestones/P31_post_h43_blog_guardrails_refresh/` — completed prior
+  low-priority operational blocked-blog/helper guardrail refresh packet
+  downstream of `H43`.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet downstream of
   `H43`.

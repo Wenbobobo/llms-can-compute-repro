@@ -57,7 +57,11 @@ planning bundles. Read the current driver first, not the directory name alone.
   kernels.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
-- `P31_post_h43_blog_guardrails_refresh/` — current low-priority
+- `P35_post_h47_research_record_rollup/` — current low-priority
+  operational/docs rollup packet recording post-`H47` research state,
+  hygiene policy, and preserved negative-result accounting without changing
+  scientific stage.
+- `P31_post_h43_blog_guardrails_refresh/` — completed prior low-priority
   operational blocked-blog/helper guardrail refresh packet updating stale
   downstream blog plus manuscript-helper controls without changing scientific
   stage.
@@ -203,18 +207,21 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational merge packet that stages explicit merge posture without merging
   `main`.
-- `P31_post_h43_blog_guardrails_refresh/` — current low-priority operational
-  blocked-blog/helper guardrail refresh packet that keeps `H43` current while
-  refreshing stale downstream blog plus manuscript-helper controls.
+- `P35_post_h47_research_record_rollup/` — current low-priority
+  operational/docs rollup packet that records post-`H47` research state,
+  hygiene policy, and preserved negative-result accounting without changing
+  scientific stage.
+- `P31_post_h43_blog_guardrails_refresh/` — completed prior low-priority
+  operational blocked-blog/helper guardrail refresh packet that keeps `H43`
+  current while refreshing stale downstream blog plus manuscript-helper
+  controls.
 - `P32_post_h43_historical_wording_refresh/` — completed auxiliary
-  historical/regeneration wording refresh packet that keeps `P31` current
-  while refreshing preserved `H0/P3` regeneration-facing wording.
+  historical/regeneration wording refresh packet preserved underneath current
+  `P35`.
 - `P33_post_h43_dormant_playbook_wording_refresh/` — completed auxiliary
-  dormant-playbook wording refresh packet that keeps `P31` current while
-  refreshing dormant `E1` playbook and helper historical wording.
+  dormant-playbook wording refresh packet preserved underneath current `P35`.
 - `P34_post_h43_live_surface_wording_guardrail/` — completed auxiliary
-  live-surface wording guardrail packet that keeps `P31` current while
-  machine-checking current helper/control surfaces.
+  live-surface wording guardrail packet preserved underneath current `P35`.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior operational
   manuscript-surface refresh packet that keeps `H43` current while refreshing
   stale paper-facing prose baselines and derivative helper docs.

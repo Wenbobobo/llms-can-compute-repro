@@ -33,8 +33,11 @@
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
   comparator-planning bundle scoped by exact `R47`, preserved prior `H46`,
   and active `H47`.
-- `P31_post_h43_blog_guardrails_refresh` remains the current low-priority
-  blocked-blog/helper guardrail refresh wave.
+- `P35_post_h47_research_record_rollup` is now the current low-priority
+  operational/docs wave recording post-`H47` research state, hygiene rules,
+  and preserved negative-result accounting.
+- `P31/P32/P33/P34` remain preserved prior low-priority helper refresh
+  packets.
 - The active scientific target is now the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -526,11 +529,12 @@
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
   restored downstream lane `no_active_downstream_runtime_lane`, completed explicit merge
   packet `P27`, completed prior
-  low-priority sync packets `P30/P29/P28`, current low-priority blocked-
-  blog/helper guardrail refresh wave `P31`, completed
-  auxiliary historical/regeneration wording refresh packet `P32`, completed
-  auxiliary dormant playbook/historical-helper wording refresh packet `P33`,
-  completed auxiliary live-surface wording guardrail packet `P34`,
+  low-priority sync packets `P30/P29/P28`, current low-priority operational
+  rollup wave `P35`, completed prior blocked-blog/helper guardrail refresh
+  packet `P31`, completed auxiliary historical/regeneration wording refresh
+  packet `P32`, completed auxiliary dormant playbook/historical-helper wording
+  refresh packet `P33`, completed auxiliary live-surface wording guardrail
+  packet `P34`,
   preserved earlier Origin-core chain
   `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40`,
   deferred `R41` as a future threat-stress lane only, `H27` preserved as the

@@ -87,28 +87,13 @@ comparator-only useful-case model lane.
 completed `H47`.
 `F22_post_r46_useful_case_model_bridge_bundle` is now the current
 comparator-planning bundle.
-`P31_post_h43_blog_guardrails_refresh` is the current low-priority
-operational/docs wave. It refreshes blocked downstream blog plus
-manuscript/caption/appendix helper guardrail docs that still freeze the
-current paper-grade endpoint at the preserved `H32/H34` compiled-boundary
-line, so the downstream helper/control surface matches the landed
-`H44/F21/H43/H42/R43/R44/R45/F20/P27/P30/P29/P28` stack without creating a new
-scientific widening or unblocking the blog.
-`P32_post_h43_historical_wording_refresh` is the completed auxiliary
-historical/regeneration wording refresh packet. It only refreshes preserved
-`H0/P3` machine-readable wording that still treated `D0` as the whole current
-paper endpoint, and it does not displace `P31` as the current low-priority
-wave.
-`P33_post_h43_dormant_playbook_wording_refresh` is the completed auxiliary
-dormant-playbook wording refresh packet. It only refreshes dormant `E1`
-playbooks plus helper historical wording that still spoke as though preserved
-same-endpoint `R2/D0` scope were the live paper endpoint, and it does not
-displace `P31` as the current low-priority wave.
-`P34_post_h43_live_surface_wording_guardrail` is the completed auxiliary
-live-surface wording guardrail packet. It only adds machine-checkable drift
-guards on current helper/control surfaces so preserved `D0` support is not
-restated as the whole current endpoint, and it does not displace `P31` as the
-current low-priority wave.
+`P35_post_h47_research_record_rollup` is the current low-priority
+operational/docs wave. It records post-`H47` research state, quarantines dirty
+root `main`, records explicit no-merge posture, preserves negative-result
+accounting, and keeps large raw artifacts out of git by default without
+changing scientific stage.
+`P31/P32/P33/P34` remain preserved prior helper refresh packets rather than
+the current low-priority wave.
 
 ## Current Facts
 
@@ -142,6 +127,9 @@ current low-priority wave.
   auxiliary post-`H43` dormant-playbook wording refresh branch.
 - `wip/p34-h43-wording-guardrail-lint` is the clean completed auxiliary
   post-`H43` live-surface wording guardrail branch.
+- `wip/p35-f23-post-h47-mainline-extension` is the clean post-`H47`
+  extension branch for the current low-priority rollup plus next numeric
+  planning wave.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -202,6 +190,8 @@ current low-priority wave.
     frontier widening by momentum.
 11. Keep release/public audit surfaces downstream of `H43` without changing
     the scientific stage driver.
+12. Promote `P35` as the current low-priority operational/docs wave while
+    keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
 
 ## Last Completed Order
 
@@ -272,14 +262,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `F21` is the current exact-first post-`H43` planning bundle.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
-- `P31` is the current low-priority blocked-blog/helper guardrail refresh wave
-  and does not change the active scientific stage.
-- `P32` is the completed auxiliary historical/regeneration wording refresh
-  packet and does not displace `P31` as the current low-priority wave.
-- `P33` is the completed auxiliary dormant-playbook wording refresh packet and
-  does not displace `P31` as the current low-priority wave.
-- `P34` is the completed auxiliary live-surface wording guardrail packet and
-  does not displace `P31` as the current low-priority wave.
+- `P35` is the current low-priority operational/docs wave and does not change
+  the active scientific stage.
+- `P31`, `P32`, `P33`, and `P34` are completed prior helper refresh packets
+  underneath current `P35`.
 - `P30` is the completed prior manuscript-surface refresh wave.
 - `P29` is the completed earlier prior release/public audit refresh wave.
 - `P28` is the completed earlier publication/control sync wave.

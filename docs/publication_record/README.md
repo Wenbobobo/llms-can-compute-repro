@@ -71,10 +71,13 @@ Current control docs:
   — the preserved earlier execution design surface that landed exact held-out
   useful-case surface generalization under `H44` and fixed `H45` as the next
   required interpretation packet at that stage;
+- `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md` —
+  the current low-priority design surface for post-`H47` research-record
+  rollup, hygiene quarantine, and preserved negative-result accounting;
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` —
-  the current low-priority design surface for refreshing blocked downstream
-  blog plus manuscript-helper guardrails downstream of landed `H43` without
-  changing scientific stage;
+  the preserved prior helper-doc design surface for refreshing blocked
+  downstream blog plus manuscript-helper guardrails downstream of landed
+  `H43` without changing scientific stage;
 - `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md` —
   the completed auxiliary design surface for refreshing preserved
   machine-readable and regeneration wording that still treats `D0` as the
@@ -242,10 +245,14 @@ Current control docs:
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the preserved prior
   useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
-- `docs/milestones/P31_post_h43_blog_guardrails_refresh/` — the current
-  low-priority operational blocked-blog/helper guardrail refresh packet that
-  updates stale downstream blog plus manuscript-helper controls while keeping
-  `H43` current;
+- `docs/milestones/P35_post_h47_research_record_rollup/` — the current
+  low-priority operational/docs rollup packet that records post-`H47`
+  research state, hygiene policy, and preserved negative-result accounting
+  without changing scientific stage;
+- `docs/milestones/P31_post_h43_blog_guardrails_refresh/` — the completed
+  prior low-priority blocked-blog/helper guardrail refresh packet that keeps
+  `H43` current while refreshing stale downstream blog plus manuscript-helper
+  controls;
 - `docs/milestones/P32_post_h43_historical_wording_refresh/` — the completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` machine-readable wording;
@@ -450,9 +457,12 @@ Current control docs:
   machine-readable preserved prior useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
   `no_active_downstream_runtime_lane`;
+- `results/P35_post_h47_research_record_rollup/summary.json` — machine-
+  readable current low-priority operational/docs rollup packet downstream of
+  landed `H47`;
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json` — machine-
-  readable current low-priority blocked-blog/helper guardrail refresh packet
-  downstream of landed `H43`;
+  readable completed prior low-priority blocked-blog/helper guardrail refresh
+  packet downstream of landed `H43`;
 - `results/P32_post_h43_historical_wording_refresh/summary.json` —
   machine-readable completed auxiliary historical/regeneration wording refresh
   packet downstream of landed `H43`;

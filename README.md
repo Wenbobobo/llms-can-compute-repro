@@ -68,8 +68,9 @@ bridge gate that kept all `8/8` held-out useful-case variants exact with
 instruction-identical lowering across the same fixed `3/3` kernels, `F22`
 remains the current comparator-planning bundle, `R48` remains the completed
 current comparator-only useful-case model gate, `H47` now restores
-`no_active_downstream_runtime_lane`, and `P31` remains the current
-low-priority docs wave.
+`no_active_downstream_runtime_lane`, and `P35` is now the current
+low-priority research-record rollup/docs wave while `P31/P32/P33/P34` remain
+preserved prior helper refresh packets.
 
 The narrow current stack is:
 
@@ -121,6 +122,8 @@ What stays blocked or deferred:
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
+`docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`,
+`docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`,
 `docs/plans/2026-03-24-post-r48-h47-useful-case-bridge-refreeze-design.md`,
 `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`,
 `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`,

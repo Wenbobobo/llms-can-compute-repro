@@ -674,6 +674,8 @@ The next required order is now:
   the current exact frontend bridge gate.
 - `F22_post_r46_useful_case_model_bridge_bundle` is now the current
   comparator-planning bundle.
+- `P35_post_h47_research_record_rollup` is now the current low-priority
+  operational/docs wave.
 - `H46_post_r47_frontend_bridge_decision_packet` is completed and remains the
   preserved prior docs-only frontend-bridge decision packet.
 - `R48_origin_dual_mode_useful_case_model_gate` is completed and remains the
@@ -681,6 +683,11 @@ The next required order is now:
 - `H47_post_r48_useful_case_bridge_refreeze` is completed and remains the
   current active docs-only useful-case bridge refreeze packet.
 - `no_active_downstream_runtime_lane` now follows the scientific stack.
+- `P31_post_h43_blog_guardrails_refresh`,
+  `P32_post_h43_historical_wording_refresh`,
+  `P33_post_h43_dormant_playbook_wording_refresh`, and
+  `P34_post_h43_live_surface_wording_guardrail` now remain preserved prior
+  helper refresh packets.
 - merge back to `main` remains unexecuted; `P27` records explicit merge
   posture only.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
