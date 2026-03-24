@@ -12,7 +12,12 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H44_post_h43_route_reauthorization_packet/` — current active docs-only
+- `H45_post_r46_surface_decision_packet/` — current active docs-only
+  surface-decision packet that preserves `H44/H43/H36/F20/F21/P27/R43/R44/R45`,
+  interprets completed `R46`, authorizes exactly `R47`, saves `F22` as
+  blocked comparator storage, and keeps `R48` deferred behind later explicit
+  `H46`.
+- `H44_post_h43_route_reauthorization_packet/` — preserved prior docs-only
   route reauthorization packet that preserves `H43/H42/H36/F20/P27/R43/R44/R45`,
   incorporates `F21`, and authorizes exactly `R46`.
 - `H43_post_r44_useful_case_refreeze/` — preserved prior useful-case refreeze
@@ -39,9 +44,10 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R45_origin_dual_mode_model_mainline_gate/` — completed current coequal
   model gate evaluating both admitted model modes on the landed `R43`
   contract family.
-- `R46_origin_useful_case_surface_generalization_gate/` — completed current
-  post-`H44` exact runtime gate validating held-out in-surface generalization
-  on `8/8` variants across the fixed `3/3` useful-case kernels.
+- `R46_origin_useful_case_surface_generalization_gate/` — completed preserved
+  prior post-`H44` exact runtime gate validating held-out in-surface
+  generalization on `8/8` variants across the fixed `3/3` useful-case
+  kernels.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
 - `P31_post_h43_blog_guardrails_refresh/` — current low-priority
@@ -76,7 +82,7 @@ planning bundles. Read the current driver first, not the directory name alone.
   boundary and dual implementation posture.
 - `F21_post_h43_exact_useful_case_expansion_bundle/` — current planning-only
   exact-first post-`H43` bundle fixing `R46` as the first admissible next
-  runtime candidate while keeping `R47/R48` conditional.
+  runtime candidate while keeping later `R47/R48` behind explicit packets.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   preserved prior operational promotion/artifact audit lane from the earlier
   clean branch.
@@ -86,12 +92,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
-- `H45_post_r46_surface_decision_packet/` — saved next docs-only decision
-  packet that interprets landed `R46` before any frontend/model widening.
-- `R47_origin_restricted_frontend_translation_gate/` — conditional future
-  exact frontend bridge lane, downstream of positive `R46`.
-- `R48_origin_dual_mode_useful_case_model_gate/` — conditional future
-  comparator-only model lane on the preserved useful-case contract.
+- `F22_post_r46_useful_case_model_bridge_bundle/` — saved blocked
+  comparator-only bundle that stays downstream of exact frontend evidence plus
+  later explicit `H46`.
+- `R47_origin_restricted_frontend_translation_gate/` — next authorized exact
+  frontend bridge lane, downstream of completed `H45`.
+- `R48_origin_dual_mode_useful_case_model_gate/` — deferred future
+  comparator-only model lane on the preserved useful-case contract, blocked
+  behind exact `R47` plus later explicit `H46`.
 - `H40_post_h38_semantic_boundary_activation_packet/` — preserved prior
   semantic-boundary activation packet above `H38`.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
@@ -270,7 +278,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H44` is the active docs-only decision packet.
+- `H45` is the active docs-only decision packet.
+- `H44` is the preserved prior docs-only route reauthorization packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
 - `H42` is the preserved earlier docs-only route-selection packet.
@@ -306,8 +315,10 @@ stack:
 - `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
 - `R44` is the completed current restricted useful-case gate.
-- `R46` is the completed current post-`H44` exact runtime gate.
-- `H45` is the next required docs-only interpretation packet.
+- `R46` is the completed preserved prior post-`H44` exact runtime gate.
+- `F22` is a saved blocked comparator bundle, not active execution work.
+- `R47` is the next required exact runtime gate.
+- `R48` remains deferred behind exact `R47` plus later explicit `H46`.
 - `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.

@@ -172,12 +172,12 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "The refreshed downstream audits should all be green on the clean P29 worktree snapshot.",
         },
         {
-            "item_id": "refreshed_release_ledgers_present_current_h43_stack",
+            "item_id": "refreshed_release_ledgers_present_current_h45_h43_stack",
             "status": "pass"
             if contains_all(
                 inputs["release_candidate_text"],
                 [
-                    "current `h44` active docs-only route packet plus `h43` paper-grade",
+                    "current `h45` active docs-only decision packet plus preserved prior `h44`",
                     "results/r46_origin_useful_case_surface_generalization_gate/summary.json",
                     "results/p28_post_h43_publication_surface_sync/summary.json",
                 ],
@@ -206,7 +206,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 ],
             )
             else "blocked",
-            "notes": "Release-facing ledgers should no longer describe H40 or H32/H34 as current control.",
+            "notes": "Release-facing ledgers should no longer describe H40 or H32/H34 as current control, and should expose H45 as the current internal docs-only stage.",
         },
         {
             "item_id": "index_and_handoff_surfaces_preserve_p29_as_completed_prior_wave_under_p31_current_state",

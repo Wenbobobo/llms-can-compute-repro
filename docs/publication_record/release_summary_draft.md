@@ -63,9 +63,11 @@ frozen by `H43`. The earlier tiny typed-bytecode `D0` endpoint remains a
 preserved first compiled boundary and should not be read as the current bridge
 to arbitrary C, general LLM computation, or broader demo-first claims. Those
 broader readings remain explicitly unsupported on the current paper scope. A
-later internal follow-on under `H44`, `R46`, kept the held-out in-surface
-useful-case matrix exact on `8/8` variants, but `H45` still must interpret
-that result before any broader surface lift.
+later internal follow-on under preserved `H44` and landed `R46` kept the
+held-out in-surface useful-case matrix exact on `8/8` variants, and the
+now-landed `H45` interpretation packet authorizes exactly one restricted
+frontend bridge through `R47` while keeping `F22` blocked and keeping `R48`
+deferred behind later explicit `H46`.
 
 ## Current paper-facing follow-up
 

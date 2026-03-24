@@ -56,9 +56,9 @@ def test_build_summary_reports_current_polish_phase() -> None:
     summary = module.build_summary(rows)
 
     assert summary["current_paper_phase"] == "h43_post_r44_useful_case_refreeze_active"
-    assert summary["internal_driver_phase"] == "h44_post_h43_route_reauthorization_packet_active"
+    assert summary["internal_driver_phase"] == "h45_post_r46_surface_decision_packet_active"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the outward-facing H43 publication surface aligned while recording H44 as the active docs-only packet, R46 as the completed post-H44 exact runtime gate, H45 as the next required decision packet, P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, and H36 as the preserved routing/refreeze packet"
+        "keep the outward-facing H43 publication surface aligned while recording H45 as the active docs-only packet, H44 as the preserved prior route packet, R46 as the completed preserved prior post-H44 exact runtime gate, R47 as the next required exact runtime candidate, F22 as the saved blocked comparator bundle, P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, and H36 as the preserved routing/refreeze packet"
     )

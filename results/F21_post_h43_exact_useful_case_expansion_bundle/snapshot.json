@@ -30,13 +30,13 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H44_post_h43_route_reauthorization_packet`",
         "- `F21_post_h43_exact_useful_case_expansion_bundle`",
         "`active_stage = f21_post_h43_exact_useful_case_expansion_bundle`,",
         "`next_required_lane = h44_post_h43_route_reauthorization_packet`;",
         "`current_planning_bundle = f21_post_h43_exact_useful_case_expansion_bundle`,",
+        "`preserved_prior_docs_only_decision_packet = h44_post_h43_route_reauthorization_packet`,",
         "`F21_post_h43_exact_useful_case_expansion_bundle` ->",
-        "`H44_post_h43_route_reauthorization_packet`",
+        "`H44_post_h43_route_reauthorization_packet` ->",
         "- `F21_post_h43_exact_useful_case_expansion_bundle` is completed and remains"
       ]
     },

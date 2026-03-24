@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
     },
     "torch": {
       "installed": false,
@@ -40,9 +40,9 @@
       "notes": "The manuscript, bundle-status, freeze-candidate, main-text, and appendix ledgers should continue to agree."
     },
     {
-      "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_stack",
+      "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_h45_h43_stack",
       "status": "pass",
-      "notes": "Release-candidate, submission, claim, and archival ledgers should all expose the same current H43 release-control stack."
+      "notes": "Release-candidate, submission, claim, and archival ledgers should expose the same current H45/H43 release-control split without reviving earlier control states."
     },
     {
       "item_id": "release_worktree_hygiene_snapshot_classifies_commit_state",

@@ -5,6 +5,8 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
+  `H45_post_r46_surface_decision_packet`;
+- preserved prior docs-only route packet:
   `H44_post_h43_route_reauthorization_packet`;
 - preserved prior useful-case refreeze packet and current paper-grade endpoint:
   `H43_post_r44_useful_case_refreeze`;
@@ -54,14 +56,17 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H44_post_h43_route_reauthorization_packet` is the current active docs-only
-packet.
+`H45_post_r46_surface_decision_packet` is the current active docs-only
+surface-decision packet.
 `F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
 bundle.
 `H43` remains the current paper-grade endpoint.
 `R46_origin_useful_case_surface_generalization_gate` is now the completed
-post-`H44` exact runtime gate on the fixed held-out useful-case surface, and
-`H45_post_r46_surface_decision_packet` is the next required docs-only lane.
+post-`H44` exact runtime gate on the fixed held-out useful-case surface.
+`R47_origin_restricted_frontend_translation_gate` is now the next required
+exact runtime lane.
+`F22_post_r46_useful_case_model_bridge_bundle` is saved only as a blocked
+future comparator bundle.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
 operational/docs wave. It refreshes blocked downstream blog plus
 manuscript/caption/appendix helper guardrail docs that still freeze the
@@ -214,11 +219,13 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H43_post_r44_useful_case_refreeze` ->
 `F21_post_h43_exact_useful_case_expansion_bundle` ->
 `H44_post_h43_route_reauthorization_packet` ->
-`R46_origin_useful_case_surface_generalization_gate`
+`R46_origin_useful_case_surface_generalization_gate` ->
+`H45_post_r46_surface_decision_packet`
 
 ## Current Rule
 
-- `H44` is the current active docs-only packet.
+- `H45` is the current active docs-only packet.
+- `H44` is the preserved prior docs-only route packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
 - `H42` is the preserved earlier docs-only packet.
@@ -247,8 +254,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R43` is the completed current exact gate.
 - `R44` is the completed current restricted useful-case gate.
 - `R45` is the completed current coequal model lane.
-- `R46` is the completed current post-`H44` exact runtime gate.
-- `H45` is the next required docs-only interpretation packet.
+- `R46` is the completed preserved prior post-`H44` exact runtime gate.
+- `R47` is the next required exact runtime gate.
+- `F22` is saved only as a blocked future comparator bundle.
 - no active downstream runtime lane follows the paper-grade `H43` closeout.
 
 ## Control References

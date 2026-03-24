@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,7 +22,7 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "decision packet is now `H43_post_r44_useful_case_refreeze`, the preserved",
+        "is now `H43_post_r44_useful_case_refreeze`, the preserved earlier docs-only",
         "`R44_origin_restricted_wasm_useful_case_execution_gate`, the current",
         "`R45_origin_dual_mode_model_mainline_gate`, the current",
         "endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while",

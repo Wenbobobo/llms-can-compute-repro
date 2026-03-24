@@ -1,5 +1,5 @@
 {
-  "experiment": "h44_post_h43_route_reauthorization_packet",
+  "experiment": "h45_post_r46_surface_decision_packet",
   "environment": {
     "python": {
       "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
@@ -19,21 +19,22 @@
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
   "summary": {
-    "active_stage": "h44_post_h43_route_reauthorization_packet",
+    "active_stage": "h45_post_r46_surface_decision_packet",
     "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
-    "preserved_prior_docs_only_decision_packet": "h43_post_r44_useful_case_refreeze",
+    "preserved_prior_docs_only_decision_packet": "h44_post_h43_route_reauthorization_packet",
     "current_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
     "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
-    "selected_outcome": "authorize_r46_origin_useful_case_surface_generalization_gate",
-    "authorized_next_runtime_candidate": "r46_origin_useful_case_surface_generalization_gate",
-    "deferred_future_runtime_candidate": "r47_origin_restricted_frontend_translation_gate",
+    "selected_outcome": "authorize_r47_origin_restricted_frontend_translation_gate",
+    "current_completed_post_h44_exact_runtime_gate": "r46_origin_useful_case_surface_generalization_gate",
+    "authorized_next_runtime_candidate": "r47_origin_restricted_frontend_translation_gate",
+    "blocked_future_comparator_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
     "deferred_future_model_candidate": "r48_origin_dual_mode_useful_case_model_gate",
     "current_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
-    "snapshot_surface_count": 5,
+    "snapshot_surface_count": 6,
     "check_count": 3,
     "pass_count": 3,
     "blocked_count": 0,
     "blocked_items": [],
-    "next_required_lane": "r46_origin_useful_case_surface_generalization_gate"
+    "next_required_lane": "r47_origin_restricted_frontend_translation_gate"
   }
 }

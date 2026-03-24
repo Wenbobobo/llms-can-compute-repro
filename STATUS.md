@@ -3,10 +3,11 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H44_post_h43_route_reauthorization_packet`, not the preserved prior
-  `H43` packet, the preserved earlier `H42` packet, the preserved earlier
-  `H41` packet, the preserved prior `H40` packet, the preserved prior `H30`
-  packet, or the earlier `H25` same-endpoint decision packet.
+  `H45_post_r46_surface_decision_packet`, not the preserved prior `H44`
+  packet, the preserved prior `H43` packet, the preserved earlier `H42`
+  packet, the preserved earlier `H41` packet, the preserved prior `H40`
+  packet, the preserved prior `H30` packet, or the earlier `H25`
+  same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
@@ -15,6 +16,8 @@
   `R43_origin_bounded_memory_small_vm_execution_gate`.
 - The current completed post-`H44` exact runtime gate is
   `R46_origin_useful_case_surface_generalization_gate`.
+- The next authorized exact runtime candidate is
+  `R47_origin_restricted_frontend_translation_gate`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -208,19 +211,27 @@
   it preserves `H42/H36/F20/P27/R43/R44/R45`, records claim `D` as
   `supported_here_narrowly`, keeps `R41` deferred, and restores
   `no active downstream runtime lane`.
-- `H44_post_h43_route_reauthorization_packet` is now complete as the current
-  active docs-only route reauthorization packet:
+- `H44_post_h43_route_reauthorization_packet` is now complete as the
+  preserved prior docs-only route reauthorization packet:
   it preserves `H43/H42/H36/F20/P27/R43/R44/R45`, incorporates
-  `F21_post_h43_exact_useful_case_expansion_bundle`, preserves the completed
-  `R46_origin_useful_case_surface_generalization_gate`, keeps `R47/R48/R41`
-  deferred behind a later explicit packet, keeps `merge_executed = false`, and
-  requires `H45_post_r46_surface_decision_packet` before any scope widening.
+  `F21_post_h43_exact_useful_case_expansion_bundle`, authorizes exactly
+  `R46_origin_useful_case_surface_generalization_gate`, keeps
+  `merge_executed = false`, and requires `H45_post_r46_surface_decision_packet`
+  before any scope widening.
 - `R46_origin_useful_case_surface_generalization_gate` is now complete as the
-  current post-`H44` exact runtime gate:
+  preserved prior post-`H44` exact runtime gate:
   it keeps the held-out useful-case surface exact on `8/8` variants across the
   fixed `3/3` kernels, records `surface_generalizes_narrowly`, keeps the claim
   ceiling `bounded_useful_cases_only`, and routes the next interpretation step
   through `H45_post_r46_surface_decision_packet`.
+- `H45_post_r46_surface_decision_packet` is now complete as the current active
+  docs-only surface-decision packet:
+  it preserves `H44/H43/H42/H36/F20/F21/P27/R43/R44/R45`, reads completed
+  `R46` exactly as landed, authorizes exactly
+  `R47_origin_restricted_frontend_translation_gate`, saves
+  `F22_post_r46_useful_case_model_bridge_bundle` only as a blocked future
+  comparator bundle, keeps `R48/R41` deferred behind later explicit packets,
+  and keeps `merge_executed = false`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -465,13 +476,14 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H44_post_h43_route_reauthorization_packet` under
+  `H45_post_r46_surface_decision_packet` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H43/H42/H41/H40/H38/H37`, preserved active
+  preserved prior docs-only packets `H44/H43/H42/H41/H40/H38/H37`, preserved active
   routing/refreeze packet `H36_post_r40_bounded_scalar_family_refreeze`,
   completed current `R42/R43/R44/R45` semantic-boundary gate stack, current
   coequal-mainline model bundle `F20`, current exact post-`H43` planning
-  bundle `F21`, completed explicit merge packet `P27`, completed prior
+  bundle `F21`, completed explicit merge packet `P27`, next exact frontend
+  candidate `R47`, saved blocked comparator bundle `F22`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority blocked-
   blog/helper guardrail refresh wave `P31`, completed
   auxiliary historical/regeneration wording refresh packet `P32`, completed

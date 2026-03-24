@@ -4,9 +4,10 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H44` active docs-only route packet plus `H43` paper-grade
-useful-case refreeze / `H36` preserved-active /
-`R42-R43-R44-R45-R46` completed semantic-boundary gate stack /
+the current `H45` active docs-only decision packet plus preserved prior `H44`
+route packet plus `H43` paper-grade useful-case refreeze /
+`H36` preserved-active / `R42-R43-R44-R45-R46` completed semantic-boundary
+gate stack / next exact `R47` plus blocked `F22` /
 `P28-P27` completed downstream sync-and-explicit-merge posture /
 `F20-F16-F17-F18-F19-F15` current-control-support /
 `H42-H41-H40-H38-H37-P26-P25` preserved immediate-predecessor support /
@@ -18,9 +19,11 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H44` plus landed `R46`, preserved `H43/H42/H41/H40/H38/H37`,
-  preserved `H36`, completed `R42/R43/R44/R45/R46`, completed `P28/P27`,
-  current `F20/F16/F17/F18/F19`, preserved `P26/P25`, and current `F15`.
+  recorded by active `H45`, preserved prior `H44`, landed `R46`, preserved
+  `H43/H42/H41/H40/H38/H37`, preserved `H36`, completed
+  `R42/R43/R44/R45/R46`, next exact `R47`, blocked `F22`, completed
+  `P28/P27`, current `F20/F16/F17/F18/F19`, preserved `P26/P25`, and current
+  `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -62,8 +65,14 @@ preserved-closeout-and-pivot stack.
   `freeze_r44_as_narrow_supported_here`, `claim_d_state =
   supported_here_narrowly`, and `next_required_lane =
   no_active_downstream_runtime_lane`.
+- [ ] `results/H45_post_r46_surface_decision_packet/summary.json` reports the
+  current active docs-only decision packet,
+  `authorize_r47_origin_restricted_frontend_translation_gate`,
+  `authorized_next_runtime_candidate =
+  r47_origin_restricted_frontend_translation_gate`, and blocked
+  `f22_post_r46_useful_case_model_bridge_bundle`.
 - [ ] `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
-  reports the completed post-`H44` exact runtime gate,
+  reports the completed preserved prior post-`H44` exact runtime gate,
   `surface_generalizes_narrowly`, and `next_required_lane =
   h45_post_r46_surface_decision_packet`.
 - [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`

@@ -1,7 +1,12 @@
 # F22 Post-R46 Useful-Case Model Bridge Bundle
 
-Planned comparator-only bundle after a positive `R46`.
+Saved minimal blocked comparator-only bundle after positive `R46` and executed
+`H45`.
 
-`F22` will define how the admitted model modes may be compared on the same
-useful-case contract after exact useful-case generalization survives. It does
-not itself authorize model execution.
+`F22` exists only to keep the future model-side bridge explicit after `H45`
+selected `authorize_r47_origin_restricted_frontend_translation_gate`.
+
+It does not authorize model execution, it does not authorize `R48` by
+momentum, and it does not widen the claim ceiling beyond bounded useful cases.
+`F22` remains blocked until exact frontend evidence survives in `R47` and a
+later explicit `H46` packet admits the comparator lane.

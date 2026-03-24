@@ -11,9 +11,9 @@
       "notes": "H44 is only justified if H43 preserved a real bounded useful-case result and F21 fixed the exact-first route above it."
     },
     {
-      "item_id": "shared_control_surfaces_promote_h44_current_while_keeping_p31_low_priority",
+      "item_id": "shared_control_surfaces_record_h45_current_while_preserving_h44_as_prior_route_packet",
       "status": "pass",
-      "notes": "Shared control surfaces should make H44 current, preserve H43, index F21, and keep P31 current as the low-priority docs wave."
+      "notes": "Shared control surfaces should make H45 current while preserving H44 as the prior route packet, preserving H43, indexing F21, and keeping P31 current as the low-priority docs wave."
     }
   ]
 }

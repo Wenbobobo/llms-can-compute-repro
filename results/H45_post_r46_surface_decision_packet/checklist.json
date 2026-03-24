@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h45_docs_authorize_r47_and_keep_f22_r48_blocked",
+      "status": "pass",
+      "notes": "H45 should select exactly R47 while keeping F22 blocked and R48 deferred behind later explicit H46."
+    },
+    {
+      "item_id": "upstream_h44_r46_and_h43_support_the_h45_decision",
+      "status": "pass",
+      "notes": "H45 is only justified if H44 authorized R46 and R46 really preserved narrow exact useful-case surface generalization."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h45_current_with_r47_next",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H45 current, keep H43 as the paper-grade endpoint, and fix R47 as the next exact runtime lane."
+    }
+  ]
+}

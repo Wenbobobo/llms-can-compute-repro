@@ -11,9 +11,9 @@
       "notes": "F21 must fix the near-term route order and the exact/model boundary in machine-readable tables."
     },
     {
-      "item_id": "shared_control_surfaces_record_f21_and_keep_h43_endpoint_explicit",
+      "item_id": "shared_control_surfaces_record_f21_under_h45_current_state",
       "status": "pass",
-      "notes": "Shared control surfaces should expose F21/H44 while keeping H43 explicit as the preserved paper-grade endpoint."
+      "notes": "Shared control surfaces should expose F21 under current H45 control while keeping H43 explicit as the preserved paper-grade endpoint."
     }
   ]
 }

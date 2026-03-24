@@ -13,10 +13,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
   docs-only route reauthorization packet, `R46` exact surface-generalization
   gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
+- `2026-03-24-post-r46-h45-surface-decision-design.md` — the current
+  execution design surface for the landed docs-only `H45` interpretation
+  packet that reads completed `R46`, authorizes exactly `R47`, keeps `F22`
+  blocked, and keeps `R48` deferred behind later explicit `H46`.
 - `2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md` —
-  the current execution design surface for the landed post-`H44` exact
-  held-out useful-case surface-generalization gate and the `H45` follow-on
-  interpretation requirement.
+  the preserved prior execution design surface for the landed post-`H44`
+  exact held-out useful-case surface-generalization gate and the `H45`
+  follow-on interpretation requirement.
 - `2026-03-24-post-r42-aggressive-long-arc-master-plan.md` — the current
   post-`R42` saved master plan that fixes the aggressive long-arc wave order:
   `Wave 0` save/push/fork, `F20/H41` control override, `P27` explicit merge
@@ -131,14 +135,21 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
-- `../milestones/H44_post_h43_route_reauthorization_packet/` — current
-  docs-only route reauthorization packet that preserves `H43` and remains the
-  active packet above completed `R46`.
+- `../milestones/H45_post_r46_surface_decision_packet/` — current active
+  docs-only interpretation packet that reads completed `R46`, authorizes
+  exactly `R47`, and keeps `F22/R48` blocked behind later explicit packets.
+- `../milestones/H44_post_h43_route_reauthorization_packet/` — preserved prior
+  docs-only route reauthorization packet that preserves `H43` and authorizes
+  completed `R46`.
 - `../milestones/R46_origin_useful_case_surface_generalization_gate/` —
-  completed post-`H44` exact runtime gate that keeps `8/8` held-out in-surface
-  variants exact across the fixed `3/3` useful-case kernels.
-- `../milestones/H45_post_r46_surface_decision_packet/` — saved next
-  docs-only interpretation packet downstream of landed `R46`.
+  completed preserved prior post-`H44` exact runtime gate that keeps `8/8`
+  held-out in-surface variants exact across the fixed `3/3` useful-case
+  kernels.
+- `../milestones/F22_post_r46_useful_case_model_bridge_bundle/` — saved
+  blocked comparator bundle downstream of exact frontend evidence plus later
+  explicit `H46`.
+- `../milestones/R47_origin_restricted_frontend_translation_gate/` — next
+  authorized exact frontend bridge lane.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` regeneration-facing wording.
@@ -269,5 +280,5 @@ its status against:
 
 Do not treat an older plan as authorization to reopen a blocked lane. When a
 saved plan and the landed
-`H43/H42/H41/F20/H40/R42/H36/P27/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack
+`H45/H44/H43/H42/H41/F21/F20/R46/H40/R42/H36/P27/P26/F16/F17/F18/F19/H38/H37/P25/F15/H35/P24/R40` stack
 differ, trust the landed packet.

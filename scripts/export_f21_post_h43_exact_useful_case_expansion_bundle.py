@@ -205,7 +205,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "F21 must fix the near-term route order and the exact/model boundary in machine-readable tables.",
         },
         {
-            "item_id": "shared_control_surfaces_record_f21_and_keep_h43_endpoint_explicit",
+            "item_id": "shared_control_surfaces_record_f21_under_h45_current_state",
             "status": "pass"
             if str(h43["selected_outcome"]) == "freeze_r44_as_narrow_supported_here"
             and str(h43["claim_d_state"]) == "supported_here_narrowly"
@@ -215,6 +215,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["readme_text"],
                 [
+                    "h45_post_r46_surface_decision_packet",
                     "h44_post_h43_route_reauthorization_packet",
                     "f21_post_h43_exact_useful_case_expansion_bundle",
                     "current paper-grade endpoint remains the preserved `h43_post_r44_useful_case_refreeze` line",
@@ -223,6 +224,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["status_text"],
                 [
+                    "h45_post_r46_surface_decision_packet",
                     "h44_post_h43_route_reauthorization_packet",
                     "f21_post_h43_exact_useful_case_expansion_bundle",
                     "`p31_post_h43_blog_guardrails_refresh` remains the current low-priority",
@@ -232,6 +234,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["publication_readme_text"],
                 [
                     "docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md",
+                    "docs/plans/2026-03-24-post-r46-h45-surface-decision-design.md",
                     "docs/milestones/f21_post_h43_exact_useful_case_expansion_bundle/",
                     "docs/milestones/h44_post_h43_route_reauthorization_packet/",
                 ],
@@ -240,6 +243,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["plans_index_text"],
                 [
                     "2026-03-24-post-h43-mainline-reentry-master-plan.md",
+                    "2026-03-24-post-r46-h45-surface-decision-design.md",
                     "../milestones/f21_post_h43_exact_useful_case_expansion_bundle/",
                     "../milestones/h44_post_h43_route_reauthorization_packet/",
                 ],
@@ -247,6 +251,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["milestones_index_text"],
                 [
+                    "h45_post_r46_surface_decision_packet/",
                     "f21_post_h43_exact_useful_case_expansion_bundle/",
                     "h44_post_h43_route_reauthorization_packet/",
                     "p31_post_h43_blog_guardrails_refresh/",
@@ -256,7 +261,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["current_stage_driver_text"],
                 [
                     "the current active stage is:",
-                    "h44_post_h43_route_reauthorization_packet",
+                    "h45_post_r46_surface_decision_packet",
                     "the current exact post-`h43` planning bundle is:",
                     "f21_post_h43_exact_useful_case_expansion_bundle",
                 ],
@@ -264,7 +269,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`h44_post_h43_route_reauthorization_packet` is the current active docs-only packet",
+                    "`h45_post_r46_surface_decision_packet` is the current active docs-only",
+                    "`h44_post_h43_route_reauthorization_packet`",
                     "`f21_post_h43_exact_useful_case_expansion_bundle` is the current planning bundle",
                     "`p31_post_h43_blog_guardrails_refresh` is the current low-priority",
                 ],
@@ -278,7 +284,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 ],
             )
             else "blocked",
-            "notes": "Shared control surfaces should expose F21/H44 while keeping H43 explicit as the preserved paper-grade endpoint.",
+            "notes": "Shared control surfaces should expose F21 under current H45 control while keeping H43 explicit as the preserved paper-grade endpoint.",
         },
     ]
 

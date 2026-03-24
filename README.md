@@ -20,10 +20,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-24`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line, and it is no longer parked at the preserved
 `H40 -> R42` activation state alone. The current docs-only decision packet is
-now `H44_post_h43_route_reauthorization_packet`, the preserved prior docs-only
-decision packet is now `H43_post_r44_useful_case_refreeze`, the preserved
-earlier docs-only decision packets are
-`H42_post_r43_route_selection_packet` and
+now `H45_post_r46_surface_decision_packet`, the preserved prior docs-only
+decision packet is now `H44_post_h43_route_reauthorization_packet`, the
+preserved prior useful-case refreeze packet and current paper-grade endpoint
+is now `H43_post_r44_useful_case_refreeze`, the preserved earlier docs-only
+decision packets are `H42_post_r43_route_selection_packet` and
 `H41_post_r42_aggressive_long_arc_decision_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
 the current completed semantic-boundary retrieval-contract gate remains
@@ -52,10 +53,13 @@ semantic-boundary roadmap is
 semantic-boundary activation packet is
 `H40_post_h38_semantic_boundary_activation_packet`. The current paper-grade
 endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
-`H44` remains the active docs-only route packet, landed exact `R46` now keeps
-all `8/8` held-out in-surface useful-case variants exact across the fixed
-`3/3` kernels, `H45` is the next required interpretation packet, and `P31`
-remains the current low-priority docs wave.
+`H45` remains the active docs-only surface-decision packet, `H44` remains the
+preserved prior docs-only route packet, landed exact `R46` remains the
+preserved prior post-`H44` exact runtime gate that kept all `8/8` held-out
+in-surface useful-case variants exact across the fixed `3/3` kernels,
+`R47` is now the next exact runtime candidate, `F22` is saved only as a
+blocked comparator bundle, `R48` remains conditional behind later explicit
+`H46`, and `P31` remains the current low-priority docs wave.
 
 The narrow current stack is:
 
@@ -87,8 +91,13 @@ What stays blocked or deferred:
 - `R44_origin_restricted_wasm_useful_case_execution_gate` is now the
   completed current restricted-Wasm / tiny-`C` useful-case gate;
 - `R46_origin_useful_case_surface_generalization_gate` is now the completed
-  post-`H44` exact runtime gate on `8/8` held-out in-surface variants, and
-  `H45_post_r46_surface_decision_packet` is now the next required lane;
+  preserved prior post-`H44` exact runtime gate on `8/8` held-out in-surface
+  variants, while `H45_post_r46_surface_decision_packet` is now the active
+  docs-only interpretation packet that authorizes exactly
+  `R47_origin_restricted_frontend_translation_gate`, keeps
+  `F22_post_r46_useful_case_model_bridge_bundle` blocked, and keeps
+  `R48_origin_dual_mode_useful_case_model_gate` deferred behind later
+  explicit `H46`;
 - no active downstream runtime lane follows the paper-grade `H43` closeout;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
@@ -140,10 +149,11 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H44_post_h43_route_reauthorization_packet`, not the preserved prior
-  `H43` packet, the preserved earlier `H42` packet, the preserved earlier
-  `H41` packet, the preserved prior `H40` packet, the earlier `H30` packet,
-  or the earlier `H25` same-endpoint decision packet.
+  `H45_post_r46_surface_decision_packet`, not the preserved prior
+  `H44` packet, the preserved prior `H43` packet, the preserved earlier
+  `H42` packet, the preserved earlier `H41` packet, the preserved prior
+  `H40` packet, the earlier `H30` packet, or the earlier `H25`
+  same-endpoint decision packet.
 - The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The current completed semantic-boundary retrieval-contract gate is
@@ -182,8 +192,9 @@ historical packet inventory below.
   `H40_post_h38_semantic_boundary_activation_packet`.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
-- The current active docs-only route packet is
-  `H44_post_h43_route_reauthorization_packet`, the preserved prior
+- The current active docs-only decision packet is
+  `H45_post_r46_surface_decision_packet`, the preserved prior docs-only route
+  packet is `H44_post_h43_route_reauthorization_packet`, the preserved prior
   useful-case refreeze packet is `H43_post_r44_useful_case_refreeze`, the
   preserved prior route-selection packet is
   `H42_post_r43_route_selection_packet`, and `H43` remains the current
@@ -191,7 +202,10 @@ historical packet inventory below.
 - The current completed post-`H44` exact runtime gate is
   `R46_origin_useful_case_surface_generalization_gate`, and it records
   `surface_generalizes_narrowly` on the fixed held-out in-surface `8/8`
-  variant set without widening the claim ceiling.
+  variant set without widening the claim ceiling; `H45` then authorizes
+  exactly `R47_origin_restricted_frontend_translation_gate`, saves `F22` as a
+  blocked comparator bundle, and keeps `R48` deferred behind later explicit
+  `H46`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.

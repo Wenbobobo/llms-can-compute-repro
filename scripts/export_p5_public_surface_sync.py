@@ -139,15 +139,15 @@ def build_sync_checklist(
             "notes": "STATUS should record the current H44/H43/R46 stack and explicit merge posture.",
         },
         {
-            "item_id": "publication_record_readme_tracks_h44_r46_and_current_p30_state",
+            "item_id": "publication_record_readme_tracks_h45_r47_and_current_p30_state",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
                     "canonical `active_driver` for the current",
-                    "`h44` docs-only route reauthorization packet",
-                    "`r46` as the completed current post-`h44` exact runtime gate",
-                    "`h45` as the next required",
+                    "`h45` docs-only surface-decision packet",
+                    "`r47` as the next required exact runtime candidate",
+                    "`f22` as a saved blocked comparator bundle",
                     "`r42`, `r43`, `r44`, and `r45`",
                     "`merge_executed = false`",
                     "docs/milestones/p30_post_h43_manuscript_surface_refresh/",
@@ -159,7 +159,7 @@ def build_sync_checklist(
                 ],
             )
             else "blocked",
-            "notes": "Publication record README should expose H44 as active, H43 as the paper-grade endpoint, R46 as completed, and P30/P29/P28 as current prior sync packets.",
+            "notes": "Publication record README should expose H45 as active, H43 as the paper-grade endpoint, R47 as next, F22 as blocked, and P30/P29/P28 as current prior sync packets.",
         },
         {
             "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
@@ -199,19 +199,20 @@ def build_sync_checklist(
                 current_stage_driver_text,
                 [
                     "the current active stage is:",
+                    "`h45_post_r46_surface_decision_packet`",
                     "`h44_post_h43_route_reauthorization_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
                     "`r44_origin_restricted_wasm_useful_case_execution_gate`",
                     "`r45_origin_dual_mode_model_mainline_gate`",
                     "`r46_origin_useful_case_surface_generalization_gate`",
-                    "`h45_post_r46_surface_decision_packet`",
+                    "`r47_origin_restricted_frontend_translation_gate`",
                     "`p27_post_h41_clean_promotion_and_explicit_merge_packet`",
                     "`merge_executed = false`",
                     "paper-grade endpoint",
                 ],
             )
             else "blocked",
-            "notes": "The current-stage driver should remain the canonical H44/H43/R46 control surface.",
+            "notes": "The current-stage driver should remain the canonical H45/H44/H43/R46 control surface.",
         },
         {
             "item_id": "layout_log_records_post_p7_decisions",
@@ -347,14 +348,14 @@ def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
         "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
-        "internal_driver_phase": "h44_post_h43_route_reauthorization_packet_active",
+        "internal_driver_phase": "h45_post_r46_surface_decision_packet_active",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the outward-facing H43 publication surface aligned while recording H44 as the active docs-only packet, R46 as the completed post-H44 exact runtime gate, H45 as the next required decision packet, P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, and H36 as the preserved routing/refreeze packet"
+            "keep the outward-facing H43 publication surface aligned while recording H45 as the active docs-only packet, H44 as the preserved prior route packet, R46 as the completed preserved prior post-H44 exact runtime gate, R47 as the next required exact runtime candidate, F22 as the saved blocked comparator bundle, P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, and H36 as the preserved routing/refreeze packet"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),

@@ -320,12 +320,12 @@ def build_checklist_rows(
             "notes": "The manuscript, bundle-status, freeze-candidate, main-text, and appendix ledgers should continue to agree.",
         },
         {
-            "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_stack",
+            "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_h45_h43_stack",
             "status": "pass"
             if contains_all(
                 release_candidate_text,
                 [
-                    "current `h44` active docs-only route packet plus `h43` paper-grade",
+                    "current `h45` active docs-only decision packet plus preserved prior `h44`",
                     "`r42-r43-r44-r45-r46` completed semantic-boundary gate stack",
                     "results/h43_post_r44_useful_case_refreeze/summary.json",
                     "results/r46_origin_useful_case_surface_generalization_gate/summary.json",
@@ -358,7 +358,7 @@ def build_checklist_rows(
                 ],
             )
             else "blocked",
-            "notes": "Release-candidate, submission, claim, and archival ledgers should all expose the same current H43 release-control stack.",
+            "notes": "Release-candidate, submission, claim, and archival ledgers should expose the same current H45/H43 release-control split without reviving earlier control states.",
         },
         {
             "item_id": "release_worktree_hygiene_snapshot_classifies_commit_state",
@@ -557,7 +557,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H44 remains the active docs-only route packet, H43 remains the paper-grade endpoint, R46 remains the completed post-H44 exact runtime gate, H45 remains the next required decision packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
+            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H45 remains the active docs-only decision packet, H44 remains the preserved prior route packet, H43 remains the paper-grade endpoint, R46 remains the completed preserved prior post-H44 exact runtime gate, R47 remains the next required exact runtime candidate, F22 remains the saved blocked comparator bundle, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
             if not blocked_items
             else "resolve the blocked release-preflight items before treating outward-sync docs as stable"
         ),

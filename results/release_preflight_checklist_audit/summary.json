@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
     },
     "torch": {
       "installed": false,
@@ -58,6 +58,6 @@
     "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H44 remains the active docs-only route packet, H43 remains the paper-grade endpoint, R46 remains the completed post-H44 exact runtime gate, H45 remains the next required decision packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
+    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H45 remains the active docs-only decision packet, H44 remains the preserved prior route packet, H43 remains the paper-grade endpoint, R46 remains the completed preserved prior post-H44 exact runtime gate, R47 remains the next required exact runtime candidate, F22 remains the saved blocked comparator bundle, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
   }
 }

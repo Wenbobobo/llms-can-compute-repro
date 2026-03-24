@@ -211,11 +211,14 @@
 
 ## Current bounded mainline state
 
-- `H44` is the current active docs-only route packet for the bounded mainline
-  after the landed
+- `H45` is the current active docs-only decision packet for the bounded
+  mainline after the landed
   `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> F21 -> R46`
-  follow-on stack above `H40/R42`; it preserves `H43` as the paper-grade
-  endpoint and requires `H45` before any broader surface lift.
+  follow-on stack above `H40/R42`; it preserves `H44` as the prior route
+  packet, preserves `H43` as the paper-grade endpoint, authorizes exactly
+  `R47`, and keeps `F22/R48` behind later explicit packets.
+- `H44` is the preserved prior docs-only route packet that authorized exact
+  `R46` without widening the paper-grade endpoint.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint; it records claim `D` as `supported_here_narrowly` and
   restores `no_active_downstream_runtime_lane`.
@@ -231,9 +234,11 @@
   completed `R43/R44/R45` stack.
 - `R43` is the completed current exact bounded-memory small-VM gate on five
   fixed families.
-- `R46` is the completed current post-`H44` exact runtime gate on held-out
-  in-surface useful-case variants; it keeps `8/8` variants exact across the
-  fixed `3/3` kernels and records `surface_generalizes_narrowly`.
+- `R46` is the completed preserved prior post-`H44` exact runtime gate on
+  held-out in-surface useful-case variants; it keeps `8/8` variants exact
+  across the fixed `3/3` kernels and records `surface_generalizes_narrowly`.
+- `R47` is now the next authorized exact runtime candidate, while `F22`
+  remains saved only as a blocked comparator bundle.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.
 - `R45` is the completed current coequal model gate and remains explicitly
