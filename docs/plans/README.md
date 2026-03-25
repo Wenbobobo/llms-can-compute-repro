@@ -7,23 +7,25 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-03-25-post-h54-useful-kernel-closeout-analysis.md`
+  closeout analysis comparing `R60/R61` against prior value-negative lanes
 - `2026-03-25-post-h54-useful-kernel-stopgo-design.md`
-  saved successor design for the next explicit post-`H54` stop/go packet
+  preserved successor design for the now-closed post-`H54` stop/go packet
 - `2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
   preserved master plan for the now-closed compiled-boundary wave
-- `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
-  planning-only bundle that fixes `H53 -> R58 -> R59 -> H54`
-- `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
+- `../milestones/H56_post_r60_r61_useful_kernel_decision_packet/`
   current active docs-only closeout packet
-- `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
+- `../milestones/F30_post_h54_useful_kernel_bridge_bundle/`
+  preserved planning-only bundle that fixed `H55 -> R60 -> R61 -> H56`
+- `../milestones/P39_post_h54_successor_worktree_hygiene_sync/`
   aligned low-priority hygiene sidecar for the closed wave
 
 ## Current Route
 
 - mainline:
-  `F29 -> H53 -> R58 -> R59 -> H54`
+  `F30 -> H55 -> R60 -> R61 -> H56`
 - sidecar:
-  `P38`
+  `P39`
 
 Blocked by default:
 
@@ -49,6 +51,13 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-03-25-post-h54-useful-kernel-closeout-analysis.md`
+- `../milestones/F30_post_h54_useful_kernel_bridge_bundle/`
+- `../milestones/H56_post_r60_r61_useful_kernel_decision_packet/`
+- `../milestones/P39_post_h54_successor_worktree_hygiene_sync/`
+- `../../results/F30_post_h54_useful_kernel_bridge_bundle/summary.json`
+- `../../results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+- `../../results/P39_post_h54_successor_worktree_hygiene_sync/summary.json`
 - `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
 - `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
 - `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`

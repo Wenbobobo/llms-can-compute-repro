@@ -109,4 +109,8 @@
   bounded per-file timing follow-up that classifies the current full-suite
   validation-runtime gate
 - `setup_unattended_worktrees.ps1` — create the default unattended worktree
-  layout after the tree is clean enough to branch
+  layout after the tree is clean enough to branch, now rooted by default at
+  `../wt`
+- `sync_repo_local_worktree_aliases.ps1` — create or refresh the repo-local
+  `../wt` junction aliases for registered worktrees and legacy `D:/wt/*`
+  shortcuts
