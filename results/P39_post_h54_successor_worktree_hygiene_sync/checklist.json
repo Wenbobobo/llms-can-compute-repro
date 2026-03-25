@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p39_docs_define_saved_successor_hygiene_sidecar",
+      "status": "pass",
+      "notes": "P39 should stay a saved successor hygiene sidecar and should not present itself as the current low-priority wave."
+    },
+    {
+      "item_id": "p39_records_successor_worktree_artifact_and_commit_policy",
+      "status": "pass",
+      "notes": "P39 should save the successor worktree strategy, artifact policy, and commit cadence before any later execution wave opens."
+    },
+    {
+      "item_id": "p39_repo_state_matches_large_artifact_policy",
+      "status": "pass",
+      "notes": "The clean successor branch should keep tracked artifacts under the roughly 10 MiB default limit."
+    },
+    {
+      "item_id": "indices_record_p39_as_saved_successor_not_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Shared indexes should keep P38 current and record P39 only as saved successor hygiene storage."
+    }
+  ]
+}

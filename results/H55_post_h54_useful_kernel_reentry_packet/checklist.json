@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h55_docs_record_saved_successor_reentry_decision_only",
+      "status": "pass",
+      "notes": "H55 should remain a saved successor decision packet only, with one admissible positive route through R60."
+    },
+    {
+      "item_id": "upstream_h54_closeout_and_h43_ceiling_are_preserved",
+      "status": "pass",
+      "notes": "H55 must preserve H54 as current closeout storage and keep H43 as the paper-grade endpoint."
+    },
+    {
+      "item_id": "indices_record_h55_as_saved_successor_not_active_packet",
+      "status": "pass",
+      "notes": "Shared successor indexes should expose H55 as saved decision storage rather than as the active packet."
+    }
+  ]
+}
