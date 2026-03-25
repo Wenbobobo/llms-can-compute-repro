@@ -88,6 +88,8 @@ The blocked future trainable gate remains:
 - The next meaningful action is either a new explicit planning packet with a
   genuinely different cost structure or a broader consolidation/closeout pass;
   this branch should not be extended by momentum.
+- The saved consolidation note is
+  `docs/plans/2026-03-25-post-h58-closeout-and-reopen-criteria-analysis.md`.
 
 ## Control References
 
@@ -98,6 +100,7 @@ The blocked future trainable gate remains:
 - `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
 - `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `docs/plans/2026-03-25-post-h58-closeout-and-reopen-criteria-analysis.md`
 - `docs/plans/2026-03-25-post-h56-last-discriminator-design.md`
 - `docs/milestones/F31_post_h56_final_discriminating_value_boundary_bundle/`
 - `docs/milestones/H57_post_h56_last_discriminator_authorization_packet/`

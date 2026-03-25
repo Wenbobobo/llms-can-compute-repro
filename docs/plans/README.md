@@ -7,6 +7,8 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-03-25-post-h58-closeout-and-reopen-criteria-analysis.md`
+  consolidation note for the post-`H58` stop boundary and future reopen rules
 - `2026-03-25-post-h56-last-discriminator-design.md`
   preserved design for the now-closed final discriminator wave
 - `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
@@ -45,6 +47,7 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-03-25-post-h58-closeout-and-reopen-criteria-analysis.md`
 - `2026-03-25-post-h56-last-discriminator-design.md`
 - `../milestones/F31_post_h56_final_discriminating_value_boundary_bundle/`
 - `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
