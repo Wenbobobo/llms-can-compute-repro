@@ -1,70 +1,65 @@
 # Publication Record
 
-This directory is the paper-first evidence ledger for the repository. It
-tracks current claim wording, bundle boundaries, and public-safe evidence
-mapping.
+This directory stores paper-facing, archive-facing, review-facing, and release
+facing control surfaces. When a publication-facing file conflicts with the
+current stage driver or the machine-readable `results/` summaries, trust the
+current stage driver first.
 
-## Current Control Docs
+## Current Start Points
 
-- `current_stage_driver.md`
-  canonical current control surface
-- `experiment_manifest.md`
-  dated ledger of landed waves
-- `../plans/2026-03-25-post-h56-last-discriminator-design.md`
-  preserved design for the now-closed final discriminator wave
-- `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
+- `../plans/2026-03-25-post-h59-reproduction-gap-and-different-cost-structure-design.md`
+  current design for the post-`H59` gap packet and future guarded planning
+- `../plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`
+  self-contained GPTPro consultation dossier
+- `../milestones/H59_post_h58_reproduction_gap_decision_packet/`
   current active docs-only packet
-- `../milestones/F31_post_h56_final_discriminating_value_boundary_bundle/`
-  preserved planning bundle for the closed final discriminator wave
-- `../milestones/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/`
+- `../milestones/F33_post_h59_different_cost_structure_reopen_bundle/`
+  current planning-only future bundle
+- `../milestones/P42_post_h59_gptpro_reinterview_packet/`
   current low-priority operational/docs wave
-- `../milestones/R62_origin_native_useful_kernel_value_discriminator_gate/`
-  completed native value discriminator gate
+- `../milestones/P41_post_h58_publication_and_archive_sync/`
+  preserved prior publication/archive sidecar
+- `../milestones/F32_post_h58_closeout_certification_bundle/`
+  preserved prior closeout certification bundle
 
-## Current Publication State
+## Current Reading
 
 The live scientific reading is:
 
-- `H58_post_r62_origin_value_boundary_closeout_packet`
+- `H59_post_h58_reproduction_gap_decision_packet`
   current active packet
-- `H56_post_r60_r61_useful_kernel_decision_packet`
-  preserved prior compiled useful-kernel closeout
-- `H57_post_h56_last_discriminator_authorization_packet`
-  preserved prior last-discriminator authorization packet
-- `F31_post_h56_final_discriminating_value_boundary_bundle`
+- `H58_post_r62_origin_value_boundary_closeout_packet`
+  preserved prior value-negative closeout
+- `F32_post_h58_closeout_certification_bundle`
+  preserved prior closeout certification bundle
+- `F33_post_h59_different_cost_structure_reopen_bundle`
   current planning bundle
-- `P40_post_h56_successor_worktree_and_artifact_hygiene_sync`
-  current low-priority operational/docs wave
+- `P42_post_h59_gptpro_reinterview_packet`
+  current low-priority dossier sidecar
+- `P41_post_h58_publication_and_archive_sync`
+  preserved prior publication/archive sync sidecar
 - `H43_post_r44_useful_case_refreeze`
   current paper-grade endpoint
 - `R62_origin_native_useful_kernel_value_discriminator_gate`
-  completed native value discriminator gate
-- `no_active_downstream_runtime_lane`
+  completed native value-negative discriminator
+- `planning_only_or_project_stop`
   current downstream scientific lane
-
-The active publication stance is reproduction-first and falsification-first:
-
-- preserve `H56` as a real closeout, not a staging point for automatic growth
-- preserve `R62` as exact but value-negative native evidence
-- treat `H58` as the honest closeout: mechanism support survives, bounded
-  executor value does not
-- do not reopen transformed or trainable entry by momentum
-- do not widen to arbitrary `C`, broad Wasm, or general "LLMs are computers"
-- keep dirty root `main` out of scientific execution
 
 ## Current Evidence Packets
 
-- `../../results/F31_post_h56_final_discriminating_value_boundary_bundle/summary.json`
-- `../../results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
-- `../../results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
+- `../../results/F32_post_h58_closeout_certification_bundle/summary.json`
+- `../../results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+- `../../results/P41_post_h58_publication_and_archive_sync/summary.json`
+- `../../results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+- `../../results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
 - `../../results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-- `../../results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
-- `../../results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+- `../../results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
 - `../../results/H43_post_r44_useful_case_refreeze/summary.json`
 
-## Historical Note
+## Publication Rule
 
-Older publication surfaces remain useful for provenance and paper drafting.
-When older files describe a "current" packet or plan, read that as historical
-state at the time of writing. The current live control surface is the
-`H58/F31/P40` stack above preserved `H56/H57/H43/H36`.
+- Keep the narrow positive mechanism/execution result explicit.
+- Keep the current value-negative closeout explicit.
+- Do not imply broad headline reproduction.
+- Do not imply an open runtime lane.
+- Do not imply merge back to dirty root `main`.

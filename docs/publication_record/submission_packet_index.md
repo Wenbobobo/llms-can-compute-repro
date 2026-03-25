@@ -79,7 +79,11 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../milestones/H57_post_h56_last_discriminator_authorization_packet/`
 - `../milestones/R62_origin_native_useful_kernel_value_discriminator_gate/`
 - `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
-- `../milestones/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/`
+- `../milestones/F32_post_h58_closeout_certification_bundle/`
+- `../milestones/H59_post_h58_reproduction_gap_decision_packet/`
+- `../milestones/P41_post_h58_publication_and_archive_sync/`
+- `../milestones/P42_post_h59_gptpro_reinterview_packet/`
+- `../milestones/F33_post_h59_different_cost_structure_reopen_bundle/`
 - `../milestones/H50_post_r51_r52_scope_decision_packet/`
 - `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
 - `../milestones/H51_post_h50_origin_mechanism_reentry_packet/`
@@ -146,7 +150,11 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
 - `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
+- `results/F32_post_h58_closeout_certification_bundle/summary.json`
+- `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+- `results/P41_post_h58_publication_and_archive_sync/summary.json`
+- `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+- `results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`

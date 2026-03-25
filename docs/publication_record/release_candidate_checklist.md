@@ -67,19 +67,26 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-  reports the current active docs-only closeout packet,
-  `stop_as_mechanism_supported_but_no_bounded_executor_value`, and
-  `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+  reports the current active docs-only reproduction-gap packet,
+  `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`,
+  and `current_downstream_scientific_lane = planning_only_or_project_stop`.
+- [ ] `results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
+  reports the current planning bundle and
+  `admissible_reopen_requirement = materially_different_cost_structure`.
 - [ ] `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
   reports the preserved prior last-discriminator authorization packet and
   `authorize_one_last_native_useful_kernel_value_discriminator_gate`.
 - [ ] `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
   reports the completed native value-negative discriminator on `4/4` exact rows
   across `2/2` kernels.
-- [ ] `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
-  reports the completed operational/docs sidecar for the closed final
-  discriminator wave.
+- [ ] `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+  reports the current low-priority dossier sidecar.
+- [ ] `results/P41_post_h58_publication_and_archive_sync/summary.json`
+  reports the preserved prior publication/archive sync sidecar with
+  `merge_executed = false`.
+- [ ] `results/F32_post_h58_closeout_certification_bundle/summary.json`
+  reports the preserved prior closeout certification bundle.
 - [ ] `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
   reports the preserved prior compiled useful-kernel closeout packet,
   `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`, and

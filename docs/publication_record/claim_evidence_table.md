@@ -211,7 +211,26 @@
 
 ## Current bounded mainline state
 
-- `H58` is now the current active docs-only closeout packet for the final
+- `H59` is now the current active docs-only packet; it preserves `H58` as the
+  prior value-negative closeout, preserves `F32` as the closeout
+  certification bundle, preserves `H43` as the paper-grade endpoint, selects
+  `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`,
+  keeps `F27/R53/R54` blocked, and sets the downstream lane to
+  `planning_only_or_project_stop`.
+- `F33` is the current planning bundle; it preserves `H59` as the active
+  packet, preserves `P41` as the prior publication/archive sync sidecar,
+  keeps `P42` as the current low-priority dossier sidecar, and allows only
+  materially different future cost-structure candidates or project stop.
+- `P42` is the current low-priority operational/docs wave; it records the
+  self-contained GPTPro dossier and keeps it advisory rather than
+  claim-bearing.
+- `P41` is the preserved prior publication/archive sync sidecar; it records
+  that archive/release surfaces are aligned to `H59`, confirms zero tracked
+  artifacts at or above roughly `10 MiB`, and confirms that raw-row ignore
+  rules remain active.
+- `F32` is the preserved prior closeout certification bundle; it certifies
+  that `H58` is a real stop boundary and not a staging point.
+- `H58` is the preserved prior docs-only closeout packet for the final
   post-`H56` discriminator wave; it preserves `H56` as the prior compiled
   useful-kernel closeout, preserves `H57` as the prior authorization packet,
   preserves `H43` as the paper-grade endpoint, selects
@@ -219,7 +238,7 @@
   `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
 - `F31` is the completed preserved planning bundle that fixed
   `H57 -> R62 -> H58` as the only admissible post-`H56` sequence and kept
-  `P40` as the only operational sidecar.
+  `P40` as the operational sidecar for that closed wave.
 - `H57` is the preserved prior docs-only authorization packet for the last
   native useful-kernel discriminator lane; it preserved `H56`, preserved
   `H43`, and authorized exactly `R62 -> H58` without reopening transformed or
@@ -229,9 +248,10 @@
   kernels but records `native_useful_kernel_route_lacks_bounded_value`
   because accelerated wins are `0/2` on the longest kernel rows and
   external-scalar same-order behavior is `0/2`.
-- `P40` is the current low-priority operational/docs wave; it records the
-  clean successor worktree, keeps `merge_executed = false` explicit, and
-  confirms zero tracked artifacts at or above roughly `10 MiB`.
+- `P40` is the preserved prior low-priority operational/docs wave for the
+  closed final-discriminator packet; it recorded the clean successor worktree,
+  kept `merge_executed = false` explicit, and confirmed zero tracked artifacts
+  at or above roughly `10 MiB`.
 - `H56` is the preserved prior docs-only interpretation packet for the closed
   compiled useful-kernel bridge lane after landed `R60/R61`; it preserves
   `H54` as the prior compiled-boundary closeout, preserves `H55` as the prior

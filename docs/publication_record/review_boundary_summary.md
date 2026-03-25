@@ -4,7 +4,11 @@ Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current
 active routing/decision state is
-`H58_post_r62_origin_value_boundary_closeout_packet`, with
+`H59_post_h58_reproduction_gap_decision_packet`, with
+`H58_post_r62_origin_value_boundary_closeout_packet` as the preserved prior
+value-negative closeout packet,
+`F32_post_h58_closeout_certification_bundle` as the preserved prior closeout
+certification bundle,
 `H56_post_r60_r61_useful_kernel_decision_packet` as the preserved prior
 compiled useful-kernel closeout packet,
 `H57_post_h56_last_discriminator_authorization_packet` as the preserved prior
@@ -31,13 +35,14 @@ evidence stack relevant to the narrow endpoint, while
 `R55_origin_2d_hardmax_retrieval_equivalence_gate`,
 `R56_origin_append_only_trace_vm_semantics_gate`, and
 `R57_origin_accelerated_trace_vm_comparator_gate` remain the preserved prior
-mechanism evidence stack, `F31_post_h56_final_discriminating_value_boundary_bundle`
+mechanism evidence stack, `F33_post_h59_different_cost_structure_reopen_bundle`
 as the current planning bundle, `F20_post_r42_dual_mode_model_mainline_bundle`
 as the preserved coequal-mainline model bundle,
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` as the completed
 explicit merge packet with `merge_executed = false`,
-`P40_post_h56_successor_worktree_and_artifact_hygiene_sync` as the aligned
-operational/docs sidecar for the closed final-discriminator wave,
+`P42_post_h59_gptpro_reinterview_packet` as the current low-priority
+operational/docs sidecar, `P41_post_h58_publication_and_archive_sync` as the
+preserved prior publication/archive sync sidecar,
 `P38_post_h52_compiled_boundary_hygiene_sync` as the preserved prior
 compiled-boundary sidecar, `P26_post_h37_promotion_and_artifact_hygiene_audit`
 as the preserved prior operational audit lane,
@@ -161,10 +166,20 @@ Origin-core pivot packet underneath it.
   across `2/2` kernels but still disconfirms bounded executor value because
   accelerated wins are `0/2` on the longest kernel rows and external-scalar
   same-order behavior is `0/2`;
-- `H58` closes the active mainline as mechanism-supported but value-negative
-  and restores `no_active_downstream_runtime_lane`;
-- `P40` records the clean successor worktree plus tracked-artifact hygiene
+- `H58` closes the strongest current executor-value mainline as
+  mechanism-supported but value-negative and restores
+  `no_active_downstream_runtime_lane`;
+- `F32` certifies that `H58` is a real stop boundary and that same-lane
+  reopen is not justified without a new cost structure;
+- `H59` makes the current repo-level meaning explicit: narrow positive
+  mechanism reproduction survived, broad headline reproduction did not, and
+  future work must use a materially different cost structure or stop;
+- `P41` records archive/release sync plus current artifact-hygiene posture
   without reopening science;
+- `P42` records the self-contained GPTPro dossier without treating it as
+  evidence;
+- `F33` records that only planning-only different-cost-structure candidate
+  screens remain admissible;
 - `F7` preserves a mechanical contradiction/reopen specification under that
   no-reopen state, `F8` preserves the broader roadmap classification,
   `F10` preserves the richer-value/comparator bridge surface, `F12` preserves
@@ -256,7 +271,11 @@ Origin-core pivot packet underneath it.
 - `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
 - `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
+- `results/F32_post_h58_closeout_certification_bundle/summary.json`
+- `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+- `results/P41_post_h58_publication_and_archive_sync/summary.json`
+- `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+- `results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`

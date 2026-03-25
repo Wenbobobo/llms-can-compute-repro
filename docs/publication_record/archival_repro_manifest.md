@@ -219,11 +219,19 @@ uv run pytest -q
   records exact native useful-kernel execution on all declared rows while
   disconfirming bounded executor value
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-  records the current active docs-only closeout and restores
+  records the preserved prior value-negative closeout and restores
   `no_active_downstream_runtime_lane`
-- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
-  records the aligned low-priority operational/docs sidecar for the closed
-  final-discriminator wave
+- `results/F32_post_h58_closeout_certification_bundle/summary.json`
+  records that `H58` is a real stop boundary and not a staging point
+- `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+  records the current active reproduction-gap packet and sets the downstream
+  lane to `planning_only_or_project_stop`
+- `results/P41_post_h58_publication_and_archive_sync/summary.json`
+  records archive/release sync plus current artifact-hygiene posture
+- `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+  records the current low-priority GPTPro dossier sidecar
+- `results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
+  records the current planning-only future bundle
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json` records
   the preserved planning bundle that fixed the later mechanism-only sequence
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json` records
@@ -315,18 +323,21 @@ exact latest-write retrieval, bounded precision, and one restricted compiled-
 boundary lowering-plus-execution surface on the active Origin-core substrate.
 It is not evidence for arbitrary `C`, general LLM computation, or current-
 scope end-to-end systems superiority. The current active docs-only control
-packet is `H58`, above the preserved prior compiled useful-kernel closeout
-`H56`, the preserved prior authorization packet `H57`, the preserved prior
-compiled-boundary closeout `H54`, the preserved prior mechanism closeout
-`H52`, and the preserved paper-grade endpoint `H43`. Under that stack, `H36`
-remains the preserved active routing/refreeze packet, `R42/R43/R44/R45`
-remain the semantic-boundary gate stack, `R55/R56` remain exact mechanism
-support only, `R57` remains negative fast-path comparator evidence,
-`R58/R59` remain exact narrow compiled-boundary support only, `R60` remains
-exact compiled useful-kernel carryover support, `R61` remains compiled
+packet is `H59`, above the preserved prior value-negative closeout `H58`, the
+preserved prior closeout certification bundle `F32`, the current planning
+bundle `F33`, the current low-priority dossier sidecar `P42`, the preserved
+prior publication/archive sync sidecar `P41`, the preserved prior compiled
+useful-kernel closeout `H56`, the preserved prior authorization packet `H57`,
+the preserved prior compiled-boundary closeout `H54`, the preserved prior
+mechanism closeout `H52`, and the preserved paper-grade endpoint `H43`. Under
+that stack, `H36` remains the preserved active routing/refreeze packet,
+`R42/R43/R44/R45` remain the semantic-boundary gate stack, `R55/R56` remain
+exact mechanism support only, `R57` remains negative fast-path comparator
+evidence, `R58/R59` remain exact narrow compiled-boundary support only, `R60`
+remains exact compiled useful-kernel carryover support, `R61` remains compiled
 useful-kernel value-negative evidence, `R62` remains native useful-kernel
-value-negative evidence, and `P27/P38/P40` preserve the current operational
-release-control posture with `merge_executed = false`. The earlier
+value-negative evidence, and `P27/P38/P41/P42` preserve the current
+operational release-control posture with `merge_executed = false`. The earlier
 `H32 -> H33 -> R39 -> H34`
 compiled-boundary line remains preserved historical support rather than the
 active routing top. `H35/R40/H36` record the later bounded-scalar reopen and

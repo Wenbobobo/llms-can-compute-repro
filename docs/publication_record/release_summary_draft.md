@@ -70,18 +70,21 @@ The current execution-facing chain is now
 `F31_post_h56_final_discriminating_value_boundary_bundle` ->
 `H57_post_h56_last_discriminator_authorization_packet` ->
 `R62_origin_native_useful_kernel_value_discriminator_gate` ->
-`H58_post_r62_origin_value_boundary_closeout_packet`.
+`H58_post_r62_origin_value_boundary_closeout_packet` ->
+`F32_post_h58_closeout_certification_bundle` ->
+`H59_post_h58_reproduction_gap_decision_packet`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The current live control state is the post-`R62` closeout selected by `H58`:
+The current live control state is the post-`H59` reproduction-gap packet:
 the append-only executor stack remains mechanistically supported on narrow
 admitted surfaces, but bounded executor value remains negative even after the
-runtime is collapsed down to native useful-kernel trace programs. `H58`
-preserves `H56` as the prior compiled useful-kernel closeout, preserves
+runtime is collapsed down to native useful-kernel trace programs. `H59`
+preserves `H58` as the prior value-negative closeout, preserves `F32` as the
+closeout certification bundle, preserves `H56` as the prior compiled useful-kernel closeout, preserves
 `H54` as the prior compiled-boundary closeout, preserves `H52` as the prior
 mechanism closeout, and does not promote the current route into a broader
 fast-path or systems-value claim. `H43` remains the paper-grade endpoint for
@@ -153,7 +156,11 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H58_post_r62_origin_value_boundary_closeout_packet`, which preserves
+`H59_post_h58_reproduction_gap_decision_packet`, which preserves
+`H58_post_r62_origin_value_boundary_closeout_packet` as the prior
+value-negative closeout, preserves
+`F32_post_h58_closeout_certification_bundle` as the prior closeout
+certification bundle, preserves
 `H56_post_r60_r61_useful_kernel_decision_packet` as the prior compiled
 useful-kernel closeout, preserves
 `H57_post_h56_last_discriminator_authorization_packet` as the prior
@@ -175,12 +182,11 @@ preserved prior mechanism evidence stack, records `R58/R59` as exact narrow
 compiled-boundary evidence only, records `R60/R61` as exact-but-value-negative
 compiled useful-kernel bridge evidence, records `R62` as the final native
 value-negative discriminator, records
-`F31_post_h56_final_discriminating_value_boundary_bundle` as the current
-planning bundle above preserved `F30/F29/F28/F20`, records
-`P40_post_h56_successor_worktree_and_artifact_hygiene_sync` as the current
-operational/docs sidecar above preserved `P38/P27/P26/P25`, and keeps
-`merge_executed = false` explicit while returning the downstream lane to
-`no_active_downstream_runtime_lane`.
+`F33_post_h59_different_cost_structure_reopen_bundle` as the current
+planning bundle above preserved `F32/F31/F30/F29/F28/F20`, records
+`P42_post_h59_gptpro_reinterview_packet` as the current operational/docs
+sidecar above preserved `P41/P38/P27/P26/P25`, keeps `merge_executed = false`
+explicit, and sets the downstream lane to `planning_only_or_project_stop`.
 
 The later paper-facing and planning-only closeout lanes align to that reading:
 `P28/P29/P30` keep publication, release, and manuscript ledgers downstream of

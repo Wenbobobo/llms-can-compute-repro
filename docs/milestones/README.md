@@ -13,31 +13,20 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H58_post_r62_origin_value_boundary_closeout_packet/`
+- `H59_post_h58_reproduction_gap_decision_packet/`
   current active docs-only packet
-- `H57_post_h56_last_discriminator_authorization_packet/`
-  preserved prior last-discriminator authorization packet
-- `H56_post_r60_r61_useful_kernel_decision_packet/`
-  preserved prior compiled useful-kernel closeout
-- `F31_post_h56_final_discriminating_value_boundary_bundle/`
-  current planning-only final discriminator bundle
-- `P40_post_h56_successor_worktree_and_artifact_hygiene_sync/`
+- `F33_post_h59_different_cost_structure_reopen_bundle/`
+  current planning-only future bundle
+- `P42_post_h59_gptpro_reinterview_packet/`
   current low-priority operational/docs wave
+- `P41_post_h58_publication_and_archive_sync/`
+  preserved prior publication/archive sidecar
+- `F32_post_h58_closeout_certification_bundle/`
+  preserved prior closeout certification bundle
+- `H58_post_r62_origin_value_boundary_closeout_packet/`
+  preserved prior value-negative closeout
 - `R62_origin_native_useful_kernel_value_discriminator_gate/`
   completed native value discriminator gate
-
-## Preserved Recent Upstream Wave
-
-- `F29_post_h52_restricted_compiled_boundary_bundle/`
-  preserved prior compiled-boundary planning bundle
-- `H53_post_h52_compiled_boundary_reentry_packet/`
-  preserved prior compiled-boundary reentry packet
-- `R58_origin_restricted_stack_bytecode_lowering_contract_gate/`
-  preserved prior exact compiled-boundary lowering gate
-- `R59_origin_compiled_trace_vm_execution_gate/`
-  preserved prior exact compiled-boundary execution gate
-- `H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
-  preserved prior mechanism closeout
 
 ## Preserved Anchors
 
@@ -54,11 +43,12 @@ historical and may use then-current wording.
 
 ## Current Rule
 
-- preserve negative `H56` on bounded executor/system value
-- keep `H58` as the current closeout
-- keep the downstream scientific lane at `no_active_downstream_runtime_lane`
-- do not reopen transformed or trainable entry by momentum
-- keep dirty root `main` out of scientific execution
+- preserve the narrow positive mechanism/execution result;
+- preserve the landed value-negative closeout at `H58`;
+- keep `H59` as the current active interpretation packet;
+- keep the downstream scientific lane at `planning_only_or_project_stop`;
+- do not reopen the same executor-value lane by momentum; and
+- keep dirty root `main` out of scientific execution.
 
 ## Historical Note
 

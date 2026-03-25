@@ -40,15 +40,20 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, but authoritative
-control has moved beyond the prose baseline: `H58` is the current active
-docs-only closeout packet, `H56` is the preserved prior compiled useful-kernel
-closeout packet, `H57` is the preserved prior authorization packet, `H54` is
-the preserved prior compiled-boundary closeout packet, `H52` is the preserved
-prior mechanism closeout packet, `H50` is the preserved prior broader-route
-closeout packet, `H43` remains the paper-grade endpoint, `H42/H41` remain
-preserved prior docs-only decision packets, `H36` is the preserved active
-routing/refreeze packet, and `R42`, `R43`, `R44`, `R45`, `R58`, `R59`, `R60`,
-`R61`, and `R62` are the completed current and preserved-late evidence stack.
+control has moved beyond the prose baseline: `H59` is the current active
+docs-only reproduction-gap packet, `H58` is the preserved prior
+value-negative closeout packet, `F32` is the preserved prior closeout
+certification bundle, `F33` is the current planning bundle, `P42` is the
+current low-priority dossier sidecar, `P41` is the preserved prior
+publication/archive sync sidecar, `H56` is the preserved prior compiled
+useful-kernel closeout packet, `H57` is the preserved prior authorization
+packet, `H54` is the preserved prior compiled-boundary closeout packet,
+`H52` is the preserved prior mechanism closeout packet, `H50` is the preserved
+prior broader-route closeout packet, `H43` remains the paper-grade endpoint,
+`H42/H41` remain preserved prior docs-only decision packets, `H36` is the
+preserved active routing/refreeze packet, and `R42`, `R43`, `R44`, `R45`,
+`R58`, `R59`, `R60`, `R61`, and `R62` are the completed current and
+preserved-late evidence stack.
 `R58` is the completed exact compiled-boundary lowering gate, `R59` is the
 completed exact compiled trace-VM execution gate, `R60` is the completed exact
 compiled useful-kernel carryover gate, `R61` is the completed compiled
