@@ -4,23 +4,23 @@
 
 The current active stage is:
 
-- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`
+- `H54_post_r58_r59_compiled_boundary_decision_packet`
 
 The preserved prior docs-only closeout is:
 
-- `H50_post_r51_r52_scope_decision_packet`
+- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`
 
-The preserved prior mechanism-reentry packet is:
+The preserved prior compiled-boundary reentry packet is:
 
-- `H51_post_h50_origin_mechanism_reentry_packet`
+- `H53_post_h52_compiled_boundary_reentry_packet`
 
 The current planning bundle is:
 
-- `F28_post_h50_origin_mechanism_reentry_bundle`
+- `F29_post_h52_restricted_compiled_boundary_bundle`
 
 The current low-priority operational/docs wave is:
 
-- `P37_post_h50_narrow_executor_closeout_sync`
+- `P38_post_h52_compiled_boundary_hygiene_sync`
 
 The preserved paper-grade endpoint is:
 
@@ -30,14 +30,13 @@ The preserved active routing/refreeze packet is:
 
 - `H36_post_r40_bounded_scalar_family_refreeze`
 
-The completed exact mechanism gates under the closed mechanism lane are:
+The completed lowering gate under the current compiled-boundary lane is:
 
-- `R55_origin_2d_hardmax_retrieval_equivalence_gate`
-- `R56_origin_append_only_trace_vm_semantics_gate`
+- `R58_origin_restricted_stack_bytecode_lowering_contract_gate`
 
-The completed comparator gate under the closed mechanism lane is:
+The completed execution gate under the current compiled-boundary lane is:
 
-- `R57_origin_accelerated_trace_vm_comparator_gate`
+- `R59_origin_compiled_trace_vm_execution_gate`
 
 The current downstream scientific lane is:
 
@@ -57,48 +56,46 @@ The blocked future trainable gate remains:
 
 ## Current Machine-State Meaning
 
-- `H50` remains a landed negative closeout on the broader post-`H49`
-  internal-route value question. It is not overturned by the narrower
-  mechanism lane.
-- `F28` remains the preserved planning bundle that fixed
-  `R55 -> R56 -> R57 -> H52` as the only admissible mechanism-first sequence.
-- `H51` remains the preserved prior mechanism-reentry packet that authorized
-  reentry through `R55` only.
-- `R55` is completed exact mechanism evidence with
-  `retrieval_equivalence_supported_exactly` on `5/5` fixed tasks and
-  `45/45` exact maximizer-row identity observations.
-- `R56` is completed exact trace-VM semantics evidence with
-  `trace_vm_semantics_supported_exactly` on `5/5` fixed rows and `288`
-  exported transition rows.
-- `R57` is completed comparator evidence with
-  `accelerated_trace_vm_lacks_bounded_value`: all three comparator routes stay
-  exact on `5/5` rows, but accelerated beats linear on `0/5` rows and beats
-  the transparent external interpreter on `0/5` rows.
-- `H52` is now the current active docs-only packet and selects
-  `freeze_origin_mechanism_supported_without_fastpath_value`.
+- `H52` remains a landed negative closeout on the prior mechanism fast-path
+  question. It is preserved, not overturned.
+- `F29` remains the preserved planning bundle that fixed
+  `H53 -> R58 -> R59 -> H54` as the only admissible compiled-boundary
+  sequence.
+- `H53` remains the preserved prior compiled-boundary reentry packet that
+  authorized reentry through `R58` only.
+- `R58` is completed exact compiled-boundary lowering evidence with
+  `restricted_stack_bytecode_lowering_supported_narrowly` on `5/5` fixed typed
+  stack-bytecode rows and exact source/spec/lowered parity across `5/5`
+  categories.
+- `R59` is completed exact compiled-boundary execution evidence with
+  `compiled_trace_vm_execution_supported_exactly` on the exact `R58` row set:
+  source-to-lowered parity remains exact on `5/5` rows and both linear and
+  accelerated internal lowered routes remain exact on `5/5` rows.
+- `H54` is now the current active docs-only packet and selects
+  `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`.
 - `no_active_downstream_runtime_lane` is restored as the current downstream
   scientific lane.
 - `H43` remains the current paper-grade endpoint and `H36` remains the
   routing/refreeze packet underneath the current stack.
-- Completed exact substrate support underneath the mechanism reentry remains
-  `R42`, `R43`, `R44`, `R46`, `R47`, `R49`, `R50`, and `R51`, while `R52`
-  remains the broader-route value falsifier, `R55/R56` remain the narrow exact
-  mechanism evidence, and `R45` remains coequal non-substitutive model
-  evidence.
+- Completed exact substrate support underneath the current closeout includes
+  `R42`, `R43`, `R44`, `R46`, `R47`, `R49`, `R50`, `R51`, `R55`, `R56`,
+  `R58`, and `R59`, while `R52` remains the broader-route value falsifier,
+  `R57` remains the mechanism fast-path comparator falsifier, and `R45`
+  remains coequal non-substitutive model evidence.
 - Dirty root `main` remains quarantined and `merge_executed = false` remains
-  explicit through `P27` and `P37`.
+  explicit through `P38`.
 - General LLM-computer claims, arbitrary `C`, broad Wasm, transformed entry,
   and trainable entry remain blocked.
 
 ## Current Forward Order
 
-- completed mainline: `F28 -> H51 -> R55 -> R56 -> R57 -> H52`
-- sidecar: `P37`
+- completed mainline: `F29 -> H53 -> R58 -> R59 -> H54`
+- sidecar: `P38`
 - blocked by default: `F27`, `R53`, and `R54`
 
 ## Execution Posture
 
-- The `F28/H51/R55/R56/R57/H52` mechanism wave is closed.
+- The `F29/H53/R58/R59/H54` compiled-boundary wave is closed.
 - No remaining runtime gate or docs-only follow-up packet is open on this
   branch.
 - The next meaningful action is a new explicit planning packet in a successor
@@ -106,23 +103,21 @@ The blocked future trainable gate remains:
 
 ## Standing Gates
 
-- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current
+- `H54_post_r58_r59_compiled_boundary_decision_packet` is the current
   active docs-only decision packet.
-- `H50_post_r51_r52_scope_decision_packet` is the preserved prior broader-route
-  closeout packet and remains scientifically binding on the post-`H49`
-  bounded-value question.
-- `H51_post_h50_origin_mechanism_reentry_packet` is the preserved prior
-  mechanism-reentry packet for the now-closed lane.
-- `F28_post_h50_origin_mechanism_reentry_bundle` is the current preserved
-  planning-only bundle fixing the mechanism-first order.
-- `P37_post_h50_narrow_executor_closeout_sync` is the current low-priority
+- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the preserved
+  prior mechanism closeout packet and remains scientifically binding on the
+  prior fast-path-value question.
+- `H53_post_h52_compiled_boundary_reentry_packet` is the preserved prior
+  compiled-boundary reentry packet for the now-closed lane.
+- `F29_post_h52_restricted_compiled_boundary_bundle` is the current preserved
+  planning-only bundle fixing the compiled-boundary order.
+- `P38_post_h52_compiled_boundary_hygiene_sync` is the current low-priority
   operational/docs wave.
-- `R55_origin_2d_hardmax_retrieval_equivalence_gate` is the completed current
-  exact retrieval gate.
-- `R56_origin_append_only_trace_vm_semantics_gate` is the completed current
-  exact trace-VM semantics gate.
-- `R57_origin_accelerated_trace_vm_comparator_gate` is the completed current
-  comparator gate.
+- `R58_origin_restricted_stack_bytecode_lowering_contract_gate` is the
+  completed current lowering gate.
+- `R59_origin_compiled_trace_vm_execution_gate` is the completed current
+  execution gate.
 - `no_active_downstream_runtime_lane` is the current downstream lane state.
 - `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`,
   `R53_origin_transformed_executor_entry_gate`, and
@@ -137,37 +132,37 @@ The blocked future trainable gate remains:
   `R48_origin_dual_mode_useful_case_model_gate`,
   `R49_origin_useful_case_numeric_scaling_gate`,
   `R50_origin_restricted_tinyc_lowering_gate`,
-  `R51_origin_memory_control_surface_sufficiency_gate`, and
-  `R52_origin_internal_vs_external_executor_value_gate` remain completed
-  upstream evidence or comparator gates underneath the closed mechanism lane.
+  `R51_origin_memory_control_surface_sufficiency_gate`,
+  `R52_origin_internal_vs_external_executor_value_gate`,
+  `R55_origin_2d_hardmax_retrieval_equivalence_gate`,
+  `R56_origin_append_only_trace_vm_semantics_gate`, and
+  `R57_origin_accelerated_trace_vm_comparator_gate` remain completed upstream
+  evidence or comparator gates underneath the closed compiled-boundary lane.
 
 ## Control References
 
-- `results/H50_post_r51_r52_scope_decision_packet/summary.json`
-- `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
-- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
+- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
 - `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
-- `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
-- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
-- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
-- `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
+- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+- `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/R51_origin_memory_control_surface_sufficiency_gate/summary.json`
 - `results/R52_origin_internal_vs_external_executor_value_gate/summary.json`
-- `docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
-- `docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
-- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/`
-- `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
-- `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/`
-- `docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/`
-- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/`
-- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`
+- `docs/plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
+- `docs/milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
+- `docs/milestones/H53_post_h52_compiled_boundary_reentry_packet/`
+- `docs/milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
+- `docs/milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/`
+- `docs/milestones/R59_origin_compiled_trace_vm_execution_gate/`
 - `tmp/active_wave_plan.md`
 
 ## Historical Reference
 
-The earlier `H27 -> H50` stack remains preserved as landed evidence and
-control history. The `F28/H51` pair does not erase `H50`; it opened one
-explicit narrower mechanism-only reentry route above the preserved
-`H43/H36` Origin-core stack, and `H52` now closes that route without
-reopening a downstream runtime lane.
+The earlier `H27 -> H52` stack remains preserved as landed evidence and
+control history. The `F29/H53` pair does not erase `H52`; it opens and then
+closes one narrower compiled-boundary reading above the preserved `H43/H36`
+Origin-core stack without reopening a downstream runtime lane.

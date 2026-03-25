@@ -13,22 +13,20 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
+- `H54_post_r58_r59_compiled_boundary_decision_packet/`
   current active docs-only packet
-- `H51_post_h50_origin_mechanism_reentry_packet/`
-  preserved prior mechanism-reentry packet
-- `H50_post_r51_r52_scope_decision_packet/`
-  preserved prior broader-route closeout
-- `F28_post_h50_origin_mechanism_reentry_bundle/`
-  current planning-only mechanism reentry bundle
-- `P37_post_h50_narrow_executor_closeout_sync/`
+- `H53_post_h52_compiled_boundary_reentry_packet/`
+  preserved prior compiled-boundary reentry packet
+- `H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
+  preserved prior mechanism closeout
+- `F29_post_h52_restricted_compiled_boundary_bundle/`
+  current planning-only compiled-boundary bundle
+- `P38_post_h52_compiled_boundary_hygiene_sync/`
   current low-priority operational/docs wave
-- `R55_origin_2d_hardmax_retrieval_equivalence_gate/`
-  completed exact retrieval-equivalence gate
-- `R56_origin_append_only_trace_vm_semantics_gate/`
-  completed exact trace-VM semantics gate
-- `R57_origin_accelerated_trace_vm_comparator_gate/`
-  completed comparator gate
+- `R58_origin_restricted_stack_bytecode_lowering_contract_gate/`
+  completed exact compiled-boundary lowering gate
+- `R59_origin_compiled_trace_vm_execution_gate/`
+  completed exact compiled-boundary execution gate
 
 ## Preserved Anchors
 
@@ -45,8 +43,8 @@ historical and may use then-current wording.
 
 ## Current Rule
 
-- preserve negative `H50`
-- keep `H52` as the current closeout
+- preserve negative `H52`
+- keep `H54` as the current closeout
 - keep the downstream scientific lane at `no_active_downstream_runtime_lane`
 - do not reopen transformed or trainable entry by momentum
 - keep dirty root `main` out of scientific execution

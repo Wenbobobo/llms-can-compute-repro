@@ -4,34 +4,32 @@ Careful reproduction of a narrow execution-substrate reading of Percepta's
 _Can LLMs Be Computers?_ field note.
 
 The repository does not target a general "LLMs are computers" claim. The
-current closed question is narrower: append-only traces plus exact structured
-retrieval support one bounded internal executor mechanism exactly, but the
-accelerated fast path does not show bounded value over simpler transparent
-baselines on the fixed five-row suite.
+current closed question is narrower: one restricted typed stack-bytecode
+lowering surface and its lowered trace-VM execution remain exact on a fixed
+five-row compiled-boundary suite, but that result still does not justify a
+fast-path or broader systems-value claim.
 
 ## Current Stage
 
 As of `2026-03-25`, the current active packet is
-`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.
+`H54_post_r58_r59_compiled_boundary_decision_packet`.
 
 Current anchors:
 
 - active docs-only packet:
+  `H54_post_r58_r59_compiled_boundary_decision_packet`
+- preserved prior docs-only closeout:
   `H52_post_r55_r56_r57_origin_mechanism_decision_packet`
-- preserved prior broader-route closeout:
-  `H50_post_r51_r52_scope_decision_packet`
-- preserved prior mechanism-reentry packet:
-  `H51_post_h50_origin_mechanism_reentry_packet`
+- preserved prior compiled-boundary reentry packet:
+  `H53_post_h52_compiled_boundary_reentry_packet`
 - current planning bundle:
-  `F28_post_h50_origin_mechanism_reentry_bundle`
+  `F29_post_h52_restricted_compiled_boundary_bundle`
 - current low-priority operational/docs wave:
-  `P37_post_h50_narrow_executor_closeout_sync`
-- completed exact retrieval-equivalence gate:
-  `R55_origin_2d_hardmax_retrieval_equivalence_gate`
-- completed exact trace-VM semantics gate:
-  `R56_origin_append_only_trace_vm_semantics_gate`
-- completed comparator gate:
-  `R57_origin_accelerated_trace_vm_comparator_gate`
+  `P38_post_h52_compiled_boundary_hygiene_sync`
+- completed lowering gate under the current compiled-boundary lane:
+  `R58_origin_restricted_stack_bytecode_lowering_contract_gate`
+- completed execution gate under the current compiled-boundary lane:
+  `R59_origin_compiled_trace_vm_execution_gate`
 - current downstream scientific lane:
   `no_active_downstream_runtime_lane`
 - preserved paper-grade endpoint:
@@ -39,36 +37,40 @@ Current anchors:
 - preserved routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`
 
-`H50` remains scientifically binding on the broader post-`H49` bounded-value
-question. `H52` closes the narrower mechanism-first lane as
-`freeze_origin_mechanism_supported_without_fastpath_value`: landed `R55` and
-`R56` remain exact mechanism evidence, while landed `R57` keeps all comparator
-routes exact on `5/5` rows but shows `0/5` accelerated wins over both linear
-and transparent external baselines. The repo therefore returns to no active
-downstream runtime lane.
+The current planning bundle is
+`F29_post_h52_restricted_compiled_boundary_bundle`. `H54` closes the current
+compiled-boundary lane as
+`freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`:
+landed `R58` keeps exact source/spec/lowered parity on `5/5` fixed typed
+stack-bytecode rows, and landed `R59` keeps exact lowered execution on those
+same `5/5` rows across both linear and accelerated internal routes. The repo
+therefore returns to no active downstream runtime lane without authorizing
+arbitrary `C`, broad Wasm, or a general compiler-systems claim.
 
 ## Current Order
 
 - completed mainline:
-  `F28 -> H51 -> R55 -> R56 -> R57 -> H52`
+  `F29 -> H53 -> R58 -> R59 -> H54`
 - sidecar:
-  `P37`
+  `P38`
 
 ## Execution Posture
 
 There are no remaining runtime or docs-only execution tasks on this closed
 wave. This branch is now a preserved closeout surface. The next meaningful
 step is a new explicit planning packet in a successor worktree, not more
-mechanism-wave execution on this branch.
+compiled-boundary execution on this branch.
 
 ## Current Scope
 
 The closed wave is limited to:
 
-1. landed exact `R55` retrieval-equivalence evidence;
-2. landed exact `R56` append-only trace-VM semantics evidence;
-3. landed negative `R57` fast-path comparator evidence; and
-4. landed docs-only `H52` mechanism closeout.
+1. landed planning-only `F29` routing for one restricted compiled-boundary
+   lane;
+2. landed docs-only `H53` authorization through `R58` only;
+3. landed exact `R58` typed stack-bytecode lowering evidence;
+4. landed exact `R59` lowered trace-VM execution evidence; and
+5. landed docs-only `H54` compiled-boundary closeout.
 
 Still blocked:
 
@@ -86,13 +88,14 @@ on the active wave.
 
 - `docs/publication_record/current_stage_driver.md`
 - `tmp/active_wave_plan.md`
-- `docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
-- `results/H50_post_r51_r52_scope_decision_packet/summary.json`
-- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
-- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
-- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
-- `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
+- `docs/plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
+- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
 - `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
+- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+- `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
 
 Older milestone and plan inventories remain in the repository as historical
 records. When historical prose conflicts with current routing, trust the files

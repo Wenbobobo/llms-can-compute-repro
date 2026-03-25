@@ -74,6 +74,12 @@ uv run python scripts/export_h42_post_r43_route_selection_packet.py
 uv run python scripts/export_r44_origin_restricted_wasm_useful_case_execution_gate.py
 uv run python scripts/export_h43_post_r44_useful_case_refreeze.py
 uv run python scripts/export_p28_post_h43_publication_surface_sync.py
+uv run python scripts/export_f29_post_h52_restricted_compiled_boundary_bundle.py
+uv run python scripts/export_h53_post_h52_compiled_boundary_reentry_packet.py
+uv run python scripts/export_r58_origin_restricted_stack_bytecode_lowering_contract_gate.py
+uv run python scripts/export_r59_origin_compiled_trace_vm_execution_gate.py
+uv run python scripts/export_h54_post_r58_r59_compiled_boundary_decision_packet.py
+uv run python scripts/export_p38_post_h52_compiled_boundary_hygiene_sync.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -159,6 +165,21 @@ uv run pytest -q
   aligning downstream ledgers
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json` records the
   preserved broader-route value closeout after `R51/R52`
+- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
+  records the preserved planning-only restricted compiled-boundary bundle
+  above the prior mechanism closeout
+- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+  records the preserved prior compiled-boundary reentry packet
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+  records the completed exact restricted compiled-boundary lowering gate
+- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+  records the completed exact restricted compiled trace-VM execution gate
+- `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+  records the current active docs-only compiled-boundary closeout and restores
+  `no_active_downstream_runtime_lane`
+- `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json` records
+  the aligned low-priority operational/docs sidecar for the closed
+  compiled-boundary wave
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json` records
   the preserved planning bundle that fixed the later mechanism-only sequence
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json` records
@@ -170,7 +191,7 @@ uv run pytest -q
 - `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
   records negative fast-path value on the exact `R56` suite
 - `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
-  records the current active docs-only mechanism closeout and restores
+  records the preserved prior mechanism closeout and restores
   `no_active_downstream_runtime_lane`
 - `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
   positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
@@ -246,17 +267,19 @@ only as excluded inputs, never as required release artifacts.
 ## Archive interpretation rule
 
 This archive is evidence for a narrow mechanistic endpoint: append-only traces,
-exact latest-write retrieval, bounded precision, and one restricted useful-case
-semantic boundary on the active Origin-core substrate. It is not evidence for
-arbitrary `C`, general LLM computation, or current-scope end-to-end systems
-superiority. The current active docs-only control packet is `H52`, above the
-preserved broader-route closeout `H50`, the preserved prior mechanism-reentry
-packet `H51`, and the preserved paper-grade endpoint `H43`. Under that stack,
-`H36` remains the preserved active routing/refreeze packet, `R42/R43/R44/R45`
-remain the semantic-boundary gate stack, `R55/R56` remain exact mechanism
-support only, `R57` remains negative fast-path comparator evidence, and
-`P27/P37` preserve the current operational release-control posture with
-`merge_executed = false`. The earlier `H32 -> H33 -> R39 -> H34`
+exact latest-write retrieval, bounded precision, and one restricted compiled-
+boundary lowering-plus-execution surface on the active Origin-core substrate.
+It is not evidence for arbitrary `C`, general LLM computation, or current-
+scope end-to-end systems superiority. The current active docs-only control
+packet is `H54`, above the preserved prior mechanism closeout `H52`, the
+preserved prior compiled-boundary reentry packet `H53`, and the preserved
+paper-grade endpoint `H43`. Under that stack, `H36` remains the preserved
+active routing/refreeze packet, `R42/R43/R44/R45` remain the semantic-
+boundary gate stack, `R55/R56` remain exact mechanism support only, `R57`
+remains negative fast-path comparator evidence, `R58/R59` remain exact narrow
+compiled-boundary support only, and `P27/P38` preserve the current
+operational release-control posture with `merge_executed = false`. The
+earlier `H32 -> H33 -> R39 -> H34`
 compiled-boundary line remains preserved historical support rather than the
 active routing top. `H35/R40/H36` record the later bounded-scalar reopen and
 refreeze that now sit directly underneath the semantic-boundary route.

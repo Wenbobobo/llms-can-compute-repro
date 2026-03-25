@@ -7,18 +7,18 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects current `H52` as the active docs-only closeout
-  packet, preserved prior `H50/H51` as the broader-route closeout and
-  mechanism-reentry history, preserved `H43` as the paper-grade endpoint,
+- [ ] `STATUS.md` reflects current `H54` as the active docs-only closeout
+  packet, preserved prior `H52/H53/H50` as the mechanism-closeout and
+  compiled-boundary reentry history, preserved `H43` as the paper-grade endpoint,
   preserved `H42/H41` prior docs-only packets, preserved `H36`
-  routing/refreeze packet, completed `R42/R43/R44/R45/R55/R56/R57` gate
-  stack, blocked `F27/R53/R54`, current `F20/F16/F17/F18/F19/F28` bundles,
-  completed `P27/P37` operational posture, preserved `P26/H40/H38/H37/P25`
+  routing/refreeze packet, completed `R42/R43/R44/R45/R58/R59` gate
+  stack, blocked `F27/R53/R54`, current `F20/F16/F17/F18/F19/F29` bundles,
+  completed `P27/P38` operational posture, preserved `P26/H40/H38/H37/P25`
   prior support lanes, current `F15` derivative bundle, and keeps
   `merge_executed = false`.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed
-  `H52/R57/R56/R55/H51/F28/H50/H43/H42/H41/F20/P27/P37/R45/R44/R43/H40/H36/R42`
+  `H54/R59/R58/H53/F29/H52/H50/H43/H42/H41/F20/P27/P38/R45/R44/R43/H40/H36/R42`
   while preserving the narrow Origin-core limits and the paper-grade role of
   `H43`.
 - [ ] `P20_post_h34_manuscript_narrative_resync`,
@@ -45,12 +45,12 @@ current freeze candidate is assembled.
   `appendix_companion_scope.md` remain synchronized.
 - [ ] `release_candidate_checklist.md`, `submission_candidate_criteria.md`,
   `claim_ladder.md`, and `archival_repro_manifest.md` all expose the same
-  current `H52/H50/H51/H43/H36/R42/R43/R44/R45/R55/R56/R57/P27/P37`
+  current `H54/H52/H53/H50/H43/H36/R42/R43/R44/R45/R58/R59/P27/P38`
   release-control stack while preserving `H43` as the paper-grade endpoint and
   do not revert wording back to earlier `H40` or `H32/H34` control states.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `F28/H51/R55/R56/R57/H52` closeout stack above preserved
-  `H50/H43/H36`, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
+  completed `F29/H53/R58/R59/H54` closeout stack above preserved
+  `H52/H43/H36`, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
   bridge wave, and the preserved `F12/F13/F14/P23` family-first planning wave
   without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
@@ -59,17 +59,24 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+  reports `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`
+  and `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+  reports `authorize_compiled_boundary_reentry_through_r58_first`.
+- [ ] `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+  reports `compiled_trace_vm_execution_supported_exactly` on `5/5` exact rows.
+- [ ] `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+  reports `restricted_stack_bytecode_lowering_supported_narrowly` on `5/5`
+  fixed rows.
 - [ ] `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
-  reports `freeze_origin_mechanism_supported_without_fastpath_value` and
-  `next_required_lane = no_active_downstream_runtime_lane`.
+  remains available as the preserved prior mechanism closeout.
 - [ ] `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
-  reports `accelerated_trace_vm_lacks_bounded_value` with exact comparator
-  parity on the fixed `5/5` suite.
+  remains available as the preserved negative fast-path comparator gate.
 - [ ] `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
-  reports `trace_vm_semantics_supported_exactly` on `5/5` fixed rows.
+  remains available as the preserved exact trace-VM semantics gate.
 - [ ] `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
-  reports `retrieval_equivalence_supported_exactly` with exact maximizer-row
-  identity on the fixed bounded suite.
+  remains available as the preserved exact retrieval-equivalence gate.
 - [ ] `results/H50_post_r51_r52_scope_decision_packet/summary.json` reports
   `stop_as_exact_without_system_value` and preserves the broader-route
   bounded-value falsifier.
@@ -86,7 +93,7 @@ current freeze candidate is assembled.
   reports `keep_semantic_boundary_route` on `5/5` fixed families.
 - [ ] `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
   reports `promotion_mode = explicit_merge_wave` and `merge_executed = false`.
-- [ ] `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- [ ] `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
   reports zero blocked items and preserves the closed-wave operational/docs
   sync posture.
 - [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`

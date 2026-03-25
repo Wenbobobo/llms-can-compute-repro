@@ -48,6 +48,7 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `../plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `../plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
+- `../plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
 - `../plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
 - `../milestones/H40_post_h38_semantic_boundary_activation_packet/`
 - `../milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
@@ -60,6 +61,12 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `../milestones/H43_post_r44_useful_case_refreeze/`
 - `../milestones/P28_post_h43_publication_surface_sync/`
+- `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
+- `../milestones/H53_post_h52_compiled_boundary_reentry_packet/`
+- `../milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/`
+- `../milestones/R59_origin_compiled_trace_vm_execution_gate/`
+- `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
+- `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
 - `../milestones/H50_post_r51_r52_scope_decision_packet/`
 - `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
 - `../milestones/H51_post_h50_origin_mechanism_reentry_packet/`
@@ -111,6 +118,12 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/P28_post_h43_publication_surface_sync/summary.json`
+- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
+- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+- `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
@@ -212,18 +225,19 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current repo control state is `H52` as the active docs-only
-mechanism closeout packet, with `H50` preserved as the broader-route value
-closeout, `H51` preserved as the prior mechanism-reentry packet, and `H43`
-preserved as the paper-grade useful-case refreeze packet. Under that stack,
-`H42/H41` remain preserved prior docs-only decision packets, `H36` remains the
-preserved active routing/refreeze packet, `R42`, `R43`, `R44`, and `R45`
-remain the completed semantic-boundary gate stack, `R55` and `R56` remain
-exact mechanism evidence only, `R57` remains negative fast-path comparator
-evidence, `F20` remains the coequal-mainline model bundle, `P27` remains the
-completed explicit merge packet with `merge_executed = false`, `P37` remains
-the aligned low-priority operational/docs sidecar, `P26` remains the
-preserved prior operational audit lane, `F18/F19/F16/F17/F28` remain the
+bundle. The current repo control state is `H54` as the active docs-only
+compiled-boundary closeout packet, with `H52` preserved as the prior
+mechanism closeout, `H53` preserved as the prior compiled-boundary reentry
+packet, and `H43` preserved as the paper-grade useful-case refreeze packet.
+Under that stack, `H42/H41` remain preserved prior docs-only decision packets,
+`H36` remains the preserved active routing/refreeze packet, `R42`, `R43`,
+`R44`, and `R45` remain the completed semantic-boundary gate stack,
+`R55/R56` remain exact mechanism evidence only, `R57` remains negative
+fast-path comparator evidence, `R58/R59` remain exact compiled-boundary
+evidence only, `F20` remains the coequal-mainline model bundle, `P27` remains
+the completed explicit merge packet with `merge_executed = false`, `P38`
+remains the aligned low-priority operational/docs sidecar, `P26` remains the
+preserved prior operational audit lane, `F18/F19/F16/F17/F28/F29` remain the
 current planning/control bundle set, `H40/H38/H37/P25` remain the preserved
 prior decision/audit support wave, and `F15` remains the current canonical
 derivative bundle. The latest downstream follow-on wave remains non-active
@@ -233,8 +247,8 @@ beyond-Origin milestone families without activating them, `F10` makes richer
 executor-visible value/comparator obligations explicit without authorizing
 runtime widening, `F12/F13/F14` preserve origin-facing planning storage,
 `R41` remains deferred behind a later explicit contradiction packet, no active
-downstream runtime lane exists after `H52`, `F9` remains blocked, `F11`
+downstream runtime lane exists after `H54`, `F9` remains blocked, `F11`
 remains new-substrate, `P21` and `P22` remain preserved prior planning syncs,
 `P23/P24/P25` preserve the earlier top-level control surfaces, and
-`P26/P27/P37` preserve the current audit-plus-explicit-merge operational
+`P26/P27/P37/P38` preserve the current audit-plus-explicit-merge operational
 interpretation without merging `main`.

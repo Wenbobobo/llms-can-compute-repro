@@ -4,25 +4,30 @@ Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current
 active routing/decision state is
-`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, with
+`H54_post_r58_r59_compiled_boundary_decision_packet`, with
+`H52_post_r55_r56_r57_origin_mechanism_decision_packet` as the preserved prior
+mechanism closeout packet, `H53_post_h52_compiled_boundary_reentry_packet` as
+the preserved prior compiled-boundary reentry packet,
 `H50_post_r51_r52_scope_decision_packet` as the preserved prior broader-route
-closeout packet, `H51_post_h50_origin_mechanism_reentry_packet` as the
-preserved prior mechanism-reentry packet,
+closeout packet,
 `H43_post_r44_useful_case_refreeze` as the preserved paper-grade endpoint,
 `H36_post_r40_bounded_scalar_family_refreeze` as the preserved active
 routing/refreeze packet, `R42_origin_append_only_memory_retrieval_contract_gate`,
 `R43_origin_bounded_memory_small_vm_execution_gate`,
 `R44_origin_restricted_wasm_useful_case_execution_gate`,
 `R45_origin_dual_mode_model_mainline_gate`,
+`R58_origin_restricted_stack_bytecode_lowering_contract_gate`, and
+`R59_origin_compiled_trace_vm_execution_gate` as the completed current
+evidence stack relevant to the narrow endpoint, while
 `R55_origin_2d_hardmax_retrieval_equivalence_gate`,
 `R56_origin_append_only_trace_vm_semantics_gate`, and
-`R57_origin_accelerated_trace_vm_comparator_gate` as the completed current
-evidence stack relevant to the narrow endpoint, `F20_post_r42_dual_mode_model_mainline_bundle`
+`R57_origin_accelerated_trace_vm_comparator_gate` remain the preserved prior
+mechanism evidence stack, `F20_post_r42_dual_mode_model_mainline_bundle`
 as the current coequal-mainline model bundle,
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` as the completed
 explicit merge packet with `merge_executed = false`,
-`P37_post_h50_narrow_executor_closeout_sync` as the aligned operational/docs
-sidecar for the closed mechanism wave, `P26_post_h37_promotion_and_artifact_hygiene_audit`
+`P38_post_h52_compiled_boundary_hygiene_sync` as the aligned operational/docs
+sidecar for the closed compiled-boundary wave, `P26_post_h37_promotion_and_artifact_hygiene_audit`
 as the preserved prior operational audit lane,
 `F15_post_h36_origin_goal_reanchor_bundle` as the current canonical derivative
 bundle, `F16_post_h37_r41_candidate_isolation_bundle` as the current
@@ -113,6 +118,17 @@ Origin-core pivot packet underneath it.
   with `288` exported transition rows and exact final states throughout;
 - `H52` closes that narrower mechanism lane as support without fast-path
   value and restores `no_active_downstream_runtime_lane`;
+- `F29` preserves exactly one planning-only restricted compiled-boundary
+  bundle above `H52` and fixes `H53 -> R58 -> R59 -> H54` as the only later
+  admissible sequence;
+- `H53` preserves the prior mechanism closeout while authorizing one narrower
+  compiled-boundary reentry through `R58` only;
+- `R58` validates one restricted typed stack-bytecode lowering surface
+  exactly on `5/5` fixed compiled-boundary rows;
+- `R59` validates exact lowered trace-VM execution on the exact `R58` suite
+  across both linear and accelerated internal routes;
+- `H54` closes that narrower compiled-boundary lane as support without
+  fast-path value and restores `no_active_downstream_runtime_lane`;
 - `F7` preserves a mechanical contradiction/reopen specification under that
   no-reopen state, `F8` preserves the broader roadmap classification,
   `F10` preserves the richer-value/comparator bridge surface, `F12` preserves
@@ -183,6 +199,11 @@ Origin-core pivot packet underneath it.
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
+- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
+- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+- `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
@@ -211,11 +232,11 @@ Any later broader frontier review remains planning-only under
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
 that status. The current conditional future order now starts only after the
 landed
-`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> H50 -> F28 -> H51 -> R55 -> R56 -> R57 -> H52`
+`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> H50 -> F28 -> H51 -> R55 -> R56 -> R57 -> H52 -> F29 -> H53 -> R58 -> R59 -> H54`
 chain above the earlier `H34/H32/H33/R39/H31/H30/H29/H28/H27` stack. A later
 explicit contradiction packet is still required before any `R41`
 same-substrate contradiction route, and no active downstream runtime lane
-exists after `H52`. Review questions
+exists after `H54`. Review questions
 that can be answered by wording, packet indexing, existing ledgers, or the
 completed `F10` bridge plus the preserved `F12/F13/F14` planning surfaces
 should stay downstream of the landed

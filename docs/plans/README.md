@@ -7,21 +7,21 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
-  preserved master plan for the now-closed mechanism-first wave
-- `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
-  planning-only bundle that fixes `H51 -> R55 -> R56 -> R57 -> H52`
-- `../milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
+- `2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
+  preserved master plan for the now-closed compiled-boundary wave
+- `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
+  planning-only bundle that fixes `H53 -> R58 -> R59 -> H54`
+- `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
   current active docs-only closeout packet
-- `../milestones/P37_post_h50_narrow_executor_closeout_sync/`
+- `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
   aligned low-priority hygiene sidecar for the closed wave
 
 ## Current Route
 
 - mainline:
-  `F28 -> H51 -> R55 -> R56 -> R57 -> H52`
+  `F29 -> H53 -> R58 -> R59 -> H54`
 - sidecar:
-  `P37`
+  `P38`
 
 Blocked by default:
 
@@ -31,6 +31,9 @@ Blocked by default:
 
 ## Preserved Historical Plans
 
+- `2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
+  preserved design for the completed `F28 -> H51 -> R55 -> R56 -> R57 -> H52`
+  wave
 - `2026-03-24-post-h49-origin-core-next-wave-design.md`
   preserved design for the completed `F26 -> R51 -> R52 -> H50` wave
 - `2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
@@ -44,12 +47,12 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
-- `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
-- `../milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
-- `../milestones/P37_post_h50_narrow_executor_closeout_sync/`
-- `../../results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
-- `../../results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
-- `../../results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
+- `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
+- `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
+- `../../results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
+- `../../results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- `../../results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
 
 Historical design files remain useful for lineage reconstruction, but they are
 not the live control surface for the current wave.

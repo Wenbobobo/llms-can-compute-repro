@@ -40,19 +40,21 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, but authoritative
-control has moved beyond the prose baseline: `H52` is the current active
-docs-only closeout packet, `H50` is the preserved prior broader-route
-closeout packet, `H51` is the preserved prior mechanism-reentry packet, `H43`
-remains the paper-grade endpoint, `H42/H41` remain preserved prior docs-only
-decision packets, `H36` is the preserved active routing/refreeze packet,
-`R42`, `R43`, `R44`, `R45`, `R49`, `R50`, `R51`, `R52`, `R55`, `R56`, and
-`R57` are the completed current evidence stack, `R55` is the completed exact
-retrieval-equivalence gate, `R56` is the completed exact trace-VM semantics
-gate, and `R57` is the completed negative fast-path comparator gate. `F20` is
-the current coequal-mainline model bundle, `F25/F26/F28` are the completed
-planning bundles on the landed route, `P27` is the completed explicit merge
-packet with `merge_executed = false`, `P37` is the aligned low-priority
-operational/docs sidecar for the closed mechanism wave, `P26` is the
+control has moved beyond the prose baseline: `H54` is the current active
+docs-only closeout packet, `H52` is the preserved prior mechanism closeout
+packet, `H53` is the preserved prior compiled-boundary reentry packet, `H50`
+is the preserved prior broader-route closeout packet, `H43` remains the
+paper-grade endpoint, `H42/H41` remain preserved prior docs-only decision
+packets, `H36` is the preserved active routing/refreeze packet, `R42`, `R43`,
+`R44`, `R45`, `R58`, and `R59` are the completed current evidence stack,
+`R58` is the completed exact compiled-boundary lowering gate, and `R59` is
+the completed exact compiled trace-VM execution gate. Preserved prior
+useful-case, scope, and mechanism evidence remains visible through `R49`,
+`R50`, `R51`, `R52`, `R55`, `R56`, and `R57`. `F20` is the current
+coequal-mainline model bundle, `F25/F26/F28/F29` are the completed planning
+bundles on the landed route, `P27` is the completed explicit merge packet
+with `merge_executed = false`, `P38` is the aligned low-priority
+operational/docs sidecar for the closed compiled-boundary wave, `P26` is the
 preserved prior operational audit lane, `F18/F19/F16/F17` remain the current
 planning/control bundles, `H40/H38/H37/P25` remain the preserved prior
 decision/audit supports, and `F15` remains the current canonical derivative
@@ -72,10 +74,10 @@ the bounded scalar-local-and-flag family-first preactivation surface, `F14`
 preserves the conditional reopen-readiness blueprint, `F15` is the current
 origin-facing derivative bundle, `R41` remains deferred behind a later
 explicit contradiction packet, no active downstream runtime lane exists after
-`H52`, `F9` remains blocked downstream of `F10/F13`, `F11` remains
+`H54`, `F9` remains blocked downstream of `F10/F13`, `F11` remains
 new-substrate downstream of `F10/F13`, `P21` and `P22` preserve prior
 post-`H34` sync surfaces, `P23/P24/P25` preserve the earlier planning/control
-surfaces, and `P26/P27/P37` preserve the current audit-plus-explicit-merge
+surfaces, and `P26/P27/P38` preserve the current audit-plus-explicit-no-merge
 operational posture without merging `main`.
 
 ## Mandatory tables

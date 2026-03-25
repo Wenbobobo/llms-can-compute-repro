@@ -211,18 +211,25 @@
 
 ## Current bounded mainline state
 
-- `H52` is now the current active docs-only interpretation packet for the
+- `H54` is now the current active docs-only interpretation packet for the
+  closed compiled-boundary lane after landed `R58/R59`; it preserves `H52`
+  as the prior mechanism closeout, preserves `H53` as the prior
+  compiled-boundary reentry packet, preserves `H43` as the paper-grade
+  endpoint, selects
+  `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`,
+  keeps `F27/R53/R54` blocked, and restores
+  `no_active_downstream_runtime_lane`.
+- `H53` is now the preserved prior docs-only interpretation packet for the
+  narrowed compiled-boundary reentry lane; it preserved negative `H52`,
+  preserved `H43` as the paper-grade endpoint, and authorized exactly
+  `R58 -> R59 -> H54` without reopening transformed or trainable entry.
+- `H52` is now the preserved prior docs-only interpretation packet for the
   closed mechanism reentry lane after landed `R55/R56/R57`; it preserves
   `H50` as the broader-route bounded-value closeout, preserves `H51` as the
   prior mechanism-reentry packet, preserves `H43` as the paper-grade
   endpoint, selects
   `freeze_origin_mechanism_supported_without_fastpath_value`, keeps
   `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
-- `H51` is now the preserved prior docs-only interpretation packet for the
-  narrowed mechanism reentry lane; it preserved negative `H50`, preserved
-  `H43` as the paper-grade endpoint, and authorized exactly
-  `R55 -> R56 -> R57 -> H52` without reopening transformed or trainable
-  entry.
 - `H50` is now the preserved prior docs-only interpretation packet for the
   bounded mainline after completed `R51/R52`; it preserves `H49` as the prior
   decision packet, preserves `H48` as the earlier decision packet, preserves
