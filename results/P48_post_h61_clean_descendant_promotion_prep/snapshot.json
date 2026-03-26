@@ -10,11 +10,11 @@
     },
     {
       "field": "candidate_commit_count",
-      "value": 2
+      "value": 3
     },
     {
       "field": "candidate_file_count",
-      "value": 72
+      "value": 73
     },
     {
       "field": "artifact_oversize_count",

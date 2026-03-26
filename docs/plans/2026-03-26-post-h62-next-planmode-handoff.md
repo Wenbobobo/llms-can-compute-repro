@@ -52,12 +52,16 @@ Validation state at handoff time:
 - `P47` recorded the parked root checkout as dirty (`120` entries, `78`
   untracked) and non-integrable;
 - `P48` refreshed to `candidate_commit_count = 2`,
+  then to `candidate_commit_count = 3`,
+  `current_planning_branch_upstream = origin/wip/f37-post-h61-hygiene-first-reauth-prep`,
   `worktree_clean = true`, and `blocked_count = 0` at export time; and
 - `H62` recorded `all_prerequisites_green = true`.
 
 ## Branch And Merge Posture
 
 - current branch: `wip/f37-post-h61-hygiene-first-reauth-prep`
+- current branch upstream:
+  `origin/wip/f37-post-h61-hygiene-first-reauth-prep`
 - current worktree:
   `D:/zWenbo/AI/wt/f37-post-h61-hygiene-first-reauth-prep`
 - preserved source branch:
