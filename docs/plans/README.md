@@ -12,8 +12,12 @@ driver and machine-readable `results/` summaries first.
 - `2026-03-26-post-h64-next-planmode-handoff.md`
   current shortest handoff from the post-`H64` freeze stack on the published
   clean descendant branch
+- `2026-03-27-post-h64-published-clean-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round from
+  the published clean descendant branch
 - `2026-03-26-post-h64-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved earlier startup prompt from before the publish/clean sync was
+  recorded
 - `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
   current active docs-only packet
 - `../milestones/P53_post_h63_paper_archive_claim_sync/`
@@ -81,6 +85,7 @@ Blocked by default:
 - `../../tmp/active_wave_plan.md`
 - `2026-03-26-post-h63-archive-first-closeout-design.md`
 - `2026-03-26-post-h64-next-planmode-handoff.md`
+- `2026-03-27-post-h64-published-clean-next-planmode-startup-prompt.md`
 - `2026-03-26-post-h64-next-planmode-startup-prompt.md`
 - `2026-03-26-post-h63-next-planmode-handoff.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
