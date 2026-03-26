@@ -7,6 +7,8 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-03-26-post-h60-next-planmode-handoff.md`
+  shortest handoff for the next plan-mode pass after landed `H60`
 - `2026-03-26-post-h59-archive-and-reopen-screen-design.md`
   current design for the post-`H59` archive/reopen-screen wave
 - `2026-03-26-post-h59-far-future-horizon-log.md`
@@ -60,6 +62,7 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-archive-and-reopen-screen-design.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`

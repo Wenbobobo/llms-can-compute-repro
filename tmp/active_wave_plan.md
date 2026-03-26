@@ -133,6 +133,7 @@ Current sidecars and planning:
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-26-post-h60-next-planmode-handoff.md`
 - `docs/plans/2026-03-26-post-h59-archive-and-reopen-screen-design.md`
 - `docs/plans/2026-03-26-post-h59-far-future-horizon-log.md`
 - `docs/plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`
