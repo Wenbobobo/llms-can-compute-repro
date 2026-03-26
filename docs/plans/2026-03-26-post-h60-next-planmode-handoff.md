@@ -49,6 +49,8 @@ Validation state at handoff time:
 - current branch: `wip/f36-post-h60-archive-first-consolidation`
 - current worktree:
   `D:/zWenbo/AI/wt/f36-post-h60-archive-first-consolidation`
+- this branch now tracks
+  `origin/wip/f36-post-h60-archive-first-consolidation`
 - dirty root repo remains parked separately as
   `wip/root-main-parking-2026-03-24`
 - the parked root checkout currently shows about `120` dirty/untracked entries
