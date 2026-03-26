@@ -7,90 +7,92 @@ current stage driver first.
 
 ## Current Start Points
 
-- `../plans/2026-03-26-post-h60-archive-first-consolidation-design.md`
-  current design for the archive-first consolidation wave
+- `../plans/2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
+  current design for the hygiene-first reauthorization-prep wave
 - `../plans/2026-03-26-post-h59-far-future-horizon-log.md`
   far-future storage note for model/weights routes
 - `../plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`
   self-contained GPTPro consultation dossier
-- `../milestones/H61_post_h60_archive_first_position_packet/`
+- `../milestones/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
   current active docs-only packet
-- `../milestones/F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
-  current qualification-only future bundle
+- `../milestones/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
+  current reauthorization bundle
+- `../milestones/P49_post_h61_origin_advisory_sync/`
+  current advisory sync wave
+- `../milestones/P48_post_h61_clean_descendant_promotion_prep/`
+  current clean-descendant promotion-prep sidecar
+- `../milestones/P47_post_h61_root_quarantine_and_main_merge_planning/`
+  current root-quarantine sidecar
 - `../milestones/P46_post_h60_archive_first_publication_sync/`
   current publication/docs sync wave
-- `../milestones/P45_post_h60_clean_descendant_integration_readiness/`
-  current repo-hygiene sidecar
 - `../milestones/F35_post_h59_far_future_model_and_weights_horizon_log/`
   current far-future storage bundle
-- `../milestones/H60_post_f34_next_lane_decision_packet/`
+- `../milestones/H61_post_h60_archive_first_position_packet/`
   preserved prior active packet
-- `../milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/`
-  preserved prior reopen screen
-- `../milestones/P44_post_h59_publication_surface_and_claim_lock/`
-  preserved prior publication/docs wave
-- `../milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/`
-  preserved prior repo-hygiene sidecar
+- `../milestones/F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
+  preserved prior qualification bundle
 
 ## Current Reading
 
 The live scientific reading is:
 
-- `H61_post_h60_archive_first_position_packet`
+- `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet`
   current active packet
-- `H60_post_f34_next_lane_decision_packet`
+- `H61_post_h60_archive_first_position_packet`
   preserved prior active packet
+- `H60_post_f34_next_lane_decision_packet`
+  preserved prior active-before-that packet
 - `H59_post_h58_reproduction_gap_decision_packet`
   preserved prior reproduction-gap packet
 - `H58_post_r62_origin_value_boundary_closeout_packet`
   preserved prior value-negative closeout
 - `F32_post_h58_closeout_certification_bundle`
   preserved prior closeout certification bundle
-- `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle`
-  current qualification bundle
+- `F37_post_h61_compiled_online_coprocessor_reauthorization_bundle`
+  current reauthorization bundle
+- `P49_post_h61_origin_advisory_sync`
+  current advisory sync wave
+- `P48_post_h61_clean_descendant_promotion_prep`
+  current clean-descendant promotion-prep sidecar
+- `P47_post_h61_root_quarantine_and_main_merge_planning`
+  current root-quarantine sidecar
 - `P46_post_h60_archive_first_publication_sync`
   current publication/docs wave
-- `P45_post_h60_clean_descendant_integration_readiness`
-  current repo-hygiene sidecar
 - `F35_post_h59_far_future_model_and_weights_horizon_log`
   current far-future storage bundle
-- `F34_post_h59_compiled_online_retrieval_reopen_screen`
-  preserved prior reopen screen
-- `P44_post_h59_publication_surface_and_claim_lock`
-  preserved prior publication/claim-lock wave
-- `P43_post_h59_repo_graph_hygiene_and_merge_map`
-  preserved prior repo-hygiene sidecar
+- `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle`
+  preserved prior qualification bundle
 - `P42_post_h59_gptpro_reinterview_packet`
   preserved advisory dossier sidecar
-- `P41_post_h58_publication_and_archive_sync`
-  preserved prior publication/archive sync sidecar
 - `H43_post_r44_useful_case_refreeze`
   current paper-grade endpoint
 - `R62_origin_native_useful_kernel_value_discriminator_gate`
   completed native value-negative discriminator
-- `planning_only_or_project_stop`
-  current downstream scientific lane
+- `archive_or_hygiene_stop`
+  default downstream lane
+- `r63_post_h62_coprocessor_eligibility_profile_gate`
+  only conditional later gate
 
 The narrow positive mechanism result survives. Broad headline reproduction did
-not land. Same-lane executor-value microvariants remain inadmissible.
-Compiled-online exact retrieval or attention-coprocessor route remains
-qualification-only on paper. Archive-first consolidation is the default live
-posture, and the public shorthand is narrow mechanistic reproduction plus
-executor-value partial falsification.
+not land. Same-lane executor-value microvariants remain inadmissible. The only
+future family still alive on paper has been narrowed to one compiled exact
+hard-max coprocessor route on lifted useful-kernel decode, and even that route
+remains non-runtime by default.
 
 ## Current Evidence Packets
 
-- `../../results/H61_post_h60_archive_first_position_packet/summary.json`
-- `../../results/P45_post_h60_clean_descendant_integration_readiness/summary.json`
-- `../../results/F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/summary.json`
+- `../../results/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/summary.json`
+- `../../results/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/summary.json`
+- `../../results/P49_post_h61_origin_advisory_sync/summary.json`
+- `../../results/P48_post_h61_clean_descendant_promotion_prep/summary.json`
+- `../../results/P47_post_h61_root_quarantine_and_main_merge_planning/summary.json`
 - `../../results/P46_post_h60_archive_first_publication_sync/summary.json`
+- `../../results/H61_post_h60_archive_first_position_packet/summary.json`
+- `../../results/F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/summary.json`
 - `../../results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
 - `../../results/H60_post_f34_next_lane_decision_packet/summary.json`
-- `../../results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
 - `../../results/F32_post_h58_closeout_certification_bundle/summary.json`
 - `../../results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
-- `../../results/P41_post_h58_publication_and_archive_sync/summary.json`
-- `../../results/P42_post_h59_gptpro_reinterview_packet/summary.json`
 - `../../results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
 - `../../results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
 - `../../results/H43_post_r44_useful_case_refreeze/summary.json`
@@ -99,7 +101,8 @@ executor-value partial falsification.
 
 - Keep the narrow positive mechanism/execution result explicit.
 - Keep the current value-negative closeout explicit.
-- Keep archive-first consolidation and partial falsification wording explicit.
+- Keep archive-first plus hygiene-first control wording explicit.
 - Do not imply broad headline reproduction.
 - Do not imply an open runtime lane.
+- Do not imply `R63` is a runtime reopen.
 - Do not imply merge back to dirty root `main`.

@@ -13,18 +13,28 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H61_post_h60_archive_first_position_packet/`
+- `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
   current active docs-only packet
-- `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
-  current qualification-only future bundle
+- `F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
+  current reauthorization bundle
+- `P49_post_h61_origin_advisory_sync/`
+  current advisory sync wave
+- `P48_post_h61_clean_descendant_promotion_prep/`
+  current clean-descendant promotion-prep sidecar
+- `P47_post_h61_root_quarantine_and_main_merge_planning/`
+  current root-quarantine sidecar
 - `P46_post_h60_archive_first_publication_sync/`
   current publication/docs sync wave
+- `H61_post_h60_archive_first_position_packet/`
+  preserved prior active docs-only packet
+- `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
+  preserved prior qualification bundle
 - `P45_post_h60_clean_descendant_integration_readiness/`
-  current repo-hygiene sidecar
+  preserved prior clean-descendant readiness sidecar
 - `F35_post_h59_far_future_model_and_weights_horizon_log/`
   current far-future storage bundle
 - `H60_post_f34_next_lane_decision_packet/`
-  preserved prior active docs-only packet
+  preserved prior active-before-that packet
 - `F34_post_h59_compiled_online_retrieval_reopen_screen/`
   preserved prior reopen screen
 - `P44_post_h59_publication_surface_and_claim_lock/`
@@ -59,9 +69,10 @@ historical and may use then-current wording.
 
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
-- keep `H61` as the current archive-first interpretation packet;
-- keep `H60` and `H59` as preserved prior decision packets;
-- keep the downstream scientific lane at `planning_only_or_project_stop`;
+- keep `H62` as the current hygiene-first scope decision packet;
+- keep `H61`, `H60`, and `H59` as preserved prior decision packets;
+- keep the default downstream lane at `archive_or_hygiene_stop`;
+- keep `R63` conditional and non-runtime only;
 - do not reopen the same executor-value lane by momentum; and
 - keep dirty root `main` out of scientific execution.
 
