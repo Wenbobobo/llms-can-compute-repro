@@ -19,7 +19,7 @@
       "preferred_predecessor_branch": "wip/f34-post-h59-archive-and-reopen-screen",
       "predecessor_branch_exists": true,
       "predecessor_divergence_base_only": 0,
-      "predecessor_divergence_target_only": 0,
+      "predecessor_divergence_target_only": 3,
       "registered_worktree_count": 53,
       "root_main_worktree": "D:/zWenbo/AI/LLMCompute",
       "root_main_branch": "wip/root-main-parking-2026-03-24",

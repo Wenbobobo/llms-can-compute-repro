@@ -51,6 +51,8 @@ Validation state at handoff time:
   `D:/zWenbo/AI/wt/f36-post-h60-archive-first-consolidation`
 - dirty root repo remains parked separately as
   `wip/root-main-parking-2026-03-24`
+- the parked root checkout currently shows about `120` dirty/untracked entries
+  and should be treated as quarantine-only rather than as an integration base
 - root repo `main` is not the integration target for scientific work
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
 - no merge back to dirty root `main` was executed during this wave

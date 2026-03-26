@@ -18,7 +18,7 @@
     },
     {
       "policy": "predecessor_divergence_target_only",
-      "value": 0
+      "value": 3
     },
     {
       "policy": "root_main_branch",
