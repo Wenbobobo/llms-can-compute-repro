@@ -13,24 +13,34 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
+- `H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
   current active docs-only packet
-- `F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
-  current reauthorization bundle
-- `P49_post_h61_origin_advisory_sync/`
-  current advisory sync wave
-- `P48_post_h61_clean_descendant_promotion_prep/`
-  current clean-descendant promotion-prep sidecar
-- `P47_post_h61_root_quarantine_and_main_merge_planning/`
-  current root-quarantine sidecar
-- `P46_post_h60_archive_first_publication_sync/`
-  current publication/docs sync wave
-- `H61_post_h60_archive_first_position_packet/`
+- `P50_post_h62_archive_first_control_sync/`
+  current control sync wave
+- `P51_post_h62_paper_facing_partial_falsification_package/`
+  current paper-facing package wave
+- `P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+  current repo-hygiene sidecar
+- `F38_post_h62_r63_dormant_eligibility_profile_dossier/`
+  current dormant future dossier
+- `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
   preserved prior active docs-only packet
+- `F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
+  preserved prior reauthorization bundle
+- `P49_post_h61_origin_advisory_sync/`
+  preserved prior advisory sync wave
+- `P48_post_h61_clean_descendant_promotion_prep/`
+  preserved prior clean-descendant promotion-prep sidecar
+- `P47_post_h61_root_quarantine_and_main_merge_planning/`
+  preserved prior root-quarantine sidecar
+- `P46_post_h60_archive_first_publication_sync/`
+  preserved prior publication/docs sync wave
+- `H61_post_h60_archive_first_position_packet/`
+  preserved earlier active docs-only packet
 - `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
-  preserved prior qualification bundle
+  preserved earlier qualification bundle
 - `P45_post_h60_clean_descendant_integration_readiness/`
-  preserved prior clean-descendant readiness sidecar
+  preserved earlier clean-descendant readiness sidecar
 - `F35_post_h59_far_future_model_and_weights_horizon_log/`
   current far-future storage bundle
 - `H60_post_f34_next_lane_decision_packet/`
@@ -69,10 +79,10 @@ historical and may use then-current wording.
 
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
-- keep `H62` as the current hygiene-first scope decision packet;
-- keep `H61`, `H60`, and `H59` as preserved prior decision packets;
+- keep `H63` as the current archive-first closeout packet;
+- keep `H62`, `H61`, `H60`, and `H59` as preserved prior decision packets;
 - keep the default downstream lane at `archive_or_hygiene_stop`;
-- keep `R63` conditional and non-runtime only;
+- keep `R63` conditional and non-runtime only via dormant `F38`;
 - do not reopen the same executor-value lane by momentum; and
 - keep dirty root `main` out of scientific execution.
 

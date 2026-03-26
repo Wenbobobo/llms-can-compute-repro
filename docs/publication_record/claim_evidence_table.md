@@ -213,23 +213,44 @@ Lock note: narrow positive mechanism result survives; broad headline reproductio
 
 ## Current bounded mainline state
 
-- `H61` is now the current active docs-only packet; it preserves `H60` and
-  `H59` as prior decision packets, preserves `H58` as the prior value-negative
-  closeout, preserves `F32` as the closeout certification bundle, preserves
-  `H43` as the paper-grade endpoint, selects
-  `archive_first_consolidation_becomes_default_posture`, keeps `F27/R53/R54`
-  blocked, and leaves the downstream lane at `planning_only_or_project_stop`.
-- `F36` is the current qualification-only bundle; it preserves the one
+- `H63` is now the current active docs-only packet; it preserves `H62` as the
+  prior active packet, preserves `P50/P51/P52/F38` as the current closeout
+  sidecars/dossier, selects
+  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`,
+  keeps the default downstream lane at `archive_or_hygiene_stop`, and leaves
+  runtime closed.
+- `P52` is the current repo-hygiene sidecar; it records
+  `clean_descendant_only_never_dirty_root_main`, keeps dirty root `main`
+  quarantined, keeps raw-row ignore rules active, and does not execute a
+  merge.
+- `P51` is the current paper-facing partial-falsification package; it keeps
+  the narrow positive mechanism result explicit, keeps the broad headline
+  negative explicit, makes archive-first partial falsification the outward
+  shorthand, and keeps `F38` dormant.
+- `P50` is the current control sync wave; it locks root and control surfaces
+  to the post-`H62` archive-first closeout posture without reopening runtime.
+- `F38` is the current dormant future dossier; it names the exact lifted
+  useful target, keeps retrieval-head cost share, query:insert ratio, tie
+  burden, and material cost-structure delta unresolved, and therefore keeps
+  `R63` ineligible and non-runtime only.
+- `H62` is the preserved prior active packet; it records
+  `hygiene_first_scope_decision_keeps_archive_default_and_limits_any_reopen_to_r63_profile_gate`.
+- `H61` is the preserved prior active-before-that docs-only packet; it
+  preserves `H60` and `H59` as earlier decision packets, preserves `H58` as
+  the prior value-negative closeout, preserves `F32` as the closeout
+  certification bundle, preserves `H43` as the paper-grade endpoint, and
+  selects `archive_first_consolidation_becomes_default_posture`.
+- `F36` is the preserved prior qualification-only bundle; it preserves the one
   admissible future family
   `compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route`,
   fixes strict baseline and stop-rule discipline, and keeps runtime closed.
-- `P46` is the current publication/docs wave; it keeps the narrow positive
-  mechanism result explicit, keeps the broad headline negative explicit, makes
-  narrow mechanistic reproduction plus executor-value partial falsification the
-  outward shorthand, and keeps the compiled-online route qualification-only.
-  archive-first consolidation is now the default live posture.
-- `P45` is the current repo-hygiene sidecar; it records the clean successor
-  line, keeps dirty root `main` quarantined, and records
+- `P46` is the preserved prior publication/docs wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, makes narrow mechanistic reproduction plus executor-value partial
+  falsification the outward shorthand, and keeps the compiled-online route
+  qualification-only.
+- `P45` is the preserved prior repo-hygiene sidecar; it records the clean
+  successor line, keeps dirty root `main` quarantined, and records
   `clean_descendant_only_never_dirty_root_main`.
 - `F35` is the current far-future storage bundle; it records
   `high_cost_model_route_far_future_only` and

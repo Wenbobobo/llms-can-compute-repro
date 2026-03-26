@@ -7,35 +7,33 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
-  current design for the hygiene-first reauthorization-prep wave
-- `2026-03-26-post-h62-next-planmode-handoff.md`
-  current shortest handoff from the post-`H62` hygiene-first stack
+- `2026-03-26-post-h62-archive-first-closeout-design.md`
+  current design for the archive-first closeout wave
+- `2026-03-26-post-h63-next-planmode-handoff.md`
+  current shortest handoff from the post-`H63` closeout stack
+- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
+  current active docs-only packet
+- `../milestones/P50_post_h62_archive_first_control_sync/`
+  current control sync wave
+- `../milestones/P51_post_h62_paper_facing_partial_falsification_package/`
+  current paper-facing package wave
+- `../milestones/P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+  current clean-descendant hygiene sidecar
+- `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
+  current dormant future dossier
 - `2026-03-26-post-h60-next-planmode-handoff.md`
   preserved shorter handoff into the post-`H60/H61` archive-first stack
 - `2026-03-26-post-h59-far-future-horizon-log.md`
   current far-future storage note
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
   self-contained GPTPro consultation dossier
-- `../milestones/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
-  current active docs-only packet
-- `../milestones/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
-  current reauthorization bundle
-- `../milestones/P49_post_h61_origin_advisory_sync/`
-  current advisory sync wave
-- `../milestones/P48_post_h61_clean_descendant_promotion_prep/`
-  current clean-descendant promotion-prep sidecar
-- `../milestones/P47_post_h61_root_quarantine_and_main_merge_planning/`
-  current root-quarantine sidecar
-- `../milestones/P46_post_h60_archive_first_publication_sync/`
-  current publication/docs sync wave
 - `../milestones/F35_post_h59_far_future_model_and_weights_horizon_log/`
   current far-future storage bundle
 
 ## Current Route
 
 - completed scientific closeout and narrowing chain:
-  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62`
+  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62 -> P50 -> P51 -> P52 -> F38 -> H63`
 - preserved publication/archive sidecar:
   `P41`
 - preserved advisory dossier sidecar:
@@ -44,12 +42,14 @@ driver and machine-readable `results/` summaries first.
   `P43`, `P44`
 - preserved prior clean-descendant readiness sidecar:
   `P45`
-- current publication/docs sync wave:
+- preserved prior publication/docs sync wave:
   `P46`
-- current repo-hygiene sidecars:
-  `P47`, `P48`
-- current advisory sync wave:
-  `P49`
+- preserved prior hygiene/advisory sync sidecars:
+  `P47`, `P48`, `P49`
+- current closeout sidecars:
+  `P50`, `P51`, `P52`
+- current dormant future dossier:
+  `F38`
 - current far-future storage bundle:
   `F35`
 
@@ -74,11 +74,16 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
-- `2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
-- `2026-03-26-post-h62-next-planmode-handoff.md`
+- `2026-03-26-post-h62-archive-first-closeout-design.md`
+- `2026-03-26-post-h63-next-planmode-handoff.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
+- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
+- `../milestones/P50_post_h62_archive_first_control_sync/`
+- `../milestones/P51_post_h62_paper_facing_partial_falsification_package/`
+- `../milestones/P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+- `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
 - `../milestones/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
 - `../milestones/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
 - `../milestones/P49_post_h61_origin_advisory_sync/`
@@ -86,6 +91,11 @@ Blocked by default:
 - `../milestones/P47_post_h61_root_quarantine_and_main_merge_planning/`
 - `../milestones/P46_post_h60_archive_first_publication_sync/`
 - `../milestones/H61_post_h60_archive_first_position_packet/`
+- `../../results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
+- `../../results/P50_post_h62_archive_first_control_sync/summary.json`
+- `../../results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`
+- `../../results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`
+- `../../results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
 - `../../results/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/summary.json`
 - `../../results/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/summary.json`
 - `../../results/P49_post_h61_origin_advisory_sync/summary.json`
