@@ -190,6 +190,7 @@ The blocked future trainable gate remains:
 - `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `docs/plans/2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
+- `docs/plans/2026-03-26-post-h62-next-planmode-handoff.md`
 - `docs/plans/2026-03-26-post-h60-next-planmode-handoff.md`
 - `docs/plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`
 - `docs/milestones/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`

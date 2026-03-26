@@ -9,8 +9,10 @@ driver and machine-readable `results/` summaries first.
 
 - `2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
   current design for the hygiene-first reauthorization-prep wave
+- `2026-03-26-post-h62-next-planmode-handoff.md`
+  current shortest handoff from the post-`H62` hygiene-first stack
 - `2026-03-26-post-h60-next-planmode-handoff.md`
-  preserved shortest handoff into the post-`H60/H61` archive-first stack
+  preserved shorter handoff into the post-`H60/H61` archive-first stack
 - `2026-03-26-post-h59-far-future-horizon-log.md`
   current far-future storage note
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
@@ -73,6 +75,7 @@ Blocked by default:
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
 - `2026-03-26-post-h61-hygiene-first-reauth-prep-design.md`
+- `2026-03-26-post-h62-next-planmode-handoff.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`

@@ -22,8 +22,8 @@
     },
     {
       "item_id": "p48_current_worktree_is_clean",
-      "status": "blocked",
-      "notes": "Promotion prep should be recorded from a clean descendant worktree state."
+      "status": "pass",
+      "notes": "Promotion prep should be recorded from a clean descendant worktree state, excluding current-wave exporter outputs."
     }
   ]
 }

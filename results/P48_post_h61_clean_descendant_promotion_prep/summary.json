@@ -7,14 +7,14 @@
     "source_branch_upstream": "origin/wip/f36-post-h60-archive-first-consolidation",
     "current_planning_branch": "wip/f37-post-h61-hygiene-first-reauth-prep",
     "current_planning_branch_upstream": "",
-    "candidate_commit_count": 1,
-    "candidate_file_count": 52,
+    "candidate_commit_count": 2,
+    "candidate_file_count": 72,
     "artifact_oversize_count": 0,
-    "worktree_clean": false,
+    "worktree_clean": true,
     "selected_outcome": "clean_descendant_ready_for_later_explicit_promotion",
     "next_required_lane": "later_explicit_promotion_packet_or_h62_scope_decision",
-    "pass_count": 4,
-    "blocked_count": 1
+    "pass_count": 5,
+    "blocked_count": 0
   },
   "runtime_environment": {
     "python": {
