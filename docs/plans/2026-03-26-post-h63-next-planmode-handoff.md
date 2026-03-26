@@ -35,6 +35,15 @@ contains the complete post-`H62` closeout wave:
 - `F38_post_h62_r63_dormant_eligibility_profile_dossier`
 - `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
 
+The same clean branch now also includes the standing audit refresh that makes
+the release/archive ledgers match the `H63` state directly:
+
+- `release_preflight_checklist_audit` now reads `H63/P50/P51/P52/F38` rather
+  than the older `H52/H60` control wording;
+- `P10_submission_archive_ready` now reads the same `H63` archive-first state;
+- both standing audits are green on the clean descendant branch; and
+- no additional execution-side wave remains open on this branch.
+
 ## Branch And Merge Posture
 
 - current branch: `wip/f38-post-h62-archive-first-closeout`
@@ -74,3 +83,12 @@ Do not plan any of the following as the next execution wave:
 - prefer hygiene / merge-prep / archival packaging; and
 - keep `R63` dormant unless a later explicit packet provides materially new
   non-runtime evidence.
+
+## Current Closeout Status
+
+- current branch `wip/f38-post-h62-archive-first-closeout` is published and
+  clean;
+- standing release/archive audits are refreshed and green;
+- no remaining `H63` execution wave is still open on this branch; and
+- the next useful step is a new plan-mode decision, not an unplanned extra
+  execution packet.

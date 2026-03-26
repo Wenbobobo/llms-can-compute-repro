@@ -26,3 +26,12 @@ Immediate active wave:
 `H63_post_p50_p51_p52_f38_archive_first_closeout_packet` is the current active
 packet and selects
 `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`.
+
+## Execution Closeout Status
+
+- standing release/archive audits now read the `H63` state directly;
+- `release_preflight_checklist_audit` is green;
+- `P10_submission_archive_ready` is green;
+- the clean descendant branch is published and clean; and
+- there is no remaining open execution-side wave under the current `H63`
+  packet.

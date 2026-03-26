@@ -11,6 +11,8 @@ driver and machine-readable `results/` summaries first.
   current design for the archive-first closeout wave
 - `2026-03-26-post-h63-next-planmode-handoff.md`
   current shortest handoff from the post-`H63` closeout stack
+- `2026-03-26-post-h63-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
 - `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
   current active docs-only packet
 - `../milestones/P50_post_h62_archive_first_control_sync/`
@@ -76,6 +78,7 @@ Blocked by default:
 - `../../tmp/active_wave_plan.md`
 - `2026-03-26-post-h62-archive-first-closeout-design.md`
 - `2026-03-26-post-h63-next-planmode-handoff.md`
+- `2026-03-26-post-h63-next-planmode-startup-prompt.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
