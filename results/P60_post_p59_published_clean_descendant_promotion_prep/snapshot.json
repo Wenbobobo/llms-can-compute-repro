@@ -6,7 +6,7 @@
     },
     {
       "field": "current_published_clean_descendant_upstream",
-      "value": ""
+      "value": "origin/wip/p60-post-p59-published-clean-descendant-prep"
     },
     {
       "field": "preserved_local_integration_branch",
