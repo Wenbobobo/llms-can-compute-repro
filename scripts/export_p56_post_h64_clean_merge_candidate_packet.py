@@ -75,6 +75,17 @@ def branch_exists(branch: str) -> bool:
     return result.returncode == 0
 
 
+def remote_branch_exists(branch: str) -> bool:
+    result = subprocess.run(
+        ["git", "show-ref", "--verify", "--quiet", f"refs/remotes/origin/{branch}"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return result.returncode == 0
+
+
 def normalize(text: str) -> str:
     return " ".join(text.split()).lower()
 
@@ -173,6 +184,20 @@ def main() -> None:
     main_delta_paths = diff_name_only(f"{TARGET_BRANCH}..{SOURCE_BRANCH}")
     candidate_delta_paths = current_candidate_delta_paths()
     tracked_oversize = tracked_large_files()
+    candidate_branch_local_exists = branch_exists(CANDIDATE_BRANCH)
+    candidate_branch_remote_exists = remote_branch_exists(CANDIDATE_BRANCH)
+    candidate_branch_absorbed_locally = (
+        not candidate_branch_local_exists
+        and candidate_branch_remote_exists
+        and branch_exists(SCRATCH_BRANCH)
+        and contains_all(
+            texts["status"] + "\n" + texts["readme"],
+            [
+                "absorbed locally into",
+                "`wip/p56-main-scratch`",
+            ],
+        )
+    )
 
     checklist_rows = [
         {
@@ -290,12 +315,12 @@ def main() -> None:
             "status": "pass"
             if source_synced
             and branch_exists(SOURCE_BRANCH)
-            and branch_exists(CANDIDATE_BRANCH)
             and branch_exists(SCRATCH_BRANCH)
+            and (candidate_branch_local_exists or candidate_branch_absorbed_locally)
             and root_main_quarantined
             and not tracked_oversize
             else "blocked",
-            "notes": "Source sync, branch availability, root quarantine, and oversize-artifact posture must all hold.",
+            "notes": "Source sync, historical candidate availability, root quarantine, and oversize-artifact posture must all hold.",
         },
     ]
     claim_packet = {
@@ -315,6 +340,9 @@ def main() -> None:
             "current_clean_merge_candidate_packet": "p56_post_h64_clean_merge_candidate_packet",
             "current_clean_source_branch": SOURCE_BRANCH,
             "current_candidate_branch": CANDIDATE_BRANCH,
+            "candidate_branch_local_exists": candidate_branch_local_exists,
+            "candidate_branch_remote_exists": candidate_branch_remote_exists,
+            "candidate_branch_absorbed_locally": candidate_branch_absorbed_locally,
             "current_clean_main_scratch_branch": SCRATCH_BRANCH,
             "target_branch": TARGET_BRANCH,
             "merge_posture": "clean_descendant_only_never_dirty_root_main",
@@ -347,6 +375,8 @@ def main() -> None:
         "rows": [
             {"field": "current_clean_source_branch", "value": SOURCE_BRANCH},
             {"field": "current_candidate_branch", "value": CANDIDATE_BRANCH},
+            {"field": "candidate_branch_local_exists", "value": candidate_branch_local_exists},
+            {"field": "candidate_branch_remote_exists", "value": candidate_branch_remote_exists},
             {"field": "ahead_of_main_commit_count", "value": ahead_of_main_count},
             {"field": "main_delta_file_count", "value": len(main_delta_paths)},
             {"field": "candidate_delta_file_count", "value": len(candidate_delta_paths)},

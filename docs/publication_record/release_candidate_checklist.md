@@ -5,13 +5,14 @@ State: `standing_gate`.
 This checklist defines the minimum outward-facing sync required for a
 restrained release-candidate posture after the current
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet` plus
-`P56/P57/P58/P59` follow-through stack.
+`P56/P57/P58/P59` landed follow-through foundation and
+`P60/P61/P62` published clean-descendant stack.
 
 ## Wording and scope
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches active `H64`, preserved prior active `H63`, current
-  `P56/P57/P58/P59/F38`, default downstream lane
+  `P56/P57/P58/P59/P60/P61/P62/F38`, default downstream lane
   `archive_or_hygiene_stop`, and closed runtime.
 - [ ] `release_summary_draft.md` remains the short public-surface source for
   archive-first partial falsification.
@@ -24,14 +25,15 @@ restrained release-candidate posture after the current
   state.
 - [ ] `paper_bundle_status.md`, `review_boundary_summary.md`,
   `publication_record/README.md`, and `current_stage_driver.md` all describe
-  the same current `H64/P56/P57/P58/P59/F38` package together with preserved
-  `H58/H43`.
+  the same current `H64/P56/P57/P58/P59/P60/P61/P62/F38` package together with
+  preserved `H58/H43`.
 - [ ] `submission_packet_index.md` and `archival_repro_manifest.md` present
   the same handoff: `H64` as current active packet, `P56` as clean
   merge-candidate packet, `P57` as paper/submission sync wave, `P58` as
-  archive/release sync wave, `P59` as control/handoff sync wave, `F38` as the
-  dormant future dossier, and `H58/H43` as preserved scientific endpoints
-  underneath.
+  archive/release sync wave, `P59` as control/handoff sync wave, `P60` as
+  published-descendant promotion-prep, `P61` as release hygiene rebaseline,
+  `P62` as merge-prep control sync, `F38` as the dormant future dossier, and
+  `H58/H43` as preserved scientific endpoints underneath.
 - [ ] `external_release_note_skeleton.md` stays downstream of archive-first
   partial falsification, keeps the broad headline negative, and keeps `R63`
   dormant and non-runtime only.

@@ -8,7 +8,10 @@ does not preserve bounded value.
 
 The current live control state is now
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet` with
-`P56/P57/P58/P59` as the current clean-descendant follow-through stack.
+`P56/P57/P58/P59` as the landed follow-through foundation and
+`P60/P61/P62` as the current published clean-descendant promotion, release
+hygiene, and merge-prep control stack on
+`wip/p60-post-p59-published-clean-descendant-prep`.
 
 archive-first freeze is now the default repo meaning.
 

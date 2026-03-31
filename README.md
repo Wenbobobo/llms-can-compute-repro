@@ -18,13 +18,20 @@ Current anchors:
 
 - active docs-only packet:
   `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
-- current clean merge-candidate packet:
-  `P56_post_h64_clean_merge_candidate_packet`
-- current paper/submission package sync wave:
-  `P57_post_h64_paper_submission_package_sync`
-- current archive/release closeout sync wave:
-  `P58_post_h64_archive_release_closeout_sync`
-- current control/handoff sync wave:
+- current published clean-descendant promotion-prep wave:
+  `P60_post_p59_published_clean_descendant_promotion_prep`
+- current release hygiene rebaseline wave:
+  `P61_post_p60_release_hygiene_rebaseline`
+- current merge-prep control sync wave:
+  `P62_post_p61_merge_prep_control_sync`
+- current published clean descendant branch:
+  `wip/p60-post-p59-published-clean-descendant-prep`
+- preserved local integration branch:
+  `wip/p56-main-scratch`
+- landed `H64` follow-through foundation:
+  `P56_post_h64_clean_merge_candidate_packet`,
+  `P57_post_h64_paper_submission_package_sync`,
+  `P58_post_h64_archive_release_closeout_sync`,
   `P59_post_h64_control_and_handoff_sync`
 - preserved prior active docs-only packet:
   `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
@@ -44,12 +51,15 @@ reproduction gap explicit, `H60` selected planning-only / archive / stop,
 `H61` made archive-first the live posture, `H62` kept archive/hygiene stop as
 the default downstream state, `H63` made archive-first closeout the active
 route, and `H64` freezes archive-first closeout into the active docs-only
-packet while `P56/P57/P58/P59` now carry clean merge-candidate, package-sync,
-archive-sync, and control-sync follow-through without reopening runtime.
+packet. `P56/P57/P58/P59` remain the landed follow-through foundation, `P60`
+publishes the dedicated clean descendant, `P61` reanchors release hygiene on
+that published branch, and `P62` refreshes control and next-entrypoint surfaces
+without reopening runtime or routing integration through dirty root `main`.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
 The default next action is archive / hygiene / merge-prep / publication-sync
-work under the current `H64 + P56/P57/P58/P59` posture.
+work on `wip/p60-post-p59-published-clean-descendant-prep` under the current
+`H64 + P56/P57/P58/P59 + P60/P61/P62` posture, or explicit archive-first stop.

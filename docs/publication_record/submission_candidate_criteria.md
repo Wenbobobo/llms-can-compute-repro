@@ -8,6 +8,9 @@ same frozen paper scope. Active control is now anchored on
 `P57_post_h64_paper_submission_package_sync`,
 `P58_post_h64_archive_release_closeout_sync`,
 `P59_post_h64_control_and_handoff_sync`, and
+`P60_post_p59_published_clean_descendant_promotion_prep`,
+`P61_post_p60_release_hygiene_rebaseline`,
+`P62_post_p61_merge_prep_control_sync`, and
 `F38_post_h62_r63_dormant_eligibility_profile_dossier`, while preserving
 `H58_post_r62_origin_value_boundary_closeout_packet` as the strongest
 executor-value closeout and `H43_post_r44_useful_case_refreeze` as the
@@ -34,8 +37,8 @@ preserved paper-grade endpoint.
    and `R63` remains dormant and non-runtime only.
 5. Release-facing summaries remain downstream.
    `release_summary_draft.md`, `README.md`, and `STATUS.md` may summarize the
-   locked bundle, but they may not outrun it, blur active `H64` control with
-   preserved `H58/H43`, or imply a new runtime lane.
+   locked bundle, but they may not outrun it, blur active `H64/P60/P61/P62`
+   control with preserved `H58/H43`, or imply a new runtime lane.
 6. Standing audits remain green.
    `P1`, `P5` public-surface sync, `P5` callout alignment, the `H2`
    bundle-lock audit, and `release_preflight_checklist_audit` must all report
@@ -54,6 +57,9 @@ preserved paper-grade endpoint.
 - `results/P57_post_h64_paper_submission_package_sync/summary.json`
 - `results/P58_post_h64_archive_release_closeout_sync/summary.json`
 - `results/P59_post_h64_control_and_handoff_sync/summary.json`
+- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`
+- `results/P61_post_p60_release_hygiene_rebaseline/summary.json`
+- `results/P62_post_p61_merge_prep_control_sync/summary.json`
 - `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`

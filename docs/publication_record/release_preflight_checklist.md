@@ -10,21 +10,23 @@ current archive-first closeout bundle is assembled.
 - [ ] `STATUS.md` reflects current
   `H64_post_p53_p54_p55_f38_archive_first_freeze_packet` as the active
   docs-only packet, exposes the current
-  `P56/P57/P58/P59/F38` follow-through stack, preserves
+  `P60/P61/P62` published clean-descendant stack above the landed
+  `P56/P57/P58/P59/F38` foundation, preserves
   `H63_post_p50_p51_p52_f38_archive_first_closeout_packet` as the prior
   active packet, and keeps `archive_or_hygiene_stop`.
 - [ ] `release_summary_draft.md` uses archive-first partial falsification as
   the outward shorthand: narrow mechanistic reproduction survives, the broad
   headline does not, the strongest justified executor-value lane is closed
   negative, and `R63` remains dormant and non-runtime only under the current
-  `P56/P57/P58/P59` follow-through stack.
+  `P60/P61/P62` published clean-descendant stack and landed
+  `P56/P57/P58/P59` foundation.
 - [ ] `release_candidate_checklist.md`,
   `submission_candidate_criteria.md`, `claim_ladder.md`, and
-  `archival_repro_manifest.md` expose the same current `H64/P56/P57/P58/P59/F38`
-  stack while preserving `H58` as the value-negative closeout and `H43` as the
-  preserved paper-grade endpoint.
+  `archival_repro_manifest.md` expose the same current
+  `H64/P56/P57/P58/P59/P60/P61/P62/F38` stack while preserving `H58` as the
+  value-negative closeout and `H43` as the preserved paper-grade endpoint.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  current `H64 + P56/P57/P58/P59 + F38` stack above preserved
+  current `H64 + P56/P57/P58/P59 + P60/P61/P62 + F38` stack above preserved
   `H63/H62/H61/H60/H59/H58` and preserved paper-grade `H43`.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
@@ -35,8 +37,8 @@ current archive-first closeout bundle is assembled.
   `main_text_order.md`, and `appendix_companion_scope.md` remain
   synchronized.
 - [ ] `submission_candidate_criteria.md` preserves `H43` as the paper-grade
-  endpoint under active `H63` control rather than treating `H43` as the
-  current active packet.
+  endpoint under active `H64/P60/P61/P62` control rather than treating `H43`
+  as the current active packet.
 - [ ] `review_boundary_summary.md` and
   `external_release_note_skeleton.md` stay downstream of archive-first partial
   falsification and do not imply runtime reopen, same-lane executor-value

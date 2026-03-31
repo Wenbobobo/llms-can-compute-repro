@@ -2,6 +2,9 @@
 
 ## Core packets
 
+- `../milestones/P62_post_p61_merge_prep_control_sync/`
+- `../milestones/P61_post_p60_release_hygiene_rebaseline/`
+- `../milestones/P60_post_p59_published_clean_descendant_promotion_prep/`
 - `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
 - `../milestones/P56_post_h64_clean_merge_candidate_packet/`
 - `../milestones/P57_post_h64_paper_submission_package_sync/`
@@ -13,6 +16,9 @@
 
 ## Result summaries
 
+- `results/P62_post_p61_merge_prep_control_sync/summary.json`
+- `results/P61_post_p60_release_hygiene_rebaseline/summary.json`
+- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`
 - `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
 - `results/P56_post_h64_clean_merge_candidate_packet/summary.json`
 - `results/P57_post_h64_paper_submission_package_sync/summary.json`

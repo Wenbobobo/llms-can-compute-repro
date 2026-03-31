@@ -13,14 +13,20 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
+- `P62_post_p61_merge_prep_control_sync/`
+  current merge-prep control sync wave
+- `P61_post_p60_release_hygiene_rebaseline/`
+  current release hygiene rebaseline wave
+- `P60_post_p59_published_clean_descendant_promotion_prep/`
+  current published clean-descendant promotion-prep wave
 - `P59_post_h64_control_and_handoff_sync/`
-  current control/handoff sync wave
+  landed control/handoff sync foundation wave
 - `P58_post_h64_archive_release_closeout_sync/`
-  current archive/release closeout sync wave
+  landed archive/release closeout sync foundation wave
 - `P57_post_h64_paper_submission_package_sync/`
-  current paper/submission package sync wave
+  landed paper/submission package sync foundation wave
 - `P56_post_h64_clean_merge_candidate_packet/`
-  current clean merge-candidate packet
+  landed clean merge-candidate foundation wave
 - `H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
   current active docs-only packet
 - `H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
@@ -90,7 +96,10 @@ historical and may use then-current wording.
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
 - keep `H64` as the current archive-first freeze packet;
-- keep `P56/P57/P58/P59` as the current operational follow-through stack;
+- keep `P56/P57/P58/P59` as the landed operational follow-through foundation;
+- keep `P60/P61/P62` as the current published clean-descendant prep/control
+  stack on `wip/p60-post-p59-published-clean-descendant-prep`;
+- keep `wip/p56-main-scratch` as the preserved local integration branch only;
 - keep `H63`, `H62`, `H61`, `H60`, and `H59` as preserved prior decision packets;
 - keep the default downstream lane at `archive_or_hygiene_stop`;
 - keep `R63` conditional and non-runtime only via dormant `F38`;

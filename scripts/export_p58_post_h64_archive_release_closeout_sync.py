@@ -62,6 +62,42 @@ def main() -> None:
     external_release_note_text = read_text(ROOT / "docs" / "publication_record" / "external_release_note_skeleton.md")
     review_boundary_text = read_text(ROOT / "docs" / "publication_record" / "review_boundary_summary.md")
 
+    release_preflight_matches_old_stack = contains_all(
+        release_preflight_text,
+        [
+            "current `H64/P56/P57/P58/P59/F38` stack",
+            "`H58` as the value-negative closeout",
+            "`H43` as the preserved paper-grade endpoint",
+            "No public release surface routes through dirty root `main`.",
+        ],
+    )
+    release_preflight_matches_extended_stack = contains_all(
+        release_preflight_text,
+        [
+            "`P60/P61/P62` published clean-descendant stack",
+            "`P56/P57/P58/P59/F38` foundation",
+            "`H58` as the value-negative closeout",
+            "`H43` as the preserved paper-grade endpoint",
+            "No public release surface routes through dirty root `main`.",
+        ],
+    )
+    release_candidate_matches_old_stack = contains_all(
+        release_candidate_text,
+        [
+            "`H64/P56/P57/P58/P59/F38`",
+            "preserved `H58/H43`",
+            "No outward wording implies a new runtime lane",
+        ],
+    )
+    release_candidate_matches_extended_stack = contains_all(
+        release_candidate_text,
+        [
+            "`H64/P56/P57/P58/P59/P60/P61/P62/F38`",
+            "preserved `H58/H43`",
+            "No outward wording implies a new runtime lane",
+        ],
+    )
+
     checklist_rows = [
         {
             "item_id": "p58_reads_h64_p56_p57",
@@ -84,27 +120,12 @@ def main() -> None:
                             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
                         ],
                     ),
-                    contains_all(
-                        release_preflight_text,
-                        [
-                            "current `H64/P56/P57/P58/P59/F38` stack",
-                            "`H58` as the value-negative closeout",
-                            "`H43` as the preserved paper-grade endpoint",
-                            "No public release surface routes through dirty root `main`.",
-                        ],
-                    ),
-                    contains_all(
-                        release_candidate_text,
-                        [
-                            "`H64/P56/P57/P58/P59/F38`",
-                            "preserved `H58/H43`",
-                            "No outward wording implies a new runtime lane",
-                        ],
-                    ),
+                    release_preflight_matches_old_stack or release_preflight_matches_extended_stack,
+                    release_candidate_matches_old_stack or release_candidate_matches_extended_stack,
                 )
             )
             else "blocked",
-            "notes": "Archive and release ledgers should expose the same H64 follow-through stack.",
+            "notes": "Archive and release ledgers should expose the same H64 follow-through stack or its later published clean-descendant extension.",
         },
         {
             "item_id": "p58_release_note_and_review_boundary_stay_restrained",

@@ -73,6 +73,30 @@ def main() -> None:
     handoff_text = read_text(HANDOFF_PATH)
     startup_prompt_text = read_text(STARTUP_PROMPT_PATH)
 
+    plans_readme_matches_original_state = contains_all(
+        plans_readme_text,
+        [
+            "2026-03-31-post-h64-clean-merge-candidate-design.md",
+            "2026-03-31-post-p59-next-planmode-handoff.md",
+            "2026-03-31-post-p59-next-planmode-startup-prompt.md",
+            "P56_post_h64_clean_merge_candidate_packet",
+            "P57_post_h64_paper_submission_package_sync",
+            "P58_post_h64_archive_release_closeout_sync",
+            "P59_post_h64_control_and_handoff_sync",
+        ],
+    )
+    plans_readme_matches_extended_state = contains_all(
+        plans_readme_text,
+        [
+            "2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md",
+            "2026-03-31-post-p62-next-planmode-handoff.md",
+            "2026-03-31-post-p62-next-planmode-startup-prompt.md",
+            "P60_post_p59_published_clean_descendant_promotion_prep",
+            "P61_post_p60_release_hygiene_rebaseline",
+            "P62_post_p61_merge_prep_control_sync",
+        ],
+    )
+
     checklist_rows = [
         {
             "item_id": "p59_reads_h64_p56_p57_p58",
@@ -95,18 +119,7 @@ def main() -> None:
                             "`archive_or_hygiene_stop`",
                         ],
                     ),
-                    contains_all(
-                        plans_readme_text,
-                        [
-                            "2026-03-31-post-h64-clean-merge-candidate-design.md",
-                            "2026-03-31-post-p59-next-planmode-handoff.md",
-                            "2026-03-31-post-p59-next-planmode-startup-prompt.md",
-                            "P56_post_h64_clean_merge_candidate_packet",
-                            "P57_post_h64_paper_submission_package_sync",
-                            "P58_post_h64_archive_release_closeout_sync",
-                            "P59_post_h64_control_and_handoff_sync",
-                        ],
-                    ),
+                    plans_readme_matches_original_state or plans_readme_matches_extended_state,
                     contains_all(
                         milestones_readme_text,
                         [
@@ -128,7 +141,7 @@ def main() -> None:
                 )
             )
             else "blocked",
-            "notes": "Control surfaces must expose the same current H64 follow-through stack.",
+            "notes": "Control surfaces must expose the same H64 follow-through stack or a later published clean-descendant extension that preserves it.",
         },
         {
             "item_id": "p59_handoff_and_startup_prompt_are_current",
