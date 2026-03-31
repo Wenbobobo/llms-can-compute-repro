@@ -14,6 +14,12 @@ Current scientific/control stack:
   `P62_post_p61_merge_prep_control_sync`;
 - current published clean descendant branch:
   `wip/p60-post-p59-published-clean-descendant-prep`;
+- current local hygiene successor branch:
+  `wip/p63-post-p62-tight-core-hygiene`;
+- current docs router:
+  `docs/README.md`;
+- current branch/worktree registry:
+  `docs/branch_worktree_registry.md`;
 - preserved local integration branch:
   `wip/p56-main-scratch`;
 - landed `H64` follow-through foundation:
@@ -36,6 +42,12 @@ Immediate active wave:
 published clean descendant, with `P61_post_p60_release_hygiene_rebaseline` and
 `P60_post_p59_published_clean_descendant_promotion_prep` already landed above
 the `H64 + P56/P57/P58/P59` foundation.
+
+Immediate local follow-through:
+
+`wip/p63-post-p62-tight-core-hygiene` is the current hygiene-first successor
+branch for tight-core cleanup, docs taxonomy convergence, and the `F38`
+gate-dossier-only closeout posture.
 
 ## Execution Closeout Status
 

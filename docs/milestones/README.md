@@ -13,6 +13,8 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
+- `../branch_worktree_registry.md`
+  current tight-core branch/worktree registry and cleanup posture
 - `P62_post_p61_merge_prep_control_sync/`
   current merge-prep control sync wave
 - `P61_post_p60_release_hygiene_rebaseline/`
@@ -99,6 +101,8 @@ historical and may use then-current wording.
 - keep `P56/P57/P58/P59` as the landed operational follow-through foundation;
 - keep `P60/P61/P62` as the current published clean-descendant prep/control
   stack on `wip/p60-post-p59-published-clean-descendant-prep`;
+- keep `wip/p63-post-p62-tight-core-hygiene` as the current local
+  hygiene-first successor branch only;
 - keep `wip/p56-main-scratch` as the preserved local integration branch only;
 - keep `H63`, `H62`, `H61`, `H60`, and `H59` as preserved prior decision packets;
 - keep the default downstream lane at `archive_or_hygiene_stop`;

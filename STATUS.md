@@ -12,6 +12,9 @@
   `P62_post_p61_merge_prep_control_sync`.
 - The current published clean descendant branch is
   `wip/p60-post-p59-published-clean-descendant-prep`.
+- The current docs router is `docs/README.md`.
+- The current branch/worktree registry is
+  `docs/branch_worktree_registry.md`.
 - The preserved local integration branch is `wip/p56-main-scratch`.
 - The landed `H64` follow-through foundation is
   `P56_post_h64_clean_merge_candidate_packet`,
@@ -34,6 +37,9 @@
 - No additional same-lane executor-value probe is admissible on this branch.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
+- The current local hygiene execution successor is
+  `wip/p63-post-p62-tight-core-hygiene`.
 - The default next action is archive / hygiene / merge-prep /
   publication-sync work plus paper-facing partial falsification on
-  `wip/p60-post-p59-published-clean-descendant-prep`.
+  `wip/p60-post-p59-published-clean-descendant-prep`, with successor local work
+  tracked in `docs/branch_worktree_registry.md`.

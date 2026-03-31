@@ -9,6 +9,8 @@ retrieval-backed execution is real on admitted surfaces, but bounded
 executor/system value on the strongest justified useful-kernel lane is
 disconfirmed.
 
+For live routing and preserved-history navigation, start at `docs/README.md`.
+
 ## Current Stage
 
 As of `2026-03-31`, the current active packet is
@@ -26,6 +28,10 @@ Current anchors:
   `P62_post_p61_merge_prep_control_sync`
 - current published clean descendant branch:
   `wip/p60-post-p59-published-clean-descendant-prep`
+- current docs router:
+  `docs/README.md`
+- current branch/worktree registry:
+  `docs/branch_worktree_registry.md`
 - preserved local integration branch:
   `wip/p56-main-scratch`
 - landed `H64` follow-through foundation:
@@ -63,3 +69,6 @@ There are no open runtime tasks on this branch.
 The default next action is archive / hygiene / merge-prep / publication-sync
 work on `wip/p60-post-p59-published-clean-descendant-prep` under the current
 `H64 + P56/P57/P58/P59 + P60/P61/P62` posture, or explicit archive-first stop.
+Current local hygiene follow-through should run only from successor clean
+descendants recorded in `docs/branch_worktree_registry.md`; dirty root `main`
+remains quarantine-only.

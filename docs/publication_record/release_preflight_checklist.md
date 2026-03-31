@@ -25,8 +25,9 @@ current archive-first closeout bundle is assembled.
   `archival_repro_manifest.md` expose the same current
   `H64/P56/P57/P58/P59/P60/P61/P62/F38` stack while preserving `H58` as the
   value-negative closeout and `H43` as the preserved paper-grade endpoint.
-- [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  current `H64 + P56/P57/P58/P59 + P60/P61/P62 + F38` stack above preserved
+- [ ] `docs/README.md`, `publication_record/README.md`, and `plans/README.md`
+  all expose the current `H64 + P56/P57/P58/P59 + P60/P61/P62 + F38` stack
+  using a clear live vs historical vs dormant taxonomy above preserved
   `H63/H62/H61/H60/H59/H58` and preserved paper-grade `H43`.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
@@ -70,8 +71,8 @@ current archive-first closeout bundle is assembled.
   and keeps `archive_or_hygiene_stop`.
 - [ ] `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
   reports `runtime_authorization = closed`, keeps the exact target declared,
-  and keeps cost share, query:insert ratio, tie burden, and materially
-  different cost model unresolved.
+  and keeps comparator, cost share, query:insert ratio, tie burden, and
+  materially different cost model unresolved.
 - [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
   reports
   `stop_as_mechanism_supported_but_no_bounded_executor_value`.

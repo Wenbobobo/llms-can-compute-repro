@@ -18,6 +18,8 @@ lands above the stable `H64` freeze packet.
   `P60_post_p59_published_clean_descendant_promotion_prep`,
   `P61_post_p60_release_hygiene_rebaseline`,
   `P62_post_p61_merge_prep_control_sync`
+- current local hygiene successor branch:
+  `wip/p63-post-p62-tight-core-hygiene`
 - preserved prior active packet:
   `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
 - preserved strongest executor-value closeout:
@@ -26,11 +28,17 @@ lands above the stable `H64` freeze packet.
   `H43_post_r44_useful_case_refreeze`
 - dormant future dossier:
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`
+- docs router:
+  `docs/README.md`
+- branch/worktree registry:
+  `docs/branch_worktree_registry.md`
 
 ## Branch And Merge Posture
 
 - current published clean-descendant branch:
   `wip/p60-post-p59-published-clean-descendant-prep`
+- current local successor worktree:
+  `D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene`
 - current worktree:
   `D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep`
 - preserved local integration base:
@@ -44,7 +52,7 @@ lands above the stable `H64` freeze packet.
 ## Default Recommendation
 
 - start from `H64 + P56/P57/P58/P59 + P60/P61/P62`, not reopen momentum
-- prefer review packaging, promotion-prep, merge-prep, hygiene, or explicit
-  archive-first stop over speculative science
+- prefer tight-core cleanup completion, docs taxonomy polish, promotion-prep,
+  merge-prep, hygiene, or explicit archive-first stop over speculative science
 - keep `R63` dormant unless a later explicit non-runtime packet resolves the
-  cost-profile fields honestly
+  target, comparator, and cost-profile fields honestly

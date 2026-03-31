@@ -7,16 +7,25 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-03-31-post-p62-tight-core-hygiene-and-gate-dossier-design.md`
+  current design for tight-core worktree convergence, docs taxonomy cleanup,
+  and the `F38` gate-dossier-only closeout posture
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
-  current design for the published clean-descendant promotion-prep, release
-  hygiene rebaseline, and merge-prep control sync phase
+  preserved design for the earlier published clean-descendant promotion-prep,
+  release hygiene rebaseline, and merge-prep control sync phase
 - `2026-03-31-post-p62-next-planmode-handoff.md`
-  current shortest handoff from the published clean descendant above the landed
-  `H64 + P56/P57/P58/P59` stack
+  current shortest handoff from the live `H64 + P56/P57/P58/P59 +
+  P60/P61/P62 + F38` state into the next planning round
 - `2026-03-31-post-p62-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
 - `2026-03-31-post-p62-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `../../README.md`
+  current restrained repo landing page
+- `../README.md`
+  current top-level docs router
+- `../branch_worktree_registry.md`
+  current tight-core branch/worktree registry and merge posture control note
 - `../milestones/P62_post_p61_merge_prep_control_sync/`
   current merge-prep control sync wave
 - `../milestones/P61_post_p60_release_hygiene_rebaseline/`
@@ -68,6 +77,8 @@ driver and machine-readable `results/` summaries first.
   `P56`, `P57`, `P58`, `P59`
 - current published clean-descendant sidecars:
   `P60`, `P61`, `P62`
+- current hygiene-first follow-through branch:
+  `wip/p63-post-p62-tight-core-hygiene`
 - current dormant future dossier:
   `F38`
 - current far-future storage bundle:
@@ -81,6 +92,8 @@ Blocked by default:
 
 ## Preserved Historical Plans
 
+- `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
+  preserved design for the earlier `P60/P61/P62` wave
 - `2026-03-26-post-h60-archive-first-consolidation-design.md`
   preserved design for the prior `P45/F36/H61/P46` wave
 - `2026-03-26-post-h59-archive-and-reopen-screen-design.md`
@@ -93,7 +106,10 @@ Blocked by default:
 ## Use With
 
 - `../publication_record/current_stage_driver.md`
+- `../README.md`
+- `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-03-31-post-p62-tight-core-hygiene-and-gate-dossier-design.md`
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
 - `2026-03-31-post-p62-next-planmode-handoff.md`
 - `2026-03-31-post-p62-next-planmode-startup-prompt.md`

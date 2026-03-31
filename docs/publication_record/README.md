@@ -5,14 +5,25 @@ facing control surfaces.
 
 ## Current Start Points
 
+- `../../README.md`
+  restrained repo landing page
+- `../README.md`
+  top-level live/historical/dormant router
+- `../branch_worktree_registry.md`
+  current tight-core branch/worktree registry and hygiene control note
+- `../plans/2026-03-31-post-p62-tight-core-hygiene-and-gate-dossier-design.md`
+  current design for tight-core convergence, docs taxonomy cleanup, and
+  `F38` gate-dossier-only framing
 - `../plans/2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
-  current design for the published clean-descendant promotion-prep and
-  merge-prep control phase
+  preserved design for the earlier published clean-descendant promotion-prep
+  and merge-prep control phase
 - `../plans/2026-03-31-post-p62-next-planmode-handoff.md`
   current shortest handoff from the published clean descendant above the landed
   `H64 + P56/P57/P58/P59` stack
 - `../plans/2026-03-31-post-p62-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-03-31-post-p62-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../milestones/P62_post_p61_merge_prep_control_sync/`
   current merge-prep control sync wave
 - `../milestones/P61_post_p60_release_hygiene_rebaseline/`
@@ -31,3 +42,14 @@ facing control surfaces.
   landed control/handoff sync foundation wave
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
   current dormant future dossier
+
+## Current Taxonomy
+
+- live control:
+  `current_stage_driver.md`, `release_preflight_checklist.md`,
+  `release_candidate_checklist.md`, `submission_candidate_criteria.md`
+- preserved historical package:
+  `submission_packet_index.md`, `experiment_manifest.md`,
+  `release_summary_draft.md`, `paper_bundle_status.md`
+- dormant future:
+  `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
