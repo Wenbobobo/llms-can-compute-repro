@@ -1,4 +1,4 @@
-"""Export the preserved-prior P62 control sync sidecar after successor promotion."""
+"""Export the post-P64 merge-prep control sync sidecar for P65."""
 
 from __future__ import annotations
 
@@ -10,10 +10,10 @@ from utils import detect_runtime_environment
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "results" / "P62_post_p61_merge_prep_control_sync"
+OUT_DIR = ROOT / "results" / "P65_post_p64_merge_prep_control_sync"
 H64_SUMMARY_PATH = ROOT / "results" / "H64_post_p53_p54_p55_f38_archive_first_freeze_packet" / "summary.json"
-P60_SUMMARY_PATH = ROOT / "results" / "P60_post_p59_published_clean_descendant_promotion_prep" / "summary.json"
-P61_SUMMARY_PATH = ROOT / "results" / "P61_post_p60_release_hygiene_rebaseline" / "summary.json"
+P63_SUMMARY_PATH = ROOT / "results" / "P63_post_p62_published_successor_promotion_prep" / "summary.json"
+P64_SUMMARY_PATH = ROOT / "results" / "P64_post_p63_release_hygiene_rebaseline" / "summary.json"
 CURRENT_STAGE_DRIVER_PATH = ROOT / "docs" / "publication_record" / "current_stage_driver.md"
 PLANS_README_PATH = ROOT / "docs" / "plans" / "README.md"
 MILESTONES_README_PATH = ROOT / "docs" / "milestones" / "README.md"
@@ -58,14 +58,14 @@ def contains_all(text: str, needles: list[str]) -> bool:
 
 def main() -> None:
     h64_summary = read_json(H64_SUMMARY_PATH)["summary"]
-    p60_summary = read_json(P60_SUMMARY_PATH)["summary"]
-    p61_summary = read_json(P61_SUMMARY_PATH)["summary"]
+    p63_summary = read_json(P63_SUMMARY_PATH)["summary"]
+    p64_summary = read_json(P64_SUMMARY_PATH)["summary"]
     if h64_summary["selected_outcome"] != "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant":
-        raise RuntimeError("P62 expects the landed H64 freeze packet.")
-    if p60_summary["selected_outcome"] != "published_clean_descendant_promotion_prep_locked_after_p59":
-        raise RuntimeError("P62 expects the landed P60 preserved-prior promotion-prep wave.")
-    if p61_summary["selected_outcome"] != "published_clean_descendant_release_hygiene_rebaselined":
-        raise RuntimeError("P62 expects the landed P61 preserved-prior hygiene rebaseline wave.")
+        raise RuntimeError("P65 expects the landed H64 freeze packet.")
+    if p63_summary["selected_outcome"] != "published_successor_promotion_prep_locked_after_p62":
+        raise RuntimeError("P65 expects the landed P63 successor promotion-prep wave.")
+    if p64_summary["selected_outcome"] != "published_successor_release_hygiene_rebaselined":
+        raise RuntimeError("P65 expects the landed P64 hygiene rebaseline wave.")
 
     current_stage_driver_text = read_text(CURRENT_STAGE_DRIVER_PATH)
     plans_readme_text = read_text(PLANS_README_PATH)
@@ -77,12 +77,12 @@ def main() -> None:
 
     checklist_rows = [
         {
-            "item_id": "p62_reads_h64_p60_p61",
+            "item_id": "p65_reads_h64_p63_p64",
             "status": "pass",
-            "notes": "P62 preserved-prior export starts only after H64 plus P60/P61 remain green.",
+            "notes": "P65 starts only after H64 plus P63/P64 remain green.",
         },
         {
-            "item_id": "p62_control_surfaces_expose_current_successor_stack",
+            "item_id": "p65_control_surfaces_expose_current_published_successor_stack",
             "status": "pass"
             if all(
                 (
@@ -126,10 +126,10 @@ def main() -> None:
                 )
             )
             else "blocked",
-            "notes": "Control surfaces must expose the live P63/P64/P65 successor stack.",
+            "notes": "Control surfaces must expose the live published successor merge-prep stack.",
         },
         {
-            "item_id": "p62_handoff_and_startup_prompt_are_current",
+            "item_id": "p65_handoff_and_startup_prompt_are_current",
             "status": "pass"
             if all(
                 (
@@ -167,14 +167,14 @@ def main() -> None:
                 )
             )
             else "blocked",
-            "notes": "The next entrypoint docs must start from the P65 successor control state.",
+            "notes": "The next entrypoint handoff, startup, and brief docs must start from the P65 successor control state.",
         },
     ]
     claim_packet = {
         "supports": [
-            "P62 remains preserved as the prior merge-prep control sync wave.",
-            "Current control and next-entrypoint surfaces are synchronized to the P63/P64/P65 successor stack.",
-            "H64 remains active while runtime stays closed and merge execution remains absent.",
+            "P65 synchronizes current control and next-entrypoint surfaces to the published successor stack.",
+            "P65 keeps H64 active while leaving runtime closed and merge execution absent.",
+            "P65 makes the next decision explicitly review/merge-prep or archive-first stop, not scientific reopen.",
         ],
         "does_not_support": [
             "runtime reopen",
@@ -186,7 +186,7 @@ def main() -> None:
             "current_published_clean_descendant_wave": CURRENT_PUBLISHED_WAVE,
             "current_release_hygiene_rebaseline_wave": CURRENT_RELEASE_WAVE,
             "current_merge_prep_control_sync_wave": CURRENT_CONTROL_WAVE,
-            "selected_outcome": "published_clean_descendant_merge_prep_control_synced_to_h64_stack",
+            "selected_outcome": "published_successor_merge_prep_control_synced_to_h64_stack",
             "next_required_lane": "later_published_successor_review_or_explicit_archive_stop_decision",
         },
     }

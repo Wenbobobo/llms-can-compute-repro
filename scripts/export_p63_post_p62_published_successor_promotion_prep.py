@@ -1,4 +1,4 @@
-"""Export the preserved-prior P60 promotion-prep sidecar after successor promotion."""
+"""Export the post-P62 published successor promotion-prep sidecar for P63."""
 
 from __future__ import annotations
 
@@ -11,18 +11,15 @@ from utils import detect_runtime_environment
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "results" / "P60_post_p59_published_clean_descendant_promotion_prep"
+OUT_DIR = ROOT / "results" / "P63_post_p62_published_successor_promotion_prep"
 H64_SUMMARY_PATH = ROOT / "results" / "H64_post_p53_p54_p55_f38_archive_first_freeze_packet" / "summary.json"
-P56_SUMMARY_PATH = ROOT / "results" / "P56_post_h64_clean_merge_candidate_packet" / "summary.json"
-P57_SUMMARY_PATH = ROOT / "results" / "P57_post_h64_paper_submission_package_sync" / "summary.json"
-P58_SUMMARY_PATH = ROOT / "results" / "P58_post_h64_archive_release_closeout_sync" / "summary.json"
-P59_SUMMARY_PATH = ROOT / "results" / "P59_post_h64_control_and_handoff_sync" / "summary.json"
+P62_SUMMARY_PATH = ROOT / "results" / "P62_post_p61_merge_prep_control_sync" / "summary.json"
 CURRENT_STAGE_DRIVER_PATH = ROOT / "docs" / "publication_record" / "current_stage_driver.md"
 ACTIVE_WAVE_PLAN_PATH = ROOT / "tmp" / "active_wave_plan.md"
 PUBLICATION_README_PATH = ROOT / "docs" / "publication_record" / "README.md"
 PLANS_README_PATH = ROOT / "docs" / "plans" / "README.md"
 BRANCH_REGISTRY_PATH = ROOT / "docs" / "branch_worktree_registry.md"
-CURRENT_PUBLISHED_BRANCH = "wip/p63-post-p62-tight-core-hygiene"
+EXPECTED_BRANCH = "wip/p63-post-p62-tight-core-hygiene"
 PRESERVED_PRIOR_BRANCH = "wip/p60-post-p59-published-clean-descendant-prep"
 SCRATCH_BRANCH = "wip/p56-main-scratch"
 ROOT_MAIN_WORKTREE = "D:/zWenbo/AI/LLMCompute"
@@ -114,24 +111,15 @@ def parse_worktree_list(text: str) -> list[dict[str, str]]:
 
 def main() -> None:
     h64_summary = read_json(H64_SUMMARY_PATH)["summary"]
-    p56_summary = read_json(P56_SUMMARY_PATH)["summary"]
-    p57_summary = read_json(P57_SUMMARY_PATH)["summary"]
-    p58_summary = read_json(P58_SUMMARY_PATH)["summary"]
-    p59_summary = read_json(P59_SUMMARY_PATH)["summary"]
+    p62_summary = read_json(P62_SUMMARY_PATH)["summary"]
     if h64_summary["selected_outcome"] != "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant":
-        raise RuntimeError("P60 expects the landed H64 freeze packet.")
-    if p56_summary["selected_outcome"] != "clean_descendant_merge_candidate_staged_without_merge_execution":
-        raise RuntimeError("P60 expects the landed P56 merge-candidate packet.")
-    if p57_summary["selected_outcome"] != "paper_submission_package_surfaces_synced_to_h64_followthrough_stack":
-        raise RuntimeError("P60 expects the landed P57 paper/submission sync.")
-    if p58_summary["selected_outcome"] != "archive_release_closeout_surfaces_synced_to_h64_followthrough_stack":
-        raise RuntimeError("P60 expects the landed P58 archive/release sync.")
-    if p59_summary["selected_outcome"] != "control_and_handoff_surfaces_synced_to_h64_followthrough_stack":
-        raise RuntimeError("P60 expects the landed P59 control sync.")
+        raise RuntimeError("P63 expects the landed H64 freeze packet.")
+    if p62_summary["selected_outcome"] != "published_clean_descendant_merge_prep_control_synced_to_h64_stack":
+        raise RuntimeError("P63 expects the landed P62 preserved-prior control-sync wave.")
 
     current_branch_name = current_branch()
     current_upstream = tracked_upstream(current_branch_name)
-    current_published_upstream = tracked_upstream(CURRENT_PUBLISHED_BRANCH) if branch_exists(CURRENT_PUBLISHED_BRANCH) else ""
+    published_upstream = tracked_upstream(EXPECTED_BRANCH) if branch_exists(EXPECTED_BRANCH) else ""
     preserved_prior_upstream = tracked_upstream(PRESERVED_PRIOR_BRANCH) if branch_exists(PRESERVED_PRIOR_BRANCH) else ""
     worktrees = parse_worktree_list(git_output(["worktree", "list", "--porcelain"]))
     root_main_entry = next((row for row in worktrees if row["worktree"] == ROOT_MAIN_WORKTREE), None)
@@ -143,34 +131,34 @@ def main() -> None:
     publication_readme_text = read_text(PUBLICATION_README_PATH)
     plans_readme_text = read_text(PLANS_README_PATH)
     branch_registry_text = read_text(BRANCH_REGISTRY_PATH)
-    current_branch_registered = current_branch_name == CURRENT_PUBLISHED_BRANCH or contains_all(
+    current_branch_registered = current_branch_name == EXPECTED_BRANCH or contains_all(
         branch_registry_text,
-        [CURRENT_PUBLISHED_BRANCH, current_branch_name, "successor"],
+        [EXPECTED_BRANCH, current_branch_name, "successor"],
     )
 
     checklist_rows = [
         {
-            "item_id": "p60_reads_h64_p56_p57_p58_p59",
+            "item_id": "p63_reads_h64_and_p62",
             "status": "pass",
-            "notes": "P60 remains anchored on the landed H64 + P56/P57/P58/P59 stack.",
+            "notes": "P63 starts only after H64 and the prior P62 control-sync stack remain landed.",
         },
         {
-            "item_id": "p60_current_branch_is_current_successor_or_registered_execution_lane",
+            "item_id": "p63_current_branch_is_current_published_successor_or_registered_execution_lane",
             "status": "pass" if current_branch_registered else "blocked",
-            "notes": "P60 preserved-prior export should run either on the current published successor branch or on its registered execution successor.",
+            "notes": "P63 should run either on the published successor branch or on a registered execution successor branch.",
         },
         {
-            "item_id": "p60_scratch_branch_remains_available",
+            "item_id": "p63_scratch_branch_remains_available",
             "status": "pass" if branch_exists(SCRATCH_BRANCH) else "blocked",
             "notes": "The scratch integration branch should remain available as the absorbed local base.",
         },
         {
-            "item_id": "p60_root_main_remains_quarantined",
+            "item_id": "p63_root_main_remains_quarantined",
             "status": "pass" if root_main_quarantined else "blocked",
             "notes": "Dirty root main must remain parked on its quarantine branch.",
         },
         {
-            "item_id": "p60_control_surfaces_expose_successor_stack_and_preserve_prior_branch",
+            "item_id": "p63_control_surfaces_expose_successor_stack",
             "status": "pass"
             if all(
                 (
@@ -180,7 +168,8 @@ def main() -> None:
                             "P63_post_p62_published_successor_promotion_prep",
                             "P64_post_p63_release_hygiene_rebaseline",
                             "P65_post_p64_merge_prep_control_sync",
-                            CURRENT_PUBLISHED_BRANCH,
+                            EXPECTED_BRANCH,
+                            "`archive_or_hygiene_stop`",
                         ],
                     ),
                     contains_all(
@@ -189,7 +178,7 @@ def main() -> None:
                             "`P63_post_p62_published_successor_promotion_prep`",
                             "`P64_post_p63_release_hygiene_rebaseline`",
                             "`P65_post_p64_merge_prep_control_sync`",
-                            f"`{CURRENT_PUBLISHED_BRANCH}`",
+                            f"`{EXPECTED_BRANCH}`",
                         ],
                     ),
                     contains_all(
@@ -211,24 +200,24 @@ def main() -> None:
                     contains_all(
                         branch_registry_text,
                         [
-                            CURRENT_PUBLISHED_BRANCH,
+                            EXPECTED_BRANCH,
+                            current_branch_name,
                             PRESERVED_PRIOR_BRANCH,
                             SCRATCH_BRANCH,
                             "clean_descendant_only_never_dirty_root_main",
-                            "preserved prior published clean descendant",
                         ],
                     ),
                 )
             )
             else "blocked",
-            "notes": "Current control surfaces must expose P63/P64/P65 as the live successor stack while preserving the old P60 branch explicitly.",
+            "notes": "Current control surfaces must expose P63/P64/P65 as the live successor stack.",
         },
     ]
     claim_packet = {
         "supports": [
-            "P60 remains preserved as the prior published clean-descendant promotion-prep wave after successor promotion.",
-            "Current live control wording now points to the P63/P64/P65 successor stack on wip/p63-post-p62-tight-core-hygiene.",
-            "Merge execution remains absent and dirty-root integration remains prohibited.",
+            "P63 promotes the clean successor branch above the preserved prior P60/P61/P62 stack.",
+            "P63 keeps merge execution absent and preserves the prior published clean descendant explicitly.",
+            "P63 leaves dirty-root integration prohibited while advancing live control wording to the successor stack.",
         ],
         "does_not_support": [
             "merge execution",
@@ -238,8 +227,8 @@ def main() -> None:
         "distilled_result": {
             "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
             "current_published_clean_descendant_wave": "p63_post_p62_published_successor_promotion_prep",
-            "current_published_clean_descendant_branch": CURRENT_PUBLISHED_BRANCH,
-            "current_published_clean_descendant_upstream": current_published_upstream,
+            "current_published_clean_descendant_branch": EXPECTED_BRANCH,
+            "current_published_clean_descendant_upstream": published_upstream,
             "preserved_prior_published_clean_descendant_branch": PRESERVED_PRIOR_BRANCH,
             "preserved_prior_published_clean_descendant_upstream": preserved_prior_upstream,
             "current_execution_branch": current_branch_name,
@@ -249,7 +238,7 @@ def main() -> None:
             "root_main_quarantined": root_main_quarantined,
             "merge_posture": "clean_descendant_only_never_dirty_root_main",
             "merge_execution_state": False,
-            "selected_outcome": "published_clean_descendant_promotion_prep_locked_after_p59",
+            "selected_outcome": "published_successor_promotion_prep_locked_after_p62",
             "next_required_lane": "p64_release_hygiene_rebaseline_then_p65_merge_prep_control_sync",
         },
     }
@@ -263,8 +252,8 @@ def main() -> None:
     }
     snapshot = {
         "rows": [
-            {"field": "current_published_clean_descendant_branch", "value": CURRENT_PUBLISHED_BRANCH},
-            {"field": "current_published_clean_descendant_upstream", "value": current_published_upstream},
+            {"field": "current_published_clean_descendant_branch", "value": EXPECTED_BRANCH},
+            {"field": "current_published_clean_descendant_upstream", "value": published_upstream},
             {"field": "preserved_prior_published_clean_descendant_branch", "value": PRESERVED_PRIOR_BRANCH},
             {"field": "preserved_prior_published_clean_descendant_upstream", "value": preserved_prior_upstream},
             {"field": "current_execution_branch", "value": current_branch_name},

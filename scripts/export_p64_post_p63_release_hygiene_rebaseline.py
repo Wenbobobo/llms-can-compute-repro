@@ -1,4 +1,4 @@
-"""Export the preserved-prior P61 release hygiene sidecar after successor promotion."""
+"""Export the post-P63 release hygiene rebaseline sidecar for P64."""
 
 from __future__ import annotations
 
@@ -11,16 +11,16 @@ from utils import detect_runtime_environment
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "results" / "P61_post_p60_release_hygiene_rebaseline"
-P60_SUMMARY_PATH = ROOT / "results" / "P60_post_p59_published_clean_descendant_promotion_prep" / "summary.json"
+OUT_DIR = ROOT / "results" / "P64_post_p63_release_hygiene_rebaseline"
+P63_SUMMARY_PATH = ROOT / "results" / "P63_post_p62_published_successor_promotion_prep" / "summary.json"
 WORKTREE_HYGIENE_SUMMARY_PATH = ROOT / "results" / "release_worktree_hygiene_snapshot" / "summary.json"
 PREFLIGHT_SUMMARY_PATH = ROOT / "results" / "release_preflight_checklist_audit" / "summary.json"
 P10_SUMMARY_PATH = ROOT / "results" / "P10_submission_archive_ready" / "summary.json"
 CURRENT_STAGE_DRIVER_PATH = ROOT / "docs" / "publication_record" / "current_stage_driver.md"
 BRANCH_REGISTRY_PATH = ROOT / "docs" / "branch_worktree_registry.md"
 CURRENT_PUBLISHED_BRANCH = "wip/p63-post-p62-tight-core-hygiene"
-PRESERVED_PRIOR_BRANCH = "wip/p60-post-p59-published-clean-descendant-prep"
 CURRENT_RELEASE_WAVE = "p64_post_p63_release_hygiene_rebaseline"
+PRESERVED_PRIOR_BRANCH = "wip/p60-post-p59-published-clean-descendant-prep"
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -69,12 +69,12 @@ def contains_all(text: str, needles: list[str]) -> bool:
 
 
 def main() -> None:
-    p60_summary = read_json(P60_SUMMARY_PATH)["summary"]
+    p63_summary = read_json(P63_SUMMARY_PATH)["summary"]
     worktree_hygiene_summary = read_json(WORKTREE_HYGIENE_SUMMARY_PATH)["summary"]
     preflight_summary = read_json(PREFLIGHT_SUMMARY_PATH)["summary"]
     p10_summary = read_json(P10_SUMMARY_PATH)["summary"]
-    if p60_summary["selected_outcome"] != "published_clean_descendant_promotion_prep_locked_after_p59":
-        raise RuntimeError("P61 expects the landed P60 preserved-prior promotion-prep wave.")
+    if p63_summary["selected_outcome"] != "published_successor_promotion_prep_locked_after_p62":
+        raise RuntimeError("P64 expects the landed P63 successor promotion-prep wave.")
 
     current_branch_name = current_branch()
     current_stage_driver_text = read_text(CURRENT_STAGE_DRIVER_PATH)
@@ -86,34 +86,34 @@ def main() -> None:
 
     checklist_rows = [
         {
-            "item_id": "p61_reads_p60",
+            "item_id": "p64_reads_p63",
             "status": "pass",
-            "notes": "P61 preserved-prior export starts only after P60 remains landed.",
+            "notes": "P64 starts only after P63 lands.",
         },
         {
-            "item_id": "p61_current_branch_matches_current_successor_lane",
+            "item_id": "p64_current_branch_matches_rebased_successor_hygiene_branch",
             "status": "pass"
             if current_branch_registered and worktree_hygiene_summary["branch"] == CURRENT_PUBLISHED_BRANCH
             else "blocked",
-            "notes": "The hygiene snapshot should classify the current published successor branch while the export may run from a registered execution successor.",
+            "notes": "The hygiene snapshot should classify the published successor branch while execution may occur on a registered successor lane.",
         },
         {
-            "item_id": "p61_worktree_hygiene_is_clean_ready",
+            "item_id": "p64_worktree_hygiene_is_clean_ready",
             "status": "pass"
             if worktree_hygiene_summary["release_commit_state"] == "clean_worktree_ready_if_other_gates_green"
             else "blocked",
-            "notes": "The current published successor branch should remain clean enough for outward sync if other gates are green.",
+            "notes": "The current published successor branch should be clean enough for outward sync if other gates are green.",
         },
         {
-            "item_id": "p61_preflight_and_archive_ready_are_green",
+            "item_id": "p64_preflight_and_archive_ready_are_green",
             "status": "pass"
             if preflight_summary["preflight_state"] == "docs_and_audits_green"
             and p10_summary["packet_state"] == "archive_ready"
             else "blocked",
-            "notes": "Successor hygiene expects green release-preflight and archive-ready summaries on the same branch family.",
+            "notes": "Rebaselined successor hygiene expects green release-preflight and archive-ready summaries on the same branch family.",
         },
         {
-            "item_id": "p61_current_stage_driver_mentions_successor_release_hygiene",
+            "item_id": "p64_current_stage_driver_mentions_successor_release_hygiene_rebaseline",
             "status": "pass"
             if contains_all(
                 current_stage_driver_text,
@@ -129,9 +129,9 @@ def main() -> None:
     ]
     claim_packet = {
         "supports": [
-            "P61 remains preserved as the prior release-hygiene rebaseline wave.",
-            "Current live release hygiene is reanchored on the P63 successor branch under P64 wording.",
-            "Release hygiene, preflight, and archive-ready status remain tied to the same current successor branch.",
+            "P64 reanchors stateful release hygiene on the current published successor branch.",
+            "P64 keeps the clean release-commit classification explicit without implying a main merge.",
+            "P64 ties release hygiene, preflight, and archive-ready status to the same published successor branch.",
         ],
         "does_not_support": [
             "merge execution",
@@ -139,7 +139,6 @@ def main() -> None:
             "runtime reopen",
         ],
         "distilled_result": {
-            "preserved_prior_release_hygiene_rebaseline_wave": "p61_post_p60_release_hygiene_rebaseline",
             "current_release_hygiene_rebaseline_wave": CURRENT_RELEASE_WAVE,
             "current_published_clean_descendant_branch": CURRENT_PUBLISHED_BRANCH,
             "preserved_prior_published_clean_descendant_branch": PRESERVED_PRIOR_BRANCH,
@@ -148,7 +147,7 @@ def main() -> None:
             "release_commit_state": worktree_hygiene_summary["release_commit_state"],
             "preflight_state": preflight_summary["preflight_state"],
             "archive_ready_state": p10_summary["packet_state"],
-            "selected_outcome": "published_clean_descendant_release_hygiene_rebaselined",
+            "selected_outcome": "published_successor_release_hygiene_rebaselined",
             "next_required_lane": "p65_merge_prep_control_sync",
         },
     }
@@ -164,7 +163,6 @@ def main() -> None:
         "rows": [
             {"field": "current_published_clean_descendant_branch", "value": CURRENT_PUBLISHED_BRANCH},
             {"field": "preserved_prior_published_clean_descendant_branch", "value": PRESERVED_PRIOR_BRANCH},
-            {"field": "current_execution_branch", "value": current_branch_name},
             {"field": "worktree_hygiene_branch", "value": worktree_hygiene_summary["branch"]},
             {"field": "release_commit_state", "value": worktree_hygiene_summary["release_commit_state"]},
             {"field": "preflight_state", "value": preflight_summary["preflight_state"]},
