@@ -32,6 +32,10 @@ active docs-only packet.
 ## Execution Closeout Status
 
 - the current clean descendant line now carries `P56/P57/P58/P59` above `H64`;
+- the current local integration branch is `wip/p56-main-scratch`;
+- the former local merge-candidate branch
+  `wip/p56-post-h64-clean-merge-candidate` has been absorbed and removed
+  locally;
 - standing release/archive audits now read the `H64` state directly;
 - `release_preflight_checklist_audit` is green;
 - `P10_submission_archive_ready` is green;

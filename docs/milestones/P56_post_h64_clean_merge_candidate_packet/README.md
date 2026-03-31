@@ -8,6 +8,10 @@ freeze stack.
 merge-candidate packet on `wip/p56-post-h64-clean-merge-candidate`, and make
 the later review target against `main` explicit without executing a merge.
 
+That explicit merge-candidate branch has since been absorbed locally into
+`wip/p56-main-scratch`; `P56` remains the historical packet that recorded the
+candidate posture before any `main` integration decision.
+
 This packet is operational rather than scientific. It does not merge `main`,
 does not reopen runtime, and does not widen the current `H64/H58/H43/F38`
 claim boundary.

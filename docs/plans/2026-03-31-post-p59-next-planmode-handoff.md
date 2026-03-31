@@ -3,7 +3,8 @@
 ## Purpose
 
 Shortest safe entrypoint after the clean merge-candidate follow-through stack
-lands above the stable `H64` freeze packet.
+has been absorbed into the clean scratch integration branch above the stable
+`H64` freeze packet.
 
 ## Current Locked State
 
@@ -47,8 +48,11 @@ The current repo meaning is:
 
 ## What Just Landed
 
-The clean worktree `D:/zWenbo/AI/wt/p56-post-h64-clean-merge-candidate`
-contains the complete post-`H64` follow-through wave:
+The complete post-`H64` follow-through wave landed first on the former clean
+merge-candidate worktree
+`D:/zWenbo/AI/wt/p56-post-h64-clean-merge-candidate` and has now been absorbed
+locally into the clean scratch integration worktree
+`D:/zWenbo/AI/wt/p56-main-scratch`:
 
 - `P56_post_h64_clean_merge_candidate_packet`
 - `P57_post_h64_paper_submission_package_sync`
@@ -57,17 +61,20 @@ contains the complete post-`H64` follow-through wave:
 
 ## Branch And Merge Posture
 
-- current branch: `wip/p56-post-h64-clean-merge-candidate`
-- current worktree:
-  `D:/zWenbo/AI/wt/p56-post-h64-clean-merge-candidate`
+- current local integration branch: `wip/p56-main-scratch`
+- current local integration worktree:
+  `D:/zWenbo/AI/wt/p56-main-scratch`
+- former merge-candidate branch was
+  `wip/p56-post-h64-clean-merge-candidate` and has been removed locally after
+  fast-forward absorption into `wip/p56-main-scratch`
 - preserved clean source branch:
   `wip/h64-post-h63-archive-first-freeze`
-- clean `main` scratch branch:
-  `wip/p56-main-scratch`
+- remote historical branch still exists as
+  `origin/wip/p56-post-h64-clean-merge-candidate`
 - dirty root repo remains parked separately as
   `wip/root-main-parking-2026-03-24`
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
-- merge execution remains absent
+- merge execution into `main` remains absent
 
 ## Hard Constraints For The Next Plan
 
@@ -93,7 +100,7 @@ Do not plan any of the following as the next execution wave:
 
 - standing release/archive audits are green on the current follow-through
   stack;
-- the active clean descendant branch remains merge-prep only;
+- the active local clean integration branch remains merge-prep only;
 - there is no open runtime wave on this branch; and
 - the next useful step is another plan-mode decision or publication/hygiene
   polish, not an unplanned science reopen.

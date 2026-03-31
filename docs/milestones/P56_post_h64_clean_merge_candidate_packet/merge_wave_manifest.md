@@ -2,6 +2,10 @@
 
 ## Fixed Branch Roles
 
+Historical note: the explicit candidate branch/worktree recorded here was later
+absorbed locally into `wip/p56-main-scratch` and removed. The branch-role map
+below remains the authoritative `P56` packet record.
+
 - clean source branch: `wip/h64-post-h63-archive-first-freeze`
 - clean source worktree:
   `D:/zWenbo/AI/wt/h64-post-h63-archive-first-freeze`

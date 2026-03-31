@@ -1,5 +1,10 @@
 # P56 Worktree Runbook
 
+Historical note: the original candidate branch/worktree described below was
+later absorbed locally into `wip/p56-main-scratch` and removed. Keep using
+this runbook as the packet's historical execution record, not as the active
+current worktree map.
+
 1. start from `wip/p56-post-h64-clean-merge-candidate`, not dirty root
    `main`;
 2. confirm `wip/h64-post-h63-archive-first-freeze` is synced to

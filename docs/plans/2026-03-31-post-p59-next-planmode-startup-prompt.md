@@ -26,8 +26,10 @@ Current locked facts:
 - Runtime remains closed.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
-- The current clean descendant branch is
-  `wip/p56-post-h64-clean-merge-candidate`.
+- The current local clean integration branch is `wip/p56-main-scratch`.
+- The former local merge-candidate branch
+  `wip/p56-post-h64-clean-merge-candidate` has already been absorbed into
+  `wip/p56-main-scratch` and removed locally.
 - `results/release_worktree_hygiene_snapshot/summary.json` reports
   `clean_worktree_ready_if_other_gates_green`.
 - `results/release_preflight_checklist_audit/summary.json` reports
