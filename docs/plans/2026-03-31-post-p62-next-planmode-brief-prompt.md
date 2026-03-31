@@ -6,10 +6,15 @@ Current locked facts:
 - Landed earlier follow-through stack: `P56`, `P57`, `P58`, `P59`.
 - Current published clean-descendant stack: `P60`, `P61`, `P62`.
 - Current published clean-descendant branch: `wip/p60-post-p59-published-clean-descendant-prep`.
+- Current published clean-descendant upstream: `origin/wip/p60-post-p59-published-clean-descendant-prep`.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Runtime remains closed.
 - `F38` / `R63` remain dormant and non-runtime only.
+- `release_worktree_hygiene_snapshot = clean_worktree_ready_if_other_gates_green`.
+- `release_preflight_checklist_audit = docs_and_audits_green`.
+- `P10_submission_archive_ready = archive_ready`.
+- Default downstream lane remains `archive_or_hygiene_stop`.
 
 Please in plan mode:
 
