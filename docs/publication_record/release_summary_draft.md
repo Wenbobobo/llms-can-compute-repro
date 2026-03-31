@@ -7,13 +7,14 @@ preserves exactness on `4/4` declared native rows across `2/2` kernels, but it
 does not preserve bounded value.
 
 The current live control state is now
-`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet` with
+`P56/P57/P58/P59` as the current clean-descendant follow-through stack.
 
 archive-first freeze is now the default repo meaning.
 
-## Paper-facing partial falsification
+## Paper-Facing Partial Falsification
 
-paper-facing partial falsification is now the correct outward shorthand:
+archive-first partial falsification is now the correct outward shorthand:
 
 - narrow mechanistic reproduction survives;
 - broad headline reproduction did not land; and

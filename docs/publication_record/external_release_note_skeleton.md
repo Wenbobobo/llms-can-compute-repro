@@ -10,7 +10,9 @@ strongest honest public shorthand. Narrow mechanistic execution support
 survives on the admitted surfaces, but the strongest justified
 executor-value lane is closed negative and the broad “LLMs are computers”
 headline does not land. The current outward control packet is
-`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`. The preserved
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`, with
+`P56/P57/P58/P59` carrying clean merge-candidate, package-sync,
+archive-sync, and handoff-sync follow-through. The preserved
 paper-grade endpoint remains
 `H43_post_r44_useful_case_refreeze`, the preserved value-negative closeout
 remains `H58_post_r62_origin_value_boundary_closeout_packet`, and the only
@@ -20,6 +22,7 @@ than an authorized runtime gate.
 ## Allowed callouts
 
 - archive-first partial falsification
+- clean merge-candidate / package-sync / archive-sync / handoff-sync follow-through
 - narrow mechanistic reproduction survives
 - strongest justified executor-value lane is closed negative
 - preserved paper-grade endpoint at `H43`
@@ -40,6 +43,7 @@ than an authorized runtime gate.
 - `README.md`
 - `STATUS.md`
 - `docs/publication_record/submission_packet_index.md`
+- `docs/publication_record/current_stage_driver.md`
 - `docs/publication_record/claim_ladder.md`
 - `docs/publication_record/archival_repro_manifest.md`
 

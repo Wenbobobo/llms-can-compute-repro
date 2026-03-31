@@ -4,9 +4,10 @@ This file defines the minimum conditions for upgrading the current
 archive-first closeout checkpoint into a submission-candidate bundle on the
 same frozen paper scope. Active control is now anchored on
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`,
-`P53_post_h63_paper_archive_claim_sync`,
-`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`,
-`P55_post_h63_clean_descendant_promotion_prep`, and
+`P56_post_h64_clean_merge_candidate_packet`,
+`P57_post_h64_paper_submission_package_sync`,
+`P58_post_h64_archive_release_closeout_sync`,
+`P59_post_h64_control_and_handoff_sync`, and
 `F38_post_h62_r63_dormant_eligibility_profile_dossier`, while preserving
 `H58_post_r62_origin_value_boundary_closeout_packet` as the strongest
 executor-value closeout and `H43_post_r44_useful_case_refreeze` as the
@@ -40,18 +41,19 @@ preserved paper-grade endpoint.
    bundle-lock audit, and `release_preflight_checklist_audit` must all report
    zero blocked release-facing items on the current repo state.
 7. Repo hygiene stays publication-safe.
-   `P54`, `P55`, and `release_worktree_hygiene_snapshot` must keep
+   `P56`, `P59`, and `release_worktree_hygiene_snapshot` must keep
    clean-descendant-only merge posture explicit, dirty root `main`
-   quarantined, promotion-prep separate from merge execution, and large
-   raw-row artifacts out of git.
+   quarantined, merge execution absent, and large raw-row artifacts out of
+   git.
 
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
 - `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
-- `results/P53_post_h63_paper_archive_claim_sync/summary.json`
-- `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`
-- `results/P55_post_h63_clean_descendant_promotion_prep/summary.json`
+- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`
+- `results/P57_post_h64_paper_submission_package_sync/summary.json`
+- `results/P58_post_h64_archive_release_closeout_sync/summary.json`
+- `results/P59_post_h64_control_and_handoff_sync/summary.json`
 - `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`

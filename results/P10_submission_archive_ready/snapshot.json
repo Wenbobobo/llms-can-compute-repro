@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,67 +22,58 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
-        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-        "`archive_or_hygiene_stop`"
+        "`P56_post_h64_clean_merge_candidate_packet`",
+        "`P59_post_h64_control_and_handoff_sync`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
-        "`F38_post_h62_r63_dormant_eligibility_profile_dossier`."
-      ]
-    },
-    {
-      "path": "docs/publication_record/README.md",
-      "matched_lines": [
-        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
-        "current active docs-only packet"
+        "`P57_post_h64_paper_submission_package_sync`.",
+        "- The default downstream scientific lane is `archive_or_hygiene_stop`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P55_post_h63_clean_descendant_promotion_prep`",
+        "- `P58_post_h64_archive_release_closeout_sync`",
         "- `archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
-        "- `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`",
-        "- `results/P53_post_h63_paper_archive_claim_sync/summary.json`"
+        "- `../milestones/P56_post_h64_clean_merge_candidate_packet/`",
+        "- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`",
+        "- `results/P59_post_h64_control_and_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`",
-        "- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`"
+        "- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`",
+        "- `results/P59_post_h64_control_and_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "- narrow positive mechanism support survives;",
+        "The current operational follow-through stack is `P56/P57/P58/P59`.",
         "- the only remaining future route is a dormant no-go dossier at `F38`."
       ]
     },
     {
       "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "This repository now presents archive-first partial falsification as the",
-        "future family left on paper is the dormant non-runtime `F38` dossier rather",
-        "- archive-first partial falsification"
+        "`P56/P57/P58/P59` carrying clean merge-candidate, package-sync,",
+        "future family left on paper is the dormant non-runtime `F38` dossier rather"
       ]
     },
     {
       "path": "results/release_worktree_hygiene_snapshot/summary.json",
       "matched_lines": [
-        "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
-        "\"git_diff_check_state\": \"clean\","
+        "\"release_commit_state\": \"dirty_worktree_release_commit_blocked\",",
+        "\"git_diff_check_state\": \"warnings_only\","
       ]
     }
   ]

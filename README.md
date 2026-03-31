@@ -11,21 +11,23 @@ disconfirmed.
 
 ## Current Stage
 
-As of `2026-03-26`, the current active packet is
+As of `2026-03-31`, the current active packet is
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
 
 Current anchors:
 
 - active docs-only packet:
   `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+- current clean merge-candidate packet:
+  `P56_post_h64_clean_merge_candidate_packet`
+- current paper/submission package sync wave:
+  `P57_post_h64_paper_submission_package_sync`
+- current archive/release closeout sync wave:
+  `P58_post_h64_archive_release_closeout_sync`
+- current control/handoff sync wave:
+  `P59_post_h64_control_and_handoff_sync`
 - preserved prior active docs-only packet:
   `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
-- current paper/archive claim-sync wave:
-  `P53_post_h63_paper_archive_claim_sync`
-- current repo-hygiene sidecar:
-  `P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`
-- current promotion-prep wave:
-  `P55_post_h63_clean_descendant_promotion_prep`
 - current dormant future dossier:
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`
 - default downstream lane:
@@ -41,12 +43,13 @@ therefore selected
 reproduction gap explicit, `H60` selected planning-only / archive / stop,
 `H61` made archive-first the live posture, `H62` kept archive/hygiene stop as
 the default downstream state, `H63` made archive-first closeout the active
-route, and `H64` now freezes archive-first closeout into the current clean
-descendant control state while keeping `R63` dormant and non-runtime only.
+route, and `H64` freezes archive-first closeout into the active docs-only
+packet while `P56/P57/P58/P59` now carry clean merge-candidate, package-sync,
+archive-sync, and control-sync follow-through without reopening runtime.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
-The default next action is archive / hygiene / promotion-prep / merge-prep /
-paper-facing partial-falsification work under the current `H64` posture.
+The default next action is archive / hygiene / merge-prep / publication-sync
+work under the current `H64 + P56/P57/P58/P59` posture.

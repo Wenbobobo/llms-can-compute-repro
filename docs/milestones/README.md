@@ -13,18 +13,26 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
+- `P59_post_h64_control_and_handoff_sync/`
+  current control/handoff sync wave
+- `P58_post_h64_archive_release_closeout_sync/`
+  current archive/release closeout sync wave
+- `P57_post_h64_paper_submission_package_sync/`
+  current paper/submission package sync wave
+- `P56_post_h64_clean_merge_candidate_packet/`
+  current clean merge-candidate packet
 - `H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
   current active docs-only packet
-- `P53_post_h63_paper_archive_claim_sync/`
-  current paper/archive claim-sync wave
-- `P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`
-  current repo-hygiene sidecar
-- `P55_post_h63_clean_descendant_promotion_prep/`
-  current promotion-prep wave
 - `H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
   preserved prior active docs-only packet
 - `F38_post_h62_r63_dormant_eligibility_profile_dossier/`
   current dormant future dossier
+- `P55_post_h63_clean_descendant_promotion_prep/`
+  preserved prior promotion-prep wave
+- `P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`
+  preserved prior repo-hygiene sidecar
+- `P53_post_h63_paper_archive_claim_sync/`
+  preserved prior paper/archive claim-sync wave
 - `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
   preserved earlier active docs-only packet
 - `F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
@@ -82,6 +90,7 @@ historical and may use then-current wording.
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
 - keep `H64` as the current archive-first freeze packet;
+- keep `P56/P57/P58/P59` as the current operational follow-through stack;
 - keep `H63`, `H62`, `H61`, `H60`, and `H59` as preserved prior decision packets;
 - keep the default downstream lane at `archive_or_hygiene_stop`;
 - keep `R63` conditional and non-runtime only via dormant `F38`;

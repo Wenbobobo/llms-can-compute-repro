@@ -7,6 +7,7 @@ formatting passes.
 
 The current active routing/decision state is
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
+The current operational follow-through stack is `P56/P57/P58/P59`.
 
 ## Honest scientific reading
 
