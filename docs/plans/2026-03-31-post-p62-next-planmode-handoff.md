@@ -20,6 +20,9 @@ lands above the stable `H64` freeze packet.
   `P62_post_p61_merge_prep_control_sync`
 - current local hygiene successor branch:
   `wip/p63-post-p62-tight-core-hygiene`
+- the obsolete local-only ancestor chain has already been pruned:
+  `wip/p16-h25-clean` and `wip/r32-next` are removed locally, while
+  `wip/r33-next` remains the sole preserved historical tip
 - preserved prior active packet:
   `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
 - preserved strongest executor-value closeout:

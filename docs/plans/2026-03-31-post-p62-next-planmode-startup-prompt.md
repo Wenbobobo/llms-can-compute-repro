@@ -20,6 +20,9 @@ Current locked facts:
 - The current docs router is `docs/README.md`.
 - The current branch/worktree registry is
   `docs/branch_worktree_registry.md`.
+- The obsolete local-only ancestor chain has already been pruned:
+  `wip/p16-h25-clean` and `wip/r32-next` are removed locally, while
+  `wip/r33-next` remains as the sole preserved historical tip of that chain.
 - The preserved local integration base is `wip/p56-main-scratch`.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.

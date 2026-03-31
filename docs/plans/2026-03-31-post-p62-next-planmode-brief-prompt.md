@@ -9,6 +9,9 @@ Current locked facts:
 - Current local hygiene successor branch: `wip/p63-post-p62-tight-core-hygiene`.
 - Current docs router: `docs/README.md`.
 - Current branch/worktree registry: `docs/branch_worktree_registry.md`.
+- The obsolete local-only ancestor chain has been pruned: `wip/p16-h25-clean`
+  and `wip/r32-next` are removed locally; only `wip/r33-next` remains as the
+  preserved historical tip.
 - Current published clean-descendant upstream: `origin/wip/p60-post-p59-published-clean-descendant-prep`.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
