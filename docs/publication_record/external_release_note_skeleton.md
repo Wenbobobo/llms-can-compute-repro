@@ -1,9 +1,11 @@
 # External Release Note Skeleton
 
 - active docs-only packet:
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - landed foundation:
   `P56/P57/P58/P59`
+- preserved prior active packet:
+  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
 - preserved paper endpoint:
   `H43_post_r44_useful_case_refreeze`
 - strongest executor-value closeout:
@@ -11,6 +13,6 @@
 - dormant future:
   dormant non-runtime `F38` dossier
 - framing:
-  archive-first partial falsification
+  archive-first terminal freeze
 - value statement:
   strongest justified executor-value lane is closed negative

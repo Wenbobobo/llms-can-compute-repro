@@ -40,63 +40,65 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     _write_rel_text(
         "README.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
-            "`archive_or_hygiene_stop`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
     _write_rel_text(
         "STATUS.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
         ],
     )
     _write_rel_text(
         "docs/publication_record/README.md",
         [
-            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
-            "P63_post_p62_published_successor_promotion_prep",
-            "P64_post_p63_release_hygiene_rebaseline",
-            "P65_post_p64_merge_prep_control_sync",
+            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P66_post_p65_successor_publication_review",
+            "P67_post_p66_published_successor_freeze",
+            "P68_post_p67_release_hygiene_and_control_rebaseline",
         ],
     )
     _write_rel_text(
         "docs/publication_record/current_stage_driver.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
-            "`archive_or_hygiene_stop`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
     _write_rel_text(
         "docs/publication_record/submission_packet_index.md",
         [
-            "P63_post_p62_published_successor_promotion_prep",
-            "P64_post_p63_release_hygiene_rebaseline",
-            "P65_post_p64_merge_prep_control_sync",
-            "results/P65_post_p64_merge_prep_control_sync/summary.json",
+            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P68_post_p67_release_hygiene_and_control_rebaseline",
+            "P67_post_p66_published_successor_freeze",
+            "P66_post_p65_successor_publication_review",
+            "results/P66_post_p65_successor_publication_review/summary.json",
         ],
     )
     _write_rel_text(
         "docs/publication_record/archival_repro_manifest.md",
         [
-            "results/P63_post_p62_published_successor_promotion_prep/summary.json",
-            "results/P64_post_p63_release_hygiene_rebaseline/summary.json",
-            "results/P65_post_p64_merge_prep_control_sync/summary.json",
+            "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+            "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P67_post_p66_published_successor_freeze/summary.json",
+            "results/P66_post_p65_successor_publication_review/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
         ],
     )
     _write_rel_text(
         "docs/publication_record/review_boundary_summary.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P56/P57/P58/P59`",
             "narrow positive mechanism support survives",
             "the only remaining future route is a dormant no-go dossier at `F38`",
@@ -105,12 +107,13 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     _write_rel_text(
         "docs/publication_record/external_release_note_skeleton.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P56/P57/P58/P59`",
+            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
             "`H43_post_r44_useful_case_refreeze`",
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "dormant non-runtime `F38` dossier",
-            "archive-first partial falsification",
+            "archive-first terminal freeze",
             "strongest justified executor-value lane is closed negative",
         ],
     )
@@ -122,6 +125,14 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         },
     )
     _write_rel_json(
+        "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+        {
+            "summary": {
+                "selected_outcome": "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop"
+            }
+        },
+    )
+    _write_rel_json(
         "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
         {
             "summary": {
@@ -130,8 +141,16 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         },
     )
     _write_rel_json(
-        "results/P63_post_p62_published_successor_promotion_prep/summary.json",
-        {"summary": {"selected_outcome": "published_successor_promotion_prep_locked_after_p62"}},
+        "results/P66_post_p65_successor_publication_review/summary.json",
+        {"summary": {"selected_outcome": "successor_publication_review_supports_p67_freeze"}},
+    )
+    _write_rel_json(
+        "results/P67_post_p66_published_successor_freeze/summary.json",
+        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p66_review"}},
+    )
+    _write_rel_json(
+        "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+        {"summary": {"selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined"}},
     )
     _write_rel_json(
         "results/P56_post_h64_clean_merge_candidate_packet/summary.json",

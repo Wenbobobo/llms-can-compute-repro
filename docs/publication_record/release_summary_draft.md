@@ -1,16 +1,18 @@
 # Release Summary Draft
 
 - active docs-only packet:
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - landed foundation:
   `P56/P57/P58/P59`
-- current published successor stack:
-  `P63/P64/P65`
+- current frozen successor stack:
+  `P66/P67/P68`
 - current published clean descendant branch:
-  `wip/p63-post-p62-tight-core-hygiene`
-- preserved prior published clean-descendant stack:
+  `wip/p66-post-p65-published-successor-freeze`
+- preserved prior successor stack:
+  `P63/P64/P65`
+- preserved older published clean-descendant stack:
   `P60/P61/P62`
 - framing:
-  archive-first partial falsification
+  archive-first terminal freeze and explicit stop
 - dormant future note:
   R63 remains dormant, non-runtime

@@ -7,42 +7,49 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-04-01-post-p63-successor-merge-prep-design.md`
-  current design for the published successor promotion/rebaseline/control-sync
+- `2026-04-01-post-p65-successor-publication-freeze-design.md`
+  current design for the post-`P65` review/freeze/rebaseline/terminal-freeze
   phase
-- `2026-04-01-post-p65-next-planmode-handoff.md`
-  current shortest handoff from the live `H64 + P56/P57/P58/P59 +
-  P63/P64/P65 + F38` state into the next planning round
-- `2026-04-01-post-p65-next-planmode-startup-prompt.md`
+- `2026-04-01-post-h65-next-planmode-handoff.md`
+  current shortest handoff from the live `H65 + P56/P57/P58/P59 +
+  P66/P67/P68 + F38` state into the next planning round
+- `2026-04-01-post-h65-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `2026-04-01-post-p65-next-planmode-brief-prompt.md`
+- `2026-04-01-post-h65-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `2026-04-01-post-p63-successor-merge-prep-design.md`
+  preserved design for the earlier `P63/P64/P65` successor stack
+- `2026-04-01-post-p65-next-planmode-handoff.md`
+  preserved handoff for the earlier `P63/P64/P65` successor stack
+- `2026-04-01-post-p65-next-planmode-startup-prompt.md`
+  preserved startup prompt for the earlier `P63/P64/P65` successor stack
+- `2026-04-01-post-p65-next-planmode-brief-prompt.md`
+  preserved brief prompt for the earlier `P63/P64/P65` successor stack
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
-  preserved design for the earlier published clean-descendant promotion-prep
-  and merge-prep control phase
-- `2026-04-01-post-p63-next-planmode-brief-prompt.md`
-  preserved concise startup prompt after the completed `p63` tight-core hygiene
-  closeout
+  preserved design for the older published clean-descendant promotion-prep and
+  merge-prep control phase
 - `../../README.md`
   current restrained repo landing page
 - `../README.md`
   current top-level docs router
 - `../branch_worktree_registry.md`
   current tight-core branch/worktree registry and merge posture control note
-- `../milestones/P65_post_p64_merge_prep_control_sync/`
-  current merge-prep control sync wave
-- `../milestones/P64_post_p63_release_hygiene_rebaseline/`
-  current release hygiene rebaseline wave
-- `../milestones/P63_post_p62_published_successor_promotion_prep/`
-  current published successor promotion-prep wave
-- `../milestones/P62_post_p61_merge_prep_control_sync/`
-  preserved prior merge-prep control sync wave
-- `../milestones/P61_post_p60_release_hygiene_rebaseline/`
-  preserved prior release hygiene rebaseline wave
-- `../milestones/P60_post_p59_published_clean_descendant_promotion_prep/`
-  preserved prior published clean-descendant promotion-prep wave
-- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
+- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+  current release hygiene and control rebaseline wave
+- `../milestones/P67_post_p66_published_successor_freeze/`
+  current published successor freeze wave
+- `../milestones/P66_post_p65_successor_publication_review/`
+  current successor publication review wave
+- `../milestones/P65_post_p64_merge_prep_control_sync/`
+  preserved prior merge-prep control sync wave
+- `../milestones/P64_post_p63_release_hygiene_rebaseline/`
+  preserved prior release hygiene rebaseline wave
+- `../milestones/P63_post_p62_published_successor_promotion_prep/`
+  preserved prior published successor promotion-prep wave
+- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
+  preserved prior active docs-only packet
 - `../milestones/P56_post_h64_clean_merge_candidate_packet/`
   landed clean merge-candidate foundation wave
 - `../milestones/P57_post_h64_paper_submission_package_sync/`
@@ -60,11 +67,15 @@ driver and machine-readable `results/` summaries first.
   `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62 -> P50 -> P51 -> P52 -> F38 -> H63 -> P53 -> P54 -> P55 -> H64`
 - landed operational follow-through foundation:
   `P56 -> P57 -> P58 -> P59`
-- current published successor prep/control stack:
+- current published frozen successor stack:
+  `P66 -> P67 -> P68 -> H65`
+- preserved prior successor stack:
   `P63 -> P64 -> P65`
-- preserved prior published clean-descendant stack:
+- preserved older published clean-descendant stack:
   `P60 -> P61 -> P62`
-- current execution successor branch:
+- current published freeze branch:
+  `wip/p66-post-p65-published-successor-freeze`
+- preserved prior review branch:
   `wip/p64-post-p63-successor-stack`
 - current dormant future dossier:
   `F38`
@@ -90,27 +101,34 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-01-post-p65-successor-publication-freeze-design.md`
+- `2026-04-01-post-h65-next-planmode-handoff.md`
+- `2026-04-01-post-h65-next-planmode-startup-prompt.md`
+- `2026-04-01-post-h65-next-planmode-brief-prompt.md`
 - `2026-04-01-post-p63-successor-merge-prep-design.md`
 - `2026-04-01-post-p65-next-planmode-handoff.md`
 - `2026-04-01-post-p65-next-planmode-startup-prompt.md`
 - `2026-04-01-post-p65-next-planmode-brief-prompt.md`
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
 - `2026-04-01-post-p63-next-planmode-brief-prompt.md`
+- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
+- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+- `../milestones/P67_post_p66_published_successor_freeze/`
+- `../milestones/P66_post_p65_successor_publication_review/`
 - `../milestones/P65_post_p64_merge_prep_control_sync/`
 - `../milestones/P64_post_p63_release_hygiene_rebaseline/`
 - `../milestones/P63_post_p62_published_successor_promotion_prep/`
-- `../milestones/P62_post_p61_merge_prep_control_sync/`
-- `../milestones/P61_post_p60_release_hygiene_rebaseline/`
-- `../milestones/P60_post_p59_published_clean_descendant_promotion_prep/`
 - `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
 - `../milestones/P56_post_h64_clean_merge_candidate_packet/`
 - `../milestones/P57_post_h64_paper_submission_package_sync/`
 - `../milestones/P58_post_h64_archive_release_closeout_sync/`
 - `../milestones/P59_post_h64_control_and_handoff_sync/`
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
+- `../../results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
+- `../../results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`
+- `../../results/P67_post_p66_published_successor_freeze/summary.json`
+- `../../results/P66_post_p65_successor_publication_review/summary.json`
 - `../../results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
-- `../../results/P63_post_p62_published_successor_promotion_prep/summary.json`
-- `../../results/P64_post_p63_release_hygiene_rebaseline/summary.json`
 - `../../results/P65_post_p64_merge_prep_control_sync/summary.json`
 - `../../results/P56_post_h64_clean_merge_candidate_packet/summary.json`
 - `../../results/P57_post_h64_paper_submission_package_sync/summary.json`

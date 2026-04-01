@@ -40,21 +40,21 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "README.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
-            "`wip/p63-post-p62-tight-core-hygiene`",
-            "`archive_or_hygiene_stop`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`wip/p66-post-p65-published-successor-freeze`",
+            "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
     _write_rel_text(
         "STATUS.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
         ],
     )
@@ -72,51 +72,51 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/README.md",
         [
-            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
-            "P63_post_p62_published_successor_promotion_prep",
-            "P64_post_p63_release_hygiene_rebaseline",
-            "P65_post_p64_merge_prep_control_sync",
-            "published successor clean-descendant promotion-prep wave",
+            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P66_post_p65_successor_publication_review",
+            "P67_post_p66_published_successor_freeze",
+            "P68_post_p67_release_hygiene_and_control_rebaseline",
+            "current published frozen successor stack",
         ],
     )
     _write_rel_text(
         "docs/publication_record/current_stage_driver.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
-            "`wip/p63-post-p62-tight-core-hygiene`",
-            "`archive_or_hygiene_stop`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`wip/p66-post-p65-published-successor-freeze`",
+            "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
     _write_rel_text(
         "docs/plans/README.md",
         [
-            "2026-04-01-post-p63-successor-merge-prep-design.md",
-            "2026-04-01-post-p65-next-planmode-handoff.md",
-            "2026-04-01-post-p65-next-planmode-startup-prompt.md",
-            "P63_post_p62_published_successor_promotion_prep",
-            "P64_post_p63_release_hygiene_rebaseline",
-            "P65_post_p64_merge_prep_control_sync",
+            "2026-04-01-post-p65-successor-publication-freeze-design.md",
+            "2026-04-01-post-h65-next-planmode-handoff.md",
+            "2026-04-01-post-h65-next-planmode-startup-prompt.md",
+            "P66_post_p65_successor_publication_review",
+            "P67_post_p66_published_successor_freeze",
+            "P68_post_p67_release_hygiene_and_control_rebaseline",
         ],
     )
     _write_rel_text(
         "docs/publication_record/release_summary_draft.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P56/P57/P58/P59`",
-            "`P63/P64/P65`",
-            "`wip/p63-post-p62-tight-core-hygiene`",
-            "archive-first partial falsification",
+            "`P66/P67/P68`",
+            "`wip/p66-post-p65-published-successor-freeze`",
+            "archive-first terminal freeze",
             "R63 remains dormant, non-runtime",
         ],
     )
     _write_rel_text(
         "docs/publication_record/release_preflight_checklist.md",
         [
-            "`P63/P64/P65` published successor stack",
-            "`P56/P57/P58/P59/F38` foundation",
+            "`P66/P67/P68` published frozen successor stack",
+            "`H64/P56/P57/P58/P59/F38` foundation",
             "`H58` as the value-negative closeout",
             "`H43` as the preserved paper-grade endpoint",
         ],
@@ -124,17 +124,18 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/release_candidate_checklist.md",
         [
-            "`H64/P56/P57/P58/P59/P63/P64/P65/F38`",
-            "preserved `H58/H43`",
+            "`H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+            "preserved `H64/H58/H43`",
             "No outward wording implies a new runtime lane",
         ],
     )
     _write_rel_text(
         "docs/publication_record/submission_candidate_criteria.md",
         [
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P66_post_p65_successor_publication_review`",
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "`H43_post_r44_useful_case_refreeze`",
         ],
@@ -142,33 +143,34 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/claim_ladder.md",
         [
-            "| P63 Published successor promotion prep |",
-            "| P64 Release hygiene rebaseline |",
-            "| P65 Merge-prep control sync |",
+            "| P66 Successor publication review |",
+            "| P67 Published successor freeze |",
+            "| P68 Release hygiene and control rebaseline |",
         ],
     )
     _write_rel_text(
         "docs/publication_record/archival_repro_manifest.md",
         [
-            "results/P63_post_p62_published_successor_promotion_prep/summary.json",
-            "results/P64_post_p63_release_hygiene_rebaseline/summary.json",
-            "results/P65_post_p64_merge_prep_control_sync/summary.json",
+            "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+            "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P67_post_p66_published_successor_freeze/summary.json",
+            "results/P66_post_p65_successor_publication_review/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
         ],
     )
     _write_rel_text(
         "docs/publication_record/paper_bundle_status.md",
         [
-            "`P63_post_p62_published_successor_promotion_prep`",
-            "`P64_post_p63_release_hygiene_rebaseline`",
-            "`P65_post_p64_merge_prep_control_sync`",
-            "archive-first partial-falsification closeout framing",
+            "`P66_post_p65_successor_publication_review`",
+            "`P67_post_p66_published_successor_freeze`",
+            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "archive-first terminal-freeze and explicit-stop framing",
         ],
     )
     _write_rel_text(
         "docs/publication_record/review_boundary_summary.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P56/P57/P58/P59`",
             "narrow positive mechanism support survives",
             "the only remaining future route is a dormant no-go dossier at `F38`",
@@ -177,8 +179,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/external_release_note_skeleton.md",
         [
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P56/P57/P58/P59`",
+            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
             "`H43_post_r44_useful_case_refreeze`",
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "dormant non-runtime `F38` dossier",
@@ -209,13 +212,26 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         },
     )
     _write_rel_json(
-        "results/P63_post_p62_published_successor_promotion_prep/summary.json",
-        {"summary": {"selected_outcome": "published_successor_promotion_prep_locked_after_p62"}},
+        "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+        {
+            "summary": {
+                "selected_outcome": "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop"
+            }
+        },
     )
     _write_rel_json(
-        "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
-        {"summary": {"selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution"}},
+        "results/P66_post_p65_successor_publication_review/summary.json",
+        {"summary": {"selected_outcome": "successor_publication_review_supports_p67_freeze"}},
     )
+    _write_rel_json(
+        "results/P67_post_p66_published_successor_freeze/summary.json",
+        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p66_review"}},
+    )
+    _write_rel_json(
+        "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+        {"summary": {"selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined"}},
+    )
+    _write_rel_json("results/P56_post_h64_clean_merge_candidate_packet/summary.json", {"summary": {"selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution"}})
     _write_rel_json(
         "results/P57_post_h64_paper_submission_package_sync/summary.json",
         {"summary": {"selected_outcome": "paper_submission_package_surfaces_synced_to_h64_followthrough_stack"}},

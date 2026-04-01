@@ -6,11 +6,11 @@ and the dormant future dossier.
 ## Live Now
 
 - `../README.md`
-  restrained project landing page for the current `H64 + P56/P57/P58/P59 +
-  P63/P64/P65 + F38` posture
+  restrained project landing page for the current `H65 + P56/P57/P58/P59 +
+  P66/P67/P68 + F38` posture
 - `publication_record/current_stage_driver.md`
-  canonical live control summary for the active docs-only packet, current
-  published successor clean descendant, and default downstream lane
+  canonical live control summary for the active terminal-freeze packet, current
+  published frozen clean descendant, and default downstream lane
 - `branch_worktree_registry.md`
   current tight-core branch/worktree map, quarantine rule, and cleanup posture
 - `plans/README.md`

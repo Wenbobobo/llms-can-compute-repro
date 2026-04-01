@@ -12,16 +12,16 @@ from utils import detect_runtime_environment
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "P10_submission_archive_ready"
 
-CURRENT_PAPER_PHASE = "h64_published_successor_stack_with_preserved_p60_p62_h63_h58_h43_endpoints"
+CURRENT_PAPER_PHASE = "h65_published_frozen_successor_stack_with_preserved_p63_p65_h64_h58_h43_endpoints"
 GREEN_ACTION = (
-    "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H64 remains "
-    "the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, P63 is "
-    "the published successor promotion-prep wave, P64/P65 remain the current release-hygiene and control-sync "
-    "doc posture on wip/p63-post-p62-tight-core-hygiene, P60/P61/P62 remain the preserved prior published "
-    "clean-descendant stack, H63 remains the preserved prior active packet, F38 remains the dormant non-runtime "
-    "dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, "
-    "archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen "
-    "is implied"
+    "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains "
+    "the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, "
+    "P66/P67/P68 remain the current frozen successor review/freeze/rebaseline stack on "
+    "wip/p66-post-p65-published-successor-freeze, P63/P64/P65 remain the preserved prior successor stack, "
+    "H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains "
+    "the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, "
+    "explicit_archive_stop_or_hygiene_only remains the default downstream lane, and no dirty-root-main merge or "
+    "runtime reopen is implied"
 )
 
 
@@ -102,8 +102,11 @@ def load_inputs() -> dict[str, Any]:
     }
     json_files = {
         "p1_summary": "results/P1_paper_readiness/summary.json",
+        "h65_summary": "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
         "h64_summary": "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-        "p63_summary": "results/P63_post_p62_published_successor_promotion_prep/summary.json",
+        "p66_summary": "results/P66_post_p65_successor_publication_review/summary.json",
+        "p67_summary": "results/P67_post_p66_published_successor_freeze/summary.json",
+        "p68_summary": "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
         "p56_summary": "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
         "p57_summary": "results/P57_post_h64_paper_submission_package_sync/summary.json",
         "p58_summary": "results/P58_post_h64_archive_release_closeout_sync/summary.json",
@@ -126,50 +129,50 @@ def load_inputs() -> dict[str, Any]:
 def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
     checks = [
         (
-            "top_level_surfaces_and_driver_are_current_h64_successor_control",
+            "top_level_surfaces_and_driver_are_current_h65_frozen_successor_control",
             all(
                 (
                     contains_all(
                         inputs["readme_text"],
                         [
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-                            "`P63_post_p62_published_successor_promotion_prep`",
-                            "`P64_post_p63_release_hygiene_rebaseline`",
-                            "`P65_post_p64_merge_prep_control_sync`",
-                            "`archive_or_hygiene_stop`",
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P66_post_p65_successor_publication_review`",
+                            "`P67_post_p66_published_successor_freeze`",
+                            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+                            "`explicit_archive_stop_or_hygiene_only`",
                         ],
                     ),
                     contains_all(
                         inputs["status_text"],
                         [
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-                            "`P63_post_p62_published_successor_promotion_prep`",
-                            "`P64_post_p63_release_hygiene_rebaseline`",
-                            "`P65_post_p64_merge_prep_control_sync`",
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P66_post_p65_successor_publication_review`",
+                            "`P67_post_p66_published_successor_freeze`",
+                            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
                         ],
                     ),
                     contains_all(
                         inputs["publication_readme_text"],
                         [
-                            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
-                            "P63_post_p62_published_successor_promotion_prep",
-                            "P64_post_p63_release_hygiene_rebaseline",
-                            "P65_post_p64_merge_prep_control_sync",
+                            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P66_post_p65_successor_publication_review",
+                            "P67_post_p66_published_successor_freeze",
+                            "P68_post_p67_release_hygiene_and_control_rebaseline",
                         ],
                     ),
                     contains_all(
                         inputs["current_stage_driver_text"],
                         [
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-                            "`P63_post_p62_published_successor_promotion_prep`",
-                            "`P64_post_p63_release_hygiene_rebaseline`",
-                            "`P65_post_p64_merge_prep_control_sync`",
-                            "`archive_or_hygiene_stop`",
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P66_post_p65_successor_publication_review`",
+                            "`P67_post_p66_published_successor_freeze`",
+                            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+                            "`explicit_archive_stop_or_hygiene_only`",
                         ],
                     ),
                 )
             ),
-            "Top-level surfaces and the canonical driver should all expose the current published successor stack.",
+            "Top-level surfaces and the canonical driver should all expose the current frozen successor stack.",
         ),
         (
             "submission_packet_index_and_archival_manifest_track_current_bundle",
@@ -178,18 +181,20 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["submission_packet_index_text"],
                         [
-                            "P63_post_p62_published_successor_promotion_prep",
-                            "P64_post_p63_release_hygiene_rebaseline",
-                            "P65_post_p64_merge_prep_control_sync",
-                            "results/P65_post_p64_merge_prep_control_sync/summary.json",
+                            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P68_post_p67_release_hygiene_and_control_rebaseline",
+                            "P67_post_p66_published_successor_freeze",
+                            "P66_post_p65_successor_publication_review",
+                            "results/P66_post_p65_successor_publication_review/summary.json",
                         ],
                     ),
                     contains_all(
                         inputs["archival_manifest_text"],
                         [
-                            "results/P63_post_p62_published_successor_promotion_prep/summary.json",
-                            "results/P64_post_p63_release_hygiene_rebaseline/summary.json",
-                            "results/P65_post_p64_merge_prep_control_sync/summary.json",
+                            "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+                            "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+                            "results/P67_post_p66_published_successor_freeze/summary.json",
+                            "results/P66_post_p65_successor_publication_review/summary.json",
                             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
                         ],
                     ),
@@ -198,13 +203,13 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             "Submission packet index and archival manifest should point at the same published successor package.",
         ),
         (
-            "review_boundary_and_external_release_note_stay_downstream_of_h64_freeze",
+            "review_boundary_and_external_release_note_stay_downstream_of_h65_terminal_freeze",
             all(
                 (
                     contains_all(
                         inputs["review_boundary_text"],
                         [
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
                             "`P56/P57/P58/P59`",
                             "narrow positive mechanism support survives",
                             "the only remaining future route is a dormant no-go dossier at `F38`",
@@ -213,8 +218,9 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["external_release_note_text"],
                         [
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
                             "`P56/P57/P58/P59`",
+                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
                             "`H43_post_r44_useful_case_refreeze`",
                             "`H58_post_r62_origin_value_boundary_closeout_packet`",
                             "dormant non-runtime `F38` dossier",
@@ -223,22 +229,28 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["external_release_note_text"],
                         [
-                            "archive-first partial falsification",
+                            "archive-first terminal freeze",
                             "strongest justified executor-value lane is closed negative",
                         ],
                     ),
                 )
             ),
-            "Review and external release-note helpers should stay downstream of archive-first partial falsification.",
+            "Review and external release-note helpers should stay downstream of archive-first terminal freeze.",
         ),
         (
             "standing_release_audits_remain_green",
             ready_count(inputs["p1_summary"]) == 10
             and preflight_state_from_summary(inputs["preflight_summary"]) == "docs_and_audits_green"
+            and inputs["h65_summary"]["summary"]["selected_outcome"]
+            == "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop"
             and inputs["h64_summary"]["summary"]["selected_outcome"]
             == "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant"
-            and inputs["p63_summary"]["summary"]["selected_outcome"]
-            == "published_successor_promotion_prep_locked_after_p62"
+            and inputs["p66_summary"]["summary"]["selected_outcome"]
+            == "successor_publication_review_supports_p67_freeze"
+            and inputs["p67_summary"]["summary"]["selected_outcome"]
+            == "published_successor_freeze_locked_after_p66_review"
+            and inputs["p68_summary"]["summary"]["selected_outcome"]
+            == "published_frozen_successor_release_hygiene_and_control_rebaselined"
             and inputs["p56_summary"]["summary"]["selected_outcome"]
             == "clean_descendant_merge_candidate_staged_without_merge_execution"
             and inputs["p57_summary"]["summary"]["selected_outcome"]
@@ -256,7 +268,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             and blocked_count(inputs["h2_summary"]) == 0
             and inputs["v1_timing_summary"]["summary"]["runtime_classification"] == "healthy_but_slow"
             and int(inputs["v1_timing_summary"]["summary"]["timed_out_file_count"]) == 0,
-            "Archive readiness depends on H64, current P63 successor promotion prep, and preserved H58/H43 endpoints.",
+            "Archive readiness depends on H65, the frozen successor stack, and preserved H64/H58/H43 endpoints.",
         ),
         (
             "worktree_hygiene_snapshot_classifies_commit_state",
@@ -272,11 +284,11 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
 
 def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": ("readme_text", ["`P63_post_p62_published_successor_promotion_prep`", "`P65_post_p64_merge_prep_control_sync`"]),
-        "STATUS.md": ("status_text", ["`P64_post_p63_release_hygiene_rebaseline`", "`archive_or_hygiene_stop`"]),
-        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P65_post_p64_merge_prep_control_sync`", "`archive_or_hygiene_stop`"]),
-        "docs/publication_record/submission_packet_index.md": ("submission_packet_index_text", ["P63_post_p62_published_successor_promotion_prep", "results/P65_post_p64_merge_prep_control_sync/summary.json"]),
-        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/P63_post_p62_published_successor_promotion_prep/summary.json", "results/P65_post_p64_merge_prep_control_sync/summary.json"]),
+        "README.md": ("readme_text", ["`P66_post_p65_successor_publication_review`", "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`"]),
+        "STATUS.md": ("status_text", ["`P68_post_p67_release_hygiene_and_control_rebaseline`", "`explicit_archive_stop_or_hygiene_only`"]),
+        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P68_post_p67_release_hygiene_and_control_rebaseline`", "`explicit_archive_stop_or_hygiene_only`"]),
+        "docs/publication_record/submission_packet_index.md": ("submission_packet_index_text", ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "results/P66_post_p65_successor_publication_review/summary.json"]),
+        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json", "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json"]),
         "docs/publication_record/review_boundary_summary.md": ("review_boundary_text", ["`P56/P57/P58/P59`", "dormant no-go dossier at `F38`"]),
         "docs/publication_record/external_release_note_skeleton.md": ("external_release_note_text", ["`P56/P57/P58/P59`", "dormant non-runtime `F38` dossier"]),
         "results/release_worktree_hygiene_snapshot/summary.json": ("worktree_hygiene_summary_text", ['"release_commit_state":', '"git_diff_check_state":']),
@@ -320,8 +332,11 @@ def main() -> None:
                 "docs/publication_record/archival_repro_manifest.md",
                 "docs/publication_record/review_boundary_summary.md",
                 "docs/publication_record/external_release_note_skeleton.md",
+                "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
                 "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-                "results/P63_post_p62_published_successor_promotion_prep/summary.json",
+                "results/P66_post_p65_successor_publication_review/summary.json",
+                "results/P67_post_p66_published_successor_freeze/summary.json",
+                "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
                 "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
                 "results/P57_post_h64_paper_submission_package_sync/summary.json",
                 "results/P58_post_h64_archive_release_closeout_sync/summary.json",
@@ -337,8 +352,8 @@ def main() -> None:
     (OUT_DIR / "README.md").write_text(
         "# P10 Submission Archive Ready\n\n"
         "Machine-readable audit of whether the current submission/archive handoff surfaces stay aligned with the "
-        "H64 published successor posture while preserving H63 as the prior active packet, P60/P61/P62 as the "
-        "prior published clean-descendant stack, H58 as the value-negative closeout, and H43 as the paper-grade "
+        "H65 published frozen successor posture while preserving H64 as the prior active packet, P63/P64/P65 as "
+        "the prior successor stack, H58 as the value-negative closeout, and H43 as the paper-grade "
         "endpoint.\n",
         encoding="utf-8",
     )

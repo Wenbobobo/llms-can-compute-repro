@@ -4,23 +4,23 @@
 
 The current active stage is:
 
-- `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
-The current published successor promotion-prep wave is:
+The current successor publication review wave is:
 
-- `P63_post_p62_published_successor_promotion_prep`
+- `P66_post_p65_successor_publication_review`
 
-The current release hygiene rebaseline wave is:
+The current published successor freeze wave is:
 
-- `P64_post_p63_release_hygiene_rebaseline`
+- `P67_post_p66_published_successor_freeze`
 
-The current merge-prep control sync wave is:
+The current release hygiene and control rebaseline wave is:
 
-- `P65_post_p64_merge_prep_control_sync`
+- `P68_post_p67_release_hygiene_and_control_rebaseline`
 
 The current published clean descendant branch is:
 
-- `wip/p63-post-p62-tight-core-hygiene`
+- `wip/p66-post-p65-published-successor-freeze`
 
 The current docs router is:
 
@@ -30,15 +30,25 @@ The current branch/worktree registry is:
 
 - `docs/branch_worktree_registry.md`
 
-The preserved prior published clean-descendant stack is:
+The preserved prior successor stack is:
+
+- `P63_post_p62_published_successor_promotion_prep`
+- `P64_post_p63_release_hygiene_rebaseline`
+- `P65_post_p64_merge_prep_control_sync`
+
+The preserved prior published clean-descendant branch is:
+
+- `wip/p63-post-p62-tight-core-hygiene`
+
+The preserved prior successor review branch is:
+
+- `wip/p64-post-p63-successor-stack`
+
+The preserved older published clean-descendant stack is:
 
 - `P60_post_p59_published_clean_descendant_promotion_prep`
 - `P61_post_p60_release_hygiene_rebaseline`
 - `P62_post_p61_merge_prep_control_sync`
-
-The preserved prior published clean-descendant branch is:
-
-- `wip/p60-post-p59-published-clean-descendant-prep`
 
 The preserved local integration branch is:
 
@@ -53,7 +63,7 @@ The landed `H64` follow-through foundation is:
 
 The preserved prior active packet is:
 
-- `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
+- `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
 
 The current dormant future dossier is:
 
@@ -61,27 +71,30 @@ The current dormant future dossier is:
 
 The default downstream lane is:
 
-- `archive_or_hygiene_stop`
+- `explicit_archive_stop_or_hygiene_only`
 
 ## Current Machine-State Meaning
 
-- `P56/P57/P58/P59` remain the landed follow-through foundation under `H64`.
-- `P63` promotes `wip/p63-post-p62-tight-core-hygiene` into the live published
-  successor clean descendant above the preserved `P60/P61/P62` stack.
-- `P64` reanchors release hygiene, preflight, and archive-ready posture on
-  `wip/p63-post-p62-tight-core-hygiene` while allowing execution from the
-  registered successor work branch `wip/p64-post-p63-successor-stack`, and it
-  expects `clean_worktree_ready_if_other_gates_green`.
-- `P65` keeps the driver, indexes, active-wave file, and next handoff in sync
-  with the successor merge-prep posture.
-- `wip/p60-post-p59-published-clean-descendant-prep` is preserved as the prior
-  published clean descendant, not the live control branch.
+- `P56/P57/P58/P59` remain the landed follow-through foundation under the
+  preserved `H64` packet.
+- `P66` reviews the exact `p63..p64` successor delta and keeps the publication
+  decision scoped to docs/export/control/release surfaces.
+- `P67` promotes `wip/p66-post-p65-published-successor-freeze` into the live
+  published clean descendant above the preserved `P63/P64/P65` stack.
+- `P68` reanchors release hygiene, preflight, archive-ready posture, and
+  current control on `wip/p66-post-p65-published-successor-freeze` while
+  expecting `clean_worktree_ready_if_other_gates_green`.
+- `wip/p63-post-p62-tight-core-hygiene` is preserved as the prior published
+  clean descendant, not the live control branch.
+- `wip/p64-post-p63-successor-stack` is preserved as the reviewed
+  pre-publication successor lane, not the live control branch.
 - `docs/README.md` and `docs/branch_worktree_registry.md` separate live routing
-  from preserved history and local cleanup posture.
+  from preserved history and quarantine posture.
 - merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - dirty root `main` remains quarantine-only.
 - `F38` records the only surviving future family as a dormant no-go dossier and
   leaves the key cost-profile fields unresolved.
-- `H64` is the current active docs-only packet and selects
-  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`.
-- archive-first freeze remains the active route.
+- `H65` is the current active docs-only packet and selects
+  `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
+- explicit archive stop or hygiene-only follow-through remains the default live
+  route.

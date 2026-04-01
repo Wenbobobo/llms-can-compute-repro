@@ -5,14 +5,14 @@ decision points.
 
 ## Current Live Stack
 
-- `P65_post_p64_merge_prep_control_sync/`
-  current merge-prep control sync wave
-- `P64_post_p63_release_hygiene_rebaseline/`
-  current release hygiene rebaseline wave
-- `P63_post_p62_published_successor_promotion_prep/`
-  current published successor promotion-prep wave
-- `H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
+- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `P68_post_p67_release_hygiene_and_control_rebaseline/`
+  current release hygiene and control rebaseline wave
+- `P67_post_p66_published_successor_freeze/`
+  current published successor freeze wave
+- `P66_post_p65_successor_publication_review/`
+  current successor publication review wave
 - `P56_post_h64_clean_merge_candidate_packet/`
   landed clean merge-candidate foundation wave
 - `P57_post_h64_paper_submission_package_sync/`
@@ -26,16 +26,25 @@ decision points.
 
 ## Preserved Prior Live Stack
 
-- `P62_post_p61_merge_prep_control_sync/`
+- `P65_post_p64_merge_prep_control_sync/`
   preserved prior merge-prep control sync wave
-- `P61_post_p60_release_hygiene_rebaseline/`
+- `P64_post_p63_release_hygiene_rebaseline/`
   preserved prior release hygiene rebaseline wave
+- `P63_post_p62_published_successor_promotion_prep/`
+  preserved prior published successor promotion-prep wave
+- `H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
+  preserved prior active docs-only packet
+- `P62_post_p61_merge_prep_control_sync/`
+  preserved older merge-prep control sync wave
+- `P61_post_p60_release_hygiene_rebaseline/`
+  preserved older release hygiene rebaseline wave
 - `P60_post_p59_published_clean_descendant_promotion_prep/`
-  preserved prior published clean-descendant promotion-prep wave
+  preserved older published clean-descendant promotion-prep wave
 
 ## Reading Rule
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
-- treat `P60/P61/P62` as preserved prior live control, not current; and
+- treat `P63/P64/P65` and `P60/P61/P62` as preserved prior live control, not
+  current; and
 - treat `F38` as dormant future only, not a live scientific route.

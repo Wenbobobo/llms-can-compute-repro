@@ -3,23 +3,27 @@
 ## Current Scientific State
 
 - The current active docs-only packet is
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
-- The current published successor promotion-prep wave is
-  `P63_post_p62_published_successor_promotion_prep`.
-- The current release hygiene rebaseline wave is
-  `P64_post_p63_release_hygiene_rebaseline`.
-- The current merge-prep control sync wave is
-  `P65_post_p64_merge_prep_control_sync`.
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current publication review wave is
+  `P66_post_p65_successor_publication_review`.
+- The current published successor freeze wave is
+  `P67_post_p66_published_successor_freeze`.
+- The current release hygiene and control rebaseline wave is
+  `P68_post_p67_release_hygiene_and_control_rebaseline`.
 - The current published clean descendant branch is
-  `wip/p63-post-p62-tight-core-hygiene`.
+  `wip/p66-post-p65-published-successor-freeze`.
 - The current docs router is `docs/README.md`.
 - The current branch/worktree registry is
   `docs/branch_worktree_registry.md`.
-- The preserved prior published clean-descendant stack is
-  `P60_post_p59_published_clean_descendant_promotion_prep`,
-  `P61_post_p60_release_hygiene_rebaseline`, and
-  `P62_post_p61_merge_prep_control_sync`.
+- The preserved prior successor stack is
+  `P63_post_p62_published_successor_promotion_prep`,
+  `P64_post_p63_release_hygiene_rebaseline`, and
+  `P65_post_p64_merge_prep_control_sync`.
 - The preserved prior published clean descendant branch is
+  `wip/p63-post-p62-tight-core-hygiene`.
+- The preserved prior successor review branch is
+  `wip/p64-post-p63-successor-stack`.
+- The preserved older published clean descendant branch is
   `wip/p60-post-p59-published-clean-descendant-prep`.
 - The preserved local integration branch is `wip/p56-main-scratch`.
 - The landed `H64` follow-through foundation is
@@ -28,12 +32,13 @@
   `P58_post_h64_archive_release_closeout_sync`, and
   `P59_post_h64_control_and_handoff_sync`.
 - The preserved prior active docs-only packet is
-  `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.
+  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
 - The current dormant future dossier is
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`.
-- `H64` selects
-  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`.
-- The default downstream scientific lane is `archive_or_hygiene_stop`.
+- `H65` selects
+  `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
+- The default downstream scientific lane is
+  `explicit_archive_stop_or_hygiene_only`.
 - The only conditional later gate remains
   `r63_post_h62_coprocessor_eligibility_profile_gate`.
 
@@ -43,9 +48,8 @@
 - No additional same-lane executor-value probe is admissible on this branch.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
-- The current local execution successor is
-  `wip/p64-post-p63-successor-stack`.
-- The default next action is archive / hygiene / merge-prep /
-  publication-sync work plus paper-facing partial falsification on
-  `wip/p63-post-p62-tight-core-hygiene`, with the preserved prior stack and
-  successor execution lane tracked in `docs/branch_worktree_registry.md`.
+- The current local freeze branch is
+  `wip/p66-post-p65-published-successor-freeze`.
+- The default next action is explicit archive stop or hygiene-only follow-up on
+  `wip/p66-post-p65-published-successor-freeze`, with the preserved prior stack
+  and review lineage tracked in `docs/branch_worktree_registry.md`.

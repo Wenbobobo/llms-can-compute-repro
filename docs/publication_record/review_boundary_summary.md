@@ -1,7 +1,7 @@
 # Review Boundary Summary
 
 - active packet:
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - landed foundation:
   `P56/P57/P58/P59`
 - current live reading:
