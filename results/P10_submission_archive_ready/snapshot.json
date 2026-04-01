@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,37 +22,38 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`P63_post_p62_published_successor_promotion_prep`",
-        "`P65_post_p64_merge_prep_control_sync`"
+        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
+        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+        "`P66_post_p65_successor_publication_review`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P64_post_p63_release_hygiene_rebaseline`.",
-        "- The default downstream scientific lane is `archive_or_hygiene_stop`."
+        "`P68_post_p67_release_hygiene_and_control_rebaseline`.",
+        "`explicit_archive_stop_or_hygiene_only`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P65_post_p64_merge_prep_control_sync`",
-        "- `archive_or_hygiene_stop`"
+        "- `P68_post_p67_release_hygiene_and_control_rebaseline`",
+        "- `explicit_archive_stop_or_hygiene_only`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/P63_post_p62_published_successor_promotion_prep/`",
-        "- `results/P65_post_p64_merge_prep_control_sync/summary.json`",
-        "- `results/P63_post_p62_published_successor_promotion_prep/summary.json`"
+        "- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`",
+        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
+        "- `results/P66_post_p65_successor_publication_review/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P65_post_p64_merge_prep_control_sync/summary.json`",
-        "- `results/P63_post_p62_published_successor_promotion_prep/summary.json`"
+        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
+        "- `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {

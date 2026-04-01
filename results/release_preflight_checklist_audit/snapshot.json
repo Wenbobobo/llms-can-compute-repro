@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,15 +22,16 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`P63_post_p62_published_successor_promotion_prep`",
-        "`P65_post_p64_merge_prep_control_sync`"
+        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
+        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+        "`P66_post_p65_successor_publication_review`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P64_post_p63_release_hygiene_rebaseline`.",
-        "- The default downstream scientific lane is `archive_or_hygiene_stop`."
+        "`P68_post_p67_release_hygiene_and_control_rebaseline`.",
+        "`explicit_archive_stop_or_hygiene_only`."
       ]
     },
     {
@@ -46,46 +47,46 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P65_post_p64_merge_prep_control_sync`",
-        "- `wip/p63-post-p62-tight-core-hygiene`",
-        "- `P63` promotes `wip/p63-post-p62-tight-core-hygiene` into the live published",
-        "`wip/p63-post-p62-tight-core-hygiene` while allowing execution from the"
+        "- `P68_post_p67_release_hygiene_and_control_rebaseline`",
+        "- `wip/p66-post-p65-published-successor-freeze`",
+        "- `P67` promotes `wip/p66-post-p65-published-successor-freeze` into the live",
+        "current control on `wip/p66-post-p65-published-successor-freeze` while"
       ]
     },
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-04-01-post-p65-next-planmode-handoff.md`",
-        "- `../milestones/P65_post_p64_merge_prep_control_sync/`",
-        "- `../../results/P65_post_p64_merge_prep_control_sync/summary.json`"
+        "- `2026-04-01-post-h65-next-planmode-handoff.md`",
+        "- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`",
+        "- `../../results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- confirm the `P63/P64/P65` published successor stack is the current live",
+        "- confirm the `P66/P67/P68` published frozen successor stack is the current",
         "- keep dirty root `main` outside any integration path"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "- current package must expose `H64/P56/P57/P58/P59/P63/P64/P65/F38`",
-        "- preserved `H58/H43` must remain explicit"
+        "- current package must expose `H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+        "- preserved `H64/H58/H43` must remain explicit"
       ]
     },
     {
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
-        "| P63 Published successor promotion prep | validated as the current published successor promotion-prep wave | `results/P63_post_p62_published_successor_promotion_prep/summary.json`, `results/P63_post_p62_published_successor_promotion_prep/claim_packet.json` | promotes `wip/p63-post-p62-tight-core-hygiene` as the live published successor while preserving the prior `P60/P61/P62` stack |",
-        "| P65 Merge-prep control sync | validated as the current merge-prep control sync wave | `results/P65_post_p64_merge_prep_control_sync/summary.json`, `results/P65_post_p64_merge_prep_control_sync/claim_packet.json` | synchronizes current driver, indexes, active-wave state, and next-entrypoint docs to the successor stack while keeping runtime closed |"
+        "| P66 Successor publication review | validated as the current successor publication review wave | `results/P66_post_p65_successor_publication_review/summary.json`, `results/P66_post_p65_successor_publication_review/claim_packet.json` | reviews the exact `p63..p64` delta and confirms that promotion remains limited to docs/export/control/release surfaces |",
+        "| P68 Release hygiene and control rebaseline | validated as the current release hygiene and control rebaseline wave | `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`, `results/P68_post_p67_release_hygiene_and_control_rebaseline/claim_packet.json` | reanchors release hygiene, preflight, archive-ready posture, and current control on the frozen successor branch |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P65_post_p64_merge_prep_control_sync/summary.json`",
-        "- `results/P63_post_p62_published_successor_promotion_prep/summary.json`"
+        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
+        "- `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {
