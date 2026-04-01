@@ -43,6 +43,17 @@ terminal archive-first packet land above the preserved `H64` foundation.
   `wip/p64-post-p63-successor-stack`
 - preserved local integration base:
   `wip/p56-main-scratch`
+- `wip/p66-post-p65-published-successor-freeze` is a linear clean-descendant
+  successor above `wip/p56-main-scratch` (`0/17` across
+  `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze`)
+- a read-only `git merge-tree` probe against the merge base of
+  `wip/p56-main-scratch` and `wip/p66-post-p65-published-successor-freeze`
+  shows no content-conflict markers, so any later merge-prep should start from
+  `wip/p56-main-scratch`, not from dirty root `main`
+- `wip/p66-post-p65-published-successor-freeze` remains far ahead of
+  `origin/main` (`0/158` across
+  `origin/main...wip/p66-post-p65-published-successor-freeze`), so no direct
+  dirty-root integration shortcut is admissible
 - dirty root repo remains parked as `wip/root-main-parking-2026-03-24`
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
 - merge execution into `main` remains absent

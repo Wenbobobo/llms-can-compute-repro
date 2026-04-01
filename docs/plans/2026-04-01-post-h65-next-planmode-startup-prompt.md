@@ -15,12 +15,22 @@ Current locked facts:
   `P59_post_h64_control_and_handoff_sync`.
 - The current published clean-descendant branch is
   `wip/p66-post-p65-published-successor-freeze`.
+- `wip/p66-post-p65-published-successor-freeze` is a linear clean-descendant
+  successor above `wip/p56-main-scratch` (`0/17` across
+  `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze`).
+- A read-only `git merge-tree` probe against the merge base of
+  `wip/p56-main-scratch` and `wip/p66-post-p65-published-successor-freeze`
+  shows no content-conflict markers; if merge-prep is discussed, it must start
+  from `wip/p56-main-scratch`, not dirty root `main`.
 - The preserved prior successor stack is
   `P63_post_p62_published_successor_promotion_prep`,
   `P64_post_p63_release_hygiene_rebaseline`,
   `P65_post_p64_merge_prep_control_sync`.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
+- `wip/p66-post-p65-published-successor-freeze` remains far ahead of
+  `origin/main` (`0/158` across
+  `origin/main...wip/p66-post-p65-published-successor-freeze`).
 - Runtime remains closed.
 - `F38` / `R63` remain dormant and non-runtime only.
 - `results/release_worktree_hygiene_snapshot/summary.json` should read

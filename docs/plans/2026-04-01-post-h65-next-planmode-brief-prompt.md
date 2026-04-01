@@ -7,9 +7,14 @@ Current locked facts:
 - Current frozen successor stack: `P66`, `P67`, `P68`.
 - Current published clean descendant:
   `wip/p66-post-p65-published-successor-freeze`.
+- `wip/p66-post-p65-published-successor-freeze` is `0/17` relative to
+  `wip/p56-main-scratch`, and a read-only `git merge-tree` probe shows no
+  content-conflict markers there.
 - Preserved prior successor stack: `P63`, `P64`, `P65`.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
+- `wip/p66-post-p65-published-successor-freeze` is still `0/158` relative to
+  `origin/main`, so dirty-root integration is still out of bounds.
 - Runtime remains closed.
 - `F38/R63` remain dormant and non-runtime only.
 - `release_worktree_hygiene_snapshot = clean_worktree_ready_if_other_gates_green`.
