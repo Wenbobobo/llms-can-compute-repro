@@ -6,12 +6,20 @@ Current scientific/control stack:
 
 - current active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`;
+- current repo graph hygiene inventory wave:
+  `P69_post_h65_repo_graph_hygiene_inventory`;
+- current archive index and artifact policy sync wave:
+  `P70_post_p69_archive_index_and_artifact_policy_sync`;
+- current merge-prep readiness sync wave:
+  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`;
 - current successor publication review wave:
   `P66_post_p65_successor_publication_review`;
 - current published successor freeze wave:
   `P67_post_p66_published_successor_freeze`;
 - current release hygiene and control rebaseline wave:
   `P68_post_p67_release_hygiene_and_control_rebaseline`;
+- current hygiene-only cleanup branch:
+  `wip/p69-post-h65-hygiene-only-cleanup`;
 - current published clean descendant branch:
   `wip/p66-post-p65-published-successor-freeze`;
 - preserved prior successor review branch:
@@ -48,6 +56,9 @@ Immediate active wave:
 
 `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` is the current
 docs-only packet on the frozen published successor clean descendant, with
+`P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
+`P70_post_p69_archive_index_and_artifact_policy_sync`,
+`P69_post_h65_repo_graph_hygiene_inventory`,
 `P68_post_p67_release_hygiene_and_control_rebaseline`,
 `P67_post_p66_published_successor_freeze`, and
 `P66_post_p65_successor_publication_review` already landed above the preserved
@@ -55,12 +66,14 @@ docs-only packet on the frozen published successor clean descendant, with
 
 Immediate local follow-through:
 
-`wip/p66-post-p65-published-successor-freeze` is the current published freeze
-branch for archive-facing cleanup, release-surface convergence, and explicit
-stop-ready closeout posture.
+`wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup
+branch for repo-graph inventory, archive-index sync, handoff refresh, and
+explicit stop-ready closeout posture.
 
 ## Execution Closeout Status
 
+- the current hygiene-only cleanup branch is
+  `wip/p69-post-h65-hygiene-only-cleanup`;
 - the current published clean descendant branch is
   `wip/p66-post-p65-published-successor-freeze`;
 - the preserved prior published clean descendant branch is
@@ -71,6 +84,7 @@ stop-ready closeout posture.
   `wip/p60-post-p59-published-clean-descendant-prep`;
 - the preserved local integration branch is `wip/p56-main-scratch`;
 - the landed `P56/P57/P58/P59` stack remains the absorbed `H64` foundation;
+- the `P69/P70/P71` stack remains hygiene-only follow-through above `H65`;
 - standing release/archive audits must stay rebaselined on the published
   frozen successor clean descendant before outward sync;
 - the active clean descendant branch remains stop-ready only;

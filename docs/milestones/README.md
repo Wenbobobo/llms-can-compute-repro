@@ -7,6 +7,12 @@ decision points.
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
+  current clean-descendant merge-prep readiness sync wave
+- `P70_post_p69_archive_index_and_artifact_policy_sync/`
+  current archive index and artifact policy sync wave
+- `P69_post_h65_repo_graph_hygiene_inventory/`
+  current repo graph hygiene inventory wave
 - `P68_post_p67_release_hygiene_and_control_rebaseline/`
   current release hygiene and control rebaseline wave
 - `P67_post_p66_published_successor_freeze/`
@@ -45,6 +51,7 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P69/P70/P71` as the current hygiene-only cleanup stack above `H65`;
 - treat `P63/P64/P65` and `P60/P61/P62` as preserved prior live control, not
   current; and
 - treat `F38` as dormant future only, not a live scientific route.

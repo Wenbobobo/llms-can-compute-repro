@@ -7,16 +7,24 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-01-post-h65-hygiene-only-cleanup-design.md`
+  current design for the post-`H65` hygiene-only cleanup phase
+- `2026-04-01-post-p71-next-planmode-handoff.md`
+  current shortest handoff from the live `H65 + P69/P70/P71 + P56/P57/P58/P59
+  + P66/P67/P68 + F38` state into the next planning round
+- `2026-04-01-post-p71-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-01-post-p71-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-01-post-p65-successor-publication-freeze-design.md`
-  current design for the post-`P65` review/freeze/rebaseline/terminal-freeze
+  preserved design for the post-`P65` review/freeze/rebaseline/terminal-freeze
   phase
 - `2026-04-01-post-h65-next-planmode-handoff.md`
-  current shortest handoff from the live `H65 + P56/P57/P58/P59 +
-  P66/P67/P68 + F38` state into the next planning round
+  preserved handoff for the earlier `H65` freeze-only entrypoint
 - `2026-04-01-post-h65-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt for the earlier `H65` freeze-only entrypoint
 - `2026-04-01-post-h65-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt for the earlier `H65` freeze-only entrypoint
 - `2026-04-01-post-p63-successor-merge-prep-design.md`
   preserved design for the earlier `P63/P64/P65` successor stack
 - `2026-04-01-post-p65-next-planmode-handoff.md`
@@ -67,6 +75,8 @@ driver and machine-readable `results/` summaries first.
   `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62 -> P50 -> P51 -> P52 -> F38 -> H63 -> P53 -> P54 -> P55 -> H64`
 - landed operational follow-through foundation:
   `P56 -> P57 -> P58 -> P59`
+- current hygiene-only cleanup stack:
+  `P69 -> P70 -> P71`
 - current published frozen successor stack:
   `P66 -> P67 -> P68 -> H65`
 - preserved prior successor stack:
@@ -105,6 +115,10 @@ driver and machine-readable `results/` summaries first.
 - `2026-04-01-post-h65-next-planmode-handoff.md`
 - `2026-04-01-post-h65-next-planmode-startup-prompt.md`
 - `2026-04-01-post-h65-next-planmode-brief-prompt.md`
+- `2026-04-01-post-h65-hygiene-only-cleanup-design.md`
+- `2026-04-01-post-p71-next-planmode-handoff.md`
+- `2026-04-01-post-p71-next-planmode-startup-prompt.md`
+- `2026-04-01-post-p71-next-planmode-brief-prompt.md`
 - `2026-04-01-post-p63-successor-merge-prep-design.md`
 - `2026-04-01-post-p65-next-planmode-handoff.md`
 - `2026-04-01-post-p65-next-planmode-startup-prompt.md`
@@ -112,6 +126,9 @@ driver and machine-readable `results/` summaries first.
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
 - `2026-04-01-post-p63-next-planmode-brief-prompt.md`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
+- `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
+- `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
+- `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
 - `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
 - `../milestones/P67_post_p66_published_successor_freeze/`
 - `../milestones/P66_post_p65_successor_publication_review/`
@@ -125,6 +142,9 @@ driver and machine-readable `results/` summaries first.
 - `../milestones/P59_post_h64_control_and_handoff_sync/`
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
 - `../../results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
+- `../../results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
+- `../../results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`
+- `../../results/P69_post_h65_repo_graph_hygiene_inventory/summary.json`
 - `../../results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`
 - `../../results/P67_post_p66_published_successor_freeze/summary.json`
 - `../../results/P66_post_p65_successor_publication_review/summary.json`

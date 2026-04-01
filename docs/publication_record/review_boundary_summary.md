@@ -2,6 +2,8 @@
 
 - active packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- current hygiene-only cleanup stack:
+  `P69/P70/P71`
 - landed foundation:
   `P56/P57/P58/P59`
 - current live reading:

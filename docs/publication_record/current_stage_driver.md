@@ -6,6 +6,18 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current repo graph hygiene inventory wave is:
+
+- `P69_post_h65_repo_graph_hygiene_inventory`
+
+The current archive index and artifact policy sync wave is:
+
+- `P70_post_p69_archive_index_and_artifact_policy_sync`
+
+The current merge-prep readiness sync wave is:
+
+- `P71_post_p70_clean_descendant_merge_prep_readiness_sync`
+
 The current successor publication review wave is:
 
 - `P66_post_p65_successor_publication_review`
@@ -17,6 +29,10 @@ The current published successor freeze wave is:
 The current release hygiene and control rebaseline wave is:
 
 - `P68_post_p67_release_hygiene_and_control_rebaseline`
+
+The current hygiene-only cleanup branch is:
+
+- `wip/p69-post-h65-hygiene-only-cleanup`
 
 The current published clean descendant branch is:
 
@@ -84,10 +100,19 @@ The default downstream lane is:
 - `P68` reanchors release hygiene, preflight, archive-ready posture, and
   current control on `wip/p66-post-p65-published-successor-freeze` while
   expecting `clean_worktree_ready_if_other_gates_green`.
+- `P69` inventories the post-`H65` keep set, records root-main quarantine,
+  and freezes the `p56..p66` plus `origin/main..p66` topology facts.
+- `P70` syncs archive/publication/planning indexes and the standing artifact
+  policy to the `H65 + P69` hygiene-only cleanup state.
+- `P71` records the only admissible later merge-prep readiness route from
+  `wip/p56-main-scratch` to `wip/p66-post-p65-published-successor-freeze`
+  without executing any merge.
 - `wip/p63-post-p62-tight-core-hygiene` is preserved as the prior published
   clean descendant, not the live control branch.
 - `wip/p64-post-p63-successor-stack` is preserved as the reviewed
   pre-publication successor lane, not the live control branch.
+- `wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup
+  branch, not the live published clean descendant.
 - `docs/README.md` and `docs/branch_worktree_registry.md` separate live routing
   from preserved history and quarantine posture.
 - merge posture remains `clean_descendant_only_never_dirty_root_main`.

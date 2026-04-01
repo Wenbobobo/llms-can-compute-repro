@@ -11,18 +11,23 @@ facing control surfaces.
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current tight-core branch/worktree registry and hygiene control note
-- `../plans/2026-04-01-post-p65-successor-publication-freeze-design.md`
-  current design for the published frozen successor review/freeze/rebaseline
-  phase
-- `../plans/2026-04-01-post-h65-next-planmode-handoff.md`
-  current shortest handoff from the frozen successor stack above the landed
-  `H64 + P56/P57/P58/P59` foundation
-- `../plans/2026-04-01-post-h65-next-planmode-startup-prompt.md`
+- `../plans/2026-04-01-post-h65-hygiene-only-cleanup-design.md`
+  current design for the post-`H65` hygiene-only cleanup phase
+- `../plans/2026-04-01-post-p71-next-planmode-handoff.md`
+  current shortest handoff from the hygiene-only cleanup stack above the landed
+  `H65 + P56/P57/P58/P59 + P66/P67/P68` state
+- `../plans/2026-04-01-post-p71-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-01-post-h65-next-planmode-brief-prompt.md`
+- `../plans/2026-04-01-post-p71-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
+  current clean-descendant merge-prep readiness sync wave
+- `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
+  current archive index and artifact policy sync wave
+- `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
+  current repo graph hygiene inventory wave
 - `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
   current release hygiene and control rebaseline wave
 - `../milestones/P67_post_p66_published_successor_freeze/`
@@ -50,10 +55,16 @@ facing control surfaces.
 
 ## Current Taxonomy
 
+- current hygiene-only cleanup stack:
+  `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`,
+  `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`,
+  `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - current published frozen successor stack:
   `../milestones/P66_post_p65_successor_publication_review/`,
   `../milestones/P67_post_p66_published_successor_freeze/`,
   `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+- artifact policy:
+  `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_policy.md`
 - live control:
   `current_stage_driver.md`, `release_preflight_checklist.md`,
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`

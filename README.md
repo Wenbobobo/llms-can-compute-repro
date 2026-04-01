@@ -20,12 +20,20 @@ Current anchors:
 
 - active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- current repo graph hygiene inventory wave:
+  `P69_post_h65_repo_graph_hygiene_inventory`
+- current archive index and artifact policy sync wave:
+  `P70_post_p69_archive_index_and_artifact_policy_sync`
+- current merge-prep readiness sync wave:
+  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`
 - current publication review wave:
   `P66_post_p65_successor_publication_review`
 - current published successor freeze wave:
   `P67_post_p66_published_successor_freeze`
 - current release hygiene and control rebaseline wave:
   `P68_post_p67_release_hygiene_and_control_rebaseline`
+- current hygiene-only cleanup branch:
+  `wip/p69-post-h65-hygiene-only-cleanup`
 - current published clean descendant branch:
   `wip/p66-post-p65-published-successor-freeze`
 - current docs router:
@@ -76,14 +84,19 @@ descendant, `P68` reanchors release hygiene and control on that branch, and
 `H65` converts the route into an explicit archive-first terminal freeze without
 reopening runtime or routing integration through dirty root `main`. `P63/P64/P65`
 remain preserved as the prior successor stack, and `P60/P61/P62` remain
-preserved as the older published clean-descendant stack.
+preserved as the older published clean-descendant stack. `P69` inventories the
+post-`H65` keep set and root quarantine facts, `P70` syncs archive-facing
+indexes and the standing artifact policy to that hygiene view, and `P71`
+records the only admissible later merge-prep readiness route from
+`wip/p56-main-scratch` to `wip/p66-post-p65-published-successor-freeze`
+without executing any merge.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
-The default next action is explicit archive stop, hygiene-only cleanup, or no
-further scientific action on `wip/p66-post-p65-published-successor-freeze`
-under the current `H65 + P56/P57/P58/P59 + P66/P67/P68 + F38` posture. Current
+The default next action is explicit archive stop, archive polish, or no further
+scientific action on `wip/p69-post-h65-hygiene-only-cleanup` under the current
+`H65 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38` posture. Current
 local follow-through should run only from clean descendants recorded in
 `docs/branch_worktree_registry.md`; dirty root `main` remains quarantine-only.

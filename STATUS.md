@@ -4,12 +4,20 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current repo graph hygiene inventory wave is
+  `P69_post_h65_repo_graph_hygiene_inventory`.
+- The current archive index and artifact policy sync wave is
+  `P70_post_p69_archive_index_and_artifact_policy_sync`.
+- The current merge-prep readiness sync wave is
+  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`.
 - The current publication review wave is
   `P66_post_p65_successor_publication_review`.
 - The current published successor freeze wave is
   `P67_post_p66_published_successor_freeze`.
 - The current release hygiene and control rebaseline wave is
   `P68_post_p67_release_hygiene_and_control_rebaseline`.
+- The current hygiene-only cleanup branch is
+  `wip/p69-post-h65-hygiene-only-cleanup`.
 - The current published clean descendant branch is
   `wip/p66-post-p65-published-successor-freeze`.
 - The current docs router is `docs/README.md`.
@@ -50,6 +58,9 @@
 - Dirty root `main` remains quarantine-only.
 - The current local freeze branch is
   `wip/p66-post-p65-published-successor-freeze`.
-- The default next action is explicit archive stop or hygiene-only follow-up on
-  `wip/p66-post-p65-published-successor-freeze`, with the preserved prior stack
-  and review lineage tracked in `docs/branch_worktree_registry.md`.
+- The current local hygiene-only cleanup branch is
+  `wip/p69-post-h65-hygiene-only-cleanup`.
+- The default next action is explicit archive stop, archive polish, or no
+  further scientific action on `wip/p69-post-h65-hygiene-only-cleanup`, with
+  the preserved prior stack and review lineage tracked in
+  `docs/branch_worktree_registry.md`.
