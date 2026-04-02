@@ -11,5 +11,6 @@
 - dirty root `main` remains quarantine-only
 
 Plain-text restatement for machine checks:
+`P72` as the current archive-polish explicit-stop handoff sidecar.
 P69/P70/P71 as hygiene-only cleanup sidecars.
 P69/P70/P71 do not widen the evidence ladder.

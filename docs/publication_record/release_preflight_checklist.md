@@ -16,6 +16,8 @@
 - keep dirty root `main` outside any integration path
 
 Plain-text restatement for machine checks:
+`P72` hygiene-only archive-polish and explicit-stop handoff sidecar.
+`P69/P70/P71` hygiene-only cleanup sidecars.
 P66/P67/P68 published frozen successor stack.
 H58 as the value-negative closeout.
 H43 as the preserved paper-grade endpoint.

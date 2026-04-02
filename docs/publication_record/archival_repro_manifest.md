@@ -6,6 +6,8 @@ The `P72/P71/P70/P69` summaries below are hygiene-only control sidecars retained
 the archive-facing control surfaces match the live cleanup state. They do not
 change the paper-facing evidence boundary selected by `H65`.
 
+do not change the paper-facing evidence boundary selected by H65
+
 - `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
 - `results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`
 - `results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
