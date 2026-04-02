@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv"
     },
     "torch": {
       "installed": false,
@@ -57,7 +57,7 @@
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-04-01-post-h65-next-planmode-handoff.md`",
+        "- `2026-04-02-post-p72-next-planmode-handoff.md`",
         "- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`",
         "- `../../results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
       ]
@@ -65,8 +65,8 @@
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- confirm the `P66/P67/P68` published frozen successor stack is the current",
-        "- keep dirty root `main` outside any integration path"
+        "- keep dirty root `main` outside any integration path",
+        "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar."
       ]
     },
     {
@@ -86,7 +86,7 @@
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
+        "- `results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`",
         "- `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
