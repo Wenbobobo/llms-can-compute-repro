@@ -1,5 +1,7 @@
 # Archival Repro Manifest
 
+P72/P71/P70/P69 summaries below are hygiene-only control sidecars.
+
 The `P72/P71/P70/P69` summaries below are hygiene-only control sidecars retained so
 the archive-facing control surfaces match the live cleanup state. They do not
 change the paper-facing evidence boundary selected by `H65`.
