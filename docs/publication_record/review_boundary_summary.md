@@ -12,5 +12,7 @@
   narrow positive mechanism support survives
 - future route:
   the only remaining future route is a dormant no-go dossier at `F38`
+- plain-text future route:
+  dormant no-go dossier at F38
 - downstream recommendation:
   explicit stop, no further action
