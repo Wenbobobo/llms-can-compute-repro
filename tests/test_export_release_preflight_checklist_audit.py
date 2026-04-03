@@ -322,6 +322,8 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     assert payload["summary"]["preflight_state"] == "docs_and_audits_green"
     assert payload["summary"]["blocked_count"] == 0
     assert "P72/P69/P70/P71 remain hygiene-only archive/control sidecars" in payload["summary"]["recommended_next_action"]
+    assert "P74/P75/P76 remain the current successor review/freeze/rebaseline stack" in payload["summary"]["recommended_next_action"]
+    assert "P66/P67/P68 remain the preserved prior successor stack" in payload["summary"]["recommended_next_action"]
     assert "explicit stop or no further action is now the recommended downstream route" in payload["summary"]["recommended_next_action"]
 
 

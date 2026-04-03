@@ -6,6 +6,8 @@ Current scientific/control stack:
 
 - current active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`;
+- current local hygiene and shrink wave:
+  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`;
 - current repo graph hygiene inventory wave:
   `P69_post_h65_repo_graph_hygiene_inventory`;
 - current archive index and artifact policy sync wave:
