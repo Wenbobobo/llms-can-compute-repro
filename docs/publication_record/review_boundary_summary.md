@@ -1,20 +1,15 @@
 # Review Boundary Summary
 
-- active packet:
+- current active packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
-- current archive polish and explicit stop handoff wave:
-  `P72`
-- current hygiene-only cleanup stack:
-  `P69/P70/P71`
-- current successor promotion stack:
+- current archive-facing control stack:
+  `P79/P80`
+- preserved `P56/P57/P58/P59` follow-through foundation:
+  present
+- preserved immediate publication lineage:
   `P74/P75/P76`
-- landed foundation:
-  `P56/P57/P58/P59`
-- current live reading:
-  narrow positive mechanism support survives
-- future route:
-  the only remaining future route is a dormant no-go dossier at `F38`
-- plain-text future route:
-  dormant no-go dossier at F38
-- downstream recommendation:
-  explicit stop, no further action
+- narrow positive mechanism support survives
+- the only remaining future route is a dormant no-go dossier at `F38` unless a
+  later screen proves a strictly non-runtime route
+- explicit stop
+- no further action

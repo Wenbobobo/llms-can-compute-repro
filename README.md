@@ -3,25 +3,30 @@
 Careful reproduction of a narrow execution-substrate reading of Percepta's
 _Can LLMs Be Computers?_ field note.
 
-The repository does not target a broad “LLMs are computers” claim. The current
-live reading is narrower and now closed out more explicitly: append-only
-retrieval-backed execution is real on admitted surfaces, but bounded
-executor/system value on the strongest justified useful-kernel lane is
-disconfirmed.
+The repository no longer targets any broad "LLMs are computers" claim. The
+current honest package is narrower: append-only trace semantics and exact 2D
+hard-max retrieval remain supported on admitted surfaces, while the strongest
+justified executor-value lane is closed negative.
 
 For live routing and preserved-history navigation, start at `docs/README.md`.
 
 ## Current Stage
 
-As of `2026-04-03`, the current active packet is
+As of `2026-04-05`, the current active packet remains
 `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
 
 Current anchors:
 
+- current keep-set and provenance normalization wave:
+  `P77_post_p76_keep_set_and_provenance_normalization`
+- current legacy worktree convergence and quarantine sync wave:
+  `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`
+- current archive claim boundary and reopen screen wave:
+  `P79_post_p78_archive_claim_boundary_and_reopen_screen`
+- current next-planmode handoff sync wave:
+  `P80_post_p79_next_planmode_handoff_sync`
 - current local hygiene and shrink wave:
   `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`
-- active docs-only packet:
-  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - current archive polish and explicit stop handoff wave:
   `P72_post_p71_archive_polish_and_explicit_stop_handoff`
 - current repo graph hygiene inventory wave:
@@ -30,12 +35,6 @@ Current anchors:
   `P70_post_p69_archive_index_and_artifact_policy_sync`
 - current merge-prep readiness sync wave:
   `P71_post_p70_clean_descendant_merge_prep_readiness_sync`
-- current successor publication review wave:
-  `P74_post_p73_successor_publication_review`
-- current published successor freeze wave:
-  `P75_post_p74_published_successor_freeze`
-- current release hygiene and control rebaseline wave:
-  `P76_post_p75_release_hygiene_and_control_rebaseline`
 - current hygiene-only cleanup branch:
   `wip/p69-post-h65-hygiene-only-cleanup`
 - current local hygiene and shrink branch:
@@ -46,81 +45,50 @@ Current anchors:
   `wip/p72-post-p71-archive-polish-stop-handoff`
 - current published clean descendant branch:
   `wip/p75-post-p74-published-successor-freeze`
-- current docs router:
-  `docs/README.md`
-- current branch/worktree registry:
-  `docs/branch_worktree_registry.md`
+- preserved local integration branch:
+  `wip/p56-main-scratch`
+- preserved immediate publication lineage:
+  `P74_post_p73_successor_publication_review`,
+  `P75_post_p74_published_successor_freeze`,
+  `P76_post_p75_release_hygiene_and_control_rebaseline`
 - preserved prior published successor stack:
   `P66_post_p65_successor_publication_review`,
   `P67_post_p66_published_successor_freeze`,
   `P68_post_p67_release_hygiene_and_control_rebaseline`
-- preserved prior published clean descendant branch:
-  `wip/p66-post-p65-published-successor-freeze`
-- preserved prior successor review branch:
-  `wip/p74-post-p73-successor-publication-review`
 - preserved deeper successor stack:
   `P63_post_p62_published_successor_promotion_prep`,
   `P64_post_p63_release_hygiene_rebaseline`,
   `P65_post_p64_merge_prep_control_sync`
-- preserved deeper prior published clean descendant branch:
-  `wip/p63-post-p62-tight-core-hygiene`
-- preserved deeper prior successor review branch:
-  `wip/p64-post-p63-successor-stack`
-- preserved older published clean-descendant stack:
-  `P60_post_p59_published_clean_descendant_promotion_prep`,
-  `P61_post_p60_release_hygiene_rebaseline`,
-  `P62_post_p61_merge_prep_control_sync`
-- preserved local integration branch:
-  `wip/p56-main-scratch`
 - landed `H64` follow-through foundation:
   `P56_post_h64_clean_merge_candidate_packet`,
   `P57_post_h64_paper_submission_package_sync`,
   `P58_post_h64_archive_release_closeout_sync`,
   `P59_post_h64_control_and_handoff_sync`
-- preserved prior active docs-only packet:
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
 - current dormant future dossier:
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`
+- current docs router:
+  `docs/README.md`
+- current branch/worktree registry:
+  `docs/branch_worktree_registry.md`
 - default downstream lane:
-  `explicit_archive_stop_or_hygiene_only`
+  `explicit_stop_or_no_further_action_archive_first`
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`R62` remained exact on `4/4` declared native rows across `2/2` kernels, but
-accelerated execution was faster than linear on `0/2` longest kernel rows and
-did not approach the external scalar comparator on either kernel. `H58`
-therefore selected
-`stop_as_mechanism_supported_but_no_bounded_executor_value`. `H59` made the
-reproduction gap explicit, `H60` selected planning-only / archive / stop,
-`H61` made archive-first the live posture, `H62` kept archive/hygiene stop as
-the default downstream state, `H63` made archive-first closeout the active
-route, and `H64` froze archive-first closeout into the active docs-only
-packet. `P56/P57/P58/P59` remain the landed follow-through foundation.
-`P66/P67/P68` remain preserved as the prior published successor stack underneath
-the current route. `P69` inventories the post-`H65` keep set and root
-quarantine facts, `P70` syncs archive-facing indexes and the standing artifact
-policy to that hygiene view, and `P71` records the only admissible later
-merge-prep readiness route from `wip/p56-main-scratch` to the prior published
-clean descendant without executing any merge. `P72` then normalizes the
-archive-polish surfaces and freezes the handoff as explicit stop, no further
-action, or later clean-descendant merge-prep planning only if a new external
-integration need appears. `P73` keeps that stop posture intact while
-re-anchoring live local execution on `D:/zWenbo/AI/wt/`, classifying legacy-path
-worktrees for safe shrink, and leaving any later merge work dossier-only.
-`P74` reviews the exact `p66..p73` successor delta, `P75` promotes
-`wip/p75-post-p74-published-successor-freeze` into the live published clean
-descendant while preserving `p66` as lineage, and `P76` reanchors release
-hygiene and current control on that branch without reopening runtime or routing
-integration through dirty root `main`. `P63/P64/P65` and `P60/P61/P62` remain
-preserved as deeper historical successor stacks.
+`P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
+`p69`, and `p56`, with remote provenance explicitly preserved. `P78`
+converges mounted worktrees to that balanced mounted keep set and keeps only
+the dirty root checkout plus `wip/h27-promotion` as quarantined survivors.
+`P79` packages the paper-facing partial falsification boundary and the future
+reopen screen. `P80` syncs all next-planmode prompts to the honest default:
+explicit stop, no further action, or at most hygiene-only / archive polish /
+merge-prep documentation work.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
-The default next action is explicit stop, no further action, or limited local
-hygiene/shrink follow-through on `wip/p73-post-p72-hygiene-shrink-mergeprep`
-under the current `H65 + P73 + P74/P75/P76 + P72 + P69/P70/P71 +
-P56/P57/P58/P59 + F38` posture. Current local follow-through should run only
-from clean descendants recorded in `docs/branch_worktree_registry.md`; dirty
-root `main` remains quarantine-only.
+Runtime remains closed. Dirty-root integration remains out of bounds. The only
+surviving future discussion is a strictly non-runtime gate, and it is not a
+runtime authorization. Current local follow-through should run only from clean
+descendants recorded in `docs/branch_worktree_registry.md`.

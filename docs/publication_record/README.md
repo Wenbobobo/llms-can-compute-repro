@@ -10,78 +10,30 @@ facing control surfaces.
 - `../README.md`
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
-  current tight-core branch/worktree registry and hygiene control note
-- `../plans/2026-04-03-post-p76-next-planmode-handoff.md`
-  current shortest handoff from the post-`P76` successor-promotion state into
-  the next planning round
-- `../plans/2026-04-03-post-p76-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-03-post-p76-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
-- `../plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
-  preserved design for the post-`P72` hygiene/shrink and dossier-prep phase
-- `../plans/2026-04-02-post-p73-next-planmode-handoff.md`
-  preserved shortest handoff from the post-shrink `P73` state into the next
+  current branch/worktree registry and hygiene control note
+- `../plans/2026-04-05-post-p80-next-planmode-handoff.md`
+  current shortest handoff from the post-`P80` convergence state into the next
   planning round
-- `../plans/2026-04-02-post-p73-next-planmode-startup-prompt.md`
-  preserved ready-to-paste startup prompt for the prior `plan mode` round
-- `../plans/2026-04-02-post-p73-next-planmode-brief-prompt.md`
-  preserved short startup prompt for the prior `plan mode` round
-- `../plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
-  current design for the post-`P71` archive polish and explicit stop handoff
-  phase
-- `../plans/2026-04-02-post-p72-next-planmode-handoff.md`
-  current shortest handoff from the archive-polish explicit-stop wave above the
-  landed `H65 + P56/P57/P58/P59 + P66/P67/P68` state
-- `../plans/2026-04-02-post-p72-next-planmode-startup-prompt.md`
+- `../plans/2026-04-05-post-p80-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-02-post-p72-next-planmode-brief-prompt.md`
+- `../plans/2026-04-05-post-p80-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
-- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
-  current active docs-only packet
-- `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
-  current local hygiene and shrink wave
-- `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
-  current archive polish and explicit stop handoff wave
-- `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
-  current clean-descendant merge-prep readiness sync wave
-- `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
-  current archive index and artifact policy sync wave
-- `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
-  current repo graph hygiene inventory wave
-- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
-  current release hygiene and control rebaseline wave
-- `../milestones/P75_post_p74_published_successor_freeze/`
-  current published successor freeze wave
-- `../milestones/P74_post_p73_successor_publication_review/`
-  current successor publication review wave
-- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
-  preserved prior release hygiene and control rebaseline wave
-- `../milestones/P67_post_p66_published_successor_freeze/`
-  preserved prior published successor freeze wave
-- `../milestones/P66_post_p65_successor_publication_review/`
-  preserved prior successor publication review wave
-- `../milestones/P65_post_p64_merge_prep_control_sync/`
-  preserved prior merge-prep control sync wave
-- `../milestones/P64_post_p63_release_hygiene_rebaseline/`
-  preserved prior release hygiene rebaseline wave
-- `../milestones/P63_post_p62_published_successor_promotion_prep/`
-  preserved prior published successor clean-descendant promotion-prep wave
-- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
-  preserved prior active docs-only packet
-- `../milestones/P56_post_h64_clean_merge_candidate_packet/`
-  landed clean merge-candidate foundation wave
-- `../milestones/P57_post_h64_paper_submission_package_sync/`
-  landed paper/submission package sync foundation wave
-- `../milestones/P58_post_h64_archive_release_closeout_sync/`
-  landed archive/release closeout sync foundation wave
-- `../milestones/P59_post_h64_control_and_handoff_sync/`
-  landed control/handoff sync foundation wave
-- `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
-  current dormant future dossier
+- `../plans/2026-04-05-post-p76-hygiene-first-convergence-design.md`
+  current design for the convergence, claim-boundary, and handoff phase
+- `current_stage_driver.md`
+  canonical live control summary
+- `partial_falsification_boundary.md`
+  current archive-facing claim boundary
+- `future_reopen_screen.md`
+  current future-route screening note
 
 ## Current Taxonomy
 
+- current archive-facing convergence stack:
+  `../milestones/P77_post_p76_keep_set_and_provenance_normalization/`,
+  `../milestones/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/`,
+  `../milestones/P79_post_p78_archive_claim_boundary_and_reopen_screen/`,
+  `../milestones/P80_post_p79_next_planmode_handoff_sync/`
 - current local hygiene and shrink wave:
   `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
 - current archive polish and explicit stop handoff wave:
@@ -98,17 +50,12 @@ facing control surfaces.
   `../milestones/P66_post_p65_successor_publication_review/`,
   `../milestones/P67_post_p66_published_successor_freeze/`,
   `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
-- artifact policy:
-  `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_policy.md`
 - live control:
   `current_stage_driver.md`, `release_preflight_checklist.md`,
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`
-- hygiene-only control sidecars:
-  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`,
-  `P72_post_p71_archive_polish_and_explicit_stop_handoff`,
-  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
-  `P70_post_p69_archive_index_and_artifact_policy_sync`,
-  `P69_post_h65_repo_graph_hygiene_inventory`
+- current archive-facing control surfaces:
+  `partial_falsification_boundary.md`, `future_reopen_screen.md`,
+  `review_boundary_summary.md`, `archival_repro_manifest.md`
 - preserved historical package:
   `submission_packet_index.md`, `experiment_manifest.md`,
   `release_summary_draft.md`, `paper_bundle_status.md`

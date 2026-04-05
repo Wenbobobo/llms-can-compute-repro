@@ -6,20 +6,23 @@ and the dormant future dossier.
 ## Live Now
 
 - `../README.md`
-  restrained project landing page for the current `H65 + P73 + P74/P75/P76 +
-  P72 + P69/P70/P71 + P56/P57/P58/P59 + F38` posture
+  restrained project landing page for the current `H65 + P77/P78/P79/P80 +
+  P73 + P72 + P69/P70/P71 + P56/P57/P58/P59 + F38` posture
 - `publication_record/current_stage_driver.md`
-  canonical live control summary for the active terminal-freeze packet, current
-  published frozen clean descendant, and default downstream lane
+  canonical live control summary for the active archive-first freeze packet,
+  current published clean descendant, balanced mounted keep set, and default
+  downstream lane
 - `branch_worktree_registry.md`
-  current tight-core branch/worktree map, quarantine rule, and cleanup posture
+  current branch/worktree map, quarantine rule, balanced mounted keep set, and
+  cleanup posture
 - `plans/README.md`
   current planning entrypoints, next handoff surfaces, and preserved plan
   history
 - `milestones/README.md`
-  current successor stack plus preserved milestone history
+  current archive-first convergence stack plus preserved milestone history
 - `publication_record/README.md`
-  paper-facing, archive-facing, and release-facing control surfaces
+  paper-facing, archive-facing, release-facing, and claim-boundary control
+  surfaces
 
 ## Historical Record
 
@@ -28,7 +31,7 @@ and the dormant future dossier.
 - `milestones/README.md`
   preserved completed packets, sidecars, and prior decision points
 - `publication_record/submission_packet_index.md`
-  historical paper/release package map
+  historical paper/release package map and preserved publication lineage
 - `publication_record/experiment_manifest.md`
   historical phase-by-phase record of landed control changes
 
@@ -44,8 +47,9 @@ and the dormant future dossier.
   state;
 - treat `plans/README.md`, `milestones/README.md`, and
   `publication_record/README.md` as routers, not evidence;
-- treat older files that say "current" as historical wording unless they are
-  linked from the live surfaces above; and
-- do not treat advisory/origin materials as evidence; and
+- treat `partial_falsification_boundary.md` and `future_reopen_screen.md` as
+  the current archive-facing claim-boundary pair;
+- treat advisory/origin/GPTPro materials as advisory only, never as evidence;
 - prefer `D:/zWenbo/AI/wt/` for live work rather than the historical
-  `D:/zWenbo/AI/LLMCompute-worktrees/` prefix.
+  `D:/zWenbo/AI/LLMCompute-worktrees/` prefix; and
+- keep dirty root `main` quarantine-only.

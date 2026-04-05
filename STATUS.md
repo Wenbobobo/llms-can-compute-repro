@@ -4,6 +4,14 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current keep-set and provenance normalization wave is
+  `P77_post_p76_keep_set_and_provenance_normalization`.
+- The current legacy worktree convergence and quarantine sync wave is
+  `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`.
+- The current archive claim boundary and reopen screen wave is
+  `P79_post_p78_archive_claim_boundary_and_reopen_screen`.
+- The current next-planmode handoff sync wave is
+  `P80_post_p79_next_planmode_handoff_sync`.
 - The current local hygiene and shrink wave is
   `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`.
 - The current archive polish and explicit stop handoff wave is
@@ -14,12 +22,6 @@
   `P70_post_p69_archive_index_and_artifact_policy_sync`.
 - The current merge-prep readiness sync wave is
   `P71_post_p70_clean_descendant_merge_prep_readiness_sync`.
-- The current successor publication review wave is
-  `P74_post_p73_successor_publication_review`.
-- The current published successor freeze wave is
-  `P75_post_p74_published_successor_freeze`.
-- The current release hygiene and control rebaseline wave is
-  `P76_post_p75_release_hygiene_and_control_rebaseline`.
 - The current hygiene-only cleanup branch is
   `wip/p69-post-h65-hygiene-only-cleanup`.
 - The current local hygiene and shrink branch is
@@ -30,41 +32,30 @@
   `wip/p72-post-p71-archive-polish-stop-handoff`.
 - The current published clean descendant branch is
   `wip/p75-post-p74-published-successor-freeze`.
-- The current docs router is `docs/README.md`.
-- The current branch/worktree registry is
-  `docs/branch_worktree_registry.md`.
+- The preserved local integration branch is `wip/p56-main-scratch`.
+- The preserved immediate publication lineage is
+  `P74_post_p73_successor_publication_review`,
+  `P75_post_p74_published_successor_freeze`, and
+  `P76_post_p75_release_hygiene_and_control_rebaseline`.
 - The preserved prior published successor stack is
   `P66_post_p65_successor_publication_review`,
   `P67_post_p66_published_successor_freeze`, and
   `P68_post_p67_release_hygiene_and_control_rebaseline`.
-- The preserved prior published clean descendant branch is
-  `wip/p66-post-p65-published-successor-freeze`.
-- The preserved prior successor review branch is
-  `wip/p74-post-p73-successor-publication-review`.
 - The preserved deeper successor stack is
   `P63_post_p62_published_successor_promotion_prep`,
   `P64_post_p63_release_hygiene_rebaseline`, and
   `P65_post_p64_merge_prep_control_sync`.
-- The preserved deeper prior published clean descendant branch is
-  `wip/p63-post-p62-tight-core-hygiene`.
-- The preserved deeper prior successor review branch is
-  `wip/p64-post-p63-successor-stack`.
-- The preserved older published clean descendant branch is
-  `wip/p60-post-p59-published-clean-descendant-prep`.
-- The preserved local integration branch is `wip/p56-main-scratch`.
 - The landed `H64` follow-through foundation is
   `P56_post_h64_clean_merge_candidate_packet`,
   `P57_post_h64_paper_submission_package_sync`,
   `P58_post_h64_archive_release_closeout_sync`, and
   `P59_post_h64_control_and_handoff_sync`.
-- The preserved prior active docs-only packet is
-  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
 - The current dormant future dossier is
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`.
 - `H65` selects
   `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
 - The default downstream scientific lane is
-  `explicit_archive_stop_or_hygiene_only`.
+  `explicit_stop_or_no_further_action_archive_first`.
 - The only conditional later gate remains
   `r63_post_h62_coprocessor_eligibility_profile_gate`.
 
@@ -74,11 +65,9 @@
 - No additional same-lane executor-value probe is admissible on this branch.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
-- The current local published freeze branch is
-  `wip/p75-post-p74-published-successor-freeze`.
-- The current local hygiene-only cleanup branch is
-  `wip/p69-post-h65-hygiene-only-cleanup`.
-- The default next action is explicit stop, no further action, or limited
-  local hygiene/shrink follow-through on
-  `wip/p73-post-p72-hygiene-shrink-mergeprep`, with the preserved archive
-  handoff and review lineage tracked in `docs/branch_worktree_registry.md`.
+- `wip/h27-promotion` remains a blocked dirty quarantine.
+- The balanced mounted keep set is `p75`, `p74`, `p73`, `p72`, `p69`, and
+  `p56`.
+- The default next action is explicit stop, no further action, archive polish,
+  or hygiene-only cleanup, with any future `R63` discussion staying strictly
+  non-runtime.
