@@ -6,6 +6,12 @@ Current locked facts:
   `P80_post_p79_next_planmode_handoff_sync`
 - live branch:
   `wip/p75-post-p74-published-successor-freeze`
+- published branch head:
+  `4363394`
+- release-preflight state:
+  `results/release_preflight_checklist_audit/summary.json = docs_and_audits_green`
+- submission/archive state:
+  `results/P10_submission_archive_ready/summary.json = archive_ready`
 - recommended main route:
   explicit stop
 - fallback:
