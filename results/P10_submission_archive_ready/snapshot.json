@@ -23,22 +23,21 @@
       "path": "README.md",
       "matched_lines": [
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
-        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-        "`P74_post_p73_successor_publication_review`"
+        "`P77_post_p76_keep_set_and_provenance_normalization`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P76_post_p75_release_hygiene_and_control_rebaseline`.",
-        "`explicit_archive_stop_or_hygiene_only`."
+        "`P80_post_p79_next_planmode_handoff_sync`.",
+        "`explicit_stop_or_no_further_action_archive_first`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P76_post_p75_release_hygiene_and_control_rebaseline`",
-        "- `explicit_archive_stop_or_hygiene_only`"
+        "- `P80_post_p79_next_planmode_handoff_sync`",
+        "- `explicit_stop_or_no_further_action_archive_first`"
       ]
     },
     {
@@ -46,28 +45,28 @@
       "matched_lines": [
         "- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`",
         "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P74_post_p73_successor_publication_review/summary.json`"
+        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
         "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "`P56/P57/P58/P59`",
-        "the only remaining future route is a dormant no-go dossier at `F38`"
+        "- preserved `P56/P57/P58/P59` follow-through foundation:",
+        "- the only remaining future route is a dormant no-go dossier at `F38` unless a"
       ]
     },
     {
       "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "`P56/P57/P58/P59`",
-        "dormant non-runtime `F38` dossier"
+        "- preserved `P56/P57/P58/P59` follow-through foundation",
+        "- dormant non-runtime `F38` dossier"
       ]
     },
     {

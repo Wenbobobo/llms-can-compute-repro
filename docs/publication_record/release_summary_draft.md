@@ -4,6 +4,8 @@
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - current archive-facing control stack:
   `P77/P78/P79/P80`
+- preserved archive polish and explicit stop handoff wave:
+  `P72`
 - current archive polish and explicit stop handoff wave:
   `P72_post_p71_archive_polish_and_explicit_stop_handoff`
 - current hygiene-only cleanup stack:
@@ -18,7 +20,10 @@
   `P66/P67/P68`
 - preserved `H64/P56/P57/P58/P59` foundation:
   absorbed and still authoritative
+- preserved `P56/P57/P58/P59` follow-through foundation:
+  still authoritative
 - current dormant future dossier:
   `F38`
+- R63 remains dormant, non-runtime
 - downstream recommendation:
   archive-first terminal freeze, explicit stop, and no further action

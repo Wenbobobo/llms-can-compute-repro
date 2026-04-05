@@ -32,6 +32,10 @@
     "results/P74_post_p73_successor_publication_review/summary.json",
     "results/P75_post_p74_published_successor_freeze/summary.json",
     "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+    "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
+    "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+    "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
+    "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
     "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
     "results/P57_post_h64_paper_submission_package_sync/summary.json",
     "results/P58_post_h64_archive_release_closeout_sync/summary.json",
@@ -42,7 +46,7 @@
     "results/release_preflight_checklist_audit/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h65_p75_successor_stack_with_preserved_p66_p68_h64_h58_h43_endpoints",
+    "current_paper_phase": "h65_p80_archive_facing_stack_with_preserved_p74_p76_h64_h58_h43_endpoints",
     "packet_state": "archive_ready",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
     "git_diff_check_state": "clean",
@@ -50,6 +54,6 @@
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains the current active docs-only packet, P72/P71/P70/P69 remain hygiene-only archive/control sidecars, P56/P57/P58/P59 remain the landed follow-through foundation, P74/P75/P76 remain the current successor review/freeze/rebaseline stack on wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, P63/P64/P65 remain the preserved deeper successor stack, H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains the current active docs-only packet, P77/P78/P79/P80 remain the current archive-facing control stack, P72/P71/P70/P69 remain hygiene-only archive/control sidecars beneath that archive-facing stack, P56/P57/P58/P59 remain the landed follow-through foundation, P74/P75/P76 remain the preserved immediate publication lineage on wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, P63/P64/P65 remain the preserved deeper successor stack, H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
   }
 }

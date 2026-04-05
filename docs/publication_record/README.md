@@ -3,6 +3,9 @@
 This directory stores paper-facing, archive-facing, review-facing, and release
 facing control surfaces.
 
+The active docs-only packet remains
+`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+
 ## Current Start Points
 
 - `../../README.md`

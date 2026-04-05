@@ -23,15 +23,14 @@
       "path": "README.md",
       "matched_lines": [
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
-        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-        "`P74_post_p73_successor_publication_review`"
+        "`P77_post_p76_keep_set_and_provenance_normalization`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P76_post_p75_release_hygiene_and_control_rebaseline`.",
-        "`explicit_archive_stop_or_hygiene_only`."
+        "`P80_post_p79_next_planmode_handoff_sync`.",
+        "`explicit_stop_or_no_further_action_archive_first`."
       ]
     },
     {
@@ -47,46 +46,43 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P76_post_p75_release_hygiene_and_control_rebaseline`",
+        "- `P80_post_p79_next_planmode_handoff_sync`",
         "- `wip/p75-post-p74-published-successor-freeze`",
-        "- `P75` promotes `wip/p75-post-p74-published-successor-freeze` into the live",
-        "current control on `wip/p75-post-p74-published-successor-freeze` while"
+        "produced the live `wip/p75-post-p74-published-successor-freeze` branch."
       ]
     },
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-04-03-post-p76-next-planmode-handoff.md`",
-        "- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`",
-        "- `../../results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `2026-04-05-post-p80-next-planmode-handoff.md`",
+        "- `../milestones/P80_post_p79_next_planmode_handoff_sync/`"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- keep dirty root `main` outside any integration path",
-        "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar."
+        "- keep dirty root `main` outside any integration path"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "- current package must expose `H65/P56/P57/P58/P59/P74/P75/P76/F38`",
-        "- preserved `H64/H58/H43` must remain explicit"
+        "- current package must expose `H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
+        "- preserved `H64/H58/H43`"
       ]
     },
     {
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
-        "| P74 Successor publication review | validated as the current successor publication review wave | `results/P74_post_p73_successor_publication_review/summary.json`, `results/P74_post_p73_successor_publication_review/claim_packet.json` | reviews the exact `p66..p73` delta and confirms that promotion remains limited to docs/export/control/release surfaces |",
-        "| P76 Release hygiene and control rebaseline | validated as the current release hygiene and control rebaseline wave | `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`, `results/P76_post_p75_release_hygiene_and_control_rebaseline/claim_packet.json` | reanchors release hygiene, preflight, archive-ready posture, and current control on the promoted successor branch |"
+        "| P79 Archive claim boundary and reopen screen | validated as the current archive-facing claim-boundary wave | `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json`, `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/claim_packet.json` | packages the strongest honest claim boundary: narrow mechanism support survives while the executor-value lane is closed |",
+        "| P74/P75/P76 Immediate publication lineage | preserved immediate publication lineage | `results/P74_post_p73_successor_publication_review/summary.json`, `results/P75_post_p74_published_successor_freeze/summary.json`, `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json` | produced the live `p75` publication branch and remains the nearest preserved publication stack |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`",
-        "- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`",
+        "- `results/P77_post_p76_keep_set_and_provenance_normalization/summary.json`"
       ]
     },
     {

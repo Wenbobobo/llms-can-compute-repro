@@ -13,5 +13,7 @@
 - preserved `H43_post_r44_useful_case_refreeze`
 - preserved `H58_post_r62_origin_value_boundary_closeout_packet`
 - dormant non-runtime `F38` dossier
+- archive-first terminal freeze
+- strongest justified executor-value lane is closed negative
 - explicit stop
 - no further action

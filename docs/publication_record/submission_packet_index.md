@@ -3,6 +3,9 @@
 This file records the current archive-facing control bundle and the preserved
 paper-facing evidence boundary.
 
+P72/P71/P70/P69 entries below are hygiene-only control sidecars.
+Do not widen the paper-facing evidence bundle.
+
 ## Current Archive-Facing Control Bundle
 
 - current packet does not widen the paper-facing evidence bundle beyond
