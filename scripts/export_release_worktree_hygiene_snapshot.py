@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import subprocess
-from typing import Any
 
 from utils import detect_runtime_environment
 
