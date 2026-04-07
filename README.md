@@ -17,6 +17,8 @@ As of `2026-04-07`, the current active packet remains
 
 Current anchors:
 
+- current paper-spine refresh and salvage shortlist wave:
+  `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
 - current dirty-root inventory and archive-replace map wave:
   `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
 - current merged-main rebaseline and control-resync wave:
@@ -90,7 +92,9 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`P86` packages the dirty-root inventory and archive-replace map from the clean
+`P87` refreshes the paper-facing spine on the clean branch and records a
+salvage shortlist for the highest-value dirty-root publication docs without
+importing the dirty root wholesale. `P86` packages the dirty-root inventory and archive-replace map from the clean
 `p85` branch, keeping `wip/root-main-parking-2026-03-24` quarantine-only while
 classifying root-only paths into duplicate/obsolete, salvage, and archive-only
 buckets. `P85` rebaselines current control onto merged `main` via the clean
@@ -118,8 +122,7 @@ There are no open runtime tasks on this branch.
 Runtime remains closed. Dirty-root integration remains out of bounds. The only
 surviving future discussion is a strictly non-runtime gate, and it is not a
 runtime authorization. Current local follow-through should run only from clean
-descendants recorded in `docs/branch_worktree_registry.md`, with `P86`
-completed and the current engineering route narrowed to docs consolidation,
-selective salvage-only import, paper spine refresh, and only then
-archive-then-replace decisions on `wip/p85-post-p84-main-rebaseline` beyond
-no further action.
+descendants recorded in `docs/branch_worktree_registry.md`, with `P87`
+completed and the current engineering route narrowed to selective salvage
+import, docs consolidation, and only then archive-then-replace decisions on
+`wip/p85-post-p84-main-rebaseline` beyond no further action.

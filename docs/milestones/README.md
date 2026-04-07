@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
+  current paper-spine refresh and salvage shortlist wave
 - `P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
   current dirty-root inventory and archive-replace map wave
 - `P85_post_p84_main_rebaseline_and_control_resync/`
@@ -91,6 +93,7 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P87` as the current paper-spine refresh and salvage shortlist wave;
 - treat `P86` as the current dirty-root inventory and archive-replace map
   wave;
 - treat `P85` as the current merged-main rebaseline and control-resync wave;

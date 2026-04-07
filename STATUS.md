@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current paper-spine refresh and salvage shortlist wave is
+  `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`.
 - The current dirty-root inventory and archive-replace map wave is
   `P86_post_p85_dirty_root_inventory_and_archive_replace_map`.
 - The current merged-main rebaseline and control-resync wave is
@@ -90,6 +92,8 @@
 - `wip/h27-promotion` remains a blocked dirty quarantine.
 - The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
   `p74`, `p73`, `p72`, `p69`, and `p56`.
-- The default next action is docs consolidation, selective salvage-only
-  import, paper spine refresh, archive-then-replace closeout, or no further
-  action, with any future `R63` staying strictly non-runtime.
+- The default next action is selective salvage-only import, docs
+  consolidation, archive-then-replace closeout, or no further action, with
+  any future `R63` staying strictly non-runtime.
+- The current docs-only follow-through is paper spine refresh plus salvage
+  shortlist alignment on the clean branch.

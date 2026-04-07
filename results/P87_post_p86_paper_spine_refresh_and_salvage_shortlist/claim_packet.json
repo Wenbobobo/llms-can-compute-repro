@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P87 refreshes the paper-facing spine to the current H65 + P86 + P85 closeout posture.",
+      "P87 records a clean-branch salvage shortlist for high-value dirty-root publication docs.",
+      "P87 narrows the next route to selective salvage import, docs consolidation, and archive-then-replace closeout."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_paper_wave": "p87_post_p86_paper_spine_refresh_and_salvage_shortlist",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "15f3dfc",
+      "merged_main_head": "b82b566",
+      "origin_main_to_p87_left_right": "0/3",
+      "selected_outcome": "paper_spine_refreshed_and_salvage_shortlist_synced_after_p86",
+      "next_recommended_route": "selective_salvage_import_docs_consolidation_and_archive_replace_closeout"
+    }
+  }
+}

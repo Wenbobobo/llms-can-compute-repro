@@ -14,13 +14,20 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
+- `../plans/2026-04-07-post-p87-next-planmode-handoff.md`
+  current shortest handoff from the post-`P87` paper-spine refresh state
+  into the next planning round
+- `../plans/2026-04-07-post-p87-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-04-07-post-p87-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-07-post-p86-next-planmode-handoff.md`
-  current shortest handoff from the post-`P86` dirty-root inventory state
+  preserved shortest handoff from the post-`P86` dirty-root inventory state
   into the next planning round
 - `../plans/2026-04-07-post-p86-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt from the post-`P86` inventory state
 - `../plans/2026-04-07-post-p86-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt from the post-`P86` inventory state
 - `../plans/2026-04-07-post-p85-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P85` merged-main rebaseline state
   into the next planning round
@@ -46,6 +53,8 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current paper-spine refresh and salvage shortlist wave:
+  `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
 - current dirty-root inventory and archive-replace map wave:
   `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
 - current merged-main rebaseline and control-resync wave:
@@ -91,5 +100,7 @@ The active docs-only packet remains
 - preserved historical package:
   `submission_packet_index.md`, `experiment_manifest.md`,
   `release_summary_draft.md`, `paper_bundle_status.md`
+- current selective salvage reference:
+  `root_salvage_shortlist.md`
 - dormant future:
   `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`

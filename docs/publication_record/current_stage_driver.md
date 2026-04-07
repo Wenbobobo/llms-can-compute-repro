@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current paper-spine refresh and salvage shortlist wave is:
+
+- `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
+
 The current dirty-root inventory and archive-replace map wave is:
 
 - `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
@@ -24,6 +28,7 @@ The current promotion branch and PR handoff wave is:
 
 The current live convergence and handoff stack is:
 
+- `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
 - `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
 - `P85_post_p84_main_rebaseline_and_control_resync`
 - `P84_post_p83_keep_set_contraction_and_closeout`
@@ -86,6 +91,10 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `P87` refreshes the paper-facing spine on the clean branch, aligns the
+  release summary and paper bundle status to the live `H65 + P86 + P85`
+  posture, and records the current salvage shortlist for dirty-root
+  publication docs.
 - `P86` inventories the dirty root as a quarantine-only external source,
   classifies parked root paths into duplicate/obsolete, salvage-candidate, and
   archive-only buckets, and narrows follow-through to docs consolidation,
@@ -140,6 +149,6 @@ The default downstream lane is:
   later `R63` discussion must stay strictly non-runtime.
 - `H65` remains the current active docs-only packet and still selects
   `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
-- docs consolidation, selective salvage-only import, paper spine refresh, and
-  later archive-then-replace closeout are now the recommended downstream route
-  ahead of no further action.
+- selective salvage-only import, docs consolidation, and later
+  archive-then-replace closeout are now the recommended downstream route ahead
+  of no further action.

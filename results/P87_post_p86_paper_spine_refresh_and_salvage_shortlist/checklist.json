@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p87_reads_green_p86_summary",
+      "status": "pass",
+      "notes": "P87 begins only after the landed green P86 dirty-root inventory."
+    },
+    {
+      "item_id": "p87_runs_on_clean_p85_branch",
+      "status": "pass",
+      "notes": "Paper-spine refresh must run from the clean p85 branch."
+    },
+    {
+      "item_id": "p87_live_docs_shift_current_control_to_paper_refresh_wave",
+      "status": "pass",
+      "notes": "Routers and publication docs should make P87 the current paper-facing refresh wave."
+    }
+  ]
+}
