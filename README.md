@@ -17,8 +17,10 @@ As of `2026-04-07`, the current active packet remains
 
 Current anchors:
 
-- current locked-fact and route sync wave:
-  `P81_post_p80_locked_fact_rebaseline_and_route_sync`
+- current keep-set contraction and closeout wave:
+  `P84_post_p83_keep_set_contraction_and_closeout`
+- current promotion branch and PR handoff wave:
+  `P83_post_p82_promotion_branch_and_pr_handoff`
 - current keep-set and provenance normalization wave:
   `P77_post_p76_keep_set_and_provenance_normalization`
 - current legacy worktree convergence and quarantine sync wave:
@@ -45,10 +47,13 @@ Current anchors:
   `wip/p74-post-p73-successor-publication-review`
 - current archive polish and explicit stop handoff branch:
   `wip/p72-post-p71-archive-polish-stop-handoff`
-- current promotion-prep execution branch:
-  `wip/p81-post-p80-clean-descendant-promotion-prep`
+- current promotion-ready branch:
+  `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - current published clean descendant branch:
   `wip/p75-post-p74-published-successor-freeze`
+- preserved locked-fact and clean-main probe lineage:
+  `P81_post_p80_locked_fact_rebaseline_and_route_sync`,
+  `P82_post_p81_clean_main_promotion_probe`
 - preserved local integration branch:
   `wip/p56-main-scratch`
 - preserved immediate publication lineage:
@@ -79,9 +84,13 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`P81` rebaselines the locked facts after `P80`, records the published `p75`
-head at `53962ca`, and keeps the route at explicit stop plus clean-descendant
-promotion-prep only. `P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
+`P84` contracts the mounted keep set to the promotion-ready `p83` branch plus
+the preserved operational branches `p75`, `p74`, `p73`, `p72`, `p69`, and
+`p56`, while unmounting the temporary `p81` and `p82` worktrees. `P83`
+materializes the clean promotion branch and PR handoff after the successful
+`P82` probe. `P81` rebaselines the locked facts after `P80`, records the
+published `p75` head at `53962ca`, and keeps the route at explicit stop plus
+clean-descendant promotion-prep only. `P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
 `p69`, and `p56`, with remote provenance explicitly preserved. `P78`
 converges mounted worktrees to that balanced mounted keep set and keeps only
 the dirty root checkout plus `wip/h27-promotion` as quarantined survivors.
@@ -97,4 +106,6 @@ There are no open runtime tasks on this branch.
 Runtime remains closed. Dirty-root integration remains out of bounds. The only
 surviving future discussion is a strictly non-runtime gate, and it is not a
 runtime authorization. Current local follow-through should run only from clean
-descendants recorded in `docs/branch_worktree_registry.md`.
+descendants recorded in `docs/branch_worktree_registry.md`, with promotion/PR
+finalization from `wip/p83-post-p82-promotion-branch-and-pr-handoff` as the
+only active engineering route beyond no further action.

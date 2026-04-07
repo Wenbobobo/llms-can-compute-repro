@@ -5,8 +5,14 @@ decision points.
 
 ## Current Live Stack
 
+- `P84_post_p83_keep_set_contraction_and_closeout/`
+  current keep-set contraction and closeout wave
+- `P83_post_p82_promotion_branch_and_pr_handoff/`
+  current promotion branch and PR handoff wave
 - `P81_post_p80_locked_fact_rebaseline_and_route_sync/`
-  current locked-fact and route-sync wave
+  preserved locked-fact and route-sync wave
+- `P82_post_p81_clean_main_promotion_probe/`
+  preserved clean-main promotion probe wave
 - `P77_post_p76_keep_set_and_provenance_normalization/`
   current keep-set and provenance normalization wave
 - `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/`
@@ -53,6 +59,13 @@ decision points.
 - `P66_post_p65_successor_publication_review/`
   preserved prior successor publication review wave
 
+## Preserved Immediate Promotion-Prep Lineage
+
+- `P81_post_p80_locked_fact_rebaseline_and_route_sync/`
+  preserved locked-fact rebaseline and route-sync wave immediately below `P83`
+- `P82_post_p81_clean_main_promotion_probe/`
+  preserved clean-main probe that opened the clean promotion route for `P83`
+
 ## Deeper Preserved History
 
 - `P65_post_p64_merge_prep_control_sync/`
@@ -74,10 +87,13 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
-- treat `P81` as the current locked-fact and promotion-prep wave above the
+- treat `P84` as the current keep-set contraction and closeout wave;
+- treat `P83` as the current promotion-ready branch handoff wave above the
   published `p75` branch;
+- treat `P81/P82` as preserved immediate promotion-prep lineage, not current
+  live control;
 - treat `P77/P78/P79/P80` as the current archive-first convergence and handoff
-  stack underneath `P81`;
+  stack underneath `P84/P83`;
 - treat `P73` as the current local hygiene and shrink wave above `P72`;
 - treat `P72` as the current archive polish and explicit stop handoff wave
   above `H65`;

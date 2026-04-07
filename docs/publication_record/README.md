@@ -14,12 +14,12 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
-- `../plans/2026-04-05-post-p80-next-planmode-handoff.md`
-  current shortest handoff from the post-`P80` convergence state into the next
+- `../plans/2026-04-07-post-p84-next-planmode-handoff.md`
+  current shortest handoff from the post-`P84` promotion-prep closeout state into the next
   planning round
-- `../plans/2026-04-05-post-p80-next-planmode-startup-prompt.md`
+- `../plans/2026-04-07-post-p84-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-05-post-p80-next-planmode-brief-prompt.md`
+- `../plans/2026-04-07-post-p84-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-07-post-p80-clean-descendant-promotion-prep-design.md`
   current design for the post-`P80` locked-fact, promotion-probe, and
@@ -33,8 +33,10 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
-- current locked-fact and route sync wave:
-  `../milestones/P81_post_p80_locked_fact_rebaseline_and_route_sync/`
+- current keep-set contraction and closeout wave:
+  `../milestones/P84_post_p83_keep_set_contraction_and_closeout/`
+- current promotion branch and PR handoff wave:
+  `../milestones/P83_post_p82_promotion_branch_and_pr_handoff/`
 - current archive-facing convergence stack:
   `../milestones/P77_post_p76_keep_set_and_provenance_normalization/`,
   `../milestones/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/`,
@@ -52,8 +54,11 @@ The active docs-only packet remains
   `../milestones/P74_post_p73_successor_publication_review/`,
   `../milestones/P75_post_p74_published_successor_freeze/`,
   `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
-- current promotion-prep execution branch:
-  `wip/p81-post-p80-clean-descendant-promotion-prep`
+- current promotion-ready branch:
+  `wip/p83-post-p82-promotion-branch-and-pr-handoff`
+- preserved locked-fact and clean-main probe lineage:
+  `../milestones/P81_post_p80_locked_fact_rebaseline_and_route_sync/`,
+  `../milestones/P82_post_p81_clean_main_promotion_probe/`
 - preserved prior published successor stack:
   `../milestones/P66_post_p65_successor_publication_review/`,
   `../milestones/P67_post_p66_published_successor_freeze/`,

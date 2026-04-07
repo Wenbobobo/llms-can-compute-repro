@@ -2,13 +2,13 @@
 
 This file records the balanced mounted keep set, quarantine posture, preserved
 lineage refs, and cleanup priorities for the clean-descendant-only repo state
-after the `H65` terminal freeze.
+after the `P84` keep-set closeout above the `H65` terminal freeze.
 
 ## Balanced Mounted Keep Set
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
-| current locked-fact and promotion-prep execution branch | `wip/p81-post-p80-clean-descendant-promotion-prep` | `D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep` | current clean execution branch for locked-fact rebaseline and promotion-prep | keep mounted during `P81/P82/P83/P84`; do not treat as the published branch |
+| current promotion-ready execution branch | `wip/p83-post-p82-promotion-branch-and-pr-handoff` | `D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff` | current clean promotion-ready branch after the `P82` probe and `P83` handoff | keep mounted during `P84` and any follow-on promotion/PR finalization; do not treat as the published branch |
 | current published clean descendant | `wip/p75-post-p74-published-successor-freeze` | `D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze` | live clean publication/control branch | keep mounted and tracked; use as the active clean descendant |
 | current successor publication review branch | `wip/p74-post-p73-successor-publication-review` | `D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review` | current review/provenance lane preserved beside the published branch | keep mounted; do not treat as the published branch |
 | current local hygiene and shrink branch | `wip/p73-post-p72-hygiene-shrink-mergeprep` | `D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep` | current local cleanup, shrink, and dossier-prep lane | keep mounted; local follow-through only |
@@ -23,6 +23,8 @@ after the `H65` terminal freeze.
 | Role | Branch | Last known path | Policy |
 | --- | --- | --- | --- |
 | preserved prior published clean descendant | `wip/p66-post-p65-published-successor-freeze` | `D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze` | preserve branch ref and provenance; unmounted is acceptable after convergence |
+| preserved locked-fact rebaseline lineage | `wip/p81-post-p80-clean-descendant-promotion-prep` | `D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep` | preserve branch ref and immediate promotion-prep provenance; remain unmounted after `P84` |
+| preserved clean-main probe lineage | `wip/p82-post-p81-clean-main-promotion-probe` | `D:/zWenbo/AI/wt/p82-post-p81-clean-main-promotion-probe` | preserve branch ref and clean-main probe provenance; remain unmounted after `P84` |
 | preserved deeper prior successor review branch | `wip/p64-post-p63-successor-stack` | `D:/zWenbo/AI/wt/p64-post-p63-successor-stack` | preserve branch ref as deeper review lineage; unmounted is acceptable after convergence |
 | preserved deeper prior published clean descendant | `wip/p63-post-p62-tight-core-hygiene` | `D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene` | preserve branch ref as deeper publication lineage; unmounted is acceptable after convergence |
 | preserved older published clean descendant | `wip/p60-post-p59-published-clean-descendant-prep` | `D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep` | preserve branch ref only; historical lineage |
@@ -30,8 +32,10 @@ after the `H65` terminal freeze.
 
 ## Cleanup Status
 
-- the active mounted keep set for the current phase is `p81`, `p75`, `p74`,
+- the active mounted keep set for the current phase is `p83`, `p75`, `p74`,
   `p73`, `p72`, `p69`, and `p56`
+- the temporary `p81` and `p82` worktrees were intentionally removed in `P84`
+  and now survive only as preserved unmounted lineage
 - only the dirty root checkout and `wip/h27-promotion` should remain dirty and
   mounted after convergence
 - clean historical mounts targeted for removal are:
@@ -51,10 +55,13 @@ after the `H65` terminal freeze.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
-- `wip/p81-post-p80-clean-descendant-promotion-prep` is the current execution
-  branch for locked-fact rebaseline and promotion-prep only
+- `wip/p83-post-p82-promotion-branch-and-pr-handoff` is the current
+  promotion-ready branch for clean-descendant promotion/PR finalization only
 - `wip/p75-post-p74-published-successor-freeze` is the live published clean
   source for current control wording
+- `wip/p81-post-p80-clean-descendant-promotion-prep` and
+  `wip/p82-post-p81-clean-main-promotion-probe` remain preserved immediate
+  promotion-prep lineage, expected unmounted after `P84`
 - `wip/p74-post-p73-successor-publication-review` remains the current review
   and provenance lane
 - `wip/p73-post-p72-hygiene-shrink-mergeprep` remains the current local
@@ -65,7 +72,7 @@ after the `H65` terminal freeze.
   cleanup lane
 - `wip/p56-main-scratch...wip/p75-post-p74-published-successor-freeze`
   remains the current clean-descendant-only promotion lineage fact
-- `origin/main...wip/p81-post-p80-clean-descendant-promotion-prep` keeps
+- `origin/main...wip/p83-post-p82-promotion-branch-and-pr-handoff` keeps
   dirty-root integration out of bounds
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only

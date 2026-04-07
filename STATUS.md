@@ -4,8 +4,10 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
-- The current locked-fact and route sync wave is
-  `P81_post_p80_locked_fact_rebaseline_and_route_sync`.
+- The current keep-set contraction and closeout wave is
+  `P84_post_p83_keep_set_contraction_and_closeout`.
+- The current promotion branch and PR handoff wave is
+  `P83_post_p82_promotion_branch_and_pr_handoff`.
 - The current keep-set and provenance normalization wave is
   `P77_post_p76_keep_set_and_provenance_normalization`.
 - The current legacy worktree convergence and quarantine sync wave is
@@ -32,10 +34,13 @@
   `wip/p74-post-p73-successor-publication-review`.
 - The current archive polish and explicit stop handoff branch is
   `wip/p72-post-p71-archive-polish-stop-handoff`.
-- The current promotion-prep execution branch is
-  `wip/p81-post-p80-clean-descendant-promotion-prep`.
+- The current promotion-ready branch is
+  `wip/p83-post-p82-promotion-branch-and-pr-handoff`.
 - The current published clean descendant branch is
   `wip/p75-post-p74-published-successor-freeze`.
+- The preserved locked-fact and clean-main probe lineage is
+  `P81_post_p80_locked_fact_rebaseline_and_route_sync` and
+  `P82_post_p81_clean_main_promotion_probe`.
 - The preserved local integration branch is `wip/p56-main-scratch`.
 - The preserved immediate publication lineage is
   `P74_post_p73_successor_publication_review`,
@@ -73,8 +78,9 @@
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
-- The active mounted keep set for the current phase is `p81`, `p75`, `p74`,
+- The active mounted keep set for the current phase is `p83`, `p75`, `p74`,
   `p73`, `p72`, `p69`, and `p56`.
 - The default next action is explicit stop, no further action, archive polish,
-  or hygiene-only cleanup, with any future `R63` discussion staying strictly
+  or hygiene-only cleanup, with promotion/PR finalization from `p83` as the
+  only active engineering route and any future `R63` staying strictly
   non-runtime.
