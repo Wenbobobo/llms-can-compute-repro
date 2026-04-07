@@ -144,7 +144,7 @@ def git_output(args: list[str], cwd: Path | None = None) -> str:
         text=True,
         encoding="utf-8",
     )
-    return result.stdout.strip()
+    return result.stdout.rstrip("\r\n")
 
 
 def normalize(text: str) -> str:

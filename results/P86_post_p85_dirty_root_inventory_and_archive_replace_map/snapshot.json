@@ -4,8 +4,8 @@
       "field": "dirty_status_rows",
       "value": [
         {
-          "status": "M ",
-          "path": "EADME.md"
+          "status": " M",
+          "path": "README.md"
         },
         {
           "status": " M",
@@ -529,11 +529,11 @@
       "field": "inventory_rows",
       "value": [
         {
-          "status": "M ",
-          "path": "EADME.md",
+          "status": " M",
+          "path": "README.md",
           "classification": "duplicate_or_obsolete",
           "merge_policy": "do_not_merge_blindly",
-          "risky": false
+          "risky": true
         },
         {
           "status": " M",
@@ -1451,6 +1451,7 @@
     {
       "field": "risky_paths",
       "value": [
+        "README.md",
         "STATUS.md",
         "docs/milestones/README.md",
         "docs/plans/README.md",

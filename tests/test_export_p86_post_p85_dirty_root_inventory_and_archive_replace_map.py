@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 
@@ -27,6 +28,22 @@ def _load_module():
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
+
+
+def test_export_p86_git_output_preserves_porcelain_leading_space(monkeypatch) -> None:
+    module = _load_module()
+
+    class _Completed:
+        def __init__(self, stdout: str) -> None:
+            self.stdout = stdout
+
+    def _fake_run(*args, **kwargs):
+        return _Completed(" M README.md\n")
+
+    monkeypatch.setattr(subprocess, "run", _fake_run)
+
+    raw = module.git_output(["status", "--porcelain=v1"], Path("D:/fake/root"))
+    assert raw == " M README.md"
 
 
 def test_export_p86_writes_dirty_root_inventory_summary(tmp_path: Path, monkeypatch) -> None:
