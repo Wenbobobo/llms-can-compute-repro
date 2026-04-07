@@ -14,7 +14,7 @@
     "distilled_result": {
       "current_closeout_wave": "p84_post_p83_keep_set_contraction_and_closeout",
       "promotion_branch": "wip/p83-post-p82-promotion-branch-and-pr-handoff",
-      "promotion_branch_head": "6f68178",
+      "promotion_branch_head": "ba23f00",
       "published_branch": "wip/p75-post-p74-published-successor-freeze",
       "published_branch_head": "53962ca",
       "mounted_keep_paths": [
