@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current locked-fact and route sync wave is
+  `P81_post_p80_locked_fact_rebaseline_and_route_sync`.
 - The current keep-set and provenance normalization wave is
   `P77_post_p76_keep_set_and_provenance_normalization`.
 - The current legacy worktree convergence and quarantine sync wave is
@@ -30,6 +32,8 @@
   `wip/p74-post-p73-successor-publication-review`.
 - The current archive polish and explicit stop handoff branch is
   `wip/p72-post-p71-archive-polish-stop-handoff`.
+- The current promotion-prep execution branch is
+  `wip/p81-post-p80-clean-descendant-promotion-prep`.
 - The current published clean descendant branch is
   `wip/p75-post-p74-published-successor-freeze`.
 - The preserved local integration branch is `wip/p56-main-scratch`.
@@ -58,6 +62,9 @@
   `explicit_stop_or_no_further_action_archive_first`.
 - The only conditional later gate remains
   `r63_post_h62_coprocessor_eligibility_profile_gate`.
+- The current published branch head recorded by the locked facts is `53962ca`.
+- `release_preflight_checklist_audit` remains `docs_and_audits_green`.
+- `P10_submission_archive_ready` remains `archive_ready`.
 
 ## Execution Posture
 
@@ -66,8 +73,8 @@
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
-- The balanced mounted keep set is `p75`, `p74`, `p73`, `p72`, `p69`, and
-  `p56`.
+- The active mounted keep set for the current phase is `p81`, `p75`, `p74`,
+  `p73`, `p72`, `p69`, and `p56`.
 - The default next action is explicit stop, no further action, archive polish,
   or hygiene-only cleanup, with any future `R63` discussion staying strictly
   non-runtime.

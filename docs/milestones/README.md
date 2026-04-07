@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P81_post_p80_locked_fact_rebaseline_and_route_sync/`
+  current locked-fact and route-sync wave
 - `P77_post_p76_keep_set_and_provenance_normalization/`
   current keep-set and provenance normalization wave
 - `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/`
@@ -72,8 +74,10 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P81` as the current locked-fact and promotion-prep wave above the
+  published `p75` branch;
 - treat `P77/P78/P79/P80` as the current archive-first convergence and handoff
-  stack;
+  stack underneath `P81`;
 - treat `P73` as the current local hygiene and shrink wave above `P72`;
 - treat `P72` as the current archive polish and explicit stop handoff wave
   above `H65`;

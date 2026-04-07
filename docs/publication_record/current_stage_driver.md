@@ -6,12 +6,21 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current locked-fact and route-sync wave is:
+
+- `P81_post_p80_locked_fact_rebaseline_and_route_sync`
+
 The current live convergence and handoff stack is:
 
+- `P81_post_p80_locked_fact_rebaseline_and_route_sync`
 - `P77_post_p76_keep_set_and_provenance_normalization`
 - `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`
 - `P79_post_p78_archive_claim_boundary_and_reopen_screen`
 - `P80_post_p79_next_planmode_handoff_sync`
+
+The current promotion-prep execution branch is:
+
+- `wip/p81-post-p80-clean-descendant-promotion-prep`
 
 The current local execution-side control stack is:
 
@@ -23,6 +32,7 @@ The current local execution-side control stack is:
 
 The current mounted keep branches are:
 
+- `wip/p81-post-p80-clean-descendant-promotion-prep`
 - `wip/p75-post-p74-published-successor-freeze`
 - `wip/p74-post-p73-successor-publication-review`
 - `wip/p73-post-p72-hygiene-shrink-mergeprep`
@@ -60,6 +70,10 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `P81` rebaselines the locked facts to the published `p75` head `53962ca`,
+  keeps `release_preflight` at `docs_and_audits_green`, keeps `P10` at
+  `archive_ready`, and opens clean-descendant promotion-prep without reopening
+  runtime.
 - `P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
   `p69`, and `p56`, and requires explicit upstream provenance.
 - `P78` converges mounted worktrees to that balanced set and preserves only the
@@ -74,6 +88,8 @@ The default downstream lane is:
   produced the live `wip/p75-post-p74-published-successor-freeze` branch.
 - `wip/p74-post-p73-successor-publication-review` remains the current review
   branch.
+- `wip/p81-post-p80-clean-descendant-promotion-prep` remains the current
+  promotion-prep execution branch above the published `p75` branch.
 - `wip/p64-post-p63-successor-stack` remains the preserved deeper review
   lineage, not a live control branch.
 - `wip/p73-post-p72-hygiene-shrink-mergeprep` remains the current local hygiene

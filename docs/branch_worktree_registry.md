@@ -8,6 +8,7 @@ after the `H65` terminal freeze.
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
+| current locked-fact and promotion-prep execution branch | `wip/p81-post-p80-clean-descendant-promotion-prep` | `D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep` | current clean execution branch for locked-fact rebaseline and promotion-prep | keep mounted during `P81/P82/P83/P84`; do not treat as the published branch |
 | current published clean descendant | `wip/p75-post-p74-published-successor-freeze` | `D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze` | live clean publication/control branch | keep mounted and tracked; use as the active clean descendant |
 | current successor publication review branch | `wip/p74-post-p73-successor-publication-review` | `D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review` | current review/provenance lane preserved beside the published branch | keep mounted; do not treat as the published branch |
 | current local hygiene and shrink branch | `wip/p73-post-p72-hygiene-shrink-mergeprep` | `D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep` | current local cleanup, shrink, and dossier-prep lane | keep mounted; local follow-through only |
@@ -29,8 +30,8 @@ after the `H65` terminal freeze.
 
 ## Cleanup Status
 
-- the balanced mounted keep set is `p75`, `p74`, `p73`, `p72`, `p69`, and
-  `p56`
+- the active mounted keep set for the current phase is `p81`, `p75`, `p74`,
+  `p73`, `p72`, `p69`, and `p56`
 - only the dirty root checkout and `wip/h27-promotion` should remain dirty and
   mounted after convergence
 - clean historical mounts targeted for removal are:
@@ -50,6 +51,8 @@ after the `H65` terminal freeze.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
+- `wip/p81-post-p80-clean-descendant-promotion-prep` is the current execution
+  branch for locked-fact rebaseline and promotion-prep only
 - `wip/p75-post-p74-published-successor-freeze` is the live published clean
   source for current control wording
 - `wip/p74-post-p73-successor-publication-review` remains the current review
@@ -62,7 +65,7 @@ after the `H65` terminal freeze.
   cleanup lane
 - `wip/p56-main-scratch...wip/p75-post-p74-published-successor-freeze`
   remains the current clean-descendant-only promotion lineage fact
-- `origin/main...wip/p75-post-p74-published-successor-freeze` keeps
+- `origin/main...wip/p81-post-p80-clean-descendant-promotion-prep` keeps
   dirty-root integration out of bounds
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only

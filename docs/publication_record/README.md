@@ -21,8 +21,9 @@ The active docs-only packet remains
   current ready-to-paste startup prompt for the next `plan mode` round
 - `../plans/2026-04-05-post-p80-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
-- `../plans/2026-04-05-post-p76-hygiene-first-convergence-design.md`
-  current design for the convergence, claim-boundary, and handoff phase
+- `../plans/2026-04-07-post-p80-clean-descendant-promotion-prep-design.md`
+  current design for the post-`P80` locked-fact, promotion-probe, and
+  promotion-prep phase
 - `current_stage_driver.md`
   canonical live control summary
 - `partial_falsification_boundary.md`
@@ -32,6 +33,8 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current locked-fact and route sync wave:
+  `../milestones/P81_post_p80_locked_fact_rebaseline_and_route_sync/`
 - current archive-facing convergence stack:
   `../milestones/P77_post_p76_keep_set_and_provenance_normalization/`,
   `../milestones/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/`,
@@ -49,6 +52,8 @@ The active docs-only packet remains
   `../milestones/P74_post_p73_successor_publication_review/`,
   `../milestones/P75_post_p74_published_successor_freeze/`,
   `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
+- current promotion-prep execution branch:
+  `wip/p81-post-p80-clean-descendant-promotion-prep`
 - preserved prior published successor stack:
   `../milestones/P66_post_p65_successor_publication_review/`,
   `../milestones/P67_post_p66_published_successor_freeze/`,

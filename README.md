@@ -12,11 +12,13 @@ For live routing and preserved-history navigation, start at `docs/README.md`.
 
 ## Current Stage
 
-As of `2026-04-05`, the current active packet remains
+As of `2026-04-07`, the current active packet remains
 `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
 
 Current anchors:
 
+- current locked-fact and route sync wave:
+  `P81_post_p80_locked_fact_rebaseline_and_route_sync`
 - current keep-set and provenance normalization wave:
   `P77_post_p76_keep_set_and_provenance_normalization`
 - current legacy worktree convergence and quarantine sync wave:
@@ -43,6 +45,8 @@ Current anchors:
   `wip/p74-post-p73-successor-publication-review`
 - current archive polish and explicit stop handoff branch:
   `wip/p72-post-p71-archive-polish-stop-handoff`
+- current promotion-prep execution branch:
+  `wip/p81-post-p80-clean-descendant-promotion-prep`
 - current published clean descendant branch:
   `wip/p75-post-p74-published-successor-freeze`
 - preserved local integration branch:
@@ -75,7 +79,9 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
+`P81` rebaselines the locked facts after `P80`, records the published `p75`
+head at `53962ca`, and keeps the route at explicit stop plus clean-descendant
+promotion-prep only. `P77` normalizes the active keep set around `p75`, `p74`, `p73`, `p72`,
 `p69`, and `p56`, with remote provenance explicitly preserved. `P78`
 converges mounted worktrees to that balanced mounted keep set and keeps only
 the dirty root checkout plus `wip/h27-promotion` as quarantined survivors.

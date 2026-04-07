@@ -9,7 +9,7 @@ Current locked facts:
 - live branch:
   `wip/p75-post-p74-published-successor-freeze`
 - published branch head:
-  `4363394`
+  `53962ca`
 - release-preflight state:
   `results/release_preflight_checklist_audit/summary.json = docs_and_audits_green`
 - submission/archive state:
