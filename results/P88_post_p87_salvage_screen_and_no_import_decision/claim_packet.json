@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P88 screens the first-tier salvage shortlist and decides no immediate imports for the four highest-value candidates.",
+      "P88 narrows the next clean-branch route toward docs consolidation and archive-then-replace closeout.",
+      "P88 keeps dirty root quarantine-only and treats selective salvage as optional rather than mandatory."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_salvage_wave": "p88_post_p87_salvage_screen_and_no_import_decision",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "f33e101",
+      "merged_main_head": "b82b566",
+      "origin_main_to_p88_left_right": "0/4",
+      "selected_outcome": "salvage_screen_completed_with_no_import_for_first_tier_docs",
+      "next_recommended_route": "docs_consolidation_and_archive_replace_closeout"
+    }
+  }
+}

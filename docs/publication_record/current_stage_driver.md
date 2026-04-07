@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current salvage-screen and no-import decision wave is:
+
+- `P88_post_p87_salvage_screen_and_no_import_decision`
+
 The current paper-spine refresh and salvage shortlist wave is:
 
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
@@ -28,6 +32,7 @@ The current promotion branch and PR handoff wave is:
 
 The current live convergence and handoff stack is:
 
+- `P88_post_p87_salvage_screen_and_no_import_decision`
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
 - `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
 - `P85_post_p84_main_rebaseline_and_control_resync`
@@ -91,6 +96,10 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `P88` screens the first-tier selective-salvage candidates and lands a
+  no-import decision for the four highest-value remaining publication docs,
+  because the dirty-root versions are stale or not materially better than the
+  clean-branch versions.
 - `P87` refreshes the paper-facing spine on the clean branch, aligns the
   release summary and paper bundle status to the live `H65 + P86 + P85`
   posture, and records the current salvage shortlist for dirty-root
@@ -149,6 +158,6 @@ The default downstream lane is:
   later `R63` discussion must stay strictly non-runtime.
 - `H65` remains the current active docs-only packet and still selects
   `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
-- selective salvage-only import, docs consolidation, and later
-  archive-then-replace closeout are now the recommended downstream route ahead
-  of no further action.
+- docs consolidation and later archive-then-replace closeout are now the
+  recommended downstream route ahead of no further action, unless a later
+  file-specific salvage case appears.

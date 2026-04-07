@@ -14,13 +14,20 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
+- `../plans/2026-04-07-post-p88-next-planmode-handoff.md`
+  current shortest handoff from the post-`P88` no-import decision state into
+  the next planning round
+- `../plans/2026-04-07-post-p88-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-04-07-post-p88-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-07-post-p87-next-planmode-handoff.md`
-  current shortest handoff from the post-`P87` paper-spine refresh state
+  preserved shortest handoff from the post-`P87` paper-spine refresh state
   into the next planning round
 - `../plans/2026-04-07-post-p87-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt from the post-`P87` paper-spine refresh state
 - `../plans/2026-04-07-post-p87-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt from the post-`P87` paper-spine refresh state
 - `../plans/2026-04-07-post-p86-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P86` dirty-root inventory state
   into the next planning round
@@ -53,6 +60,8 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current salvage-screen and no-import decision wave:
+  `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
 - current paper-spine refresh and salvage shortlist wave:
   `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
 - current dirty-root inventory and archive-replace map wave:
@@ -96,7 +105,8 @@ The active docs-only packet remains
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`
 - current archive-facing control surfaces:
   `partial_falsification_boundary.md`, `future_reopen_screen.md`,
-  `review_boundary_summary.md`, `archival_repro_manifest.md`
+  `review_boundary_summary.md`, `threats_to_validity.md`,
+  `archival_repro_manifest.md`
 - preserved historical package:
   `submission_packet_index.md`, `experiment_manifest.md`,
   `release_summary_draft.md`, `paper_bundle_status.md`

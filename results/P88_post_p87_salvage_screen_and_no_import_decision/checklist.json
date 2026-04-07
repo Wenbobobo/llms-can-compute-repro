@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p88_reads_green_p87_summary",
+      "status": "pass",
+      "notes": "P88 begins only after the landed green P87 paper-spine refresh."
+    },
+    {
+      "item_id": "p88_runs_on_clean_p85_branch",
+      "status": "pass",
+      "notes": "The no-import decision packet must run from the clean p85 branch."
+    },
+    {
+      "item_id": "p88_live_docs_shift_current_control_to_no_import_wave",
+      "status": "pass",
+      "notes": "Routers and salvage docs should make P88 the current no-import decision wave."
+    }
+  ]
+}

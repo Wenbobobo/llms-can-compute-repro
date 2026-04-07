@@ -4,26 +4,28 @@ This file translates `P86`'s root inventory into a narrow clean-branch import
 plan. The dirty root remains quarantine-only. Nothing listed here should be
 merged blindly.
 
-## Salvage Now
+## Already Refreshed On Clean Branch
 
 - `docs/publication_record/paper_bundle_status.md`
-  dirty-root wording had a fuller paper-facing summary than the clean branch;
-  `P87` refreshed the clean version and this file remains a reference point.
 - `docs/publication_record/release_summary_draft.md`
-  dirty-root wording contained a stronger narrow-target summary; `P87`
-  refreshed the clean version accordingly.
+
+These were the highest-value wording candidates and were already refreshed on
+the clean branch during `P87`.
+
+## Screened And No Import Now
+
 - `docs/publication_record/claim_evidence_table.md`
-  likely still contains useful evidence indexing that may need a careful
-  terminal-freeze refresh rather than a rewrite from scratch.
+  dirty-root version is older and not materially better than the clean-branch
+  version.
 - `docs/publication_record/negative_results.md`
-  already rich on the clean branch, but dirty-root edits may still contain
-  wording deltas worth selective comparison.
+  dirty-root version drops later closeout-era negatives and should not replace
+  the cleaner current version.
 - `docs/publication_record/review_boundary_summary.md`
-  candidate for later refresh once the paper spine and claim/evidence table are
-  stable.
+  dirty-root version is stale and still keyed to older `H63/P50/P51/P52`
+  routing rather than the current `H65/P88` posture.
 - `docs/publication_record/threats_to_validity.md`
-  candidate for later refresh once the release summary and paper bundle status
-  are stable.
+  dirty-root version is shorter and omits later closeout-era caveats that the
+  clean branch already preserves.
 
 ## Salvage Later If Still Needed
 
@@ -35,8 +37,8 @@ merged blindly.
 - `docs/publication_record/experiment_manifest.md`
 
 These remain potentially useful, but they should only be imported after the
-paper-facing narrative is fully aligned with `H65`, `P86`, and the value-negative
-closeout.
+paper-facing narrative is fully aligned with `H65`, `P87/P88`, and the
+value-negative closeout.
 
 ## Do Not Salvage Blindly
 

@@ -17,6 +17,8 @@ As of `2026-04-07`, the current active packet remains
 
 Current anchors:
 
+- current salvage-screen and no-import decision wave:
+  `P88_post_p87_salvage_screen_and_no_import_decision`
 - current paper-spine refresh and salvage shortlist wave:
   `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
 - current dirty-root inventory and archive-replace map wave:
@@ -92,7 +94,10 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`P87` refreshes the paper-facing spine on the clean branch and records a
+`P88` screens the first-tier dirty-root publication shortlist and decides no
+immediate imports for the four highest-value remaining candidates, keeping the
+route focused on clean-branch docs consolidation and later archive-replace
+closeout. `P87` refreshes the paper-facing spine on the clean branch and records a
 salvage shortlist for the highest-value dirty-root publication docs without
 importing the dirty root wholesale. `P86` packages the dirty-root inventory and archive-replace map from the clean
 `p85` branch, keeping `wip/root-main-parking-2026-03-24` quarantine-only while
@@ -122,7 +127,7 @@ There are no open runtime tasks on this branch.
 Runtime remains closed. Dirty-root integration remains out of bounds. The only
 surviving future discussion is a strictly non-runtime gate, and it is not a
 runtime authorization. Current local follow-through should run only from clean
-descendants recorded in `docs/branch_worktree_registry.md`, with `P87`
-completed and the current engineering route narrowed to selective salvage
-import, docs consolidation, and only then archive-then-replace decisions on
-`wip/p85-post-p84-main-rebaseline` beyond no further action.
+descendants recorded in `docs/branch_worktree_registry.md`, with `P88`
+completed and the current engineering route narrowed to docs consolidation and
+only then archive-then-replace decisions on `wip/p85-post-p84-main-rebaseline`
+beyond no further action unless a later file-specific salvage case appears.

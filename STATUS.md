@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current salvage-screen and no-import decision wave is
+  `P88_post_p87_salvage_screen_and_no_import_decision`.
 - The current paper-spine refresh and salvage shortlist wave is
   `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`.
 - The current dirty-root inventory and archive-replace map wave is
@@ -97,3 +99,5 @@
   any future `R63` staying strictly non-runtime.
 - The current docs-only follow-through is paper spine refresh plus salvage
   shortlist alignment on the clean branch.
+- The first-tier selective salvage screen completed with no imports for the
+  four highest-value remaining publication candidates.

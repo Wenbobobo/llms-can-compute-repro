@@ -7,13 +7,20 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-07-post-p88-next-planmode-handoff.md`
+  current shortest handoff from the post-`P88` no-import decision state into
+  the next planning round
+- `2026-04-07-post-p88-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-07-post-p88-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-07-post-p87-next-planmode-handoff.md`
-  current shortest handoff from the post-`P87` paper-spine refresh state
+  preserved shortest handoff from the post-`P87` paper-spine refresh state
   into the next planning round
 - `2026-04-07-post-p87-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt for the post-`P87` paper-spine refresh state
 - `2026-04-07-post-p87-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt for the post-`P87` paper-spine refresh state
 - `2026-04-07-post-p86-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P86` dirty-root inventory state
   into the next planning round
@@ -60,6 +67,8 @@ driver and machine-readable `results/` summaries first.
   current branch/worktree registry and merge posture control note
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
+  current salvage-screen and no-import decision wave
 - `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
   current paper-spine refresh and salvage shortlist wave
 - `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
@@ -98,7 +107,7 @@ driver and machine-readable `results/` summaries first.
 - preserved immediate publication lineage:
   `P74 -> P75 -> P76`
 - current promotion and post-merge lineage:
-  `P81 -> P82 -> P83 -> P84 -> P85 -> P86 -> P87`
+  `P81 -> P82 -> P83 -> P84 -> P85 -> P86 -> P87 -> P88`
 - current convergence and handoff stack:
   `P77 -> P78 -> P79 -> P80`
 - current active docs-only packet:
@@ -109,6 +118,8 @@ driver and machine-readable `results/` summaries first.
   `P63 -> P64 -> P65`
 - current clean rebaseline branch:
   `wip/p85-post-p84-main-rebaseline`
+- current salvage-screen wave:
+  `P88`
 - current paper-spine refresh wave:
   `P87`
 - current dirty-root inventory wave:
@@ -144,6 +155,9 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-07-post-p88-next-planmode-handoff.md`
+- `2026-04-07-post-p88-next-planmode-startup-prompt.md`
+- `2026-04-07-post-p88-next-planmode-brief-prompt.md`
 - `2026-04-07-post-p87-next-planmode-handoff.md`
 - `2026-04-07-post-p87-next-planmode-startup-prompt.md`
 - `2026-04-07-post-p87-next-planmode-brief-prompt.md`
@@ -161,6 +175,7 @@ driver and machine-readable `results/` summaries first.
 - `2026-04-05-post-p80-next-planmode-handoff.md`
 - `2026-04-05-post-p80-next-planmode-startup-prompt.md`
 - `2026-04-05-post-p80-next-planmode-brief-prompt.md`
+- `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
 - `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
 - `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
 - `../milestones/P85_post_p84_main_rebaseline_and_control_resync/`
