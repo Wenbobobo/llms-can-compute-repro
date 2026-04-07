@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current docs-consolidation and live-router sync wave is:
+
+- `P89_post_p88_docs_consolidation_and_live_router_sync`
+
 The current salvage-screen and no-import decision wave is:
 
 - `P88_post_p87_salvage_screen_and_no_import_decision`
@@ -32,6 +36,7 @@ The current promotion branch and PR handoff wave is:
 
 The current live convergence and handoff stack is:
 
+- `P89_post_p88_docs_consolidation_and_live_router_sync`
 - `P88_post_p87_salvage_screen_and_no_import_decision`
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
 - `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
@@ -96,6 +101,10 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `P89` consolidates the live router surfaces around the clean `p85` branch,
+  makes docs consolidation the current control wave, and narrows the next
+  route to archive-then-replace closeout or explicit stop unless a later
+  file-specific salvage case appears.
 - `P88` screens the first-tier selective-salvage candidates and lands a
   no-import decision for the four highest-value remaining publication docs,
   because the dirty-root versions are stale or not materially better than the
@@ -158,6 +167,6 @@ The default downstream lane is:
   later `R63` discussion must stay strictly non-runtime.
 - `H65` remains the current active docs-only packet and still selects
   `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
-- docs consolidation and later archive-then-replace closeout are now the
-  recommended downstream route ahead of no further action, unless a later
-  file-specific salvage case appears.
+- archive-then-replace closeout and no further action are now the recommended
+  downstream routes after docs consolidation, unless a later file-specific
+  salvage case appears.

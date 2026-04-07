@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current docs-consolidation and live-router sync wave is
+  `P89_post_p88_docs_consolidation_and_live_router_sync`.
 - The current salvage-screen and no-import decision wave is
   `P88_post_p87_salvage_screen_and_no_import_decision`.
 - The current paper-spine refresh and salvage shortlist wave is
@@ -90,14 +92,14 @@
   `wip/root-main-parking-2026-03-24`.
 - Dirty root inventory now classifies parked root paths into
   `duplicate_or_obsolete`, `salvage_candidate`, and `archive_only`; any import
-  from root must remain salvage-only and clean-descendant-only.
+  from root must remain clean-descendant-only and file-specific.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
 - The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
   `p74`, `p73`, `p72`, `p69`, and `p56`.
-- The default next action is selective salvage-only import, docs
-  consolidation, archive-then-replace closeout, or no further action, with
-  any future `R63` staying strictly non-runtime.
-- The current docs-only follow-through is paper spine refresh plus salvage
-  shortlist alignment on the clean branch.
+- The default next action is archive-then-replace closeout or no further
+  action, with any future `R63` staying strictly non-runtime.
+- The current docs-only follow-through is docs consolidation and live-router
+  sync on the clean branch.
 - The first-tier selective salvage screen completed with no imports for the
-  four highest-value remaining publication candidates.
+  four highest-value remaining publication candidates, so salvage only reopens
+  on a later file-specific case.

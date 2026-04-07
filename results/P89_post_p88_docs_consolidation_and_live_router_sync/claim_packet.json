@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P89 consolidates the live router surfaces around the H65 plus P89 posture on the clean p85 branch.",
+      "P89 preserves P88 as the first-tier no-import decision underneath the current docs-consolidation wave.",
+      "P89 narrows the next route to archive-then-replace closeout or explicit stop unless a later file-specific salvage case appears."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_docs_wave": "p89_post_p88_docs_consolidation_and_live_router_sync",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "9597ec6",
+      "merged_main_head": "b82b566",
+      "origin_main_to_p89_left_right": "0/5",
+      "selected_outcome": "docs_consolidation_and_live_router_sync_after_p88",
+      "next_recommended_route": "archive_then_replace_closeout_or_explicit_stop"
+    }
+  }
+}

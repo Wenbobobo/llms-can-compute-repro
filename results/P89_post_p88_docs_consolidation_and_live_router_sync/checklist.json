@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p89_reads_green_p88_summary",
+      "status": "pass",
+      "notes": "P89 begins only after the landed green P88 no-import decision."
+    },
+    {
+      "item_id": "p89_runs_on_clean_p85_branch",
+      "status": "pass",
+      "notes": "Docs consolidation must run from the clean p85 branch."
+    },
+    {
+      "item_id": "p89_live_docs_shift_current_control_to_docs_consolidation_wave",
+      "status": "pass",
+      "notes": "Routers and handoff surfaces should make P89 the current docs-consolidation wave."
+    }
+  ]
+}

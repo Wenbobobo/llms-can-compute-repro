@@ -14,13 +14,20 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
+- `../plans/2026-04-07-post-p89-next-planmode-handoff.md`
+  current shortest handoff from the post-`P89` docs-consolidation state into
+  the next planning round
+- `../plans/2026-04-07-post-p89-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-04-07-post-p89-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-07-post-p88-next-planmode-handoff.md`
-  current shortest handoff from the post-`P88` no-import decision state into
+  preserved shortest handoff from the post-`P88` no-import decision state into
   the next planning round
 - `../plans/2026-04-07-post-p88-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt from the post-`P88` no-import decision state
 - `../plans/2026-04-07-post-p88-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt from the post-`P88` no-import decision state
 - `../plans/2026-04-07-post-p87-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P87` paper-spine refresh state
   into the next planning round
@@ -60,6 +67,8 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current docs-consolidation and live-router sync wave:
+  `../milestones/P89_post_p88_docs_consolidation_and_live_router_sync/`
 - current salvage-screen and no-import decision wave:
   `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
 - current paper-spine refresh and salvage shortlist wave:

@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P89_post_p88_docs_consolidation_and_live_router_sync/`
+  current docs-consolidation and live-router sync wave
 - `P88_post_p87_salvage_screen_and_no_import_decision/`
   current salvage-screen and no-import decision wave
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
@@ -95,6 +97,7 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P89` as the current docs-consolidation and live-router sync wave;
 - treat `P88` as the current salvage-screen and no-import decision wave;
 - treat `P87` as the current paper-spine refresh and salvage shortlist wave;
 - treat `P86` as the current dirty-root inventory and archive-replace map

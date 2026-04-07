@@ -1,0 +1,98 @@
+{
+  "rows": [
+    {
+      "field": "p88_summary",
+      "value": {
+        "current_salvage_wave": "p88_post_p87_salvage_screen_and_no_import_decision",
+        "current_branch": "wip/p85-post-p84-main-rebaseline",
+        "current_branch_head": "f33e101",
+        "merged_main_head": "b82b566",
+        "origin_main_to_p88_left_right": "0/4",
+        "selected_outcome": "salvage_screen_completed_with_no_import_for_first_tier_docs",
+        "next_recommended_route": "docs_consolidation_and_archive_replace_closeout",
+        "screened_now_count": 4,
+        "import_now_count": 0,
+        "pass_count": 3,
+        "blocked_count": 0
+      }
+    },
+    {
+      "field": "branch_divergence",
+      "value": {
+        "left_only": 0,
+        "right_only": 5
+      }
+    },
+    {
+      "field": "doc_sync_rows",
+      "value": [
+        {
+          "path": "README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "STATUS.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/branch_worktree_registry.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/milestones/README.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/current_stage_driver.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p89-next-planmode-handoff.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p89-next-planmode-startup-prompt.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p89-next-planmode-brief-prompt.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}
