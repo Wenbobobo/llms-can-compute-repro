@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "P85 establishes a clean post-merge rebaseline branch on top of merged origin/main.",
+      "P85 preserves p83 as short-term merged-source lineage rather than the current live promotion branch.",
+      "P85 moves the next engineering route from promotion-prep to root archive/replace, docs consolidation, and paper spine refresh."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_rebaseline_wave": "p85_post_p84_main_rebaseline_and_control_resync",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "b82b566",
+      "merged_main_head": "b82b566",
+      "merged_source_branch": "wip/p83-post-p82-promotion-branch-and-pr-handoff",
+      "origin_main_to_p85_left_right": "0/0",
+      "selected_outcome": "merged_main_rebaseline_and_control_resync_after_p84",
+      "next_recommended_route": "root_archive_replace_docs_consolidation_and_paper_spine_refresh"
+    }
+  }
+}

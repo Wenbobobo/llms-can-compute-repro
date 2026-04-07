@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current merged-main rebaseline and control-resync wave is:
+
+- `P85_post_p84_main_rebaseline_and_control_resync`
+
 The current keep-set contraction and closeout wave is:
 
 - `P84_post_p83_keep_set_contraction_and_closeout`
@@ -16,6 +20,7 @@ The current promotion branch and PR handoff wave is:
 
 The current live convergence and handoff stack is:
 
+- `P85_post_p84_main_rebaseline_and_control_resync`
 - `P84_post_p83_keep_set_contraction_and_closeout`
 - `P83_post_p82_promotion_branch_and_pr_handoff`
 - `P77_post_p76_keep_set_and_provenance_normalization`
@@ -23,9 +28,9 @@ The current live convergence and handoff stack is:
 - `P79_post_p78_archive_claim_boundary_and_reopen_screen`
 - `P80_post_p79_next_planmode_handoff_sync`
 
-The current promotion-ready branch is:
+The current clean rebaseline branch is:
 
-- `wip/p83-post-p82-promotion-branch-and-pr-handoff`
+- `wip/p85-post-p84-main-rebaseline`
 
 The current local execution-side control stack is:
 
@@ -37,6 +42,7 @@ The current local execution-side control stack is:
 
 The current mounted keep branches are:
 
+- `wip/p85-post-p84-main-rebaseline`
 - `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - `wip/p75-post-p74-published-successor-freeze`
 - `wip/p74-post-p73-successor-publication-review`
@@ -75,6 +81,10 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `P85` rebaselines current control onto merged `main`, preserving `p83` only
+  as short-term merged-source lineage while shifting the active engineering
+  route into root archive/replace, docs consolidation, and paper spine
+  refresh.
 - `P84` contracts the mounted keep set around `p83`, `p75`, `p74`, `p73`,
   `p72`, `p69`, and `p56`, while preserving `p81` and `p82` as unmounted
   immediate promotion-prep lineage.
@@ -98,8 +108,10 @@ The default downstream lane is:
   produced the live `wip/p75-post-p74-published-successor-freeze` branch.
 - `wip/p74-post-p73-successor-publication-review` remains the current review
   branch.
-- `wip/p83-post-p82-promotion-branch-and-pr-handoff` remains the current
-  promotion-ready branch above the published `p75` branch.
+- `wip/p85-post-p84-main-rebaseline` remains the current clean rebaseline
+  branch above merged `main`.
+- `wip/p83-post-p82-promotion-branch-and-pr-handoff` remains preserved
+  merged-source branch lineage after the landed PR #12 merge.
 - `wip/p64-post-p63-successor-stack` remains the preserved deeper review
   lineage, not a live control branch.
 - `wip/p73-post-p72-hygiene-shrink-mergeprep` remains the current local hygiene
@@ -118,4 +130,5 @@ The default downstream lane is:
   later `R63` discussion must stay strictly non-runtime.
 - `H65` remains the current active docs-only packet and still selects
   `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
-- explicit stop and no further action are now the recommended downstream route.
+- root archive/replace, docs consolidation, and paper spine refresh are now
+  the recommended downstream route ahead of no further action.

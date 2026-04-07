@@ -17,6 +17,8 @@ As of `2026-04-07`, the current active packet remains
 
 Current anchors:
 
+- current merged-main rebaseline and control-resync wave:
+  `P85_post_p84_main_rebaseline_and_control_resync`
 - current keep-set contraction and closeout wave:
   `P84_post_p83_keep_set_contraction_and_closeout`
 - current promotion branch and PR handoff wave:
@@ -47,10 +49,12 @@ Current anchors:
   `wip/p74-post-p73-successor-publication-review`
 - current archive polish and explicit stop handoff branch:
   `wip/p72-post-p71-archive-polish-stop-handoff`
-- current promotion-ready branch:
-  `wip/p83-post-p82-promotion-branch-and-pr-handoff`
+- current clean rebaseline branch:
+  `wip/p85-post-p84-main-rebaseline`
 - current published clean descendant branch:
   `wip/p75-post-p74-published-successor-freeze`
+- preserved merged-source branch:
+  `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - preserved locked-fact and clean-main probe lineage:
   `P81_post_p80_locked_fact_rebaseline_and_route_sync`,
   `P82_post_p81_clean_main_promotion_probe`
@@ -84,6 +88,9 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
+`P85` rebaselines current control onto merged `main` via the clean `p85`
+branch, preserving `p83` only as short-term merged-source lineage while
+preparing root archive/replace, docs consolidation, and paper spine refresh.
 `P84` contracts the mounted keep set to the promotion-ready `p83` branch plus
 the preserved operational branches `p75`, `p74`, `p73`, `p72`, `p69`, and
 `p56`, while unmounting the temporary `p81` and `p82` worktrees. `P83`
@@ -106,6 +113,7 @@ There are no open runtime tasks on this branch.
 Runtime remains closed. Dirty-root integration remains out of bounds. The only
 surviving future discussion is a strictly non-runtime gate, and it is not a
 runtime authorization. Current local follow-through should run only from clean
-descendants recorded in `docs/branch_worktree_registry.md`, with promotion/PR
-finalization from `wip/p83-post-p82-promotion-branch-and-pr-handoff` as the
-only active engineering route beyond no further action.
+descendants recorded in `docs/branch_worktree_registry.md`, with post-merge
+root archive/replace, docs consolidation, and paper spine refresh on
+`wip/p85-post-p84-main-rebaseline` as the current engineering route beyond no
+further action.

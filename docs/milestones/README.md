@@ -5,10 +5,12 @@ decision points.
 
 ## Current Live Stack
 
+- `P85_post_p84_main_rebaseline_and_control_resync/`
+  current merged-main rebaseline and control-resync wave
 - `P84_post_p83_keep_set_contraction_and_closeout/`
-  current keep-set contraction and closeout wave
+  preserved keep-set contraction and closeout wave
 - `P83_post_p82_promotion_branch_and_pr_handoff/`
-  current promotion branch and PR handoff wave
+  preserved promotion branch and PR handoff wave
 - `P81_post_p80_locked_fact_rebaseline_and_route_sync/`
   preserved locked-fact and route-sync wave
 - `P82_post_p81_clean_main_promotion_probe/`
@@ -87,13 +89,14 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
-- treat `P84` as the current keep-set contraction and closeout wave;
-- treat `P83` as the current promotion-ready branch handoff wave above the
+- treat `P85` as the current merged-main rebaseline and control-resync wave;
+- treat `P84` as the preserved keep-set contraction and closeout wave;
+- treat `P83` as preserved merged-source branch handoff lineage above the
   published `p75` branch;
 - treat `P81/P82` as preserved immediate promotion-prep lineage, not current
   live control;
 - treat `P77/P78/P79/P80` as the current archive-first convergence and handoff
-  stack underneath `P84/P83`;
+  stack underneath `P85`;
 - treat `P73` as the current local hygiene and shrink wave above `P72`;
 - treat `P72` as the current archive polish and explicit stop handoff wave
   above `H65`;

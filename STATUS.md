@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current merged-main rebaseline and control-resync wave is
+  `P85_post_p84_main_rebaseline_and_control_resync`.
 - The current keep-set contraction and closeout wave is
   `P84_post_p83_keep_set_contraction_and_closeout`.
 - The current promotion branch and PR handoff wave is
@@ -34,10 +36,12 @@
   `wip/p74-post-p73-successor-publication-review`.
 - The current archive polish and explicit stop handoff branch is
   `wip/p72-post-p71-archive-polish-stop-handoff`.
-- The current promotion-ready branch is
-  `wip/p83-post-p82-promotion-branch-and-pr-handoff`.
+- The current clean rebaseline branch is
+  `wip/p85-post-p84-main-rebaseline`.
 - The current published clean descendant branch is
   `wip/p75-post-p74-published-successor-freeze`.
+- The preserved merged-source branch is
+  `wip/p83-post-p82-promotion-branch-and-pr-handoff`.
 - The preserved locked-fact and clean-main probe lineage is
   `P81_post_p80_locked_fact_rebaseline_and_route_sync` and
   `P82_post_p81_clean_main_promotion_probe`.
@@ -76,11 +80,11 @@
 - No runtime gate is open on this branch.
 - No additional same-lane executor-value probe is admissible on this branch.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
-- Dirty root `main` remains quarantine-only.
+- Dirty root `main` remains quarantine-only under
+  `wip/root-main-parking-2026-03-24`.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
-- The active mounted keep set for the current phase is `p83`, `p75`, `p74`,
-  `p73`, `p72`, `p69`, and `p56`.
-- The default next action is explicit stop, no further action, archive polish,
-  or hygiene-only cleanup, with promotion/PR finalization from `p83` as the
-  only active engineering route and any future `R63` staying strictly
+- The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
+  `p74`, `p73`, `p72`, `p69`, and `p56`.
+- The default next action is root archive/replace, docs consolidation, paper
+  spine refresh, or no further action, with any future `R63` staying strictly
   non-runtime.

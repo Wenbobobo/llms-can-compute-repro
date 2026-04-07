@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p85_reads_green_p84_summary",
+      "status": "pass",
+      "notes": "P85 starts only after the landed green P84 keep-set closeout."
+    },
+    {
+      "item_id": "p85_runs_on_clean_main_rebaseline_branch",
+      "status": "pass",
+      "notes": "The merged-main rebaseline must run from the dedicated clean p85 branch."
+    },
+    {
+      "item_id": "p85_branch_stays_ahead_only_from_merged_main",
+      "status": "pass",
+      "notes": "The p85 branch should remain a clean descendant of merged origin/main."
+    },
+    {
+      "item_id": "p85_required_keep_set_remains_mounted",
+      "status": "pass",
+      "notes": "The current mounted keep set should include p85 plus the short-term preserved p83 lineage."
+    },
+    {
+      "item_id": "p85_live_docs_shift_current_control_to_merged_main",
+      "status": "pass",
+      "notes": "Live control docs should make p85 current and p83 preserved merged-source lineage."
+    }
+  ]
+}

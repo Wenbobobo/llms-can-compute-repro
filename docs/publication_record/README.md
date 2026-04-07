@@ -14,13 +14,19 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
-- `../plans/2026-04-07-post-p84-next-planmode-handoff.md`
-  current shortest handoff from the post-`P84` promotion-prep closeout state into the next
-  planning round
-- `../plans/2026-04-07-post-p84-next-planmode-startup-prompt.md`
+- `../plans/2026-04-07-post-p85-next-planmode-handoff.md`
+  current shortest handoff from the post-`P85` merged-main rebaseline state
+  into the next planning round
+- `../plans/2026-04-07-post-p85-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-07-post-p84-next-planmode-brief-prompt.md`
+- `../plans/2026-04-07-post-p85-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `../plans/2026-04-07-post-p84-next-planmode-handoff.md`
+  preserved shortest handoff from the post-`P84` promotion-prep closeout state
+- `../plans/2026-04-07-post-p84-next-planmode-startup-prompt.md`
+  preserved startup prompt from the post-`P84` promotion-prep closeout state
+- `../plans/2026-04-07-post-p84-next-planmode-brief-prompt.md`
+  preserved brief prompt from the post-`P84` promotion-prep closeout state
 - `../plans/2026-04-07-post-p80-clean-descendant-promotion-prep-design.md`
   current design for the post-`P80` locked-fact, promotion-probe, and
   promotion-prep phase
@@ -33,6 +39,8 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current merged-main rebaseline and control-resync wave:
+  `../milestones/P85_post_p84_main_rebaseline_and_control_resync/`
 - current keep-set contraction and closeout wave:
   `../milestones/P84_post_p83_keep_set_contraction_and_closeout/`
 - current promotion branch and PR handoff wave:
@@ -54,7 +62,9 @@ The active docs-only packet remains
   `../milestones/P74_post_p73_successor_publication_review/`,
   `../milestones/P75_post_p74_published_successor_freeze/`,
   `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
-- current promotion-ready branch:
+- current clean rebaseline branch:
+  `wip/p85-post-p84-main-rebaseline`
+- preserved merged-source branch:
   `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - preserved locked-fact and clean-main probe lineage:
   `../milestones/P81_post_p80_locked_fact_rebaseline_and_route_sync/`,

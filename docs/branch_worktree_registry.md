@@ -2,13 +2,14 @@
 
 This file records the balanced mounted keep set, quarantine posture, preserved
 lineage refs, and cleanup priorities for the clean-descendant-only repo state
-after the `P84` keep-set closeout above the `H65` terminal freeze.
+after the `P85` merged-main rebaseline above the `P84` keep-set closeout.
 
 ## Balanced Mounted Keep Set
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
-| current promotion-ready execution branch | `wip/p83-post-p82-promotion-branch-and-pr-handoff` | `D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff` | current clean promotion-ready branch after the `P82` probe and `P83` handoff | keep mounted during `P84` and any follow-on promotion/PR finalization; do not treat as the published branch |
+| current clean rebaseline branch | `wip/p85-post-p84-main-rebaseline` | `D:/zWenbo/AI/wt/p85-post-p84-main-rebaseline` | current clean post-merge rebaseline branch on top of merged `main` | keep mounted as the active clean control branch |
+| preserved merged-source lineage | `wip/p83-post-p82-promotion-branch-and-pr-handoff` | `D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff` | short-term preserved merged-source branch after PR #12 landed | keep mounted temporarily during post-merge validation; do not treat as the current control branch |
 | current published clean descendant | `wip/p75-post-p74-published-successor-freeze` | `D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze` | live clean publication/control branch | keep mounted and tracked; use as the active clean descendant |
 | current successor publication review branch | `wip/p74-post-p73-successor-publication-review` | `D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review` | current review/provenance lane preserved beside the published branch | keep mounted; do not treat as the published branch |
 | current local hygiene and shrink branch | `wip/p73-post-p72-hygiene-shrink-mergeprep` | `D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep` | current local cleanup, shrink, and dossier-prep lane | keep mounted; local follow-through only |
@@ -32,10 +33,12 @@ after the `P84` keep-set closeout above the `H65` terminal freeze.
 
 ## Cleanup Status
 
-- the active mounted keep set for the current phase is `p83`, `p75`, `p74`,
-  `p73`, `p72`, `p69`, and `p56`
+- the active mounted keep set for the current phase is `p85`, `p83`, `p75`,
+  `p74`, `p73`, `p72`, `p69`, and `p56`
 - the temporary `p81` and `p82` worktrees were intentionally removed in `P84`
   and now survive only as preserved unmounted lineage
+- `p83` remains mounted only as short-term preserved merged-source lineage and
+  is eligible for later unmount once the `P85` post-merge route is settled
 - only the dirty root checkout and `wip/h27-promotion` should remain dirty and
   mounted after convergence
 - clean historical mounts targeted for removal are:
@@ -55,8 +58,11 @@ after the `P84` keep-set closeout above the `H65` terminal freeze.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
-- `wip/p83-post-p82-promotion-branch-and-pr-handoff` is the current
-  promotion-ready branch for clean-descendant promotion/PR finalization only
+- `wip/p85-post-p84-main-rebaseline` is the current clean rebaseline branch
+  for post-merge root archive/replace, docs consolidation, and paper spine
+  refresh
+- `wip/p83-post-p82-promotion-branch-and-pr-handoff` is preserved merged-source
+  lineage only after the merged-main rebaseline
 - `wip/p75-post-p74-published-successor-freeze` is the live published clean
   source for current control wording
 - `wip/p81-post-p80-clean-descendant-promotion-prep` and
@@ -72,7 +78,7 @@ after the `P84` keep-set closeout above the `H65` terminal freeze.
   cleanup lane
 - `wip/p56-main-scratch...wip/p75-post-p74-published-successor-freeze`
   remains the current clean-descendant-only promotion lineage fact
-- `origin/main...wip/p83-post-p82-promotion-branch-and-pr-handoff` keeps
-  dirty-root integration out of bounds
+- `origin/main...wip/p85-post-p84-main-rebaseline` keeps dirty-root
+  integration out of bounds while preserving clean post-merge follow-through
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only
