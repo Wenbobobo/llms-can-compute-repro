@@ -17,7 +17,6 @@ from .hardmax import (
     HardmaxResult,
     NumberLike,
     ValueLike,
-    _as_fraction,
     _coerce_key,
     _coerce_value,
     _normalize_number,
@@ -205,15 +204,18 @@ class HullKVCache:
         total_value_sum = [Fraction(0) for _ in range(self._value_width or 0)]
 
         for index, (key, value) in enumerate(self._entries):
-            bucket = aggregates.setdefault(
-                key,
-                {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []},
-            )
-            for coord_index, coord in enumerate(value):
-                bucket["value_sum"][coord_index] += coord
-                total_value_sum[coord_index] += coord
-            bucket["count"] += 1
-            bucket["entry_indices"].append(index)
+            if key not in aggregates:
+                bucket = {"value_sum": list(value), "count": 1, "entry_indices": [index]}
+                aggregates[key] = bucket
+                for coord_index, coord in enumerate(value):
+                    total_value_sum[coord_index] += coord
+            else:
+                bucket = aggregates[key]
+                for coord_index, coord in enumerate(value):
+                    bucket["value_sum"][coord_index] += coord
+                    total_value_sum[coord_index] += coord
+                bucket["count"] += 1
+                bucket["entry_indices"].append(index)
 
         points: list[_PointAggregate] = []
         for key in sorted(aggregates):
@@ -243,9 +245,11 @@ class HullKVCache:
 
         best_score = target_score
         maximizers: list[_PointAggregate] = []
+        qx, qy = query
 
         for point in self._points:
-            score = dot_2d(point.key, query)
+            px, py = point.key
+            score = (px * qx) + (py * qy)
             if best_score is None or score > best_score:
                 best_score = score
                 maximizers = [point]
