@@ -1,0 +1,3 @@
+## 2024-05-24 - [Avoid `setdefault` with Expensive Defaults in Hot Loops]
+**Learning:** `dict.setdefault(key, complex_default)` evaluates the `complex_default` argument on *every* invocation, even if `key` is already present in the dictionary. In loops handling thousands of iterations, this can cause significant overhead, particularly if the default is a list comprehension involving complex types like `Fraction(0)`.
+**Action:** Use an explicit membership check (`if key not in dict: dict[key] = complex_default`) instead of `setdefault` within hot loops to ensure the default is only evaluated when necessary.
