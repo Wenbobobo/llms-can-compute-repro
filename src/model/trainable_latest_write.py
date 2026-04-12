@@ -198,7 +198,9 @@ def evaluate_scorer(
         correct_samples += int(correct)
 
         bucket = bucket_name(sample.program_steps)
-        bucket_state = per_bucket.setdefault(bucket, {"sample_count": 0, "sample_correct": 0, "programs": {}})
+        if bucket not in per_bucket:
+            per_bucket[bucket] = {"sample_count": 0, "sample_correct": 0, "programs": {}}
+        bucket_state = per_bucket[bucket]
         bucket_state["sample_count"] = int(bucket_state["sample_count"]) + 1
         bucket_state["sample_correct"] = int(bucket_state["sample_correct"]) + int(correct)
         bucket_state["programs"].setdefault(sample.program_name, []).append(correct)
